@@ -13,7 +13,11 @@ export function getEnvRequired(name: string): string {
 }
 
 export function toID(name: string): string {
-  return name.toLowerCase().replace(/\W+/g, " ").trim().replaceAll(" ", "-")
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .replaceAll(" ", "-")
 }
 
 export async function wait(ms: number): Promise<void> {

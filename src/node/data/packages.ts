@@ -15,11 +15,11 @@ import {
   mapDefined,
   mapValues,
   sort,
+  sortBy,
   toLowerCase,
   union,
   unionBy,
   values,
-  where,
 } from "@salinco/nice-utils"
 
 import type { AssetID } from "@common/assets"
@@ -149,6 +149,16 @@ export interface DependencyData {
   transitive?: boolean
 }
 
+/**
+ * @example
+ * include:
+ *   - path: US/MGB Texture Pack.dat
+ *     condition:
+ *       textures: us
+ *   - path: MGB Texture Pack.dat
+ *     condition:
+ *       textures: eu
+ */
 export interface FileData {
   /**
    * Mapping to a new path upon installation
@@ -184,6 +194,22 @@ export interface FileData {
    * - Priority of 900 or higher is treated as "override"
    */
   priority?: number
+}
+
+/**
+ * Alternative {@link FileData} format
+ *
+ * @example
+ * include:
+ *   - US/MGB Texture Pack.dat:
+ *       condition:
+ *         textures: us
+ *   - MGB Texture Pack.dat:
+ *       condition:
+ *         textures: eu
+ */
+export interface FileDataRecord {
+  [path: string]: Omit<FileData, "path">
 }
 
 /**
@@ -228,7 +254,7 @@ export interface VariantAssetData extends AssetData {
    * - By default, all txt/pdf/html/css and image files are included.
    * - If specified, *only* the provided paths are included.
    */
-  docs?: Array<FileData | string>
+  docs?: Array<FileData | FileDataRecord | string>
 
   /**
    * List of paths to exclude (glob patterns)
@@ -241,7 +267,7 @@ export interface VariantAssetData extends AssetData {
    * - By default, all dat/dll/sc4desc/sc4lot/sc4model files are included.
    * - If specified, *only* the provided paths are included.
    */
-  include?: Array<FileData | string>
+  include?: Array<FileData | FileDataRecord | string>
 
   /**
    * Asset ID
@@ -336,7 +362,7 @@ export interface VariantData extends ContentsData {
    *
    * Only on installed/local packages.
    */
-  files?: Array<FileInfo | string>
+  files?: Array<FileData | FileDataRecord | string>
 
   /**
    * List of image URLs
@@ -604,7 +630,7 @@ export function loadVariantInfo(
     description: variantData.description ?? packageData.description,
     disabled: variantData.disabled ?? packageData.disabled,
     experimental: variantData.experimental ?? packageData.experimental,
-    files: variantData.files?.map(loadFileInfo),
+    files: variantData.files?.flatMap(loadFileInfo),
     id: variantId,
     images: images.length ? images : undefined,
     lastGenerated: lastGenerated ? new Date(lastGenerated) : undefined,
@@ -646,7 +672,6 @@ export function writePackageInfo(
   const ownerId = getOwnerId(packageInfo.id)
 
   const [firstVariant, ...others] = variants as [VariantInfo?, ...VariantInfo[]]
-  const defaultVariant = variants.find(where("id", "default"))
 
   function equalsDeep<T>(value: T): (other: T) => boolean {
     return (other: T) => isEqualDeep(value, other)
@@ -680,13 +705,17 @@ export function writePackageInfo(
     deprecated: variants?.every(variant => variant.deprecated)
       ? firstVariant?.deprecated
       : undefined,
-    description: defaultVariant?.description,
+    description: others?.every(other => other.description === firstVariant?.description)
+      ? firstVariant?.description
+      : undefined,
     disabled: variants?.every(variant => variant.disabled),
     experimental: variants?.every(variant => variant.experimental),
     images: firstVariant?.images?.filter(image =>
       others.every(other => other.images?.includes(image)),
     ),
-    logs: defaultVariant?.logs,
+    logs: others?.every(other => other.logs === firstVariant?.logs)
+      ? firstVariant?.logs
+      : undefined,
     lots:
       variants.length < 2
         ? undefined
@@ -720,20 +749,31 @@ export function writePackageInfo(
     readme: firstVariant?.readme?.filter(readme =>
       others.every(other => other.readme?.includes(readme)),
     ),
-    repository: defaultVariant?.repository,
+    repository: others?.every(other => other.repository === firstVariant?.repository)
+      ? firstVariant?.repository
+      : undefined,
     requirements: filterValues(firstVariant?.requirements ?? {}, (value, requirement) =>
       others.every(other => other.requirements?.[requirement] === value),
     ),
-    summary: defaultVariant?.summary,
-    support: defaultVariant?.support,
-    textures: filterValues(firstVariant?.textures ?? {}, (textures, file) =>
-      others.every(other => isEqual(textures, other.textures?.[file])),
-    ),
+    summary: others?.every(other => other.summary === firstVariant?.summary)
+      ? firstVariant?.summary
+      : undefined,
+    support: others?.every(other => other.support === firstVariant?.support)
+      ? firstVariant?.support
+      : undefined,
+    textures:
+      variants.length < 2
+        ? undefined
+        : filterValues(firstVariant?.textures ?? {}, (textures, file) =>
+            others.every(other => isEqual(textures, other.textures?.[file])),
+          ),
     thanks: firstVariant?.thanks?.filter(thank =>
       others.every(other => other.thanks?.some(equalsDeep(thank))),
     ),
-    thumbnail: defaultVariant?.thumbnail,
-    url: defaultVariant?.url,
+    thumbnail: others?.every(other => other.thumbnail === firstVariant?.thumbnail)
+      ? firstVariant?.thumbnail
+      : undefined,
+    url: others?.every(other => other.url === firstVariant?.url) ? firstVariant?.url : undefined,
     warnings: firstVariant?.warnings?.filter(warning =>
       others.every(other => other.warnings?.some(equalsDeep(warning))),
     ),
@@ -839,12 +879,16 @@ function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
   }
 }
 
-function loadFileInfo(data: FileData | string): FileInfo {
+function loadFileInfo(data: FileData | FileDataRecord | string): FileInfo[] {
   if (isString(data)) {
-    return { path: toPosix(data) }
+    return [{ path: toPosix(data) }]
   }
 
-  return { ...data, path: toPosix(data.path) }
+  if (isString(data.path)) {
+    return [{ ...data, path: toPosix(data.path) }]
+  }
+
+  return collect(data as FileDataRecord, (file, path) => ({ ...file, path: toPosix(path) }))
 }
 
 function loadVariantAssetInfo(data: VariantAssetData | AssetID): VariantAssetInfo {
@@ -854,10 +898,10 @@ function loadVariantAssetInfo(data: VariantAssetData | AssetID): VariantAssetInf
 
   return {
     cleanitol: data.cleanitol?.map(toPosix),
-    docs: data.docs?.map(loadFileInfo),
+    docs: data.docs?.flatMap(loadFileInfo),
     exclude: data.exclude?.map(toPosix),
     id: data.id,
-    include: data.include?.map(loadFileInfo),
+    include: data.include?.flatMap(loadFileInfo),
   }
 }
 
@@ -885,12 +929,8 @@ function writeDependencyInfo(info: DependencyInfo): DependencyData | PackageID {
   return info.id
 }
 
-function writeFileInfo(info: FileInfo): FileData | string {
-  if (info.as || info.condition || info.patches || info.priority) {
-    return info
-  }
-
-  return info.path
+function writeFileInfo({ path, ...info }: FileInfo): FileDataRecord | string {
+  return isEmpty(info) ? path : { [path]: info }
 }
 
 function writeVariantAssetInfo(info: VariantAssetInfo): VariantAssetData | AssetID {
@@ -904,7 +944,7 @@ function writeVariantAssetInfo(info: VariantAssetInfo): VariantAssetData | Asset
 function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): VariantData {
   return {
     assets: info.assets?.length ? info.assets?.map(writeVariantAssetInfo) : undefined,
-    authors: info.authors?.length ? info.authors : undefined,
+    authors: info.authors?.length ? sort(info.authors) : undefined,
     buildingFamilies: info.buildingFamilies?.length
       ? mapValues(groupBy(info.buildingFamilies, get("file")), instances =>
           mapValues(indexBy(instances, get("id")), writeFamilyInfo),
@@ -920,7 +960,7 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     categories: info.categories?.length ? writeCategories(info.categories, categories) : undefined,
     credits: info.credits?.length ? writeCredits(info.credits) : undefined,
     dependencies: info.dependencies?.length
-      ? info.dependencies.map(writeDependencyInfo)
+      ? sortBy(info.dependencies, get("id")).map(writeDependencyInfo)
       : undefined,
     deprecated: info.deprecated || undefined,
     description: info.description || undefined,

@@ -3243,14 +3243,358 @@ assets:
     assetId: simtropolis/25433-pamu-bikes-inc
     authors:
       - paeng
+    buildings:
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Bike_Kindergarten/Bike_Kindergarten_d9f99d8a.SC4Lot:
+        d9f99d8a:
+          bulldoze: 1
+          categories: education
+          cost: 120
+          garbage: 2
+          jobs:
+            $: 12
+            $$: 4
+          label: Bike Kindergarten
+          maintenance: 70
+          menu: Education
+          model: badb57f1-0e11
+          name: Bike_Kindergarten
+          power: 2
+          submenu: Education/Elementary
+          water: 5
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeCouriers_99f89062.SC4Lot:
+        99f89062:
+          bulldoze: 100
+          capacity:
+            cs$: 36
+          categories: landmarks,cs$
+          cost: 1200
+          flamability: 15
+          garbage: 6
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          power: 2
+          submenu: Commercial/CS$
+          water: 20
+          worth: 3000
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeRepairRetail_d9f98171.SC4Lot:
+        d9f98171:
+          bulldoze: 100
+          capacity:
+            cs$: 12
+          categories: landmarks,cs$
+          cost: 1450
+          flamability: 15
+          garbage: 2
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          power: 2
+          submenu: Commercial/CS$
+          water: 20
+          worth: 1500
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeShop_39f71155.SC4Lot:
+        39f71155:
+          bulldoze: 100
+          capacity:
+            cs$: 9
+          categories: landmarks,cs$
+          cost: 1500
+          flamability: 15
+          garbage: 2
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          power: 2
+          submenu: Commercial/CS$
+          water: 20
+          worth: 1500
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeShop_secondhand_99f89f7e.SC4Lot:
+        99f89f7e:
+          bulldoze: 100
+          capacity:
+            cs$: 5
+          categories: landmarks,cs$
+          cost: 600
+          flamability: 15
+          garbage: 2
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          power: 2
+          submenu: Commercial/CS$
+          water: 20
+          worth: 1500
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bike_Manufacturer_59f743bd.SC4Lot:
+        59f743bd:
+          bulldoze: 100
+          capacity:
+            im: 58
+          categories: landmarks,i-ht
+          cost: 2100
+          flamability: 70
+          garbage: 4
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          pollution: 21
+          pollutionRadius: 9
+          power: 14
+          submenu: Industrial/Manufacture
+          water: 25
+          waterPollution: 11
+          waterPollutionRadius: 13
+          worth: 1218
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bike_Metalworks_d9f934ac.SC4Lot:
+        d9f934ac:
+          bulldoze: 100
+          capacity:
+            im: 74
+          categories: landmarks,i-ht
+          cost: 2500
+          flamability: 70
+          garbage: 4
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          pollution: 21
+          pollutionRadius: 9
+          power: 18
+          submenu: Industrial/Manufacture
+          water: 35
+          waterPollution: 11
+          waterPollutionRadius: 13
+          worth: 1518
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bikeshop_luxury_99f86dc5.SC4Lot:
+        99f86dc5:
+          bulldoze: 100
+          capacity:
+            cs$: 42
+            cs$$: 42
+          categories: landmarks,cs$$
+          cost: 2000
+          flamability: 50
+          garbage: 1
+          menu: Landmarks
+          model: 713d210c
+          name: Bike_Biz_plop
+          power: 5
+          submenu: Commercial/CS$$
+          water: 30
+          worth: 3000
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_rural-large_d9fd5cd3.SC4Lot:
+        d9fd5cd3:
+          bulldoze: 10
+          categories: transport
+          cost: 150
+          maintenance: 30
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike ParkandRide urban large
+          pollution: -2
+          power: 2
+          relief:
+            r$: 500
+            r$$: 500
+            r$$$: 500
+          waterPollution: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_rural_d9fd4da0.SC4Lot:
+        d9fd4da0:
+          bulldoze: 10
+          categories: transport
+          cost: 102
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike ParkandRide rural
+          pollution: -2
+          power: 1
+          relief:
+            r$: 500
+            r$$: 500
+            r$$$: 500
+          waterPollution: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_urban-large_d9fd524b.SC4Lot:
+        d9fd524b:
+          bulldoze: 10
+          categories: transport
+          cost: 199
+          maintenance: 30
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike ParkandRide urban large
+          pollution: -2
+          power: 4
+          relief:
+            r$: 500
+            r$$: 500
+            r$$$: 500
+          waterPollution: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_urban_d9f96b32.SC4Lot:
+        d9f96b32:
+          bulldoze: 10
+          categories: transport
+          cost: 151
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike ParkandRide urban
+          pollution: -2
+          power: 2
+          relief:
+            r$: 500
+            r$$: 500
+            r$$$: 500
+          waterPollution: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bike_Rental-rur_39f6dc1c.SC4Lot:
+        39f6dc1c:
+          bulldoze: 1
+          categories: transport
+          cost: 34
+          label: PAMU BIKES Rental (rural)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike_Lots
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_corner-rur_39f6df44.SC4Lot:
+        39f6df44:
+          bulldoze: 1
+          categories: transport
+          cost: 31
+          label: Bike Parking corner (rural)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_shed02-rur_79f7e2fc.SC4Lot:
+        79f7e2fc:
+          bulldoze: 1
+          categories: transport
+          cost: 33
+          label: Bike Shelter double (rural)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_single-shed-rur_79f80b06.SC4Lot:
+        79f80b06:
+          bulldoze: 1
+          categories: transport
+          cost: 32
+          label: Bike Shelter single (rural)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_str-rur_39f6c2b8.SC4Lot:
+        39f6c2b8:
+          bulldoze: 1
+          categories: transport
+          cost: 30
+          label: Bike Parking straight (rural)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bike_Rental-urb_d9f7d34d.SC4Lot:
+        d9f7d34d:
+          bulldoze: 1
+          categories: transport
+          cost: 44
+          label: PAMU BIKES Rental (urban)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bike_Lots
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_corner-urb_59f7d335.SC4Lot:
+        59f7d335:
+          bulldoze: 1
+          categories: transport
+          cost: 41
+          label: Bike Parking corner (urban)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_shed01-urb_79f7e0cd.SC4Lot:
+        79f7e0cd:
+          bulldoze: 1
+          categories: transport
+          cost: 43
+          label: Bike Shelter double (urban)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_single-shed-urb_79f81036.SC4Lot:
+        79f81036:
+          bulldoze: 1
+          categories: transport
+          cost: 42
+          label: Bike Shelter single (urban)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_str-urb_79f7d323.SC4Lot:
+        79f7d323:
+          bulldoze: 1
+          categories: transport
+          cost: 40
+          label: Bike Parking straight (urban)
+          maintenance: 5
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: Bikestand_simple
+          pollution: -2
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
     category: 103-industrial
     dependencies:
+      - simtropolis/20966-peg-mtp-super-pack
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
       - simtropolis/19338-peg-security-fencing-kit
       - simtropolis/19786-peg-cdk3-sp-rail-fleet
-      - simtropolis/20966-peg-mtp-super-pack
       - simtropolis/24859-bikes
-    description: "<body>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\n\tThere were these two guys with a faible for bicycles, dreaming how good it would be to have bikes roaming all over the sim-planet... better air, fewer fat people, new business opportunities... So they put together their meager resources, leased a run down warehouse, started deforming metal... and built an empire!\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>LOTS</strong></span>\n</p>\n\n<p>\n\t<strong>Industrials</strong> (plop)\n</p>\n\n<p>\n\t* 5x3 PAMU Metalworks (Shelters, Stands etc.) - 74 I-M jobs\n</p>\n\n<p>\n\t* 3x3 PAMU Manufacture (Custom Bikes) - 58 I-M jobs\n</p>\n\n<p>\n\t<strong>Commercials</strong> (plop)\n</p>\n\n<p>\n\t* 4x3 PAMU Headquarters - 42 CS$$ jobs\n</p>\n\n<p>\n\t* 2x2 PAMU Retail Store - 9 CS$ jobs\n</p>\n\n<p>\n\t* 2x2 PAMU Service and Repair - 12 CS$ jobs\n</p>\n\n<p>\n\t* 2x1 Bike Couriers - 32 CS$ jobs\n</p>\n\n<p>\n\t* 2x1 Second Hand / Repair Shop - 5 CS$ jobs\n</p>\n\n<p>\n\t<strong>Bike Parking</strong>\n</p>\n\n<p>\n\t* 1x1 Corner\n</p>\n\n<p>\n\t* 1x1 Straight\n</p>\n\n<p>\n\t* 1x1 Straight with one bad weather shelter\n</p>\n\n<p>\n\t* 1x1 Straight with two bad weather shelters\n</p>\n\n<p>\n\t* 1x1 PAMU Bike Rental Station\n</p>\n\n<p>\n\t<strong>Park+Ride</strong>\n</p>\n\n<p>\n\t* 2x1 Combined Car/Bike Parking - Capacity: 250\n</p>\n\n<p>\n\t* 2x2 Combined Car/Bike Parking - Capacity: 400\n</p>\n\n<p>\n\tThe traffic switch is still from car to ped - but at least it *looks* as if some are arriving with their bikes, too...\n</p>\n\n<p>\n\t<strong>Others</strong>\n</p>\n\n<p>\n\t* 6x6 PAMU Traffic Kindergarten and Bike Training - Capacity: 50\n</p>\n\n<p>\n\tWorks like a real school, but for a limited number of students - so don't try to skimp on the rest of your education program...\n</p>\n\n<p>\n\tAll other stats like power, water, monthly costs etc. are indicated via the ingame menu.\n</p>\n\n<p>\n\tThe 'IND and COM' lots are in the 'Landmarks' menu.\n</p>\n\n<p>\n\tThe various 'Parking' lots are in the 'Traffic | Miscellaneous' menu.\n</p>\n\n<p>\n\tThe 'Traffic Kindergarten' is in the 'Education' menu.\n</p>\n\n<p>\n\tThey all have custom icons for easy identification.\n</p>\n\n<p>\n\t<span style=\"color:#800000;\"><strong>DEPENDENCIES</strong></span>\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK</a> \_\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/15287-bsc-mega-props-sg-vol-01/\" rel=\"\"><abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol 01</a>\n</p>\n\n<p>\n\t<em>Additional (for the industrial lots)</em>\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> Security Fencing Kit</a> \_\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/19786-peg-cdk3-sp-rail-fleet/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> Rail-Fleet RESOURCE</a>\n</p>\n\n<p>\n\tIt is assumed that you have * bldgprop vol1 and vol2 installed as well.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>DEVELOPER NOTES</strong></span>\n</p>\n\n<p>\n\tMany of the lots come in two flavors - urban and rural. You can use the sets together or just one of them. This goes for all the included lots - delete any you do not wish to use.\n</p>\n\n<p>\n\t<span style=\"color:#FF0000;\"><strong>Just make sure you always keep the complete folder named *PAMU-Bikes_Resource* installed.</strong></span>\n</p>\n\n<p>\n\tMore detailed infos -e.g. on benefits, randomized and timed props etc.- in the included Read_Me.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>RECOMMENDATION</strong></span>\n</p>\n\n<p>\n\t\_ To add bikes outside of the designated lots we recommended this set of major mode ploppables (optional):\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/24859-bikes/\" rel=\"\">Bikes by NBVC</a>\n</p>\n\n<p>\n\t\_ <span style=\"color:#339966;\"><strong>CREDITS</strong></span>\n</p>\n\n<p>\n\tBATting: <strong>Murimk</strong>\n</p>\n\n<p>\n\tLOTting and MODding: <strong>Paeng</strong>\n</p>\n\n<p>\n\tThe props from this pack can be used to make your own lots. Do not include them in your upload though - please point to this pack as a dependency.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>SUPPORT</strong></span>\n</p>\n\n<p>\n\t<s>Should you need support for these items please visit the * <a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=9079.0\" rel=\"external nofollow\">PAMU Dev Thread</a>\_ with a History and many action-packed images :-)</s>\n</p>\n\n<p>\n\t<span style=\"color:#2980b9;\"><strong>-Cori Edit: </strong>Fixed formatting and broken linkys.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
+      - simgoober/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThere were these two guys with a faible for bicycles, dreaming how good it would be to have bikes roaming all over the sim-planet... better air, fewer fat people, new business opportunities... So they put together their meager resources, leased a run down warehouse, started deforming metal... and built an empire!\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>LOTS</strong></span>\n</p>\n\n<p>\n\t<strong>Industrials</strong> (plop)\n</p>\n\n<p>\n\t* 5x3 PAMU Metalworks (Shelters, Stands etc.) - 74 I-M jobs\n</p>\n\n<p>\n\t* 3x3 PAMU Manufacture (Custom Bikes) - 58 I-M jobs\n</p>\n\n<p>\n\t<strong>Commercials</strong> (plop)\n</p>\n\n<p>\n\t* 4x3 PAMU Headquarters - 42 CS$$ jobs\n</p>\n\n<p>\n\t* 2x2 PAMU Retail Store - 9 CS$ jobs\n</p>\n\n<p>\n\t* 2x2 PAMU Service and Repair - 12 CS$ jobs\n</p>\n\n<p>\n\t* 2x1 Bike Couriers - 32 CS$ jobs\n</p>\n\n<p>\n\t* 2x1 Second Hand / Repair Shop - 5 CS$ jobs\n</p>\n\n<p>\n\t<strong>Bike Parking</strong>\n</p>\n\n<p>\n\t* 1x1 Corner\n</p>\n\n<p>\n\t* 1x1 Straight\n</p>\n\n<p>\n\t* 1x1 Straight with one bad weather shelter\n</p>\n\n<p>\n\t* 1x1 Straight with two bad weather shelters\n</p>\n\n<p>\n\t* 1x1 PAMU Bike Rental Station\n</p>\n\n<p>\n\t<strong>Park+Ride</strong>\n</p>\n\n<p>\n\t* 2x1 Combined Car/Bike Parking - Capacity: 250\n</p>\n\n<p>\n\t* 2x2 Combined Car/Bike Parking - Capacity: 400\n</p>\n\n<p>\n\tThe traffic switch is still from car to ped - but at least it *looks* as if some are arriving with their bikes, too...\n</p>\n\n<p>\n\t<strong>Others</strong>\n</p>\n\n<p>\n\t* 6x6 PAMU Traffic Kindergarten and Bike Training - Capacity: 50\n</p>\n\n<p>\n\tWorks like a real school, but for a limited number of students - so don't try to skimp on the rest of your education program...\n</p>\n\n<p>\n\tAll other stats like power, water, monthly costs etc. are indicated via the ingame menu.\n</p>\n\n<p>\n\tThe 'IND and COM' lots are in the 'Landmarks' menu.\n</p>\n\n<p>\n\tThe various 'Parking' lots are in the 'Traffic | Miscellaneous' menu.\n</p>\n\n<p>\n\tThe 'Traffic Kindergarten' is in the 'Education' menu.\n</p>\n\n<p>\n\tThey all have custom icons for easy identification.\n</p>\n\n<p>\n\t<span style=\"color:#800000;\"><strong>DEPENDENCIES</strong></span>\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK</a> \_\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/15287-bsc-mega-props-sg-vol-01/\" rel=\"\"><abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol 01</a>\n</p>\n\n<p>\n\t<em>Additional (for the industrial lots)</em>\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/19338-peg-security-fencing-kit/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> Security Fencing Kit</a> \_\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/19786-peg-cdk3-sp-rail-fleet/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> Rail-Fleet RESOURCE</a>\n</p>\n\n<p>\n\tIt is assumed that you have * bldgprop vol1 and vol2 installed as well.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>DEVELOPER NOTES</strong></span>\n</p>\n\n<p>\n\tMany of the lots come in two flavors - urban and rural. You can use the sets together or just one of them. This goes for all the included lots - delete any you do not wish to use.\n</p>\n\n<p>\n\t<span style=\"color:#FF0000;\"><strong>Just make sure you always keep the complete folder named *PAMU-Bikes_Resource* installed.</strong></span>\n</p>\n\n<p>\n\tMore detailed infos -e.g. on benefits, randomized and timed props etc.- in the included Read_Me.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>RECOMMENDATION</strong></span>\n</p>\n\n<p>\n\t\_ To add bikes outside of the designated lots we recommended this set of major mode ploppables (optional):\n</p>\n\n<p>\n\t* <a href=\"https://community.simtropolis.com/files/file/24859-bikes/\" rel=\"\">Bikes by NBVC</a>\n</p>\n\n<p>\n\t\_ <span style=\"color:#339966;\"><strong>CREDITS</strong></span>\n</p>\n\n<p>\n\tBATting: <strong>Murimk</strong>\n</p>\n\n<p>\n\tLOTting and MODding: <strong>Paeng</strong>\n</p>\n\n<p>\n\tThe props from this pack can be used to make your own lots. Do not include them in your upload though - please point to this pack as a dependency.\n</p>\n\n<p>\n\t<span style=\"color:#339966;\"><strong>SUPPORT</strong></span>\n</p>\n\n<p>\n\t<s>Should you need support for these items please visit the * <a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=9079.0\" rel=\"external nofollow\">PAMU Dev Thread</a>\_ with a History and many action-packed images :-)</s>\n</p>\n\n<p>\n\t<span style=\"color:#2980b9;\"><strong>-Cori Edit: </strong>Fixed formatting and broken linkys.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
     file: pamu-bikes-v1.zip
     files:
       - PAMU_Bikes_v100/pic02.jpg
@@ -3290,9 +3634,1021 @@ assets:
       - https://www.simtropolis.com/objects/screens/0008/3d5619d3aecf37e1691f620299516324-stex1.jpg
       - https://www.simtropolis.com/objects/screens/0008/3d5619d3aecf37e1691f620299516324-stex2.jpg
     lastModified: 2010-12-07T19:13:50.000Z
+    lots:
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Bike_Kindergarten/Bike_Kindergarten_d9f99d8a.SC4Lot:
+        d9f99d8a:
+          building: d9f99d8a
+          name: Bike_Kindergarten
+          props:
+            - d06d0579
+            - 2c410000
+            - 28f50000
+            - 2ab50000
+            - 2ab40000
+            - 1dd60000
+            - a00005f5
+            - f06d0527
+            - '29930000'
+            - '1e190000'
+            - 750601d5
+            - a00005f6
+            - 2a490000
+            - 1c410000
+            - afcede18
+            - ef6a8187
+            - ac0734b7
+            - 0eb0d8b4
+            - 4e0c0604
+            - 2a140000
+            - 2a160000
+            - 2b1a0000
+            - 2a120000
+            - 1ece0000
+            - 1ecf0000
+            - 2ba20000
+            - a00005f7
+            - a00005f8
+            - '28340000'
+            - '293e0000'
+            - 293f0000
+            - '29420000'
+            - a000007a
+            - 29c20000
+            - 2aa70000
+            - 2aa60000
+            - 2ae10000
+            - 2a580000
+            - 2a670000
+            - f0fcafeb
+            - 70fcaf69
+            - d0fc8c9b
+            - f0fcb25c
+            - d0fcb22f
+            - '28e50000'
+            - '29180000'
+            - 2aa50000
+            - 2aa30000
+          size: 6x6
+          textures:
+            - 1da44865
+            - 1da44835
+            - 1da44845
+            - 1da44725
+            - 1da44850
+            - 1da4482a
+            - 1da447fa
+            - 1da447f5
+            - 1da44a50
+            - 1da449f5
+            - 1da443f0
+            - 1da448b0
+            - 261c0000
+            - f5f840e0
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeCouriers_99f89062.SC4Lot:
+        99f89062:
+          building: 99f89062
+          name: BikeCouriers
+          props:
+            - 8edd5401
+            - d06d0579
+            - f0f54163
+            - 8f44d3f3
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - a00009a6
+            - a00009a2
+            - 2a160000
+            - 2a140000
+            - 29c20000
+            - a000007c
+            - 2aaf0000
+            - 2aa90000
+            - 2aab0000
+            - 2aba0000
+            - 1dfb0000
+            - 1ece0000
+            - 1ecf0000
+            - 1db00000
+          size: 2x1
+          textures:
+            - 1da44aaa
+            - 1da479e5
+            - 1da44a05
+            - 1da447aa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeRepairRetail_d9f98171.SC4Lot:
+        d9f98171:
+          building: d9f98171
+          name: BikeRepairRetail
+          props:
+            - 4c842426
+            - 4e0c0604
+            - ce0c0619
+            - 4e0c060e
+            - 1de50000
+            - 0c074172
+            - a5a0010a
+            - a00005f5
+            - a00005f9
+            - a00005f7
+            - ae10fdf2
+            - ee10fddb
+            - c35cff0d
+            - d0f54159
+            - a00005f8
+            - a00009a3
+            - 2a120000
+            - 1dfb0000
+            - 1dab0000
+            - 1db00000
+            - 1ece0000
+            - 1ecf0000
+            - 29c20000
+            - a000007c
+            - a000007f
+            - ba043f3e
+            - ba043f48
+            - ba043f52
+            - 99e4cafe
+            - 79f5b76a
+          size: 2x2
+          textures:
+            - 1da4457a
+            - 1da447b0
+            - 1da447aa
+            - 1da44870
+            - 25fb0100
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeShop_39f71155.SC4Lot:
+        39f71155:
+          building: 39f71155
+          name: BikeShop
+          props:
+            - cc073f6b
+            - a00005f5
+            - d9e4cb19
+            - f9e4cb2f
+            - 1c510000
+            - 1c670000
+            - 2a2b0000
+            - 99f5b798
+            - f9eb113e
+            - 19f5b8d6
+            - 59f5b771
+            - d9f5b79f
+            - 79f5b8f7
+            - c35cff07
+            - c35cff0e
+            - 1dfe0000
+            - 1ece0000
+            - 1ecf0000
+            - 2a140000
+            - 2a160000
+            - 1dfb0000
+            - 29c20000
+            - 2aae0000
+            - 2aad0000
+            - 2aac0000
+            - 2aa90000
+            - 2aa80000
+            - ba043f3e
+            - 5a043f6e
+          size: 2x2
+          textures:
+            - 1da4457a
+            - 1da448ba
+            - 1da447b0
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/BikeShop_secondhand_99f89f7e.SC4Lot:
+        99f89f7e:
+          building: 99f89f7e
+          name: BikeShop_secondhand
+          props:
+            - 0c074172
+            - 1c850000
+            - '29860000'
+            - a00005f5
+            - a00005f9
+            - ae060000
+            - 1d300000
+            - 1d1d0000
+            - a00009a1
+            - 1dab0000
+            - 1dac0000
+            - a00005f8
+            - a00005f7
+            - 29c20000
+            - 2aae0000
+            - 2aad0000
+            - 2aac0000
+            - 2aba0000
+          size: 2x1
+          textures:
+            - 25fb0000
+            - 261c0000
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bike_Manufacturer_59f743bd.SC4Lot:
+        59f743bd:
+          building: 59f743bd
+          name: Bike_Manufacturer
+          props:
+            - 0c074190
+            - cdca81fd
+            - f9e4cb2f
+            - 79f5b76a
+            - 99e4cafe
+            - b9e4cb27
+            - d9e4cb19
+            - 59e4cb0c
+            - 99ec8e42
+            - b4ab30f7
+            - d06d0579
+            - 2a430000
+            - 2a470000
+            - 29c20000
+            - 2ab40000
+            - 2ab10000
+            - 2aac0000
+            - 2aa90000
+            - 1ecf0000
+            - 2a140000
+            - 2b1a0000
+            - c35cff14
+            - 1d300000
+            - 2a580000
+            - 0c07416f
+            - ae41edd0
+            - ce5ec64c
+            - 1c850000
+            - a00005f8
+            - 2aab0000
+            - 005c5000
+            - 2aba0000
+            - 1ece0000
+            - 2aae0000
+            - 2aad0000
+            - ba043f3e
+            - ba043f48
+          size: 3x3
+          textures:
+            - 25fb0000
+            - 261c0000
+            - 1da447aa
+            - 256c0000
+            - 1da447b0
+            - '25840000'
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bike_Metalworks_d9f934ac.SC4Lot:
+        d9f934ac:
+          building: d9f934ac
+          name: Bike_Metalworks
+          props:
+            - 0c07419d
+            - d06d0579
+            - 2bfa0000
+            - 2a6a0000
+            - f06d0f27
+            - 1f3c0000
+            - 0c07415c
+            - 39ec8e4d
+            - b9ec8dbb
+            - 19eb114e
+            - 59f5b8ed
+            - 2a450000
+            - 2a470000
+            - d0f5331a
+            - ee4c6cf6
+            - 0e4c6d31
+            - ae4c6d23
+            - f10dde74
+            - 710dde83
+            - 710dde81
+            - 710dde82
+            - 710dde84
+            - ae10fdf2
+            - ee10fddb
+            - 15020cb0
+            - 29c20000
+            - ce10fe01
+            - 1e9a0000
+            - 2aae0000
+            - 2aad0000
+            - 2aac0000
+            - 2ab10000
+            - 2ab00000
+            - 2ab50000
+            - 2ae80000
+            - 2aa90000
+            - 2a580000
+            - 2aba0000
+            - 1ece0000
+            - 1ecf0000
+            - '28340000'
+            - 1dab0000
+            - 1db00000
+            - 1dac0000
+            - 1d300000
+            - ba043f52
+            - ba043f3e
+            - 9a043f5c
+          size: 5x3
+          textures:
+            - 25fb0000
+            - 256b0000
+            - 1da44420
+            - 1da44aaa
+            - 1da4442a
+            - 1da44405
+            - 1da44400
+            - 256c0000
+            - 1da444c0
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/PAMU-Bikes_Jobs/Bikeshop_luxury_99f86dc5.SC4Lot:
+        99f86dc5:
+          building: 99f86dc5
+          name: Bikeshop_luxury
+          props:
+            - cc073fa3
+            - 99f5b798
+            - 19eb1113
+            - 19eb111e
+            - f9eb113e
+            - a00005f5
+            - a00005f9
+            - 90f54168
+            - 10f5415d
+            - 4e0c0604
+            - a00009a3
+            - a5a00100
+            - a5a00108
+            - a5a0010e
+            - 2b1a0000
+            - 1ece0000
+            - 1ecf0000
+            - 2aad0000
+            - 2aa50000
+            - 2aac0000
+            - 2a140000
+            - 2a160000
+            - 2a130000
+            - a5a00110
+            - cf73c4e4
+            - 29c20000
+            - 1e9b0000
+            - 1e9a0000
+            - 2a9c0000
+            - 2abb0000
+            - 2a5a0000
+            - 1dfb0000
+            - ba043f3e
+            - 9a043f5c
+          size: 4x3
+          textures:
+            - 1da4457a
+            - f5f8400a
+            - f5f8401a
+            - f5f8402a
+            - f5f84005
+            - f5f84040
+            - 1da448ba
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_rural-large_d9fd5cd3.SC4Lot:
+        d9fd5cd3:
+          building: d9fd5cd3
+          name: Bike_ParkandRide_rural-large
+          props:
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - a00009a6
+            - a000007c
+            - 1c730000
+            - a00014db
+            - a00009a2
+            - 1dab0000
+            - 1db00000
+            - d06d0579
+            - 2b1a0000
+            - 2a140000
+            - 2a160000
+            - 1ece0000
+            - 1ecf0000
+            - 2a580000
+            - 2aba0000
+            - 39f5b7c4
+          size: 2x2
+          textures:
+            - 1da44ab5
+            - 256c0000
+            - 1da447aa
+            - 1da447b0
+            - 1da449fa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_rural_d9fd4da0.SC4Lot:
+        d9fd4da0:
+          building: d9fd4da0
+          name: Bike_ParkandRide_rural
+          props:
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - a00009a6
+            - a000007c
+            - a00014db
+            - 2a160000
+            - d06d0579
+            - f06d0f27
+            - 2a580000
+            - 1ece0000
+            - 1ecf0000
+            - ee9353d1
+            - 1dab0000
+            - 1db00000
+            - 39f5b7c4
+            - b9f5b78e
+            - f9f5b781
+          size: 2x1
+          textures:
+            - 1da443c5
+            - 1da44730
+            - 1da4470a
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_urban-large_d9fd524b.SC4Lot:
+        d9fd524b:
+          building: d9fd524b
+          name: Bike_ParkandRide_urban-large
+          props:
+            - b9ec8dbb
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - 4e0c0604
+            - ce0c0619
+            - 1dfb0000
+            - a00009a6
+            - a00009a4
+            - a000007c
+            - 1c730000
+            - a00014db
+            - a00009a2
+            - 1dab0000
+            - 1db00000
+          size: 2x2
+          textures:
+            - 1da443c5
+            - 1da448b5
+            - 1da479e5
+            - 1da447b0
+            - 1da44a05
+            - 1da448ba
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Park-and-Ride/Bike_ParkandRide_urban_d9f96b32.SC4Lot:
+        d9f96b32:
+          building: d9f96b32
+          name: Bike_ParkandRide_urban
+          props:
+            - b9ec8dbb
+            - 39ec8e4d
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - 4e0c0604
+            - ce0c0619
+            - 1dfb0000
+            - a00009a6
+            - a00009a4
+            - a000007c
+            - 1c730000
+            - a00014db
+          size: 2x1
+          textures:
+            - 1da44755
+            - 1da44750
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bike_Rental-rur_39f6dc1c.SC4Lot:
+        39f6dc1c:
+          building: 39f6dc1c
+          name: Bike_Rental-rur
+          props:
+            - 0c074172
+            - 906d0f89
+            - 29c20000
+            - a000007b
+            - a0000065
+            - 1ece0000
+            - 1ecf0000
+            - 2aba0000
+            - 19eb114e
+            - 99e4cafe
+            - ba043f52
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da44ab5
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_corner-rur_39f6df44.SC4Lot:
+        39f6df44:
+          building: 39f6df44
+          name: Bikestand_corner-rur
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - d06d0579
+            - a000007c
+            - a0000065
+            - 1ece0000
+            - 1ecf0000
+            - 1dab0000
+            - 1db00000
+            - 1dac0000
+            - a000004a
+            - 2a130000
+            - 2ba20000
+            - 2a160000
+            - a000005a
+            - 29c20000
+            - 29b10000
+            - 2aba0000
+          size: 1x1
+          textures:
+            - 1da447a0
+            - 1da44ab0
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_shed02-rur_79f7e2fc.SC4Lot:
+        79f7e2fc:
+          building: 79f7e2fc
+          name: Bikestand_shed02-rur
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - d06d0579
+            - a000007c
+            - a0000065
+            - a0000077
+            - 1ece0000
+            - 1ecf0000
+            - 1dab0000
+            - 1db00000
+            - 1dac0000
+            - a000004a
+            - 39f5b7c4
+            - 1dfb0000
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da44aaa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_single-shed-rur_79f80b06.SC4Lot:
+        79f80b06:
+          building: 79f80b06
+          name: Bikestand_single-shed-rur
+          props:
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - d06d0579
+            - a000007c
+            - a0000065
+            - a0000077
+            - 1ece0000
+            - 1ecf0000
+            - 1dab0000
+            - 1db00000
+            - 1dac0000
+            - a000004a
+            - f9f5b781
+            - 39f5b7c4
+            - b9f5b78e
+            - f06d0f27
+            - a00009a6
+            - a00005f9
+            - 2aba0000
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da44aaa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Rural_Bike_Park/Bikestand_str-rur_39f6c2b8.SC4Lot:
+        39f6c2b8:
+          building: 39f6c2b8
+          name: Bikestand_str-rur
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - d06d0579
+            - a000007c
+            - a0000065
+            - a0000077
+            - 1ece0000
+            - 1ecf0000
+            - 1dab0000
+            - 1db00000
+            - 1dac0000
+            - a000004a
+            - 2a580000
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da44aaa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bike_Rental-urb_d9f7d34d.SC4Lot:
+        d9f7d34d:
+          building: d9f7d34d
+          name: Bike_Rental-urb
+          props:
+            - 29c20000
+            - a0000065
+            - 1d290000
+            - ce0c0619
+            - a00009a4
+            - '29130000'
+            - 1dfb0000
+            - 19eb114e
+            - 99e4cafe
+            - b9eb1183
+            - ba043f52
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da479e5
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_corner-urb_59f7d335.SC4Lot:
+        59f7d335:
+          building: 59f7d335
+          name: Bikestand_corner-urb
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - a000007c
+            - a0000065
+            - a000004a
+            - 29c20000
+            - 29b10000
+            - ce0c0619
+            - a00009a4
+            - f948c554
+            - 1dfb0000
+          size: 1x1
+          textures:
+            - 1da479e5
+            - 1da447aa
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_shed01-urb_79f7e0cd.SC4Lot:
+        79f7e0cd:
+          building: 79f7e0cd
+          name: Bikestand_shed01-urb
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - a000007c
+            - a0000065
+            - 1db00000
+            - b9ec8dbb
+            - 4e0c0604
+            - 1dfb0000
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da479e5
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_single-shed-urb_79f81036.SC4Lot:
+        79f81036:
+          building: 79f81036
+          name: Bikestand_single-shed-urb
+          props:
+            - a00005f5
+            - a00005f8
+            - a00005f7
+            - a000007c
+            - a0000065
+            - 1db00000
+            - a00009a4
+            - ce0c0619
+            - 39ec8e4d
+            - b9ec8dbb
+            - 1dfb0000
+            - a00009a6
+            - a00009a2
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da479e5
+      PAMU_Bikes_v100/PAMU_Bikes_Lots/Urban_Bike_Park/Bikestand_str-urb_79f7d323.SC4Lot:
+        79f7d323:
+          building: 79f7d323
+          name: Bikestand_str-urb
+          props:
+            - a00005f5
+            - a00005f9
+            - a00005f8
+            - a00005f7
+            - a000007c
+            - a0000065
+            - 1db00000
+            - a00009a4
+            - ce0c0619
+            - 1dfb0000
+          size: 1x1
+          textures:
+            - 1da447b0
+            - 1da479e5
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/KEEP_Common_Files/common.dat:
+        - 713d210c
+        - 750fac58
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Shelters/shelters.dat:
+        - 387dde7a
+        - b8a2c884
+        - 18a2c9e1
+        - f8a2ca8e
+        - 38a2cb4c
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Stands/stands-shop.dat:
+        - 987ddc8a
+        - 39f1b2a6
+        - b9f1b1d3
+        - b9f1b351
+        - f87ddc3c
+        - 79f1af8c
+        - 59f1b027
+        - 79f1aa91
+        - b9f1ab04
+        - 99f1ab75
+        - 39f1ac36
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Stands/stands-simple.dat:
+        - 59e6e2f0
+        - 59f1baed
+        - 59f1bb84
+        - 59f1bbfa
+        - 19f1bc6f
+        - 19f1bcd7
+        - 39f1bd40
+        - f9e6e51c
+        - b9e6e7bc
+        - d9e70b7d
+        - b9f1be9a
+        - b9f1b6f2
+        - 99f1b774
+        - d9f1b7f2
+        - 79f1ba1d
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bikers/bikers.dat:
+        - 79e6d49e
+        - d96b661c
+        - 79e6d513
+        - 596b62eb
+        - 99f1c094
+        - 19e884e2
+        - d9e88469
+        - d9e8840c
+        - 39e6d5fc
+        - 396b6256
+        - 59e6e01d
+        - 796b66c9
+        - 39e6e1fd
+        - 596b6582
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bikes/bikes.dat:
+        - 5992fd6a
+        - 9992fdde
+        - b9e833ec
+        - d9f1c0ed
+        - 5992fe46
+        - 5992fd0e
+        - 7992fe91
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Signs/signs.dat:
+        - d87ddcbe
+        - 387ddcd4
+        - 587ddcf7
+        - 987ddd13
     name: PAMU Bikes Inc.
+    propFamilies:
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/PAMU_Fam-Names.dat:
+        a00005f5:
+          name: '0xA00005F5 : MUR-BikeStands Simple'
+        a00005f6:
+          name: '0xA00005F6 : MUR-BikeStands Shop'
+        a00005f7:
+          name: '0xA00005F7 : MUR-Bikers Straight'
+        a00005f8:
+          name: '0xA00005F8 : MUR-Bikers Diagonal'
+        a00005f9:
+          name: '0xA00005F9 : MUR-Bicycles'
+    props:
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/KEEP_Common_Files/common.dat:
+        15020cb0:
+          family: a00014ba
+          model: 750fac58
+          name: PEG-RF_FlatCar1
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Shelters/shelters.dat:
+        39ec8e4d:
+          model: b8a2c884
+          name: Murimk_Bikeshed_mod1_grey
+        39f5b7c4:
+          model: f8a2ca8e
+          name: Murimk_Bikeshed_mod2_orange
+        b9ec8dbb:
+          model: 387dde7a
+          name: Murimk_Bikeshed_mod1_blue
+        b9f5b78e:
+          model: 18a2c9e1
+          name: Murimk_Bikeshed_mod2_black
+        f9f5b781:
+          model: 38a2cb4c
+          name: Murimk_Bikeshed_mod2_white
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Stands/stands-shop.dat:
+        19f5b7ba:
+          family: a00005f6
+          model: b9f1ab04
+          name: Murimk_Bikestand_shopversion_full01
+        19f5b8d1:
+          family: a00005f6
+          model: 99f1ab75
+          name: Murimk_Bikestand_shopversion_full02
+        19f5b968:
+          family: a00005f6
+          model: 39f1ac36
+          name: Murimk_Bikestand_shopversion_full03
+        39f5b7b4:
+          family: a00005f6
+          model: b9f1b1d3
+          name: Murimk_Bikestand_shopv_onebik02
+        39f5b8dc:
+          family: a00005f6
+          model: 79f1af8c
+          name: Murimk_Bikestand_shopv_twobik02
+        59f5b8ed:
+          family: a00005f6
+          model: 79f1aa91
+          name: Murimk_Bikestand_shopversion_empty
+        ba043f52:
+          model: 987ddc8a
+          name: Murimk_Bikestand_pamu1
+        d9f5b962:
+          family: a00005f6
+          model: 39f1b2a6
+          name: Murimk_Bikestand_shopv_onebik01
+        f9f5b7ae:
+          family: a00005f6
+          model: b9f1b351
+          name: Murimk_Bikestand_shopv_onebik03
+        f9f5b90c:
+          family: a00005f6
+          model: 59f1b027
+          name: Murimk_Bikestand_shopv_twobik03
+        fa043f35:
+          family: a00005f6
+          model: f87ddc3c
+          name: Murimk_Bikestand_shopv_twobik01
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bike_Stands/stands-simple.dat:
+        19eb1113:
+          family: a00005f5
+          model: d9e70b7d
+          name: Murimk_Bikestand_simple_full03
+        19eb111e:
+          family: a00005f5
+          model: b9e6e7bc
+          name: Murimk_Bikestand_simple_full02
+        19eb114e:
+          family: a00005f5
+          model: 59e6e2f0
+          name: Murimk_Bikestand_simple_empty
+        19f5b8d6:
+          family: a00005f5
+          model: 79f1ba1d
+          name: Murimk_Bikestand_simple_med04
+        39f5b8ca:
+          family: a00005f5
+          model: 99f1b774
+          name: Murimk_Bikestand_simple_med02
+        59f5b771:
+          family: a00005f5
+          model: d9f1b7f2
+          name: Murimk_Bikestand_simple_med03
+        59f5b905:
+          family: a00005f5
+          model: 59f1baed
+          name: Murimk_Bikestand_simple_few01
+        79f5b8f7:
+          family: a00005f5
+          model: 59f1bbfa
+          name: Murimk_Bikestand_simple_few03
+        99f5b798:
+          family: a00005f5
+          model: b9f1be9a
+          name: Murimk_Bikestand_simple_full04
+        99f5b96d:
+          family: a00005f5
+          model: 19f1bcd7
+          name: Murimk_Bikestand_simple_few05
+        99f5b975:
+          family: a00005f5
+          model: 19f1bc6f
+          name: Murimk_Bikestand_simple_few04
+        b9f5b900:
+          family: a00005f5
+          model: 59f1bb84
+          name: Murimk_Bikestand_simple_few02
+        d9f5b79f:
+          family: a00005f5
+          model: b9f1b6f2
+          name: Murimk_Bikestand_simple_med01
+        f9eb113e:
+          family: a00005f5
+          model: f9e6e51c
+          name: Murimk_Bikestand_simple_full01
+        f9f5b95b:
+          family: a00005f5
+          model: 39f1bd40
+          name: Murimk_Bikestand_simple_few06
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bikers/bikers.dat:
+        39eb1159:
+          family: a00005f8
+          name: Murimk_Biker_Yellow_diag
+        39ec8dd6:
+          family: a00005f8
+          name: Murimk_Biker_Orange_diag
+        59e4cb62:
+          family: a00005f7
+          name: Murimk_Biker_Red
+        79e4cb58:
+          family: a00005f7
+          name: Murimk_Biker_Green
+        79e4cb76:
+          family: a00005f7
+          name: Murimk_Biker_White
+        79eb1162:
+          family: a00005f8
+          name: Murimk_Biker_White_diag
+        79eb116b:
+          family: a00005f8
+          name: Murimk_Biker_Red_diag
+        79f5b8c4:
+          family: a00005f8
+          name: Murimk_Biker_Grey_diag
+        99ec8dc8:
+          family: a00005f7
+          name: Murimk_Biker_Grey
+        99ec8e2f:
+          family: a00005f7
+          name: Murimk_Biker_Orange
+        b9e4cb4d:
+          family: a00005f7
+          name: Murimk_Biker_Blue
+        b9eb1176:
+          family: a00005f8
+          name: Murimk_Biker_Green_diag
+        b9eb1183:
+          family: a00005f8
+          name: Murimk_Biker_Blue_diag
+        d9e4cb7e:
+          family: a00005f7
+          name: Murimk_Biker_Yellow
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Bikes/bikes.dat:
+        59e4cb0c:
+          family: a00005f9
+          model: 9992fdde
+          name: Murimk_Bike_Green
+        79f5b76a:
+          family: a00005f9
+          model: d9f1c0ed
+          name: Murimk_Bike_Orange
+        99e4cafe:
+          family: a00005f9
+          model: 5992fd6a
+          name: Murimk_Bike_Blue
+        99ec8e42:
+          family: a00005f9
+          model: b9e833ec
+          name: Murimk_Bike_Grey
+        b9e4cb27:
+          family: a00005f9
+          model: 5992fd0e
+          name: Murimk_Bike_White
+        d9e4cb19:
+          family: a00005f9
+          model: 5992fe46
+          name: Murimk_Bike_Red
+        f9e4cb2f:
+          family: a00005f9
+          model: 7992fe91
+          name: Murimk_Bike_Yellow
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/PAMU-Bikes_Props/Signs/signs.dat:
+        5a043f6e:
+          model: 387ddcd4
+          name: Murimk_sign_mod1_pamu2
+        9a043f5c:
+          model: 587ddcf7
+          name: Murimk_sign_mod2_pamu1
+        ba043f3e:
+          model: d87ddcbe
+          name: Murimk_sign_mod1_pamu1
+        ba043f48:
+          model: 987ddd13
+          name: Murimk_sign_mod2_pamu2
     sha256: dfedd4a94827fec094b37496388f54b0f3f7bd400fa0bbffd3c3cc3b000047a7
     size: 669799
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
+    textures:
+      PAMU_Bikes_v100/PAMU-Bikes_Resource/KEEP_Common_Files/common.dat:
+        - f5f840e0
+        - f5f8400a
+        - f5f84040
+        - f5f8401a
+        - f5f84005
+        - f5f8402a
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_12_2010/thumb-3d5619d3aecf37e1691f620299516324-stex1.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1167369
@@ -9488,4 +10844,4 @@ assets:
     url: https://community.simtropolis.com/files/file/976-umbrella-inc-research-facility/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-18T09:34:56.459Z

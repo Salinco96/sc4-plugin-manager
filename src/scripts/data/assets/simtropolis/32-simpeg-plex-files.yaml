@@ -5,7 +5,7 @@ assets:
       - Pegasus
     category: 32-simpeg-plex-files
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p align=\"justify\">This resource pack is a collection of chain link fence props that can be used on any type of lot that requires\_security fencing.\_ The props in this pack may\_be used by other\_developers to enhance the appearance of their lots.</p>\n<p align=\"justify\">The pack contains two styles of fencing (with or without barb\_wire) and includes extra items such as diagonal fence sections, corner sections, pedestrian gates and automatic rolling styled gates.</p>\n<p>\_</p>\n<p align=\"center\">\_<strong>** This dependency has no dependencies.</strong></p>\n<p align=\"center\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This resource pack is a collection of chain link fence props that can be used on any type of lot that requires\_security fencing.\_ The props in this pack may\_be used by other\_developers to enhance the appearance of their lots.</p>\n<p align=\"justify\">The pack contains two styles of fencing (with or without barb\_wire) and includes extra items such as diagonal fence sections, corner sections, pedestrian gates and automatic rolling styled gates.</p>\n<p>\_</p>\n<p align=\"center\">\_<strong>** This dependency has no dependencies.</strong></p>\n<p align=\"center\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG_SecurityFence_RESOURCE_100.zip
     files:
       - PEGPROD/MODs/Security Fencing/readme_243.htm
@@ -15,9 +15,94 @@ assets:
       - https://www.simtropolis.com/objects/screens/0026/e93137f82ebbfe8be9f12c8d2085c058-product_image.jpg
       - https://www.simtropolis.com/objects/screens/0026/e93137f82ebbfe8be9f12c8d2085c058-product_image1.jpg
     lastModified: 2008-02-06T08:17:17.000Z
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat:
+        - f4a9bdee
+        - 94a9aea4
+        - 54a9bce4
+        - 54a9baea
+        - d4a9e6dd
+        - 74a9d4fe
+        - 14a9e631
+        - 74a9e564
+        - 94aa0789
+        - f4aa06ea
+        - 34aa054d
+        - f4aa04d1
+        - 74aa1ead
+        - 94aa1c3c
+        - 74a9ebb8
+        - b4aa2a6b
+        - 74aa004a
     name: PEG Security Fencing Kit
+    props:
+      PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat:
+        14ab757b:
+          model: 94aa1c3c
+          name: PEG_CLFence_Corner_Curve_BW
+        14ab7c72:
+          model: b4aa2a6b
+          name: PEG_CLFence_Diag
+        34ab3152:
+          model: 54a9baea
+          name: PEG_CLFence_Gate_BW
+        34ab75e1:
+          model: f4aa06ea
+          name: PEG_CLFence_8m_BW
+        3f9a3639:
+          model: d4a9e6dd
+          name: PEG_CLFence_RolloGate_23-5
+        54ab3118:
+          model: 54a9bce4
+          name: PEG_CLFence_Gate
+        54ab760a:
+          model: 34aa054d
+          name: PEG_CLFence_Diag-8m
+        54ab7635:
+          model: f4aa04d1
+          name: PEG_CLFence_Diag-8m_BW
+        54ab76c7:
+          model: 74a9ebb8
+          name: PEG_CLFence_Corner_BW
+        54ab770d:
+          model: 14a9e631
+          name: PEG_CLFence_RolloGate_Open
+        652b17c6:
+          name: PEG_CLFence_RolloGate_BW_23-5
+        74ab008e:
+          model: 94a9aea4
+          name: PEG_CLFence_BW
+        94ab7735:
+          model: 74a9e564
+          name: PEG_CLFence_RolloGate_Open_BW
+        b3d7384b:
+          name: PEG_CLFence_RolloGate_Open_5-23
+        b4ab30f7:
+          model: f4a9bdee
+          name: PEG_CLFence
+        b4ab75a3:
+          model: 94aa0789
+          name: PEG_CLFence_8m
+        b4ab76a0:
+          model: 74aa004a
+          name: PEG_CLFence_Diag_BW
+        c439c08f:
+          name: PEG_CLFence_RolloGate_Open_BW_5-23
+        d4ab753d:
+          model: 74aa1ead
+          name: PEG_CLFence_Corner_Curve
+        d4ab76ee:
+          model: d4a9e6dd
+          name: PEG_CLFence_RolloGate
+        f4ab30a2:
+          model: 74a9d4fe
+          name: PEG_CLFence_RolloGate_BW
     sha256: 555ed2486d8180e7dc25184a2e365a3586f1dee462896356cf966663e3f37a1f
     size: 227413
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2008/thumb-e93137f82ebbfe8be9f12c8d2085c058-product_image.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 407399
@@ -5387,4 +5472,4 @@ assets:
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-18T09:34:56.459Z

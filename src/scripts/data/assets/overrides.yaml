@@ -150,6 +150,10 @@ sc4evermore/108-sc4d-lex-legacy-bsc-diggis-complete-ponds-and-streams:
 sc4evermore/11-sc4d-lex-legacy-nob-dependencies-pack:
   packageId: nob/mega-props-collection
 
+sc4evermore/123-sfbt-props-peterycristi-props:
+  packageId: peterycristi/sfbt-props
+  variantId: default
+
 sc4evermore/128-gizmo-street-rr-gate-replacement-mod:
   packageId: gizmo/street-rr-gate-replacement-mod
 
@@ -171,6 +175,10 @@ sc4evermore/138-sc4d-lex-legacy-zero7-commercial-pack:
 
 sc4evermore/14-maxis-buildings-as-props-and-dlc-props-v2-1:
   packageId: maxis/maxis-buildings-as-props
+  variantId: default
+
+sc4evermore/140-sc4d-lex-legacy-zero7-industrial-pack:
+  packageId: zero7/industrial-pack
   variantId: default
 
 sc4evermore/142-aptx-ultra-prop-pack:
@@ -205,6 +213,18 @@ sc4evermore/167-bsc-aln-rrp-pasture-flora:
 
 sc4evermore/168-vortext-vortexture-1-2-base-set-grass-and-dirt:
   packageId: vortext/textures-vol01
+  paths:
+    Vortext/Textures/Vortexture 2*:
+      packageId: vortext/textures-vol02
+    ~Documents/Prop-Texture Catalogue Index and Cleanitol/Vortexture vol. 2*:
+      packageId: vortext/textures-vol02
+    ~Documents/Vortext_Readmes/Vortexture 2*:
+      packageId: vortext/textures-vol02
+  variantId: default
+
+sc4evermore/171-haarl-mega-props-dutch-vol-01:
+  packageId: haarlemmergold/dutch-mega-props-vol01
+  variantId: default
 
 sc4evermore/174-sc4d-lex-legacy-somy-dependencies-pack:
   packageId: somy/mega-props-collection
@@ -747,6 +767,8 @@ sc4evermore/5-sc4d-lex-legacy-cp-early19thcenturyresidentials-pack:
 
 sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem: null
 
+sc4evermore/52-colossus-addon-mod-version-2-1-0a-mac-by-invisichem: null
+
 sc4evermore/54-bsc-kevdan25-restaurants:
   packageId: kevdan25/restaurants
 
@@ -793,6 +815,7 @@ sc4evermore/9-porkissimo-mega-props-vol01:
 
 sc4evermore/90-mgb204-texture-pack:
   packageId: mgb204/texture-pack
+  variantId: default
 
 sc4evermore/91-mgb204-retail-signage-pack-rsp:
   packageId: mgb204/retail-signage-pack
@@ -860,6 +883,7 @@ simtropolis/11420-porkie-props-vol2-seasonal-street-trees:
 
 simtropolis/11421-jenx-porkie-expanded-porkie-props:
   packageId: porkissimo/jenx-porkie-expanded-props
+  variantId: default
 
 simtropolis/11443-rls-homes-swedish-modern:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
@@ -953,6 +977,10 @@ simtropolis/13618-bsc-brick-canals-narrow-set:
 
 simtropolis/13769-rls-home-the-hagerman:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
+
+simtropolis/13866-jeronij-concrete-wall-addon-stairs:
+  packageId: buddybud/jeronij-concrete-wall-addon-stairs
+  variantId: default
 
 simtropolis/13965-small-train-station:
   packageId: jasoncw/small-train-station
@@ -1071,6 +1099,7 @@ simtropolis/19328-perry-station:
 
 simtropolis/19338-peg-security-fencing-kit:
   packageId: pegasus/security-fencing-kit
+  variantId: default
 
 simtropolis/19408-dk1-convenience-stores-2:
   packageId: dk1/dk1-convenience-stores
@@ -1086,6 +1115,7 @@ simtropolis/19577-peg-cdk3-sp-container-ship-fleet:
 
 simtropolis/19786-peg-cdk3-sp-rail-fleet:
   packageId: pegasus/cdk3-sp-rail-fleet
+  variantId: default
 
 simtropolis/19880-peg-cdk3-super-pak:
   packageId: pegasus/cdk3-super-pack
@@ -1116,6 +1146,7 @@ simtropolis/20472-gnl_eha-pleasant-block:
 
 simtropolis/20564-ndex-glenni-mega-props-vol02:
   packageId: glenni/mega-props-vol02
+  variantId: default
 
 simtropolis/20895-peg-mtp-mayor-menu-logging-scenes:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
@@ -1145,6 +1176,9 @@ simtropolis/21062-furniture-shop:
 simtropolis/21118-simcity-4-extra-cheats-plugin:
   packageId: buggi/extra-cheats
   variantId: default
+
+simtropolis/21286-plugin-landmark-props:
+  superseded: simtropolis/22400-maxis-prop-names-and-query-fix
 
 simtropolis/21293-industry-quadrupler:
   packageId: toroca/industry-quadrupler
@@ -1313,21 +1347,37 @@ simtropolis/23092-delecto-pearl-sunshine:
 
 simtropolis/23820-multi-fsh-tool: null
 
+simtropolis/24509-spot-simpeg-plop-orientation-tool:
+  packageId: rebalynnts/spot
+  variantId: default
+
+simtropolis/24859-bikes:
+  packageId: nbvc/bikes
+  variantId: default
+
 simtropolis/25057-ancient-stone-walls-corrected:
   packageId: itsmo/ancient-stone-walls
 
 simtropolis/25433-pamu-bikes-inc:
   packageId: murimk/bike-lots
+  paths:
+    PAMU-Bikes_Props: null
+  variantId: default
 
 simtropolis/25651-commercial-services-doubler:
   packageId: toroca/commercial-services-doubler
   variantId: default
 
 simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp:
-  packageId: murimk/bike-props
+  packageId: murimk/props-vol01
+  paths:
+    Bikers_MMP.dat:
+      packageId: murimk/bike-mmps
+  variantId: default
 
 simtropolis/25888-murimk-props-vol02-mixed-props:
   packageId: murimk/props-vol02
+  variantId: default
 
 simtropolis/26078-peg-spam-traffic-mod-addon:
   packageId: pegasus/spam-traffic-mod-addon
@@ -1345,12 +1395,14 @@ simtropolis/26088-wmp-murimk-causeway-set:
 
 simtropolis/26110-paengs-bicycle-paths-with-alley-parks:
   packageId: paeng/bikepaths
+  variantId: default
 
 simtropolis/26125-wmp-murimk-boardwalk:
   packageId: wmp/murimk-boardwalk
 
 simtropolis/26171-wmp-the-bridges-of-shoreline-county:
   packageId: wmp/the-bridges-of-shoreline-county
+  variantId: default
 
 simtropolis/26174-fsh-format-plugin-for-adobe%C2%AE-photoshop%C2%AE: null
 
@@ -1479,6 +1531,15 @@ simtropolis/27340-space-port-fix-mod:
       variantId: default
   variantId: default,alternate
 
+simtropolis/27563-shk-parking-pack:
+  packageId: shokthrpy/parking-pack
+  paths:
+    SHK_ParkingTextures_01_Overlays_Yellow.dat:
+      variantId: yellow-lines
+    SHK_ParkingTextures_02_Overlays_White.dat:
+      variantId: white-lines
+  variantId: yellow-lines,white-lines
+
 simtropolis/27647-midrise-office-pack-volume-3:
   packageId: madhatter106/midrise-office-pack-vol03
   variantId: default
@@ -1546,6 +1607,10 @@ simtropolis/28847-vip-orange-pinus-nigra-v2:
 simtropolis/28963-ms-solaris-vacanza-12-interurbino-12-automata-props:
   packageId: moto-kloss/solaris-bus-automata
 
+simtropolis/28975-traffic-blocker-set:
+  packageId: 11241036/traffic-blocker-set
+  variantId: default
+
 simtropolis/29130-mipro-essentials:
   packageId: mipro/mipro-essentials
   variants:
@@ -1583,20 +1648,20 @@ simtropolis/29797-mgb-diagonal-filler-set:
 simtropolis/29880-historic-harbor:
   variants:
     '141582':
-      packageId: historic-harbor/historic-harbor-props
+      packageId: historic-harbor/props
       variantId: hd
     '141583':
-      packageId: historic-harbor/historic-harbor-props
-      variantId: default
+      packageId: historic-harbor/props
+      variantId: sd
     '141584':
-      packageId: historic-harbor/historic-harbor-lots
+      packageId: historic-harbor/lots
       variantId: default
     '141585':
-      packageId: historic-harbor/historic-harbor-mmps
+      packageId: historic-harbor/mmps
       variantId: default
     '141586':
-      packageId: historic-harbor/historic-harbor-props
-      variantId: default
+      packageId: historic-harbor/props
+      variantId: hd,sd
 
 simtropolis/29960-b62-remastered-circuit-city:
   variants:
@@ -1890,6 +1955,10 @@ simtropolis/30982-b62-remastered-caldor-department-store:
     '202462':
       variantId: default
 
+simtropolis/31006-supershk-mega-parking-textures:
+  packageId: kingofsimcity/supershk-mega-parking-textures
+  variantId: default
+
 simtropolis/31011-clerkenwell-close-hd-version:
   packageId: bombardiere/clerkenwell-close
   variantId: hd-darknite
@@ -1931,6 +2000,12 @@ simtropolis/31166-veredas-santiaguinas-sidewalk-mod:
 
 simtropolis/31244-mgb-convenience-store:
   packageId: mgb204/convenience-stores
+  paths:
+    MGB_ConvenienceStore_*-DN.dat:
+      variantId: darknite
+    MGB_ConvenienceStore_*-MN.dat:
+      variantId: default
+  variantId: default,darknite
 
 simtropolis/31248-koscs-supershk-mega-parking-for-tgn-swn: null
 
@@ -1946,15 +2021,49 @@ simtropolis/31339-real-upgradeable-city-halls:
       variantId: default
     '169471': null
 
+simtropolis/31346-various-lot-foundations-and-retaining-walls:
+  packageId: 11241036/lot-foundations-and-retaining-walls
+  variantId: default
+
 simtropolis/31350-simmasters-extra-cheats-dll:
   packageId: simmaster07/extra-cheats
   variantId: default
 
 simtropolis/31351-modular-plaza-system-mps:
   packageId: 11241036/modular-plaza-system
+  paths:
+    z_BSC Diagonal Brick.dat:
+      variantId: bsc-diagonal-brick
+    z_BSC Mediterranean Red Cobblestone.dat:
+      variantId: bsc-cobblestone
+    z_BSC Pink Pavement.dat:
+      variantId: bsc-pink-pavement
+    z_MTP Red Sandstone.dat:
+      variantId: mtp-sandstone
+    z_Maxis Concrete.dat:
+      variantId: maxis-concrete
+    z_NAM Cobblestone.dat:
+      variantId: nam-cobblestone
+    z_NAM Industrial.dat:
+      variantId: nam-industrial
+    z_NAM Pink Pavement.dat:
+      variantId: nam-pink-pavement
+    z_NAM Red Brick.dat:
+      variantId: nam-red-brick
+    z_NAM Sandstone.dat:
+      variantId: nam-sandstone
+    z_Vortexture Cobblestone 1.dat:
+      variantId: vortext-cobblestone-1
+    z_Vortexture Cobblestone 2.dat:
+      variantId: vortext-cobblestone-2
+  variantId: default,*
 
 simtropolis/31369-sm2-main-transformers:
   packageId: simmer2/main-transformers
+
+simtropolis/31374-rdg-prop-pack-1:
+  packageId: robdragon/props-vol01
+  variantId: default
 
 simtropolis/31400-volkshuis-gent:
   variants:
@@ -1978,6 +2087,7 @@ simtropolis/31420-allianz-arena:
 
 simtropolis/31423-supershk-fa3-parking-textures:
   packageId: kingofsimcity/supershk-mega-parking-textures
+  variantId: default
 
 simtropolis/31425-m93-kosc-supershk-retextures-for-veredas-sudden-valley:
   packageId: kingofsimcity/supershk-mega-parking-textures
@@ -2073,6 +2183,10 @@ simtropolis/32047-broken-sc4macinjector: null
 
 simtropolis/32048-broken-buggis-extra-cheats-for-mac: null
 
+simtropolis/32109-sm2-dry-stone-walls:
+  packageId: simmer2/dry-stone-walls
+  variantId: default
+
 simtropolis/32123-caf%C3%A9-bauer-leipzig:
   packageId: aarsgevogelte/cafe-bauer-leipzig
 
@@ -2112,6 +2226,7 @@ simtropolis/32426-industrial-revolution-mod-base-fa-filler-set:
 
 simtropolis/32473-rr-mega-prop-pack-vol-2:
   packageId: rretail/mega-props-vol02
+  variantId: default
 
 simtropolis/32612-snt:
   packageId: stex-custodian/swiss-network-textures
@@ -2126,9 +2241,14 @@ simtropolis/32732-pc-prop-pack-2:
 
 simtropolis/32781-rr-mega-prop-pack-vol-1:
   packageId: rretail/mega-props-vol01
+  variantId: default
 
 simtropolis/32790-sm2-hv-transformer:
   packageId: simmer2/hv-transformer
+
+simtropolis/32832-pc-towering-sign-set-1:
+  packageId: pclark06/towering-signs-vol01
+  variantId: default
 
 simtropolis/32879-pc-car-prop-pack:
   superseded: simtropolis/32952-pc-mega-props-vol-1
@@ -2138,6 +2258,7 @@ simtropolis/32921-pc-hd-car-props:
 
 simtropolis/32952-pc-mega-props-vol-1:
   packageId: pclark06/mega-props-vol01
+  variantId: default
 
 simtropolis/32965-pc-rv-props:
   packageId: pclark06/rv-props
@@ -2171,6 +2292,11 @@ simtropolis/33497-polish-mega-props-misc-vol01-v2:
 
 simtropolis/33533-pc-mega-props-2:
   packageId: pclark06/mega-props-vol02
+  variantId: default
+
+simtropolis/33552-malmberget-proppack-vol1:
+  packageId: oidaas/malmberget-props-vol01
+  variantId: default
 
 simtropolis/33600-very-old-building-props:
   packageId: ralphaelninja/very-old-building-props
@@ -2197,9 +2323,11 @@ simtropolis/33614-great-lakes-ems-academy:
 
 simtropolis/33620-wmp-essentials-v101:
   packageId: wmp/essentials
+  variantId: default
 
 simtropolis/33621-wmp-mega-props-vol-01-misc-general-props:
   packageId: wmp/mega-props-vol01
+  variantId: default
 
 simtropolis/33622-wmp-mega-props-vol-02-misc-industrial-props:
   packageId: wmp/mega-props-vol02
@@ -2218,6 +2346,7 @@ simtropolis/33626-wmp-mega-textures-v102:
 
 simtropolis/33651-11241036-textures:
   packageId: 11241036/textures
+  variantId: default
 
 simtropolis/33702-vip-trees-as-props:
   packageId: vip/tree-props
@@ -2225,8 +2354,20 @@ simtropolis/33702-vip-trees-as-props:
 
 simtropolis/33753-italian-collection-relots-direzione-compartimentale: null
 
+simtropolis/33761-dutch-bicyclepaths:
+  packageId: dead-end/dutch-bicyclepaths
+  variantId: default
+
 simtropolis/33889-seasonal-woods-2nd-iteration:
   packageId: 11241036/seasonal-woods-2
+  variantId: default
+
+simtropolis/33965-girafe-maxis-fence-hd-replacement-mod:
+  packageId: flann/girafe-maxis-fence-hd-replacement-mod
+  variantId: default
+
+simtropolis/34010-hjorthagen-school:
+  packageId: koumus/hjorthagen-school
   variantId: default
 
 simtropolis/34021-2-commerce-street:
@@ -2328,6 +2469,7 @@ simtropolis/34733-farrands-department-store:
 
 simtropolis/34747-rr-mega-prop-pack-vol-3:
   packageId: rretail/mega-props-vol03
+  variantId: default
 
 simtropolis/34761-db-franklin-co:
   packageId: jasoncw/db-franklin-co
@@ -2369,6 +2511,7 @@ simtropolis/35026-esa-gantries-vol-1:
 
 simtropolis/35031-pc-mgb-convenience-stores-global-expansion:
   packageId: pclark06/mgb-convenience-stores
+  variantId: default
 
 simtropolis/35036-hybrid-railway-hrw-subway-converter:
   superseded: sc4evermore/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
@@ -2566,6 +2709,10 @@ simtropolis/35415-hotel-utica:
       packageId: jasoncw/hotel-utica
       variantId: darknite
 
+simtropolis/35438-esa-stores:
+  packageId: oidaas/esa-stores
+  variantId: default
+
 simtropolis/35519-ow-roundabout-set:
   variants:
     '197017':
@@ -2588,6 +2735,10 @@ simtropolis/35527-victorian-row-shops-diagonal:
     '197075':
       packageId: justforfun/victorian-row-shops-diagonal
       variantId: default
+
+simtropolis/35561-agc-viking-dlc:
+  packageId: agc/viking-dlc
+  variantId: default
 
 simtropolis/35616-great-northern-hotel:
   packageId: jasoncw/great-northern-hotel
@@ -2776,6 +2927,10 @@ simtropolis/35900-centron-center:
       packageId: jasoncw/centron-center
       variantId: darknite
 
+simtropolis/35927-malmberget-proppack-vol-2:
+  packageId: oidaas/malmberget-props-vol02
+  variantId: default
+
 simtropolis/35978-sc4-more-demand-info:
   packageId: null-45/more-demand-info
   paths:
@@ -2854,6 +3009,10 @@ simtropolis/36165-mairie:
 
 simtropolis/36180-growify-plopped-buildings-cheat-dll-plugin:
   packageId: null-45/growify
+  variantId: default
+
+simtropolis/36187-n%C3%B6rrk%C3%B6ping-clinic:
+  packageId: dead-end/norrkoping-clinic
   variantId: default
 
 simtropolis/36188-3d-camera-dll-for-simcity-4:
@@ -2969,6 +3128,14 @@ simtropolis/36305-elementary-high-school:
     '201740':
       packageId: leonv93/high-school
       variantId: default
+
+simtropolis/36314-spar-supermarket:
+  packageId: dead-end/spar-supermarket
+  variantId: default
+
+simtropolis/36316-scandinavian-supermarkets:
+  packageId: dead-end/scandinavian-supermarkets
+  variantId: default
 
 simtropolis/36317-next-gen-planes-pack-1:
   variants:
@@ -3148,6 +3315,10 @@ simtropolis/36453-pizza-ribs-sushi:
       packageId: jasoncw/pizza-ribs-sushi
       variantId: darknite
 
+simtropolis/36457-grimstad-pharmacy:
+  packageId: dead-end/grimstad-pharmacy
+  variantId: default
+
 simtropolis/36465-magasin-valois:
   packageId: jasoncw/magasin-valois
   variants:
@@ -3244,6 +3415,14 @@ simtropolis/36532-elks-building:
       packageId: jasoncw/elks-building
       variantId: darknite
 
+simtropolis/36540-hjorthagen-school-relot:
+  packageId: dead-end/hjorthagen-school-relot
+  variantId: default
+
+simtropolis/36541-white-villa:
+  packageId: dead-end/white-villa
+  variantId: default
+
 simtropolis/36542-sp-building:
   packageId: jasoncw/sp-building
   variants:
@@ -3276,9 +3455,17 @@ simtropolis/36549-pietzsch-house:
       packageId: jasoncw/pietzsch-house
       variantId: darknite
 
+simtropolis/36561-konsum:
+  packageId: dead-end/konsum
+  variantId: default
+
 simtropolis/36567-mid-century-modern-homes-pack:
   packageId: wannglondon/mid-century-modern-homes-pack
   variantId: darknite
+
+simtropolis/36568-hisingen-apartments:
+  packageId: dead-end/hisingen-apartments
+  variantId: default
 
 simtropolis/36570-apartments-2:
   packageId: wannglondon/apartments-2
@@ -3295,6 +3482,10 @@ simtropolis/36575-apartments-3:
 simtropolis/36576-tulum-homes:
   packageId: wannglondon/tulum-homes
   variantId: darknite
+
+simtropolis/36577-stave-church:
+  packageId: dead-end/stave-church
+  variantId: default
 
 simtropolis/36578-vintage-sign-prop-pack:
   packageId: wannglondon/vintage-sign-prop-pack

@@ -14,7 +14,7 @@ assets:
     authors:
       - Mattb325
     category: 13-industrial
-    downloads: 895
+    downloads: 897
     lastModified: 2023-08-20T09:40:24.000Z
     name: SC4D LEX Legacy - Mattb325 Industrial Pack (Maxis Nite)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/GSK_s.jpg
@@ -24,7 +24,7 @@ assets:
     authors:
       - Mattb325
     category: 13-industrial
-    downloads: 1036
+    downloads: 1037
     lastModified: 2023-11-11T16:15:13.000Z
     name: SC4D LEX Legacy - Mattb325 IRM Industrial Pack (Dark Nite)
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/129-sc4d-lex-legacy-mattb325-irm-industrial-pack-dark-nite
@@ -33,7 +33,7 @@ assets:
     authors:
       - Mattb325
     category: 13-industrial
-    downloads: 908
+    downloads: 910
     lastModified: 2023-08-20T10:50:05.000Z
     name: SC4D LEX Legacy - Mattb325 IRM Industrial Pack (Maxis Nite)
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/130-sc4d-lex-legacy-mattb325-irm-industrial-pack-maxis-nite
@@ -41,12 +41,333 @@ assets:
     assetId: sc4evermore/140-sc4d-lex-legacy-zero7-industrial-pack
     authors:
       - zero7
+    buildings:
+      CAM/Mirror Box Blue HighTech/MirrorBox HiTech Blue - zero7-0x6534284a-0x73cb3347-0x74b1bef9.SC4Desc:
+        74b1bef9:
+          bulldoze: 433
+          capacity:
+            iht: 207
+          categories: i-m
+          flamability: 45
+          garbage: 4
+          model: 73cb3347-0018
+          name: MirrorBox HiTech Blue - zero7
+          pollution: 5
+          pollutionRadius: 6
+          power: 38
+          water: 36
+          waterPollution: 2
+          waterPollutionRadius: 7
+          worth: 1627
+      zero7/Industrial/K2 Distribution Centre/K2 Distribution Centre - zero7-0x6534284a-0x73cb3347-0xd4842405.SC4Desc:
+        d4842405:
+          bulldoze: 293
+          capacity:
+            im: 313
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 73cb3347-0011
+          name: K2 Distribution Centre - zero7
+          pollution: 18
+          pollutionRadius: 9
+          power: 19
+          water: 282
+          waterPollution: 12
+          waterPollutionRadius: 13
+          worth: 2388
+      zero7/Industrial/Pearsons Period Furnishings/Pearsons Period Furnishings - zero7-0x6534284a-0xb8144390-0xd9fffe42.SC4Desc:
+        d9fffe42:
+          bulldoze: 182
+          capacity:
+            im: 227
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: b8144390-001a
+          name: Pearsons Period Furnishings - zero7
+          pollution: 13
+          pollutionRadius: 9
+          power: 14
+          water: 204
+          waterPollution: 9
+          waterPollutionRadius: 13
+          worth: 1732
+      zero7/Industrial/Steeton Mill/Steeton Mill - zero7-0x6534284a-0x73cb3347-0x95582ec4.SC4Desc:
+        95582ec4:
+          bulldoze: 293
+          capacity:
+            im: 268
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 73cb3347-001e
+          name: Steeton Mill - zero7
+          pollution: 16
+          pollutionRadius: 9
+          power: 17
+          water: 242
+          waterPollution: 10
+          waterPollutionRadius: 13
+          worth: 2044
     category: 13-industrial
-    downloads: 738
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+      - sc4evermore/52-colossus-addon-mod-version-2-1-0a-mac-by-invisichem
+      - bsc/textures-vol01
+      - bsc/textures-vol02
+      - bsc/textures-vol03
+      - cycledogg/mega-props-vol01
+      - gascooker/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol03
+      - jestarr/mega-props-vol04
+      - jestarr/mega-props-vol05
+      - simgoober/mega-props-vol01
+    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>This SC4 Devotion LEX Legacy Pack features the Industrial BATs by zero7, which had been available on the Lot Exchange (LEX) at SC4 Devotion, encompassing a total of 4 downloads. After battling a number of technical issues, software incompatibility ultimately shuttered the LEX (at least in its familiar form from 2007 onward) in June 2023, and this package is designed to collect these dependencies in an easy-to-use form, allowing users to install them all in one go, or carefully select exactly which packs they wish to install.</p>\r\n<p>Please note that this pack <strong>may</strong> receive updates in the near future. Do not redistribute without asking first, mostly as doing so would complicate efforts to properly maintain, update, and provide technical support for the pack.</p>\r\n<div class=\"bannerfull\"><a name=\"installation\"></a>\r\n<h4>\_Installation</h4>\r\n</div>\r\n<div class=\"regtext\">\r\n<p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r\n<p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use <a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use <a href=\"https://www.keka.io/en/\">Keka</a>.</p>\r\n<p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which dependencies you wish to install (making no changes here will install everything). Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder). On the Cleanup tab, click \"Start scan\" to find any outdated files that currently reside in your Plugins folder that may conflict with this package. Clicking \"Backup\" will remove these old files to a safe location. (The option to \"Delete\" them also exists, but is not recommended.) After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r\n<p>This pack does include one CAMeLot: the Stage 4 High Tech version of the Mirror Box Blue. If you are not using the CAM, simply uncheck the \"CAM\" box in the installer.</p>\r\n<p>The original documentation can be found in the \"_Documents\" folder inside the download.</p>\r\n<div class=\"bannerfull\"><a name=\"credits\"></a>\r\n<h4>\_Dependencies</h4>\r\n</div>\r\n<div class=\"regtext\">\r\n<p>In order to avoid \"brown boxes\" from missing models, or blank spots from missing textures, ensure the following are installed.</p>\r\n<ul>\r\n<li><a href=\"/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\">BSC Common Dependencies</a> - specific files from the set include:\r\n<ul>\r\n<li>BSC Textures Vol 01</li>\r\n<li>BSC Textures Vol 02</li>\r\n<li>BSC Textures Vol 03 v3</li>\r\n<li>BSC Texture Pack Cycledogg V01b</li>\r\n<li>BSC MEGA Props JES Vol01</li>\r\n<li>BSC MEGA Props JES Vol02</li>\r\n<li>BSC MEGA Props JES Vol03</li>\r\n<li>BSC MEGA Props JES Vol04</li>\r\n<li>BSC MEGA Props JES Vol05</li>\r\n<li>BSC MEGA Props Mikeseith Vol01</li>\r\n<li>BSC MEGA Props Gascooker Vol01</li>\r\n<li>BSC MEGA Props SG Vol01 v2</li>\r\n<li>BSC MEGA Props CP Vol01</li>\r\n<li>BSC MEGA Props Misc Vol02 v3</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>If using the CAMeLots, the Colossus Addon Mod is needed - Version 2.1.0a for <a href=\"/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem\">Windows</a> or <a href=\"/index.php/downloads/download/26-gameplay-mods/52-colossus-addon-mod-version-2-1-0a-mac-by-invisichem\">Mac</a>.</p>\r\n<p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r\n<h5 class=\"leftheading\">Special Thanks</h5>\r\n<p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r\n<p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.</p>\r\n<p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r\n<p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r\n</div>\r\n<div class=\"bannerfull\"><a name=\"credits\"></a>\r\n<h4>\_Credits</h4>\r\n</div>\r\n<div class=\"regtext\">\r\n<ul>\r\n<li>zero7</li>\r\n</ul>\r\n<p>This package has been made possible by the Project ZIP efforts of Tyberius06, and was assembled by Tarkus.</p>\r\n<h5 class=\"leftheading\">Special Thanks</h5>\r\n<p>Webmaster &amp; administration staff at SC4Evermore and SC4 Devotion.</p>\r\n<p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.</p>\r\n<p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after <strong>20 years</strong> thanks to you!</p>\r\n<p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p>\r\n</div>\r\n<div class=\"bannerfull\"><a name=\"contents\"></a>\r\n<h4>\_Contents</h4>\r\n</div>\r\n<div class=\"regtext\">\r\n<p>This package contains the following Commercial BATs by zero7. All are Growable unless marked:</p>\r\n<ol>\r\n<li>K2 Distribution Center</li>\r\n<li>Mirror Box Blue (I-HT Version - requires CAM)</li>\r\n<li>Pearson's Period Furnishings</li>\r\n<li>Steeton Mill</li>\r\n</ol>\r\n<p>Various pieces of original documentation and earlier Cleanitol definitions can be found in the \"_Documents\" folder in the download.</p>\r\n</div>\r\n</div> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Z7_K2Distribution_Day.jpg\" data-lightbox=\"lightbox140\" data-alt=\"lightboxZ7_K2Distribution_Day.jpg|Z7_MirrorBoxBlue_Day.jpg|Z7_K2Distribution_Night.jpg|Z7_MirrorBoxBlue_Night\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Day.jpg\" alt=\"Z7_K2Distribution_Day\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Z7_MirrorBoxBlue_Day.jpg\" data-lightbox=\"lightbox140\" data-alt=\"lightboxZ7_K2Distribution_Day.jpg|Z7_MirrorBoxBlue_Day.jpg|Z7_K2Distribution_Night.jpg|Z7_MirrorBoxBlue_Night\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_MirrorBoxBlue_Day.jpg\" alt=\"Z7_MirrorBoxBlue_Day2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Z7_K2Distribution_Night.jpg\" data-lightbox=\"lightbox140\" data-alt=\"lightboxZ7_K2Distribution_Day.jpg|Z7_MirrorBoxBlue_Day.jpg|Z7_K2Distribution_Night.jpg|Z7_MirrorBoxBlue_Night\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Night.jpg\" alt=\"Z7_K2Distribution_Night3\" ></a> </span>\r\n        </div> \r\n</body>"
+    downloads: 739
+    filename: SC4D_LEX_Legacy_zero7_Industrial_Pack.zip
+    files:
+      - CAM/Mirror Box Blue HighTech/IHT$$$4_3x3_MirrorBox HiTech Blue - zero7_c4b1bf0b.SC4Lot
+      - CAM/Mirror Box Blue HighTech/MirrorBox HiTech Blue - zero7-0x6534284a-0x73cb3347-0x74b1bef9.SC4Desc
+      - _Documents/Z7_K2Distribution/Readme_Z7_K2Distribution.htm
+      - _Documents/Z7_K2Distribution/Z7_K2Distribution_Day.jpg
+      - _Documents/Z7_K2Distribution/Z7_K2Distribution_Night.jpg
+      - _Documents/Z7_MirrorBox_Blue/Readme_Z7_MirrorBox_Blue.htm
+      - _Documents/Z7_MirrorBox_Blue/Z7_MirrorBoxBlue_Day.jpg
+      - _Documents/Z7_MirrorBox_Blue/Z7_MirrorBoxBlue_Night.jpg
+      - _Documents/Z7_SteetonMill/Readme_Z7_SteetonMill.htm
+      - _Documents/Z7_SteetonMill/Z7_SteetonMill_Day.jpg
+      - _Documents/Z7_SteetonMill/Z7_SteetonMill_Night.jpg
+      - _Documents/z7_PearsonsFurnishings/Pearsons_1.jpg
+      - _Documents/z7_PearsonsFurnishings/Pearsons_2.jpg
+      - _Documents/z7_PearsonsFurnishings/z7_PearsonsFurnishings_readme.txt
+      - readme.css
+      - readme_zero7_industrial.html
+      - zero7/Industrial/K2 Distribution Centre/IM$$3_4x5_K2 Distribution Centre - zero7_74842461.SC4Lot
+      - zero7/Industrial/K2 Distribution Centre/K2 Distribution Centre - zero7-0x6534284a-0x73cb3347-0xd4842405.SC4Desc
+      - zero7/Industrial/K2 Distribution Centre/Z7_K2Distribution-0x5ad0e817_0x73cb3347_0x110000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/IM$$2_7x4_Pearsons Period Furnishings - zero7_09fffe7a.SC4Lot
+      - zero7/Industrial/Pearsons Period Furnishings/Isuzu Cargo-0x6534284a-0xb8144390-0xda02d424.SC4Desc
+      - zero7/Industrial/Pearsons Period Furnishings/Pearsons Period Furnishings - zero7-0x6534284a-0xb8144390-0xd9fffe42.SC4Desc
+      - zero7/Industrial/Pearsons Period Furnishings/z7_PearsonsFurnishings-0x5ad0e817_0xb8144390_0x1a0000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_IsuzuCargoPearsons-0x5ad0e817_0xb8144390_0x1c0000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall16m-0x5ad0e817_0xb8144390_0x1f0000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall16m-0x6534284a-0xb8144390-0xda07a163.SC4Desc
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall4m-0x5ad0e817_0xb8144390_0x1d0000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall4m-0x6534284a-0xb8144390-0x9a07a1db.SC4Desc
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall8m-0x5ad0e817_0xb8144390_0x1e0000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall8m-0x6534284a-0xb8144390-0xba07a187.SC4Desc
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWallPillar-0x5ad0e817_0xb8144390_0x200000.SC4Model
+      - zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWallPillar-0x6534284a-0xb8144390-0xda07a1f7.SC4Desc
+      - zero7/Industrial/Steeton Mill/IM$$3_4x4_Steeton Mill - zero7_c5582efd.SC4Lot
+      - zero7/Industrial/Steeton Mill/Steeton Mill - zero7-0x6534284a-0x73cb3347-0x95582ec4.SC4Desc
+      - zero7/Industrial/Steeton Mill/Z7_SteetonMill-0x5ad0e817_0x73cb3347_0x1e0000.SC4Model
+      - zero7/^Shared Resources/C-I Models/Z7_MirrorBox_Blue-0x5ad0e817_0x73cb3347_0x180000.SC4Model
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_MirrorBoxBlue_Day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Night.jpg
     lastModified: 2023-08-27T06:54:05.000Z
+    lots:
+      CAM/Mirror Box Blue HighTech/IHT$$$4_3x3_MirrorBox HiTech Blue - zero7_c4b1bf0b.SC4Lot:
+        c4b1bf0b:
+          building: 74b1bef9
+          density: medium,high
+          name: IHT$$$4_3x3_MirrorBox HiTech Blue - zero7
+          props:
+            - 1d380000
+            - a53a1001
+            - 1e9a0000
+            - '28330000'
+            - ed762ac5
+            - cfbb8929
+            - 8fbb888b
+            - 0fcf3717
+            - ee6ad43d
+            - a0000069
+            - 8fcf34de
+            - 8fcf35b7
+            - a000007b
+            - 2cb00000
+            - a0000091
+          requirements:
+            cam: true
+          size: 3x3
+          stage: 4
+          textures:
+            - 258d0000
+            - 61bf4000
+            - 61bfa000
+            - 61bf8000
+            - 251c0000
+      zero7/Industrial/K2 Distribution Centre/IM$$3_4x5_K2 Distribution Centre - zero7_74842461.SC4Lot:
+        '74842461':
+          building: d4842405
+          density: medium,high
+          name: IM$$3_4x5_K2 Distribution Centre - zero7
+          props:
+            - d285df69
+            - '90642105'
+            - '508215e2'
+            - f2aaec5c
+            - d3485481
+            - 4fd34557
+            - d0c9c9c7
+            - 70c9cba5
+            - 1e9a0000
+            - 539403bf
+            - 2cb00000
+            - 92a811c4
+            - 102b8722
+            - d02b8713
+            - 536d9d93
+            - 336d9dae
+            - '29860000'
+          size: 4x5
+          stage: 3
+          textures:
+            - 25fb0100
+            - 2d580000
+            - 6112f200
+      zero7/Industrial/Pearsons Period Furnishings/IM$$2_7x4_Pearsons Period Furnishings - zero7_09fffe7a.SC4Lot:
+        09fffe7a:
+          building: d9fffe42
+          density: high
+          name: IM$$2_7x4_Pearsons Period Furnishings - zero7
+          props:
+            - d207335b
+            - 704c374c
+            - cfc606e4
+            - 87dc3abc
+            - d3485481
+            - d34854b6
+            - efcdb595
+            - 72ac4b57
+            - afd52db3
+            - 2fd52dec
+            - a0000069
+            - 1e9a0000
+            - 2aba0000
+            - d0499796
+            - 1df50000
+            - efd34605
+            - 2fd34536
+            - da02d424
+            - da07a163
+            - da07a1f7
+            - ba07a187
+            - 2a440000
+            - 9a07a1db
+            - 2a450000
+            - 2a470000
+            - 1dfb0000
+          size: 7x4
+          stage: 2
+          textures:
+            - fb74401a
+            - fb744025
+            - fb744010
+            - fb744015
+            - fb74400a
+            - 258c0000
+      zero7/Industrial/Steeton Mill/IM$$3_4x4_Steeton Mill - zero7_c5582efd.SC4Lot:
+        c5582efd:
+          building: 95582ec4
+          density: medium,high
+          name: IM$$3_4x4_Steeton Mill - zero7
+          props:
+            - 29c30000
+            - 536d9d93
+            - 92a82205
+            - '33485563'
+            - 334854f7
+            - d285df69
+            - f31e4666
+            - 4fbb880a
+            - 8fbb888b
+            - efbb893a
+            - efbb897b
+            - cfc5fdc1
+            - 8fd33c77
+            - 2a6d0000
+            - 8fcf337a
+            - 0fcf36dd
+            - 8fc60801
+            - 2a580000
+            - a0000021
+            - '1e020000'
+            - a0000064
+            - 1e9a0000
+            - '29860000'
+            - 2fd091c1
+            - 0fd092b6
+            - a000007b
+          size: 4x4
+          stage: 3
+          textures:
+            - 25fb0100
+            - f2140600
+            - f21405f0
+            - f2140620
+            - 25b80000
+            - 25b90000
+            - 25b74000
+            - 25b50000
+            - 25b70000
+            - '257e0000'
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      zero7/Industrial/K2 Distribution Centre/Z7_K2Distribution-0x5ad0e817_0x73cb3347_0x110000.SC4Model:
+        - 73cb3347-0011
+      zero7/Industrial/Pearsons Period Furnishings/z7_PearsonsFurnishings-0x5ad0e817_0xb8144390_0x1a0000.SC4Model:
+        - b8144390-001a
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_IsuzuCargoPearsons-0x5ad0e817_0xb8144390_0x1c0000.SC4Model:
+        - b8144390-001c
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall16m-0x5ad0e817_0xb8144390_0x1f0000.SC4Model:
+        - b8144390-001f
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall4m-0x5ad0e817_0xb8144390_0x1d0000.SC4Model:
+        - b8144390-001d
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall8m-0x5ad0e817_0xb8144390_0x1e0000.SC4Model:
+        - b8144390-001e
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWallPillar-0x5ad0e817_0xb8144390_0x200000.SC4Model:
+        - b8144390-0020
+      zero7/Industrial/Steeton Mill/Z7_SteetonMill-0x5ad0e817_0x73cb3347_0x1e0000.SC4Model:
+        - 73cb3347-001e
+      zero7/^Shared Resources/C-I Models/Z7_MirrorBox_Blue-0x5ad0e817_0x73cb3347_0x180000.SC4Model:
+        - 73cb3347-0018
     name: SC4D LEX Legacy - zero7 Industrial Pack
+    props:
+      zero7/Industrial/Pearsons Period Furnishings/Isuzu Cargo-0x6534284a-0xb8144390-0xda02d424.SC4Desc:
+        da02d424:
+          model: b8144390-001c
+          name: Isuzu Cargo
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall16m-0x6534284a-0xb8144390-0xda07a163.SC4Desc:
+        da07a163:
+          model: b8144390-001f
+          name: z7prop_LowBrickWall16m
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall4m-0x6534284a-0xb8144390-0x9a07a1db.SC4Desc:
+        9a07a1db:
+          model: b8144390-001d
+          name: z7prop_LowBrickWall4m
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWall8m-0x6534284a-0xb8144390-0xba07a187.SC4Desc:
+        ba07a187:
+          model: b8144390-001e
+          name: z7prop_LowBrickWall8m
+      zero7/Industrial/Pearsons Period Furnishings/z7prop_LowBrickWallPillar-0x6534284a-0xb8144390-0xda07a1f7.SC4Desc:
+        da07a1f7:
+          model: b8144390-0020
+          name: z7prop_LowBrickWallPillar
+    sha256: cbd92c17f0f330a7bfbcdf052c2f4b8083284ec1c8b9b468d98421f4de77437d
+    size: 3348761
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Z7_K2Distribution_Day.jpg
+    uncompressed: 3387075
     url: https://www.sc4evermore.com/index.php/downloads/download/13-industrial/140-sc4d-lex-legacy-zero7-industrial-pack
+    version: '1'
   sc4evermore/141:
     assetId: sc4evermore/141-sc4d-lex-legacy-zero7-industrial-pack-irm-edition
     authors:
@@ -70,7 +391,7 @@ assets:
   sc4evermore/170:
     assetId: sc4evermore/170-sc4d-lex-legacy-bsc-marcszar-industrial-compilation-irm-version
     category: 13-industrial
-    downloads: 610
+    downloads: 611
     lastModified: 2023-11-11T16:09:51.000Z
     name: SC4D LEX Legacy - BSC Marcszar Industrial Compilation (IRM Version)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Colemans_LEX_Screenshot10.jpg
@@ -85,7 +406,7 @@ assets:
       - sc4evermore/18-bsc-cleanitol
       - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: left;\">This small warehouse is inspired by a warehouse located in Lisbon's suburbs, Oeiras. Created to fit in European industrial areas, it looks like the warehouse can goes well in American and Asian industrial sectors too.</p>\r\n<table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r\n<tbody>\r\n<tr>\r\n<td colspan=\"2\">\r\n<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td bgcolor=\"#990000\" height=\"20\"><span style=\"color: #ecf0f1;\"><strong><span class=\"text_titel\">Lot Details and Information</span></strong></span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text_normal\" colspan=\"2\">\r\n<p><b>Ploppable Version:</b></p>\r\n<table class=\"text_normal\" style=\"width: 694px;\" border=\"0\" width=\"452\" cellspacing=\"0\" cellpadding=\"2\">\r\n<tbody>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.297px;\" bgcolor=\"#993300\" width=\"150\">Lot size:</td>\r\n<td style=\"width: 435.703px;\" bgcolor=\"#993333\" width=\"450\">4 x 3 tiles</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Menu position:</td>\r\n<td style=\"width: 435.703px;\">Building: Landmark,Building: IM,Industry: Anchor</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Jobs:</td>\r\n<td style=\"width: 435.703px;\">81 I-M$$</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Plop cost:</td>\r\n<td style=\"width: 435.703px;\">§ 2364</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Bulldoze cost:</td>\r\n<td style=\"width: 435.703px;\">§ 155</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Monthly cost:</td>\r\n<td style=\"width: 435.703px;\">§</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Park effect:</td>\r\n<td style=\"width: 435.703px;\">over tiles</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Landmark effect:</td>\r\n<td style=\"width: 435.703px;\">over tiles</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Max. Fire Stage:</td>\r\n<td style=\"width: 435.703px;\">70</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Power consumption:</td>\r\n<td style=\"width: 435.703px;\">5 MWh/month</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Water consumption:</td>\r\n<td style=\"width: 435.703px;\">72 Gallons/month</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\">Air pollution:</td>\r\n<td style=\"width: 435.703px;\">4 over 9 tiles</td>\r\n</tr>\r\n<tr bgcolor=\"#993300\">\r\n<td style=\"width: 247.297px;\">Water pollution:</td>\r\n<td style=\"width: 435.703px;\">3 over 13 tiles</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.297px;\" height=\"19\">Garbage pollution:</td>\r\n<td style=\"width: 435.703px;\">4 over 0 tiles</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p><b>Growable Version:</b></p>\r\n<table class=\"text_normal\" style=\"width: 694px;\" border=\"0\" width=\"453\" cellspacing=\"0\" cellpadding=\"2\">\r\n<tbody>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\" width=\"150\">Lot size:</td>\r\n<td style=\"width: 435.672px;\" width=\"450\">4 x 3 tiles</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Building style(s):</td>\r\n<td style=\"width: 435.672px;\">Building: Industrial,Building: IM,Industry: Mechanical</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Growth stage:</td>\r\n<td style=\"width: 435.672px;\">1</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Occupants:</td>\r\n<td style=\"width: 435.672px;\">I-M : 41 IM $$</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Bulldoze cost:</td>\r\n<td style=\"width: 435.672px;\">§ 155</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Worth:</td>\r\n<td style=\"width: 435.672px;\">§ 312</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Construction Time:</td>\r\n<td style=\"width: 435.672px;\">15 days</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Max. Fire Stage:</td>\r\n<td style=\"width: 435.672px;\">70</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Power consumption:</td>\r\n<td style=\"width: 435.672px;\">3 MWh/month</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Water consumption:</td>\r\n<td style=\"width: 435.672px;\">36 Gallons/month</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Air pollution:</td>\r\n<td style=\"width: 435.672px;\">2 over 9 tiles</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 247.328px;\">Water pollution:</td>\r\n<td style=\"width: 435.672px;\">1 over 13 tiles</td>\r\n</tr>\r\n<tr bgcolor=\"#e9ebf0\">\r\n<td style=\"width: 247.328px;\">Garbage pollution:</td>\r\n<td style=\"width: 435.672px;\">4 over 0 tiles</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r\n<tbody>\r\n<tr>\r\n<td colspan=\"2\">\r\n<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td bgcolor=\"#990000\" height=\"20\"><span class=\"text_titel\">\_<span style=\"color: #ecf0f1;\"><strong>Installation</strong></span></span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td colspan=\"2\">\r\n<p class=\"text_normal\">Installation: Copy/Extract the\_<strong>art128\_</strong>parent folder into your Plugins. If you've extracted the\_~<em>Documents\_</em>folder you may remove it from the Plugins, but keep it in a safe location.</p>\r\n<p class=\"text_normal\">All files have been updated\_so\_<span style=\"color: #e03e2d;\">it\_is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>In the ~<em>Documents\_</em>folder in the main ZIP you can find a Cleanitol_[...].txt script and by using either the newer <a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<p class=\"text_normal\"><b>Un-Installing:\_</b>To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table border=\"0\" width=\"750\" cellspacing=\"0\" cellpadding=\"4\" align=\"center\" bgcolor=\"#ffffff\">\r\n<tbody>\r\n<tr>\r\n<td colspan=\"2\">\r\n<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td bgcolor=\"#990000\" height=\"20\"><span class=\"text_titel\">\_<span style=\"color: #ecf0f1;\"><strong>Dependencies</strong></span></span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td colspan=\"2\">\r\n<div align=\"justify\">\r\n<p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r\n<ul>\r\n<li class=\"text_normal\"><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies Pack v9b</a>\_(and above)</li>\r\n<ul>\r\n<li><span class=\"text_normal\">BSC MEGA Props\_CP Vol01</span></li>\r\n<li><span class=\"text_normal\">BSC MEGA Props CP Vol02<br></span></li>\r\n<li><span class=\"text_normal\">BSC MEGA Props\_JES Vol01 v2</span></li>\r\n<li><span class=\"text_normal\">BSC MEGA Props JES Vol02 v2</span></li>\r\n<li><span class=\"text_normal\">BSC MEGA Props\_Misc Vol02 v4</span></li>\r\n<li><span class=\"text_normal\">BSC Textures Vol03 v5</span></li>\r\n<li><span class=\"text_normal\">BSC TexturePack Cycledogg V01b</span>.</li>\r\n</ul>\r\n</ul>\r\n</div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>For support or just to get more news BATs coming, visit my threads on either\_<a href=\"https://sc4devotion.com/forums/index.php?topic=7031\" target=\"_blank\" rel=\"noopener\">SC4Devotion\_</a>or\_<a title=\"Art128 BAT Manufacture\" href=\"https://community.simtropolis.com/forums/topic/51215-art128-bat-stuff/\" target=\"_blank\" rel=\"noopener\">Simtropolis</a></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/oeiras_steel_image1.jpg\" data-lightbox=\"lightbox295\" data-alt=\"lightboxoeiras_steel_image1.jpg|oeiras_steel_image2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image1.jpg\" alt=\"oeiras_steel_image1\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/oeiras_steel_image2.jpg\" data-lightbox=\"lightbox295\" data-alt=\"lightboxoeiras_steel_image1.jpg|oeiras_steel_image2\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/oeiras_steel_image2.jpg\" alt=\"oeiras_steel_image22\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 140
+    downloads: 142
     file: Art128 - Oeiras Steel Warehouse.zip
     files:
       - ~Documents/art128_readmes/Images/oeiras_steel_image1.jpg
@@ -111,4 +432,4 @@ assets:
     version: '2'
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-18T09:34:56.459Z

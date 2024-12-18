@@ -14495,9 +14495,63 @@ assets:
     assetId: simtropolis/31346-various-lot-foundations-and-retaining-walls
     authors:
       - '11241036'
+    buildings:
+      TestLots.dat:
+        05221b92:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        05221bcc:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        25221ba4:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        25221bf5:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        25221bfd:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        65221b9c:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        85221bae:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        85221be3:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        a5221bd8:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        c5221b88:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        c5221bbf:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        c5221bef:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
+        e5221bb5:
+          label: Test Lot Retaining Walls
+          menu: Parks
+          name: Test Lot Retaining Walls
     category: 106-civic-non-rci
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Disclaimer:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Short description:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I’m quite surprised that I’ve only found very few plugins with custom foundations and none at all with retaining walls; therefore, I’ve turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:rgb(255,140,0);\"><strong>Dependencies:</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">As it is a dependency itself, this plugin has no external dependencies.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Contained Files:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>LotFoundations.dat: </strong>Contains textures and exemplar files for lot foundations. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>RetainingWalls.dat:</strong> Contains textures and exemplar files for retaining walls. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>TestLots.dat: </strong>This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Other than that, this download contains a <strong>Readme </strong>(unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Installation:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Credits:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong><span style=\"color:rgb(255,140,0);\">My special thanks go to all authors that kindly gave me permission to modify and share their work. </span></strong>At the moment, this ist just one person:</span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I’m using most frequently. Now, their functionability is even being expanded.</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Disclaimer:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Short description:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I’m quite surprised that I’ve only found very few plugins with custom foundations and none at all with retaining walls; therefore, I’ve turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:rgb(255,140,0);\"><strong>Dependencies:</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">As it is a dependency itself, this plugin has no external dependencies.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Contained Files:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>LotFoundations.dat: </strong>Contains textures and exemplar files for lot foundations. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>RetainingWalls.dat:</strong> Contains textures and exemplar files for retaining walls. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>TestLots.dat: </strong>This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Other than that, this download contains a <strong>Readme </strong>(unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Installation:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Credits:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong><span style=\"color:rgb(255,140,0);\">My special thanks go to all authors that kindly gave me permission to modify and share their work. </span></strong>At the moment, this ist just one person:</span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I’m using most frequently. Now, their functionability is even being expanded.</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
     file: Various Lot Foundations and Retaining Walls.zip
     files:
       - TestLots.dat
@@ -14509,9 +14563,93 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.jpg.d34b5066fa746c20427bb6e6fea90199.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/Anleitung_3.png.de43eb44243c947ce7eff75c17b88c17.png
     lastModified: 2016-11-01T04:56:53.000Z
+    lots:
+      TestLots.dat:
+        05221b92:
+          building: 05221b92
+          name: WhiteBrick1 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        05221bcc:
+          building: 05221bcc
+          name: ConcreteBlocks8 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        25221ba4:
+          building: 25221ba4
+          name: LightBrick1 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        25221bf5:
+          building: 25221bf5
+          name: Concrete2 Maxis
+          size: 1x1
+          textures:
+            - 251c0000
+        25221bfd:
+          building: 25221bfd
+          name: Concrete3 Maxis
+          size: 1x1
+          textures:
+            - 251c0000
+        65221b9c:
+          building: 65221b9c
+          name: MossyConcrete1 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        85221bae:
+          building: 85221bae
+          name: GreyStone3 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        85221be3:
+          building: 85221be3
+          name: BrownStone2 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        a5221bd8:
+          building: a5221bd8
+          name: CheckeredConcrete Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        c5221b88:
+          building: c5221b88
+          name: WhiteBrick2 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        c5221bbf:
+          building: c5221bbf
+          name: GreyBrick5 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+        c5221bef:
+          building: c5221bef
+          name: Concrete1 Maxis
+          size: 1x1
+          textures:
+            - 251c0000
+        e5221bb5:
+          building: e5221bb5
+          name: GreyStone2 Mas71
+          size: 1x1
+          textures:
+            - 251c0000
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Various Lot Foundations and Retaining Walls
     sha256: c27de1770c9839eee8c171d82c81b95db93b947e1f91aa208a50ee08d2555f96
     size: 1991078
+    support: https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.thumb.jpg.f55da6bf2b5ff6a084ff49f28359e41b.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 2079171
@@ -17855,11 +17993,83 @@ assets:
     assetId: simtropolis/34010-hjorthagen-school
     authors:
       - koumus
+    buildings:
+      hjorthagens skola/hjorthagens skola_ed6254be.SC4Lot:
+        ed6254be:
+          bulldoze: 30
+          categories: education
+          cost: 300
+          description: hjorthagens primary
+          flamability: 32
+          jobs:
+            $: 18
+            $$: 20
+            $$$: 2
+          label: hjorthagens skola
+          maintenance: 400
+          menu: Education
+          model: 2ce3bb54
+          name: hjorthagens skola
+          power: 2
+          submenu: Education/Elementary
+          water: 5
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tan old primary school building with 18$ 20$$ and 2$$$ jobs, a capacity of 500 and a large coverage radius so there's no need for busses.\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: hjorthagens skola.zip
+    files:
+      - hjorthagens skola/hjorthagens skola-0x5ad0e817_0x2ce3bb54_0x30000.SC4Model
+      - hjorthagens skola/hjorthagens skola_ed6254be.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2020_12/skol.jpg.efa71e21cfedb14a3ba7b14f30c5f40a.jpg
     lastModified: 2020-12-26T13:50:31.000Z
+    lots:
+      hjorthagens skola/hjorthagens skola_ed6254be.SC4Lot:
+        ed6254be:
+          building: ed6254be
+          name: hjorthagens skola
+          props:
+            - '1e960000'
+            - '29e80000'
+            - 29a40000
+            - 1f0b0000
+            - a000004d
+            - a0000078
+            - '1e180000'
+            - 13da0000
+            - 1d3c0000
+            - 1de70000
+            - a000004b
+            - a000003d
+          size: 5x4
+          textures:
+            - 258d0000
+            - 25db0000
+            - '26060000'
+            - 25fa0000
+            - 25ee0000
+            - 25f00000
+            - 25ec0000
+            - 25d50000
+            - 25c90000
+            - 25cb0000
+            - 25d60000
+            - '26210000'
+            - 25eb0000
+            - 25fc0000
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      hjorthagens skola/hjorthagens skola-0x5ad0e817_0x2ce3bb54_0x30000.SC4Model:
+        - 2ce3bb54
     name: Hjorthagen school
+    sha256: 480c3b0f13324dee4f202badfca400ef2dff2ca3d494810ce1f8b2fef21b7016
+    size: 599942
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_12/skol.thumb.jpg.a336b21023d277bbee33d4527741a836.jpg
+    uncompressed: 658981
     url: https://community.simtropolis.com/files/file/34010-hjorthagen-school/
+    version: 1.0.0
   simtropolis/34030:
     assetId: simtropolis/34030-the-union-club-clinic
     authors:
@@ -19693,11 +19903,73 @@ assets:
     assetId: simtropolis/36187-n%C3%B6rrk%C3%B6ping-clinic
     authors:
       - Dead_End
+    buildings:
+      Norrkoping Clinic.SC4Lot:
+        c38ed872:
+          bulldoze: 60
+          categories: health
+          cost: 1050
+          flamability: 36
+          jobs:
+            $: 15
+            $$: 33
+            $$$: 10
+          maintenance: 700
+          menu: Health
+          model: 0b873fc0
+          name: Norrkoping_Clinic
+          pollution: 1
+          pollutionRadius: 3
+          power: 3
+          submenu: Health/Small
+          water: 9
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/33552-malmberget-proppack-vol1
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31374-rdg-prop-pack-1
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - cycledogg/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA small hospital that will probably fit in well with Scandinavian style towns and cities. It's named after the Swedish city of Nörrköping, but that was just because I needed a name. As far as I know it's not located there. <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" ><br>\n\tSpecial thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/64713-oidaas/?do=hovercard\" data-mentionid=\"64713\" href=\"https://community.simtropolis.com/profile/64713-oidaas/\" rel=\"\">@Oidaas</a>\_for creating such a wonderful building!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33552-malmberget-proppack-vol1/\" rel=\"\">Malmberget Props.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" rel=\"\">PEG_MTP_SUPER_TEXTURES_PACK.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props CP Vol01.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Grfe-Maxis-Fence_New-<abbr title=\"Lot Editor\">LE</abbr>-Props.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK_ParkingPack.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG_Prop_Pack_1.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\">Grfe_props_pack_LE_rowan_trees.dat</a>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Norrkoping Clinic.zip
+    files:
+      - Norrkoping Clinic.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_03/Screenshot_Upload.JPG.3da2d853ffa8de9303ac7993afb7cd24.JPG
     lastModified: 2024-03-31T18:37:13.000Z
+    lots:
+      Norrkoping Clinic.SC4Lot:
+        c38ed872:
+          building: c38ed872
+          name: Norrkoping Clinic
+          props:
+            - 109f9dcc
+            - dd37fbc0
+            - bb85e2c9
+            - 1b85e2d5
+            - 034ead8c
+            - a34eacba
+            - 33b887eb
+            - 33b887c0
+          size: 5x2
+          textures:
+            - 251c0000
+            - 1da44a20
+            - 259d0000
+            - '259e0000'
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Nörrköping Clinic
+    sha256: 55418d12e8ec44d5d159197c93a2d5568a821142b4c7137e59918f358c3e612f
+    size: 15568
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_03/Screenshot_Upload.thumb.JPG.847441cb6605d7ad03497ef33be358f0.JPG
+    uncompressed: 28225
     url: https://community.simtropolis.com/files/file/36187-n%C3%B6rrk%C3%B6ping-clinic/
+    version: 1.0.1
   simtropolis/36189:
     assetId: simtropolis/36189-greek-temples
     authors:
@@ -21614,11 +21886,65 @@ assets:
     assetId: simtropolis/36457-grimstad-pharmacy
     authors:
       - Dead_End
+    buildings:
+      Grimstad Pharmacy.SC4Lot:
+        347423c9:
+          bulldoze: 30
+          categories: health
+          cost: 250
+          flamability: 36
+          jobs:
+            $: 6
+            $$: 7
+            $$$: 1
+          maintenance: 300
+          menu: Health
+          model: eba38cf7
+          name: Grimstad Pharmacy
+          power: 1
+          submenu: Health/Small
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
+      - simtropolis/35927-malmberget-proppack-vol-2
+      - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - cycledogg/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThis small 1x1 pharmacy lot is designed to fit in <abbr title=\"Wall-to-Wall\">W2W</abbr> environments, particularly those with Scandinavian themes. You'll find it in the menu with your other health and medical related buildings. It's named after the Norwegian town of Grimstad, but as far as I know it's not located there. <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\n</p>\n\n<p>\n\tSpecial thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/64713-oidaas/?do=hovercard\" data-mentionid=\"64713\" href=\"https://community.simtropolis.com/profile/64713-oidaas/\" rel=\"\">@Oidaas</a>\_for creating such a wonderful building!\n</p>\n\n<p>\n\tThe attached screenshot shows my custom pavement (created through <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard\" data-mentionid=\"651629\" href=\"https://community.simtropolis.com/profile/651629-rsc204/\" rel=\"\">@rsc204</a>'s <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/35927-malmberget-proppack-vol-2/\" rel=\"\">Malmberget proppack vol 2</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props CP Vol01</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Girafe Maxis Fence HD Replacement Mod</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\">Grfe_props_pack_LE_sparaxis.dat</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\">Grfe_props_pack_LE_narcissus.dat</a>\n\t</li>\n</ul>\n\n\t\t\t\t\t\t</body>"
+    filename: Grimstad Pharmacy.zip
+    files:
+      - Grimstad Pharmacy.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_09/Screenshot_Pharmacy.JPG.a828e0a7b5162977fd7b594ee4356056.JPG
     lastModified: 2024-09-22T07:43:56.000Z
+    lots:
+      Grimstad Pharmacy.SC4Lot:
+        347423c9:
+          building: 347423c9
+          name: Grimstad Pharmacy
+          props:
+            - 109f9dcc
+            - dd37fbc0
+            - 5ee1e91d
+            - 9ee1e90e
+            - 9ee1e92d
+            - 1e390f91
+          size: 1x1
+          textures:
+            - '251e0000'
+            - 258f0000
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Grimstad Pharmacy
+    sha256: 26fb574942682798b4696d8c996efc6a9b067262f80de4e9b666654afbcfa331
+    size: 17836
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_09/Screenshot_Pharmacy.thumb.JPG.fb10bd87a940fb27fc2617c19f4228a1.JPG
+    uncompressed: 25871
     url: https://community.simtropolis.com/files/file/36457-grimstad-pharmacy/
+    version: 1.0.1
   simtropolis/36477:
     assetId: simtropolis/36477-central-market-building
     authors:
@@ -21704,11 +22030,92 @@ assets:
     assetId: simtropolis/36540-hjorthagen-school-relot
     authors:
       - Dead_End
+    buildings:
+      DE_PLOP_5x4_hjorthagens skola_e4acd9d0.SC4Lot:
+        e4acd9d0:
+          bulldoze: 30
+          categories: education
+          cost: 300
+          flamability: 32
+          jobs:
+            $: 17
+            $$: 6
+          maintenance: 400
+          menu: Education
+          model: 2ce3bb54
+          name: Hjorthagens skola
+          power: 2
+          submenu: Education/Elementary
+          water: 5
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
+      - simtropolis/34010-hjorthagen-school
+      - simtropolis/31006-supershk-mega-parking-textures
+      - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
+      - simtropolis/11421-jenx-porkie-expanded-porkie-props
+      - simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31374-rdg-prop-pack-1
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThis primary school features two buildings: a large structure from the early 20th century and a newer one, probably built around the 1980's for extra capacity. The 5x4 lot also comes with a small square for kids to play around during recess. Bike storage is available in the front and back. Cars can park in the back. The driveway is transit enabled for streets, making it easy to connect this to existing road networks. It has the same stats as the original building by <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/794764-koumus/?do=hovercard\" data-mentionid=\"794764\" href=\"https://community.simtropolis.com/profile/794764-koumus/\" rel=\"\">@koumus</a>: 18$ 20$$ and 2$$$ jobs, and a capacity of 500 students.\n</p>\n\n<p>\n\tThe attached screenshots show my custom pavement (created through <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard\" data-mentionid=\"651629\" href=\"https://community.simtropolis.com/profile/651629-rsc204/\" rel=\"\">@rsc204</a>'s <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/34010-hjorthagen-school/\" rel=\"\">Hjorthagen School</a> (Specifically the SC4MODEL file)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31006-supershk-mega-parking-textures/\" rel=\"\">SuperSHK MEGA Parking Textures</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Girafe Maxis Fence HD Replacement Mod</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Bushes, Daisy, Lindens, Norway maples, Rowan trees)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/11421-jenx-porkie-expanded-porkie-props/\" rel=\"\">JENX-Porkie Expanded Porkie Props</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/\" rel=\"\">Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title=\"Mayor Mode Ploppable\">MMP</abbr></a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG Prop Pack 1</a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: DE_PLOP_5x4_hjorthagens skola.zip
+    files:
+      - DE_PLOP_5x4_hjorthagens skola_e4acd9d0.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_11/672ba270d3d24_Skola1.JPG.b40dd8887129f1a2f2973ed6fa6cfb98.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2024_11/672ba27162878_Skola2.JPG.fb4ec4ea68c5944e7da97ca03d3799e2.JPG
     lastModified: 2024-11-06T17:35:43.000Z
+    lots:
+      DE_PLOP_5x4_hjorthagens skola_e4acd9d0.SC4Lot:
+        e4acd9d0:
+          building: e4acd9d0
+          name: DE_PLOP_5x4_hjorthagens skola
+          props:
+            - 1f0b0000
+            - dd37fbe8
+            - 8cdd25e1
+            - ccdd25cc
+            - eebe9b3a
+            - a00005f5
+            - 3f4b6857
+            - 33b0363a
+            - 1e9a0000
+            - 2a8c0000
+            - 5f85b910
+            - 5f85b911
+            - 034ead8c
+            - 234ead27
+            - a34eacba
+            - 7e06ee6c
+          size: 5x4
+          textures:
+            - 258f0000
+            - 251c0000
+            - 25af0000
+            - 258c0000
+            - f8a04b30
+            - f8a043ba
+            - f8a04590
+            - f8a04095
+            - f8a0447a
+            - 25ae0000
+            - f8a04550
+            - f8a043d0
+            - f8a04055
+            - f8a045e0
+            - f5f84300
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Hjorthagen School Relot
+    sha256: 9d279fd1d929193641aebb982d23ad759e0de6601cc0e99cf8c057b6e89c1263
+    size: 12745
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/672ba8ef9daa5_Skola1.thumb.JPG.bc3aa66a3c527b8cd064000b36dc4c9d.JPG
+    uncompressed: 17193
     url: https://community.simtropolis.com/files/file/36540-hjorthagen-school-relot/
+    version: 1.0.0
   simtropolis/36550:
     assetId: simtropolis/36550-diagonal-mid-rises
     authors:
@@ -21740,11 +22147,90 @@ assets:
     assetId: simtropolis/36577-stave-church
     authors:
       - Dead_End
+    buildings:
+      PLOP_5x5_DE_Stavechurch_e4cd1390.SC4Lot:
+        e4cd1390:
+          bulldoze: 4070
+          categories: education
+          cost: 4550
+          flamability: 35
+          garbage: 1
+          jobs:
+            $: 20
+            $$: 77
+            $$$: 30
+          maintenance: 5350
+          menu: Education
+          model: f1237b41
+          name: DE_Stavechurch
+          pollution: 3
+          pollutionRadius: 3
+          power: 7
+          submenu: Education/Libraries
+          water: 26
+          waterPollution: 2
+          waterPollutionRadius: 4
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/35561-agc-viking-dlc
+      - simtropolis/32109-sm2-dry-stone-walls
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/13-sfbt-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\t<a href=\"https://en.wikipedia.org/wiki/Stave_church\" rel=\"external nofollow\">Stave churches</a> like this date back to the Middle Ages and could at one point be found all across Scandinavia. Today they mostly survive in Norway (<a href=\"https://en.wikipedia.org/wiki/Early_Norwegian_black_metal_scene#Church_Arsons_and_Attempts\" rel=\"external nofollow\">when they're not being set on fire that is</a>).\n</p>\n\n<p>\n\tThis 5x5 lot functions as a museum in the game. A special thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/415633-barroco-hispano/?do=hovercard\" data-mentionid=\"415633\" href=\"https://community.simtropolis.com/profile/415633-barroco-hispano/\" rel=\"\">@Barroco Hispano</a>\_for creating such a wonderful model!\n</p>\n\n<p>\n\tThe attached screenshots show my custom grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble! Also let know if you end up using this in your cities. I'd love to see some screenshots!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/35561-agc-viking-dlc/\" rel=\"\">AGC - Viking DLC</a> (Specifically the SC4MODEL and SC4Desc files for AGC_Buildings_VK_Church_V01_S1_90)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Legacy - <abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack</a> (Specifically <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures vol03 and <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props Misc vol02)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Bushes, Daisy, Narcissus, Norway maples, Oaks and Rowan trees)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\"><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</a> (Specifically SFBT_SIR_Props)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/32109-sm2-dry-stone-walls/\" rel=\"\">SM2 Dry Stone Walls</a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: DE_Stavechurch.zip
+    files:
+      - PLOP_5x5_DE_Stavechurch_e4cd1390.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/Screenshot_Stave_church.JPG.eeef955842650f7d699b2bb8ba87e23a.JPG
     lastModified: 2024-12-04T11:34:57.000Z
+    lots:
+      PLOP_5x5_DE_Stavechurch_e4cd1390.SC4Lot:
+        e4cd1390:
+          building: e4cd1390
+          name: PLOP_5x5_DE_Stavechurch
+          props:
+            - c77d3042
+            - 677a5cce
+            - c77fd63f
+            - 277fcd91
+            - ff4b689c
+            - 0cfbb16c
+            - '297e0000'
+            - '29780000'
+            - '29730000'
+            - '29750000'
+            - '29760000'
+            - da40a0eb
+            - 1e9a0000
+            - 1e9b0422
+            - ccdd25cc
+            - 3f4b6857
+            - 234ead27
+            - e7813023
+            - 277fcd66
+            - 1e390f91
+            - ecdd2601
+            - 33b0363a
+          size: 5x5
+          textures:
+            - 251c0000
+            - f2144750
+            - f2144650
+            - f2144720
+            - f2144710
+            - 25f10000
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Stave church
+    sha256: 7ebd44d9be4034ff80c84968aee9e1b2cf3fbac5433463f34cab387258a8a90a
+    size: 14687
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/Screenshot_Stave_church.thumb.JPG.7b9e7ea13dcab70234cf93b6b6b091e6.JPG
+    uncompressed: 39505
     url: https://community.simtropolis.com/files/file/36577-stave-church/
+    version: 1.0.0
   simtropolis/36601:
     assetId: simtropolis/36601-3x3-park
     authors:
@@ -23958,4 +24444,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2024-12-17T13:48:13.135Z
+  timestamp: 2024-12-18T11:52:24.176Z

@@ -2179,7 +2179,7 @@ assets:
       - nbvc
     category: 113-graphical-mods
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>Bikes for the mayor menu.</p>\n<p>\_</p>\n<p>You can change the color and direction of a bike with additional clicks  on the same bike.</p>\n<p>\_</p>\n<p>The bikes can also be used as props in the Lot-Editor for your custom  lots.</p>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>Bikes for the mayor menu.</p>\n<p>\_</p>\n<p>You can change the color and direction of a bike with additional clicks  on the same bike.</p>\n<p>\_</p>\n<p>The bikes can also be used as props in the Lot-Editor for your custom  lots.</p>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
     file: NBVC_Bikes.zip
     files:
       - NBVC_Bikes/NBVC_Bikes_100.dat
@@ -2208,7 +2208,122 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0024/d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
     lastModified: 2010-09-12T04:47:39.000Z
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    mmps:
+      NBVC_Bikes/NBVC_Bikes_100.dat:
+        4b7c0221:
+          description: Bikes. Additional clicks on a bike change the color and direction.
+          label: Bikes
+          model: b8ed3951
+          name: NBVC_Bike1
+          stages:
+            - id: 4b7c0222
+              model: d8c67f30
+              name: NBVC_Bike
+            - id: 4b7c0223
+              model: 98ed3aaf
+              name: NBVC_Bike3
+            - id: 4b7c0224
+              model: 58ecdcea
+              name: NBVC_Bike4
+            - id: 4b7c0225
+              model: b8ed3cd6
+              name: NBVC_Bike5d
+            - id: 4b7c0226
+              model: b8ed3868
+              name: NBVC_Bike6
+            - id: 4b7c0227
+              model: 18ed3a46
+              name: NBVC_Bike7
+            - id: 4b7c0228
+              model: 58ed3a72
+              name: NBVC_Bike8
+            - id: 4b7c0229
+              model: b8ed3b84
+              name: NBVC_Bike8
+            - id: 4b7c022a
+              model: 38ed3c76
+              name: NBVC_Bike10
+            - id: 4b7c022b
+              model: 98ed3cab
+              name: NBVC_Bike11
+            - id: 4b7c022c
+              model: b8ed3868
+              name: NBVC_Bike6
+            - id: 4b7c022d
+              model: d8c67f30
+              name: NBVC_Bike12
+    models:
+      NBVC_Bikes/NBVC_bike1-0x5ad0e817_0xb8ed3951_0x30000.SC4Model:
+        - b8ed3951
+      NBVC_Bikes/NBVC_bike2-0x5ad0e817_0xd8c67f30_0x30000.SC4Model:
+        - d8c67f30
+      NBVC_Bikes/NBVC_bike2_diag-0x5ad0e817_0x98ed3aaf_0x30000.SC4Model:
+        - 98ed3aaf
+      NBVC_Bikes/NBVC_bike3-0x5ad0e817_0x58ecdcea_0x30000.SC4Model:
+        - 58ecdcea
+      NBVC_Bikes/NBVC_bike3_diag-0x5ad0e817_0xb8ed3cd6_0x30000.SC4Model:
+        - b8ed3cd6
+      NBVC_Bikes/NBVC_bike4-0x5ad0e817_0xb8ed3868_0x30000.SC4Model:
+        - b8ed3868
+      NBVC_Bikes/NBVC_bike5-0x5ad0e817_0x18ed3a46_0x30000.SC4Model:
+        - 18ed3a46
+      NBVC_Bikes/NBVC_bike5_diag-0x5ad0e817_0x58ed3a72_0x30000.SC4Model:
+        - 58ed3a72
+      NBVC_Bikes/NBVC_bike6-0x5ad0e817_0xb8ed3b84_0x30000.SC4Model:
+        - b8ed3b84
+      NBVC_Bikes/NBVC_bike7-0x5ad0e817_0x38ed3c76_0x30000.SC4Model:
+        - 38ed3c76
+      NBVC_Bikes/NBVC_bike7_diag-0x5ad0e817_0x98ed3cab_0x30000.SC4Model:
+        - 98ed3cab
     name: Bikes
+    props:
+      NBVC_Bikes/NBVC_bike1-0x6534284a-0x947da1d3-0x59668597.SC4Desc:
+        '59668597':
+          model: b8ed3951
+          name: NBVC_bike1
+      NBVC_Bikes/NBVC_bike2-0x6534284a-0x947da1d3-0x996604ca.SC4Desc:
+        996604ca:
+          model: d8c67f30
+          name: NBVC_bike2
+      NBVC_Bikes/NBVC_bike2_diag-0x6534284a-0x947da1d3-0x396684ca.SC4Desc:
+        396684ca:
+          model: 98ed3aaf
+          name: NBVC_bike2_diag
+      NBVC_Bikes/NBVC_bike3-0x6534284a-0x947da1d3-0x996682b5.SC4Desc:
+        996682b5:
+          model: 58ecdcea
+          name: NBVC_bike3
+      NBVC_Bikes/NBVC_bike3_diag-0x6534284a-0x947da1d3-0x596686e5.SC4Desc:
+        '596686e5':
+          model: b8ed3cd6
+          name: NBVC_bike3_diag
+      NBVC_Bikes/NBVC_bike4-0x6534284a-0x947da1d3-0x596682a6.SC4Desc:
+        596682a6:
+          model: b8ed3868
+          name: NBVC_bike4
+      NBVC_Bikes/NBVC_bike5-0x6534284a-0x947da1d3-0x396684d4.SC4Desc:
+        396684d4:
+          model: 18ed3a46
+          name: NBVC_bike5
+      NBVC_Bikes/NBVC_bike5_diag-0x6534284a-0x947da1d3-0x596684c0.SC4Desc:
+        596684c0:
+          model: 58ed3a72
+          name: NBVC_bike5_diag
+      NBVC_Bikes/NBVC_bike6-0x6534284a-0x947da1d3-0x596685a0.SC4Desc:
+        596685a0:
+          model: b8ed3b84
+          name: NBVC_bike6
+      NBVC_Bikes/NBVC_bike7-0x6534284a-0x947da1d3-0x796686ed.SC4Desc:
+        796686ed:
+          model: 38ed3c76
+          name: NBVC_bike7
+      NBVC_Bikes/NBVC_bike7_diag-0x6534284a-0x947da1d3-0xd9668703.SC4Desc:
+        d9668703:
+          model: 98ed3cab
+          name: NBVC_bike7_diag
     sha256: bbc03e2aaaf57df91572fc16708dde08c85d19518c7d7b622ff827b303b9d9ac
     size: 87548
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_09_2010/thumb-d9e9da16b3f6f3b7d51b14e65e76b4fd-Nbvc_bikes1.jpg
@@ -10149,11 +10264,677 @@ assets:
     assetId: simtropolis/32109-sm2-dry-stone-walls
     authors:
       - Simmer2
+    buildings:
+      SM2/Dry Stone Walls/SM2 Dry Stone Walls Lots.dat:
+        07f7a899:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Hut A
+          menu: Parks
+          model: e777b117
+          name: SM2 Muro Secco Hut A
+        07fa7e55:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Otrho to Diag Left to Ortho
+          menu: Parks
+          model: e77a543b
+          name: SM2 Muro Secco Otrho to Diag Left to Ortho
+        07fd0b37:
+          description: LOT EDGE - No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco EDGE Ortho
+          menu: Parks
+          model: c773be1f
+          name: SM2 Muro Secco EDGE Ortho
+        07fe508c:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Y
+          menu: Parks
+          model: 877e6cf1
+          name: SM2 Muro Secco Y
+        17fbd434:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag T
+          menu: Parks
+          model: 277be6e0
+          name: SM2 Muro Secco Diag T
+        27f67c7e:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco 90 Angle
+          menu: Parks
+          model: '07769488'
+          name: SM2 Muro Secco 90 Angle
+        27f9189a:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Small Gate Closed
+          menu: Parks
+          model: a7792a5e
+          name: SM2 Muro Secco Diag Small Gate Closed
+        27fa7dcd:
+          description: LOT EDGE - No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: 'SM2 Muro Secco Ortho EDGE Corner '
+          menu: Parks
+          model: c77a8d5e
+          name: 'SM2 Muro Secco Ortho EDGE Corner '
+        27fd13ea:
+          description: LOT EDGE - No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco EDGE Large Gate Closed Ortho
+          menu: Parks
+          model: '67769105'
+          name: SM2 Muro Secco EDGE Large Gate Closed Ortho
+        37f7df3f:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Ortho Corner Left
+          menu: Parks
+          model: 2777e3ce
+          name: SM2 Muro Secco Diag Ortho Corner Left
+        37f7e357:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag 45X1
+          menu: Parks
+          model: e777dab2
+          name: SM2 Muro Secco Diag 45X1
+        47f919c3:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Small Gate Closed Ortho
+          menu: Parks
+          model: 6779273b
+          name: SM2 Muro Secco Small Gate Closed Ortho
+        57fa7e28:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Otrho to Diag Left Curved
+          menu: Parks
+          model: 077a57e8
+          name: SM2 Muro Secco Otrho to Diag Left Curved
+        57fbd361:
+          description: Use the road lifter set at 7.5 meter height. Then plop this lot with proper orientation.
+          flamability: 10
+          label: SM2 Muro Secco 7,5m Transition Or
+          menu: Parks
+          model: 877bed2f
+          name: SM2 Muro Secco 7,5m Transition Or
+        67f91992:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho Broken2
+          menu: Parks
+          model: 87792f72
+          name: SM2 Muro Secco Ortho Broken2
+        67fa7df1:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho to Diag Right Curved
+          menu: Parks
+          model: a77a563f
+          name: SM2 Muro Secco Ortho to Diag Right Curved
+        77f7df7e:
+          bulldoze: 40
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Ortho Corner Right
+          menu: Parks
+          model: c777e217
+          name: SM2 Muro Secco Diag Ortho Corner Right
+        87f67d3c:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco T
+          menu: Parks
+          model: 0773c4a2
+          name: SM2 Muro Secco T
+        87f67dc3:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho Broken
+          menu: Parks
+          model: e7768d35
+          name: SM2 Muro Secco Ortho Broken
+        97f91831:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Big Gate Closed
+          menu: Parks
+          model: a7793300
+          name: SM2 Muro Secco Diag Big Gate Closed
+        97fa7d9f:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag OH
+          menu: Parks
+          model: 277a5ade
+          name: SM2 Muro Secco Diag OH
+        97fa7eb8:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Stone Well
+          menu: Parks
+          model: 077a97d6
+          name: SM2 Muro Secco Stone Well
+        97fe51c2:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho X2
+          menu: Parks
+          model: c773be1f
+          name: SM2 Muro Secco Ortho X2
+        a7f7dff9:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Sheep Circle
+          menu: Parks
+          model: e777eaa6
+          name: SM2 Muro Secco Sheep Circle
+        a7f7e39b:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag to Ortho Cross
+          menu: Parks
+          model: a777d4d2
+          name: SM2 Muro Secco Diag to Ortho Cross
+        a7f92111:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho End
+          menu: Parks
+          model: '07793e44'
+          name: SM2 Muro Secco Ortho End
+        a7fa7e8a:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Otrho to Diag LR to Ortho
+          menu: Parks
+          model: 077a5374
+          name: SM2 Muro Secco Otrho to Diag LR to Ortho
+        a7fbc539:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag X
+          menu: Parks
+          model: e77be0c6
+          name: SM2 Muro Secco Diag X
+        b7f91863:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Big Gate Open
+          menu: Parks
+          model: 677933d2
+          name: SM2 Muro Secco Diag Big Gate Open
+        b7f9213f:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Small Gate Open Ortho
+          menu: Parks
+          model: 27793d26
+          name: SM2 Muro Secco Small Gate Open Ortho
+        c7f67e06:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho Large Gate Closed
+          menu: Parks
+          model: '67769105'
+          name: SM2 Muro Secco Ortho Large Gate Closed
+        c7f67e42:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho Large Gate Open
+          menu: Parks
+          model: 877692ca
+          name: SM2 Muro Secco Ortho Large Gate Open
+        c7f7dfbb:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho OH
+          menu: Parks
+          model: a777dfee
+          name: SM2 Muro Secco Ortho OH
+        c7fd146a:
+          description: LOT EDGE - No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco EDGE Large Gate Open Ortho
+          menu: Parks
+          model: 877692ca
+          name: SM2 Muro Secco EDGE Large Gate Open Ortho
+        d7f7e3dd:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho to Diag Right to Ortho
+          menu: Parks
+          model: e777da06
+          name: SM2 Muro Secco Ortho to Diag Right to Ortho
+        d7fa7d55:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Broken
+          menu: Parks
+          model: c77a85e0
+          name: SM2 Muro Secco Diag Broken
+        d7fa7d7e:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag End
+          menu: Parks
+          model: 677a8b46
+          name: SM2 Muro Secco Diag End
+        e7f67bf3:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Ortho
+          menu: Parks
+          model: c773be1f
+          name: SM2 Muro Secco Ortho
+        e7f67ce5:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco 90 Curve
+          menu: Parks
+          model: a773c2a5
+          name: SM2 Muro Secco 90 Curve
+        e7f67d7d:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Cross
+          menu: Parks
+          model: 677685c4
+          name: SM2 Muro Secco Cross
+        e7f7e026:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Small Tower
+          menu: Parks
+          model: 0777fc29
+          name: SM2 Muro Secco Small Tower
+        e7f918cf:
+          description: No cost to plop, manteinance or bulldoze.
+          flamability: 10
+          label: SM2 Muro Secco Diag Small Gate Open
+          menu: Parks
+          model: e7792b1d
+          name: SM2 Muro Secco Diag Small Gate Open
     category: 113-graphical-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\t<strong>SM2 Dry Stone Walls</strong>\_ (Muro Secco)\r\n</p>\r\n\r\n<p>\r\n\tAre a type of wall made with stones found locally and assembled without mortar thus the name Dry Wall (Muro Secco)<br>\r\n\tThey are mostly found in European countries. Unfortunately they are the remnants of a lost art. No one makes them anymore.<br>\r\n\tThese walls were used to \"fence in\" properties and also to provide shelter for livestock.\r\n</p>\r\n\r\n<p>\r\n\tI tried to provide almost all possible combination in order to make just about any shape you may need.\r\n</p>\r\n\r\n<p>\r\n\tOrthogonal, diagonal, round corner, sharp corner, diagonal to orthogonal, broken walls, overhanging diags and orthos, open gates, closed gates, even gates on diagonals and more!\r\n</p>\r\n\r\n<p>\r\n\tThere are also a few stone structures to complement the set and one special transition piece which will allow you to follow heights differences of 7.5 meters. (slope friendly). Please use the road lifter tool in the <abbr title=\"Network Addon Mod\">NAM</abbr> menu to set height to 7.5 meters when using the transition piece for best results.\r\n</p>\r\n\r\n<p>\r\n\tIncluded are 4 lots (Orthogonal only) that will make it possible to create EDGE to EDGE scenes.\r\n</p>\r\n\r\n<p>\r\n\tAnd last but not least, I have included 2 MMP files based on the model and texture of the wall, for those hard to reach areas. They are slope friendly and you can even place them under water if you wish.\r\n</p>\r\n\r\n<p>\r\n\tI created a custom icon set with clear and easy to recognize symbols, You will find all 42 lots in the park menu.\r\n</p>\r\n\r\n<p>\r\n\tNo cost to plop, maintain and bulldoze. Neutral lots. The lots have no base textures. Just plop them and dress them with your favorite MMP.\r\n</p>\r\n\r\n<p>\r\n\t<strong>No Dependencies.</strong>\r\n</p>\r\n\r\n<p>\r\n\tSimmer2\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
+    filename: SM2 Dry Stone Walls v2.zip
+    files:
+      - SM2/Documents/Muro Secco legend.png
+      - SM2/Documents/SM2 Dry Stone Walls. MS15.jpg
+      - SM2/Documents/SM2 Dry Stone Walls.ReadMe.txt
+      - SM2/Dry Stone Walls/SM2 Dry Stone Walls Lots.dat
+      - SM2/MMP/Dry Stone Walls/SM2 Dry Stone Wall MMP.dat
+      - SM2/MMP/Dry Stone Walls/SM2 Dry Wall Loose Stones MMP.dat
+      - SM2/Props/SM2 Dry Stone Walls Models.dat
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/Cows2.jpg.2fffcb198feb6687eb8ef6b4002173f2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/MS3.jpg.655d9495325f3b7e8bbbc2170b89aec8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/MS8.jpg.da17161bec3bea29993988a6f3862bbc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/MS14.jpg.6d40f88a40fcfdad47394ff82500c619.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/MS15.jpg.ffb88b4360fe1d34c229af2777a2f695.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/MS17.jpg.4a757e0f08dc4f685e5c1716404ba4e0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2018_02/5a7959a2a93f0_MuroSeccolegend.png.4b49ac83c2542dfdbc57b5c6c7caf4e2.png
     lastModified: 2018-08-23T04:16:45.000Z
+    lots:
+      SM2/Dry Stone Walls/SM2 Dry Stone Walls Lots.dat:
+        07f7a899:
+          building: 07f7a899
+          name: PLOP_1x1_SM2 Muro Secco Hut A
+          size: 1x1
+        07fa7e55:
+          building: 07fa7e55
+          name: PLOP_1x1_SM2 Muro Secco Otrho to Diag Left to Ortho
+          size: 1x1
+        07fd0b37:
+          building: 07fd0b37
+          name: PLOP_1x1_SM2 Muro Secco EDGE Ortho
+          size: 1x1
+        07fe508c:
+          building: 07fe508c
+          name: PLOP_1x1_SM2 Muro Secco Y
+          size: 1x1
+        17fbd434:
+          building: 17fbd434
+          name: PLOP_1x1_SM2 Muro Secco Diag T
+          size: 1x1
+        27f67c7e:
+          building: 27f67c7e
+          name: PLOP_1x1_SM2 Muro Secco 90 Angle
+          size: 1x1
+        27f9189a:
+          building: 27f9189a
+          name: PLOP_1x1_SM2 Muro Secco Diag Small Gate Closed
+          size: 1x1
+        27fa7dcd:
+          building: 27fa7dcd
+          name: 'PLOP_1x1_SM2 Muro Secco Ortho EDGE Corner '
+          size: 1x1
+        27fd13ea:
+          building: 27fd13ea
+          name: PLOP_1x1_SM2 Muro Secco EDGE Large Gate Closed Ortho
+          size: 1x1
+        37f7df3f:
+          building: 37f7df3f
+          name: PLOP_1x1_SM2 Muro Secco Diag Ortho Corner Left
+          size: 1x1
+        37f7e357:
+          building: 37f7e357
+          name: PLOP_1x1_SM2 Muro Secco Diag 45X1
+          size: 1x1
+        47f919c3:
+          building: 47f919c3
+          name: PLOP_1x1_SM2 Muro Secco Small Gate Closed Ortho
+          size: 1x1
+        57fa7e28:
+          building: 57fa7e28
+          name: PLOP_1x1_SM2 Muro Secco Otrho to Diag Left Curved
+          size: 1x1
+        57fbd361:
+          building: 57fbd361
+          name: PLOP_1x1_SM2 Muro Secco 7,5m Transition Or
+          size: 1x1
+        67f91992:
+          building: 67f91992
+          name: PLOP_1x1_SM2 Muro Secco Ortho Broken2
+          size: 1x1
+        67fa7df1:
+          building: 67fa7df1
+          name: PLOP_1x1_SM2 Muro Secco Ortho to Diag Right Curved
+          size: 1x1
+        77f7df7e:
+          building: 77f7df7e
+          name: PLOP_1x1_SM2 Muro Secco Diag Ortho Corner Right
+          size: 1x1
+        87f67d3c:
+          building: 87f67d3c
+          name: PLOP_1x1_SM2 Muro Secco T
+          size: 1x1
+        87f67dc3:
+          building: 87f67dc3
+          name: PLOP_1x1_SM2 Muro Secco Ortho Broken
+          size: 1x1
+        97f91831:
+          building: 97f91831
+          name: PLOP_1x1_SM2 Muro Secco Diag Big Gate Closed
+          size: 1x1
+        97fa7d9f:
+          building: 97fa7d9f
+          name: PLOP_1x1_SM2 Muro Secco Diag OH
+          size: 1x1
+        97fa7eb8:
+          building: 97fa7eb8
+          name: PLOP_1x1_SM2 Muro Secco Stone Well
+          size: 1x1
+        97fe51c2:
+          building: 97fe51c2
+          name: PLOP_2x1_SM2 Muro Secco Ortho X2
+          props:
+            - 677a5cce
+          size: 2x1
+        a7f7dff9:
+          building: a7f7dff9
+          name: PLOP_1x1_SM2 Muro Secco Sheep Circle
+          size: 1x1
+        a7f7e39b:
+          building: a7f7e39b
+          name: PLOP_1x1_SM2 Muro Secco Diag to Ortho Cross
+          size: 1x1
+        a7f92111:
+          building: a7f92111
+          name: PLOP_1x1_SM2 Muro Secco Ortho End
+          size: 1x1
+        a7fa7e8a:
+          building: a7fa7e8a
+          name: PLOP_1x1_SM2 Muro Secco Otrho to Diag LR to Ortho
+          size: 1x1
+        a7fbc539:
+          building: a7fbc539
+          name: PLOP_1x1_SM2 Muro Secco Diag X
+          size: 1x1
+        b7f91863:
+          building: b7f91863
+          name: PLOP_1x1_SM2 Muro Secco Diag Big Gate Open
+          size: 1x1
+        b7f9213f:
+          building: b7f9213f
+          name: PLOP_1x1_SM2 Muro Secco Small Gate Open Ortho
+          size: 1x1
+        c7f67e06:
+          building: c7f67e06
+          name: PLOP_1x1_SM2 Muro Secco Ortho Large Gate Closed
+          size: 1x1
+        c7f67e42:
+          building: c7f67e42
+          name: PLOP_1x1_SM2 Muro Secco Ortho Large Gate Open
+          size: 1x1
+        c7f7dfbb:
+          building: c7f7dfbb
+          name: PLOP_1x1_SM2 Muro Secco Ortho OH
+          size: 1x1
+        c7fd146a:
+          building: c7fd146a
+          name: PLOP_1x1_SM2 Muro Secco EDGE Large Gate Open Ortho
+          size: 1x1
+        d7f7e3dd:
+          building: d7f7e3dd
+          name: PLOP_1x1_SM2 Muro Secco Ortho to Diag Right to Ortho
+          size: 1x1
+        d7fa7d55:
+          building: d7fa7d55
+          name: PLOP_1x1_SM2 Muro Secco Diag Broken
+          size: 1x1
+        d7fa7d7e:
+          building: d7fa7d7e
+          name: PLOP_1x1_SM2 Muro Secco Diag End
+          size: 1x1
+        e7f67bf3:
+          building: e7f67bf3
+          name: PLOP_1x1_SM2 Muro Secco Ortho
+          size: 1x1
+        e7f67ce5:
+          building: e7f67ce5
+          name: PLOP_1x1_SM2 Muro Secco 90 Curve
+          size: 1x1
+        e7f67d7d:
+          building: e7f67d7d
+          name: PLOP_1x1_SM2 Muro Secco Cross
+          size: 1x1
+        e7f7e026:
+          building: e7f7e026
+          name: PLOP_1x1_SM2 Muro Secco Small Tower
+          size: 1x1
+        e7f918cf:
+          building: e7f918cf
+          name: PLOP_1x1_SM2 Muro Secco Diag Small Gate Open
+          size: 1x1
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    mmps:
+      SM2/MMP/Dry Stone Walls/SM2 Dry Stone Wall MMP.dat:
+        dada12a1:
+          description: Super tight, zero cost and beautiful.
+          label: SM2 Dry Stone Wall MMP
+          model: a77930ff
+          name: SM2 Dry Stone Wall MMP
+      SM2/MMP/Dry Stone Walls/SM2 Dry Wall Loose Stones MMP.dat:
+        dada12a4:
+          description: Super tight, zero cost and beautiful.
+          label: SM2 Dry Wall Loose Stones MMP
+          model: a77a52e2
+          name: SM2 Dry Wall Loose Stones MMP
+    models:
+      SM2/Props/SM2 Dry Stone Walls Models.dat:
+        - '07769488'
+        - 677685c4
+        - e7768d35
+        - '67769105'
+        - 877692ca
+        - c773be1f
+        - 0773c4a2
+        - a773c2a5
+        - 877bed2f
+        - e777dab2
+        - a7793300
+        - 677933d2
+        - c77a85e0
+        - 677a8b46
+        - 277a5ade
+        - 2777e3ce
+        - c777e217
+        - a7792a5e
+        - e7792b1d
+        - 277be6e0
+        - a777d4d2
+        - e77be0c6
+        - e777b117
+        - a77a52e2
+        - a77930ff
+        - 87792f72
+        - c77a8d5e
+        - '07793e44'
+        - a777dfee
+        - a77a563f
+        - e777da06
+        - 077a57e8
+        - e77a543b
+        - 077a5374
+        - e777eaa6
+        - 6779273b
+        - 27793d26
+        - 0777fc29
+        - 077a97d6
+        - 877e6cf1
     name: SM2 Dry Stone Walls
+    props:
+      SM2/Props/SM2 Dry Stone Walls Models.dat:
+        077d2336:
+          model: 677685c4
+          name: SM2 Muro 2Secco 16m Cross  str
+        '077e7579':
+          model: e777dab2
+          name: SM2 Muro Secco Diag 45X1
+        '077e9496':
+          model: c777e217
+          name: SM2 Muro Secco Diag Ortho Corner Right
+        '07813034':
+          model: 677a8b46
+          name: SM2 Muro Secco Diag End
+        '07813065':
+          model: 277a5ade
+          name: SM2 Muro Secco Diag OH
+        277a5c85:
+          model: 0773c4a2
+          name: SM2 Muro 2Secco 16mX1 T
+        277a5cbc:
+          model: a773c2a5
+          name: SM2 Muro Secco 16mX1  90
+        '277e5610':
+          model: e777b117
+          name: SM2 Muro Secco Hut A
+        '277e7586':
+          model: e777da06
+          name: SM2 Muro Secco Ortho to Diag Right to Ortho
+        '277e9486':
+          model: e777eaa6
+          name: SM2 Muro Secco Sheep Circle
+        277fcd66:
+          model: 87792f72
+          name: SM2 Muro Secco Ortho Broken2
+        277fcd91:
+          model: 6779273b
+          name: SM2 Muro Secco Small Gate Closed Ortho
+        2781309c:
+          model: 077a5374
+          name: SM2 Muro Secco Otrho to Diag LR to Ortho
+        27827a67:
+          model: e77be0c6
+          name: SM2 Muro Secco Diag X
+        2782866c:
+          model: 877bed2f
+          name: SM2 Muro Secco 7,5m Transition Or
+        477d3081:
+          model: e7768d35
+          name: SM2 Muro 2Secco 16mX1  str Broken
+        477e75a3:
+          model: a777d4d2
+          name: SM2 Muro Secco Diag to Ortho Cross
+        477e94b6:
+          model: 2777e3ce
+          name: SM2 Muro Secco Diag Ortho Corner Left
+        477fd65b:
+          model: '07793e44'
+          name: SM2 Muro Secco Ortho End
+        47812ffa:
+          model: c77a8d5e
+          name: SM2 Muro Secco Ortho Edge Corner LE
+        4781308d:
+          model: 077a57e8
+          name: SM2 Muro Secco Otrho to Diag Left Curved
+        677a5cce:
+          model: c773be1f
+          name: SM2 Muro 2Secco 16mX1  str
+        677d3056:
+          model: 877692ca
+          name: SM2 Muro 2Secco 16mX1  str Gate Open
+        677fcd55:
+          model: a7792a5e
+          name: SM2 Muro Secco Diag Small Gate Closed
+        877fccf0:
+          model: e7792b1d
+          name: SM2 Muro Secco Diag Small Gate Open
+        a781307e:
+          model: 077a97d6
+          name: SM2 Muro Secco Stone Well
+        c77d3042:
+          model: '07769488'
+          name: SM2 Muro 2Secco 16m 90 Corner
+        c77d306a:
+          model: '67769105'
+          name: SM2 Muro 2Secco 16mX1  str Gate Closed
+        c77e94a6:
+          model: a777dfee
+          name: SM2 Muro Secco Ortho OH
+        c77e94c4:
+          model: 0777fc29
+          name: SM2 Muro Secco Small Tower
+        c77fcd43:
+          model: a7793300
+          name: SM2 Muro Secco Diag Big Gate Closed
+        c77fcd7c:
+          model: 677933d2
+          name: SM2 Muro Secco Diag Big Gate Open
+        c77fd63f:
+          model: 27793d26
+          name: SM2 Muro Secco Small Gate Open Ortho
+        c7828684:
+          model: 277be6e0
+          name: SM2 Muro Secco Diag T
+        e7812fe7:
+          model: e77a543b
+          name: SM2 Muro Secco Otrho to Diag Left to Ortho
+        e781300f:
+          model: c77a85e0
+          name: SM2 Muro Secco Diag Broken
+        e7813023:
+          model: a77a563f
+          name: SM2 Muro Secco Ortho to Diag Right Curved
+        e78504ed:
+          model: 877e6cf1
+          name: SM2 Muro Secco Y
+    sha256: c90202e731e6ce5ec025153f280db5d40d6b90c61fe6d98740b7384056317f3d
+    size: 2998804
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2018_02/MS8.thumb.jpg.f5593597b048543de595f1983593af05.jpg
+    uncompressed: 3478546
     url: https://community.simtropolis.com/files/file/32109-sm2-dry-stone-walls/
+    version: 2.0.0
   simtropolis/32351:
     assetId: simtropolis/32351-jlcoultre-rock-mod
     authors:
@@ -23779,4 +24560,4 @@ assets:
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
 meta:
-  timestamp: 2024-12-17T13:48:13.135Z
+  timestamp: 2024-12-18T11:52:24.176Z

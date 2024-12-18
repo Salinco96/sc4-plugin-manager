@@ -25767,11 +25767,76 @@ assets:
     assetId: simtropolis/36541-white-villa
     authors:
       - Dead_End
+    buildings:
+      DE_Witte Villa-0x6534284a-0x50508c53-0x1483f821.SC4Desc:
+        1483f821:
+          bulldoze: 256
+          capacity:
+            r$: 44
+            r$$: 26
+            r$$$: 13
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 309e3443-0002
+          name: DE_Witte Villa
+          pollution: 1
+          pollutionRadius: 6
+          power: 2
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 671
     category: 101-residential
+    dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
+      - simtropolis/33651-11241036-textures
+      - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31374-rdg-prop-pack-1
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/171-haarl-mega-props-dutch-vol-01
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/13-sfbt-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tClassic villas like this can be found in rather posh areas of the Netherlands. Or in other countries for that matter... I imagine this wouldn't look out of place in any European style town. It's a relot of an older building by the great <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/38724-haarlemmergold/?do=hovercard\" data-mentionid=\"38724\" href=\"https://community.simtropolis.com/profile/38724-haarlemmergold/\" rel=\"\">@Haarlemmergold</a>\n</p>\n\n<p>\n\tCapacity satisfied: R$44, R$$26, R$$$13. It should grow on any tileset.\n</p>\n\n<p>\n\tThe attached screenshots show my custom pavement (created through <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard\" data-mentionid=\"651629\" href=\"https://community.simtropolis.com/profile/651629-rsc204/\" rel=\"\">@rsc204</a>'s <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/171-haarl-mega-props-dutch-vol-01\" rel=\"external nofollow\">HAARL MEGA Props Dutch Vol 01</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33651-11241036-textures/\" rel=\"\">11241036 Textures</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Girafe Maxis Fence HD Replacement Mod</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Daisy, Poplars, Rowan trees)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\"><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</a> (Specifically SFBT_Temroc_Props.dat)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG Prop Pack 1</a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: DE_Witte_Villa.zip
+    files:
+      - DE_Witte Villa-0x6534284a-0x50508c53-0x1483f821.SC4Desc
+      - R$$$4_2x2_DE_Witte Villa_3483f82f.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_11/Relot_Haarlemmergold_Villa.JPG.1cb519d0941f520a7e58c9c73eff7400.JPG
     lastModified: 2024-11-07T22:45:10.000Z
+    lots:
+      R$$$4_2x2_DE_Witte Villa_3483f82f.SC4Lot:
+        3483f82f:
+          building: 1483f821
+          density: all
+          name: R$$$4_2x2_DE_Witte Villa
+          props:
+            - dd37fbc0
+            - 109f9dcc
+            - 034ead8c
+            - 93b035de
+            - 279c1f0d
+            - 9a829a18
+            - 7a829999
+            - 5f85b906
+          size: 2x2
+          stage: 4
+          textures:
+            - 252b0000
+            - f85d4790
+            - f85d47b5
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: White Villa
+    sha256: c745f5019d39932defcb0afdf9f5d3ff902f484d9160e550c7c68e02fec4b391
+    size: 2825
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/Relot_Haarlemmergold_Villa.thumb.JPG.bae2ffca078eebd8dba9067b8766f963.JPG
+    uncompressed: 10392
     url: https://community.simtropolis.com/files/file/36541-white-villa/
+    version: 1.0.0
   simtropolis/36544:
     assetId: simtropolis/36544-coco_e-pyeonhansesang_apt
     authors:
@@ -26285,11 +26350,85 @@ assets:
     assetId: simtropolis/36568-hisingen-apartments
     authors:
       - Dead_End
+    buildings:
+      Hisingen Apartments-0x6534284a-0x50508c53-0x54c1312c.SC4Desc:
+        54c1312c:
+          bulldoze: 184
+          capacity:
+            r$: 41
+            r$$: 24
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 8b89da67
+          name: Hisingen Apartments
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 591
     category: 101-residential
+    dependencies:
+      - simtropolis/30033-mgb-maxis-texture-replacement-dev-kit
+      - simtropolis/33552-malmberget-proppack-vol1
+      - simtropolis/33651-11241036-textures
+      - simtropolis/27563-shk-parking-pack
+      - simtropolis/31374-rdg-prop-pack-1
+      - simtropolis/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - cycledogg/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tThis 3x2 lot features two lovely apartments set around a small courtyard. It's named after the island of Hisingen near Gothenburg, Sweden.\n</p>\n\n<p>\n\tCapacity: R$$ 24\n</p>\n\n<p>\n\tThe attached screenshots show my custom pavement (created through rsc204's <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33552-malmberget-proppack-vol1/\" rel=\"\">Malmberget proppack vol1</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33651-11241036-textures/\" rel=\"\">11241036 textures</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Legacy - <abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack</a> (Specifically <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props CP Vol01)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Bushes, Daisy, Oaks)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG Prop Pack 1</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/\" rel=\"\">Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title=\"Mayor Mode Ploppable\">MMP</abbr></a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: Hisingen Apartments.zip
+    files:
+      - Hisingen Apartments-0x6534284a-0x50508c53-0x54c1312c.SC4Desc
+      - R$$2_3x2_Hisingen Apartments_04c27834.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_11/Hisingen_1.JPG.69597099c943f30a2928ef315ffd5c58.JPG
+      - https://www.simtropolis.com/objects/screens/monthly_2024_11/Hisingen_2.JPG.066fdba7edf2fea0fff2b974e6ff236b.JPG
     lastModified: 2024-11-24T08:46:44.000Z
+    lots:
+      R$$2_3x2_Hisingen Apartments_04c27834.SC4Lot:
+        04c27834:
+          building: 54c1312c
+          density: all
+          name: R$$2_3x2_Hisingen Apartments
+          props:
+            - 8b90e718
+            - 109f9dcc
+            - 8cfbb144
+            - 5f85b910
+            - 5f85b911
+            - 93b035de
+            - 33b0363a
+            - 2a8c0000
+            - 1e9a0000
+            - ccdd25cc
+            - 8cdd25e1
+            - 4cdd25f1
+            - a00005f9
+          size: 3x2
+          stage: 2
+          textures:
+            - 25f40000
+            - f85d47da
+            - f85d47d0
+            - f85d478a
+            - f85d4785
+            - f85d47d5
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
     name: Hisingen Apartments
+    sha256: a5e7b11a336f9df6aed916ad8e563ceabf352cfd989167f1eccea82c46dc5989
+    size: 2860
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/Hisingen_1.thumb.JPG.fc6e7021a4e623bd7f1246dc8ea0cb6b.JPG
+    uncompressed: 11311
     url: https://community.simtropolis.com/files/file/36568-hisingen-apartments/
+    version: 1.0.0
   simtropolis/36570:
     assetId: simtropolis/36570-apartments-2
     authors:
@@ -28169,4 +28308,4 @@ assets:
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
 meta:
-  timestamp: 2024-12-17T13:48:13.135Z
+  timestamp: 2024-12-18T11:52:24.176Z

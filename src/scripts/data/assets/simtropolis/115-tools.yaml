@@ -690,14 +690,42 @@ assets:
       - RebaLynnTS
     category: 115-tools
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>========================================================</p>\n<p>SPOT (Simpeg Plop Orientation Tool)</p>\n<p>========================================================</p>\n<p>\_</p>\n<p>This is a set of props you can add to your lots to aid the player in seeing how to orient the lot.</p>\n<p>\_</p>\n<p>Where needed, these will be used on Simpeg Team Projects, at the developers discretion.</p>\n<p>\_</p>\n<p>They  are bright orange in color, and should be easily seen in the preview.  They are timed to show up, only one day, in a game year (Jan 1st).</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>PROPS</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Diagonal - 4m</p>\n<p>\_\_\_Diagonal - 8m</p>\n<p>\_\_\_Diagonal - 12m</p>\n<p>\_\_\_Straight - 4m</p>\n<p>\_\_\_Straight - 8m</p>\n<p>\_\_\_Straight - 12m</p>\n<p>\_\_\_Straight - 16m</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>DEPENDENCIES</p>\n<p>--------------------------------------</p>\n<p>\_\_\_None</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>INSTALLATION</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Unzip files to your 'Plugins' folder.</p>\n<p>\_</p>\n<p>\_\_\_Default Folder for Installation:</p>\n<p>\_\_\_.../My Documents/SimCity 4/Plugins/PEGPROD/SPOT</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>DEVELOPER NOTES</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Please see the SPOT readme for general information.</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>CREDITS</p>\n<p>--------------------------------------</p>\n<p>\_\_\_BATs: Becca (RebaLynnTS)</p>\n<p>\_\_\_Lotting and Images: Paeng</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>========================================================</p>\n<p>SPOT (Simpeg Plop Orientation Tool)</p>\n<p>========================================================</p>\n<p>\_</p>\n<p>This is a set of props you can add to your lots to aid the player in seeing how to orient the lot.</p>\n<p>\_</p>\n<p>Where needed, these will be used on Simpeg Team Projects, at the developers discretion.</p>\n<p>\_</p>\n<p>They  are bright orange in color, and should be easily seen in the preview.  They are timed to show up, only one day, in a game year (Jan 1st).</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>PROPS</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Diagonal - 4m</p>\n<p>\_\_\_Diagonal - 8m</p>\n<p>\_\_\_Diagonal - 12m</p>\n<p>\_\_\_Straight - 4m</p>\n<p>\_\_\_Straight - 8m</p>\n<p>\_\_\_Straight - 12m</p>\n<p>\_\_\_Straight - 16m</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>DEPENDENCIES</p>\n<p>--------------------------------------</p>\n<p>\_\_\_None</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>INSTALLATION</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Unzip files to your 'Plugins' folder.</p>\n<p>\_</p>\n<p>\_\_\_Default Folder for Installation:</p>\n<p>\_\_\_.../My Documents/SimCity 4/Plugins/PEGPROD/SPOT</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>DEVELOPER NOTES</p>\n<p>--------------------------------------</p>\n<p>\_\_\_Please see the SPOT readme for general information.</p>\n<p>\_</p>\n<p>\_</p>\n<p>--------------------------------------</p>\n<p>CREDITS</p>\n<p>--------------------------------------</p>\n<p>\_\_\_BATs: Becca (RebaLynnTS)</p>\n<p>\_\_\_Lotting and Images: Paeng</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG_SPOTv101.ZIP
     files:
       - PEGPROD/SPOT/SPOT_v-rc101.dat
     images:
       - https://www.simtropolis.com/objects/screens/0017/9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
     lastModified: 2018-10-13T01:28:56.000Z
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      PEGPROD/SPOT/SPOT_v-rc101.dat:
+        - 3944d039
+        - d944d03e
+        - b944d046
+        - f944d051
+        - 3944d056
+        - d944d05d
+        - b944d069
     name: SPOT (Simpeg Plop Orientation Tool)
+    props:
+      PEGPROD/SPOT/SPOT_v-rc101.dat:
+        3948c559:
+          name: SPOT-D-x04
+        b948c54e:
+          name: SPOT-D-x12
+        d948c518:
+          name: SPOT-S-x04
+        d948c533:
+          name: SPOT-S-x12
+        f948c53b:
+          name: SPOT-D-x08
+        f948c549:
+          name: SPOT-S-x16
+        f948c554:
+          name: SPOT-S-x08
     sha256: 147a101478d73e721d9885cbff79fb6753cb62d82e03929abf9c9fc238253581
     size: 23560
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2010/thumb-9b7b8eb1b6c2f900afbbd75bbd5c6303-spot_promo.jpg
@@ -1421,4 +1449,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4485-jbm-sims-ruler/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-18T09:34:56.459Z

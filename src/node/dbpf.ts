@@ -51,7 +51,7 @@ export async function loadDBPF(
   const majorVersion = header.readUInt32(4)
   const minorVersion = header.readUInt32(8)
   const version = `${majorVersion}.${minorVersion}`
-  if (version !== VERSION) {
+  if (version !== VERSION && version !== "0.0") {
     throw Error(`Unsupported version: ${version}`)
   }
 

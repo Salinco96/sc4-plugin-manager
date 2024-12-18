@@ -965,7 +965,7 @@ assets:
       - Pegasus
     category: 34-cdk-coastal-development-kit
     dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p align=\"justify\">This is a RESOURCE file for the <span style=\"font-weight:bold;color:rgb(0,0,102);\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Coastal Development Kit 3\">CDK3</abbr> Seaport</span> collection of lots. It is a required dependency, specifically, for the upcoming break-bulk freight dock lots and the new freight rail stations.</p>\n<p align=\"justify\">The pack contains a ton of static, timed and random rolling stock &amp; locomotive props. These are intended for use as props on various lots. These are NOT game automata... however, many will be released separately as such.</p>\n<p align=\"justify\">* As the game automata trains are considerably under scaled, these props are larger... and scaled to look more appropriate on lots with properly scaled structures, vehicles, peeps and other props.</p>\n<p align=\"justify\">** Players and developers may use these props on their own lots... subject to the terms of the EULA \_that is documented in the \_included readme file.\_<br>\_</p>\n<div style=\"text-align:center;\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</div>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This is a RESOURCE file for the <span style=\"font-weight:bold;color:rgb(0,0,102);\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Coastal Development Kit 3\">CDK3</abbr> Seaport</span> collection of lots. It is a required dependency, specifically, for the upcoming break-bulk freight dock lots and the new freight rail stations.</p>\n<p align=\"justify\">The pack contains a ton of static, timed and random rolling stock &amp; locomotive props. These are intended for use as props on various lots. These are NOT game automata... however, many will be released separately as such.</p>\n<p align=\"justify\">* As the game automata trains are considerably under scaled, these props are larger... and scaled to look more appropriate on lots with properly scaled structures, vehicles, peeps and other props.</p>\n<p align=\"justify\">** Players and developers may use these props on their own lots... subject to the terms of the EULA \_that is documented in the \_included readme file.\_<br>\_</p>\n<div style=\"text-align:center;\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</div>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG-CDK3_RailFleet_RESOURCE_100.zip
     files:
       - ZZZZ_PEG SEAPORTS/Rail Fleet/readme_252.htm
@@ -975,9 +975,569 @@ assets:
       - https://www.simtropolis.com/objects/screens/0005/2486e017b6687d2453d8105021e06971-product_image.jpg
       - https://www.simtropolis.com/objects/screens/0005/2486e017b6687d2453d8105021e06971-product_image1.jpg
     lastModified: 2008-05-09T09:27:25.000Z
+    meta:
+      timestamp: 2024-12-17T15:56:18.370Z
+      version: 1
+    models:
+      ZZZZ_PEG SEAPORTS/Rail Fleet/PEG_Rail-Fleet_RESOURCE.dat:
+        - 94fdfe60
+        - 1516e2c6
+        - 150f0a3a
+        - f4feabe9
+        - 94feb045
+        - 34feb596
+        - 750fac58
+        - 350fa8a4
+        - 550f3bef
+        - d50f35ea
+        - f5107d13
+        - 9510804d
+        - b51080ca
+        - 351084ef
+        - 95107b93
+        - b5108558
+        - f515fdd3
+        - f516015a
+        - '15107922'
+        - 550f32be
+        - 5515d38b
+        - 3515dcfa
+        - '75088290'
+        - 350891cd
+        - 9508a22d
+        - 1508d275
+        - f508ca48
+        - 750f1096
+        - f50f102c
+        - 550f0faf
+        - d50f1175
+        - d50f122e
+        - b50f12d4
+        - b50f1371
+        - 750f1623
+        - f50f1497
+        - 750f16f0
+        - 350f178b
+        - 350f18a1
+        - 550f19e4
+        - 150f1a6d
+        - 95108ff4
+        - 15108f55
+        - 75108e9d
+        - 95108df4
+        - 55108cff
+        - 95108b92
+        - f5108a27
+        - d510884d
+        - '75170417'
+        - 9517038b
+        - 7516f90e
+        - 1516f7e9
+        - 51e5a736
     name: PEG CDK3 SP Rail Fleet
+    props:
+      ZZZZ_PEG SEAPORTS/Rail Fleet/PEG_Rail-Fleet_RESOURCE.dat:
+        '03347601':
+          family: a00014b9
+          model: 34feb596
+          name: PEG-RF_TankCar3
+        04672c05:
+          family: a00014bf
+          name: PEG-RF_TankCar3_13-21
+        070a95af:
+          family: a00014b6
+          name: CDK-RW_BoxCar13_1-9
+        073d4638:
+          family: a000140f
+          name: peg_Ore-Car-Red-Empty
+        073d4639:
+          family: a000140f
+          name: pegOreCar_Gray-Empty
+        073d463a:
+          family: a000140f
+          name: peg_Ore-Car-Gray-Load
+        073d463b:
+          family: a000140f
+          name: peg_OreCar_Red-Loaded
+        073d463c:
+          family: a0001410
+          name: pegOreCar_Gray-Empty
+        073d463d:
+          family: a0001410
+          name: peg_Ore-Car-Red-Empty
+        073d46b1:
+          name: PEG-RF_LogCar_14-20
+        092094c5:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open-Empty_14-22
+        09c59902:
+          family: a00014c5
+          name: PEG-RF_Diesel Engine1_UP_13-21
+        0dca0157:
+          family: a00014b7
+          name: CDK-RW_BoxCar9_13.75-22.25
+        0e45f3e3:
+          family: a00014b6
+          name: CDK-RW_BoxCar2_4.5-12.5
+        0e49c7b8:
+          family: a000140f
+          name: pegOreCar_Gray-Empty
+        0f556b32:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open-Empty2_14-22
+        118f008b:
+          family: a00014c7
+          name: PEG-RF_AutoCarrier2_loaded_15-23
+        14de589b:
+          family: a00014c1
+          name: PEG-RF_FlatCar2_w pipes_15-23
+        14fe4e86:
+          family: a00014b5
+          model: 150f0a3a
+          name: CDK-RW_BoxCar1
+        15020c6c:
+          family: a00014ba
+          model: 550f3bef
+          name: PEG-RF_FlatCar2_w pipes
+        15020cb0:
+          family: a00014ba
+          model: 750fac58
+          name: PEG-RF_FlatCar1
+        1502128b:
+          family: a00014bb
+          model: b5108558
+          name: PEG-RF_Gondola3_empty
+        150212be:
+          family: a00014bb
+          model: f5107d13
+          name: PEG-RF_Gondola1_empty
+        1502159c:
+          family: a00014bc
+          model: 95108b92
+          name: PEG-RF_Hopper-Open5--coa
+        150513a7:
+          family: a00014bd
+          model: f516015a
+          name: PEG-RF_AutoCarrier2_loaded
+        15074d32:
+          model: 5515d38b
+          name: PEG-RF_Tank Steamer
+        150a1493:
+          family: a00014c3
+          model: '75088290'
+          name: PEG-RF_Diesel Engine1_PA
+        16961e2d:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open5--coal_6-12
+        17e9edc1:
+          family: a00014b6
+          name: CDK-RW_BoxCar14_4.25-12.25
+        1b03f31b:
+          family: a00014be
+          name: PEG-RF_TankCar3_2-10
+        1e8a0f76:
+          family: a00014b8
+          name: CDK3_Alco-Switcher_Vandy_4-12
+        1f477c1e:
+          family: a00014c7
+          name: PEG-RF_AutoCarrier2_14-22
+        1fafb228:
+          family: a00014b5
+          model: 550f19e4
+          name: CDK-RW_BoxCar14
+        '22e44198':
+          family: a00014b5
+          model: b50f1371
+          name: CDK-RW_BoxCar8
+        29b25105:
+          family: a00014cb
+          name: PEG-RF_Gondola3_empty_14-22
+        2a975dab:
+          family: a00014bf
+          name: PEG-RF_TankCar2_15-23
+        30f3b304:
+          family: a00014b7
+          name: CDK-RW_BoxCar14_15-23
+        330639a7:
+          family: a00014b6
+          name: CDK-RW_BoxCar9_3-11
+        33406c4b:
+          family: a00014b6
+          name: CDK-RW_BoxCar5_2-10
+        34ffe25f:
+          model: 94fdfe60
+          name: CDK3_Alco-Switcher_Vandy
+        35020c87:
+          family: a00014ba
+          model: 350fa8a4
+          name: PEG-RF_FlatCar2
+        3523cb9a:
+          family: a00014ca
+          name: PEG-RF_Gondola3_load_6-12
+        3bba116a:
+          family: a00014b7
+          name: CDK-RW_BoxCar2_14-22
+        3c701f95:
+          family: a00014b6
+          name: CDK-RW_BoxCar10_3.5-11.5
+        3d95515f:
+          family: a00014c4
+          name: PEG-RF_Diesel Engine1_BN_6-12
+        3e0af55c:
+          family: a00014b5
+          model: f50f1497
+          name: CDK-RW_BoxCar10
+        3e6247c4:
+          family: a00014c1
+          name: PEG-RF_FlatCar2_w bd_13-21
+        42e2a48a:
+          family: a00014b6
+          name: CDK-RW_BoxCar6_2.5-10.5
+        431e63fb:
+          family: a00014b7
+          name: CDK-RW_BoxCar15_16-23.75
+        4374453b:
+          family: a00014c4
+          name: PEG-RF_Diesel Engine1_UP_6-12
+        4411cf02:
+          family: a00014b7
+          name: CDK-RW_BoxCar11_15.75-23.25
+        44e0f02f:
+          family: a00014b7
+          name: CDK-RW_BoxCar8_16.5-0.5
+        4519e6e7:
+          family: a00014c5
+          name: PEG-RF_Diesel Engine1_PA_13-21
+        45e3cda1:
+          family: a00014b5
+          model: 550f0faf
+          name: CDK-RW_BoxCar4
+        486fe200:
+          family: a00014b9
+          model: 94feb045
+          name: PEG-RF_TankCar2
+        4a7d0534:
+          family: a00014cb
+          name: PEG-RF_Gondola1_load_14-22
+        4e49c783:
+          family: a000140f
+          name: peg_OreCar_Red-Loaded
+        4e9870e9:
+          name: PEG-RF_LogCar_4-11.5
+        50f5927a:
+          family: a00014b6
+          name: CDK-RW_BoxCar12_2.5-10.5
+        5329988b:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open-Empty2_6-12
+        '54981549':
+          family: a00014b7
+          name: CDK-RW_BoxCar12_13-21
+        54ccabf4:
+          family: a00014b5
+          model: 750f16f0
+          name: CDK-RW_BoxCar11
+        5502125a:
+          family: a00014bb
+          model: 9510804d
+          name: PEG-RF_Gondola2_load
+        5502154f:
+          family: a00014bc
+          model: d510884d
+          name: PEG-RF_Hopper-Open2-ore
+        '55021578':
+          family: a00014bc
+          model: f5108a27
+          name: PEG-RF_Hopper-Open4-gravel-gray
+        5505135f:
+          family: a00014bd
+          model: 1516e2c6
+          name: PEG-RF_AutoCarrier2
+        550a1cb1:
+          model: 1508d275
+          name: PEG-RF_Diesel Engine4_FP3-SP
+        '5690e760':
+          family: a00014c0
+          name: PEG-RF_FlatCar2_w bd_4-12
+        5752a6d3:
+          family: a00014b6
+          name: CDK-RW_BoxCar11_2-10
+        58f3c4a2:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open-Empty5_14-22
+        5abf1de4:
+          family: a00014b5
+          model: d50f122e
+          name: CDK-RW_BoxCar6
+        5b37774f:
+          family: a00014c0
+          name: PEG-RF_FlatCar2_w pipes_2-10
+        66066d71:
+          family: a00014b5
+          model: 750f1623
+          name: CDK-RW_BoxCar9
+        6c471ad9:
+          name: PEG-RF_Tank Steamer2_14-22
+        6d2df496:
+          family: a00014cb
+          name: PEG-RF_Gondola3_load_14-22
+        723caa07:
+          family: a00014b6
+          name: CDK-RW_BoxCar4_3.5-11.5
+        7285be02:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open-Empty_6-12
+        '74511491':
+          family: a00014cb
+          name: PEG-RF_Gondola2_empty_14-22
+        '75000827':
+          family: a00014b9
+          model: f4feabe9
+          name: PEG-RF_TankCar1
+        '75021637':
+          family: a00014bc
+          model: 55108cff
+          name: PEG-RF_Hopper-Open-Empty
+        750601d5:
+          model: 550f32be
+          name: PEG-RF_Caboose
+        75074d4e:
+          model: 3515dcfa
+          name: PEG-RF_Tank Steamer2
+        77cb1355:
+          family: a00014c6
+          name: PEG-RF_AutoCarrier2_loaded_6-12
+        799f0d6b:
+          family: a00014ca
+          name: PEG-RF_Gondola1_load_6-12
+        7a8acae1:
+          family: a00014c2
+          model: 7516f90e
+          name: CDK-RW_OreCar-Red
+        7c02e3f6:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open-Empty4_6-12
+        80eb0714:
+          family: a00014c0
+          name: PEG-RF_FlatCar1_4-12
+        813c2666:
+          family: a00014b6
+          name: CDK-RW_BoxCar1_4-12
+        84f4a9df:
+          family: a00014ca
+          name: PEG-RF_Gondola2_empty_6-12
+        869a113a:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open-Empty4_14-22
+        8c6e92b6:
+          family: a00014b7
+          name: CDK-RW_BoxCar13_14-22
+        936df110:
+          family: a00014b6
+          name: CDK-RW_BoxCar3_3-11
+        944905f8:
+          name: PEG-RF_Tank Steamer_5-11
+        '94e32278':
+          family: a00014c8
+          name: PEG-RF_Hopper-Open-Empty5_6-12
+        950601f5:
+          model: '15107922'
+          name: PEG-RF_Workcar
+        9b8f0ff0:
+          family: a00014b5
+          model: f50f102c
+          name: CDK-RW_BoxCar3
+        9cdfd4bf:
+          family: a00014b5
+          model: b50f12d4
+          name: CDK-RW_BoxCar7
+        9da90f9f:
+          family: a00014cb
+          name: PEG-RF_Gondola2_load_14-22
+        '9e239421':
+          family: a00014c8
+          name: PEG-RF_Hopper-Open-Empty3_6-12
+        9ea1ab98:
+          name: PEG-RF_Tank Steamer_15-23
+        9eefffcd:
+          family: a00014c0
+          name: PEG-RF_FlatCar2_3-11
+        a02bf9f9:
+          family: a00014bf
+          model: f4feabe9
+          name: PEG-RF_TankCar1_14-22
+        a1ca128f:
+          family: a00014c7
+          name: PEG-RF_AutoCarrier1_enclosed_15-23
+        a653b533:
+          family: a00014b7
+          name: CDK-RW_BoxCar1_13-21
+        a65b08df:
+          family: a00014b7
+          name: CDK-RW_BoxCar10_14.25-21.75
+        aafb5c74:
+          family: a00014b5
+          model: d50f1175
+          name: CDK-RW_BoxCar5
+        ad7d44fc:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open5--coal_14-22
+        adb8ed7a:
+          name: PEG-RF_Tank Steamer2_6-12
+        b50215f1:
+          family: a00014bc
+          model: 75108e9d
+          name: PEG-RF_Hopper-Open-Empty3
+        b502161b:
+          family: a00014bc
+          model: 95108df4
+          name: PEG-RF_Hopper-Open-Empty2
+        b505137d:
+          family: a00014bd
+          model: f515fdd3
+          name: PEG-RF_AutoCarrier1_enclosed
+        b50a1372:
+          family: a00014c3
+          model: 350891cd
+          name: PEG-RF_Diesel Engine2_UP
+        b6bc81e3:
+          family: a00014b7
+          name: CDK-RW_BoxCar6_14.5-22.5
+        bad4d33b:
+          family: a00014b6
+          name: CDK-RW_BoxCar15_4.75-12.75
+        bb5be219:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open2-ore_6-12
+        bbebcce5:
+          family: a00014c2
+          model: 51e5a736
+          name: PEG-RF_LogCar
+        bcc5bfe4:
+          family: a00014ca
+          name: PEG-RF_Gondola3_empty_6-12
+        be0e2e4c:
+          family: a00014b6
+          name: CDK-RW_BoxCar8_4.5-12.5
+        c4f28342:
+          family: a00014b5
+          model: 750f1096
+          name: CDK-RW_BoxCar2
+        c4fc6252:
+          family: a00014b7
+          name: CDK-RW_BoxCar3_15-23
+        c503b5db:
+          family: a00014be
+          name: PEG-RF_TankCar2_3-11
+        c5353763:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open4-gravel-gray_14-22
+        cdfec59d:
+          family: a00014b5
+          model: 350f18a1
+          name: CDK-RW_BoxCar13
+        ce410206:
+          family: a000140f
+          name: peg_Ore-Car-Red-Empty
+        d24eeaa5:
+          family: a00014c1
+          name: PEG-RF_FlatCar1_13-21
+        d42503f4:
+          family: a00014cb
+          name: PEG-RF_Gondola1_empty_14-22
+        d50212a4:
+          family: a00014bb
+          model: b51080ca
+          name: PEG-RF_Gondola2_empty
+        d50215c2:
+          family: a00014bc
+          model: 95108ff4
+          name: PEG-RF_Hopper-Open-Empty5
+        d50a1350:
+          family: a00014c3
+          model: 9508a22d
+          name: PEG-RF_Diesel Engine3_BN
+        d50a1c94:
+          model: f508ca48
+          name: PEG-RF_Diesel Engine4_FP3-SP_B-Unit
+        db695659:
+          family: a00014c4
+          name: PEG-RF_Diesel Engine1_PA_6-12
+        dbdf20b6:
+          family: a00014b5
+          model: 350f178b
+          name: CDK-RW_BoxCar12
+        dc9f58a1:
+          family: a00014b7
+          name: CDK-RW_BoxCar5_13.5-21.5
+        dd48138b:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open2-ore_14-22
+        dfb8704b:
+          family: a00014b5
+          model: 150f1a6d
+          name: CDK-RW_BoxCar15
+        e1d4a766:
+          family: a00014c1
+          name: PEG-RF_FlatCar2_14-22
+        e2152e9c:
+          family: a00014c5
+          name: PEG-RF_Diesel Engine1_BN_13-21
+        e94884d5:
+          family: a00014ca
+          name: PEG-RF_Gondola1_empty_6-12
+        eaa1699f:
+          family: a00014b6
+          name: CDK-RW_BoxCar7_4-12
+        eddd2d94:
+          family: a00014c8
+          name: PEG-RF_Hopper-Open4-gravel-gray_6-12
+        ee1c3f59:
+          family: a00014b7
+          name: CDK-RW_BoxCar4_16-0
+        ee41118c:
+          family: a000140f
+          name: peg_Ore-Car-Gray-Load
+        eef7a205:
+          family: a00014c6
+          name: PEG-RF_AutoCarrier2_6-12
+        f27a1348:
+          family: a00014b7
+          name: CDK-RW_BoxCar7_15.5-23.5
+        f31dd03f:
+          family: a00014c9
+          name: PEG-RF_Hopper-Open-Empty3_14-22
+        f5020c52:
+          family: a00014ba
+          model: d50f35ea
+          name: PEG-RF_FlatCar2_w bd
+        f502122f:
+          family: a00014bb
+          model: 95107b93
+          name: PEG-RF_Gondola1_load
+        f5021270:
+          family: a00014bb
+          model: 351084ef
+          name: PEG-RF_Gondola3_load
+        f50215dc:
+          family: a00014bc
+          model: 15108f55
+          name: PEG-RF_Hopper-Open-Empty4
+        fa3794ad:
+          family: a00014be
+          name: PEG-RF_TankCar1_4-12
+        fd4e81f3:
+          family: a00014b8
+          name: CDK3_Alco-Switcher_Vandy_14-22
+        fdb11fd4:
+          family: a00014c6
+          name: PEG-RF_AutoCarrier1_enclosed_6-12
+        ffa292b2:
+          family: a00014ca
+          name: PEG-RF_Gondola2_load_6-12
     sha256: 4a64fbba9d785bbd0f726f36c057a843dbed2c52c88dc3f49d5a11e5cf113a69
     size: 967428
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_05_2008/thumb-2486e017b6687d2453d8105021e06971-product_image.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1674878
@@ -1210,4 +1770,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4527-peg-cdk-leveler-v205/
 
 meta:
-  timestamp: 2024-12-17T09:38:09.625Z
+  timestamp: 2024-12-18T09:34:56.459Z

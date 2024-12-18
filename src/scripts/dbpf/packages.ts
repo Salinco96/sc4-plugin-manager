@@ -2,11 +2,13 @@ import path from "node:path"
 
 import {
   collect,
+  difference,
   forEach,
   intersection,
   mapKeys,
   matchGroups,
   reduce,
+  remove,
   toArray,
   union,
   unionBy,
@@ -435,7 +437,10 @@ export function generateVariantInfo(
 
   variantInfo.dependencies = unionBy(
     variantInfo.dependencies ?? [],
-    dependencies.map(id => ({ id, transitive: true })),
+    difference(remove(dependencies, packageInfo.id), variantInfo.optional ?? []).map(id => ({
+      id,
+      transitive: true,
+    })),
     dependency => dependency.id,
   )
 
