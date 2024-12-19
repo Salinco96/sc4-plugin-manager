@@ -6,7 +6,7 @@ import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import { loadConfig, writeConfig } from "@node/configs"
 import type { TaskContext } from "@node/tasks"
 
-const CONFIG_NAME = "authors"
+const AUTHORS_CONFIG_NAME = "configs/authors"
 
 /** Raw author data */
 export interface AuthorData {
@@ -26,10 +26,13 @@ export async function loadAuthors(context: TaskContext, basePath: string): Promi
   context.debug("Loading authors...")
 
   try {
-    const config = await loadConfig<{ [authorId in AuthorID]?: AuthorData }>(basePath, CONFIG_NAME)
+    const config = await loadConfig<{ [authorId in AuthorID]?: AuthorData }>(
+      basePath,
+      AUTHORS_CONFIG_NAME,
+    )
 
     if (!config) {
-      throw Error(`Missing config ${CONFIG_NAME}`)
+      throw Error(`Missing config ${AUTHORS_CONFIG_NAME}`)
     }
 
     const authors = mapValues(config.data, (data, id) => {
@@ -62,7 +65,7 @@ export async function writeAuthors(
 
   await writeConfig<{ [authorId in AuthorID]?: AuthorData }>(
     basePath,
-    CONFIG_NAME,
+    AUTHORS_CONFIG_NAME,
     mapValues(authors, ({ alias, id, search, teams, ...data }) => ({
       alias: alias?.length ? alias.join(",") : undefined,
       teams: teams?.length ? teams.join(",") : undefined,
