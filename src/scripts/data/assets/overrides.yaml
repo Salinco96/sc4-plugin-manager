@@ -3534,6 +3534,16 @@ simtropolis/36593-basildon-terraces:
       packageId: jasoncw/basildon-terraces
       variantId: darknite
 
+simtropolis/36612-hook-and-ladder-company-8-ghostbusters-hq:
+  packageId: jasoncw/hook-and-ladder-company-8
+  variants:
+    '204739':
+      packageId: jasoncw/hook-and-ladder-company-8
+      variantId: default
+    '204740':
+      packageId: jasoncw/hook-and-ladder-company-8
+      variantId: darknite
+
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31
 

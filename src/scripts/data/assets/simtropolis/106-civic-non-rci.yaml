@@ -22258,6 +22258,123 @@ assets:
     name: Eiffel Tower v11 by Aothe
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-9387599822feb3a8b5fdfd822c7596af-TEiffel_Day.jpg
     url: https://community.simtropolis.com/files/file/3661-eiffel-tower-v11-by-aothe/
+  simtropolis/36610:
+    assetId: simtropolis/36610-wooden-cross
+    authors:
+      - 20huskies
+    category: 106-civic-non-rci
+    lastModified: 2024-12-18T22:19:40.000Z
+    name: Wooden Cross
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/67634a7bca96c_Shikuka-Oct.16001734533659.thumb.png.a021c1fa6690745be7f37d8ded1e6cc7.png
+    url: https://community.simtropolis.com/files/file/36610-wooden-cross/
+  simtropolis/36612:
+    assetId: simtropolis/36612-hook-and-ladder-company-8-ghostbusters-hq
+    authors:
+      - Jasoncw
+    category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tHook and Ladder Company 8 is a fire station located in New York City. It was used as the headquarters of the Ghostbusters in the film series.\n</p>\n\n<ul>\n\t<li>\n\t\t1x2 fire station.\n\t</li>\n\t<li>\n\t\tMaxisNite and DarkNite versions included.\n\t</li>\n\t<li>\n\t\tDarkNite requires the\_<a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t</li>\n</ul>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/67639d36cbb32_HookandLadderCompany800.jpg.4f1e09e6ca3092b7ecd2dfb32f01f829.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/67639d3fb82f5_HookandLadderCompany801.jpg.08bdd3b60981ec342cdbd7c00c6996fc.jpg
+    lastModified: 2024-12-19T04:24:08.000Z
+    meta:
+      timestamp: 2024-12-19T08:48:47.951Z
+      version: 1
+    name: Hook and Ladder Company 8 (Ghostbusters HQ)
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/67639fe80e07f_HookandLadderCompany800.thumb.jpg.b4a1076e854b965ab32960ae96c82c62.jpg
+    url: https://community.simtropolis.com/files/file/36612-hook-and-ladder-company-8-ghostbusters-hq/
+    variants:
+      '204739':
+        buildings:
+          Jasoncw - Hook and Ladder Company 8 (MN)/Jasoncw - Hook Ladder Company 8.SC4Lot:
+            c31764d3:
+              bulldoze: 30
+              cost: 450
+              flamability: 32
+              jobs:
+                $: 10
+                $$: 2
+              maintenance: 250
+              menu: Fire
+              model: f296300b
+              name: Jasoncw - Hook Ladder Company 8
+              pollution: 1
+              pollutionRadius: 2
+              power: 2
+              powerProduction: 1
+              water: 7
+        filename: Jasoncw - Hook and Ladder Company 8 (MN).zip
+        files:
+          - Jasoncw - Hook and Ladder Company 8 (MN)/Jasoncw - Hook Ladder Company 8.SC4Lot
+          - Jasoncw - Hook and Ladder Company 8 (MN)/Jasoncw - Hook and Ladder Company 8 (MN).SC4Model
+        lots:
+          Jasoncw - Hook and Ladder Company 8 (MN)/Jasoncw - Hook Ladder Company 8.SC4Lot:
+            c31764d3:
+              building: c31764d3
+              name: PLOP_1x2_Hook Ladder 8
+              props:
+                - 2c9e0000
+                - a000000f
+                - 2a8b0000
+                - a000004b
+              size: 1x2
+              textures:
+                - f5c04010
+                - f5c04005
+                - 258f0000
+        models:
+          Jasoncw - Hook and Ladder Company 8 (MN)/Jasoncw - Hook and Ladder Company 8 (MN).SC4Model:
+            - f296300b
+        sha256: 649baeb3d5663c4aa16e5762bb93f8a9655fdb9f04c11b9ace98d0042602894a
+        size: 160417
+        uncompressed: 202532
+      '204740':
+        buildings:
+          Jasoncw - Hook and Ladder Company 8 (DN)/Jasoncw - Hook Ladder Company 8.SC4Lot:
+            c31764d3:
+              bulldoze: 30
+              cost: 450
+              flamability: 32
+              jobs:
+                $: 10
+                $$: 2
+              maintenance: 250
+              menu: Fire
+              model: f296300b
+              name: Jasoncw - Hook Ladder Company 8
+              pollution: 1
+              pollutionRadius: 2
+              power: 2
+              powerProduction: 1
+              water: 7
+        filename: Jasoncw - Hook and Ladder Company 8 (DN).zip
+        files:
+          - Jasoncw - Hook and Ladder Company 8 (DN)/Jasoncw - Hook Ladder Company 8 (DN).SC4Model
+          - Jasoncw - Hook and Ladder Company 8 (DN)/Jasoncw - Hook Ladder Company 8.SC4Lot
+        lots:
+          Jasoncw - Hook and Ladder Company 8 (DN)/Jasoncw - Hook Ladder Company 8.SC4Lot:
+            c31764d3:
+              building: c31764d3
+              name: PLOP_1x2_Hook Ladder 8
+              props:
+                - 2c9e0000
+                - a000000f
+                - 2a8b0000
+                - a000004b
+              size: 1x2
+              textures:
+                - f5c04010
+                - f5c04005
+                - 258f0000
+        models:
+          Jasoncw - Hook and Ladder Company 8 (DN)/Jasoncw - Hook Ladder Company 8 (DN).SC4Model:
+            - f296300b
+        sha256: a4ce003392c4bed10aa89e28687e6d087a8f2aeb3b37307c35a3eb655bd5531a
+        size: 154705
+        uncompressed: 195901
+    version: 1.0.0
   simtropolis/3667:
     assetId: simtropolis/3667-mies-van-der-rohe-school-of-architecture
     authors:
@@ -24444,4 +24561,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2024-12-18T11:52:24.176Z
+  timestamp: 2024-12-19T08:48:47.951Z

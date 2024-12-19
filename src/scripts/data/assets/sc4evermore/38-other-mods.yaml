@@ -51,7 +51,7 @@ assets:
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>Block Road Barriers Mod by RippleJet</strong></p>\r\n<p>The black and yellow road barrier props appear at the end of all ordinary networks, Streets, Roads, One-Way Roads, Avenues and Highways. This little mod simply disables two small props, and removes all barriers on the fly.</p>\r\n<p>Whenever you don't want the barriers in the game, place this mod in your plugins folder. \_Whenever you want the barriers back again,just remove <strong>RJ - Block Road Barriers 1.0.dat</strong> from your plugins.</p>\r\n<p>There is no installer included, as you will have to decide yourself if you want the barriers or not. </p>\r\n<p>There is also no readme included. \_A brief discussion can be found following the request <a href=\"https://sc4devotion.com/forums/index.php?topic=9634.msg294732#msg294732\"><strong>here</strong></a> though.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 308
+    downloads: 309
     file: BSC RJ Block Road Barriers 1.0.zip
     files:
       - _Documents/RJ Block Road Barriers/RJ - Block Road Barriers.jpg
@@ -162,7 +162,7 @@ assets:
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><strong>NOTE: </strong>This file, by <strong>gizmo28</strong>, was originally hosted on <strong>Gizmo's SimCity 4 Mods</strong>, which has been non-functional since January 2019. It has been uploaded to the LEX in good faith to restore access and availability, following reasonable attempts to contact the original author. Further details can be found on the appropriate thread in the <a href=\"http://sc4devotion.com/forums/index.php?topic=17746.msg517075;topicseen#msg517075\">SC4 Community Preservation and Access Board</a> on the SC4 Devotion Forums. In the absence of the original author, technical support will be provided by Preservation and Access (P&amp;A) Project on the previously linked board.</p>\r\n<p>\_</p>\r\n<p>This file is packaged as a .zip archive, and may be easily opened on any platform.</p>\r\n<p>\_</p>\r\n<hr>\r\n<p><strong>Details/Development</strong></p>\r\n<p class=\"style18\">This mod involved editing the effects directory and numerous FSH files, 3d models and a few exemplars. This was a best effort mod, as some things can't be fixed as the main exe might be controlling them, this can be seen with the lights, the brightness can only be raised to a certain point at night. It also involved hex editing a few animated 3d models which took a long time to do, and also was a best effort attempt. If you like the mod then use it, if you don't then no one forcing you to use it, <strong>I WILL NOT be changing anything on this mod, it's final in regards to the following; the darkness level, the brightness of all the lights</strong>. If it's a bug or something you think I may of missed let me know and I'll look into it.\_</p>\r\n<p class=\"style18\"><span class=\"style12\"><strong><span style=\"color: #cc3333;\"><span class=\"style14\">**This mod may not work properly with certain MODS, BATS, and other ADDONS** </span></span></strong><br>(Possible sources of conflicts might include water texture mods, mods that edited the lighting and terrain exemplar properties, and mods and BATS that use custom lights)</span></p>\r\n<p class=\"style18\"><span class=\"style24\"><strong>Installation</strong></span></p>\r\n<p class=\"style18\"><span class=\"style24\">To install this mod, put the extracted file or folder into your C:My DocumentsSimCity 4Plugins folder and follow any directions above, if any were listed. <br>To uninstall the mod, simply move or delete the file or folder you extracted from your C:My DocumentsSimCity 4Plugins folder.</span></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 471
+    downloads: 472
     file: Gizmo - Day-Night Mod v2.0.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Day-Night Mod.htm
@@ -185,7 +185,7 @@ assets:
     category: 38-other-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>Ground Fog Effect by gizmo28</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 326
+    downloads: 327
     file: Gizmo - Ground Fog v1.0.zip
     files:
       - ~Documents/Gizmo_Readmes/Read Me_Ground Fog.htm
@@ -224,4 +224,4 @@ assets:
     version: '1.0'
 
 meta:
-  timestamp: 2024-12-18T09:34:56.459Z
+  timestamp: 2024-12-19T08:48:47.951Z

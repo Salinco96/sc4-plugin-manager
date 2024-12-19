@@ -6,7 +6,7 @@ assets:
     category: 23-transportation-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p class=\"style18\">There are two versions included in this mod, you can only use one at time, chose which one you want and delete the other folder.</p>\r\n<p class=\"style18\">All_Street_RR_Gates_to_Sign Folder: Changes all Crossing gates to RR Xing Signs.<br>Unzoned-Agricultural_Streets_to_Sign Folder: Changes gates in Agricultural zones and on unzoned land to RR Xing Signs.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/rrgate.jpg\" data-lightbox=\"lightbox128\" data-alt=\"lightboxrrgate\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/rrgate.jpg\" alt=\"rrgate\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 372
+    downloads: 373
     file: Gizmo - Street-RR Gate Replacement Mod.zip
     files:
       - ~Documents/Gizmo_Readmes/rrgate.jpg
@@ -36,7 +36,7 @@ assets:
     category: 23-transportation-mods
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>Version 3.50 of Road-Top Mass Transit (RTMT).</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 1034
+    downloads: 1035
     file: RTMTV350.zip
     files:
       - RTMTV3/SC4TrashcanFix.dat
@@ -514,4 +514,4 @@ assets:
     version: '1'
 
 meta:
-  timestamp: 2024-12-18T09:34:56.459Z
+  timestamp: 2024-12-19T08:48:47.951Z
