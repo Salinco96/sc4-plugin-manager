@@ -16,8 +16,10 @@ import { useStoreActions } from "@utils/store"
 import { useMatchingContents } from "./useMatchingContents"
 
 export const PackageListItem = memo(function PackageListItem({
+  isDisabled,
   packageId,
 }: {
+  isDisabled?: boolean
   packageId: PackageID
 }): JSX.Element {
   const actions = useStoreActions()
@@ -39,7 +41,15 @@ export const PackageListItem = memo(function PackageListItem({
   const matchingContents = useMatchingContents(variantInfo)
 
   return (
-    <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
+    <Card
+      elevation={active ? 8 : 1}
+      sx={{
+        color: isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined,
+        display: "flex",
+        height: "100%",
+        opacity: isDisabled ? 0.6 : undefined,
+      }}
+    >
       <CardContent sx={{ width: "100%" }}>
         <FlexBox direction="row">
           <FlexBox direction="column" flex={1} sx={{ overflow: "hidden" }}>

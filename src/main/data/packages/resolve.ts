@@ -261,7 +261,19 @@ export function resolvePackages(
         if (variantInfo.dependencies) {
           const incompatibleDependencies = variantInfo.dependencies.filter(subDependencyInfo => {
             const subPackageInfo = packages[subDependencyInfo.id]
-            return !!subPackageInfo && !resolvePackage(subPackageInfo, subDependencyInfo)
+            return (
+              checkCondition(
+                subDependencyInfo.condition,
+                packageId,
+                variantInfo,
+                profileInfo,
+                globalOptions,
+                resultingFeatures,
+                settings,
+              ) &&
+              !!subPackageInfo &&
+              !resolvePackage(subPackageInfo, subDependencyInfo)
+            )
           })
 
           if (incompatibleDependencies.length) {
@@ -353,7 +365,19 @@ export function resolvePackages(
 
           if (variantInfo.dependencies) {
             for (const subDependencyInfo of variantInfo.dependencies) {
-              includePackage(subDependencyInfo.id, packageId, subDependencyInfo)
+              if (
+                checkCondition(
+                  subDependencyInfo.condition,
+                  packageId,
+                  variantInfo,
+                  profileInfo,
+                  globalOptions,
+                  resultingFeatures,
+                  settings,
+                )
+              ) {
+                includePackage(subDependencyInfo.id, packageId, subDependencyInfo)
+              }
             }
           }
         } else {

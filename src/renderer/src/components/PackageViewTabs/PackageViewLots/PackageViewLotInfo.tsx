@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import { CategoryID } from "@common/categories"
 import { DBPFFileType, type TGI } from "@common/dbpf"
 import { type LotInfo, isSC4LotFile } from "@common/lots"
-import { getRequirementLabel, getRequirementValueLabel } from "@common/options"
+import { getRequirementText } from "@common/options"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
 import { FlexBox } from "@components/FlexBox"
@@ -161,18 +161,7 @@ export function PackageViewLotInfo({
             <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
               {collect(lot.requirements, (value, requirement) => (
                 <Typography component="li" key={requirement} variant="body2">
-                  {`${getRequirementLabel(
-                    t,
-                    requirement,
-                    variantInfo.options,
-                    profileOptions,
-                  )}: ${getRequirementValueLabel(
-                    t,
-                    requirement,
-                    value,
-                    variantInfo.options,
-                    profileOptions,
-                  )}`}
+                  {getRequirementText(t, requirement, value, variantInfo.options, profileOptions)}
                 </Typography>
               ))}
             </ul>

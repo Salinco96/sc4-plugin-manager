@@ -114,6 +114,7 @@ export interface VariantAssetInfo {
 }
 
 export interface DependencyInfo {
+  condition?: Requirements
   id: PackageID
   include?: string[]
   transitive: boolean

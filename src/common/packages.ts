@@ -1,8 +1,14 @@
-import { type ID, entries, isArray } from "@salinco/nice-utils"
+import { type ID, contains, containsAny, entries, isArray } from "@salinco/nice-utils"
 
 import type { AuthorID } from "./authors"
 import { isEnabledLot, isSC4LotFile, isTogglableLot } from "./lots"
-import { type OptionInfo, Requirement, type Requirements, getOptionValue } from "./options"
+import {
+  type OptionInfo,
+  type OptionValue,
+  Requirement,
+  type Requirements,
+  getOptionValue,
+} from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
 import type { Feature, Features, PackageInfo, PackageStatus } from "./types"
@@ -11,6 +17,16 @@ import { Issue, type VariantInfo, type VariantIssue } from "./variants"
 
 /** Package ID */
 export type PackageID = ID<string, PackageInfo>
+
+export function checkValue(value: OptionValue, requiredValue: OptionValue): boolean {
+  return isArray(value)
+    ? isArray(requiredValue)
+      ? containsAny(value, requiredValue)
+      : contains(value, requiredValue)
+    : isArray(requiredValue)
+      ? contains(requiredValue, value)
+      : requiredValue === value
+}
 
 export function checkFile(
   file: FileInfo,
@@ -108,7 +124,7 @@ export function checkCondition(
     const packageOption = variantInfo?.options?.find(option => option.id === requirement)
     if (packageOption && !packageOption.global) {
       const value = getOptionValue(packageOption, packageOptionValues)
-      if (isArray(value) ? value.includes(requiredValue) : value === requiredValue) {
+      if (checkValue(value, requiredValue)) {
         const choice = packageOption.choices?.find(choice => choice.value === requiredValue)
         return checkCondition(
           choice?.condition,
@@ -127,7 +143,7 @@ export function checkCondition(
     const profileOption = profileOptions?.find(option => option.id === requirement)
     if (profileOption) {
       const value = getOptionValue(profileOption, profileOptionValues)
-      if (isArray(value) ? value.includes(requiredValue) : value === requiredValue) {
+      if (checkValue(value, requiredValue)) {
         const choice = profileOption.choices?.find(choice => choice.value === requiredValue)
         return checkCondition(
           choice?.condition,

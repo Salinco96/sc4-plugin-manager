@@ -67,7 +67,7 @@ export const Requirement = {
 } satisfies Record<string, Requirement>
 
 export type Requirements = {
-  [requirement in Requirement]?: OptionSingleValue
+  [requirement in Requirement]?: OptionValue
 }
 
 const defaultValues: {
@@ -138,17 +138,14 @@ export function getOptionInfo(
 export function getRequirementText(
   t: TFunction<Namespace>,
   requirement: Requirement,
-  value: OptionSingleValue,
+  value: OptionValue,
   packageOptions: OptionInfo[] | undefined,
   globalOptions: OptionInfo[] | undefined,
 ): string {
-  return `${getRequirementLabel(t, requirement, packageOptions, globalOptions)}: ${getRequirementValueLabel(
-    t,
-    requirement,
-    value,
-    packageOptions,
-    globalOptions,
-  )}`
+  const values = isArray(value) ? value : [value]
+  return `${getRequirementLabel(t, requirement, packageOptions, globalOptions)}: ${values
+    .map(value => getRequirementValueLabel(t, requirement, value, packageOptions, globalOptions))
+    .join(", ")}`
 }
 
 /**

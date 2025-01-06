@@ -23,12 +23,13 @@ export async function extractRecursively(
 ): Promise<void> {
   const { logger = console } = options
 
-  const archivePaths = await glob("*.{7z,exe,jar,msi,rar,zip}", {
+  const archivePaths = await glob("**/*.{7z,exe,jar,msi,rar,zip}", {
     cwd: basePath,
-    ignore: ["cicdec.exe", "7z*.exe"],
-    matchBase: true,
+    ignore: ["**/cicdec.exe", "**/7z*.exe"],
     nodir: true,
   })
+
+  console.log(basePath, archivePaths)
 
   if (archivePaths.length) {
     for (const archivePath of archivePaths) {

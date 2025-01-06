@@ -128,6 +128,11 @@ export interface ContentsData {
 
 export interface DependencyData {
   /**
+   * Condition for the dependency to be included, if any
+   */
+  condition?: Requirements
+
+  /**
    * Package ID
    */
   id: PackageID
@@ -147,6 +152,20 @@ export interface DependencyData {
    * Defaults to `true` unless {@link include} is specified.
    */
   transitive?: boolean
+}
+
+/**
+ * Alternative {@link DependencyData} format
+ *
+ * @example
+ * dependencies:
+ *   - memo/submenus:
+ *       condition:
+ *         submenus: true
+ *       transitive: false
+ */
+export interface DependencyDataRecord {
+  [id: PackageID]: Omit<DependencyData, "id">
 }
 
 /**
@@ -323,7 +342,7 @@ export interface VariantData extends ContentsData {
    * - Dependency on a specific variant is **not** supported
    * - Partial dependencies are supported
    */
-  dependencies?: Array<DependencyData | PackageID>
+  dependencies?: Array<DependencyData | DependencyDataRecord | PackageID>
 
   /**
    * Whether this package or variant is experimental (e.g. test version)
@@ -526,8 +545,8 @@ export function loadVariantInfo(
   )
 
   const dependencies = unionBy(
-    variantData.dependencies?.map(loadDependencyInfo) ?? [],
-    packageData.dependencies?.map(loadDependencyInfo) ?? [],
+    variantData.dependencies?.flatMap(loadDependencyInfo) ?? [],
+    packageData.dependencies?.flatMap(loadDependencyInfo) ?? [],
     dependency => dependency.id,
   )
 
@@ -867,16 +886,30 @@ function loadCredits(
   })
 }
 
-function loadDependencyInfo(data: DependencyData | PackageID): DependencyInfo {
+function loadDependencyInfo(
+  data: DependencyData | DependencyDataRecord | PackageID,
+): DependencyInfo[] {
   if (isString(data)) {
-    return { id: data, transitive: true }
+    return [
+      {
+        id: data,
+        transitive: true,
+      },
+    ]
   }
 
-  return {
-    ...data,
-    include: data.include?.map(toPosix),
-    transitive: data.transitive ?? !data.include,
+  if ("id" in data) {
+    return [
+      {
+        ...data,
+        id: data.id,
+        include: data.include?.map(toPosix),
+        transitive: data.transitive ?? !data.include,
+      },
+    ]
   }
+
+  return collect(data, (data, id) => loadDependencyInfo({ ...data, id })).flat()
 }
 
 function loadFileInfo(data: FileData | FileDataRecord | string): FileInfo[] {
@@ -921,16 +954,17 @@ function writeCredits(
   })
 }
 
-function writeDependencyInfo(info: DependencyInfo): DependencyData | PackageID {
-  if (info.include) {
-    return { ...info, transitive: info.transitive || undefined }
+function writeDependencyInfo({ id, ...info }: DependencyInfo): DependencyDataRecord | PackageID {
+  if (info.condition || info.include || !info.transitive) {
+    return {
+      [id]: {
+        ...info,
+        transitive: info.transitive === !info.include ? undefined : info.transitive,
+      },
+    }
   }
 
-  if (!info.transitive) {
-    return { ...info, transitive: false }
-  }
-
-  return info.id
+  return id
 }
 
 function writeFileInfo({ path, ...info }: FileInfo): FileDataRecord | string {

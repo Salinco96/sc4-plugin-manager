@@ -146,9 +146,9 @@ export class TaskManager {
         context.warn("Error raised but task was invalidated", error)
       }
     } finally {
-      if (context.step) {
-        context.onStatusUpdate?.(null)
-      }
+      // if (context.step) {
+      context.onStatusUpdate?.(null)
+      // }
 
       // Remove key from ongoing tasks
       const index = this.ongoingTasks.indexOf(key)
