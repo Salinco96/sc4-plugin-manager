@@ -33,9 +33,15 @@ export async function extractRecursively(
     for (const archivePath of archivePaths) {
       const archiveFullPath = path.join(basePath, archivePath)
 
+      // Skip tools
+      // TODO: Indicate this in package config somehow?
+      if (archivePath.match(/(cicdec\.exe|7z.*\.exe)$/i)) {
+        continue
+      }
+
       // Skip OpenJDK (from the NAM download), $PLUGINSDIR (from the CAM download), 4GB Patch, etc.
       // TODO: Indicate this in package config somehow?
-      if (archivePath.match(/\$PLUGINSDIR|4gb_patch\.exe|install_lrm.+\.exe|openjdk.+\.msi/i)) {
+      if (archivePath.match(/(\$PLUGINSDIR|4gb_patch\.exe|install_lrm.+\.exe|openjdk.+\.msi)$/i)) {
         logger.debug(`Removing ${archivePath}...`)
       } else {
         logger.debug(`Extracting from ${archivePath}...`)

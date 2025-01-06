@@ -2339,11 +2339,14 @@ export class Application {
    * Initiates a login to Simtropolis.
    */
   public async simtropolisLogin(): Promise<void> {
+    this.sendStateUpdate({ simtropolis: undefined })
     const session = await simtropolisLogin(this.browserSession)
     if (session) {
       console.info("Logged in to Simtropolis")
       this.simtropolisSession = session
       this.sendStateUpdate({ simtropolis: { userId: session.userId } })
+    } else {
+      this.sendStateUpdate({ simtropolis: null })
     }
   }
 

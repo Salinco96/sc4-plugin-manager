@@ -2,24 +2,21 @@ import { collect, compact } from "@salinco/nice-utils"
 import type { Cookie, Session } from "electron/main"
 
 import { getCookieHeader } from "@node/fetch"
+import { isDev } from "@utils/env"
 
 import { BaseWindow } from "../../BaseWindow"
 
 export const SIMTROPOLIS_DOMAIN = "community.simtropolis.com"
 export const SIMTROPOLIS_ORIGIN = `https://${SIMTROPOLIS_DOMAIN}`
-
-// TODO: Make sure Discord auth works (it probably does not atm?)
-const DISCORD_OAUTH2_URL = "https://discordapp.com/api/oauth2/authorize"
-
-const SIMTROPOLIS_LOGIN_URL = `${SIMTROPOLIS_ORIGIN}/sign-in/`
-const SIMTROPOLIS_LOST_PASSWORD_URL = `${SIMTROPOLIS_ORIGIN}/lostpassword/`
-const SIMTROPOLIS_REGISTER_URL = `${SIMTROPOLIS_ORIGIN}/register/`
+export const DISCORD_ORIGIN = "https://discordapp.com"
 
 const SIMTROPOLIS_AUTH_URLS = [
-  DISCORD_OAUTH2_URL,
-  SIMTROPOLIS_LOGIN_URL,
-  SIMTROPOLIS_LOST_PASSWORD_URL,
-  SIMTROPOLIS_REGISTER_URL,
+  `${DISCORD_ORIGIN}/api/oauth2/authorize`,
+  `${SIMTROPOLIS_ORIGIN}/applications/discord/interface/oauth/auth.php`,
+  `${SIMTROPOLIS_ORIGIN}/lostpassword/`,
+  `${SIMTROPOLIS_ORIGIN}/register/`,
+  `${SIMTROPOLIS_ORIGIN}/secure-login/index.php`,
+  `${SIMTROPOLIS_ORIGIN}/sign-in/`,
 ]
 
 export type SimtropolisSession = {
@@ -80,12 +77,16 @@ export function getSimtropolisSessionHeaders(session: SimtropolisSession): {
 export async function simtropolisLogin(
   browserSession: Session,
 ): Promise<SimtropolisSession | null> {
+  await simtropolisLogout(browserSession)
+
   return new Promise(resolve => {
     const window = new BaseWindow({
       height: 600,
       webPreferences: { session: browserSession },
       width: 800,
     })
+
+    window.hide()
 
     const onCookieChanged = (_: unknown, cookie: Cookie, reason: string) => {
       // Close the window after login (once the userId cookie is set)
@@ -112,10 +113,23 @@ export async function simtropolisLogin(
       getSimtropolisSession(browserSession).then(resolve)
     })
 
-    window.loadURL(SIMTROPOLIS_LOGIN_URL)
+    if (isDev()) {
+      window.webContents.openDevTools()
+    }
+
+    window.loadURL(SIMTROPOLIS_ORIGIN)
+
+    window.webContents.on("did-finish-load", () => {
+      window.webContents.executeJavaScript(
+        `document.getElementsByClassName("authLogin")[0].click();`,
+      )
+      window.webContents.on("did-finish-load", () => {
+        window.show()
+      })
+    })
   })
 }
 
 export async function simtropolisLogout(browserSession: Session): Promise<void> {
-  await browserSession.clearStorageData({ origin: SIMTROPOLIS_ORIGIN })
+  await browserSession.clearData({ origins: [SIMTROPOLIS_ORIGIN] })
 }

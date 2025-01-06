@@ -36,13 +36,7 @@ export async function loadAppConfig(): Promise<AppConfig> {
   }
 
   if (appConfig.gamePath !== config?.data.gamePath) {
-    await writeConfig(
-      configPath,
-      FILENAMES.appConfig,
-      config?.data,
-      ConfigFormat.JSON,
-      config?.format,
-    )
+    await writeConfig(configPath, FILENAMES.appConfig, appConfig, ConfigFormat.JSON, config?.format)
   }
 
   return appConfig
