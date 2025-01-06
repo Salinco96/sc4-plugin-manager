@@ -1078,6 +1078,10 @@ simtropolis/17559-modular-amusement-park-pack-modern-rides:
 simtropolis/17560-modular-amusement-park-pack-roller-coasters:
   packageId: aldara6166/mapp-roller-coasters
 
+simtropolis/18753-transportation-map-modd-for-color-blind:
+  packageId: bannanapeppers/colorblind-transportation-map
+  variantId: default
+
 simtropolis/19096-ndex-glenni-mega-props-vol01:
   packageId: glenni/mega-props-vol01
 
@@ -1291,6 +1295,10 @@ simtropolis/21340-functional-landmarks-complete-set-v10:
 
 simtropolis/21342-opera-house-fix:
   packageId: toroca/opera-house-fix
+  variantId: default
+
+simtropolis/21365-dataviews-increased-detail-mod-v10:
+  packageId: thalassicus/dataviews-increased-details
   variantId: default
 
 simtropolis/21661-peg-ppond-kit:
@@ -1580,6 +1588,10 @@ simtropolis/27990-wmp-rural-docklands-3:
 
 simtropolis/28015-the-cougar-fruit-packing-ltd:
   packageId: wmp/the-cougar-fruit-packing-ltd
+
+simtropolis/28023-lapinkirkko:
+  packageId: krio/lapinkirkko
+  variantId: default
 
 simtropolis/28048-gnl-eha-villa-de-vinho:
   packageId: gn-leugim/villa-de-vinho
@@ -2253,6 +2265,10 @@ simtropolis/32832-pc-towering-sign-set-1:
 simtropolis/32879-pc-car-prop-pack:
   superseded: simtropolis/32952-pc-mega-props-vol-1
 
+simtropolis/32881-color-blind-views-for-deuteranopia:
+  packageId: cyclone-boom/colorblind-views
+  variantId: default
+
 simtropolis/32921-pc-hd-car-props:
   superseded: simtropolis/32952-pc-mega-props-vol-1
 
@@ -2286,6 +2302,10 @@ simtropolis/33304-sm2-mega-prop-pack-vol4:
 
 simtropolis/33309-polish-mega-props-misc-industrials:
   packageId: simcity-polska/polish-mega-props-misc-industrials
+
+simtropolis/33412-coris-parks-aura:
+  packageId: corinamarie/parks-aura
+  variantId: default
 
 simtropolis/33497-polish-mega-props-misc-vol01-v2:
   packageId: simcity-polska/polish-mega-props-misc-vol01
@@ -3543,6 +3563,65 @@ simtropolis/36612-hook-and-ladder-company-8-ghostbusters-hq:
     '204740':
       packageId: jasoncw/hook-and-ladder-company-8
       variantId: darknite
+
+simtropolis/36614-extended-terrain-dll:
+  packageId: null-45/extended-terrain-dll
+  variantId: default
+
+simtropolis/36621-grand-mediterranean-hotels:
+  packageId: wannglondon/grand-mediterranean-hotels
+  variantId: default
+
+simtropolis/36625-lapinkirkko-relot:
+  packageId: dead-end/lapinkirkko-relot
+  variantId: default
+
+simtropolis/36626-wade-patton-insurance-and-interim-healthcare:
+  packageId: jasoncw/wade-patton-insurance
+  variants:
+    '204875':
+      packageId: jasoncw/wade-patton-insurance
+      variantId: default
+    '204876':
+      packageId: jasoncw/wade-patton-insurance
+      variantId: darknite
+
+simtropolis/36627-mettlen-inc-and-mid-kansas-seamless-gutter:
+  packageId: jasoncw/mettlen-inc
+  variants:
+    '204880':
+      packageId: jasoncw/mettlen-inc
+      variantId: default
+    '204881':
+      packageId: jasoncw/mettlen-inc
+      variantId: darknite
+
+simtropolis/36628-seaside-building:
+  packageId: jasoncw/seaside-building
+  variants:
+    '204884':
+      packageId: jasoncw/seaside-building
+      variantId: default
+    '204885':
+      packageId: jasoncw/seaside-building
+      variantId: darknite
+
+simtropolis/36629-xenon-center:
+  packageId: jasoncw/xenon-center
+  variants:
+    '204888':
+      packageId: jasoncw/xenon-center
+      variantId: default
+    '204889':
+      packageId: jasoncw/xenon-center
+      variantId: darknite
+    '204890':
+      packageId: jasoncw/xenon-center
+      variantId: default,darknite
+
+simtropolis/36632-data-view-extensions-dll:
+  packageId: null-45/data-view-extensions-dll
+  variantId: default
 
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31

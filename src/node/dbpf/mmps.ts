@@ -1,4 +1,4 @@
-import { DBPFDataType, type DBPFFile } from "@common/dbpf"
+import { DBPFDataType, type DBPFFile, TGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FloraData } from "@node/data/mmps"
 
@@ -36,7 +36,7 @@ export function getFloraData(exemplar: Exemplar, file: DBPFFile): FloraData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = getModelId(model)
+    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
   }
 
   return data

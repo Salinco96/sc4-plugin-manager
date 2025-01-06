@@ -28,6 +28,7 @@ import {
   union,
   unique,
   values,
+  where,
 } from "@salinco/nice-utils"
 import { config } from "dotenv"
 import { glob } from "glob"
@@ -60,12 +61,14 @@ import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
 import { loadAuthors, writeAuthors } from "@node/data/authors"
+import { matchFiles } from "@node/data/files"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "./dbpf/dbpf"
 import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
 import {
   promptAuthorName,
+  promptCategoryLabel,
   promptPackageId,
   promptUrl,
   promptVariantId,
@@ -133,7 +136,7 @@ runIndexer({
   migrate: {
     entries(entry) {
       if (entry.variants) {
-        forEach(entry.variants, variant => {
+        forEach(entry.variants, () => {
           // Nothing
         })
       }
@@ -456,31 +459,143 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   /**
    * STEP 5 - Create a reverse-index of TGIs to the packages containing them
    */
+
+  const baseGameId = "maxis/base" as PackageID
+
+  type Index = {
+    buildingFamilies: { [id in FamilyID]?: PackageID[] }
+    buildings: { [id in BuildingID]?: PackageID[] }
+    lots: { [id in LotID]?: PackageID[] }
+    mmps: { [id in FloraID]?: PackageID[] }
+    models: { [id in string]?: PackageID[] }
+    propFamilies: { [id in FamilyID]?: PackageID[] }
+    props: { [id in PropID]?: PackageID[] }
+    textures: { [id in string]?: PackageID[] }
+  }
+
+  const index: Index = {
+    buildingFamilies: {},
+    buildings: {},
+    lots: {},
+    mmps: {},
+    models: {},
+    propFamilies: {},
+    props: {},
+    textures: {},
+  }
+
   if (!isEmpty(generatingPackages)) {
-    type Index = {
-      buildingFamilies: { [id in FamilyID]?: PackageID[] }
-      buildings: { [id in BuildingID]?: PackageID[] }
-      lots: { [id in LotID]?: PackageID[] }
-      mmps: { [id in FloraID]?: PackageID[] }
-      models: { [id in string]?: PackageID[] }
-      propFamilies: { [id in FamilyID]?: PackageID[] }
-      props: { [id in PropID]?: PackageID[] }
-      textures: { [id in string]?: PackageID[] }
-    }
-
-    const index: Index = {
-      buildingFamilies: {},
-      buildings: {},
-      lots: {},
-      mmps: {},
-      models: {},
-      propFamilies: {},
-      props: {},
-      textures: {},
-    }
-
     // Step 5a - Index instances
     console.debug("Indexing contents...")
+
+    if (maxisData.buildingFamilies) {
+      forEach(maxisData.buildingFamilies, buildingFamilies => {
+        for (const id of keys(buildingFamilies)) {
+          if (!index.buildingFamilies[id]?.includes(baseGameId)) {
+            index.buildingFamilies[id] ??= []
+            index.buildingFamilies[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
+    if (maxisData.buildings) {
+      forEach(maxisData.buildings, buildings => {
+        forEach(buildings, ({ family: familyIds }, id) => {
+          if (!index.buildings[id]?.includes(baseGameId)) {
+            index.buildings[id] ??= []
+            index.buildings[id].push(baseGameId)
+          }
+
+          if (familyIds) {
+            // todo
+            for (const familyId of parseStringArray(familyIds) as FamilyID[]) {
+              if (!index.buildingFamilies[familyId]?.includes(baseGameId)) {
+                index.buildingFamilies[familyId] ??= []
+                index.buildingFamilies[familyId].push(baseGameId)
+              }
+            }
+          }
+        })
+      })
+    }
+
+    if (maxisData.lots) {
+      forEach(maxisData.lots, lots => {
+        for (const id of keys(lots)) {
+          if (!index.lots[id]?.includes(baseGameId)) {
+            index.lots[id] ??= []
+            index.lots[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
+    if (maxisData.mmps) {
+      forEach(maxisData.mmps, mmps => {
+        for (const id of keys(mmps)) {
+          if (!index.mmps[id]?.includes(baseGameId)) {
+            index.mmps[id] ??= []
+            index.mmps[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
+    if (maxisData.models) {
+      forEach(maxisData.models, models => {
+        for (const id of models) {
+          if (!index.models[id]?.includes(baseGameId)) {
+            index.models[id] ??= []
+            index.models[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
+    if (maxisData.propFamilies) {
+      forEach(maxisData.propFamilies, propFamilies => {
+        for (const id of keys(propFamilies)) {
+          if (!index.propFamilies[id]?.includes(baseGameId)) {
+            index.propFamilies[id] ??= []
+            index.propFamilies[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
+    if (maxisData.props) {
+      forEach(maxisData.props, props => {
+        forEach(props, ({ family: familyIds }, id) => {
+          if (!index.props[id]?.includes(baseGameId)) {
+            index.props[id] ??= []
+            index.props[id].push(baseGameId)
+          }
+
+          if (familyIds) {
+            // todo
+            for (const familyId of parseStringArray(familyIds) as FamilyID[]) {
+              if (!index.propFamilies[familyId]?.includes(baseGameId)) {
+                index.propFamilies[familyId] ??= []
+                index.propFamilies[familyId].push(baseGameId)
+              }
+            }
+          }
+        })
+      })
+    }
+
+    if (maxisData.textures) {
+      forEach(maxisData.textures, textures => {
+        for (const id of textures) {
+          if (!index.textures[id]?.includes(baseGameId)) {
+            index.textures[id] ??= []
+            index.textures[id].push(baseGameId)
+          }
+        }
+      })
+    }
+
     forEach(packages, (packageInfo, packageId) => {
       forEach(packageInfo.variants, variantInfo => {
         if (variantInfo.buildingFamilies) {
@@ -493,10 +608,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         }
 
         if (variantInfo.buildings) {
-          for (const { id } of variantInfo.buildings) {
+          for (const { families, id } of variantInfo.buildings) {
             if (!index.buildings[id]?.includes(packageId)) {
               index.buildings[id] ??= []
               index.buildings[id].push(packageId)
+            }
+
+            if (families) {
+              for (const family of families) {
+                if (!index.buildingFamilies[family]?.includes(packageId)) {
+                  index.buildingFamilies[family] ??= []
+                  index.buildingFamilies[family].push(packageId)
+                }
+              }
             }
           }
         }
@@ -547,10 +671,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         }
 
         if (variantInfo.props) {
-          for (const { id } of variantInfo.props) {
+          for (const { families, id } of variantInfo.props) {
             if (!index.props[id]?.includes(packageId)) {
               index.props[id] ??= []
               index.props[id].push(packageId)
+            }
+
+            if (families) {
+              for (const family of families) {
+                if (!index.propFamilies[family]?.includes(packageId)) {
+                  index.propFamilies[family] ??= []
+                  index.propFamilies[family].push(packageId)
+                }
+              }
             }
           }
         }
@@ -563,19 +696,114 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             }
           }
         }
+
+        if (variantInfo.assets) {
+          for (const variantAsset of variantInfo.assets) {
+            const [assetId, variant] = variantAsset.id.split("#", 2) as [AssetID, string?]
+            const entry = getEntry(getEntryId(assetId))
+            const variantEntry = variant ? entry.variants?.[variant] : entry
+            if (!variantEntry) {
+              continue
+            }
+
+            const { matchedPaths } = matchFiles(variantEntry.files ?? [], {
+              exclude: variantAsset.exclude,
+              include: variantAsset.include ?? [{ path: "" }],
+              options: variantInfo.options,
+            })
+
+            forEach(matchedPaths, (file, oldPath) => {
+              if (file) {
+                const models = variantEntry.models?.[oldPath]
+                if (models) {
+                  for (const id of models) {
+                    if (!index.models[id]?.includes(packageId)) {
+                      index.models[id] ??= []
+                      index.models[id].push(packageId)
+                    }
+                  }
+                }
+
+                const buildings = variantEntry.buildings?.[oldPath]
+                if (buildings) {
+                  forEach(buildings, (data, id) => {
+                    if (data.model === "00000000-0000") {
+                      data.model = null
+                    }
+
+                    const building = variantInfo.buildings?.find(where({ id, file: file.path }))
+                    if (building) {
+                      building.model ??= data.model
+                    }
+                  })
+                }
+
+                const lots = variantEntry.lots?.[oldPath]
+                if (lots) {
+                  forEach(lots, (data, id) => {
+                    const lot = variantInfo.lots?.find(where({ id, file: file.path }))
+                    if (lot) {
+                      lot.props ??= data.props
+                      lot.textures ??= data.textures
+                    }
+                  })
+                }
+
+                const mmps = variantEntry.mmps?.[oldPath]
+                if (mmps) {
+                  forEach(mmps, (data, id) => {
+                    if (data.model === "00000000-0000") {
+                      data.model = null
+                    }
+
+                    const mmp = variantInfo.mmps?.find(where({ id, file: file.path }))
+                    if (mmp) {
+                      mmp.model ??= data.model
+                    }
+
+                    data.stages?.forEach((stage, index) => {
+                      if (stage.model === "00000000-0000") {
+                        stage.model = null
+                      }
+
+                      const stageInfo = mmp?.stages?.[index]
+                      if (stageInfo) {
+                        stageInfo.model ??= stage.model
+                      }
+                    })
+                  })
+                }
+
+                const props = variantEntry.props?.[oldPath]
+                if (props) {
+                  forEach(props, (data, id) => {
+                    if (data.model === "00000000-0000") {
+                      data.model = null
+                    }
+
+                    const prop = variantInfo.props?.find(where({ id, file: file.path }))
+                    if (prop) {
+                      prop.model ??= data.model
+                    }
+                  })
+                }
+              }
+            })
+          }
+        }
       })
     })
 
     // Step 5b - Generate index file
     console.debug("Writing index...")
     await writeConfig(dataAssetsDir, "index", index, ConfigFormat.YAML)
-  }
 
-  /**
-   * STEP 6 - Check the consistency of data repository (e.g. dependencies must exist)
-   */
-  console.debug("Checking packages...")
-  await forEachAsync(packages, checkPackage)
+    /**
+     * STEP 6 - Check the consistency of data repository (e.g. dependencies must exist)
+     */
+    console.debug("Checking packages...")
+    await forEachAsync(packages, checkPackage)
+  }
 
   /**
    * STEP 7 - Write generated data back to files
@@ -695,13 +923,22 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     if (variantInfo.categories) {
       for (const category of variantInfo.categories) {
         if (!categories[category]) {
-          errors.add(`${prefix} - Category ${category} does not exist`)
+          if (await promptYesNo(`Create category ${category}?`, true)) {
+            categories[category] = {
+              label: await promptCategoryLabel(),
+            }
+          } else {
+            errors.add(`${prefix} - Category ${category} does not exist`)
+          }
         }
       }
     }
 
+    const packageIds = [packageId, baseGameId]
+
     if (variantInfo.dependencies) {
       for (const dependency of variantInfo.dependencies) {
+        packageIds.push(dependency.id)
         if (!packages[dependency.id]) {
           errors.add(`${prefix} - Dependency ${dependency.id} does not exist`)
         }
@@ -718,6 +955,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     if (variantInfo.optional) {
       for (const dependencyId of variantInfo.optional) {
+        packageIds.push(dependencyId)
         if (!packages[dependencyId]) {
           errors.add(`${prefix} - Optional dependency ${dependencyId} does not exist`)
         }
@@ -725,6 +963,131 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // todo: check that dependencies contain the needed props/models/textures...
+
+    if (variantInfo.buildings) {
+      for (const building of variantInfo.buildings) {
+        if (building.categories) {
+          for (const category of building.categories) {
+            if (!categories[category]) {
+              if (await promptYesNo(`Create category ${category}?`, true)) {
+                categories[category] = {
+                  label: await promptCategoryLabel(),
+                }
+              } else {
+                errors.add(`${prefix} - Category ${category} does not exist`)
+              }
+            }
+          }
+        }
+
+        if (building.model) {
+          const ids = index.models[building.model]
+          if (!ids) {
+            // errors.add(
+            //   `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} does not exist`,
+            // )
+          } else if (!containsAny(ids, packageIds)) {
+            errors.add(
+              `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} is not listed as dependency: ${ids.join(", ")}`,
+            )
+          }
+        }
+      }
+    }
+
+    if (variantInfo.lots) {
+      for (const lot of variantInfo.lots) {
+        if (lot.building) {
+          const ids = index.buildings[lot.building] ?? index.buildingFamilies[lot.building]
+          if (!ids) {
+            // errors.add(
+            //   `${prefix}, building ${lot.name} (${lot.id}) - Building ${lot.building} does not exist`,
+            // )
+          } else if (!containsAny(ids, packageIds)) {
+            errors.add(
+              `${prefix}, building ${lot.name} (${lot.id}) - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
+            )
+          }
+        }
+
+        if (lot.props) {
+          for (const id of lot.props) {
+            const ids = index.props[id] ?? index.propFamilies[id]
+            if (!ids) {
+              // errors.add(`${prefix}, building ${lot.name} (${lot.id}) - Prop ${id} does not exist`)
+            } else if (!containsAny(ids, packageIds)) {
+              errors.add(
+                `${prefix}, building ${lot.name} (${lot.id}) - Prop ${id} is not listed as dependency: ${ids.join(", ")}`,
+              )
+            }
+          }
+        }
+
+        if (lot.textures) {
+          for (const id of lot.textures) {
+            const ids = index.textures[id]
+            if (!ids) {
+              // errors.add(
+              //   `${prefix}, building ${lot.name} (${lot.id}) - Texture ${id} does not exist`,
+              // )
+            } else if (!containsAny(ids, packageIds)) {
+              errors.add(
+                `${prefix}, building ${lot.name} (${lot.id}) - Texture ${id} is not listed as dependency: ${ids.join(", ")}`,
+              )
+            }
+          }
+        }
+      }
+    }
+
+    if (variantInfo.mmps) {
+      for (const mmp of variantInfo.mmps) {
+        if (mmp.model) {
+          const ids = index.models[mmp.model]
+          if (!ids) {
+            // errors.add(`${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} does not exist`)
+          } else if (!containsAny(ids, packageIds)) {
+            errors.add(
+              `${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
+            )
+          }
+        }
+
+        if (mmp.stages) {
+          for (const stage of mmp.stages) {
+            if (stage.model) {
+              const ids = index.models[stage.model]
+              if (!ids) {
+                // errors.add(
+                //   `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} does not exist`,
+                // )
+              } else if (!containsAny(ids, packageIds)) {
+                errors.add(
+                  `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+
+    if (variantInfo.props) {
+      for (const prop of variantInfo.props) {
+        if (prop.model) {
+          const ids = index.models[prop.model]
+          if (!ids) {
+            // errors.add(
+            //   `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} does not exist`,
+            // )
+          } else if (!containsAny(ids, packageIds)) {
+            errors.add(
+              `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,
+            )
+          }
+        }
+      }
+    }
   }
 
   function includeEntry(entry: IndexerEntry, entryId: EntryID): boolean {
@@ -1201,6 +1564,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       downloaded: {},
       id: variantAssetId,
       lastModified: entry.lastModified,
+      sha256: variantEntry.sha256,
       size: variantEntry.size,
       uncompressed: variantEntry.uncompressed,
       url: downloadUrl,

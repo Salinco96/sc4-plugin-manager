@@ -229,7 +229,7 @@ export function filterVariant(
   }
 
   if (filters.hex) {
-    if (variantInfo.buildingFamilies?.some(where("id", filters.hex))) {
+    if (variantInfo.buildingFamilies?.some(family => family.id === filters.hex)) {
       return true
     }
 
@@ -237,7 +237,7 @@ export function filterVariant(
       return true
     }
 
-    if (variantInfo.buildings?.some(where("family", filters.hex))) {
+    if (variantInfo.buildings?.some(building => building.families?.includes(filters.hex!))) {
       return true
     }
 
@@ -253,7 +253,7 @@ export function filterVariant(
       return true
     }
 
-    if (variantInfo.propFamilies?.some(where("id", filters.hex))) {
+    if (variantInfo.propFamilies?.some(family => family.id === filters.hex)) {
       return true
     }
 
@@ -261,7 +261,7 @@ export function filterVariant(
       return true
     }
 
-    if (variantInfo.props?.some(where("family", filters.hex))) {
+    if (variantInfo.props?.some(prop => prop.families?.includes(filters.hex!))) {
       return true
     }
 

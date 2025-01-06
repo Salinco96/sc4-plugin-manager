@@ -12,8 +12,8 @@ import {
 } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
+import { TGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-import type { FamilyID } from "@common/families"
 import { Menu, type MenuID, Submenu } from "@common/submenus"
 import type { BuildingData } from "@node/data/buildings"
 import { writeMenu, writeMenus } from "@node/data/submenus"
@@ -82,9 +82,9 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     data.description = description
   }
 
-  const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
-  if (familyId !== undefined) {
-    data.family = toHex(familyId, 8) as FamilyID
+  const familyIds = getArray(exemplar, ExemplarPropertyID.PropFamily)
+  if (familyIds?.length) {
+    data.family = familyIds.map(familyId => toHex(familyId, 8)).join(",")
   }
 
   const worth = get(exemplar, ExemplarPropertyID.BuildingValue)
@@ -182,7 +182,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = getModelId(model)
+    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
   }
 
   const capacitySatisfied = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)

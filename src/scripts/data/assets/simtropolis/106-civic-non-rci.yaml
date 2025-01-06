@@ -12145,11 +12145,94 @@ assets:
     assetId: simtropolis/28023-lapinkirkko
     authors:
       - Krio
+    buildings:
+      TG Lapinkirkko/TG Lapinkirkko_f91c0233.SC4Lot:
+        f91c0233:
+          bulldoze: 100
+          categories: landmarks
+          cost: 10000
+          description: Church by Krio of TG, based on the Church of Rovaniemi
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: 18ff952b
+          name: TG_Lapinkirkko
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      TG Lapinkirkko/TG_Lapinkirkko-0x6534284a-0x546817ab-0x791bfc55.SC4Desc:
+        791bfc55:
+          bulldoze: 100
+          categories: landmarks
+          cost: 10000
+          description: Church by Krio of TG, based on the Church of Rovaniemi
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: 18ff952b
+          name: TG_Lapinkirkko
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p><strong>Lapinkirkko</strong> is based on Rovaniemi Cathedral which is the largest church in Lapland. Rovaniemi Church was designed by Bertel Liljequist in 1950 and my version is slightly different, again thanks to lack of photos. Thats why I named it as Lapinkirkko (Lapland Church). And trivia: when I batted this building I used photos and roof was copper green. Now it is copper brown. Hah!<br>As a static landmark this posses no threat to rewards. So lets go to the stats.<br><br>STATS<br>Lot size: 3x5<br>Plop cost: 10 000§<br>Monthly cost: 150 §<br><br>No dependacies.<br><br>The best bat thread in universe: <a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php?topic=6097.new#new\" rel=\"external nofollow\">Krioworks</a></p>\n\t\t\t\t\t\t</body>"
+    filename: Lapinkirkko.zip
+    files:
+      - TG Lapinkirkko/TG Lapinkirkko_f91c0233.SC4Lot
+      - TG Lapinkirkko/TG_Lapinkirkko-0x5ad0e817_0x18ff952b_0x30000.SC4Model
+      - TG Lapinkirkko/TG_Lapinkirkko-0x6534284a-0x546817ab-0x791bfc55.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_10_2013/e9c2c58233b2821401f193111322f631-kirkko.jpg
     lastModified: 2012-09-14T18:23:29.000Z
+    lots:
+      TG Lapinkirkko/TG Lapinkirkko_f91c0233.SC4Lot:
+        f91c0233:
+          building: f91c0233
+          name: TG Lapinkirkko
+          props:
+            - 297a0000
+            - 297b0000
+            - 2a130000
+            - 1e0b0000
+            - '29390000'
+            - '1e340000'
+          size: 3x5
+          textures:
+            - 25d60000
+            - '26300000'
+            - 25c00000
+            - 25c10000
+    meta:
+      timestamp: 2025-01-06T12:12:25.449Z
+      version: 1
+    models:
+      TG Lapinkirkko/TG_Lapinkirkko-0x5ad0e817_0x18ff952b_0x30000.SC4Model:
+        - 18ff952b
     name: Lapinkirkko
+    sha256: ca055e21be7839950e61d4b7b6561fcdf1d9d2cbb3b502f17b9c6cb1a13d3acc
+    size: 415726
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2013/thumb-e9c2c58233b2821401f193111322f631-kirkko.jpg
+    uncompressed: 479879
     url: https://community.simtropolis.com/files/file/28023-lapinkirkko/
+    version: '1.0'
   simtropolis/28036:
     assetId: simtropolis/28036-masjid-istiqlal-jakarta
     authors:
@@ -14553,12 +14636,13 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Disclaimer:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to develop your own lots using these lot foundations/retaining walls, but if sharing them, please point to this files as a dependency.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Short description:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Some lots, when being placed on slopes, will either raise the floor beneath them, or cut into the hill. In the former case, a lot foundation is being created, in the latter, a retaining wall. Perhaps it's just me, but I’m quite surprised that I’ve only found very few plugins with custom foundations and none at all with retaining walls; therefore, I’ve turned some textures by Maxis or other authors (see below for credits) into lot foundations and retaining walls. This plugin therefore acts as a dependency for plugin developers, providing them with the necessary textures and exemplar files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:rgb(255,140,0);\"><strong>Dependencies:</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">As it is a dependency itself, this plugin has no external dependencies.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Contained Files:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>LotFoundations.dat: </strong>Contains textures and exemplar files for lot foundations. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>RetainingWalls.dat:</strong> Contains textures and exemplar files for retaining walls. Mandatory.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>TestLots.dat: </strong>This file contains some testing lots that have one texture from both files applied to them, allowing you to test them in-game. These lots do not cost anything and do not have any special features. They are at the bottom of the park menu. If you do not want these lots, you can remove this file safely.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Other than that, this download contains a <strong>Readme </strong>(unfortunately, due to its size, this time only in English) containing all necessary informations, as well as a tutorial on how to actually switch to another fondation/retaining wall and how to use lots if they are supposed to be placed on slopes.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Installation:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Move or copy all files in this archive into the Plugins folder of your copy of SimCity 4. To uninstall, just remove these files.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">This plugin should be compatible with all versions of SimCity 4. If you find out that this is not the case, please tell me.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Credits:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong><span style=\"color:rgb(255,140,0);\">My special thanks go to all authors that kindly gave me permission to modify and share their work. </span></strong>At the moment, this ist just one person:</span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Mas71:</strong> His set of Japanese hill retaining walls surely is part of the plugins that I’m using most frequently. Now, their functionability is even being expanded.</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
     file: Various Lot Foundations and Retaining Walls.zip
+    filename: Various Lot Foundations and Retaining Walls.zip
     files:
-      - TestLots.dat
-      - Scr_1.jpg
-      - RetainingWalls.dat
-      - Readme.pdf
       - LotFoundations.dat
+      - Readme.pdf
+      - RetainingWalls.dat
+      - Scr_1.jpg
+      - TestLots.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/Scr_1.jpg.d34b5066fa746c20427bb6e6fea90199.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/Anleitung_3.png.de43eb44243c947ce7eff75c17b88c17.png
@@ -14644,7 +14728,7 @@ assets:
           textures:
             - 251c0000
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Various Lot Foundations and Retaining Walls
     sha256: c27de1770c9839eee8c171d82c81b95db93b947e1f91aa208a50ee08d2555f96
@@ -18058,7 +18142,7 @@ assets:
             - 25eb0000
             - 25fc0000
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       hjorthagens skola/hjorthagens skola-0x5ad0e817_0x2ce3bb54_0x30000.SC4Model:
@@ -18741,7 +18825,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2021_11/61803625a2080_JudithKrugBranchLibrary01.jpg.fa338f7ccaf8876b4e8f10298a90730d.jpg
     lastModified: 2021-11-01T18:47:17.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Judith Krug Branch Library
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/61803634d71b2_JudithKrugBranchLibrary00.thumb.jpg.8901780132fab60797f9da05f166a1b5.jpg
@@ -18855,7 +18939,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2021_11/Murray-P1(compressed).jpg.931a1eff07409b62bad2f8c6825950fc.jpg
     lastModified: 2021-11-01T18:51:14.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Murray Musem of Modern Art
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/Murray-P0.thumb.jpg.873fc4ecc541a4e42d61b1f4c7c677fa.jpg
@@ -19462,7 +19546,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_10/654189a38782b_PoliceStation1-01.jpg.9dcd33f873571c30b39b6fa431aa1ac0.jpg
     lastModified: 2023-10-31T23:19:40.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Small Police Station 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/65418b8b67c57_PoliceStation1-00.thumb.jpg.94fbf8004831b33e8eb9b66799bad89c.jpg
@@ -19572,7 +19656,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_10/65418bccef3aa_PoliceStation2-01.jpg.94eee442f3459d1d5df0d4518519f6bf.jpg
     lastModified: 2023-10-31T23:21:26.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Small Police Station 2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/65418bf5916d5_PoliceStation2-00.thumb.jpg.9dca6cc87e4e55831ffddd5da2debf73.jpg
@@ -19851,7 +19935,7 @@ assets:
             - 25a00000
             - '25930000'
     meta:
-      timestamp: 2024-12-17T13:16:44.002Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       Mairie_DN/MairieDN-0x5ad0e817_0x12ecd1e2_0x30000.SC4Model:
@@ -19961,7 +20045,7 @@ assets:
             - 259d0000
             - '259e0000'
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Nörrköping Clinic
     sha256: 55418d12e8ec44d5d159197c93a2d5568a821142b4c7137e59918f358c3e612f
@@ -21936,7 +22020,7 @@ assets:
             - '251e0000'
             - 258f0000
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Grimstad Pharmacy
     sha256: 26fb574942682798b4696d8c996efc6a9b067262f80de4e9b666654afbcfa331
@@ -22107,7 +22191,7 @@ assets:
             - f8a045e0
             - f5f84300
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Hjorthagen School Relot
     sha256: 9d279fd1d929193641aebb982d23ad759e0de6601cc0e99cf8c057b6e89c1263
@@ -22222,7 +22306,7 @@ assets:
             - f2144710
             - 25f10000
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Stave church
     sha256: 7ebd44d9be4034ff80c84968aee9e1b2cf3fbac5433463f34cab387258a8a90a
@@ -22280,7 +22364,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_12/67639d3fb82f5_HookandLadderCompany801.jpg.08bdd3b60981ec342cdbd7c00c6996fc.jpg
     lastModified: 2024-12-19T04:24:08.000Z
     meta:
-      timestamp: 2024-12-19T08:48:47.951Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Hook and Ladder Company 8 (Ghostbusters HQ)
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/67639fe80e07f_HookandLadderCompany800.thumb.jpg.b4a1076e854b965ab32960ae96c82c62.jpg
@@ -22375,6 +22459,110 @@ assets:
         size: 154705
         uncompressed: 195901
     version: 1.0.0
+  simtropolis/36625:
+    assetId: simtropolis/36625-lapinkirkko-relot
+    authors:
+      - Dead_End
+    buildings:
+      PLOP_4x5_DE_TG_Lapinkirkko_24d5c22b.SC4Lot:
+        24d5c22b:
+          bulldoze: 9440
+          categories: education
+          cost: 8650
+          flamability: 35
+          garbage: 2
+          jobs:
+            $: 27
+            $$: 114
+            $$$: 45
+          maintenance: 10600
+          menu: Education
+          model: 18ff952b
+          name: DE_TG_Lapinkirkko
+          pollution: 5
+          pollutionRadius: 3
+          power: 9
+          submenu: Education/Libraries
+          water: 34
+          waterPollution: 3
+          waterPollutionRadius: 4
+    category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/28023-lapinkirkko
+      - simtropolis/32109-sm2-dry-stone-walls
+      - simtropolis/33965-girafe-maxis-fence-hd-replacement-mod
+      - sc4evermore/41-appalachian-terrain-mod-by-lowkee33
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
+      - sc4evermore/13-sfbt-essentials
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tThis 4x5 lot features a church and a cemetery. It functions as a museum in the game.\n</p>\n\n<p>\n\tA special thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/101267-krio/?do=hovercard\" data-mentionid=\"101267\" href=\"https://community.simtropolis.com/profile/101267-krio/\" rel=\"\">@Krio</a>\_for creating such a wonderful model!\n</p>\n\n<p>\n\tThe attached screenshots show my custom grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble! Also let know if you end up using this in your cities. I'd love to see some screenshots!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/28023-lapinkirkko/\" rel=\"\">Lapinkirkko</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Legacy - <abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack</a> (Specifically <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures vol03)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for bushes, daisies, lindens, Norway maples and poplars)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\"><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</a> (Specifically SFBT_SIR_Props)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/32109-sm2-dry-stone-walls/\" rel=\"\">SM2 Dry Stone Walls</a>\n\t</li>\n</ul>\n\n<p>\n\t<strong>Optional</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Girafe Maxis Fence HD Replacement Mod</a> (Highly recommended. This lot will function without it, but the standard Maxis hedges will look terribly out of place)\n\t</li>\n</ul>\n\n\t\t\t\t\t\t</body>"
+    filename: DE_TG_Lapinkirkko.zip
+    files:
+      - PLOP_4x5_DE_TG_Lapinkirkko_24d5c22b.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/Screenshot_Lapin1.jpg.79b9076b78c287e3adf62f90b3efa400.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/Screenshot_Lapin2.jpg.f531a63999d765bc9214b655037e4748.jpg
+    lastModified: 2024-12-24T09:43:29.000Z
+    lots:
+      PLOP_4x5_DE_TG_Lapinkirkko_24d5c22b.SC4Lot:
+        24d5c22b:
+          building: 24d5c22b
+          name: PLOP_4x5_DE_TG_Lapinkirkko
+          props:
+            - c77d3042
+            - 277fcd91
+            - 677a5cce
+            - 477d3081
+            - 7e06ee6c
+            - '29780000'
+            - 3def90f2
+            - '297e0000'
+            - dd37fbc0
+            - '29730000'
+            - ecdd2644
+            - ecdd2601
+            - e79c1f4c
+            - da40a0eb
+            - ccdd25cc
+            - 8cdd25e1
+            - 3f4b6857
+            - 33b0363a
+          size: 4x5
+          textures:
+            - 251c0000
+            - f2144750
+            - f2144710
+            - f21446e0
+            - f2144650
+            - 25f10000
+    meta:
+      timestamp: 2025-01-06T12:12:25.449Z
+      version: 1
+    name: Lapinkirkko Relot
+    sha256: c7817ca50ac4480e4fe50a187a6c81ddc5ceeb205502ad9fa543f494aab15c0f
+    size: 9414
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/Screenshot_Lapin1.thumb.jpg.cb1a48ce65c2b95b8beb1982d30d45e0.jpg
+    uncompressed: 27910
+    url: https://community.simtropolis.com/files/file/36625-lapinkirkko-relot/
+    version: 1.0.0
+  simtropolis/36631:
+    assetId: simtropolis/36631-bbva-building
+    authors:
+      - davide1983it
+    category: 106-civic-non-rci
+    lastModified: 2024-12-25T14:54:36.000Z
+    name: BBVA Building
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/676c1cacb70ad_BBVAbuilding(1).thumb.png.236245ed0adc8002de3827828301cec9.png
+    url: https://community.simtropolis.com/files/file/36631-bbva-building/
+  simtropolis/36651:
+    assetId: simtropolis/36651-peifengpagoda
+    authors:
+      - Ct1999
+    category: 106-civic-non-rci
+    lastModified: 2025-01-04T06:27:32.000Z
+    name: PeiFengPagoda
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/PeiFengPagoda_3.thumb.jpg.037ec31f69fad17f156391ac243a2384.jpg
+    url: https://community.simtropolis.com/files/file/36651-peifengpagoda/
   simtropolis/3667:
     assetId: simtropolis/3667-mies-van-der-rohe-school-of-architecture
     authors:
@@ -24561,4 +24749,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

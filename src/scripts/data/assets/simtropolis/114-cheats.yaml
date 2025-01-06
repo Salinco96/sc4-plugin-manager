@@ -179,6 +179,7 @@ assets:
       - developer-r$$$
       - developer-r$$
     file: LessAbandonment1.zip
+    filename: LessAbandonment1.zip
     files:
       - LessCO$$$Abandonment.dat
       - LessCO$$Abandonment.dat
@@ -192,7 +193,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0011/5acaa06fcd3abacd8ec41a315a904da3-LessAbandonment.jpg
     lastModified: 2006-02-05T10:08:10.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Less Abandonment
     sha256: 270515d68564f543c85fcccf1fbc7b580a95fc2a344cb3b63a829a1c62e34456
@@ -1970,6 +1971,7 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This mod doubles the number of jobs provided by the in-game industry buildings. There are 4 files you can optionally install; they double the jobs for each industry category (farming, dirty, manufacturing, and high-tech). So, you don't have to double all the industry categories if you don't wish to do so; you can pick &amp; choose.</p>\n<p>I made this mod after trying out the industry-quadrupler mod on this site. I found that mod to be unbalanced, and in the \"cheat\" category, so I made an alternative mod to be more balanced with the rest of the game.</p>\n<p>1. I only doubled the number of jobs, rather than quadrupled them. I found 4x was just too much.</p>\n<p>2. I doubled the building tax values. This makes the income from industry to be the same as the default for the same number of jobs. This allows a \"industry city\" to be economically feasible, just as with the default game values.</p>\n<p>3. I doubled the power and water requirements for the buildings. This means you have to spend the same amount of money to support a similar number of jobs as you would with the game default. (I found this balance to be lacking in the industry quadrupler.)</p>\n<p>4. I doubled the pollution from each building. Again, this means that the same amount of jobs will produce the same amount of pollution as with the game's default. (Again, missing in the 4x mod.)<br><br>See the readme for installation details.</p>\n\n\t\t\t\t\t\t</body>"
     file: jobs-doubler1.zip
+    filename: jobs-doubler1.zip
     files:
       - ReadMe.txt
       - dirty-doubler.dat
@@ -1984,7 +1986,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0009/49f694b46a99e7429e796b8226b57dd4-jobsdoubler.jpg
     lastModified: 2006-04-25T09:22:06.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Industry Doubler
     sha256: 864317b54cca034a21b6392808732955938b0417651814ac142c8228fca5db53
@@ -2202,6 +2204,7 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\t<em><strong>The SimCity 4 Extra Cheats Plugin</strong></em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Overview:</strong>\r\n</p>\r\n\r\n<p>\r\n\tThe SimCity 4 Extra Cheats Plugin was originally an internal SimCity 4 file, used by Maxis during the development phase to test the game before its release to the public. However, in the years following the release of the game, Buggi, a prominent modder resident here at Simtropolis, contacted Maxis and was given permission to release this file to the public.\r\n</p>\r\n\r\n<p>\r\n\tThe extra cheats plugin adds many additional features to the game, such as the ability to plop any building or lot at will, the ability to easily set how much money is in your city's treasury and even the ability to add snow to your terrains, as well as many other additional functions.\r\n</p>\r\n\r\n<p>\r\n\tHowever, it should be kept in mind that this file was originally never intended to be released to the public. It was built for testing purposes only. As a result, it should be treated with caution. Using this file incorrectly can lead to game instability and even crashes. No guarantees or comprehensive user guides can be provided with this file, if you choose to use it, you must do so at your own risk.\r\n</p>\r\n\r\n<p>\r\n\t\_\r\n</p>\r\n\r\n<p>\r\n\t<strong>How to use this file in the game:</strong>\r\n</p>\r\n\r\n<p>\r\n\tAfter you install (see below), enter a city and press the key combination [CTRL] + [x] to open the cheat box. Right click anywhere within the cheat box, you will see a drop down list appear. You can now select a cheat from the list by clicking on it. After you have selected a cheat, press enter to confirm your selection.\r\n</p>\r\n\r\n<p>\r\n\tBelow is a list of all known cheat codes enabled by this file (as well as the standard game cheats) and a description of their effects. As the effects of some cheats are unknown, not all cheats have available descriptions.<br>\r\n\t\_\r\n</p>\r\n\r\n<p>\r\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"43861\" data-unique=\"diyzxsxp6\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2019_02/ExtraCheats.png.7f81cfd14dc2740e27142fa75d7ccee8.png\" style=\"\" alt=\"ExtraCheats.png\">\r\n</p>\r\n\r\n<p>\r\n\t\_\r\n</p>\r\n\r\n<p>\r\n\t<strong>UPDATE:</strong>\r\n</p>\r\n\r\n<p>\r\n\tTo fill in some unknowns Maxis has given me the details on a few of the missing descriptions.\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\t<strong>Barstuck </strong>- Once invoked, all of your small commercial services (low-density 1x3 lots) start turning into coffee bars, and then they stay that way forever.\r\n</p>\r\n\r\n<p>\r\n\t<strong>WatchMeMove </strong>- Enables animation stepping. After it is enabled, control-shift-alt-F11 and control-shift-alt-P implement animation stepping and pausing, respectively.\r\n</p>\r\n\r\n<p>\r\n\t<strong>GP </strong>&lt;on | off&gt; - Enables or disables game pause when you switch to another application. This is useful for if you go away from the game and you want it to sleep while it is in the background.\_\r\n</p>\r\n\r\n<p>\r\n\t<strong>Flora </strong>(on | off) | (preserve on | off) | (propogation on | off) | (blast &lt;splat_count&gt; &lt;per_splat_count&gt; &lt;splat radius&gt;)\r\n</p>\r\n\r\n<p>\r\n\tControls flora simulation parameters. By default, during city play flora simulation is on, preservation is off, and propogation is off. Preservation refers to the keeping of trees on land when the land is developed. Propogation refers to the spreading of seeds and automatic creation of new flora life in the city.\r\n</p>\r\n\r\n<p>\r\n\tExample(s)\r\n</p>\r\n\r\n<p>\r\n\tFlora on\r\n</p>\r\n\r\n<p>\r\n\tFlora preserve off\r\n</p>\r\n\r\n<p>\r\n\tFlora propogation on\r\n</p>\r\n\r\n<p>\r\n\tFlora blast 5 8 60\r\n</p>\r\n\r\n<p>\r\n\t\_\r\n</p>\r\n\r\n<p>\r\n\t<strong>Installation Instructions:</strong>\r\n</p>\r\n\r\n<p>\r\n\tExtract the file <strong>SimCity 4 Extra Cheats Plugin.dll</strong> to the root directory of your plugins folder. This means put the file in <strong>C:\\...\\My Documents\\SimCity 4\\Plugins</strong>. DO NOT put the file into a sub-folder, it will only work if placed into the main directory. Then enter your game and follow the instructions above.\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
     file: extra_cheats_plugin.zip
+    filename: extra_cheats_plugin.zip
     files:
       - Extra_Cheats_Plugin_01.jpg
       - Extra_Cheats_Plugin_02.jpg
@@ -2210,7 +2213,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_05_2014/5d12c6891edb0468eecd951049c52248-extra_cheats_plugin_01.jpg
     lastModified: 2009-02-17T11:06:37.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: SimCity 4 Extra Cheats Plugin
     sha256: 79b5259f47df4952950963acb703b38c62d9fd5498e6af0ef6792657e4087b6e
@@ -2292,6 +2295,7 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>No story with this mod. This is the first Radical mod I've done for mainstream release.<br>Please do not use this mod if you want your city to grow and develop as the original game<br>would allow. This mod is designed to do one thing, and that's to allow your city to grow<br>at an exponential rate.</p>\n<p>Modified all Comercial Service, Commercial Office and Industrial zone demand to skyrocket to 500% of what it was. Small income of </p>\n\n\t\t\t\t\t\t</body>"
     file: Plugin_090_SuperDemand3.zip
+    filename: Plugin_090_SuperDemand3.zip
     files:
       - Plugin_090_SuperDemand.dat
       - Readme.txt
@@ -2299,7 +2303,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0015/829a84916b0699a01c12bfd01e21dd5b-default.jpg
     lastModified: 2003-09-03T23:00:00.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Super Demand Ordinance
     sha256: 1bdbafc37154bcc33064dac84237bb9f03f40aa930e3d5d0daf75d5c0ba5cb88
@@ -2329,6 +2333,7 @@ assets:
     features:
       - simulator-crime
     file: CrimeDoesntPay.zip
+    filename: CrimeDoesntPay.zip
     files:
       - Plugin_Crimedoesntpay_modd.dat
       - Readme.txt
@@ -2336,7 +2341,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0016/8fbdad1ffaca73ab6dfbfdae3c995940-default.jpg
     lastModified: 2003-11-04T00:00:00.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Crime Doesn't Pay
     sha256: dd7bc13c0c4d5386d82efb409b7c11f20063b0d13699ff008598785cc96daffa
@@ -3547,6 +3552,7 @@ assets:
       - simtropolis/21293-industry-quadrupler
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tMany users of my <a href=\"https://community.simtropolis.com/files/file/21293-industry-quadrupler/\" rel=\"\">Industry Quadrupler</a> have requested a similar mod for Commercial Services. I originally created this mod almost seven years ago , but apparently never uploaded it here at Simtropolis, so I'm correcting that oversight now.\n</p>\n\n<p>\n\tThis mod allows you to double the number of jobs in all commercial service buildings, and I've provided alternates that allow you to triple the jobs from the largest ones and quadruple the jobs in the malls. The service buildings in the game are a little closer to reality in jobs provided than the industrial buildings were, so I didn't see a need to quadruple them all. As always with my mods, see the included readme file for full details.\n</p>\n\n<p>\n\tI have no plans to do a similar mod for commercial office; there is no need since the capacities of the office buildings are much more in line with reality.\n</p>\n\n<p>\n\tThis mod requires Rush Hour/Deluxe.\n</p>\n\n\t\t\t\t\t\t</body>"
     file: ServicesDoubler.zip
+    filename: ServicesDoubler.zip
     files:
       - LargeServicesDoubler.dat
       - LargeServicesTripler.dat
@@ -3558,7 +3564,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0017/9b9dbdb73f0a70e23fa9688ae7f7e8d6-screenshot.jpg
     lastModified: 2011-01-07T19:58:30.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Commercial Services Doubler
     sha256: d24d7721327b403dde563f96d4be9e3442df2268917b2cf85e06e991f3abb557
@@ -3944,4 +3950,4 @@ assets:
     url: https://community.simtropolis.com/files/file/925-first-national-bank-of-simnation/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

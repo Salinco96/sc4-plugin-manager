@@ -7,16 +7,17 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This resource pack is a collection of chain link fence props that can be used on any type of lot that requires\_security fencing.\_ The props in this pack may\_be used by other\_developers to enhance the appearance of their lots.</p>\n<p align=\"justify\">The pack contains two styles of fencing (with or without barb\_wire) and includes extra items such as diagonal fence sections, corner sections, pedestrian gates and automatic rolling styled gates.</p>\n<p>\_</p>\n<p align=\"center\">\_<strong>** This dependency has no dependencies.</strong></p>\n<p align=\"center\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG_SecurityFence_RESOURCE_100.zip
+    filename: PEG_SecurityFence_RESOURCE_100.zip
     files:
-      - PEGPROD/MODs/Security Fencing/readme_243.htm
-      - PEGPROD/MODs/Security Fencing/product_image.jpg
       - PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat
+      - PEGPROD/MODs/Security Fencing/product_image.jpg
+      - PEGPROD/MODs/Security Fencing/readme_243.htm
     images:
       - https://www.simtropolis.com/objects/screens/0026/e93137f82ebbfe8be9f12c8d2085c058-product_image.jpg
       - https://www.simtropolis.com/objects/screens/0026/e93137f82ebbfe8be9f12c8d2085c058-product_image1.jpg
     lastModified: 2008-02-06T08:17:17.000Z
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat:
@@ -150,6 +151,7 @@ assets:
       - simtropolis/26079-peg-spam-super-resource-pack
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"color:#c0392b;\"><strong>UPDATE: 04.07.2022</strong></span>\_- The\_<em>PEG_MTP_SUPER_TEXTURES_PACK.dat</em>\_has been replaced by the all inclusive\_<strong><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES.dat</strong>, which contains all, but the textures from the\_<a href=\"https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"SimPeg Agricultural Mod\">SPAM</abbr> Super Resource Pack</a>\_(<abbr title=\"Pegasus\">PEG</abbr>-SPAM_TEXTURES_RESOURCE_b200.dat), created and released by Pegasus from the entire collection (including: <abbr title=\"Coastal Development Kit\">CDK</abbr> and <abbr title=\"Coastal Development Kit 3\">CDK3</abbr>, <abbr title=\"Coastal Development Kit 3\">CDK3</abbr>-<abbr title=\"Old Wooden Waterfront\">OWW</abbr>, <abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr> and Marina, Utopia, CSK, PPonds etc...). This update brings all these textures under one DAT (which actually already have held 2/3 of the textures created by Pegasus). Bear in mind this is only part one of a major update and clean-up of this dependency pack focusing on the textures for now.\_\n</p>\n\n<p>\n\tFor the full list of texture contents please check the included *-index.jpg files.\_\n</p>\n\n<p>\n\t<u>Install</u>: copy/extract the\_<strong>PEGPROD\_</strong>parent folder into your plugins. If you extracted the\_<em>_Documents</em>* folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>\n\tIn the\__Documents\_folder you will find 2 other subfolders:\n</p>\n\n<ul>\n\t<li>\n\t\t<strong><abbr title=\"Pegasus\">PEG</abbr> Readmes</strong>: this folder will be the generic storage of all the readmes and images for the future updated PEGProd contents. This folder also contains the texture catalague index images of the base and overlay textures and the optional EU and <abbr title=\"RealRailway\">RRW</abbr> (Real-RailWay) texture overrides.\n\t</li>\n\t<li>\n\t\t<strong><abbr title=\"Pegasus\">PEG</abbr> Optional Texture Overrides</strong>: as a temporary solution it contains the\_<strong><em><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES_EUOverride.dat</em></strong>\_and\_<strong><em><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES_RRWOverride.dat</em></strong>\_files. To use either or both of the files, simply move/copy them into the main\_<em>PEGPROD\\Mountain Theme Pack\\_MTP SUPER PACK\\</em>\_folder, but make sure they load after the\_<abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES.dat.\n\t</li>\n</ul>\n\n<p>\n\tThe <span style=\"color:#c0392b;\"><strong>v1.5</strong></span> update is the first part of a collection wide update and cleanup focusing of the textures only. While the original textures and props where created by Pegasus and his team, this (and the following) update was made by the\_<a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/779745-stex-custodian/?do=hovercard\" data-mentionid=\"779745\" href=\"https://community.simtropolis.com/profile/779745-stex-custodian/\" id=\"ips_uid_6281_6\" rel=\"\">@STEX Custodian</a>\_(with the permission of Pegasus).\n</p>\n\n<p align=\"justify\">\n\t--------------------------------------------------------------------------------------------------------------------------------\n</p>\n\n<p align=\"justify\">\n\t<strong>Faster than a speeding Llama... </strong>( <em>a really old one... with gout </em>)<strong>...</strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>More Powerful than my breath after a Tequila and burrito binge...... </strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>Able to leap tall brown gift boxes in a single install.</strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>\"LOOK !! Up on the <abbr title=\"Simtropolis Exchange\">STEX</abbr> !! Its a Mod !! Its a Lot !! Its...</strong> its...\"\n</p>\n\n<p>\n\t\"Oh forget it. Its just a dependency.\"\n</p>\n\n<p align=\"justify\">\n\tYou asked for it! And now you got it! The all-inclusive... the all encapsulating...one size fits all... <span style=\"font-weight:bold;color:rgb(0,82,0);\"><font color=\"#005b00\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK !!</font></span><br>\n\t<br>\n\t<em>* Tights &amp; Cape sold separately. Tights void where prohibited. Do not wear capes near jet aircraft engines. Installation of the SUPER PACK may not enable you to fly.</em><br>\n\t<br>\n\tThe <span style=\"font-weight:bold;color:rgb(0,82,0);\"><font color=\"#005b00\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK </font></span>combines all the standard <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependencies into a single download... and also includes a substantial amount of new material that will be used in future development. This file will be the primary <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependency listed on all future <abbr title=\"Mountain Theme Pack\">MTP</abbr> lots.\n</p>\n\n<hr>\n<p align=\"justify\">\n\t<strong><em><font color=\"#800000\">Please Note</font></em></strong>: This dependency contains no material that alters the appearance ofgame default props or textures... and will not interfere in any way with playing a non-<abbr title=\"Mountain Theme Pack\">MTP</abbr> or rural themed city.\n</p>\n\n<hr>\n<p align=\"justify\">\n\t<br>\n\tThe <font color=\"#008000\"><strong><font color=\"#006633\"><font color=\"#008000\"><strong><font color=\"#005900\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK </font></strong></font></font></strong></font>combines both <abbr title=\"Mountain Theme Pack\">MTP</abbr> props and textures into a single download. However, it will install props and textures as separate files to make any future updates easier and faster.\n</p>\n\n<p align=\"justify\">\n\tThe <strong><font color=\"#008000\"><font color=\"#005300\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPERPACK</font> </font></strong>replaces the following previous <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependencies... which can now be removed from your Plugins folder:\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr> Mountain Theme Pack</font></strong><br>\n\t( <em>PEG_MTP_RESOURCE_vol1.dat</em> &amp; <em>PEG_MTP_TEXTURES_vol1.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Mountain Theme Pack\">MTP</abbr> Texture Pack Volume 2</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_TEXTURES_vol2.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Mountain Theme Pack\">MTP</abbr> Resource Pack 2 [beta]</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_RESOURCE2_b102.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr> Pine Tree Mod [ resource file only ]</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_GM-TreeMod_RESOURCE</em> )<br>\n\t<br>\n\t<strong>** This dependency has <u>no</u> dependencies.\_</strong><br>\n\t<br>\n\t<strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\" style=\"color:rgb(51,122,183);\">here</a></u></strong>.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tModerator note (September 9th 2018):<br>\n\tFile updated to version 1.02 from the old <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" id=\"ips_uid_6281_5\" rel=\"\">@Tyberius06</a>\_for providing the updated files). The older v1.01 is available in the changelog section below.\n</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG-MTP MTP SUPER-PACK v1.5.zip
+    filename: PEG-MTP MTP SUPER-PACK v1.5.zip
     files:
       - PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG-SUPER_TEXTURES.dat
       - PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat
@@ -166,7 +168,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0003/0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
     lastModified: 2022-07-04T23:38:52.000Z
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat:
@@ -292,11 +294,11 @@ assets:
           model: 0e935ca0
           name: peg_log-short
         10fcaf88:
-          family: a0001467
+          family: a0001467,a0001468
           model: b0fa038b
           name: PEG-MTP_BillBoards-Large
         10fcb2a3:
-          family: a0001466
+          family: a0001466,a0001468
           model: 50f9f1f2
           name: MTP_BillBoardS_Farmers
         296f0000:
@@ -323,7 +325,7 @@ assets:
           model: 52fdadae
           name: peg_logcabin_s3
         30fcb2c2:
-          family: a0001466
+          family: a0001466,a0001468
           model: 50f9f059
           name: MTP_BillBoardS_Hat
         '4e439577':
@@ -370,19 +372,19 @@ assets:
           model: 12fdba5b
           name: peg_logcabin_s4
         70fcaf69:
-          family: a0001467
+          family: a0001467,a0001468
           model: b0fa04db
           name: PEG-MTP_BillBoards-Large
         70fcafcf:
-          family: a0001467
+          family: a0001467,a0001468
           model: 70fa0667
           name: PEG-MTP_BillBoards-Large
         70fcb27a:
-          family: a0001466
+          family: a0001466,a0001468
           model: f0f9ee57
           name: MTP_BillBoardS_Sugar
         70fcb2e8:
-          family: a0001466
+          family: a0001466,a0001468
           model: 30f9eeaa
           name: MTP_BillBoardS_Coffee
         71415d7b:
@@ -445,23 +447,23 @@ assets:
           model: d2fc444b
           name: peg_coral-fence
         d0fc8c9b:
-          family: a0001466
+          family: a0001466,a0001468
           model: d0f9e92c
           name: MTP_BillBoard_SmokeyBear
         d0fcaf4a:
-          family: a0001467
+          family: a0001467,a0001468
           model: b0fa07bb
           name: PEG-MTP_BillBoards-Large
         d0fcafaf:
-          family: a0001467
+          family: a0001467,a0001468
           model: 90fa0b65
           name: PEG-MTP_BillBoards-Large
         d0fcb22f:
-          family: a0001466
+          family: a0001466,a0001468
           model: f0f9fc5f
           name: MTP_BillBoardS_Overalls
         d0fcb3b7:
-          family: a0001466
+          family: a0001466,a0001468
           model: b0f9efc0
           name: MTP_BillBoardS_Boots
         ed34eaf7:
@@ -496,7 +498,7 @@ assets:
           model: 70fa0287
           name: PEG-MTP_BillBoards-Large
         f0fcb25c:
-          family: a0001466
+          family: a0001466,a0001468
           model: f0f9f979
           name: MTP_BillBoardS_JohnDeere
         f6258e35:
@@ -2169,6 +2171,7 @@ assets:
     features:
       - developer-ir
     file: PEG_SPAM_FULL-MOD.zip
+    filename: PEG_SPAM_FULL-MOD.zip
     files:
       - PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_D_FarmMarket_90001340.SC4Lot
       - PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_D_Shed_90001300.SC4Lot
@@ -3840,7 +3843,7 @@ assets:
           textures:
             - 25d90000
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
@@ -4106,7 +4109,7 @@ assets:
           model: 18d84fbc-0055
           name: PEG-MTPA_Elevator-Large_Wood
         029e1d09:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-Mod_OPEN
         04996c10:
           model: b917b147
@@ -4152,13 +4155,13 @@ assets:
           model: f918053c
           name: PEG-MTP_Fence_2-rail_Whilte_16m_GATE
         1e0f0aa0:
-          family: a0001543
+          family: a0001543,a0001545
           model: d922217c
           name: PEG-MTPA_SAS_Trailer_Semi-silver_247
         21e651ca:
           name: PEG-MTPA_Cattle-Guernsey1
         22a7e8e8:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-silver
         278a1653:
           family: a0001547
@@ -4186,14 +4189,14 @@ assets:
           model: b920bf52
           name: PEG-MTPA_Texas Gate
         2fceafee:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-004a
           name: PEG-MTPA_GrainSilo_Metal
         31d610f7:
           model: b91b80ff
           name: PEG-MTPA_DecTree_Elm_Tall
         3361e82c:
-          family: a0001541
+          family: a0001541,a0001549
           model: f9261142
           name: PEG-MTPA_SAS_FarmTractor_Green_247
         3408420b:
@@ -4214,7 +4217,7 @@ assets:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-black_11-2
         3cc45c3a:
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_sas
         3e742df3:
           family: a0001541
@@ -4277,14 +4280,14 @@ assets:
           model: f91fd189
           name: PEG-MTPA_MapleTree01_Small
         5199ea71:
-          family: a0001543
+          family: a0001543,a0001545
           model: d922270f
           name: PEG-MTPA_SAS_Trailer_Semi-white_247
         5597d3cc:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-70sFord-green_5-22
         604fb95d:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0046
           name: PEG-MTPA_BarnSilo_Metal
         6345538a:
@@ -4292,7 +4295,7 @@ assets:
           model: '79233952'
           name: PEG-MTPA_SAS_Van-sas_247
         '69755213':
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_silver2
         6a3fcb62:
           model: b993898f
@@ -4309,7 +4312,7 @@ assets:
           model: 191634a9
           name: PEG-MTPA_Elevator-Large_White
         6fc6c06d:
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_silver1
         725f1723:
           model: b91d0927
@@ -4321,14 +4324,14 @@ assets:
         '76417603':
           name: PEG-MTPA_CattleCar_RR
         78e0133c:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-0048
           name: PEG-MTPA_GrainSilo_Concrete
         791b99b3:
           model: 5917a513
           name: PEG-MTP_Fence_2-rail_16m
         7b3842f5:
-          family: a0001541
+          family: a0001541,a0001549
           model: 5926301a
           name: PEG-MTPA_SAS_FarmTractor_Red_247
         7d8deb60:
@@ -4338,17 +4341,17 @@ assets:
           family: a0001546
           name: PEG-MTPA_SAS_Dumptruck_empty
         80bf922e:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-sas
         8152e0a5:
           family: a0001509
           model: 18d84fbc-000c
           name: PEG-MTPA_DairyFarm_Yellow
         8214eb02:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-sas_EMPTY
         '8217e157':
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: 19155dfd
           name: PEG-MTPA_Barn02_White
         843aca4f:
@@ -4372,7 +4375,7 @@ assets:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-white_4-20
         932806d3:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-sas
         94435f4f:
           family: a0001509
@@ -4437,11 +4440,11 @@ assets:
           family: a0001542
           name: PEG-MTPA_SAS_Bobtail-sas_silver
         abacb128:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0047
           name: PEG-MTPA_BarnSilo_Red
         aed3101d:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-white
         b063964b:
           model: 791d1da5
@@ -4471,14 +4474,14 @@ assets:
           model: 18d84fbc-003f
           name: PEG-MTPA_Greenhouse01
         b8ebd3a2:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: f9161376
           name: PEG-MTPA_Barn-Basic_red
         bb3725a3:
           family: a0001546
           name: PEG-MTPA_SAS_Dumptruck_Maters_sas
         bdfbee7c:
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: 19154faa
           name: PEG-MTPA_Barn-Fancy_Red
         bf516f60:
@@ -4497,10 +4500,10 @@ assets:
           model: 591b3753
           name: PEG-MTPA_DecTree_Tupelo1_Tall
         c56fd41c:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-Mod
         c721a958:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: f9291d5c
           name: PEG-MTPA_Barn-Basic_wood
         c76943f6:
@@ -4510,15 +4513,15 @@ assets:
           model: 18d84fbc-002e
           name: PEG-MTPA_Windmill_Wood
         c8fc183b:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: 59161e9b
           name: PEG-MTPA_Barn-Basic_white
         cc1e7e17:
-          family: a0001543
+          family: a0001543,a0001545
           model: '39221662'
           name: PEG-MTPA_SAS_Trailer_Semi-sas_247
         ce4c847d:
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: '19156090'
           name: PEG-MTPA_Barn02_Wood
         d0ac71c3:
@@ -4579,14 +4582,14 @@ assets:
           family: a000154a
           name: PEG-MTPA_SAS_FarmTractor_Green_rnd
         f81118e4:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0002
           name: PEG-MTPA_BarnSilo_Wood
         fa74cf68:
           family: a0001547
           name: PEG-MTPA_SAS_WaterTruck_Small_sas
         fb0aea1e:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-0049
           name: PEG-MTPA_GrainSilo_Red
         ffb26053:
@@ -4641,7 +4644,6 @@ assets:
         - 1da44d15
         - 1da44d5a
         - 1da44d60
-        - 1da44d65
         - 1da44d70
         - 1da44d75
         - 1da44d7a
@@ -4649,6 +4651,7 @@ assets:
         - 1da44d85
         - 1da44d8a
         - 1da44d90
+        - 1da44d65
         - 1da44d50
         - 1da44d4a
         - 1da44d45
@@ -4772,6 +4775,7 @@ assets:
       - simtropolis/27712-the-peg-terrain-kit-7-n-1
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<strong><span style=\"color:#800000;\">The <abbr title=\"Pegasus\">PEG</abbr> Terrain Kit (7 n 1)</span></strong><br>\n\t<strong><span style=\"color:#800000;\">By Pegasus</span></strong><br>\n\t<br>\n\tThis package contains a number of separate files, mainly <em>Mayor Mode Ploppables </em>(MMP) that are widely used for terrain detailing.<br>\n\t<br>\n\tThe number of available files has been continuously growing over the years - causing a steadily growing list of dependencies as well, tedious to keep track of, download one-by-one or having to list them again and again.<br>\n\t<br>\n\tTo make things easier we decided to organize a selection of these files into one single pack, so for users it will be much easier to download, while producers can just list them as a single dependency. Since most of these files are very slim, we feel this is appropriate - it is not a huge pack to download and it's organized to leave you in full control which items to load into your plugins.<br>\n\t<br>\n\t<br>\n\t<strong>The 'Kit' bundles the following sets:</strong><br>\n\t<br>\n\t* <a href=\"https://community.simtropolis.com/files/file/21661-peg-ppond-kit/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> PPond Kit</a><br>\n\t* <strong><abbr title=\"Pegasus\">PEG</abbr> PP Lot Editor Terrain Props</strong> (Only available in this package)<br>\n\t* <a href=\"https://community.simtropolis.com/files/file/22701-peg-ppond-terrain-props-pack-1/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> PPond Terrain Prop Pack 1</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20916-peg-mtp-mayor-mode-forest-scenes/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Mode Forest Scenes</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20915-peg-mtp-mayor-mode-flora-mod/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Mode Flora Mod</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20895-peg-mtp-mayor-menu-logging-scenes/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Menu Logging Scenes</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20930-peg-mtp-mayor-menu-scrub-brush-mod/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Menu Scrub Brush Mod</a><br>\n\t<br>\n\t<strong>NOTICE</strong><br>\n\t<br>\n\tThere is <strong>NO NEW MATERIAL</strong> in this package. It is merely a compilation of previously published material. And of course every single component will stay available on the<strong> </strong><abbr title=\"Pegasus Lot Exchange\">PLEX</abbr><strong> </strong>as well.<br>\n\t<br>\n\tSo those of you that have been <abbr title=\"Mountain Theme Pack\">MTP</abbr>'ing for some time will not need this pack as you most probably have downloaded all the individual sets long time ago... But all folks new to <abbr title=\"Mountain Theme Pack\">MTP</abbr> or terrain detailing or even preparing a fresh install might find this useful.<br>\n\t<br>\n\tWhen you unpack this download you'll find a folder 'Documentation' including the following material -<br>\n\t<br>\n\t* complete set of the original ReadMe files with images<br>\n\t* complete listing of all included files, useful for version control<br>\n\t* <s>complete listing of URLs pointing to the (still available) individual downloads</s><br>\n\t\_ ^ Contains a URL_Individual.txt file which all point to the now lost SimPeg website.<br>\n\t* a few notes on this or that... ;-)<br>\n\t<br>\n\tStore the documentation anywhere outside your Plugins, for future reference...\n</p>\n\n<p>\n\t<strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\" style=\"color:rgb(51,122,183);\">here</a></u></strong>.<br>\n\t<br>\n\t<img alt=\"pdt_logo01.png\" class=\"ipsImage\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\">\n</p>\n\n<p>\n\t<br>\n\t<strong><span style=\"color:#2980b9;\">-Cori Edit: </span></strong><span style=\"color:#2980b9;\">Updated linkys to individual packs and mods.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
     file: The_Terrain_Kit.zip
+    filename: The_Terrain_Kit.zip
     files:
       - The_Terrain_Kit/Documentation/FileList.txt
       - The_Terrain_Kit/Documentation/Note_on_Original_ReadMe_Files.txt
@@ -4851,7 +4855,7 @@ assets:
           textures:
             - 261f0000
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     mmps:
       The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat:
@@ -5472,4 +5476,4 @@ assets:
     url: https://community.simtropolis.com/files/file/30648-peg-cdk-tutorial/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

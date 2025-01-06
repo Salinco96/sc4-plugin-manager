@@ -222,6 +222,7 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\_</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: You do not need this pack if you</strong><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span><br><br>This package is the main dependency for all things SPAM - from the main mod to most of the current or future additional sets. This standalone version is meant for all players who do not want to use the full mod but still wish to play with lots and items that utilize these props and textures.<br><br><br>The SPAM SUPER PACK combines all SPAM props and textures into a single download. However, it will install props and textures as separate files to make any uture updates easier and faster.<br><br><strong><span>INCLUDED</span></strong><br><br>* SPAM_Resource<br>All models and props used for the agricultural mod<br><br>* SPAM_Crops_Resource<br>All models and props for the seasonal crop varieties<br><br>* SPAM_Textures<br>All textures used in the agricultural mod</p><div style=\"text-align:center;\"><p><span style=\"color:#FF0000;\"><strong>NOTE: This pack includes no lots!</strong><br><strong>AGAIN: You do not need this pack if you</strong><br><strong>already downloaded / plan to download the full</strong><br><strong>SIMPEG AGRICULTURAL MOD (SPAM)!</strong></span></p><p><br>You can use all the material for your own lotting projects. However, you may not include any of these items with your uploads - please point to this pack as a dependency!<br><br><strong><span>DEPENDENCIES</span></strong><br><br>This dependency has no dependencies :-)<br><br>* The entire PEG SPAM collection is available on the <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (on the) <abbr title=\"Simtropolis Exchange\">STEX</abbr>.<br><br><img class=\"ipsImage\" alt=\"pdt_logo01.png\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\"></p></div></div><p style=\"line-height:22px;text-align:center;\"><strong><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\">here.</a></u></strong></p>\n\n\t\t\t\t\t\t</body>"
     file: PEG_SPAM_SUPER_RESOURCE.zip
+    filename: PEG_SPAM_SUPER_RESOURCE.zip
     files:
       - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat
       - PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat
@@ -430,7 +431,7 @@ assets:
           textures:
             - 25d90000
     meta:
-      timestamp: 2024-12-13T10:16:33.532Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
@@ -684,7 +685,7 @@ assets:
           model: 18d84fbc-0055
           name: PEG-MTPA_Elevator-Large_Wood
         029e1d09:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-Mod_OPEN
         04996c10:
           model: b917b147
@@ -730,13 +731,13 @@ assets:
           model: f918053c
           name: PEG-MTP_Fence_2-rail_Whilte_16m_GATE
         1e0f0aa0:
-          family: a0001543
+          family: a0001543,a0001545
           model: d922217c
           name: PEG-MTPA_SAS_Trailer_Semi-silver_247
         21e651ca:
           name: PEG-MTPA_Cattle-Guernsey1
         22a7e8e8:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-silver
         278a1653:
           family: a0001547
@@ -764,14 +765,14 @@ assets:
           model: b920bf52
           name: PEG-MTPA_Texas Gate
         2fceafee:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-004a
           name: PEG-MTPA_GrainSilo_Metal
         31d610f7:
           model: b91b80ff
           name: PEG-MTPA_DecTree_Elm_Tall
         3361e82c:
-          family: a0001541
+          family: a0001541,a0001549
           model: f9261142
           name: PEG-MTPA_SAS_FarmTractor_Green_247
         3408420b:
@@ -792,7 +793,7 @@ assets:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-black_11-2
         3cc45c3a:
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_sas
         3e742df3:
           family: a0001541
@@ -855,14 +856,14 @@ assets:
           model: f91fd189
           name: PEG-MTPA_MapleTree01_Small
         5199ea71:
-          family: a0001543
+          family: a0001543,a0001545
           model: d922270f
           name: PEG-MTPA_SAS_Trailer_Semi-white_247
         5597d3cc:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-70sFord-green_5-22
         604fb95d:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0046
           name: PEG-MTPA_BarnSilo_Metal
         6345538a:
@@ -870,7 +871,7 @@ assets:
           model: '79233952'
           name: PEG-MTPA_SAS_Van-sas_247
         '69755213':
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_silver2
         6a3fcb62:
           model: b993898f
@@ -887,7 +888,7 @@ assets:
           model: 191634a9
           name: PEG-MTPA_Elevator-Large_White
         6fc6c06d:
-          family: a0001543
+          family: a0001543,a0001548
           name: PEG-MTPA_SAS_Trailer-Tanker_silver1
         725f1723:
           model: b91d0927
@@ -899,14 +900,14 @@ assets:
         '76417603':
           name: PEG-MTPA_CattleCar_RR
         78e0133c:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-0048
           name: PEG-MTPA_GrainSilo_Concrete
         791b99b3:
           model: 5917a513
           name: PEG-MTP_Fence_2-rail_16m
         7b3842f5:
-          family: a0001541
+          family: a0001541,a0001549
           model: 5926301a
           name: PEG-MTPA_SAS_FarmTractor_Red_247
         7d8deb60:
@@ -916,17 +917,17 @@ assets:
           family: a0001546
           name: PEG-MTPA_SAS_Dumptruck_empty
         80bf922e:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-sas
         8152e0a5:
           family: a0001509
           model: 18d84fbc-000c
           name: PEG-MTPA_DairyFarm_Yellow
         8214eb02:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-sas_EMPTY
         '8217e157':
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: 19155dfd
           name: PEG-MTPA_Barn02_White
         843aca4f:
@@ -950,7 +951,7 @@ assets:
           family: a0001541
           name: PEG-MTPA_SAS_Pickup-white_4-20
         932806d3:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-sas
         94435f4f:
           family: a0001509
@@ -1015,11 +1016,11 @@ assets:
           family: a0001542
           name: PEG-MTPA_SAS_Bobtail-sas_silver
         abacb128:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0047
           name: PEG-MTPA_BarnSilo_Red
         aed3101d:
-          family: a0001543
+          family: a0001543,a0001545
           name: PEG-MTPA_SAS_Trailer_Semi-white
         b063964b:
           model: 791d1da5
@@ -1049,14 +1050,14 @@ assets:
           model: 18d84fbc-003f
           name: PEG-MTPA_Greenhouse01
         b8ebd3a2:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: f9161376
           name: PEG-MTPA_Barn-Basic_red
         bb3725a3:
           family: a0001546
           name: PEG-MTPA_SAS_Dumptruck_Maters_sas
         bdfbee7c:
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: 19154faa
           name: PEG-MTPA_Barn-Fancy_Red
         bf516f60:
@@ -1075,10 +1076,10 @@ assets:
           model: 591b3753
           name: PEG-MTPA_DecTree_Tupelo1_Tall
         c56fd41c:
-          family: a0001543
+          family: a0001543,a0001544
           name: PEG-MTPA_SAS_Trailer_Grain-Mod
         c721a958:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: f9291d5c
           name: PEG-MTPA_Barn-Basic_wood
         c76943f6:
@@ -1088,15 +1089,15 @@ assets:
           model: 18d84fbc-002e
           name: PEG-MTPA_Windmill_Wood
         c8fc183b:
-          family: a0001507
+          family: a0001507,a000150d,a0001515
           model: 59161e9b
           name: PEG-MTPA_Barn-Basic_white
         cc1e7e17:
-          family: a0001543
+          family: a0001543,a0001545
           model: '39221662'
           name: PEG-MTPA_SAS_Trailer_Semi-sas_247
         ce4c847d:
-          family: a0001507
+          family: a0001507,a000150d,a0001517
           model: '19156090'
           name: PEG-MTPA_Barn02_Wood
         d0ac71c3:
@@ -1157,14 +1158,14 @@ assets:
           family: a000154a
           name: PEG-MTPA_SAS_FarmTractor_Green_rnd
         f81118e4:
-          family: a000150b
+          family: a000150b,a000150d
           model: 18d84fbc-0002
           name: PEG-MTPA_BarnSilo_Wood
         fa74cf68:
           family: a0001547
           name: PEG-MTPA_SAS_WaterTruck_Small_sas
         fb0aea1e:
-          family: a000150e
+          family: a000150e,a000150f
           model: 18d84fbc-0049
           name: PEG-MTPA_GrainSilo_Red
         ffb26053:
@@ -1219,7 +1220,6 @@ assets:
         - 1da44d15
         - 1da44d5a
         - 1da44d60
-        - 1da44d65
         - 1da44d70
         - 1da44d75
         - 1da44d7a
@@ -1227,6 +1227,7 @@ assets:
         - 1da44d85
         - 1da44d8a
         - 1da44d90
+        - 1da44d65
         - 1da44d50
         - 1da44d4a
         - 1da44d45
@@ -1514,4 +1515,4 @@ assets:
     url: https://community.simtropolis.com/files/file/33196-spam-commercial-growable-cs/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

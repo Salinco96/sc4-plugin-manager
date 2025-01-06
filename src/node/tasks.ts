@@ -16,7 +16,7 @@ export function createContext(
 ): TaskContext {
   const prefix = `[${key}]`
 
-  return {
+  const context: TaskContext = {
     key,
     progress: null,
     step: null,
@@ -34,17 +34,17 @@ export function createContext(
     },
     setProgress(current, total) {
       const progress = Math.floor(100 * (current / total))
-      if (this.progress !== progress) {
-        this.progress = progress
-        if (this.step) {
-          onStatusUpdate?.({ step: this.step, progress })
+      if (context.progress !== progress) {
+        context.progress = progress
+        if (context.step) {
+          onStatusUpdate?.({ step: context.step, progress })
         }
       }
     },
     setStep(step) {
-      if (this.step !== step) {
-        this.progress = null
-        this.step = step
+      if (context.step !== step) {
+        context.progress = null
+        context.step = step
         if (step) {
           onStatusUpdate?.({ step })
         } else {
@@ -56,4 +56,6 @@ export function createContext(
       console.warn(prefix, ...params)
     },
   }
+
+  return context
 }

@@ -25,6 +25,7 @@ export async function extractRecursively(
 
   const archivePaths = await glob("*.{7z,exe,jar,msi,rar,zip}", {
     cwd: basePath,
+    ignore: ["cicdec.exe", "7z*.exe"],
     matchBase: true,
     nodir: true,
   })
@@ -32,12 +33,6 @@ export async function extractRecursively(
   if (archivePaths.length) {
     for (const archivePath of archivePaths) {
       const archiveFullPath = path.join(basePath, archivePath)
-
-      // Skip tools
-      // TODO: Indicate this in package config somehow?
-      if (archivePath.match(/(cicdec\.exe|7z.*\.exe)$/i)) {
-        continue
-      }
 
       // Skip OpenJDK (from the NAM download), $PLUGINSDIR (from the CAM download), 4GB Patch, etc.
       // TODO: Indicate this in package config somehow?
@@ -80,6 +75,7 @@ export async function extract(
       try {
         await extractClickTeam(archivePath, extractPath, options)
       } catch (_error) {
+        console.error(_error)
         await extract7z(archivePath, extractPath, options)
       }
       break

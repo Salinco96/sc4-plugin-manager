@@ -2,6 +2,12 @@ import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { input, select } from "@inquirer/prompts"
 
+export async function promptCategoryLabel(): Promise<string> {
+  return await input({
+    message: "Category label:",
+  })
+}
+
 export async function promptAuthorName(hint?: string): Promise<string> {
   return await input({
     default: hint,

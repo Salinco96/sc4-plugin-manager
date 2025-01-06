@@ -26,7 +26,7 @@ export class DownloadTransformStream extends Transform {
 
   public override _transform(
     chunk: Buffer,
-    encoding: BufferEncoding,
+    _encoding: BufferEncoding,
     callback: TransformCallback,
   ): void {
     this.hash.update(chunk)

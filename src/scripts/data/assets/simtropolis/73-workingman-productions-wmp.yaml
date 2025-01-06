@@ -155,14 +155,15 @@ assets:
       - simtropolis/33620-wmp-essentials-v101
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe Bridges of Shoreline County, batte(re)d &amp; lotted by DocRorlach WorkingMan BATtery\n</p>\n\n<p>\n\tA series of eye-candy only bridges for both rural and urban areas. All bridges, with the exception of the transit-enabled version of the Wooden Bridge (5x1), are 1x1 lots with the respective bridge off-set. The covered bridges and the standard wooden bridge are for heights up to 8m; the Hang Ten bridge can cover variable heights and even small rivers or bays. The Pont Tarielle and the transit-enabled Wooden Bridge have a clearing height of 5m which is sufficient for cars but not for trucks or buses. Covered bridges have a clearing height of 7.5m. All lots come with a transparent base, and should work well with ploppable water.\n</p>\n\n<p>\n\t<strong>Lot Details and Information can be found in the readme. Read it.</strong>\n</p>\n\n<table bgcolor=\"#FFFFFF\" border=\"0\" cellpadding=\"4\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"2\">\n\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<strong>Dependencies</strong>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"2\">\n\t\t\t\t<div>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tTo ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\tRequired WMP Dependencies:\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong>wmp_bridge_props_v2.dat</strong>\_(INCLUDED) (Models/props and custom paths for the TE bridge. It also contains the models for the\_<strong>Abteibruecke</strong>)\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong><a href=\"https://community.simtropolis.com/files/file/33621-wmp-mega-props-vol-01-misc-general-props/\" rel=\"\">WMP Mega Props vol. 01 - Misc General Props</a></strong>\_and for the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3970\" rel=\"external nofollow\" title=\"WMP Mega Props vol. 01\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Link</a></strong>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong><a href=\"https://community.simtropolis.com/files/file/33620-wmp-essentials-v10/\" rel=\"\" title=\"Custom UI, Building examplars\">WMP Essentials v1.0\_</a></strong>and for the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3975\" rel=\"external nofollow\" title=\"WMP Essentials v1.0\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Link</a></strong>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask<span>\_</span><a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\" style=\"color:#ffffff;font-size:12.6px;padding:0px 5px;\">@Tyberius06</a></em>.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Credits</strong>:\n</p>\n\n<ul style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<li>\n\t\t<div>\n\t\t\t<em><u>Original Creditings</u></em>: Thanks to everyone around the Pegasus site for their help with our first attempts at the <abbr title=\"Building Architect Tool\">BAT</abbr>. Credit for the custom pathing of the wooden bridge goes to rivit, ever the expert.\n\t\t</div>\n\t</li>\n\t<li>\n\t\t<div>\n\t\t\t<em><u>Additional Credits:</u></em>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\t<b>DocRorlach</b><span>\_</span>and the<span>\_</span><b>WMP team</b><span>\_</span>and his associates for creating the models, props and the original lots.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tTyberius06 (STEX Custodian) and xxdita for the restoration/rehosting of these contents.\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</li>\n</ul>\n\n<div style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Support</strong>:\n</div>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">here</a>\_or in the<span>\_</span><a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\" style=\"background-color:transparent;color:#1f5e8d;\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n<p>\n\t(These very same lots can be/will be found on the <strong><a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> </a></strong>too, look for the <strong>WMP </strong>contents.)\_\n</p>\n\n\t\t\t\t\t\t</body>"
     file: WMP The Bridges of Shoreline County.zip
+    filename: WMP The Bridges of Shoreline County.zip
     files:
-      - _Documents/wmp_bridges_readme.html
-      - _Documents/images/workingman_lottery.png
-      - _Documents/images/sc4t_footer2.png
-      - _Documents/images/bridges08.jpg
-      - _Documents/images/bridge7.jpg
-      - WMP/Props/wmp_bridge_props_v2.dat
       - WMP/DocRorlach/The Bridges of Shoreline County/WMP_Bridges_Lots_v2.dat
+      - WMP/Props/wmp_bridge_props_v2.dat
+      - _Documents/images/bridge7.jpg
+      - _Documents/images/bridges08.jpg
+      - _Documents/images/sc4t_footer2.png
+      - _Documents/images/workingman_lottery.png
+      - _Documents/wmp_bridges_readme.html
     images:
       - https://www.simtropolis.com/objects/screens/monthly_05_2011/95de0088b226f006c8422a54e40b96cb-bridge7.jpg
       - https://www.simtropolis.com/objects/screens/monthly_05_2011/e4fc78e773fff9e305842acb23c25327-susp_bridge02.jpg
@@ -228,7 +229,7 @@ assets:
             - dacf63c1
           size: 1x1
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       WMP/Props/wmp_bridge_props_v2.dat:
@@ -711,22 +712,23 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe<strong> WMP Essentials v1.0</strong> is a <strong><span style=\"color:#c0392b;\">must have dependency pack</span></strong> for all the previously released WMP custom contents by <strong>DocRorlach</strong>. It completely replaces the previously released wmp_dummies.dat file.<br>\n\t<br>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:#ffffff;font-size:14px;\">This is a\_</span>dependency package<span style=\"background-color:#ffffff;font-size:14px;\">, and it doesn't contain any ploppable or growable elements.</span></span></strong>\n</p>\n\n<p>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:#ffffff;font-size:14px;\"><u>DO NOT USE THIS PACK FOR YOUR OWN LOTTING PROJECTS!!!</u></span></span></strong>\n</p>\n\n<p>\n\tSince the original\_workingman-productions.co.uk/\_website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr></a>\_and\_<a href=\"https://community.simtropolis.com/files/category/73-workingman-productions-wmp/\" rel=\"\" title=\"Simtropolis Exchange - Workingman Productions (WMP)\">STEX</a>) as legacy contents on behalf of <strong>DocRorlach</strong>. For easier access and due to a more userfriendly approach, we put together these mega packs, which are completely replacing the previous smaller prop packs.\n</p>\n\n<p>\n\tIt is highly recommended to use the attached cleanitol file (<strong>WMP Essentials.cleanitol.txt</strong>) and remove all the listed contents. The best way to do it, if you use the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97\" rel=\"external nofollow\"><span style=\"color:#c0392b;\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong>\_tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.\n</p>\n\n<p>\n\tThis Essential file contains following elements from the previously released WMP creations:\n</p>\n\n<ul>\n\t<li>\n\t\t- all the previously released wmp dummies/blank model files\n\t</li>\n\t<li>\n\t\t- all the different WMP custom queries and UIs from the prop packs, resource files and lot sets.\n\t</li>\n\t<li>\n\t\t- all the custom made TE network paths for the WMP lots (the default paths in the WMP Essentials.dat support RHD setup)\n\t</li>\n\t<li>\n\t\t-<span>\_</span><b><span style=\"color:#c0392b;\">Since the original Causeway set and Boardwalk set had the same custom queries, a new UI property (with new <abbr title=\"Instance ID\">IID</abbr>) has been added which gives a slightly modified text to the WMP Murimk Boardwalks.</span> (NEW!!! WMP Essentials v1.0.1)</b>\n\t</li>\n\t<li>\n\t\t- as an addition IF you use\_<strong><span style=\"color:#c0392b;\">Left-Hand Drive (LHD) setup</span></strong>, you can find a LHD support file in the Documents folder. You need to place/copy that z___zWMP_LHD_Paths folder into the Plugins\\WMP\\Essentials\\ folder if you used the default/provided folder structue, otherwise it\_<span style=\"color:#c0392b;\"><strong>MUST\_load after</strong></span>\_the WMP Essentials.dat file.\n\t</li>\n</ul>\n\n<p>\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p>\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\">@Tyberius06</a></em>.\n</p>\n\n<p>\n\t<strong>Credits</strong>:\n</p>\n\n<ul>\n\t<li>\n\t\t<b>DocRorlach</b>, the<span>\_</span><b>WMP Team</b><span>\_</span>for creating these original contents: custom paths, UIs, dummie model files.\n\t</li>\n\t<li>\n\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t</li>\n\t<li>\n\t\txxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>\n\t\t\_\n\t</li>\n</ul>\n\n<div>\n\t<strong>Support</strong>:\n</div>\n\n<p>\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\">here</a>\_or in the <a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n\t\t\t\t\t\t</body>"
     file: WMP Essentials v1.0.1.zip
+    filename: WMP Essentials v1.0.1.zip
     files:
-      - _Documents/WMP Essentials.cleanitol.txt
-      - _Documents/WMP Essentials v1.0.html
-      - _Documents/z___zWMP_LHD_Paths/z___zWMP_LHD_Paths.dat
-      - _Documents/images/workingman_lottery.png
-      - _Documents/images/WMP Essentials 02.jpg
-      - _Documents/images/WMP Essentials 01.jpg
-      - _Documents/images/sc4t_footer2.png
       - WMP/Essentials/WMP Essentials.dat
+      - _Documents/WMP Essentials v1.0.html
+      - _Documents/WMP Essentials.cleanitol.txt
+      - _Documents/images/WMP Essentials 01.jpg
+      - _Documents/images/WMP Essentials 02.jpg
+      - _Documents/images/sc4t_footer2.png
+      - _Documents/images/workingman_lottery.png
+      - _Documents/z___zWMP_LHD_Paths/z___zWMP_LHD_Paths.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbdd9244bb2_WMPEssentials.jpg.dd3230029af5130cfe134bb921ad791f.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbdd94de456_WMPEssentials01.jpg.df0e06940c1a04c18670ef3b7278b547.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbdd9685da1_WMPEssentials02.jpg.6b0cd032a598b827cbc172090d896016.jpg
     lastModified: 2020-06-15T15:26:35.000Z
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       WMP/Essentials/WMP Essentials.dat:
@@ -755,20 +757,21 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe <strong>WMP Mega Props vol. 01</strong>\_is the first dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.\_<br>\n\t<br>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:rgb(255,255,255);font-size:14px;\">This is a\_</span>dependency package<span style=\"background-color:rgb(255,255,255);font-size:14px;\">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style=\"background-color:rgb(255,255,255);font-size:14px;\">Although it can be used for creating new lots with Maxis Lot Editor or\_</span><abbr title=\"Plugin Manager\">PIM</abbr><span style=\"background-color:rgb(255,255,255);font-size:14px;\">-X.</span></span></strong>\n</p>\n\n<p>\n\tSince the original\_workingman-productions.co.uk/\_website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr></a>\_and\_<a href=\"https://community.simtropolis.com/files/category/73-workingman-productions-wmp/\" rel=\"\" title=\"Simtropolis Exchange - Workingman Productions (WMP)\">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.\n</p>\n\n<p>\n\tIt is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97\" rel=\"external nofollow\"><span style=\"color:#c0392b;\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong>\_tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>\n\t<br>\n\t<span style=\"color:#c0392b;\"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>\n</p>\n\n<p>\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p>\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\">@Tyberius06</a></em>.\n</p>\n\n<p>\n\t<strong>Credits</strong>:\n</p>\n\n<ul>\n\t<li>\n\t\tDocRorlach and the WMP team for creating the models, props and the original prop packs.\n\t</li>\n\t<li>\n\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t</li>\n\t<li>\n\t\txxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>\n\t\t\_\n\t</li>\n</ul>\n\n<div>\n\t<strong>Support</strong>:\n</div>\n\n<p>\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\">here</a>\_or in the <a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n\t\t\t\t\t\t</body>"
     file: WMP Mega Props vol. 01 - Misc General Props.zip
+    filename: WMP Mega Props vol. 01 - Misc General Props.zip
     files:
-      - _Documents/WMP Mega Props vol. 1 pt.3_index.jpg
-      - _Documents/WMP Mega Props vol. 1 pt.2_index.jpg
-      - _Documents/WMP Mega Props vol. 1 pt.1_index.jpg
+      - WMP/Props/WMP Mega Props vol. 01 - Misc General Props.dat
       - _Documents/WMP Mega Props Vol. 01-05 cleanitol.txt
       - _Documents/WMP Mega Props vol. 01 - Misc General Props.html
-      - _Documents/images/workingman_lottery.png
-      - _Documents/images/WMP megapack vol 1-05.jpg
-      - _Documents/images/WMP megapack vol 1-04.jpg
-      - _Documents/images/WMP megapack vol 1-03.jpg
-      - _Documents/images/WMP megapack vol 1-02.jpg
+      - _Documents/WMP Mega Props vol. 1 pt.1_index.jpg
+      - _Documents/WMP Mega Props vol. 1 pt.2_index.jpg
+      - _Documents/WMP Mega Props vol. 1 pt.3_index.jpg
       - _Documents/images/WMP megapack vol 1-01.jpg
+      - _Documents/images/WMP megapack vol 1-02.jpg
+      - _Documents/images/WMP megapack vol 1-03.jpg
+      - _Documents/images/WMP megapack vol 1-04.jpg
+      - _Documents/images/WMP megapack vol 1-05.jpg
       - _Documents/images/sc4t_footer2.png
-      - WMP/Props/WMP Mega Props vol. 01 - Misc General Props.dat
+      - _Documents/images/workingman_lottery.png
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe359a69cd_WMPmegapackvol1.jpg.adcbee2b223e49ff84467e99c5366565.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe35ca8893_WMPmegapackvol1-01.jpg.e8f70cb8aaf78c2883dc6f44bfedf15f.jpg
@@ -778,7 +781,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe363f14ca_WMPmegapackvol1-05.jpg.8a4ccddb48c036b076e76e578443e5d9.jpg
     lastModified: 2020-05-25T15:25:45.000Z
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       WMP/Props/WMP Mega Props vol. 01 - Misc General Props.dat:
@@ -2954,4 +2957,4 @@ assets:
     url: https://community.simtropolis.com/files/file/33653-wmp-causeway-tutorial/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

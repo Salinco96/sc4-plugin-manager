@@ -967,16 +967,17 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This is a RESOURCE file for the <span style=\"font-weight:bold;color:rgb(0,0,102);\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Coastal Development Kit 3\">CDK3</abbr> Seaport</span> collection of lots. It is a required dependency, specifically, for the upcoming break-bulk freight dock lots and the new freight rail stations.</p>\n<p align=\"justify\">The pack contains a ton of static, timed and random rolling stock &amp; locomotive props. These are intended for use as props on various lots. These are NOT game automata... however, many will be released separately as such.</p>\n<p align=\"justify\">* As the game automata trains are considerably under scaled, these props are larger... and scaled to look more appropriate on lots with properly scaled structures, vehicles, peeps and other props.</p>\n<p align=\"justify\">** Players and developers may use these props on their own lots... subject to the terms of the EULA \_that is documented in the \_included readme file.\_<br>\_</p>\n<div style=\"text-align:center;\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</div>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
     file: PEG-CDK3_RailFleet_RESOURCE_100.zip
+    filename: PEG-CDK3_RailFleet_RESOURCE_100.zip
     files:
-      - ZZZZ_PEG SEAPORTS/Rail Fleet/readme_252.htm
-      - ZZZZ_PEG SEAPORTS/Rail Fleet/product_image.jpg
       - ZZZZ_PEG SEAPORTS/Rail Fleet/PEG_Rail-Fleet_RESOURCE.dat
+      - ZZZZ_PEG SEAPORTS/Rail Fleet/product_image.jpg
+      - ZZZZ_PEG SEAPORTS/Rail Fleet/readme_252.htm
     images:
       - https://www.simtropolis.com/objects/screens/0005/2486e017b6687d2453d8105021e06971-product_image.jpg
       - https://www.simtropolis.com/objects/screens/0005/2486e017b6687d2453d8105021e06971-product_image1.jpg
     lastModified: 2008-05-09T09:27:25.000Z
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       ZZZZ_PEG SEAPORTS/Rail Fleet/PEG_Rail-Fleet_RESOURCE.dat:
@@ -1770,4 +1771,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4527-peg-cdk-leveler-v205/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

@@ -1646,7 +1646,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0009/4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
     lastModified: 2020-05-25T21:46:54.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Small Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
@@ -1858,7 +1858,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0013/717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
     lastModified: 2020-05-25T21:47:19.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Medium Sized Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2005/thumb-717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
@@ -2939,7 +2939,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0009/47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-2.jpg
     lastModified: 2020-05-25T21:48:51.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Train Station Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2006/thumb-47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-1.jpg
@@ -5665,7 +5665,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0010/591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-21.jpg
     lastModified: 2020-05-25T21:48:04.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Perry Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2008/thumb-591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-1.jpg
@@ -13194,11 +13194,12 @@ assets:
       - sc4evermore/90-mgb204-texture-pack
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Short Description:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">This is a set of car, freight car, and bus traffic blockers for default maxis, <abbr title=\"Street Addon Mod\">SAM</abbr>, <abbr title=\"Ground Light Rail\">GLR</abbr>, and <abbr title=\"RealHighway\">RHW</abbr> routes. They will block one kind of traffic while allowing the other kinds of traffic and pedestrians to pass. This may be useful for creating bus lines, simply reducing traffic, preventing cars from taking a shortcut through settlements, keeping freight cars away from residential zones and so on. Traffic blockers for roads, one-way roads, avenues, side roads, and railway are already existing on the STEX, but not for <abbr title=\"Street Addon Mod\">SAM</abbr> and <abbr title=\"RealHighway\">RHW</abbr> routes, so I thought they might be useful.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">I've tried to keep them as inconspicuous as possible (so not to disrupt the look of your city); therefore the screenshots won't be spectacular. The screenshot below shows a small city where buses and pedestrians are taking the <abbr title=\"Street Addon Mod\">SAM</abbr> 2 Herringbone Street to get to work, while cars are forced to take a detour.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">There are traffic blockers for the subsequently mentioned traffic routes:</span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Maxis routes: road, street, avenue, one-way road</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"Street Addon Mod\">SAM</abbr> streets: 2-11</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"RealHighway\">RHW</abbr> routes: <abbr title=\"RealHighway\">RHW</abbr>-2, <abbr title=\"RealHighway\">RHW</abbr>-4, <abbr title=\"RealHighway\">RHW</abbr>-6, <abbr title=\"RealHighway\">RHW</abbr>-8, <abbr title=\"RealHighway\">RHW</abbr>-10, <abbr title=\"Modular Interchange System\">MIS</abbr></span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"Ground Light Rail\">GLR</abbr>: Tram-on-Road (only with concrete pavement in the center), Tram-on-Avenue, Tram-on-Street</span>\n\t</li>\n</ul>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">For further information, please refer to the readme in the download.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:#e74c3c;\"><strong>Note: </strong>If you have downloaded this between April 15<sup>th</sup>, 2020, and June 16<sup>th</sup>, 2020, please remove the file TBS_Textures.dat, since it has become obsolete with the release of the 11241036 Textures. Please download this dependency package instead.</span></span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:rgb(0,0,255);\"><strong>Dependencies:</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</strong></span>\n</p>\n\n<p>\n\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-<abbr title=\"SimForum BAT Team\">sfbt</abbr>-essentials</a>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>MGB Texture Pack</strong></span>\n</p>\n\n<p>\n\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack</a>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Network Addon Mod Version 37.0 or newer</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><a href=\"https://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite\" rel=\"\">http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite</a></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>11241036 Textures</strong></span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed3450166797\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/33651-11241036-textures/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>SC4Fix: Third-party patches for SC4</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Not really required, but it resolves that nasty crash-to-desktop bug occurring whenever you hover with a puzzle piece over a transit-enabled lot.</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2719018586\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Currently available languages: </strong>English, German</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Installation:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span lang=\"en-us\" xml:lang=\"en-us\">Download the archive and extract all files to a folder where you will find them. Move or copy this folder into your Plugins sub-folder of your edition of SimCity 4 (for instance: C:/Programs/Maxis/SimCity 4/Plugins).</span></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span lang=\"en-us\" xml:lang=\"en-us\">To uninstall, please bulldoze all instances of this plugin in your cities, then remove all of its files from your Plugins subfolder.</span></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><b><span lang=\"en-us\" xml:lang=\"en-us\">Note, if you have versions prior to version 3 installed:</span></b><span lang=\"en-us\" xml:lang=\"en-us\"> Please remove it before installing the new plugin. You don’t need to bulldoze your already existing traffic stops, and nothing will change in-game. However, to tidy up this plugin, I’ve reorganized the files and packed them into one big file. You’ll have them twice if you simply copy this plugin into your plugin folder.</span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><b><span lang=\"en-us\" xml:lang=\"en-us\">Extra note:</span></b><span lang=\"en-us\" xml:lang=\"en-us\"> For people using my Cobblestone Street Override mod, I’ve added the extra file <i>z_TBS <abbr title=\"Street Addon Mod\">SAM</abbr> 8 Override.dat</i>, which will alter the base texture to a cobblestone texture. Remove this file if you don’t want this (see screenshots).</span></span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Since this plugin requires installation of the Network Addon Mod, it is only compatible with SimCity 4: Rush Hour, or SimCity Deluxe.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Credits:</strong></span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">The Network Addon Mod Team for the textures of the routes</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">odrzutowiec for the idea of introducing the <abbr title=\"Ground Light Rail\">GLR</abbr> traffic blockers</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>To be done:</strong></span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Also, I'd appreciate if someone could explain me how to make Menu Management Lots. Although traffic blockers are sometimes helpful, we probably won't use them everyday, and therefore you may probably want to save space in your game menu.</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">If I'm getting enough requests, I may include other traffic blockers in later updates.</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
     file: Traffic Blocker Set.zip
+    filename: Traffic Blocker Set.zip
     files:
-      - STEX/z_TBS SAM 8 Override.dat
-      - STEX/Traffic Blocker Set.dat
-      - STEX/Screenshot.jpg
       - STEX/Readme.pdf
+      - STEX/Screenshot.jpg
+      - STEX/Traffic Blocker Set.dat
+      - STEX/z_TBS SAM 8 Override.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_01_2014/b3e889c444c37b6950f9e07339bc5a74-test.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2020_04/Screenshot.jpg.a8c450b3ad3b1e88d97fc958a1b09d5c.jpg
@@ -13670,7 +13671,7 @@ assets:
             - f834997a
             - '30360000'
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Traffic Blocker Set
     sha256: da8c7c6ba9db976391137412e1390185d3e13ded4b5347e8f390ac4f0783c698
@@ -18752,6 +18753,24 @@ assets:
     name: ESA Skelleftea station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/67477779a3a93_Norra-Jul.11191732725155.thumb.jpg.fbc56ceea06b8a0843aa88bed631f26e.jpg
     url: https://community.simtropolis.com/files/file/36573-esa-skelleftea-station/
+  simtropolis/36641:
+    assetId: simtropolis/36641-sfbt-gare-de-bellevue
+    authors:
+      - N1_2888
+    category: 110-transportation
+    lastModified: 2024-12-30T21:58:17.000Z
+    name: SFBT Gare de Bellevue
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/SFBT_Gare_de_Bellevue_1.thumb.jpg.346b461f816fb02d9cedb0651f7d1299.jpg
+    url: https://community.simtropolis.com/files/file/36641-sfbt-gare-de-bellevue/
+  simtropolis/36653:
+    assetId: simtropolis/36653-diagonal-planes-pack-1
+    authors:
+      - JoelMk2
+    category: 110-transportation
+    lastModified: 2025-01-06T08:00:09.000Z
+    name: Diagonal Planes Pack 1
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/677b8d88ac11b_DiagonalPlanesReleasePic2.thumb.jpg.7d8510285602dd2d61859d1f6c76992a.jpg
+    url: https://community.simtropolis.com/files/file/36653-diagonal-planes-pack-1/
   simtropolis/3669:
     assetId: simtropolis/3669-passenger-rail-stations-4tracks
     authors:
@@ -19798,4 +19817,4 @@ assets:
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

@@ -669,6 +669,7 @@ export class Application {
         assetInfo.downloaded[assetInfo.version] = true
 
         context.setStep(`Extracting ${key}...`)
+        context.debug(`Extracting ${key}...`)
 
         await extractRecursively(downloadPath, {
           exePath: exe => this.getToolExePath(exe),
@@ -2889,7 +2890,7 @@ export class Application {
               // Run cleaner and linker
               if (shouldRecalculate && settings.currentProfile === profileId) {
                 // Apply feature changes
-                forEach(features, (packageIds, feature) => {
+                forEach(features, (_packageIds, feature) => {
                   if (!resultingFeatures[feature]?.length) {
                     features[feature] = undefined
                   }

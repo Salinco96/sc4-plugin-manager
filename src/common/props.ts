@@ -5,9 +5,9 @@ export type PropID = ID<string, PropInfo>
 
 export interface PropInfo {
   /**
-   * Prop family ID
+   * Prop family IDs
    */
-  family?: FamilyID
+  families?: FamilyID[]
 
   /**
    * Path to exemplar file (POSIX)
@@ -23,6 +23,11 @@ export interface PropInfo {
    * URL or relative path within ~docs
    */
   images?: string[]
+
+  /**
+   * Model ID
+   */
+  model?: string | null
 
   /**
    * Internal exemplar name

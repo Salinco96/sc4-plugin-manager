@@ -308,7 +308,8 @@ export function generateVariantInfo(
   const [major, minor, patch] = matchGroups(mainEntry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
   const version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-  if (variantInfo.version !== version) {
+  // todo
+  if (variantInfo.version !== version && variantInfo.version === "0.0.0") {
     variantInfo.release = new Date()
     variantInfo.version = version
     if (mainEntry.description) {
@@ -320,11 +321,11 @@ export function generateVariantInfo(
 
   // Fields derived from main entry only
   variantInfo.deprecated ??= mainEntry.category?.includes("obsolete")
-  variantInfo.logs = mainEntry.description?.match(/\b[\w-]+[.]log\b/)?.at(0) ?? variantInfo.logs
-  variantInfo.repository = mainEntry.repository ?? variantInfo.repository
-  variantInfo.support = mainEntry.support ?? variantInfo.support
-  variantInfo.thumbnail = mainEntry.thumbnail ?? variantInfo.thumbnail
-  variantInfo.url = mainEntry.url ?? variantInfo.url
+  // variantInfo.logs = mainEntry.description?.match(/\b[\w-]+[.]log\b/)?.at(0) ?? variantInfo.logs
+  // variantInfo.repository = mainEntry.repository ?? variantInfo.repository
+  // variantInfo.support = mainEntry.support ?? variantInfo.support
+  // variantInfo.thumbnail = mainEntry.thumbnail ?? variantInfo.thumbnail
+  // variantInfo.url = mainEntry.url ?? variantInfo.url
 
   const features = new Set(packageInfo.features)
   const variantCategories = new Set(variantInfo.categories)
@@ -464,7 +465,9 @@ export function generateVariantInfo(
   variantInfo.readme = union(intersection(variantInfo.readme ?? [], docPaths), readmePaths)
 
   variantInfo.buildingFamilies = unionBy(
-    variantInfo.buildingFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    variantInfo.buildingFamilies?.filter(
+      instance => instance.file && includedSC4Paths.has(instance.file),
+    ) ?? [],
     values(entries).flatMap(entry => {
       return collect(entry.buildingFamilies ?? {}, (instances, oldPath) => {
         const newPath = translatePaths[entry.asset.id]?.[oldPath]
@@ -524,7 +527,9 @@ export function generateVariantInfo(
   )
 
   variantInfo.propFamilies = unionBy(
-    variantInfo.propFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    variantInfo.propFamilies?.filter(
+      instance => instance.file && includedSC4Paths.has(instance.file),
+    ) ?? [],
     values(entries).flatMap(entry => {
       return collect(entry.propFamilies ?? {}, (instances, oldPath) => {
         const newPath = translatePaths[entry.asset.id]?.[oldPath]

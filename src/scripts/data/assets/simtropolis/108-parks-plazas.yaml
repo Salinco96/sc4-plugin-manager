@@ -3028,27 +3028,29 @@ assets:
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font>First a thanx to Jeronij for letting me upload this.</font></p>\n<p><font>This is a collection of six lots based directly on Jeronij's Modern Concrete Diagonal Walls and are designed to blend in with both it and my Jeronij Concrete Wall Add-On Bat. These are eyecandy stairs to beautify your modern concrete walls. Also all of the fences and stairs are Slope Conforming.</font></p>\n<p><font>Dependencies: None <br>Recomended: AAO1 JERONI TEXTURAS MURO AUTOPISTA MODERNOV2.dat found in the <a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=116\" title=\"Modern Concrete Diagonal Walls\" rel=\"external nofollow\"><strong><em><u><font color=\"#800080\">Modern Concrete Diagonal Walls</font></u></em></strong></a>bat by Jeronij<br>and the<font color=\"#800000\"><strong><em> </em></strong></font><a href=\"https://www.simtropolis.com/stex/details.cfm?id=13865\" title=\"Jeronij Modern Concrete Walls AddOn\" rel=\"external nofollow\"><u><font color=\"#800080\"><strong><em>Jeronij Modern Concrete Walls AddOn</em></strong></font></u></a><strong><em><font color=\"#800000\"> </font></em></strong>bat by me Buddybud.</font></p>\n<p><font>Once installed, the lots will be available in the Power Menu.</font></p>\n<p><font>** This file contains an EXE installer for Windows users.<br><a href=\"http://savefile.com/projects/443743\" rel=\"external nofollow\"><br></a></font></p>\n\n\t\t\t\t\t\t</body>"
     file: BuddyBud-Jeronij ConcWall-Addon-Stairs3.Zip
+    filename: BuddyBud-Jeronij ConcWall-Addon-Stairs3.Zip
     files:
+      - BuddyBud-Jeronij ConcWall-Addon-Stairs
       - Buddybud Info/BudUD-Jeronij_CW_Addon_Stairs.htm
-      - Buddybud Info/buddybud.jpg
       - Buddybud Info/Buddybud.ico
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 6.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 4-5.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 3.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 2.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 1.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Stairs2.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Stairs.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Look Out.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Diag Stairs.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Corner Stairs2.jpg
-      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Corner Stairs.jpg
       - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/BudUD-Jeronij_CW_Addon_Stairs.jpg
-      - SimCity 4/Plugins/Buddybud/Texture Packs/BuddyBud-Jeronij ConcWall-Addon-Stairs.dat
-      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Stairs_Tops_Prop.dat
-      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Stairs_Look_Prop.dat
-      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Lookout_Prop_Back.dat
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Corner Stairs.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Corner Stairs2.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Diag Stairs.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Look Out.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Stairs.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Horiz Stairs2.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 1.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 2.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 3.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 4-5.jpg
+      - Buddybud Info/Budud-Jeronij ConcWall-AOS-Pics/Piece 6.jpg
+      - Buddybud Info/buddybud.jpg
       - SimCity 4/Plugins/Buddybud/BudUD-Jeronij_CW_Addon_Stairs/BudUD-Jeronij_CW_Addon_Stairs_Lots.dat
+      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Lookout_Prop_Back.dat
+      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Stairs_Look_Prop.dat
+      - SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Stairs_Tops_Prop.dat
+      - SimCity 4/Plugins/Buddybud/Texture Packs/BuddyBud-Jeronij ConcWall-Addon-Stairs.dat
     images:
       - https://www.simtropolis.com/objects/screens/0028/ffe807fb16a457274b2cf25a66ea3e55-BudUD-Jeronij_CW_Addon_Stairs.jpg
       - https://www.simtropolis.com/objects/screens/0028/ffe807fb16a457274b2cf25a66ea3e55-BudUD-Jeronij_CW_Addon_Stairs2.jpg
@@ -3152,7 +3154,7 @@ assets:
             - a5304000
             - a990c44a
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T15:31:19.616Z
       version: 1
     models:
       SimCity 4/Plugins/Buddybud/Prop Packs/BudCW_Lookout_Prop_Back.dat:
@@ -12769,17 +12771,18 @@ assets:
       - simtropolis/24509-spot-simpeg-plop-orientation-tool
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA set of handsome bike paths combined with alley parks to get your bikers off the busy roads and avenues, at the same time providing nice stretches of small parkways for a leisurely stroll...<br>\n\t<br>\n\tSee a full catalog of all included pieces in the included<strong> ReadMe</strong>!<br>\n\t<br>\n\t<br>\n\t<br>\n\t<span style=\"color:#2e8b57;\"><strong>How to Plan a Bike Path</strong></span><br>\n\t<br>\n\tThese bike paths are wide enough to have 2-way bicycle 'traffic' - so they are only built on one side of a road. Note that they don't form regular 'networks' with criss-crossing intersections (cross or tee), but instead they usually follow a stretch of road or avenue, detour around COM properties and sometimes just end at some road intersection or a particular building, e.g. a school, a park or similar.<br>\n\t<br>\n\tSince they do block development, you need to be creative in your zoning and in planning your bike paths. Make your zones either face a side road or detour your paths around some of the developments. Combined smartly, you will not 'lose' too much road access. See Readme for more information!<br>\n\t<br>\n\t<br>\n\t<br>\n\t<span style=\"color:#8b0000;\"><strong>Dependencies</strong></span><br>\n\t<br>\n\t* <u><strong><a href=\"https://www.simtropolis.com/forum/files/file/25681-murimk-bicycle-props-with-mmp-bikers/\" rel=\"external nofollow\">Murimk Bicycle Props</a></strong></u><br>\n\t<br>\n\t* <u><strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> MegaProps SG Vol 01</a></strong></u><br>\n\t<br>\n\t* <u><strong><a href=\"https://www.simtropolis.com/forum/files/file/11421-porkie-props-vol1-european-street-accessories/\" rel=\"external nofollow\">Porkie Props Vol 01</a></strong></u><br>\n\t<br>\n\t* Bike Path Resource - <strong>included</strong><br>\n\t<br>\n\t* <u><strong><a href=\"https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/\" rel=\"\">SPOT</a></strong></u> (Plop Orientation Helpers, optional)<br>\n\t<br>\n\t<br>\n\t<br>\n\t<span style=\"color:#2e8b57;\"><strong>Developer Notes</strong></span><br>\n\t<br>\n\tUnless noted otherwise, all pieces are sized 1x1. They are cheap to plop and to maintain.<br>\n\t<br>\n\tMostly they are completely neutral (effects etc.) except for some key pieces - they provide slight desirability perks.<br>\n\t<br>\n\tNote that there are two versions of the bus stop - one is fully functional (Cap: 2000) while the other one is eyecandy, to be used with road top stops or similar.<br>\n\t<br>\n\tAll segments are located in the 'Transportation | Miscellaneous' menu with custom icons.<br>\n\t<br>\n\t<br>\n\t<br>\n\t<span style=\"color:#2e8b57;\"><strong>Support</strong></span><br>\n\t<br>\n\tShould you need support for these items please visit the<br>\n\t<u><strong><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\"><abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> on the STEX - Community Support</a></strong></u>\n</p>\n\n<p>\n\t<strong><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/forum/index.php/board,109.0.html\" rel=\"external nofollow\">Paeng Productions Forum (no longer available)</a></strong><br>\n\t<br>\n\t<br>\n\t<span style=\"color:#2e8b57;\"><strong>Thanks</strong></span><br>\n\t<br>\n\tI'd like to thank my fellow NightOwl <strong>Murimk</strong> who (again <img alt=\":)\" src=\"https://www.simtropolis.com/forum/public/style_emoticons/\" > 'sponsored' a few custom BATs, adding the kind of detail that makes a set 'alive'.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tupdate: 13.10.2018 - updated dependency link by Tyberius06\n</p>\n\n\t\t\t\t\t\t</body>"
     file: Paeng_BikePaths_v100.zip
+    filename: Paeng_BikePaths_v100.zip
     files:
-      - Paeng_BikePaths_v100/Readme_BikePaths/index.html
-      - Paeng_BikePaths_v100/Readme_BikePaths/bp_views.jpg
-      - Paeng_BikePaths_v100/Readme_BikePaths/bp_preview_full.jpg
-      - Paeng_BikePaths_v100/Readme_BikePaths/bp_plan2.gif
-      - Paeng_BikePaths_v100/Readme_BikePaths/bp_exchange.jpg
-      - Paeng_BikePaths_v100/Readme_BikePaths/bikepath.css
-      - Paeng_BikePaths_v100/Bikepath_Resource/Paeng_Bikepath_Textures.dat
-      - Paeng_BikePaths_v100/Bikepath_Resource/Murimk_CustomProps_Bikepath.dat
       - Paeng_BikePaths_v100/Bikepath_Resource/Common.dat
+      - Paeng_BikePaths_v100/Bikepath_Resource/Murimk_CustomProps_Bikepath.dat
+      - Paeng_BikePaths_v100/Bikepath_Resource/Paeng_Bikepath_Textures.dat
       - Paeng_BikePaths_v100/Bikepaths_Lots/BikePath_Lots.dat
+      - Paeng_BikePaths_v100/Readme_BikePaths/bikepath.css
+      - Paeng_BikePaths_v100/Readme_BikePaths/bp_exchange.jpg
+      - Paeng_BikePaths_v100/Readme_BikePaths/bp_plan2.gif
+      - Paeng_BikePaths_v100/Readme_BikePaths/bp_preview_full.jpg
+      - Paeng_BikePaths_v100/Readme_BikePaths/bp_views.jpg
+      - Paeng_BikePaths_v100/Readme_BikePaths/index.html
     images:
       - https://www.simtropolis.com/objects/screens/0029/dac77660889f03360d3164f4129cfce4-bp_views.jpg
     lastModified: 2011-04-20T15:28:52.000Z
@@ -13267,7 +13270,7 @@ assets:
             - '262e0000'
             - f5f84220
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       Paeng_BikePaths_v100/Bikepath_Resource/Common.dat:
@@ -16480,48 +16483,49 @@ assets:
       - sc4evermore/168-vortext-vortexture-1-2-base-set-grass-and-dirt
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#2980b9;\"><strong>Description:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\tThere are some plaza plugins out there on the STEX, even a few modular ones, but with this set, I'm aiming at creating a fully comprehensive modular system of plazas which\n</p>\n\n<ul>\n\t<li style=\"text-align:justify;\">\n\t\thave a variety of different functions,\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\tare easy to combine,\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\tand allow adjustment of textures.\n\t</li>\n</ul>\n\n<p style=\"text-align:justify;\">\n\tThis plugin contains a good number of modular lots that will allow you to create your custom plaza, sidewalk, or seawall. Fountains, ponds, benches, seawalls, market stalls, trees – nearly everything is available, I’ll leave it to your experimenting pleasure to find out. Most of them are purely decorational (while having park and landmark effect), only the market stalls will yield a bit money. All lots have been designed in a way that they are rather simple, thereby being able to be combined with each other easily. All lots can be found in the park menu, just below the default Maxis parks.<br>\n\tBy default, all lots will use the standard Maxis white pavement texture, however, I’ve included some texture override files that will allow you to customize this plugin in a way that all lots will change their textures. Mainly included are textures fitting with the <abbr title=\"Pedestrian Mall\">PedMall</abbr> puzzle pieces from the <abbr title=\"Network Addon Mod\">NAM</abbr>, but since I’ve seen many users using plugins that override the <abbr title=\"Pedestrian Mall\">PedMall</abbr> textures, I’ve also included a few extra overrides.<br>\n\t<u>Note:</u> There has been a last-minute change to this plugin that isn't reflected in the screenshots above: I had to remove all the people lurking around on the lots because their immense amount looked horrible, and I couldn't find a way to randomize their appearance.<br>\n\tPlease make sure to read the included readme carefully, since you can't just install this plugin and play - due to the texture overrides, you need to customize it first.<br>\n\t<strong>Available languages:</strong> English, German\n</p>\n\n<p style=\"text-align:justify;\">\n\t\_\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#f39c12;\"><strong>Dependencies:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span>Please refer to the Readme for information about what the dependencies do. Unfortunately, this time you get a good load of dependencies, fortunately, however, most of them are candidates I'm using frequently, anyway, or just dependency packages that do nothing except adding props/textures and won't flood you with a lot of lots that will fill your menues quickly. Exception: I've had to use one file from the Historic Harbor plugin, which comes with many lots. You only need one file from there (see below).</span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#c0392b;\"><strong><span>Important:</span></strong><span> If you have downloaded and installed this before June 16</span><sup><span>th</span></sup><span>, 2020, please look for the file </span><em><span>MPS Textures.dat</span></em><span> and remove it. It has become obsolete with the release of the 11241036 Textures.</span></span>\n</p>\n\n<ul>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Network Addon Mod</strong>: <a href=\"https://community.simtropolis.com/files/file/26793-network-addon-mod-nam-for-windows-installer/\" rel=\"\">https://community.simtropolis.com/files/file/26793-network-addon-mod-<abbr title=\"Network Addon Mod\">NAM</abbr>-for-windows-installer/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong><abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack:</strong> <a href=\"https://sc4evermore.com/index.php/downloads/download/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">https://sc4evermore.com/index.php/downloads/download/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack:</strong> <a href=\"https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/27-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-vip-girafe-flora</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Buildings as Props:</strong> can be found here: <a href=\"https://community.simtropolis.com/sc4-maxis-files/\" rel=\"\">https://community.simtropolis.com/sc4-maxis-files/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Plugin Landmark Props:</strong> <a href=\"https://community.simtropolis.com/files/file/21286-plugin-landmark-props/\" rel=\"\">https://community.simtropolis.com/files/file/21286-plugin-landmark-props/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials:</strong> <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-<abbr title=\"SimForum BAT Team\">sfbt</abbr>-essentials</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<span style=\"color:#c0392b;\"><strong><abbr title=\"SimForum BAT Team\">SFBT</abbr> Props peterycristi Props</strong></span> (Edit Nov 18th, 2024, not reflected in the Readme: sorry, forgot this one): <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/123-sfbt-props-peterycristi-props\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/123-<abbr title=\"SimForum BAT Team\">sfbt</abbr>-props-peterycristi-props</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Historic Harbour:</strong> <a href=\"https://community.simtropolis.com/files/file/29880-historic-harbor/\" rel=\"\">https://community.simtropolis.com/files/file/29880-historic-harbor/</a> (You only need the file <em>Fence - Iron small.dat</em>.)\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Jeronij Concrete Wall AddOn STAIRS:</strong> <a href=\"https://community.simtropolis.com/files/file/13866-jeronij-concrete-wall-addon-stairs/\" rel=\"\">https://community.simtropolis.com/files/file/13866-jeronij-concrete-wall-addon-stairs/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title=\"Mayor Mode Ploppable\">MMP</abbr>:</strong> <a href=\"https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/\" rel=\"\">https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-<abbr title=\"Mayor Mode Ploppable\">mmp</abbr>/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Murimk Props Vol02:</strong> <a href=\"https://community.simtropolis.com/files/file/25888-murimk-props-vol02/\" rel=\"\">https://community.simtropolis.com/files/file/25888-murimk-props-vol02/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Various Lot Foundations and Retaining Walls:</strong> <a href=\"https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/\" rel=\"\">https://community.simtropolis.com/files/file/31346-various-lot-foundations-and-retaining-walls/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>11241036 Textures</strong>: <a href=\"https://community.simtropolis.com/files/file/33651-11241036-textures/\" rel=\"\">https://community.simtropolis.com/files/file/33651-11241036-textures/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong><abbr title=\"WorkingMan Productions\">WMP</abbr> The Bridges of Shoreline County:</strong> <a href=\"https://community.simtropolis.com/files/file/26171-wmp-the-bridges-of-shoreline-county/\" rel=\"\">https://community.simtropolis.com/files/file/26171-<abbr title=\"WorkingMan Productions\">wmp</abbr>-the-bridges-of-shoreline-county/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>JENX Porkie Expanded Porkie Props</strong>: <a href=\"https://community.simtropolis.com/files/file/11421-jenx-porkie-expanded-porkie-props/\" rel=\"\">https://community.simtropolis.com/files/file/11421-jenx-porkie-expanded-porkie-props/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>RDG Prop Pack 1:</strong> <a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/</a>\n\t</li>\n</ul>\n\n<p style=\"text-align:justify;\">\n\tOptional but helpful:\n</p>\n\n<ul>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>SPOT: </strong><a href=\"https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/\" rel=\"\">https://community.simtropolis.com/files/file/24509-spot-simpeg-plop-orientation-tool/</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Submenus DLL</strong> (for submenu compatibility, <strong><span style=\"color:#c0392b;\">please read the rest of this carefully!</span></strong>): <a href=\"https://community.simtropolis.com/files/file/36142-submenus-dll/\" rel=\"\">https://community.simtropolis.com/files/file/36142-submenus-dll/</a>\n\t</li>\n</ul>\n\n<p style=\"text-align:justify;\">\n\tThe following dependencies are required for some of the texture overrides, but the base MPS plugin will entirely work without them:\n</p>\n\n<ul>\n\t<li style=\"text-align:justify;\">\n\t\t<strong>Vortexture:</strong> <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/168-vortext-vortexture-1-2-base-set-grass-and-dirt\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/168-vortext-vortexture-1-2-base-set-grass-and-dirt</a>\n\t</li>\n\t<li style=\"text-align:justify;\">\n\t\t<strong><abbr title=\"Mountain Theme Pack\">MTP</abbr> Super Pack: </strong><a href=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/\" rel=\"\">https://community.simtropolis.com/files/file/20966-peg-<abbr title=\"Mountain Theme Pack\">mtp</abbr>-super-pack/</a>\n\t</li>\n</ul>\n\n<p style=\"text-align:justify;\">\n\t\_\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#2980b9;\"><strong>Submenu Compatibility:</strong></span>\n</p>\n\n<p>\n\t<strong>This plugin has been optimized for usage with memo’s Submenus DLL plugin.</strong> This means that users that are using it will find the MPS lots in their own submenu, which is further divided into 7 submenus (see below). Users not using the Submenus DLL mod will simply find the MPS lots in the park menu, somewhere in the center. Please read the installation instructions below to avoid problems like missing lot icons. The submenu button looks like this (only one out of the four circles is visible at a time):\n</p>\n\n<p>\n\t<img alt=\"666224d80ace3_2MPS.thumb.png.1106483e888\" class=\"ipsImage ipsImage_thumbnailed\" height=\"44\" src=\"https://www.simtropolis.com/objects/screens/monthly_2024_06/666224d80ace3_2MPS.thumb.png.1106483e88801e2a09412d3345ecee42.png\" width=\"176\" >\n</p>\n\n<p style=\"text-align:justify;\">\n\t\_\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#2980b9;\"><strong>Included Files:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<strong>MPS Core Files.dat</strong> (mandatory): Contains all lots for the Modular Plaza System, along with their descriptions and icons.<br>\n\t<strong>Seawall Connection Lots.dat</strong> (optional): 4 lots that can be used on slopes to connect ground traffic routes to the overpass puzzle pieces from the <abbr title=\"Network Addon Mod\">NAM</abbr> and thereby blending them in with the seawall system you get with this download. You can, of course, as well do this with the <abbr title=\"Network Addon Mod\">NAM</abbr>’s default hillside transition pieces, but they won’t fit into the seawalls, visually.<br>\n\t<strong>z_(Name).dat</strong> (all optional): A total of 12 additional files that you can choose form that will override your existing MPS lots to give them different base textures. Keep only one of them, or just remove them all if you want to play with the base Maxis white pavement texture (see installation instructions below).\n</p>\n\n<p>\n\t<strong>MPS_Submenu Park.dat, MPS_Submenu Plazas.dat</strong> (mandatory when using memo‘s Submenus DLL mod): contains the submenu entry files for the MPS lots. Only use one of these two files.\n</p>\n\n<p style=\"text-align:justify;\">\n\t\_\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#2980b9;\"><strong>Installation:</strong></span>\n</p>\n\n<p>\n\t<strong>Step 1: </strong>Please move or copy all existing files (except the Readme files) into the Plugins folder of your edition of SimCity 4.\n</p>\n\n<p>\n\t<strong>Step 2:</strong> <u>Choose one texture override</u>. These texture overrides are located one each in all files starting with z_. To apply one, remove all other texture override. To play with the default Maxis White Pavement, remove all texture overrides. You may want to look into the folder “Screenshots Texture Overrides“ to find out how they will look in-game. You can at any time switch to another texture system by replacing the existing texture override file with another one, in-game, the textures will adapt automatically.\n</p>\n\n<p>\n\t<strong>Step 3: </strong>To make the submenu buttons appear correctly, install either the file MPS_Submenu Parks.dat or the file MPS_Submenu Plazas.dat (only one out of these two files). The first file moves the MPS submenu simply into the Park menu, the latter one into memo’s Plaza submenu.\n</p>\n\n<p>\n\t<strong>Uninstalling: </strong>To uninstall this plugin, please bulldoze all MPS lots in your cities and then remove all MPS files from your Plugins folder.\n</p>\n\n<p style=\"text-align:justify;\">\n\t\_\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"color:#2980b9;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\tSince this plugin requires installation of the <abbr title=\"Network Addon Mod\">NAM</abbr>, it is only compatible with SimCity 4: Rush Hour or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"color:#2980b9;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\tPlease feel free to post issues, bug reports, and suggestions in this thread:\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed9800267695\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n\t\t\t\t\t\t</body>"
     file: Modular Plaza System.zip
+    filename: Modular Plaza System.zip
     files:
-      - z_Vortexture Cobblestone 2.dat
-      - z_Vortexture Cobblestone 1.dat
-      - z_NAM Sandstone.dat
-      - z_NAM Red Brick.dat
-      - z_NAM Pink Pavement.dat
-      - z_NAM Industrial.dat
-      - z_NAM Cobblestone.dat
-      - z_MTP Red Sandstone.dat
-      - z_Maxis Concrete.dat
-      - z_BSC Pink Pavement.dat
-      - z_BSC Mediterranean Red Cobblestone.dat
-      - z_BSC Diagonal Brick.dat
-      - Seawall Connection Lots.dat
-      - MPS_Submenu Plazas.dat
-      - MPS_Submenu Park.dat
       - MPS Core Files.dat
-      - Readme Files/Dokumentation_Deutsch.pdf
-      - Readme Files/Documentation_English.pdf
+      - MPS_Submenu Park.dat
+      - MPS_Submenu Plazas.dat
       - Readme Files/Dependencies and Values.xlsx
-      - Readme Files/Screenshots Texture Overrides/Vortexture Cobblestone 2.jpg
-      - Readme Files/Screenshots Texture Overrides/Vortexture Cobblestone 1.jpg
-      - Readme Files/Screenshots Texture Overrides/NAM Sandstone.jpg
-      - Readme Files/Screenshots Texture Overrides/NAM Red Brick.jpg
-      - Readme Files/Screenshots Texture Overrides/NAM Pavement.jpg
-      - Readme Files/Screenshots Texture Overrides/NAM Industrial.jpg
-      - Readme Files/Screenshots Texture Overrides/NAM Cobblestone.jpg
+      - Readme Files/Documentation_English.pdf
+      - Readme Files/Dokumentation_Deutsch.pdf
+      - Readme Files/Screenshots Lots/MPS Flowerbeds.jpg
+      - Readme Files/Screenshots Lots/MPS Market Stalls.jpg
+      - Readme Files/Screenshots Lots/MPS Plazas.jpg
+      - Readme Files/Screenshots Lots/MPS Seawalls.jpg
+      - Readme Files/Screenshots Lots/MPS Squares.jpg
+      - Readme Files/Screenshots Lots/MPS Squares2.jpg
+      - Readme Files/Screenshots Lots/MPS Statues.jpg
+      - Readme Files/Screenshots Lots/MPS Trees.jpg
+      - Readme Files/Screenshots Lots/Seawall Connection Lots.jpg
+      - Readme Files/Screenshots Texture Overrides/BSC Diagonal Brick.jpg
+      - Readme Files/Screenshots Texture Overrides/BSC Mediterranean Red Cobblestone.jpg
+      - Readme Files/Screenshots Texture Overrides/BSC Pink Pavement.jpg
+      - Readme Files/Screenshots Texture Overrides/Default.jpg
       - Readme Files/Screenshots Texture Overrides/MTP Red Sandstone.jpg
       - Readme Files/Screenshots Texture Overrides/Maxis Concrete.jpg
-      - Readme Files/Screenshots Texture Overrides/Default.jpg
-      - Readme Files/Screenshots Texture Overrides/BSC Pink Pavement.jpg
-      - Readme Files/Screenshots Texture Overrides/BSC Mediterranean Red Cobblestone.jpg
-      - Readme Files/Screenshots Texture Overrides/BSC Diagonal Brick.jpg
-      - Readme Files/Screenshots Lots/Seawall Connection Lots.jpg
-      - Readme Files/Screenshots Lots/MPS Trees.jpg
-      - Readme Files/Screenshots Lots/MPS Statues.jpg
-      - Readme Files/Screenshots Lots/MPS Squares2.jpg
-      - Readme Files/Screenshots Lots/MPS Squares.jpg
-      - Readme Files/Screenshots Lots/MPS Seawalls.jpg
-      - Readme Files/Screenshots Lots/MPS Plazas.jpg
-      - Readme Files/Screenshots Lots/MPS Market Stalls.jpg
-      - Readme Files/Screenshots Lots/MPS Flowerbeds.jpg
+      - Readme Files/Screenshots Texture Overrides/NAM Cobblestone.jpg
+      - Readme Files/Screenshots Texture Overrides/NAM Industrial.jpg
+      - Readme Files/Screenshots Texture Overrides/NAM Pavement.jpg
+      - Readme Files/Screenshots Texture Overrides/NAM Red Brick.jpg
+      - Readme Files/Screenshots Texture Overrides/NAM Sandstone.jpg
+      - Readme Files/Screenshots Texture Overrides/Vortexture Cobblestone 1.jpg
+      - Readme Files/Screenshots Texture Overrides/Vortexture Cobblestone 2.jpg
+      - Seawall Connection Lots.dat
+      - z_BSC Diagonal Brick.dat
+      - z_BSC Mediterranean Red Cobblestone.dat
+      - z_BSC Pink Pavement.dat
+      - z_MTP Red Sandstone.dat
+      - z_Maxis Concrete.dat
+      - z_NAM Cobblestone.dat
+      - z_NAM Industrial.dat
+      - z_NAM Pink Pavement.dat
+      - z_NAM Red Brick.dat
+      - z_NAM Sandstone.dat
+      - z_Vortexture Cobblestone 1.dat
+      - z_Vortexture Cobblestone 2.dat
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/581f877e6bff2_MPSFlowerbeds.jpg.5889083c3a2281192f06e8fe9c33264b.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2016_11/581f878469e0f_MPSMarketStalls.jpg.92bf5fafa666103aea84553130a8a82b.jpg
@@ -27054,7 +27058,7 @@ assets:
           textures:
             - f82041c5
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Modular Plaza System (MPS)
     sha256: 9b115e7c257dda02c1031d8b11832144ec47f41f451c46e576e4777d1c62862d
@@ -27928,367 +27932,367 @@ assets:
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BaymontSign_29944b81.SC4Lot:
         29944b81:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BudgetHostSign_a9985f48.SC4Lot:
         a9985f48:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Comfort Inn Sign_e99303a2.SC4Lot:
         e99303a2:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Econo Lodge Sign_e99303ba.SC4Lot:
         e99303ba:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_ExtendedStaySign_c9a2ec24.SC4Lot:
         c9a2ec24:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_HoJoSign_89994f69.SC4Lot:
         89994f69:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Knights Inn Sign Tall_29a3a033.SC4Lot:
         29a3a033:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_La Quinta Sign Tall_29a39b91.SC4Lot:
         29a39b91:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MerryweatherSign_c9944b49.SC4Lot:
         c9944b49:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MicrotelSign_09985f36.SC4Lot:
         09985f36:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC AmericInn Sign_c9a39bb5.SC4Lot:
         c9a39bb5:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC711SignTallNew_499c463f.SC4Lot:
         499c463f:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC76Sign_89a58b16.SC4Lot:
         89a58b16:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCAlonSign_69a2ebfe.SC4Lot:
         69a2ebfe:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCApplebeesSign_e9a1a473.SC4Lot:
         e9a1a473:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBKSign_e9992f93.SC4Lot:
         e9992f93:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBPSignPre2001_a9a58af5.SC4Lot:
         a9a58af5:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBigBoySign_a99da62d.SC4Lot:
         a99da62d:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBobEvansSign_c9a1a45b.SC4Lot:
         c9a1a45b:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCaptainDSign_a99da6a3.SC4Lot:
         a99da6a3:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCenexSign_89a1a4a5.SC4Lot:
         89a1a4a5:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChevronSign_a99986a2.SC4Lot:
         a99986a2:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChipotleSign_49994f47.SC4Lot:
         49994f47:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCClarkSign_09a2ebbf.SC4Lot:
         09a2ebbf:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCrackerBarrelSign_099986cb.SC4Lot:
         099986cb:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCDennysign_29a6e15a.SC4Lot:
         29a6e15a:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCFredMeyerSign_29a2ebd1.SC4Lot:
         29a2ebd1:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCGoldStarSign_49a44709.SC4Lot:
         49a44709:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCGoldenCorralSign_a99aecb0.SC4Lot:
         a99aecb0:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHomeDepotSign_499c4658.SC4Lot:
         499c4658:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHuddleHouseSign_a9a58b2d.SC4Lot:
         a9a58b2d:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCIHOPSign_499da684.SC4Lot:
         499da684:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCJackSign_a99c467f.SC4Lot:
         a99c467f:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSignNew_c99c4670.SC4Lot:
         c99c4670:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSign_c9994eff.SC4Lot:
         c9994eff:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKrogerSign_89994f34.SC4Lot:
         89994f34:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKwikTripSign_49a1a487.SC4Lot:
         49a1a487:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCLowesSign_29a39bf9.SC4Lot:
         29a39bf9:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMarathonSign_8999159f.SC4Lot:
         8999159f:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMotel6SignTall_e9a2ebe7.SC4Lot:
         e9a2ebe7:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCOutbackSign_69a44658.SC4Lot:
         69a44658:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPerkinsSign_e9a44675.SC4Lot:
         e9a44675:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPhillips66Sign_a9a1a435.SC4Lot:
         a9a1a435:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign1_89992f61.SC4Lot:
         89992f61:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign2_89992f70.SC4Lot:
         89992f70:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCQTsign_499915d1.SC4Lot:
         499915d1:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCRoyRogersSign_c99986f0.SC4Lot:
         c99986f0:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSNSSign_e99ac312.SC4Lot:
         e99ac312:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSheetzsign_499915e6.SC4Lot:
         '499915e6':
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShellSign_a999868d.SC4Lot:
         a999868d:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShoneysSign_499af18f.SC4Lot:
         499af18f:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSinclairSign_099ac325.SC4Lot:
         099ac325:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSkylineSign_49a446d5.SC4Lot:
         49a446d5:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSonicSign_299c46bb.SC4Lot:
         299c46bb:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSpeedwaySign_49985f0c.SC4Lot:
         49985f0c:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStarbucksSign_09a6e142.SC4Lot:
         09a6e142:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStuckeysSign_a9a1a449.SC4Lot:
         a9a1a449:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTacoBellSign_099af13c.SC4Lot:
         099af13c:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTexacoSign_a99986b8.SC4Lot:
         a99986b8:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCThorntonsSign_49a39bdf.SC4Lot:
         49a39bdf:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTimHortonsSign_899c54ee.SC4Lot:
         899c54ee:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCValeroSign_299c469d.SC4Lot:
         299c469d:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCVillageInnSign_499aecc7.SC4Lot:
         499aecc7:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWaffleHouseSign_499da669.SC4Lot:
         499da669:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWalmartSign_89994f21.SC4Lot:
         89994f21:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWendysSign_89994ede.SC4Lot:
         89994ede:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Grass_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Pear Tree by Drury Sign_69944b9c.SC4Lot:
         69944b9c:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Quality Inn Sign_499303ce.SC4Lot:
         499303ce:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Ramada Sign_099aec75.SC4Lot:
         099aec75:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RedCarpetSign_e9985f63.SC4Lot:
         e9985f63:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RhoadsSign_49944b3a.SC4Lot:
         49944b3a:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Rodeway Inn Sign_699303e5.SC4Lot:
         '699303e5':
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
       PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Sleep Inn Sign_499303fa.SC4Lot:
         499303fa:
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: KOSC_Superparking_Pavement_Filler
     category: 108-parks-plazas
     dependencies:
@@ -28297,80 +28301,81 @@ assets:
       - simtropolis/27563-shk-parking-pack
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA set of branded signs as commonly seen from the interstate, especially in many rural and suburban highway exits.<br>\n\t<br>\n\tPersonally I use the hotel brands\_with <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/68757-rebalynnts/?do=hovercard\" data-mentionid=\"68757\" href=\"https://community.simtropolis.com/profile/68757-rebalynnts/\" rel=\"\">@RebaLynnTS</a>'s Modular Motel System, and pair them with <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/33566-kingofsimcity/?do=hovercard\" data-mentionid=\"33566\" href=\"https://community.simtropolis.com/profile/33566-kingofsimcity/\" rel=\"\">@kingofsimcity</a>'s modular parking that use\_<a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/375506-shokthrpy/?do=hovercard\" data-mentionid=\"375506\" href=\"https://community.simtropolis.com/profile/375506-shokthrpy/\" rel=\"\">@shokthrpy</a>'s parking pack textures, hence why the hotel brands have a pavement texture instead of a grass texture. I also have the lots and props in separate folders in case you don't want to use the lots, considering they do add a bunch of entries to the parks menu in-game.\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed7967816322\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/32308-rlm-modular-motel-system/?do=embed\" style=\"height:384px;max-width:502px;\"></iframe>\n\n<p>\n\tDependencies:<br>\n\t<a href=\"https://community.simtropolis.com/files/file/32952-pc-mega-props-vol-1/\" rel=\"\">PC Mega Props Vol. 1</a><br>\n\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n</p>\n\n<p>\n\t<br>\n\tThere are 74 signs included, including some brands that don't have existing buildings on here.\_\n</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\" style=\"border-collapse:collapse;border:none;font-size:10pt;\">\n\t<colgroup>\n\t\t<col width=\"100\" >\n\t</colgroup>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t76 Ball\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t7-Eleven\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tAlon\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;border-right:1px solid transparent;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t<div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\tAmerica’s Best Value\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tAmericinn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tApplebee’s\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tBaymont sign\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tBig Boy\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tBob Evans\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tBudget Host\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tBurger King\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tCaptain D’s\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tCenex\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tChevron new\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tChipotle\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tClark\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tComfort Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tCracker Barrel\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tDenny’s\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tDrury\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tEcono Lodge\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tExtended Stay\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tFred Meyer\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tGold Star\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tGolden Corral\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tHome Depot\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tHoward Johnson\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tHuddle House\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tIHOP\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tJack In The Box\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tKFC\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tKroger\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tKwik Trip\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tLa Quinta Tall\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tLowe’s\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tMarathon\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;border-right:1px solid transparent;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t<div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\tMerryweather Inn\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tMicrotel\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tMotel 6\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tOutback\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;border-right:1px solid transparent;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t<div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\tPear Tree by Drury\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tPerkins\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tPhillips 66\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tPizza Hut\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;border-right:1px solid transparent;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\t<div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\tPizza Hut Wingstreet\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tQuality Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tQuiktrip\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tRamada\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tRed Carpet Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tRhoads Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tRodeway\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tRoy Rogers\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSheetz\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tShell new\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tShilo\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tShoneys\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSinclair\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSkyline\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSleep Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSonic\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSpeedway\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tStarbucks\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tSteak N Shake\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tStuckeys\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tTaco Bell\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tTexaco new\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tThorntons\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tTim Hortons\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tTravelodge\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tValero\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tVillage Inn\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tWaffle House\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tWalmart\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"background-color:#ffffff;color:#222222;padding:2px 3px 2px 3px;vertical-align:bottom;\">\n\t\t\t\tWendy’s\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>\n\t<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
     file: PC Towering Sign Set 1.zip
+    filename: PC Towering Sign Set 1.zip
     files:
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Sleep Inn Sign_499303fa.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Rodeway Inn Sign_699303e5.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RhoadsSign_49944b3a.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RedCarpetSign_e9985f63.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Ramada Sign_099aec75.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Quality Inn Sign_499303ce.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Pear Tree by Drury Sign_69944b9c.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWendysSign_89994ede.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWalmartSign_89994f21.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWaffleHouseSign_499da669.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCVillageInnSign_499aecc7.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCValeroSign_299c469d.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTimHortonsSign_899c54ee.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCThorntonsSign_49a39bdf.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTexacoSign_a99986b8.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTacoBellSign_099af13c.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStuckeysSign_a9a1a449.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStarbucksSign_09a6e142.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSpeedwaySign_49985f0c.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSonicSign_299c46bb.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSNSSign_e99ac312.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSkylineSign_49a446d5.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSinclairSign_099ac325.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShoneysSign_499af18f.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShellSign_a999868d.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSheetzsign_499915e6.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCRoyRogersSign_c99986f0.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCQTsign_499915d1.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign2_89992f70.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign1_89992f61.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPhillips66Sign_a9a1a435.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPerkinsSign_e9a44675.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCOutbackSign_69a44658.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMotel6SignTall_e9a2ebe7.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMarathonSign_8999159f.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCLowesSign_29a39bf9.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKwikTripSign_49a1a487.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKrogerSign_89994f34.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSign_c9994eff.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSignNew_c99c4670.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCJackSign_a99c467f.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCIHOPSign_499da684.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHuddleHouseSign_a9a58b2d.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHomeDepotSign_499c4658.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BaymontSign_29944b81.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BudgetHostSign_a9985f48.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Comfort Inn Sign_e99303a2.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Econo Lodge Sign_e99303ba.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_ExtendedStaySign_c9a2ec24.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_HoJoSign_89994f69.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Knights Inn Sign Tall_29a3a033.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_La Quinta Sign Tall_29a39b91.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MerryweatherSign_c9944b49.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MicrotelSign_09985f36.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC AmericInn Sign_c9a39bb5.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC711SignTallNew_499c463f.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC76Sign_89a58b16.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCAlonSign_69a2ebfe.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCApplebeesSign_e9a1a473.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBKSign_e9992f93.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBPSignPre2001_a9a58af5.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBigBoySign_a99da62d.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBobEvansSign_c9a1a45b.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCaptainDSign_a99da6a3.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCenexSign_89a1a4a5.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChevronSign_a99986a2.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChipotleSign_49994f47.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCClarkSign_09a2ebbf.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCrackerBarrelSign_099986cb.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCDennysign_29a6e15a.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCFredMeyerSign_29a2ebd1.SC4Lot
       - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCGoldStarSign_49a44709.SC4Lot
       - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCGoldenCorralSign_a99aecb0.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCFredMeyerSign_29a2ebd1.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCDennysign_29a6e15a.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCrackerBarrelSign_099986cb.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCClarkSign_09a2ebbf.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChipotleSign_49994f47.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCChevronSign_a99986a2.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCenexSign_89a1a4a5.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCCaptainDSign_a99da6a3.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBPSignPre2001_a9a58af5.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBobEvansSign_c9a1a45b.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBKSign_e9992f93.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCBigBoySign_a99da62d.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCApplebeesSign_e9a1a473.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCAlonSign_69a2ebfe.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC76Sign_89a58b16.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC711SignTallNew_499c463f.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PC AmericInn Sign_c9a39bb5.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MicrotelSign_09985f36.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_MerryweatherSign_c9944b49.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_La Quinta Sign Tall_29a39b91.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Knights Inn Sign Tall_29a3a033.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_HoJoSign_89994f69.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_ExtendedStaySign_c9a2ec24.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Econo Lodge Sign_e99303ba.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Comfort Inn Sign_e99303a2.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BudgetHostSign_a9985f48.SC4Lot
-      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_BaymontSign_29944b81.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHomeDepotSign_499c4658.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCHuddleHouseSign_a9a58b2d.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCIHOPSign_499da684.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCJackSign_a99c467f.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSignNew_c99c4670.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKFCSign_c9994eff.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKrogerSign_89994f34.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCKwikTripSign_49a1a487.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCLowesSign_29a39bf9.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMarathonSign_8999159f.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCMotel6SignTall_e9a2ebe7.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCOutbackSign_69a44658.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPerkinsSign_e9a44675.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPhillips66Sign_a9a1a435.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign1_89992f61.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCPizzaHutSign2_89992f70.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCQTsign_499915d1.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCRoyRogersSign_c99986f0.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSNSSign_e99ac312.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSheetzsign_499915e6.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShellSign_a999868d.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCShoneysSign_499af18f.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSinclairSign_099ac325.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSkylineSign_49a446d5.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSonicSign_299c46bb.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCSpeedwaySign_49985f0c.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStarbucksSign_09a6e142.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCStuckeysSign_a9a1a449.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTacoBellSign_099af13c.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTexacoSign_a99986b8.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCThorntonsSign_49a39bdf.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCTimHortonsSign_899c54ee.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCValeroSign_299c469d.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCVillageInnSign_499aecc7.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWaffleHouseSign_499da669.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWalmartSign_89994f21.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_PCWendysSign_89994ede.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Pear Tree by Drury Sign_69944b9c.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Quality Inn Sign_499303ce.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Ramada Sign_099aec75.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RedCarpetSign_e9985f63.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_RhoadsSign_49944b3a.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Rodeway Inn Sign_699303e5.SC4Lot
+      - PC Towering Sign Set 1/PC Towering Sign Set (lots only)/PLOP_1x1_Sleep Inn Sign_499303fa.SC4Lot
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2019_03/5c9c42bfb7b6f_Eichman-May.6041553744024.png.a84af2989eeac1493f1bbe1ee24044ea.png
       - https://www.simtropolis.com/objects/screens/monthly_2019_03/5c9c42cb3a2b7_Kimmons-Jun.8421553316924.png.171c2f6dd2ace1d0309b216fe212c690.png
@@ -29035,7 +29040,7 @@ assets:
           textures:
             - 258c0000
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: PC Towering Sign Set 1
     sha256: 1ffb3149b341fc1861e650bc8969ca6bba24628a50010601f409fba19110a846
@@ -29550,9 +29555,9 @@ assets:
     authors:
       - hugues aroux
     category: 108-parks-plazas
-    lastModified: 2020-07-28T09:41:13.000Z
+    lastModified: 2024-12-25T11:36:19.000Z
     name: Scoty Field Paths & Hedges
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_07/appalachian_terrain.thumb.jpg.34ce8e79a3bf24baf3b09159d94c639f.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/FPH_season_241225.thumb.jpg.8a2051a3521aab0d3a27213d1bb7acbc.jpg
     url: https://community.simtropolis.com/files/file/33722-scoty-field-paths-hedges/
   simtropolis/33751:
     assetId: simtropolis/33751-lp46-beirut
@@ -29610,7 +29615,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2020_08/5f3563fc439ad_DutchBicyclepaths.jpg.77062e0ea3e9b2fe5dbc8d6c5b1e3c78.jpg
     lastModified: 2020-08-13T16:07:06.000Z
     meta:
-      timestamp: 2024-12-17T15:56:18.370Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Dutch Bicyclepaths
     sha256: 018485cd5775f69d9e6c7307ad92bbb1140abca083ba5702ad2363996cd94cf6
@@ -31542,7 +31547,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2021_11/Albee-Amphitheater-01.jpg.bf938a2610c3a899237652f1fa68e930.jpg
     lastModified: 2021-11-01T18:49:47.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Albee Amphitheater
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_11/Albee-Amphitheater-00.thumb.jpg.2db83af0831ff45a2f9dfb69ad43e1c1.jpg
@@ -31558,7 +31563,7 @@ assets:
               label: Albee Amphitheater
               maintenance: 30
               menu: Parks
-              model: 00000000-0000
+              model: null
               name: Jasoncw - Albee Amphitheater
               pollution: 4294967295
               relief:
@@ -31609,7 +31614,7 @@ assets:
               label: Albee Amphitheater
               maintenance: 30
               menu: Parks
-              model: 00000000-0000
+              model: null
               name: Jasoncw - Albee Amphitheater
               pollution: 4294967295
               relief:
@@ -31858,7 +31863,7 @@ assets:
           cost: 470
           maintenance: 60
           menu: Parks
-          model: 00000000-0000
+          model: null
           name: Jasoncw - Dreieck Park (PZ3x3)
           pollution: 4294967278
           pollutionRadius: 6
@@ -31894,7 +31899,7 @@ assets:
           textures:
             - '26210000'
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       Jasoncw - Dreieck Park/Jasoncw - Dreieck Park.SC4Model:
@@ -31924,7 +31929,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2022_12/ShieldsYouthCenter01.jpg.35d0c45659932896c92187aa3a480dd5.jpg
     lastModified: 2022-12-25T06:02:34.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Shields Youth Center
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/ShieldsYouthCenter00.thumb.jpg.3d22fccd6ccdfb53970fc79698bc0b3c.jpg
@@ -32274,7 +32279,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a06a50f03f_GeodesicDomePavilion01.jpg.830446bd30a6381d936afaf7bb75bee2.jpg
     lastModified: 2023-12-25T22:49:12.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Geodesic Dome Pavilion
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a06e84ca80_GeodesicDomePavilion00.thumb.jpg.65ee2983fa438b07f2d492b6c43a918d.jpg
@@ -32475,7 +32480,7 @@ assets:
           textures:
             - 25f40000
     meta:
-      timestamp: 2024-12-17T13:16:44.002Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     models:
       Ampitheater 1/Ampitheater1-0x5ad0e817_0x730efba7_0x30000.SC4Model:
@@ -32856,7 +32861,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/670744ed06aa5_WebbChapelParkPavilion01.jpg.a5db8ed25bfc7685cebaa2604d9e941a.jpg
     lastModified: 2024-10-10T03:08:05.000Z
     meta:
-      timestamp: 2024-12-16T12:01:08.007Z
+      timestamp: 2025-01-06T12:12:25.449Z
       version: 1
     name: Webb Chapel Park Pavilion
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/6707451535395_WebbChapelParkPavilion00.thumb.jpg.1c392bbfc8fbc0a882909ffa3769839d.jpg
@@ -35283,4 +35288,4 @@ assets:
     url: https://community.simtropolis.com/files/file/998-large-park/
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2025-01-06T10:30:47.596Z

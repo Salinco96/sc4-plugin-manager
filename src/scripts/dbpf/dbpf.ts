@@ -99,7 +99,12 @@ export async function analyzeSC4Files(
                     stages: Array<FloraData & { id: FloraID }>
                   } = {
                     next: get(exemplar, ExemplarPropertyID.FloraClusterType),
-                    stages: [{ ...getFloraData(exemplar, file), id: floraId }],
+                    stages: [
+                      {
+                        ...getFloraData(exemplar, file),
+                        id: floraId,
+                      },
+                    ],
                   }
 
                   // Link to next stage
