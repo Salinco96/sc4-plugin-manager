@@ -19,7 +19,7 @@ export interface FloraData {
   /**
    * Model ID
    */
-  model?: string
+  model?: string | null
 
   /**
    * Internal exemplar name
@@ -38,7 +38,7 @@ export interface FloraData {
     /**
      * Model ID
      */
-    model?: string
+    model?: string | null
 
     /**
      * Internal exemplar name

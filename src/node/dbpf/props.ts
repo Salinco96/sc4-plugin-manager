@@ -1,5 +1,6 @@
 import { toHex } from "@salinco/nice-utils"
 
+import { TGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { PropData } from "@node/data/props"
@@ -25,7 +26,7 @@ export function getPropData(exemplar: Exemplar): PropData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = getModelId(model)
+    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
   }
 
   return data

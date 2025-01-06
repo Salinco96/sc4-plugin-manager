@@ -6,6 +6,7 @@ import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
 import type { Features, PackageConfig } from "./types"
 import type { VariantInfo } from "./variants"
+import type { PropID } from "./props"
 
 export enum ZoneDensity {
   LOW = "low",
@@ -54,6 +55,11 @@ export interface LotInfo {
   name?: string
 
   /**
+   * Prop IDS - indexer only
+   */
+  props?: PropID[]
+
+  /**
    * Lot instance ID to replace with this one (e.g. different ID for DN/MN)
    */
   replace?: LotID
@@ -77,6 +83,11 @@ export interface LotInfo {
    * Growth stage
    */
   stage?: number
+
+  /**
+   * Texture IDS - indexer only
+   */
+  textures?: string[]
 }
 
 export function isSC4LotFile(filePath: string): boolean {

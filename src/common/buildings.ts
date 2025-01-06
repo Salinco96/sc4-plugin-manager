@@ -46,9 +46,9 @@ export interface BuildingInfo {
   description?: string
 
   /**
-   * Building family ID
+   * Building family IDs
    */
-  family?: FamilyID
+  families?: FamilyID[]
 
   /**
    * Path to exemplar file (POSIX)
@@ -118,6 +118,11 @@ export interface BuildingInfo {
    * Menu
    */
   menu?: MenuID
+
+  /**
+   * Model ID
+   */
+  model?: string | null
 
   /**
    * Internal name

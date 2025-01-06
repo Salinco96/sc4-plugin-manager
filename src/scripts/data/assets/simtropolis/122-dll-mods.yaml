@@ -1140,6 +1140,39 @@ assets:
     uncompressed: 261414
     url: https://community.simtropolis.com/files/file/36571-bulldoze-extensions-dll-plugin/
     version: 1.0.0
+  simtropolis/36614:
+    assetId: simtropolis/36614-extended-terrain-dll
+    authors:
+      - Null 45
+    category: 122-dll-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tA DLL Plugin for SimCity 4 that adds support for more terrain types.\n</p>\n\n<p>\n\tBased on the data in terrain.ini, Maxis appears to have originally intended for SC4 to have 4 different terrain types: Arctic, Desert, Temperate and Tropical. But that feature was cut at some point in the game's development, and they only implemented the Tropical terrain type.\n</p>\n\n<p>\n\tThis DLL mod adds a region view cheat code that displays a UI for the user to switch between the different terrain types. The available terrain types will be shown using the prefix the terrain mod specifies in terrain.ini. The prefix is the text that comes before the TextureMapTable and MiscTexture section names. Note that the Terrain not a valid terrain mod prefix, TerrainMiscTextures is the section the game uses for cliff textures that are shared between different texture mods.\n</p>\n\n<p>\n\tThis DLL mod is intended as a dependency for other mods that add new terrain types beyond the Tropical terrain type that Maxis created, it does not add any terrain types to the game by itself.\n</p>\n\n<p>\n\t<strong>System Requirements</strong>\n</p>\n\n<p>\n\t\_\_\_ SimCity 4 version 641<br>\n\t\_\_\_ Windows 10 or later\n</p>\n\n<p>\n\tThe plugin may work on Windows 7 or later with the Microsoft Visual C++ 2022 x86 Redistribute installed, but I do not have the ability to test that.\n</p>\n\n<p>\n\t<strong>Installation</strong>\n</p>\n\n<ol>\n\t<li>\n\t\tClose SimCity 4.\n\t</li>\n\t<li>\n\t\tCopy <em>SC4ExtendedTerrain.dll </em>and <em>ExtendedTerrainUI.dat</em> into the top-level of the Plugins folder in the SimCity 4 installation directory or Documents/SimCity 4 directory.\n\t</li>\n\t<li>\n\t\tStart SimCity 4.\n\t</li>\n</ol>\n\n<p>\n\t<strong>Usage</strong>\n</p>\n\n<p>\n\tThe DLL adds a ExtendedTerrain cheat when in the region view. This cheat code has no parameters and shows a dialog that allows the terrain type to be changed for that region.\n</p>\n\n<p>\n\t<strong>Troubleshooting</strong>\n</p>\n\n<p>\n\tThe plugin should write a SC4ExtendedTerrain.log file in the same folder as the plugin.<br>\n\tThe log contains status information for the most recent run of the plugin.\n</p>\n\n<p>\n\t<strong>Source Code and Support</strong>\n</p>\n\n<p>\n\tPlugin thread: <a href=\"https://community.simtropolis.com/forums/topic/763433-extended-terrain-dll-beta/\" rel=\"\">https://community.simtropolis.com/forums/topic/763433-extended-terrain-dll/</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tThe plugin's source code and issue tracker are located on GitHub:  <a href=\"https://github.com/0xC0000054/sc4-extended-terrain/releases\" rel=\"external nofollow\">https://github.com/0xC0000054/sc4-extended-terrain</a>\n</p>\n\n<p>\n\tIf you would like to make voluntary contributions to support me in continuing to create more content for SimCity 4, I accept donations via PayPal: <a href=\"https://paypal.me/0xC000005\" rel=\"external nofollow\">https://paypal.me/0xC000005</a>\n</p>\n\n<p>\n\tThanks to the few people who have donated to me.\n</p>\n\n\t\t\t\t\t\t</body>"
+    filename: SC4ExtendedTerrain.zip
+    files:
+      - Dll/ExtendedTerrainUI.dat
+      - Dll/LICENSE.txt
+      - Dll/README.htm
+      - Dll/SC4ExtendedTerrain.dll
+      - Dll/Third Party Notices.txt
+      - Readme.txt
+      - edited-terrain-ini/EditedTerrain.ini
+      - edited-terrain-ini/EditedTerrainIni.dat
+      - edited-terrain-ini/README.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_12/STEXIcon.png.315a8d2d793b41edc08efaa05377ff8b.png
+    lastModified: 2024-12-19T12:45:20.000Z
+    meta:
+      timestamp: 2024-12-20T07:29:40.552Z
+      version: 1
+    name: Extended Terrain DLL
+    repository: https://github.com/0xC0000054/sc4-extended-terrain
+    sha256: bc3548775d795d4f2e87d749fbc9790f8a41330358606071313449310d9fd92d
+    size: 69061
+    support: https://community.simtropolis.com/forums/topic/763433-extended-terrain-dll-beta
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/STEXIcon.thumb.png.1e1a5147bb6858b1f77d91363878165e.png
+    uncompressed: 157106
+    url: https://community.simtropolis.com/files/file/36614-extended-terrain-dll/
+    version: 1.0.0
 
 meta:
-  timestamp: 2024-12-19T08:48:47.951Z
+  timestamp: 2024-12-20T07:29:40.552Z

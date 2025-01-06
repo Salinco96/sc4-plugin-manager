@@ -1,5 +1,5 @@
 import { Card, CardContent, Divider, List, ListItem } from "@mui/material"
-import { get, groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
+import { forEach, get, groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
 import { Fragment, useEffect, useMemo, useState } from "react"
 
 import { FlexBox } from "@components/FlexBox"
@@ -12,6 +12,8 @@ import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/st
 import { checkFile } from "@common/packages"
 import { ExemplarRef } from "../ExemplarRef"
 import type { PackageViewTabInfoProps } from "./tabs"
+import type { FamilyID, FamilyInfo } from "@common/families"
+import type { PropID, PropInfo } from "@common/props"
 
 export default function PackageViewProps({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const elementId = useStore(store => store.packageView.elementId)
@@ -49,6 +51,23 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
         .map(file => file.path),
     )
 
+    // Collect unique prop families by ID
+    const propFamilies = mapValues(
+      groupBy(variantInfo.propFamilies ?? [], get("id")),
+      (families, familyId) => {
+        if (families.length !== 1) {
+          const included = families.filter(family => family.file && includedFiles.has(family.file))
+          if (included.length === 1) {
+            return included[0]
+          }
+
+          console.warn(`Duplicate prop family  ${familyId}`)
+        }
+
+        return families[0]
+      },
+    )
+
     // Collect unique props by ID
     const props = mapValues(groupBy(variantInfo.props ?? [], get("id")), (props, propId) => {
       if (props.length !== 1) {
@@ -63,21 +82,38 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
       return props[0]
     })
 
+    const groupedByFamily: {
+      [id in FamilyID | PropID]?: { family?: FamilyInfo; familyId?: FamilyID; props: PropInfo[] }
+    } = {}
+
     // Group props by family
+    forEach(props, (prop, id) => {
+      if (prop.families?.length) {
+        for (const familyId of prop.families) {
+          groupedByFamily[familyId] ??= { family: propFamilies[familyId], familyId, props: [] }
+          groupedByFamily[familyId].props.push(prop)
+        }
+      } else {
+        groupedByFamily[id] ??= { props: [] }
+        groupedByFamily[id].props.push(prop)
+      }
+    })
+
+    // Sort props within families
+    forEach(groupedByFamily, group => {
+      group.props = sortBy(group.props, prop => prop.name || prop.id)
+    })
+
+    // Sort families
     return sortBy(
-      values(groupBy(values(props), prop => prop.family ?? prop.id)).map(props =>
-        sortBy(props, prop => prop.name || prop.id),
-      ),
-      props => (props.length > 1 && props[0].family) || props[0].name || props[0].id,
+      values(groupedByFamily),
+      group => group.familyId || group.props[0].name || group.props[0].id,
     )
   }, [features, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {groupedProps.map(props => {
-        const familyId = props.length > 1 ? props[0].family : undefined
-        const familyName = "Prop family" // TODO: Get family name
-
+      {groupedProps.map(({ family, familyId, props }) => {
         return (
           <ListItem key={familyId ?? props[0].id} sx={{ padding: 0 }}>
             <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
@@ -85,10 +121,10 @@ export default function PackageViewProps({ packageId }: PackageViewTabInfoProps)
                 {familyId && (
                   <FlexBox direction="column" id={`propFamily-${familyId}`}>
                     <Text maxLines={1} variant="h6">
-                      {familyName}
+                      {family?.name ?? "Prop family"}
                     </Text>
 
-                    <ExemplarRef /* file={prop.file} */ id={familyId} />
+                    <ExemplarRef file={family?.file} id={familyId} />
                   </FlexBox>
                 )}
 

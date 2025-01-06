@@ -464,7 +464,9 @@ export function generateVariantInfo(
   variantInfo.readme = union(intersection(variantInfo.readme ?? [], docPaths), readmePaths)
 
   variantInfo.buildingFamilies = unionBy(
-    variantInfo.buildingFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    variantInfo.buildingFamilies?.filter(
+      instance => instance.file && includedSC4Paths.has(instance.file),
+    ) ?? [],
     values(entries).flatMap(entry => {
       return collect(entry.buildingFamilies ?? {}, (instances, oldPath) => {
         const newPath = translatePaths[entry.asset.id]?.[oldPath]
@@ -524,7 +526,9 @@ export function generateVariantInfo(
   )
 
   variantInfo.propFamilies = unionBy(
-    variantInfo.propFamilies?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
+    variantInfo.propFamilies?.filter(
+      instance => instance.file && includedSC4Paths.has(instance.file),
+    ) ?? [],
     values(entries).flatMap(entry => {
       return collect(entry.propFamilies ?? {}, (instances, oldPath) => {
         const newPath = translatePaths[entry.asset.id]?.[oldPath]

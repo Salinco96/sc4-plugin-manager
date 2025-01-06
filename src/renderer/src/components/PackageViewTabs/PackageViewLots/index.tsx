@@ -1,9 +1,9 @@
 import { ViewInAr as DependencyIcon } from "@mui/icons-material"
 import { Alert, AlertTitle, List } from "@mui/material"
-import { get, groupBy, mapValues, values, where } from "@salinco/nice-utils"
+import { forEach, get, groupBy, mapValues, sortBy, unionBy, values } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { getEnabledLots, isSC4LotFile, isTogglableLot } from "@common/lots"
+import { getEnabledLots, isSC4LotFile, isTogglableLot, type LotInfo } from "@common/lots"
 import { checkCondition, checkFile } from "@common/packages"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
@@ -17,6 +17,8 @@ import {
 import { FlexBox } from "@components/FlexBox"
 import type { PackageViewTabInfoProps } from "../tabs"
 import { PackageViewLotGroup } from "./PackageViewLotGroup"
+import type { BuildingID, BuildingInfo } from "@common/buildings"
+import type { FamilyID, FamilyInfo } from "@common/families"
 
 export default function PackageViewLots({ packageId }: PackageViewTabInfoProps): JSX.Element {
   const actions = useStoreActions()
@@ -99,7 +101,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
       groupBy(variantInfo.buildingFamilies ?? [], get("id")),
       (families, familyId) => {
         if (families.length !== 1) {
-          const included = families.filter(family => includedFiles.has(family.file))
+          const included = families.filter(family => family.file && includedFiles.has(family.file))
           if (included.length === 1) {
             return included[0]
           }
@@ -141,35 +143,83 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
       return lots[0]
     })
 
-    // Group lots by building
-    return values(
-      mapValues(
-        {
-          ...groupBy(
-            maxis.lots.filter(
-              lot => lot.building && (buildings[lot.building] || buildingFamilies[lot.building]),
-            ),
-            lot => lot.building ?? null,
-          ),
-          ...groupBy(values(lots), lot => lot.building ?? lot.id),
-        },
-        (lots, id) => {
-          const building = buildings[id] ?? maxis.buildings.find(where("id", id))
-          if (building) {
-            return { building, id, lots }
+    const groupedByBuilding: {
+      [id in BuildingID | FamilyID]?: {
+        building?: BuildingInfo
+        buildingFamily?: FamilyInfo
+        familyBuildings?: BuildingInfo[]
+        familyId?: FamilyID
+        groupId: BuildingID | FamilyID
+        lots: LotInfo[]
+      }
+    } = {}
+
+    // Group props by family
+    forEach(lots, lot => {
+      const buildingId = lot.building
+
+      if (buildingId) {
+        const building =
+          buildings[buildingId] ?? maxis.buildings.find(building => building.id === buildingId)
+
+        const buildingFamily =
+          buildingFamilies[buildingId] ??
+          maxis.buildingFamilies.find(family => family.id === buildingId)
+
+        if (building || buildingFamily) {
+          groupedByBuilding[buildingId] ??= {
+            building,
+            buildingFamily,
+            familyId: buildingFamily?.id,
+            groupId: buildingId,
+            lots: [],
           }
 
-          const buildingFamily =
-            buildingFamilies[id] ?? maxis.buildingFamilies.find(where("id", id))
+          groupedByBuilding[buildingId].lots.push(lot)
+        }
+      }
+    })
 
-          const familyBuildings = [
-            ...values(buildings).filter(where("family", id)),
-            ...maxis.buildings.filter(where("family", id)),
-          ]
+    for (const maxisLot of maxis.lots) {
+      const buildingId = maxisLot.building
 
-          return { buildingFamily, familyBuildings, familyId: id, id, lots }
-        },
-      ),
+      if (buildingId) {
+        const building = buildings[buildingId]
+        const buildingFamily = buildingFamilies[buildingId]
+
+        if (building || buildingFamily) {
+          groupedByBuilding[buildingId] ??= {
+            building,
+            buildingFamily,
+            familyId: buildingFamily?.id,
+            groupId: buildingId,
+            lots: [],
+          }
+
+          if (!groupedByBuilding[buildingId].lots.some(lot => lot.id === maxisLot.id)) {
+            groupedByBuilding[buildingId].lots.push(maxisLot)
+          }
+        }
+      }
+    }
+
+    // Sort props within families
+    forEach(groupedByBuilding, group => {
+      const { familyId } = group
+
+      if (familyId) {
+        group.familyBuildings = unionBy(
+          values(buildings),
+          maxis.buildings,
+          building => building.id,
+        ).filter(building => building.families?.includes(familyId))
+      }
+    })
+
+    // Sort families
+    return sortBy(
+      values(groupedByBuilding),
+      group => group.buildingFamily?.name || group.building?.name || group.groupId,
     )
   }, [features, maxis, packageId, profileInfo, profileOptions, settings, variantInfo])
 
@@ -187,7 +237,7 @@ export default function PackageViewLots({ packageId }: PackageViewTabInfoProps):
           <PackageViewLotGroup
             {...group}
             enabledLots={enabledLots}
-            key={group.id}
+            key={group.groupId}
             packageId={packageId}
             setEnabledLots={lots => actions.setPackageOption(packageId, "lots", lots)}
           />

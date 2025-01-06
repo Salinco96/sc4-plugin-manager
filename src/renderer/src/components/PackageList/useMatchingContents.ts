@@ -2,7 +2,6 @@ import { compact, isDefined, parseHex, values, where } from "@salinco/nice-utils
 import { useMemo } from "react"
 
 import { getTextureIdRange } from "@common/dbpf"
-import type { FamilyInfo } from "@common/families"
 import type { FloraID, FloraInfo } from "@common/mmps"
 import type { ContentsInfo } from "@common/variants"
 import { Page, useLocation } from "@utils/navigation"
@@ -28,9 +27,11 @@ export function useMatchingContents({
 
       const building = buildings?.find(where("id", hex))
 
-      const buildingFamily: Omit<FamilyInfo, "file"> | undefined =
-        buildingFamilies?.find(where("id", hex)) ??
-        (!building && buildings?.some(where("family", hex)) ? { id: hex } : undefined)
+      const buildingFamily =
+        buildingFamilies?.find(family => family.id === hex) ??
+        (!building && buildings?.some(building => building.families?.includes(hex))
+          ? { id: hex }
+          : undefined)
 
       const lot = lots?.find(where("id", hex))
 
@@ -38,9 +39,9 @@ export function useMatchingContents({
 
       const prop = props?.find(where("id", hex))
 
-      const propFamily: Omit<FamilyInfo, "file"> | undefined =
-        propFamilies?.find(where("id", hex)) ??
-        (!prop && props?.some(where("family", hex)) ? { id: hex } : undefined)
+      const propFamily =
+        propFamilies?.find(family => family.id === hex) ??
+        (!prop && props?.some(prop => prop.families?.includes(hex)) ? { id: hex } : undefined)
 
       const textureIdRange = getTextureIdRange(parseHex(hex))
 

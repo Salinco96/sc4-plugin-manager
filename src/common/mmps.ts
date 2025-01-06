@@ -33,7 +33,7 @@ export interface FloraInfo {
   /**
    * Model ID
    */
-  model?: string
+  model?: string | null
 
   /**
    * Internal exemplar name
@@ -52,7 +52,7 @@ export interface FloraInfo {
     /**
      * Model ID
      */
-    model?: string
+    model?: string | null
 
     /**
      * Internal exemplar name

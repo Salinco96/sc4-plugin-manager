@@ -6,7 +6,7 @@ export interface FamilyInfo {
   /**
    * Path to exemplar file (POSIX)
    */
-  file: string
+  file?: string
 
   /**
    * Family ID

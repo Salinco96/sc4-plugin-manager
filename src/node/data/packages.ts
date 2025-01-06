@@ -950,8 +950,9 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     assets: info.assets?.length ? info.assets?.map(writeVariantAssetInfo) : undefined,
     authors: info.authors?.length ? sort(info.authors) : undefined,
     buildingFamilies: info.buildingFamilies?.length
-      ? mapValues(groupBy(info.buildingFamilies, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), writeFamilyInfo),
+      ? mapValues(
+          groupBy(info.buildingFamilies, family => family.file ?? null),
+          instances => mapValues(indexBy(instances, get("id")), writeFamilyInfo),
         )
       : undefined,
     buildings: info.buildings?.length
@@ -989,8 +990,9 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     optional: info.optional?.length ? info.optional : undefined,
     options: info.options?.length ? info.options.map(writeOptionInfo) : undefined,
     propFamilies: info.propFamilies?.length
-      ? mapValues(groupBy(info.propFamilies, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), writeFamilyInfo),
+      ? mapValues(
+          groupBy(info.propFamilies, family => family.file ?? null),
+          instances => mapValues(indexBy(instances, get("id")), writeFamilyInfo),
         )
       : undefined,
     props: info.props?.length

@@ -12,6 +12,7 @@ import {
 } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
+import { TGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import { Menu, type MenuID, Submenu } from "@common/submenus"
@@ -182,7 +183,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = getModelId(model)
+    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
   }
 
   const capacitySatisfied = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)
