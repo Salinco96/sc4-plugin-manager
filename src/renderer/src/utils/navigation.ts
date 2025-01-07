@@ -4,6 +4,7 @@ import { create } from "zustand"
 
 import type { AuthorID } from "@common/authors"
 import type { PackageID } from "@common/packages"
+import type { ToolID } from "@common/tools"
 
 export enum Page {
   Authors = "Authors",
@@ -12,6 +13,8 @@ export enum Page {
   PackageView = "PackageView",
   Profile = "Profile",
   Settings = "Settings",
+  Tools = "Tools",
+  ToolView = "ToolView",
 }
 
 export type PageData<T extends Page> = {
@@ -21,6 +24,8 @@ export type PageData<T extends Page> = {
   PackageView: { packageId: PackageID }
   Profile: EmptyRecord
   Settings: EmptyRecord
+  Tools: EmptyRecord
+  ToolView: { toolId: ToolID }
 }[T]
 
 export type Location<T extends Page = Page> = {

@@ -4,7 +4,7 @@ import {
   Person as AuthorsIcon,
   AccountBalance as CivicsIcon,
   CorporateFare as CommercialIcon,
-  // ViewInAr as DependenciesIcon,
+  ViewInAr as DependenciesIcon,
   Bolt as EnergyIcon,
   Factory as IndustrialIcon,
   Church as LandmarksIcon,
@@ -15,6 +15,7 @@ import {
   AccountBox as ProfileIcon,
   Apartment as ResidentialIcon,
   Settings as SettingsIcon,
+  Construction as ToolsIcon,
   Traffic as TransportIcon,
   Update as UpdatesIcon,
 } from "@mui/icons-material"
@@ -82,6 +83,12 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
+    icon: <ToolsIcon />,
+    id: "tools",
+    label: "Tools",
+    location: { page: Page.Tools, data: {} },
+  },
+  {
     icon: <AuthorsIcon />,
     id: "authors",
     label: "Authors",
@@ -105,26 +112,26 @@ export const tabs: TabInfo[] = [
       states: [],
     },
   },
-  // {
-  //   badgeCount(store) {
-  //     return countPackages(store, this.packageFilters)
-  //   },
-  //   collapse: true,
-  //   group: "Packages",
-  //   icon: <DependenciesIcon />,
-  //   id: "packages:dependencies",
-  //   label: "Dependencies",
-  //   location: { page: Page.Packages, data: {} },
-  //   packageFilters: {
-  //     categories: [CategoryID.DEPENDENCIES],
-  //     onlyErrors: false,
-  //     onlyNew: false,
-  //     onlyUpdates: false,
-  //     search: "",
-  //     states: [],
-  //   },
-  //   tooltip: "Textures, props",
-  // },
+  {
+    badgeCount(store) {
+      return countPackages(store, this.packageFilters)
+    },
+    collapse: true,
+    group: "Packages",
+    icon: <DependenciesIcon />,
+    id: "packages:dependencies",
+    label: "Dependencies",
+    location: { page: Page.Packages, data: {} },
+    packageFilters: {
+      categories: [CategoryID.DEPENDENCIES],
+      onlyErrors: false,
+      onlyNew: false,
+      onlyUpdates: false,
+      search: "",
+      states: [],
+    },
+    tooltip: "Textures, props",
+  },
   {
     badgeCount(store) {
       return countPackages(store, this.packageFilters)

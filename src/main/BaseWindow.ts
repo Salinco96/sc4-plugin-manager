@@ -3,8 +3,6 @@ import path from "node:path"
 import { shell } from "electron"
 import { BrowserWindow, type BrowserWindowConstructorOptions } from "electron/main"
 
-import { isDev } from "@utils/env"
-
 const WHITELISTED_ORIGINS = [
   "https://community.simtropolis.com",
   "https://discordapp.com",
@@ -24,7 +22,7 @@ const WHITELISTED_ORIGINS = [
 export class BaseWindow extends BrowserWindow {
   public constructor(options: BrowserWindowConstructorOptions) {
     super({
-      autoHideMenuBar: !isDev(),
+      autoHideMenuBar: true,
       icon: path.join(__dirname, "../renderer/icon.png"),
       show: false,
       ...options,

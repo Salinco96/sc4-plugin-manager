@@ -36,7 +36,7 @@ export async function loadDownloadedAssets(
 ): Promise<{ [assetId in AssetID]?: string[] }> {
   const assets: { [assetId in AssetID]?: string[] } = {}
 
-  const downloadKeys = await glob("*/*@*/", { cwd: basePath, posix: true })
+  const downloadKeys = await glob(["*/*@*/", "github/*/*@*/"], { cwd: basePath, posix: true })
 
   for (const downloadKey of downloadKeys) {
     const [assetId, version] = downloadKey.split("@") as [AssetID, string]

@@ -27,12 +27,14 @@ import {
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
+import type { ToolID, ToolInfo } from "@common/tools"
 import {
   type PackageFilters,
   type PackageUi,
   type Store,
   getCurrentProfile,
   getPackageInfo,
+  getToolInfo,
   useStore,
 } from "./store"
 
@@ -135,6 +137,22 @@ export function usePackageStatus(packageId: PackageID): PackageStatus | undefine
         return getPackageStatus(packageInfo, profileInfo)
       },
       [packageId],
+    ),
+  )
+}
+
+export function useToolInfo(toolId: ToolID): ToolInfo {
+  return useStore(
+    useCallback(
+      store => {
+        const toolInfo = getToolInfo(store, toolId)
+        if (!toolInfo) {
+          throw Error(`Unknown tool '${toolId}'`)
+        }
+
+        return toolInfo
+      },
+      [toolId],
     ),
   )
 }

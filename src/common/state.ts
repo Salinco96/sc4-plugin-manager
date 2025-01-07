@@ -5,6 +5,7 @@ import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
 import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
 import type { Settings } from "./settings"
+import type { Tools } from "./tools"
 import type { Features, PackageInfo, Packages } from "./types"
 import type { ContentsInfo } from "./variants"
 
@@ -27,6 +28,7 @@ export interface ApplicationState {
   settings: Settings | undefined
   simtropolis: { userId: string } | null | undefined
   templates: Profiles | undefined
+  tools: Tools | undefined
 }
 
 export type Replace<T, R> = Omit<T, keyof R> & R
@@ -65,6 +67,7 @@ export function getInitialState(): ApplicationState {
     settings: undefined,
     simtropolis: undefined,
     templates: undefined,
+    tools: undefined,
   }
 }
 

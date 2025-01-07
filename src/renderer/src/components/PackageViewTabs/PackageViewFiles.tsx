@@ -1,5 +1,5 @@
 import { DBPFDataType, type DBPFFile, isDBPF } from "@common/dbpf"
-import { checkFile } from "@common/packages"
+import { type PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
 import { PackageFile } from "@components/PackageFile/PackageFile"
 import { List, ListItem } from "@mui/material"
@@ -14,9 +14,8 @@ import {
 } from "@utils/store"
 import { useEffectEvent } from "@utils/useEffectEvent"
 import { useEffect, useState } from "react"
-import type { PackageViewTabInfoProps } from "./tabs"
 
-export default function PackageViewFiles({ packageId }: PackageViewTabInfoProps): JSX.Element {
+export default function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
   const features = useFeatures()
   const settings = useSettings()

@@ -58,11 +58,13 @@ import {
 import type { PropID } from "@common/props"
 import type { Settings, SettingsData } from "@common/settings"
 import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
+import type { ToolID, Tools } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import type { ContentsInfo, FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
+import { loadAuthors } from "@node/data/authors"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { CLEANITOL_EXTENSIONS, DOC_EXTENSIONS, SC4_EXTENSIONS, matchFiles } from "@node/data/files"
 import { loadLotInfo } from "@node/data/lots"
@@ -93,6 +95,7 @@ import {
 } from "@node/files"
 import { hashCode } from "@node/hash"
 import { cmd } from "@node/processes"
+import type { TaskContext } from "@node/tasks"
 import {
   ConflictConfirmationResponse,
   showConfirmation,
@@ -101,10 +104,7 @@ import {
   showWarning,
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
-import { type ToolID, getToolInfo } from "@utils/tools"
 
-import { loadAuthors } from "@node/data/authors"
-import type { TaskContext } from "@node/tasks"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -114,6 +114,7 @@ import {
   loadMaxisExemplars,
   loadProfileOptions,
   loadProfileTemplates,
+  loadTools,
 } from "./data/db"
 import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
@@ -151,6 +152,7 @@ interface Loaded {
   profileOptions: OptionInfo[]
   settings: Settings
   templates: Profiles
+  tools: Tools
 }
 
 export class Application {
@@ -938,6 +940,7 @@ export class Application {
       profileOptions,
       settings,
       templates,
+      tools,
     } = await this.load()
 
     return {
@@ -955,6 +958,7 @@ export class Application {
       settings,
       simtropolis: this.simtropolisSession ? { userId: this.simtropolisSession.userId } : null,
       templates,
+      tools,
     }
   }
 
@@ -974,18 +978,18 @@ export class Application {
   /**
    * Returns the path to the given tool's executable, downloading the tool as needed.
    */
-  public async getToolExePath(toolId: string): Promise<string> {
-    const { assets } = await this.load()
+  public async getToolExePath(toolId: ToolID): Promise<string> {
+    const { assets, tools } = await this.load()
 
-    const toolInfo = getToolInfo(toolId as ToolID)
+    const toolInfo = tools[toolId]
     if (!toolInfo) {
       throw Error(`Unknown tool '${toolId}'`)
     }
 
-    if (toolInfo.assetId) {
-      const assetInfo = assets[toolInfo.assetId]
+    if (toolInfo.asset) {
+      const assetInfo = assets[toolInfo.asset]
       if (!assetInfo) {
-        throw Error(`Unknown asset '${toolInfo.assetId}'`)
+        throw Error(`Unknown asset '${toolInfo.asset}'`)
       }
 
       const downloadPath = await this.downloadAsset(assetInfo)
@@ -1040,6 +1044,7 @@ export class Application {
     this.handle("getPackageLogs")
     this.handle("getPackageReadme")
     this.handle("getState")
+    this.handle("installTool")
     this.handle("installVariant")
     this.handle("loadDBPFEntries")
     this.handle("loadDBPFEntry")
@@ -1052,6 +1057,7 @@ export class Application {
     this.handle("openVariantURL")
     this.handle("patchDBPFEntries")
     this.handle("removeProfile")
+    this.handle("removeTool")
     this.handle("removeVariant")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
@@ -1188,6 +1194,41 @@ export class Application {
     }
 
     return this.mainWindow
+  }
+
+  /**
+   * Install a tool.
+   */
+  public async installTool(toolId: ToolID): Promise<void> {
+    const { assets, tools } = await this.load()
+
+    await this.tasks.queue(`install:${toolId}`, {
+      handler: async context => {
+        const toolInfo = tools[toolId]
+        if (!toolInfo?.asset) {
+          throw Error(`Unknown tool '${toolId}'`)
+        }
+
+        try {
+          context.info(`Installing tool '${toolId}'...`)
+          toolInfo.action = "installing"
+          this.sendStateUpdate({ tools })
+
+          const assetInfo = assets[toolInfo.asset]
+          if (!assetInfo) {
+            throw Error(`Unknown asset '${toolInfo.asset}'`)
+          }
+
+          await this.downloadAsset(assetInfo)
+
+          toolInfo.installed = true
+        } finally {
+          toolInfo.action = undefined
+          this.sendStateUpdate({ tools })
+        }
+      },
+      pool: "main",
+    })
   }
 
   public async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
@@ -1675,6 +1716,9 @@ export class Application {
         const maxis = await loadMaxisExemplars(context, this.getDatabasePath(), categories)
         this.sendStateUpdate({ maxis })
 
+        const tools = await loadTools(context, this.getDatabasePath(), assets)
+        this.sendStateUpdate({ tools })
+
         return {
           assets,
           authors,
@@ -1687,6 +1731,7 @@ export class Application {
           profileOptions,
           settings,
           templates,
+          tools,
         }
       },
       invalidate: isReload,
@@ -2217,6 +2262,42 @@ export class Application {
         await showSuccess(i18n.t("RemoveProfileModal:title"), i18n.t("RemoveProfileModal:success"))
 
         return true
+      },
+      pool: "main",
+    })
+  }
+
+  /**
+   * Remove an installed tool.
+   */
+  public async removeTool(toolId: ToolID): Promise<void> {
+    const { assets, tools } = await this.load()
+
+    await this.tasks.queue(`install:${toolId}`, {
+      handler: async context => {
+        const toolInfo = tools[toolId]
+        if (!toolInfo?.asset) {
+          throw Error(`Unknown tool '${toolId}'`)
+        }
+
+        try {
+          context.info(`Removing tool '${toolId}'...`)
+          toolInfo.action = "removing"
+          this.sendStateUpdate({ tools })
+
+          const assetInfo = assets[toolInfo.asset]
+          if (!assetInfo) {
+            throw Error(`Unknown asset '${toolInfo.asset}'`)
+          }
+
+          const downloadPath = this.getDownloadPath(assetInfo)
+          await removeIfPresent(downloadPath)
+
+          toolInfo.installed = undefined
+        } finally {
+          toolInfo.action = undefined
+          this.sendStateUpdate({ tools })
+        }
       },
       pool: "main",
     })

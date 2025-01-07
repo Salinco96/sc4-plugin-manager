@@ -1,13 +1,12 @@
-import { checkCondition } from "@common/packages"
+import { type PackageID, checkCondition } from "@common/packages"
 import { PackageListItem } from "@components/PackageList/PackageListItem"
 import { List } from "@mui/material"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
-import type { PackageViewTabInfoProps } from "./tabs"
 
 export default function PackageViewDependencies({
   packageId,
-}: PackageViewTabInfoProps): JSX.Element {
+}: { packageId: PackageID }): JSX.Element {
   const features = useFeatures()
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)

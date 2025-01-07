@@ -1,21 +1,20 @@
-import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-material"
-import { IconButton, Tooltip, Typography } from "@mui/material"
-import { useTranslation } from "react-i18next"
-
-import type { PackageID } from "@common/packages"
+import type { ToolID } from "@common/tools"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { PackageHeader } from "@components/PackageHeader"
-import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 import { Tabs } from "@components/Tabs"
+import { ToolHeader } from "@components/ToolHeader"
+import { toolViewTabs } from "@components/ToolViewTabs/tabs"
+import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-material"
+import { IconButton, Tooltip, Typography } from "@mui/material"
 import { useHistory } from "@utils/navigation"
 import { useStore } from "@utils/store"
+import { useTranslation } from "react-i18next"
 
-function PackageViewInner({ packageId }: { packageId: PackageID }): JSX.Element {
-  const isLoading = useStore(store => !store.packages)
-  const exists = useStore(store => !!store.packages?.[packageId])
+function ToolViewInner({ toolId }: { toolId: ToolID }): JSX.Element {
+  const isLoading = useStore(store => !store.tools)
+  const exists = useStore(store => !!store.tools?.[toolId])
 
-  const { t } = useTranslation("PackageView")
+  const { t } = useTranslation("ToolView")
 
   if (isLoading) {
     return <Loader />
@@ -23,10 +22,10 @@ function PackageViewInner({ packageId }: { packageId: PackageID }): JSX.Element 
 
   if (exists) {
     return (
-      <>
-        <PackageHeader packageId={packageId} />
-        <Tabs tabs={packageViewTabs} packageId={packageId} />
-      </>
+      <FlexBox direction="column" gap={2}>
+        <ToolHeader toolId={toolId} />
+        <Tabs tabs={toolViewTabs} toolId={toolId} />
+      </FlexBox>
     )
   }
 
@@ -40,12 +39,12 @@ function PackageViewInner({ packageId }: { packageId: PackageID }): JSX.Element 
       height="100%"
     >
       <NoResultIcon fontSize="inherit" />
-      <Typography variant="subtitle1">{t("missing", { packageId })}</Typography>
+      <Typography variant="subtitle1">{t("missing", { toolId })}</Typography>
     </FlexBox>
   )
 }
 
-function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
+function ToolView({ toolId }: { toolId: ToolID }): JSX.Element {
   const history = useHistory()
 
   const { t } = useTranslation("General")
@@ -63,9 +62,9 @@ function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
           <BackIcon />
         </IconButton>
       </Tooltip>
-      <PackageViewInner packageId={packageId} />
+      <ToolViewInner toolId={toolId} />
     </FlexBox>
   )
 }
 
-export default PackageView
+export default ToolView

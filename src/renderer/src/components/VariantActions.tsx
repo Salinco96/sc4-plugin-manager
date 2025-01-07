@@ -148,7 +148,7 @@ export function VariantActions({
           <FlexBox ml={-3.5} sx={{ backgroundColor: "white" }} zIndex={1}>
             <Divider color={disabled ? "lightgray" : "white"} orientation="vertical" />
             <Button
-              aria-label={t("more")}
+              aria-label={t("more", { ns: "General" })}
               color={mainAction.color}
               disabled={disabled}
               onClick={() => setMenuOpen(true)}

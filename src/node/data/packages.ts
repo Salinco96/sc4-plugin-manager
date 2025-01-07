@@ -345,7 +345,7 @@ export interface VariantData extends ContentsData {
   dependencies?: Array<DependencyData | DependencyDataRecord | PackageID>
 
   /**
-   * Whether this package or variant is experimental (e.g. test version)
+   * Whether this package or variant is deprecated or was superseded by a better alternative
    */
   deprecated?: boolean | PackageID
 
@@ -870,7 +870,7 @@ export function writePackageInfo(
   return data
 }
 
-function loadCredits(
+export function loadCredits(
   credits: Array<AuthorID | string | { [authorId in AuthorID]: string }>,
 ): { id?: AuthorID; text?: string }[] {
   return credits.flatMap<{ id?: AuthorID; text?: string }>(credit => {

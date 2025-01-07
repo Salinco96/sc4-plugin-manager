@@ -10,13 +10,14 @@ import { Open } from "unzipper"
 
 import type { Logger } from "@common/logs"
 
+import type { ToolID } from "@common/tools"
 import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
 import { cmd, run } from "./processes"
 
 export async function extractRecursively(
   basePath: string,
   options: {
-    exePath?(exe: string): Promise<string>
+    exePath?(exe: ToolID): Promise<string>
     logger?: Logger
     onProgress?(current: number, total: number): void
   } = {},

@@ -1,39 +1,17 @@
-import { get, isEmpty, size, unionBy, unique, uniqueBy, values, where } from "@salinco/nice-utils"
-import type { TFunction } from "i18next"
-import { type ComponentType, lazy } from "react"
+import { get, isEmpty, size, unionBy, unique, uniqueBy, values } from "@salinco/nice-utils"
+import { lazy } from "react"
 
 import { isTogglableLot } from "@common/lots"
 import { type PackageID, isLocal, isPatched } from "@common/packages"
-import { type PackageInfo, VariantState } from "@common/types"
-import type { ContentsInfo, VariantInfo } from "@common/variants"
-import { type Tag, TagType, createTag } from "@components/Tags/utils"
+import { VariantState } from "@common/types"
+import { TagType, createTag } from "@components/Tags/utils"
 
+import type { TabInfo } from "@components/Tabs"
+import { getCurrentVariant, getDependentPackages } from "@utils/packages"
+import { getPackageInfo } from "@utils/store"
 import { PackageViewSummary } from "./PackageViewSummary"
 
-export interface PackageViewTabInfoProps {
-  packageId: PackageID
-}
-
-export type PackageViewTabInfo = {
-  component: ComponentType<PackageViewTabInfoProps>
-  id: string
-  label: (
-    t: TFunction<"PackageViewTabs">,
-    variantInfo: VariantInfo,
-    packageInfo: PackageInfo,
-    dependentPackages: PackageID[],
-    maxis: Required<ContentsInfo>,
-  ) => string
-  labelTag?: (variantInfo: VariantInfo) => Tag | undefined
-  condition: (
-    variantInfo: VariantInfo,
-    dependentPackages: PackageID[],
-    maxis: Required<ContentsInfo>,
-  ) => boolean
-  fullsize?: boolean
-}
-
-export const packageViewTabs: PackageViewTabInfo[] = [
+export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "summary",
     component: PackageViewSummary,
@@ -47,20 +25,24 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "lots",
     component: lazy(() => import("./PackageViewLots")),
-    condition(variantInfo, dependentPackages, maxis) {
+    condition({ packageId }, store) {
+      const { buildings, lots } = getCurrentVariant(store, packageId)
+      const maxisLots = store.maxis.lots
+
       return (
-        !!variantInfo.lots?.length ||
-        !!variantInfo.buildings?.some(building => maxis.lots.some(where("building", building.id)))
+        !!lots?.length ||
+        !!buildings?.some(building => maxisLots.some(lot => lot.building === building.id))
       )
     },
     fullsize: true,
-    label(t, variantInfo, packageInfo, dependentPackages, maxis) {
+    label(t, { packageId }, store) {
+      const { buildings, lots } = getCurrentVariant(store, packageId)
+      const maxisLots = store.maxis.lots
+
       const ids = unionBy(
-        variantInfo.lots ?? [],
-        variantInfo.buildings?.flatMap(building =>
-          maxis.lots.filter(where("building", building.id)),
-        ) ?? [],
-        get("id"),
+        lots ?? [],
+        buildings?.flatMap(building => maxisLots.filter(lot => lot.building === building.id)) ?? [],
+        lot => lot.id,
       )
 
       return t("lots", { count: ids.length })
@@ -69,32 +51,44 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "mmps",
     component: lazy(() => import("./PackageViewMMPs")),
-    condition(variantInfo) {
-      return !!variantInfo.mmps?.length
+    condition({ packageId }, store) {
+      const { mmps } = getCurrentVariant(store, packageId)
+
+      return !!mmps?.length
     },
-    label(t, variantInfo) {
-      const ids = uniqueBy(variantInfo.mmps ?? [], get("id"))
+    label(t, { packageId }, store) {
+      const { mmps } = getCurrentVariant(store, packageId)
+
+      const ids = mmps ? uniqueBy(mmps, get("id")) : []
       return t("mmps", { count: ids.length })
     },
   },
   {
     id: "props",
     component: lazy(() => import("./PackageViewProps")),
-    condition(variantInfo) {
-      return !!variantInfo.props?.length
+    condition({ packageId }, store) {
+      const { props } = getCurrentVariant(store, packageId)
+
+      return !!props?.length
     },
-    label(t, variantInfo) {
-      const ids = uniqueBy(variantInfo.props ?? [], get("id"))
+    label(t, { packageId }, store) {
+      const { props } = getCurrentVariant(store, packageId)
+
+      const ids = props ? uniqueBy(props, get("id")) : []
       return t("props", { count: ids.length })
     },
   },
   {
     id: "textures",
     component: lazy(() => import("./PackageViewTextures")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.textures && !isEmpty(variantInfo.textures)
     },
-    label(t, variantInfo) {
+    label(t, { packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       const ids = unique(values(variantInfo.textures ?? {}).flat())
       return t("textures", { count: ids.length })
     },
@@ -102,20 +96,28 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "dependencies",
     component: lazy(() => import("./PackageViewDependencies")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.dependencies?.length
     },
-    label(t, variantInfo) {
+    label(t, { packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return t("dependencies", { count: variantInfo.dependencies?.length })
     },
   },
   {
     id: "optionalDependencies",
     component: lazy(() => import("./PackageViewOptionalDependencies")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.optional?.length
     },
-    label(t, variantInfo) {
+    label(t, { packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return t("optionalDependencies", { count: variantInfo.optional?.length })
     },
   },
@@ -123,23 +125,33 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     id: "requiredBy",
     fullsize: true,
     component: lazy(() => import("./PackageViewRequiredBy")),
-    condition(variantInfo, dependentPackages) {
+    condition({ packageId }, { packages }) {
+      const dependentPackages = packages ? getDependentPackages(packages, packageId) : []
+
       return !!dependentPackages.length
     },
-    label(t, variantInfo, packageInfo, dependentPackages) {
+    label(t, { packageId }, { packages }) {
+      const dependentPackages = packages ? getDependentPackages(packages, packageId) : []
+
       return t("requiredBy", { count: dependentPackages.length })
     },
   },
   {
     id: "files",
     component: lazy(() => import("./PackageViewFiles")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.installed && !!variantInfo.files?.length
     },
-    label(t, variantInfo) {
+    label(t, { packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return t("files", { count: variantInfo.files?.length })
     },
-    labelTag(variantInfo) {
+    labelTag({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       if (isLocal(variantInfo)) {
         return createTag(TagType.STATE, VariantState.LOCAL)
       }
@@ -152,7 +164,9 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "readme",
     component: lazy(() => import("./PackageViewReadme")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.installed && !!variantInfo.readme
     },
     label(t) {
@@ -163,7 +177,9 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "options",
     component: lazy(() => import("../Options/PackageOptionsForm")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.options?.length || !!variantInfo.lots?.some(isTogglableLot)
     },
     label(t) {
@@ -173,7 +189,9 @@ export const packageViewTabs: PackageViewTabInfo[] = [
   {
     id: "logs",
     component: lazy(() => import("./PackageViewLogs")),
-    condition(variantInfo) {
+    condition({ packageId }, store) {
+      const variantInfo = getCurrentVariant(store, packageId)
+
       return !!variantInfo.installed && !!variantInfo.logs
     },
     label(t) {
@@ -186,8 +204,10 @@ export const packageViewTabs: PackageViewTabInfo[] = [
     condition() {
       return true
     },
-    label(t, variantInfo, packageInfo) {
-      return t("variants", { count: size(packageInfo.variants) })
+    label(t, { packageId }, store) {
+      const packageInfo = getPackageInfo(store, packageId)
+
+      return t("variants", { count: packageInfo ? size(packageInfo.variants) : 0 })
     },
   },
 ]

@@ -19,7 +19,7 @@ export function AuthorTools({ authorId }: { authorId: AuthorID }): JSX.Element {
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>
       {authorInfo?.url && (
         <ToolButton
-          description={t("openUrl")}
+          description={t(authorInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl")}
           icon={WebIcon}
           onClick={() => actions.openAuthorURL(authorId)}
         />

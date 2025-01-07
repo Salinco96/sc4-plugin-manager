@@ -2,15 +2,15 @@ import { List } from "@mui/material"
 import { collect, get, groupBy } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { checkFile } from "@common/packages"
+import { type PackageID, checkFile } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
-import type { PackageViewTabInfoProps } from "../tabs"
+import { Page } from "@utils/navigation"
 import { PackageViewMMPInfo } from "./PackageViewMMPInfo"
 
-export default function PackageViewMMPs({ packageId }: PackageViewTabInfoProps): JSX.Element {
-  const elementId = useStore(store => store.packageView.elementId)
+export default function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.Element {
+  const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
 
   const features = useFeatures()
   const profileInfo = useCurrentProfile()

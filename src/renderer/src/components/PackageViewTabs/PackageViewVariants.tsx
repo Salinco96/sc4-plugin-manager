@@ -1,3 +1,4 @@
+import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { CreateVariantModal } from "@components/CreateVariantModal"
 import { FlexBox } from "@components/FlexBox"
@@ -13,9 +14,8 @@ import { collect } from "@salinco/nice-utils"
 import { usePackageInfo } from "@utils/packages"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import type { PackageViewTabInfoProps } from "./tabs"
 
-export default function PackageViewVariants({ packageId }: PackageViewTabInfoProps): JSX.Element {
+export default function PackageViewVariants({ packageId }: { packageId: PackageID }): JSX.Element {
   const packageInfo = usePackageInfo(packageId)
 
   const [openImages, setOpenImages] = useState<VariantID>()

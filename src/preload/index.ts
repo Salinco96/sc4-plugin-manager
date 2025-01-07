@@ -7,6 +7,7 @@ import type { ModalData, ModalID } from "@common/modals"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
 import type { ApplicationStateUpdate } from "@common/state"
+import type { ToolID } from "@common/tools"
 import type { VariantID } from "@common/variants"
 
 // Custom APIs for renderer
@@ -41,6 +42,9 @@ export const api = {
     filePath: string,
   ): Promise<{ html?: string; md?: string }> {
     return ipcRenderer.invoke("getPackageReadme", packageId, variantId, filePath)
+  },
+  installTool(toolId: ToolID): Promise<boolean> {
+    return ipcRenderer.invoke("installTool", toolId)
   },
   installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
@@ -93,6 +97,9 @@ export const api = {
   },
   removeProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("removeProfile", profileId)
+  },
+  removeTool(toolId: ToolID): Promise<boolean> {
+    return ipcRenderer.invoke("removeTool", toolId)
   },
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("removeVariant", packageId, variantId)

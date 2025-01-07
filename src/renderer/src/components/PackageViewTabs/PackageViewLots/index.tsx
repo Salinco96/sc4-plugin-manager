@@ -4,7 +4,7 @@ import { forEach, get, groupBy, mapValues, sortBy, unionBy, values } from "@sali
 import { useEffect, useMemo } from "react"
 
 import { type LotInfo, getEnabledLots, isSC4LotFile, isTogglableLot } from "@common/lots"
-import { checkCondition, checkFile } from "@common/packages"
+import { type PackageID, checkCondition, checkFile } from "@common/packages"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import {
   useCurrentProfile,
@@ -17,12 +17,13 @@ import {
 import type { BuildingID, BuildingInfo } from "@common/buildings"
 import type { FamilyID, FamilyInfo } from "@common/families"
 import { FlexBox } from "@components/FlexBox"
-import type { PackageViewTabInfoProps } from "../tabs"
+
+import { Page } from "@utils/navigation"
 import { PackageViewLotGroup } from "./PackageViewLotGroup"
 
-export default function PackageViewLots({ packageId }: PackageViewTabInfoProps): JSX.Element {
+export default function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.Element {
   const actions = useStoreActions()
-  const elementId = useStore(store => store.packageView.elementId)
+  const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
   const maxis = useStore(store => store.maxis)
   const features = useFeatures()
   const profileInfo = useCurrentProfile()

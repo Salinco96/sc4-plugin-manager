@@ -11,4 +11,6 @@ export const PageComponents: {
   PackageView: lazy(() => import("./PackageView")),
   Profile: lazy(() => import("./Profile")),
   Settings: lazy(() => import("./Settings")),
+  Tools: lazy(() => import("./Tools")),
+  ToolView: lazy(() => import("./ToolView")),
 }

@@ -23,6 +23,7 @@ export const FILENAMES = {
   dbExemplarProperties: "configs/exemplar-properties",
   dbMaxisExemplars: "configs/maxis",
   dbProfileOptions: "configs/profile-options",
+  dbTools: "configs/tools",
   appConfig: "config",
   logs: "main.log",
   packageConfig: "package",

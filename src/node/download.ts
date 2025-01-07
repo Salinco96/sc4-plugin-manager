@@ -9,6 +9,7 @@ import { parse as parseContentDisposition } from "content-disposition"
 
 import type { Logger } from "@common/logs"
 
+import type { ToolID } from "@common/tools"
 import { extract7z, extractArchive, extractMSI } from "./extract"
 import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
 
@@ -46,7 +47,7 @@ export async function download(
   options: {
     downloadPath: string
     downloadTempPath?: string
-    exePath?(exe: string): Promise<string>
+    exePath?(exe: ToolID): Promise<string>
     expectedSha256?: string
     expectedSize?: number
     logger?: Logger

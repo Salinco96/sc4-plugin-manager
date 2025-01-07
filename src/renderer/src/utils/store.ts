@@ -14,9 +14,10 @@ import type { Settings } from "@common/settings"
 import { type ApplicationState, type ApplicationStateUpdate, getInitialState } from "@common/state"
 import type { Features, PackageInfo, VariantState } from "@common/types"
 import type { VariantID } from "@common/variants"
-import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 
+import type { ToolID, ToolInfo } from "@common/tools"
 import { getStore } from "./context"
+import type { Page } from "./navigation"
 import { computePackageList } from "./packages"
 import type { SnackbarProps, SnackbarType } from "./snackbar"
 
@@ -59,6 +60,7 @@ export interface StoreActions {
     variantId: VariantID,
     filePath: string,
   ): Promise<{ html?: string; md?: string }>
+  installTool(toolId: ToolID): Promise<void>
   installVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile>
   loadDBPFEntry(
@@ -88,12 +90,13 @@ export interface StoreActions {
     },
   ): Promise<DBPFFile>
   removeProfile(profileId: ProfileID): Promise<boolean>
+  removeTool(toolId: ToolID): Promise<void>
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   resetPackageOptions(packageId: PackageID): Promise<void>
   setPackageOption(packageId: PackageID, optionId: "lots", value: string[]): Promise<boolean>
   setPackageOption(packageId: PackageID, optionId: OptionID, value: OptionValue): Promise<boolean>
   setPackageVariant(packageId: PackageID, variantId: VariantID): Promise<boolean>
-  setPackageViewTab(tabId: string, elementId?: string): void
+  setActiveTab(page: Page, tabId: string, elementId?: string): void
   setPackageFilters(filters: Partial<PackageFilters>): void
   setProfileOption(optionId: OptionID, optionValue: OptionValue): Promise<boolean>
   showErrorToast(message: string): void
@@ -115,16 +118,19 @@ export interface Store extends ApplicationState {
     id: ModalID
   }
   packageFilters: PackageFilters
-  packageView: {
-    activeTab: string
-    elementId?: string
-  }
+
   filteredPackages: PackageID[]
   packageUi: {
     [packageId in PackageID]?: PackageUi
   }
   snackbars: {
     [type in SnackbarType]?: SnackbarKey
+  }
+  views: {
+    [page in Page]?: {
+      activeTab: string
+      elementId?: string
+    }
   }
 }
 
@@ -146,10 +152,8 @@ const initialState: Omit<Store, "actions"> = {
     states: [],
   },
   packageUi: {},
-  packageView: {
-    activeTab: packageViewTabs[0].id,
-  },
   snackbars: {},
+  views: {},
 }
 
 export const useStore = getStore(initialState, initialState => (set, get): Store => {
@@ -248,12 +252,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       getPackageReadme(packageId, variantId, filePath) {
         return window.api.getPackageReadme(packageId, variantId, filePath)
       },
+      async installTool(toolId) {
+        try {
+          await window.api.installTool(toolId)
+        } catch (error) {
+          console.error(`Failed to install ${toolId}`, error)
+          this.showErrorToast(`Failed to install ${toolId}`)
+        }
+      },
       async installVariant(packageId, variantId) {
         try {
           await window.api.installVariant(packageId, variantId)
         } catch (error) {
-          console.error(`Failed to install ${packageId}`, error)
-          this.showErrorToast(`Failed to install ${packageId}`)
+          console.error(`Failed to install ${packageId}#${variantId}`, error)
+          this.showErrorToast(`Failed to install ${packageId}#${variantId}`)
         }
       },
       loadDBPFEntries(packageId, variantId, filePath) {
@@ -301,12 +313,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
       },
+      async removeTool(toolId) {
+        try {
+          await window.api.removeTool(toolId)
+        } catch (error) {
+          console.error(`Failed to remove ${toolId}`, error)
+          this.showErrorToast(`Failed to remove ${toolId}`)
+        }
+      },
       async removeVariant(packageId, variantId) {
         try {
           await window.api.removeVariant(packageId, variantId)
         } catch (error) {
-          console.error(`Failed to remove ${packageId}`, error)
-          this.showErrorToast(`Failed to remove ${packageId}`)
+          console.error(`Failed to remove ${packageId}#${variantId}`, error)
+          this.showErrorToast(`Failed to remove ${packageId}#${variantId}`)
         }
       },
       async resetPackageOptions(packageId) {
@@ -387,8 +407,8 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
       },
-      setPackageViewTab(tabId, elementId) {
-        updateState({ packageView: { $set: { activeTab: tabId, elementId } } })
+      setActiveTab(page, tabId, elementId) {
+        updateState({ views: { [page]: { $set: { activeTab: tabId, elementId } } } })
       },
       async setProfileOption(optionId, optionValue) {
         const store = get()
@@ -560,6 +580,10 @@ function getSettings(store: Store): Settings | undefined {
 
 function getStoreActions(store: Store): StoreActions {
   return store.actions
+}
+
+export function getToolInfo(store: Store, toolId: ToolID): ToolInfo | undefined {
+  return store.tools?.[toolId]
 }
 
 export function useAuthors(): Authors {

@@ -33,7 +33,7 @@ export const AuthorListItem = memo(function AuthorListItem({
     <Card elevation={active ? 8 : 1} sx={{ display: "flex", height: "100%" }}>
       <CardContent sx={{ flexGrow: 1 }}>
         <FlexBox direction="row">
-          {author?.thumbnail && <Thumbnail mr={2} round size={56} src={author.thumbnail} />}
+          {author?.thumbnail && <Thumbnail mr={2} size={56} src={author.thumbnail} />}
           <FlexBox direction="column">
             <Link
               color="inherit"

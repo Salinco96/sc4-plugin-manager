@@ -69,9 +69,7 @@ export function DrawerTabs(): JSX.Element {
   const packageFilters = useStore(store => store.packageFilters)
   const { page } = useLocation()
 
-  const [expandedGroups, setExpandedGroups] = useState<{ [group in string]?: boolean }>({
-    Packages: true,
-  })
+  const [expandedGroups, setExpandedGroups] = useState<{ [group in string]?: boolean }>({})
 
   const activeTabId = useMemo(() => {
     switch (page) {
@@ -103,8 +101,12 @@ export function DrawerTabs(): JSX.Element {
 
       case Page.Profile:
         return "profile"
+
       case Page.Settings:
         return "settings"
+
+      case Page.Tools:
+        return "tools"
     }
   }, [packageFilters, page])
 

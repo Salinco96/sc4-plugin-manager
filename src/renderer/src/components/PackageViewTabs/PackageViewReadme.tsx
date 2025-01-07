@@ -10,11 +10,10 @@ import { useStoreActions } from "@utils/store"
 
 import { FlexBox } from "@components/FlexBox"
 import { Alert, MenuItem, Select, Typography } from "@mui/material"
-import type { PackageViewTabInfoProps } from "./tabs"
 
 export default function PackageViewReadme({
   packageId,
-}: PackageViewTabInfoProps): JSX.Element | null {
+}: { packageId: PackageID }): JSX.Element | null {
   const variantInfo = useCurrentVariant(packageId)
   const variantId = variantInfo.id
 

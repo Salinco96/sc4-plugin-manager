@@ -10,13 +10,13 @@ import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
 import type { FamilyID, FamilyInfo } from "@common/families"
-import { checkFile } from "@common/packages"
+import { type PackageID, checkFile } from "@common/packages"
 import type { PropID, PropInfo } from "@common/props"
+import { Page } from "@utils/navigation"
 import { ExemplarRef } from "../ExemplarRef"
-import type { PackageViewTabInfoProps } from "./tabs"
 
-export default function PackageViewProps({ packageId }: PackageViewTabInfoProps): JSX.Element {
-  const elementId = useStore(store => store.packageView.elementId)
+export default function PackageViewProps({ packageId }: { packageId: PackageID }): JSX.Element {
+  const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
   const features = useFeatures()
   const profileInfo = useCurrentProfile()
   const profileOptions = useStore(store => store.profileOptions)

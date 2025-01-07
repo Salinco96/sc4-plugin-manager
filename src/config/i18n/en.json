@@ -31,7 +31,8 @@
     "missing": "Author {{authorId}} does not exist",
     "openUrl": "Open website",
     "packages_one": "{{count}} package",
-    "packages_other": "{{count}} packages"
+    "packages_other": "{{count}} packages",
+    "openSimtropolis": "Open Simtropolis page"
   },
   "BackupPluginsModal": {
     "confirmation": "Do you want to back up your {{plugins}} folder?",
@@ -230,6 +231,7 @@
     "game": "SimCity 4",
     "ignore": "Ignore",
     "li": "  - {{label}}",
+    "more": "More options",
     "nam": "Network Addon Mod",
     "no": "No",
     "others_one": "{{count}} other",
@@ -325,7 +327,6 @@
         "incompatible": "This variant is not compatible with your profile"
       }
     },
-    "more": "More options",
     "remove": {
       "description": "Remove this variant\nWARNING: This package may be required by another profile!",
       "label": "Remove",
@@ -543,29 +544,6 @@
     "thanks": "Thanks",
     "url": "Download page"
   },
-  "PackageViewTabs": {
-    "dependencies_one": "{{count}} dependency",
-    "dependencies_other": "{{count}} dependencies",
-    "files_one": "{{count}} file",
-    "files_other": "{{count}} files",
-    "logs": "Logs",
-    "lots_one": "{{count}} lot",
-    "lots_other": "{{count}} lots",
-    "mmps_one": "{{count}} MMP",
-    "mmps_other": "{{count}} MMPs",
-    "options": "Options",
-    "optionalDependencies_one": "{{count}} optional dependency",
-    "optionalDependencies_other": "{{count}} optional dependencies",
-    "props_one": "{{count}} prop",
-    "props_other": "{{count}} props",
-    "readme": "Readme",
-    "requiredBy": "{{count}} dependent packages",
-    "summary": "Summary",
-    "textures_one": "{{count}} texture",
-    "textures_other": "{{count}} textures",
-    "variants_one": "{{count}} variant",
-    "variants_other": "{{count}} variants"
-  },
   "PackageViewVariants": {
     "actions": {
       "create": {
@@ -745,6 +723,46 @@
       "Embankments": "$t(Menu:Parks) > Embankments",
       "Fillers": "$t(Menu:Parks) > Fillers"
     }
+  },
+  "Tabs": {
+    "dependencies_one": "{{count}} dependency",
+    "dependencies_other": "{{count}} dependencies",
+    "files_one": "{{count}} file",
+    "files_other": "{{count}} files",
+    "logs": "Logs",
+    "lots_one": "{{count}} lot",
+    "lots_other": "{{count}} lots",
+    "mmps_one": "{{count}} MMP",
+    "mmps_other": "{{count}} MMPs",
+    "options": "Options",
+    "optionalDependencies_one": "{{count}} optional dependency",
+    "optionalDependencies_other": "{{count}} optional dependencies",
+    "props_one": "{{count}} prop",
+    "props_other": "{{count}} props",
+    "readme": "Readme",
+    "requiredBy": "{{count}} dependent packages",
+    "summary": "Summary",
+    "textures_one": "{{count}} texture",
+    "textures_other": "{{count}} textures",
+    "variants_one": "{{count}} variant",
+    "variants_other": "{{count}} variants"
+  },
+  "ToolActions": {
+    "actions": {
+      "installing": "Installing...",
+      "removing": "Removing..."
+    },
+    "add": {
+      "description": "Install this tool",
+      "label": "Add"
+    },
+    "remove": {
+      "description": "Remove this tool",
+      "label": "Remove"
+    }
+  },
+  "ToolView": {
+    "missing": "Tool {{toolId}} does not exist"
   },
   "Variant": {
     "id": {

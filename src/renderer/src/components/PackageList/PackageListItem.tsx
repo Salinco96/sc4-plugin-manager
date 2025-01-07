@@ -146,7 +146,7 @@ export const PackageListItem = memo(function PackageListItem({
                     <Link
                       color="inherit"
                       onClick={() => {
-                        actions.setPackageViewTab(tab, element)
+                        actions.setActiveTab(Page.PackageView, tab, element)
                         openPackageView()
                       }}
                       sx={{

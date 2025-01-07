@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { collect, entries, forEach, isEnum, parseHex, size } from "@salinco/nice-utils"
+import { collect, entries, forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
 
 import type { Categories } from "@common/categories"
 import {
@@ -22,6 +22,9 @@ import type { ContentsData } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 
+import type { Assets } from "@common/assets"
+import type { ToolID, Tools } from "@common/tools"
+import { type ToolData, loadToolInfo } from "@node/data/tools"
 import type { TaskContext } from "@node/tasks"
 import { fromProfileData } from "./profiles"
 
@@ -189,6 +192,28 @@ export async function loadProfileTemplates(
     return templates
   } catch (error) {
     context.error("Failed to load profile templates", error)
+    return {}
+  }
+}
+
+export async function loadTools(
+  context: TaskContext,
+  basePath: string,
+  assets: Assets,
+): Promise<Tools> {
+  try {
+    const config = await loadConfig<{ [toolId: ToolID]: ToolData }>(basePath, FILENAMES.dbTools)
+
+    if (!config) {
+      throw Error(`Missing config ${FILENAMES.dbTools}`)
+    }
+
+    const tools = mapValues(config.data, (data, id) => loadToolInfo(id, data, assets))
+
+    context.debug(`Loaded ${size(tools)} tools`)
+    return tools
+  } catch (error) {
+    context.error("Failed to load tools", error)
     return {}
   }
 }
