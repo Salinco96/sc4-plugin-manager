@@ -17,7 +17,10 @@ export function Header({
   subtitle,
   summary,
   thumbnail = images?.at(0),
+  thumbnailShape,
+  thumbnailSize,
   title,
+  tools,
 }: {
   actions?: ReactNode
   description?: string
@@ -28,7 +31,12 @@ export function Header({
   subtitle: string
   summary?: string
   thumbnail?: string
+  /** Defaults to "square" */
+  thumbnailShape?: "round" | "square"
+  /** Defaults to "large" */
+  thumbnailSize?: "large" | "small"
   title: string
+  tools?: ReactNode
 }): JSX.Element {
   const history = useHistory()
 
@@ -69,7 +77,8 @@ export function Header({
               mr={2}
               mt={1}
               onClick={() => setOpenImages(true)}
-              size={84}
+              round={thumbnailShape === "round"}
+              size={thumbnailSize === "small" ? 56 : 84}
               src={thumbnail}
             />
           )}
@@ -116,7 +125,7 @@ export function Header({
                 subtitleElement
               )}
 
-              {/* <PackageTools packageId={packageId} /> */}
+              {tools}
             </FlexBox>
           </FlexBox>
         </FlexBox>

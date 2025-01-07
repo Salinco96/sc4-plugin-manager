@@ -1,14 +1,25 @@
+import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-material"
+import { IconButton, Tooltip, Typography } from "@mui/material"
+import { useTranslation } from "react-i18next"
+
 import type { ToolID } from "@common/tools"
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { Tabs } from "@components/Tabs"
+import { type TabInfo, Tabs } from "@components/Tabs"
 import { ToolHeader } from "@components/ToolHeader"
-import { toolViewTabs } from "@components/ToolViewTabs/tabs"
-import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-material"
-import { IconButton, Tooltip, Typography } from "@mui/material"
+import { ToolViewSummary } from "@components/ToolViewTabs/ToolViewSummary"
 import { useHistory } from "@utils/navigation"
 import { useStore } from "@utils/store"
-import { useTranslation } from "react-i18next"
+
+const tabs: TabInfo<{ toolId: ToolID }>[] = [
+  {
+    id: "summary",
+    component: ToolViewSummary,
+    label(t) {
+      return t("summary")
+    },
+  },
+]
 
 function ToolViewInner({ toolId }: { toolId: ToolID }): JSX.Element {
   const isLoading = useStore(store => !store.tools)
@@ -24,7 +35,7 @@ function ToolViewInner({ toolId }: { toolId: ToolID }): JSX.Element {
     return (
       <FlexBox direction="column" gap={2}>
         <ToolHeader toolId={toolId} />
-        <Tabs tabs={toolViewTabs} toolId={toolId} />
+        <Tabs tabs={tabs} toolId={toolId} />
       </FlexBox>
     )
   }
