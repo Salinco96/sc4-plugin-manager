@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import type { AuthorID } from "@common/authors"
 import { AuthorHeader } from "@components/AuthorHeader"
 import AuthorViewPackages from "@components/AuthorViewTabs/AuthorViewPackages"
+import AuthorViewTools from "@components/AuthorViewTabs/AuthorViewTools"
 import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { type TabInfo, Tabs } from "@components/Tabs"
@@ -22,6 +23,17 @@ const tabs: TabInfo<{ authorId: AuthorID }>[] = [
     fullsize: true,
     label(t, count) {
       return t("packages", { count })
+    },
+  },
+  {
+    id: "tools",
+    component: AuthorViewTools,
+    count({ authorId }, { tools = {} }) {
+      return values(tools).filter(tool => !tool.disabled && tool.authors?.includes(authorId)).length
+    },
+    fullsize: true,
+    label(t, count) {
+      return t("tools", { count })
     },
   },
 ]
