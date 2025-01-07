@@ -26,11 +26,21 @@ export function ToolHeader({
 
     if (toolInfo.installed) {
       toolActions.push({
-        description: t("remove.description"),
-        id: "remove",
-        label: t("remove.label"),
-        onClick: () => actions.removeTool(toolInfo.id),
+        description: t("run.description"),
+        id: "run",
+        label: t("run.label"),
+        onClick: () => actions.runTool(toolInfo.id),
       })
+
+      // TODO: ATM cannot remove tool copied to SC4 installation folder
+      if (!toolInfo.install) {
+        toolActions.push({
+          description: t("remove.description"),
+          id: "remove",
+          label: t("remove.label"),
+          onClick: () => actions.removeTool(toolInfo.id),
+        })
+      }
     } else {
       toolActions.push({
         description: t("add.description"),
@@ -60,7 +70,7 @@ export function ToolHeader({
       subtitle={toolId}
       summary={toolInfo.summary}
       thumbnail={toolInfo.thumbnail}
-      title={`${toolInfo.name} (v${toolInfo.version})`}
+      title={`${toolInfo.name} (${toolInfo.version})`}
     />
   )
 }

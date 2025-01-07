@@ -127,7 +127,7 @@ import type {
 import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "./utils/constants"
 import { env, isDev } from "./utils/env"
-import { check4GBPatch } from "./utils/exe"
+import { check4GBPatch, checkDgVoodoo } from "./utils/exe"
 import { createChildProcess } from "./utils/processes"
 import { handleDocsProtocol } from "./utils/protocols"
 import {
@@ -284,6 +284,40 @@ export class Application {
           settings.install.patched = true
         } else if (settings.install.patched) {
           settings.install.patched = undefined
+        }
+
+        await this.writeSettings(context, settings)
+
+        return applied
+      },
+      pool: "main",
+    })
+  }
+
+  /**
+   * Checks DgVoodoo setup and suggests installing it.
+   */
+  public async checkDgVoodoo(isStartupCheck?: boolean): Promise<boolean> {
+    const { settings } = await this.load()
+
+    return this.tasks.queue("dgvoodoo:check", {
+      handler: async context => {
+        if (!settings.install?.path) {
+          throw Error("Game installation path is not set")
+        }
+
+        const { applied, doNotAskAgain } = await checkDgVoodoo(context, settings.install.path, {
+          installTool: async toolId => this.installTool(toolId),
+          isStartupCheck,
+          skipSuggestion: isStartupCheck && settings.install.voodoo === false,
+        })
+
+        if (applied) {
+          settings.install.voodoo = true
+        } else if (isStartupCheck && doNotAskAgain) {
+          settings.install.voodoo = false
+        } else {
+          settings.install.voodoo = undefined
         }
 
         await this.writeSettings(context, settings)
@@ -979,7 +1013,7 @@ export class Application {
    * Returns the path to the given tool's executable, downloading the tool as needed.
    */
   public async getToolExePath(toolId: ToolID): Promise<string> {
-    const { assets, tools } = await this.load()
+    const { assets, settings, tools } = await this.load()
 
     const toolInfo = tools[toolId]
     if (!toolInfo) {
@@ -993,6 +1027,15 @@ export class Application {
       }
 
       const downloadPath = await this.downloadAsset(assetInfo)
+
+      if (toolInfo.install) {
+        if (!settings.install?.path) {
+          throw Error("Missing installation path")
+        }
+
+        return path.join(settings.install.path, toolInfo.exe)
+      }
+
       return path.join(downloadPath, toolInfo.exe)
     }
 
@@ -1037,6 +1080,7 @@ export class Application {
   protected init(): void {
     // Register message handlers
     this.handle("check4GBPatch")
+    this.handle("checkDgVoodoo")
     this.handle("clearPackageLogs")
     this.handle("clearUnusedPackages")
     this.handle("createProfile")
@@ -1059,6 +1103,7 @@ export class Application {
     this.handle("removeProfile")
     this.handle("removeTool")
     this.handle("removeVariant")
+    this.handle("runTool")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
@@ -1080,6 +1125,8 @@ export class Application {
         this.sendStateUpdate({ simtropolis: null })
       }
     })
+
+    this.checkDgVoodoo(true)
   }
 
   protected initApplicationMenu(): void {
@@ -1199,10 +1246,10 @@ export class Application {
   /**
    * Install a tool.
    */
-  public async installTool(toolId: ToolID): Promise<void> {
-    const { assets, tools } = await this.load()
+  public async installTool(toolId: ToolID): Promise<string> {
+    const { assets, settings, tools } = await this.load()
 
-    await this.tasks.queue(`install:${toolId}`, {
+    return this.tasks.queue(`install:${toolId}`, {
       handler: async context => {
         const toolInfo = tools[toolId]
         if (!toolInfo?.asset) {
@@ -1219,15 +1266,42 @@ export class Application {
             throw Error(`Unknown asset '${toolInfo.asset}'`)
           }
 
-          await this.downloadAsset(assetInfo)
+          if (!settings.install?.path) {
+            throw Error("Missing installation path")
+          }
+
+          const downloadPath = await this.downloadAsset(assetInfo)
+
+          if (toolInfo.install) {
+            const basePath = path.join(downloadPath, toolInfo.install)
+            const relativePaths = await glob("**/*", {
+              cwd: basePath,
+              dot: true,
+              ignore: ["**/4gb_patch.exe"],
+              nodir: true,
+            })
+
+            for (const relativePath of relativePaths) {
+              const fullPath = path.join(basePath, relativePath)
+              const targetPath = path.join(settings.install.path, relativePath)
+              await moveTo(fullPath, targetPath)
+            }
+          }
 
           toolInfo.installed = true
+
+          if (toolId === "dgvoodoo") {
+            settings.install.voodoo = true
+            this.sendStateUpdate({ settings })
+          }
+
+          return downloadPath
         } finally {
           toolInfo.action = undefined
           this.sendStateUpdate({ tools })
         }
       },
-      pool: "main",
+      pool: toolId,
     })
   }
 
@@ -2299,7 +2373,7 @@ export class Application {
           this.sendStateUpdate({ tools })
         }
       },
-      pool: "main",
+      pool: toolId,
     })
   }
 
@@ -2393,6 +2467,38 @@ export class Application {
         }
       },
       pool: `${packageId}#${variantId}`,
+    })
+  }
+
+  /**
+   * Run an installed tool.
+   */
+  public async runTool(toolId: ToolID): Promise<void> {
+    const { tools } = await this.load()
+
+    await this.tasks.queue(`run:${toolId}`, {
+      handler: async context => {
+        const toolInfo = tools[toolId]
+        if (!toolInfo?.asset) {
+          throw Error(`Unknown tool '${toolId}'`)
+        }
+
+        try {
+          const exePath = await this.getToolExePath(toolId)
+
+          context.info(`Running tool '${toolId}'...`)
+          toolInfo.action = "running"
+          this.sendStateUpdate({ tools })
+
+          await cmd(`"${exePath}"`)
+        } catch (error) {
+          console.error(error)
+        } finally {
+          toolInfo.action = undefined
+          this.sendStateUpdate({ tools })
+        }
+      },
+      pool: toolId,
     })
   }
 

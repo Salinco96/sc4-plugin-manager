@@ -48,6 +48,13 @@
     "success": "The $t(General:4gbpatch) was applied successfully!",
     "title": "$t(General:4gbpatch)"
   },
+  "CheckDgVoodooModal": {
+    "confirmation": "Do you want to setup $t(General:dgVoodoo)?",
+    "description": "SimCity 4 is not compatible with modern DirectX. Installing and configuring DgVoodoo 2 may resolve rendering issues. See https://community.simtropolis.com/files/file/36227-dgvoodoo-2-simcity-4-edition/.",
+    "failure": "Failed to setup $t(General:dgVoodoo).",
+    "success": "$t(General:dgVoodoo) was setup successfully!",
+    "title": "$t(General:dgVoodoo)"
+  },
   "ClearUnusedPackagesModal": {
     "confirmation": "Remove unused packages?",
     "description_one": "Found {{count}} unused variant:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
@@ -225,6 +232,7 @@
     "confirm": "Confirm",
     "continue": "Continue",
     "darknite": "DarkNite",
+    "dgVoodoo": "DgVoodoo 2",
     "doNotAskAgain": "Do not ask again",
     "emptyValue": "...",
     "explorer": "Open in Explorer",
@@ -632,6 +640,11 @@
         "actions": {
           "explorer": "$t(General:explorer)"
         }
+      },
+      "voodoo": {
+        "applied": "Applied",
+        "apply": "Click to apply",
+        "label": "$t(General:dgVoodoo)"
       }
     },
     "version": {
@@ -750,7 +763,8 @@
   "ToolActions": {
     "actions": {
       "installing": "Installing...",
-      "removing": "Removing..."
+      "removing": "Removing...",
+      "running": "Running..."
     },
     "add": {
       "description": "Install this tool",
@@ -759,6 +773,10 @@
     "remove": {
       "description": "Remove this tool",
       "label": "Remove"
+    },
+    "run": {
+      "description": "Run this tool",
+      "label": "Run"
     }
   },
   "ToolView": {

@@ -15,6 +15,9 @@ export const api = {
   check4GBPatch(): Promise<void> {
     return ipcRenderer.invoke("check4GBPatch")
   },
+  checkDgVoodoo(): Promise<void> {
+    return ipcRenderer.invoke("checkDgVoodoo")
+  },
   cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
   },
@@ -103,6 +106,9 @@ export const api = {
   },
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("removeVariant", packageId, variantId)
+  },
+  runTool(toolId: ToolID): Promise<boolean> {
+    return ipcRenderer.invoke("runTool", toolId)
   },
   simtropolisLogin(): Promise<void> {
     return ipcRenderer.invoke("simtropolisLogin")

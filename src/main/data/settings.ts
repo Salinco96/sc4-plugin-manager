@@ -116,6 +116,15 @@ export async function loadSettings(
 
   if (settings.install) {
     try {
+      // settings.install.version
+      // Determine executable version
+      settings.install.version = await getExeVersion(settings.install.path)
+      context.info(`Detected version ${settings.install.version}`)
+    } catch (error) {
+      context.error("Failed to detect executable version", error)
+    }
+
+    try {
       // settings.install.patched
       // Determine whether 4GB Patch is applied, and suggest to apply it if not
       // true       : patch applied
@@ -130,15 +139,6 @@ export async function loadSettings(
       settings.install.patched = applied || (doNotAskAgain ? false : undefined)
     } catch (error) {
       context.error("Failed to check for 4GB Patch", error)
-    }
-
-    try {
-      // settings.install.version
-      // Determine executable version
-      settings.install.version = await getExeVersion(settings.install.path)
-      context.info(`Detected version ${settings.install.version}`)
-    } catch (error) {
-      context.error("Failed to detect executable version", error)
     }
   }
 

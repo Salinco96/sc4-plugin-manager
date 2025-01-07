@@ -13,6 +13,8 @@ export interface SettingsData {
     path: string
     /** Executable version */
     version?: string
+    /** Whether DgVoodoo is installed */
+    dgvoodoo?: boolean
   }
 }
 
@@ -30,6 +32,8 @@ export interface Settings {
     path: string
     /** Executable version */
     version?: string
+    /** Whether DgVoodoo is installed */
+    voodoo?: boolean
   }
   /** Available manager update */
   update?: {

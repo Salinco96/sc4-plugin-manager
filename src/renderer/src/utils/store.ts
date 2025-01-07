@@ -44,6 +44,7 @@ export interface PackageFilters {
 export interface StoreActions {
   addPackage(packageId: PackageID, variantId: VariantID, data?: ProfileUpdate): Promise<boolean>
   check4GBPatch(): Promise<void>
+  checkDgVoodoo(): Promise<void>
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
   clearUnusedPackages(): Promise<void>
   closeSnackbar(type: SnackbarType): void
@@ -93,6 +94,7 @@ export interface StoreActions {
   removeTool(toolId: ToolID): Promise<void>
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   resetPackageOptions(packageId: PackageID): Promise<void>
+  runTool(toolId: ToolID): Promise<void>
   setPackageOption(packageId: PackageID, optionId: "lots", value: string[]): Promise<boolean>
   setPackageOption(packageId: PackageID, optionId: OptionID, value: OptionValue): Promise<boolean>
   setPackageVariant(packageId: PackageID, variantId: VariantID): Promise<boolean>
@@ -188,6 +190,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       },
       check4GBPatch() {
         return window.api.check4GBPatch()
+      },
+      checkDgVoodoo() {
+        return window.api.checkDgVoodoo()
       },
       clearPackageLogs(packageId, variantId) {
         return window.api.clearPackageLogs(packageId, variantId)
@@ -345,6 +350,14 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         } catch (error) {
           console.error("Failed to reset options", error)
           this.showErrorToast("Failed to reset options")
+        }
+      },
+      async runTool(toolId) {
+        try {
+          await window.api.runTool(toolId)
+        } catch (error) {
+          console.error(`Failed to run ${toolId}`, error)
+          this.showErrorToast(`Failed to run ${toolId}`)
         }
       },
       setPackageFilters(filters) {

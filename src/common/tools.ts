@@ -8,7 +8,7 @@ export type ToolID = ID<string, ToolInfo>
 
 /** Tool info */
 export interface ToolInfo {
-  action?: "installing" | "removing"
+  action?: "installing" | "removing" | "running"
 
   /**
    * Asset ID
@@ -43,6 +43,11 @@ export interface ToolInfo {
    * Tool ID
    */
   id: ToolID
+
+  /**
+   * Content to copy to SimCity 4 installation folder
+   */
+  install?: string
 
   /**
    * Whether this tool is currently installed

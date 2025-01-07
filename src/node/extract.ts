@@ -26,11 +26,9 @@ export async function extractRecursively(
 
   const archivePaths = await glob("**/*.{7z,exe,jar,msi,rar,zip}", {
     cwd: basePath,
-    ignore: ["**/cicdec.exe", "**/7z*.exe"],
+    ignore: ["**/4gb_patch.exe", "**/7z*.exe", "**/cicdec.exe", "**/dgVoodooCpl.exe"],
     nodir: true,
   })
-
-  console.log(basePath, archivePaths)
 
   if (archivePaths.length) {
     for (const archivePath of archivePaths) {

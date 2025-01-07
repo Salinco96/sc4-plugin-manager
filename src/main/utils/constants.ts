@@ -24,6 +24,7 @@ export const FILENAMES = {
   dbMaxisExemplars: "configs/maxis",
   dbProfileOptions: "configs/profile-options",
   dbTools: "configs/tools",
+  dgVoodoo: "Apps/dgVoodooCpl.exe",
   appConfig: "config",
   logs: "main.log",
   packageConfig: "package",

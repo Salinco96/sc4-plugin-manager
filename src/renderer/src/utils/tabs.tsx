@@ -19,7 +19,7 @@ import {
   Traffic as TransportIcon,
   Update as UpdatesIcon,
 } from "@mui/icons-material"
-import { values } from "@salinco/nice-utils"
+import { size, values } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
 import { getPackageStatus, isError } from "@common/packages"
@@ -83,12 +83,18 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
+    badgeCount(store) {
+      return store.tools && Object.values(store.tools).filter(tool => !tool?.disabled).length
+    },
     icon: <ToolsIcon />,
     id: "tools",
     label: "Tools",
     location: { page: Page.Tools, data: {} },
   },
   {
+    badgeCount(store) {
+      return size(store.authors)
+    },
     icon: <AuthorsIcon />,
     id: "authors",
     label: "Authors",

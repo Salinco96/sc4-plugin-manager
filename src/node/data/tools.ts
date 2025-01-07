@@ -52,6 +52,11 @@ export interface ToolData {
   exe: string
 
   /**
+   * Content to copy to SimCity 4 installation folder
+   */
+  install?: string
+
+  /**
    * Date or ISO string at which this variant was last modified/uploaded, as specified on its download page
    */
   lastModified?: Date | string
@@ -115,6 +120,7 @@ export function loadToolInfo(toolId: ToolID, toolData: ToolData, assets: Assets)
     disabled: toolData.disabled,
     exe: toolData.exe,
     id: toolId,
+    install: toolData.install,
     installed: assetInfo?.downloaded[assetInfo.version],
     images: toolData.images,
     lastModified: toolData.lastModified ? new Date(toolData.lastModified) : undefined,

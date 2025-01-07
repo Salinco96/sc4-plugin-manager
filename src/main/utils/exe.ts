@@ -8,6 +8,7 @@ import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe
 import { cmd } from "@node/processes"
 import type { TaskContext } from "@node/tasks"
 
+import type { ToolID } from "@common/tools"
 import { FILENAMES, SC4_INSTALL_PATHS } from "./constants"
 import { showConfirmation, showError, showFolderSelector, showSuccess } from "./dialog"
 
@@ -101,6 +102,55 @@ export function check4GBPatch(
 
     return { applied: false, doNotAskAgain }
   })
+}
+
+export async function checkDgVoodoo(
+  context: TaskContext,
+  installPath: string,
+  options: {
+    installTool: (toolId: ToolID) => Promise<string>
+    isStartupCheck?: boolean
+    skipSuggestion?: boolean
+  },
+): Promise<{ applied: boolean; doNotAskAgain: boolean }> {
+  context.info("Checking DgVoodoo setup...")
+
+  const exePath = path.join(installPath, FILENAMES.dgVoodoo)
+
+  if (await exists(exePath)) {
+    context.info("DgVoodoo is already installed")
+    return { applied: true, doNotAskAgain: false }
+  }
+
+  if (options.skipSuggestion) {
+    return { applied: false, doNotAskAgain: true }
+  }
+
+  const { confirmed, doNotAskAgain } = await showConfirmation(
+    i18n.t("CheckDgVoodooModal:title"),
+    i18n.t("CheckDgVoodooModal:confirmation"),
+    i18n.t("CheckDgVoodooModal:description"),
+    options.isStartupCheck,
+  )
+
+  if (confirmed) {
+    try {
+      await options.installTool("dgvoodoo" as ToolID)
+
+      await showSuccess(i18n.t("CheckDgVoodooModal:title"), i18n.t("CheckDgVoodooModal:success"))
+
+      return { applied: true, doNotAskAgain }
+    } catch (error) {
+      context.error("Failed to setup DgVoodoo", error)
+      await showError(
+        i18n.t("CheckDgVoodooModal:title"),
+        i18n.t("CheckDgVoodooModal:failure"),
+        (error as Error).message,
+      )
+    }
+  }
+
+  return { applied: false, doNotAskAgain }
 }
 
 export function getExePath(installPath: string): string {

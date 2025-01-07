@@ -42,6 +42,7 @@ function Settings(): JSX.Element {
               t("install.path.emptyValue")
             )}
           </FlexBox>
+
           <FlexBox alignItems="center" height={38} gap={2}>
             <Typography sx={{ flex: 1 }}>{t("install.version.label")}</Typography>
             {settings?.install?.version ? (
@@ -59,6 +60,7 @@ function Settings(): JSX.Element {
               t("install.version.emptyValue")
             )}
           </FlexBox>
+
           <FlexBox alignItems="center" height={38} gap={1}>
             <Typography sx={{ flex: 1 }}>{t("install.patched.label")}</Typography>
             {settings?.install?.patched ? (
@@ -103,6 +105,52 @@ function Settings(): JSX.Element {
               </FlexBox>
             )}
           </FlexBox>
+
+          <FlexBox alignItems="center" height={38} gap={1}>
+            <Typography sx={{ flex: 1 }}>{t("install.voodoo.label")}</Typography>
+            {settings?.install?.voodoo ? (
+              <FlexBox
+                alignItems="center"
+                sx={{
+                  "& span": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover span": {
+                    marginLeft: 1,
+                    width: 56,
+                  },
+                }}
+              >
+                <AppliedIcon color="success" />
+                <span>{t("install.voodoo.applied")}</span>
+              </FlexBox>
+            ) : (
+              <FlexBox
+                alignItems="center"
+                onClick={() => actions.checkDgVoodoo()}
+                sx={{
+                  cursor: "pointer",
+                  "& span": {
+                    overflow: "hidden",
+                    textWrap: "nowrap",
+                    transition: "width 0.3s",
+                    width: 0,
+                  },
+                  "&:hover span": {
+                    marginLeft: 1,
+                    width: 100,
+                  },
+                }}
+              >
+                <NotAppliedIcon color="error" />
+                <span>{t("install.voodoo.apply")}</span>
+              </FlexBox>
+            )}
+          </FlexBox>
+
           <FlexBox alignItems="center" height={38} gap={1}>
             <Typography sx={{ flex: 1 }}>{t("version.label")}</Typography>
             {settings?.version ?? t("version.emptyValue")}
