@@ -4,7 +4,7 @@ import { CreateVariantModal } from "@components/CreateVariantModal"
 import { FlexBox } from "@components/FlexBox"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { PackageTools } from "@components/PackageTools"
-import { PackageTags } from "@components/Tags/PackageTags"
+import { VariantTags } from "@components/Tags/VariantTags"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { VariantActions } from "@components/VariantActions"
@@ -56,7 +56,8 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
                   </Text>
                   <PackageTools packageId={packageId} variantId={variantId} />
                 </FlexBox>
-                <PackageTags packageId={packageId} variantId={variantId} />
+
+                <VariantTags packageId={packageId} variantId={variantId} />
               </FlexBox>
             </FlexBox>
             {variantInfo.description && (

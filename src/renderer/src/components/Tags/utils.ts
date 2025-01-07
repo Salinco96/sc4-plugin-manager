@@ -5,6 +5,7 @@ import { type Categories, type CategoryID, getCategoryLabel } from "@common/cate
 import { VariantState } from "@common/types"
 import { getStateLabel } from "@common/variants"
 import { isEnum } from "@salinco/nice-utils"
+import type { TagColor } from "./Tag"
 
 export type Tag<T extends TagType = TagType> = {
   [K in T]: {
@@ -80,18 +81,18 @@ export function serializeTag<T extends TagType>(type: T, value: TagValue<T>): Se
 }
 
 export const STATE_TAGS: {
-  [state in VariantState]: "default" | "error" | "info" | "success" | "warning" | null
+  [state in VariantState]: TagColor | undefined
 } = {
-  [VariantState.DEFAULT]: null,
+  [VariantState.DEFAULT]: undefined,
   [VariantState.ENABLED]: "success",
   [VariantState.DEPENDENCY]: "success",
   [VariantState.DEPRECATED]: "warning",
   [VariantState.DISABLED]: "error",
   [VariantState.ERROR]: "error",
   [VariantState.EXPERIMENTAL]: "warning",
-  [VariantState.INCOMPATIBLE]: null,
-  [VariantState.INCLUDED]: null,
-  [VariantState.INSTALLED]: null,
+  [VariantState.INCOMPATIBLE]: undefined,
+  [VariantState.INCLUDED]: undefined,
+  [VariantState.INSTALLED]: undefined,
   [VariantState.LOCAL]: "warning",
   [VariantState.NEW]: "info",
   [VariantState.OUTDATED]: "warning",

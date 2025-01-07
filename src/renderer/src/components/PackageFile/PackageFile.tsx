@@ -66,9 +66,15 @@ export function PackageFile({
         <Typography color="inherit" flex={1} textTransform="unset" variant="button">
           <FlexBox alignItems="center" gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
-            {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+            {isPatched && (
+              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
+            )}
             {isOverride(file) && (
-              <PackageTag color="info" dense type={TagType.CATEGORY} value={CategoryID.OVERRIDES} />
+              <PackageTag
+                color="info"
+                dense
+                tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
+              />
             )}
           </FlexBox>
         </Typography>

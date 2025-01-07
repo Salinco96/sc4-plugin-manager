@@ -16,6 +16,7 @@ export function Header({
   setActive,
   subtitle,
   summary,
+  tags,
   thumbnail = images?.at(0),
   thumbnailShape,
   thumbnailSize,
@@ -30,6 +31,7 @@ export function Header({
   setActive?: (active: boolean) => void
   subtitle: string
   summary?: string
+  tags?: ReactNode
   thumbnail?: string
   /** Defaults to "square" */
   thumbnailShape?: "round" | "square"
@@ -127,6 +129,8 @@ export function Header({
 
               {tools}
             </FlexBox>
+
+            {tags}
           </FlexBox>
         </FlexBox>
 

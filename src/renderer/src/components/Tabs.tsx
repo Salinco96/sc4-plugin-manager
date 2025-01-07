@@ -64,7 +64,7 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
                 label={
                   <FlexBox alignItems="center" gap={1}>
                     {label}
-                    {labelTag && <PackageTag dense {...labelTag} />}
+                    {labelTag && <PackageTag dense tag={labelTag} />}
                   </FlexBox>
                 }
                 value={id}

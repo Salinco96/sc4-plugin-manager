@@ -105,9 +105,15 @@ export function PackageViewLotInfo({
               {lot.name ?? "Lot"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag dense color="info" type={TagType.CATEGORY} value={CategoryID.OVERRIDES} />
+              <PackageTag
+                dense
+                color="info"
+                tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
+              />
             )}
-            {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+            {isPatched && (
+              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
+            )}
           </FlexBox>
 
           <ExemplarRef file={lot.file} id={lot.id} />

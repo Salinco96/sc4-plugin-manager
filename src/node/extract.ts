@@ -18,6 +18,7 @@ export async function extractRecursively(
   basePath: string,
   options: {
     exePath?(exe: ToolID): Promise<string>
+    isTool?: boolean
     logger?: Logger
     onProgress?(current: number, total: number): void
   } = {},
@@ -26,7 +27,7 @@ export async function extractRecursively(
 
   const archivePaths = await glob("**/*.{7z,exe,jar,msi,rar,zip}", {
     cwd: basePath,
-    ignore: ["**/4gb_patch.exe", "**/7z*.exe", "**/cicdec.exe", "**/dgVoodooCpl.exe"],
+    ignore: options.isTool ? ["**/*.exe"] : ["**/4gb_patch.exe"],
     nodir: true,
   })
 

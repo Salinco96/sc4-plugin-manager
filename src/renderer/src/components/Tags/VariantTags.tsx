@@ -1,28 +1,28 @@
 import type { PackageID } from "@common/packages"
 import { VariantState, getState } from "@common/types"
-import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+import type { VariantID } from "@common/variants"
+import { usePackageInfo, useVariantInfo } from "@utils/packages"
 import { useCurrentProfile } from "@utils/store"
-
-import { PackageTag } from "./PackageTag"
 import { Tags } from "./Tags"
 import { TagType, createTag } from "./utils"
 
-export function PackageTags({
+export function VariantTags({
   packageId,
+  variantId,
 }: {
   packageId: PackageID
+  variantId: VariantID
 }): JSX.Element | null {
   const profileInfo = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = useVariantInfo(packageId, variantId)
 
   const tags = [
     ...variantInfo.authors.map(authorId => createTag(TagType.AUTHOR, authorId)),
-    ...variantInfo.categories.map(category => createTag(TagType.CATEGORY, category)),
-    ...[VariantState.DEPENDENCY, VariantState.DISABLED, VariantState.ENABLED, VariantState.ERROR]
+    ...[VariantState.DEFAULT, VariantState.SELECTED]
       .filter(state => getState(state, packageInfo, variantInfo, profileInfo))
       .map(state => createTag(TagType.STATE, state)),
   ]
 
-  return <Tags component={PackageTag} tags={tags} />
+  return <Tags tags={tags} />
 }

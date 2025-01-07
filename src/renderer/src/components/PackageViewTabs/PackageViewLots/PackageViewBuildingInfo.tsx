@@ -78,9 +78,15 @@ export function PackageViewBuildingInfo({
               {building.label ?? building.name ?? "Building"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag color="info" dense type={TagType.CATEGORY} value={CategoryID.OVERRIDES} />
+              <PackageTag
+                color="info"
+                dense
+                tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
+              />
             )}
-            {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+            {isPatched && (
+              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
+            )}
           </FlexBox>
 
           <ExemplarRef file={building.file} id={building.id} />
@@ -88,7 +94,7 @@ export function PackageViewBuildingInfo({
           {!!tags?.length && (
             <FlexBox direction="row" gap={1} mt={1}>
               {tags.map(tag => (
-                <PackageTag key={serializeTag(tag.type, tag.value)} {...tag} />
+                <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
             </FlexBox>
           )}

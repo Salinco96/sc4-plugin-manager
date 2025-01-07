@@ -6,6 +6,7 @@ import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { type Action, ActionButton } from "./ActionButton"
 import { Header } from "./Header"
+import { ToolTags } from "./Tags/ToolTags"
 
 export function ToolHeader({
   isListItem,
@@ -69,6 +70,7 @@ export function ToolHeader({
       setActive={setActive}
       subtitle={toolId}
       summary={toolInfo.summary}
+      tags={<ToolTags toolId={toolId} />}
       thumbnail={toolInfo.thumbnail}
       title={`${toolInfo.name} (${toolInfo.version})`}
     />

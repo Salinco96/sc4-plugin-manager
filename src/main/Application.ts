@@ -667,7 +667,7 @@ export class Application {
   /**
    * Downloads an asset.
    */
-  protected async downloadAsset(assetInfo: AssetInfo): Promise<string> {
+  protected async downloadAsset(assetInfo: AssetInfo, isTool?: boolean): Promise<string> {
     const key = this.getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(assetInfo)
 
@@ -709,6 +709,7 @@ export class Application {
 
         await extractRecursively(downloadPath, {
           exePath: exe => this.getToolExePath(exe),
+          isTool,
           logger: context,
           onProgress: context.setProgress,
         })
@@ -1026,7 +1027,7 @@ export class Application {
         throw Error(`Unknown asset '${toolInfo.asset}'`)
       }
 
-      const downloadPath = await this.downloadAsset(assetInfo)
+      const downloadPath = await this.downloadAsset(assetInfo, true)
 
       if (toolInfo.install) {
         if (!settings.install?.path) {
@@ -1270,7 +1271,7 @@ export class Application {
             throw Error("Missing installation path")
           }
 
-          const downloadPath = await this.downloadAsset(assetInfo)
+          const downloadPath = await this.downloadAsset(assetInfo, true)
 
           if (toolInfo.install) {
             const basePath = path.join(downloadPath, toolInfo.install)

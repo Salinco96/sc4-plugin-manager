@@ -76,9 +76,15 @@ export function PackageViewBuildingFamilyInfo({
               {buildingFamily?.name ?? "Building family"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag color="info" dense type={TagType.CATEGORY} value={CategoryID.OVERRIDES} />
+              <PackageTag
+                color="info"
+                dense
+                tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
+              />
             )}
-            {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+            {isPatched && (
+              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
+            )}
           </FlexBox>
 
           <ExemplarRef file={filePath} id={familyId} />
@@ -86,7 +92,7 @@ export function PackageViewBuildingFamilyInfo({
           {!!tags?.length && (
             <FlexBox direction="row" gap={1} mt={1}>
               {tags.map(tag => (
-                <PackageTag key={serializeTag(tag.type, tag.value)} {...tag} />
+                <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
             </FlexBox>
           )}

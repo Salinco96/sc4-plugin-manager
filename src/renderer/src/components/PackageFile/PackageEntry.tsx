@@ -112,7 +112,7 @@ export function PackageEntry({
           }}
         />
       )}
-      {isPatched && <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />}
+      {isPatched && <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
       {isViewing && (
         <EntryViewer
           entry={entry}

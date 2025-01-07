@@ -125,7 +125,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
                   {mmp.label ?? mmp.name ?? "MMP"}
                 </Text>
                 {isPatched && (
-                  <PackageTag dense type={TagType.STATE} value={VariantState.PATCHED} />
+                  <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
                 )}
               </FlexBox>
 
@@ -134,7 +134,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
               {!!tags?.length && (
                 <FlexBox direction="row" gap={1} mt={1}>
                   {tags.map(tag => (
-                    <PackageTag key={serializeTag(tag.type, tag.value)} {...tag} />
+                    <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
                   ))}
                 </FlexBox>
               )}
