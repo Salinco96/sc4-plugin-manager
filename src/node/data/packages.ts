@@ -421,6 +421,11 @@ export interface VariantData extends ContentsData {
   options?: OptionData[]
 
   /**
+   * Priority (number between 0 and 999), usually should let to be inferred from {@link categories}
+   */
+  priority?: number
+
+  /**
    * Relative path to the main Readme file (the one that is shown in Readme tab)
    */
   readme?: MaybeArray<string>
@@ -660,7 +665,8 @@ export function loadVariantInfo(
     name: variantData.name,
     optional: optionalDependencies.length ? optionalDependencies : undefined,
     options: options.length ? options : undefined,
-    priority: getPriority(mergedCategories, categories),
+    priority:
+      variantData.priority ?? packageData.priority ?? getPriority(mergedCategories, categories),
     propFamilies: propFamilies.length ? propFamilies : undefined,
     props: props.length ? props : undefined,
     readme: isString(readme) ? [readme] : readme,
