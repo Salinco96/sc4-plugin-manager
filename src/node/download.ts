@@ -47,7 +47,7 @@ export async function download(
   options: {
     downloadPath: string
     downloadTempPath?: string
-    exePath?(exe: ToolID): Promise<string>
+    exePath(exe: ToolID): Promise<string>
     expectedSha256?: string
     expectedSize?: number
     logger?: Logger

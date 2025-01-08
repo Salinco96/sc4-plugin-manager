@@ -12,16 +12,16 @@ import type { Logger } from "@common/logs"
 
 import type { ToolID } from "@common/tools"
 import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
-import { cmd, run } from "./processes"
+import { cmd, runFile } from "./processes"
 
 export async function extractRecursively(
   basePath: string,
   options: {
-    exePath?(exe: ToolID): Promise<string>
+    exePath(toolId: ToolID): Promise<string>
     isTool?: boolean
     logger?: Logger
     onProgress?(current: number, total: number): void
-  } = {},
+  },
 ): Promise<void> {
   const { logger = console } = options
 
@@ -58,10 +58,10 @@ export async function extract(
   archivePath: string,
   extractPath: string,
   options: {
-    exePath?(exe: string): Promise<string>
+    exePath(toolId: ToolID): Promise<string>
     logger?: Logger
     onProgress?(current: number, total: number): void
-  } = {},
+  },
 ): Promise<void> {
   const extension = getExtension(archivePath)
 
@@ -112,11 +112,13 @@ export async function extract7z(
   archivePath: string,
   extractPath: string,
   options: {
-    exePath?(exe: string): Promise<string>
+    exePath(toolId: ToolID): Promise<string>
     logger?: Logger
-  } = {},
+  },
 ): Promise<{ size: number }> {
-  const stdout = await run("7z", {
+  const exePath = await options.exePath("cicdec" as ToolID)
+
+  const stdout = await runFile(exePath, {
     args: ["x", "-y", `-o${extractPath}`, archivePath],
     ...options,
   })
@@ -182,11 +184,13 @@ export async function extractClickTeam(
   archivePath: string,
   extractPath: string,
   options: {
-    exePath?(exe: string): Promise<string>
+    exePath(toolId: ToolID): Promise<string>
     logger?: Logger
-  } = {},
+  },
 ): Promise<void> {
-  await run("cicdec", {
+  const exePath = await options.exePath("cicdec" as ToolID)
+
+  await runFile(exePath, {
     args: [archivePath, extractPath],
     ...options,
   })

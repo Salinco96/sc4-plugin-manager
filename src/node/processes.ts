@@ -1,5 +1,6 @@
-import { exec } from "node:child_process"
+import { exec, execFile } from "node:child_process"
 
+import path from "node:path"
 import type { Logger } from "@common/logs"
 
 export async function cmd(cmd: string): Promise<string> {
@@ -18,20 +19,17 @@ export async function cmd(cmd: string): Promise<string> {
   })
 }
 
-export async function run(
-  exe: string,
+export async function runFile(
+  exePath: string,
   options: {
     args?: string[]
-    exePath?(exe: string): Promise<string>
     logger?: Logger
   } = {},
 ): Promise<string> {
-  const { args = [], exePath, logger = console } = options
-
-  const parts = [exePath ? await exePath(exe) : exe, ...args]
+  const { args = [], logger = console } = options
 
   return new Promise((resolve, reject) => {
-    exec(parts.map(s => `"${s.replaceAll('"', '\\"')}"`).join(" "), (error, stdout, stderr) => {
+    execFile(exePath, args, { cwd: path.dirname(exePath) }, (error, stdout, stderr) => {
       logger.debug(stdout)
       logger.warn(stderr)
 

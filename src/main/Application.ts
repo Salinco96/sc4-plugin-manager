@@ -76,7 +76,7 @@ import { getLotData } from "@node/dbpf/lots"
 import { getPropData } from "@node/dbpf/props"
 import type { Exemplar } from "@node/dbpf/types"
 import { download } from "@node/download"
-import { extractRecursively } from "@node/extract"
+import { extractClickTeam, extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 import {
   FileOpenMode,
@@ -94,7 +94,7 @@ import {
   writeFile,
 } from "@node/files"
 import { hashCode } from "@node/hash"
-import { cmd } from "@node/processes"
+import { cmd, runFile } from "@node/processes"
 import type { TaskContext } from "@node/tasks"
 import {
   ConflictConfirmationResponse,
@@ -1027,7 +1027,12 @@ export class Application {
         throw Error(`Unknown asset '${toolInfo.asset}'`)
       }
 
-      const downloadPath = await this.downloadAsset(assetInfo, true)
+      const downloadPath = this.getDownloadPath(assetInfo)
+      const downloaded = await exists(downloadPath)
+
+      if (!downloaded) {
+        await this.downloadAsset(assetInfo, true)
+      }
 
       if (toolInfo.install) {
         if (!settings.install?.path) {
@@ -1262,6 +1267,7 @@ export class Application {
         try {
           context.info(`Installing tool '${toolId}'...`)
           toolInfo.action = "installing"
+          toolInfo.installed = false
           this.sendStateUpdate({ tools })
 
           const assetInfo = assets[toolInfo.asset]
@@ -1275,20 +1281,82 @@ export class Application {
 
           const downloadPath = await this.downloadAsset(assetInfo, true)
 
-          if (toolInfo.install) {
-            const basePath = path.join(downloadPath, toolInfo.install)
-            const relativePaths = await glob("**/*", {
-              cwd: basePath,
-              dot: true,
-              ignore: ["**/4gb_patch.exe"],
-              nodir: true,
-            })
+          try {
+            if (toolInfo.install) {
+              const basePath = path.join(downloadPath, toolInfo.install)
+              const relativePaths = await glob("**/*", {
+                cwd: basePath,
+                dot: true,
+                ignore: ["**/4gb_patch.exe"],
+                nodir: true,
+              })
 
-            for (const relativePath of relativePaths) {
-              const fullPath = path.join(basePath, relativePath)
-              const targetPath = path.join(settings.install.path, relativePath)
-              await moveTo(fullPath, targetPath)
+              for (const relativePath of relativePaths) {
+                const fullPath = path.join(basePath, relativePath)
+                const targetPath = path.join(settings.install.path, relativePath)
+                await moveTo(fullPath, targetPath)
+              }
             }
+
+            // Hardcoded installation process
+            if (toolId === "sc4pim") {
+              const binPath = path.dirname(path.join(downloadPath, toolInfo.exe))
+
+              const basePath = path.join(downloadPath, "Setup SC4 PIM-X (X-tool, X-PIM)")
+              const exePath = path.join(basePath, "01. Install SetupSC4PIM/SetupSC4PIMRC8c.exe")
+
+              // Extract from installer to bin
+              await extractClickTeam(exePath, binPath, {
+                exePath: exe => this.getToolExePath(exe),
+                logger: context,
+              })
+
+              // Move DLLs and config overrides to bin
+              const filesToMoveToBin = await glob(
+                [
+                  "02. Copy into the SC4PIM install folder/*",
+                  "04. These go into the Win System 32 and or SysWOW64 folder/*.dll",
+                ],
+                {
+                  cwd: basePath,
+                  nodir: true,
+                },
+              )
+
+              for (const relativePath of filesToMoveToBin) {
+                await moveTo(
+                  path.join(basePath, relativePath),
+                  path.join(binPath, path.basename(relativePath)),
+                )
+              }
+
+              // Move documentation to roots
+              const filesToMoveToRoot = await glob(
+                [
+                  "05. Set-up SC4PIM-X to the right compatibility mode/*",
+                  "06. SC4 PIM User Guide/*",
+                ],
+                {
+                  cwd: basePath,
+                  nodir: true,
+                },
+              )
+
+              for (const relativePath of filesToMoveToRoot) {
+                await moveTo(
+                  path.join(basePath, relativePath),
+                  path.join(downloadPath, path.basename(relativePath)),
+                )
+              }
+
+              // Remove setup file
+              await removeIfPresent(basePath)
+            }
+          } catch (error) {
+            // If installation process fails, delete the download so it will not be treated as installed later
+            // TODO: Install to some Tools folder rather than directly within Downloads, so this will no longer be an issue
+            await removeIfPresent(downloadPath)
+            throw error
           }
 
           toolInfo.installed = true
@@ -2535,7 +2603,7 @@ export class Application {
           toolInfo.action = "running"
           this.sendStateUpdate({ tools })
 
-          await cmd(`"${exePath}"`)
+          await runFile(exePath, { logger: context })
         } catch (error) {
           console.error(error)
         } finally {
