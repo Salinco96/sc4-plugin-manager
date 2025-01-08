@@ -429,6 +429,38 @@ export class Application {
             }
           }
         }
+
+        // Prompt to remove unsupported files (e.g. leftover docs)
+        const unsupportedFiles = new Set<string>()
+        for (const externalFile of externals) {
+          if (!SC4_EXTENSIONS.includes(getExtension(externalFile))) {
+            unsupportedFiles.add(externalFile)
+          }
+        }
+
+        if (unsupportedFiles.size) {
+          const fileNames = Array.from(unsupportedFiles)
+
+          const { confirmed } = await showConfirmation(
+            t("RemoveUnsupportedFilesModal:title"),
+            t("RemoveUnsupportedFilesModal:confirmation"),
+            t("RemoveUnsupportedFilesModal:description", {
+              files: fileNames.sort(),
+              pluginsBackup: DIRNAMES.pluginsBackup,
+            }),
+          )
+
+          if (confirmed) {
+            for (const unsupportedFile of unsupportedFiles) {
+              await this.backUpFile(context, unsupportedFile)
+              externals.delete(unsupportedFile)
+            }
+
+            context.debug(`Removed ${unsupportedFiles.size} unsupported files`)
+          } else {
+            context.debug(`Ignored ${unsupportedFiles.size} unsupported files`)
+          }
+        }
       },
       invalidate: true,
       onStatusUpdate: info => {

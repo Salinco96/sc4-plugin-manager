@@ -585,6 +585,11 @@
     "success": "The profile was deleted successfully!",
     "title": "Delete profile"
   },
+  "RemoveUnsupportedFilesModal": {
+    "confirmation": "Remove unsupported files?",
+    "description": "The following external files are not supported by $t(General:game) and may unnecessarily reduce performance:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backups will be created in {{pluginsBackup}}.",
+    "title": "Unsupported files"
+  },
   "RemoveVariantModal": {
     "confirmation": "Remove local variant?",
     "description": "By removing variant {{variantName}}, all local files will be lost forever."
