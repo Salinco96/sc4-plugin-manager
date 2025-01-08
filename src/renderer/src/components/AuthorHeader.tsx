@@ -1,9 +1,10 @@
 import type { AuthorID } from "@common/authors"
 import { Page } from "@utils/navigation"
-import { useAuthors } from "@utils/store"
-import { AuthorTools } from "./AuthorTools"
+import { useAuthors, useStoreActions } from "@utils/store"
+import { useMemo } from "react"
 import { Header } from "./Header"
 import { getAuthorName } from "./Tags/utils"
+import type { ToolBeltAction } from "./ToolBelt"
 
 export function AuthorHeader({
   isListItem,
@@ -14,8 +15,24 @@ export function AuthorHeader({
   setActive?: (active: boolean) => void
   authorId: AuthorID
 }): JSX.Element {
+  const actions = useStoreActions()
   const authors = useAuthors()
   const authorInfo = authors[authorId]
+
+  const toolbeltActions: ToolBeltAction[] = useMemo(() => {
+    const toolbeltActions: ToolBeltAction[] = []
+
+    if (authorInfo?.url) {
+      toolbeltActions.push({
+        action: () => actions.openAuthorURL(authorId),
+        description: authorInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl",
+        icon: "website",
+        id: "url",
+      })
+    }
+
+    return toolbeltActions
+  }, [actions, authorId, authorInfo])
 
   return (
     <Header
@@ -23,10 +40,16 @@ export function AuthorHeader({
       location={{ data: { authorId }, page: Page.AuthorView }}
       setActive={setActive}
       subtitle={authorId}
-      thumbnail={authorInfo?.thumbnail}
+      thumbnail={authorInfo?.thumbnail ?? getDefaultThumbnail(authorId)}
       thumbnailSize="small"
       title={getAuthorName(authorId, authors)}
-      tools={<AuthorTools authorId={authorId} />}
+      tools={toolbeltActions}
     />
   )
+}
+
+function getDefaultThumbnail(authorId: AuthorID): string {
+  const initial = authorId[0].toUpperCase()
+  const color = 100 + (authorId.length % 8) * 20
+  return `https://www.simtropolis.com/objects/profiles/avatars/${initial}-${color}.thumb.png`
 }

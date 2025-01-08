@@ -3,6 +3,7 @@ import { VariantState, getState } from "@common/types"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { useCurrentProfile } from "@utils/store"
 
+import { Page, useLocation } from "@utils/navigation"
 import { PackageTag } from "./PackageTag"
 import { Tags } from "./Tags"
 import { TagType, createTag } from "./utils"
@@ -12,9 +13,12 @@ export function PackageTags({
 }: {
   packageId: PackageID
 }): JSX.Element | null {
+  const location = useLocation()
   const profileInfo = useCurrentProfile()
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
+
+  const isSelectable = location.page === Page.Packages
 
   const tags = [
     ...variantInfo.authors.map(authorId => createTag(TagType.AUTHOR, authorId)),
@@ -24,5 +28,5 @@ export function PackageTags({
       .map(state => createTag(TagType.STATE, state)),
   ]
 
-  return <Tags component={PackageTag} tags={tags} />
+  return <Tags component={isSelectable ? PackageTag : undefined} tags={tags} />
 }

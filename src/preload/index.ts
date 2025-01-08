@@ -78,15 +78,21 @@ export const api = {
   openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void> {
     return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
   },
-  openProfileConfig(profileId: ProfileID): Promise<void> {
-    return ipcRenderer.invoke("openProfileConfig", profileId)
-  },
-  openVariantURL(
+  openPackageURL(
     packageId: PackageID,
     variantId: VariantID,
     type: "repository" | "support" | "url",
   ): Promise<void> {
-    return ipcRenderer.invoke("openVariantURL", packageId, variantId, type)
+    return ipcRenderer.invoke("openPackageURL", packageId, variantId, type)
+  },
+  openProfileConfig(profileId: ProfileID): Promise<void> {
+    return ipcRenderer.invoke("openProfileConfig", profileId)
+  },
+  openToolFile(toolId: ToolID, filePath: string): Promise<void> {
+    return ipcRenderer.invoke("openToolFile", toolId, filePath)
+  },
+  openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void> {
+    return ipcRenderer.invoke("openToolURL", toolId, type)
   },
   patchDBPFEntries(
     packageId: PackageID,

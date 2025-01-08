@@ -6,12 +6,12 @@ import { useTranslation } from "react-i18next"
 import { FlexBox } from "./FlexBox"
 
 export interface Action {
+  action: () => void
   color?: "error" | "info" | "success" | "warning"
   description?: string
   disabled?: boolean
   id: string
   label: string
-  onClick: () => void
 }
 
 export function ActionButton({
@@ -45,7 +45,7 @@ export function ActionButton({
             <Button
               color={mainAction.color}
               disabled={disabled}
-              onClick={mainAction.onClick}
+              onClick={mainAction.action}
               ref={anchorRef}
               sx={{ height: 40, paddingRight: hasMore ? 5.5 : 2, width: 160 }}
               variant="contained"
@@ -89,7 +89,7 @@ export function ActionButton({
                   <MenuItem
                     disabled={action.disabled}
                     onClick={() => {
-                      action.onClick()
+                      action.action()
                       setMenuOpen(false)
                     }}
                   >

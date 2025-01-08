@@ -463,17 +463,6 @@
     "category": "Category: {{label}}",
     "state": "Status: {{label}}"
   },
-  "PackageTools": {
-    "openConfig": "Open configuration file",
-    "openDocs": "Open installed documentation",
-    "openFiles": "Open installed files",
-    "openReadme": "Open README",
-    "openRepository": "View source code on GitHub",
-    "openSimtropolis": "Open Simtropolis page",
-    "openSupport": "Open support thread",
-    "openUrl": "Open download page",
-    "options": "Open options"
-  },
   "PackageView": {
     "missing": "Package {{packageId}} does not exist"
   },
@@ -783,6 +772,18 @@
       "description": "Run this tool",
       "label": "Run"
     }
+  },
+  "ToolBelt": {
+    "openConfig": "Open configuration file",
+    "openDocs": "Open installed documentation",
+    "openFiles": "Open installed files",
+    "openGitHub": "View source code on GitHub",
+    "openReadme": "Open README",
+    "openRepository": "View source code",
+    "openSimtropolis": "Open Simtropolis page",
+    "openSupport": "Open support thread",
+    "openUrl": "Open download page",
+    "options": "Open options"
   },
   "ToolView": {
     "missing": "Tool {{toolId}} does not exist"

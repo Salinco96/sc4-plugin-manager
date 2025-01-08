@@ -3,8 +3,10 @@ import { type ReactNode, useEffect, useState } from "react"
 import { FlexBox } from "@components/FlexBox"
 import { Link } from "@mui/material"
 import { type Location, useHistory } from "@utils/navigation"
+import { type Action, ActionButton } from "./ActionButton"
 import { Text } from "./Text"
 import { Thumbnail } from "./Thumbnail"
+import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
 import { ImageViewer } from "./Viewer/ImageViewer"
 
 export function Header({
@@ -12,6 +14,8 @@ export function Header({
   description,
   images,
   isListItem,
+  isLoading,
+  loadingLabel,
   location,
   setActive,
   subtitle,
@@ -23,10 +27,12 @@ export function Header({
   title,
   tools,
 }: {
-  actions?: ReactNode
+  actions?: Action[]
   description?: string
   images?: string[]
   isListItem?: boolean
+  isLoading?: boolean
+  loadingLabel?: string
   location: Location
   setActive?: (active: boolean) => void
   subtitle: string
@@ -38,7 +44,7 @@ export function Header({
   /** Defaults to "large" */
   thumbnailSize?: "large" | "small"
   title: string
-  tools?: ReactNode
+  tools?: ToolBeltAction[]
 }): JSX.Element {
   const history = useHistory()
 
@@ -127,7 +133,7 @@ export function Header({
                 subtitleElement
               )}
 
-              {tools}
+              {tools && <ToolBelt actions={tools} />}
             </FlexBox>
 
             {tags}
@@ -146,7 +152,9 @@ export function Header({
         )}
       </FlexBox>
 
-      {actions}
+      {actions && (
+        <ActionButton actions={actions} isLoading={isLoading} loadingLabel={loadingLabel} />
+      )}
     </FlexBox>
   )
 }

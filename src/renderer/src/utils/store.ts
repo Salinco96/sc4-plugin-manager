@@ -75,13 +75,15 @@ export interface StoreActions {
   openInstallationDirectory(): Promise<void>
   openPackageConfig(packageId: PackageID): Promise<void>
   openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void>
-  openProfileConfig(profileId: ProfileID): Promise<void>
-  openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
-  openVariantURL(
+  openPackageURL(
     packageId: PackageID,
     variantId: VariantID,
     type: "repository" | "support" | "url",
   ): Promise<void>
+  openProfileConfig(profileId: ProfileID): Promise<void>
+  openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
+  openToolFile(toolId: ToolID, filePath: string): Promise<void>
+  openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void>
   patchDBPFEntries(
     packageId: PackageID,
     variantId: VariantID,
@@ -294,6 +296,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       openPackageFile(packageId, variantId, filePath) {
         return window.api.openPackageFile(packageId, variantId, filePath)
       },
+      openPackageURL(packageId, variantId, type) {
+        return window.api.openPackageURL(packageId, variantId, type)
+      },
       openProfileConfig(profileId) {
         return window.api.openProfileConfig(profileId)
       },
@@ -303,8 +308,11 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           updateState({ snackbars: { [type]: { $set: id } } })
         }
       },
-      openVariantURL(packageId, variantId, type) {
-        return window.api.openVariantURL(packageId, variantId, type)
+      openToolFile(toolId, filePath) {
+        return window.api.openToolFile(toolId, filePath)
+      },
+      openToolURL(toolId, type) {
+        return window.api.openToolURL(toolId, type)
       },
       patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)

@@ -28,7 +28,7 @@ export function List<T>({
           {renderItem(item)}
         </Box>
       )}
-      initialTopMostItemIndex={initialIndex >= 0 ? initialIndex : 0}
+      initialTopMostItemIndex={{ align: "center", index: initialIndex >= 0 ? initialIndex : 0 }}
       style={{ flex: 1, width: "100%" }}
     />
   )

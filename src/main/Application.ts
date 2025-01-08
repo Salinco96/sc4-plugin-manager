@@ -1011,7 +1011,7 @@ export class Application {
   }
 
   /**
-   * Returns the path to the given tool's executable, downloading the tool as needed.
+   * Returns the path to the given tool's main executable, downloading the tool as needed.
    */
   public async getToolExePath(toolId: ToolID): Promise<string> {
     const { assets, settings, tools } = await this.load()
@@ -1098,8 +1098,10 @@ export class Application {
     this.handle("openInstallationDirectory")
     this.handle("openPackageConfig")
     this.handle("openPackageFile")
+    this.handle("openPackageURL")
     this.handle("openProfileConfig")
-    this.handle("openVariantURL")
+    this.handle("openToolFile")
+    this.handle("openToolURL")
     this.handle("patchDBPFEntries")
     this.handle("removeProfile")
     this.handle("removeTool")
@@ -1980,7 +1982,7 @@ export class Application {
   }
 
   /**
-   * Opens a variant's file in the default text editor.
+   * Opens a package's file in the default text editor.
    */
   public async openPackageFile(
     packageId: PackageID,
@@ -1988,6 +1990,25 @@ export class Application {
     filePath: string,
   ): Promise<void> {
     await this.openInExplorer(this.getVariantFilePath(packageId, variantId, filePath))
+  }
+
+  /**
+   * Opens a package's URL in browser.
+   */
+  public async openPackageURL(
+    packageId: PackageID,
+    variantId: VariantID,
+    type: "repository" | "support" | "url",
+  ): Promise<void> {
+    const { packages } = await this.load()
+
+    const variantInfo = packages[packageId]?.variants[variantId]
+    if (!variantInfo?.[type]) {
+      const name = type === "url" ? "homepage" : type
+      throw Error(`Variant '${packageId}#${variantId}' does not have a ${name} URL`)
+    }
+
+    await this.openInExplorer(variantInfo[type])
   }
 
   /**
@@ -2006,22 +2027,45 @@ export class Application {
   }
 
   /**
-   * Opens a variant's URL in browser.
+   * Opens a tool's file in the default text editor.
    */
-  public async openVariantURL(
-    packageId: PackageID,
-    variantId: VariantID,
-    type: "repository" | "support" | "url",
-  ): Promise<void> {
-    const { packages } = await this.load()
+  public async openToolFile(toolId: ToolID, filePath: string): Promise<void> {
+    const { assets, settings, tools } = await this.load()
 
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.[type]) {
-      const name = type === "url" ? "homepage" : type
-      throw Error(`Variant '${packageId}#${variantId}' does not have a ${name} URL`)
+    const toolInfo = tools[toolId]
+    if (!toolInfo?.asset || !toolInfo.installed) {
+      throw Error(`Tool '${toolId}' is not installed`)
     }
 
-    await this.openInExplorer(variantInfo[type])
+    if (toolInfo.install) {
+      if (!settings.install?.path) {
+        throw Error("Missing installation folder")
+      }
+
+      await this.openInExplorer(path.join(settings.install.path, filePath))
+    } else {
+      const assetInfo = assets[toolInfo.asset]
+      if (!assetInfo?.downloaded[assetInfo.version]) {
+        throw Error(`Asset '${toolInfo.asset}' is not installed`)
+      }
+
+      await this.openInExplorer(path.join(this.getDownloadPath(assetInfo), filePath))
+    }
+  }
+
+  /**
+   * Opens a tool's URL in browser.
+   */
+  public async openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void> {
+    const { tools } = await this.load()
+
+    const toolInfo = tools[toolId]
+    if (!toolInfo?.[type]) {
+      const name = type === "url" ? "homepage" : type
+      throw Error(`Tool '${toolId}' does not have a ${name} URL`)
+    }
+
+    await this.openInExplorer(toolInfo[type])
   }
 
   public async patchDBPFEntries(

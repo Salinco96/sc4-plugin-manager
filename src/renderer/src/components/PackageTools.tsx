@@ -37,7 +37,7 @@ export function PackageTools({
 
   const [openOptions, setOpenOptions] = useState(false)
 
-  const { t } = useTranslation("PackageTools")
+  const { t } = useTranslation("ToolBelt")
 
   const hasOptions = !!variantInfo.options?.length || variantInfo.lots?.some(isTogglableLot)
 
@@ -59,21 +59,21 @@ export function PackageTools({
         <ToolButton
           description={t(variantInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl")}
           icon={WebIcon}
-          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "url")}
+          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "url")}
         />
       )}
       {variantInfo.repository && (
         <ToolButton
           description={t("openRepository")}
           icon={GitHubIcon}
-          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "repository")}
+          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "repository")}
         />
       )}
       {variantInfo.support && (
         <ToolButton
           description={t("openSupport")}
           icon={SupportIcon}
-          onClick={() => actions.openVariantURL(packageId, variantInfo.id, "support")}
+          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "support")}
         />
       )}
       {variantInfo.installed && !variantId && (
