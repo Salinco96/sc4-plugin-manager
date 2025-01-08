@@ -175,6 +175,8 @@ export function PackageActions({
     return packageActions
   }, [actions, currentProfile, packageId, packageStatus, t, variantId, variantInfo])
 
+  console.log(packageId, filtered, packageActions)
+
   if (!packageActions.length) {
     return null
   }

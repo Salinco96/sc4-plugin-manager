@@ -3,7 +3,6 @@ import { type ReactNode, useEffect, useState } from "react"
 import { FlexBox } from "@components/FlexBox"
 import { Link } from "@mui/material"
 import { type Location, useHistory } from "@utils/navigation"
-import { type Action, ActionButton } from "./ActionButton"
 import { Text } from "./Text"
 import { Thumbnail } from "./Thumbnail"
 import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
@@ -14,8 +13,6 @@ export function Header({
   description,
   images,
   isListItem,
-  isLoading,
-  loadingLabel,
   location,
   setActive,
   subtitle,
@@ -27,13 +24,13 @@ export function Header({
   title,
   tools,
 }: {
-  actions?: Action[]
+  actions?: ReactNode
   description?: string
   images?: string[]
   isListItem?: boolean
   isLoading?: boolean
   loadingLabel?: string
-  location: Location
+  location?: Location
   setActive?: (active: boolean) => void
   subtitle: string
   summary?: string
@@ -73,7 +70,7 @@ export function Header({
 
   return (
     <FlexBox alignItems="center" px={isListItem ? 0 : 2}>
-      <FlexBox direction="column" flex={1} sx={{ overflow: "hidden" }}>
+      <FlexBox direction="column" flex="1 1 0" pr={1} sx={{ overflow: "hidden" }}>
         <FlexBox direction="row">
           {images?.length && (
             <ImageViewer images={images} onClose={() => setOpenImages(false)} open={openImages} />
@@ -91,8 +88,8 @@ export function Header({
             />
           )}
 
-          <FlexBox direction="column">
-            {isListItem ? (
+          <FlexBox direction="column" flex="1 1 0" sx={{ overflow: "hidden" }}>
+            {isListItem && location ? (
               <Link
                 color="inherit"
                 onBlur={() => setFocus(false)}
@@ -116,7 +113,7 @@ export function Header({
             )}
 
             <FlexBox alignItems="center">
-              {isListItem ? (
+              {isListItem && location ? (
                 <Link
                   color="inherit"
                   onClick={() => history.push(location)}
@@ -152,9 +149,7 @@ export function Header({
         )}
       </FlexBox>
 
-      {actions && (
-        <ActionButton actions={actions} isLoading={isLoading} loadingLabel={loadingLabel} />
-      )}
+      {actions}
     </FlexBox>
   )
 }

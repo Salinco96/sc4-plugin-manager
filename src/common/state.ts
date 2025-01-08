@@ -1,6 +1,6 @@
 import type { Authors } from "./authors"
 import type { Categories } from "./categories"
-import type { ExemplarPropertyInfo } from "./exemplars"
+import type { ExemplarProperties } from "./exemplars"
 import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
 import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
@@ -12,16 +12,13 @@ import type { ContentsInfo } from "./variants"
 export interface ApplicationState {
   authors: Authors
   categories: Categories
-  downloads: {
-    [downloadKey in string]?: TaskInfo
-  }
-  exemplarProperties: {
-    [propertyId in number]?: ExemplarPropertyInfo
-  }
+  downloads: { [downloadKey in string]?: TaskInfo }
+  exemplarProperties: ExemplarProperties
+  externals: { [path: string]: ContentsInfo }
   features: Features
   linker: TaskInfo | null
   loader: TaskInfo | null
-  maxis: Required<ContentsInfo>
+  maxis: ContentsInfo | undefined
   packages: Packages | undefined
   profiles: Profiles | undefined
   profileOptions: OptionInfo[]
@@ -48,19 +45,11 @@ export function getInitialState(): ApplicationState {
     categories: {},
     downloads: {},
     exemplarProperties: {},
-    maxis: {
-      buildingFamilies: [],
-      buildings: [],
-      lots: [],
-      mmps: [],
-      models: {},
-      propFamilies: [],
-      props: [],
-      textures: {},
-    },
+    externals: {},
     features: {},
     linker: null,
     loader: null,
+    maxis: undefined,
     packages: undefined,
     profiles: undefined,
     profileOptions: [],

@@ -241,7 +241,11 @@ sc4evermore/204-sc4d-lex-legacy-mikeseith-multi-level-modular-garages:
       packageId: mikeseith/mega-props-vol02
   variantId: default
 
-sc4evermore/21: null
+sc4evermore/21-sc4pim: null
+
+sc4evermore/210-bsc-vip-girafe-agripack-vol01-v2:
+  packageId: girafe/agripack-vol01
+  variantId: default
 
 sc4evermore/214-bsc-tsc-girafe-french-road-signs:
   packageId: girafe/french-road-signs
@@ -1296,6 +1300,8 @@ simtropolis/21340-functional-landmarks-complete-set-v10:
 simtropolis/21342-opera-house-fix:
   packageId: toroca/opera-house-fix
   variantId: default
+
+simtropolis/21343-ilive-reader-093: null
 
 simtropolis/21365-dataviews-increased-detail-mod-v10:
   packageId: thalassicus/dataviews-increased-details
@@ -3307,6 +3313,9 @@ simtropolis/36413-phil-irm-fillers-full-concrete-angles:
 
 simtropolis/36414-phil-irm-fillers-mixed-concrete-angles:
   packageId: philforhockey51/irm-fillers-mixed-concrete-angles
+
+simtropolis/36421-bsc-vip-girafe-plane-trees:
+  superseded: sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
 
 simtropolis/36423-rlm-productions-la-river-project:
   packageId: rebalynnts/la-river-project

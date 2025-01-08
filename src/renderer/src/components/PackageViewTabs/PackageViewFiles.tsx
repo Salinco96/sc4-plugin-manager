@@ -60,9 +60,9 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
   const dbpfFiles = enabledFiles?.filter(file => isDBPF(file.path)) ?? []
 
   return (
-    <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {sortBy(variantInfo.files ?? [], file => file.path).map(file => (
-        <ListItem key={file.path} sx={{ padding: 0 }}>
+    <List sx={{ display: "flex", flexDirection: "column", padding: 0 }}>
+      {sortBy(variantInfo.files ?? [], file => file.path).map((file, index) => (
+        <ListItem key={file.path} sx={{ p: 2, pt: index === 0 ? 2 : 0 }}>
           <PackageFile
             disabled={!enabledFiles?.includes(file)}
             file={file}

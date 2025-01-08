@@ -72,21 +72,20 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
             ))}
           </TabList>
         </Box>
-        {filteredTabs.map(({ component: Component, fullsize, id }) => (
-          <TabPanel
-            key={`${pageId}:${id}`}
-            sx={{
-              height: "100%",
-              overflowY: fullsize ? "hidden" : "auto",
-              padding: fullsize ? 0 : 2,
-            }}
-            value={id}
-          >
-            <Suspense fallback={<Loader />}>
-              <Component {...props} />
-            </Suspense>
-          </TabPanel>
-        ))}
+
+        <FlexBox flex="1 1 0" overflow="auto" width="100%">
+          {filteredTabs.map(({ component: Component, fullsize, id }) => (
+            <TabPanel
+              key={`${pageId}:${id}`}
+              sx={{ p: fullsize ? 0 : 2, width: "100%" }}
+              value={id}
+            >
+              <Suspense fallback={<Loader />}>
+                <Component {...props} />
+              </Suspense>
+            </TabPanel>
+          ))}
+        </FlexBox>
       </FlexBox>
     </TabContext>
   )

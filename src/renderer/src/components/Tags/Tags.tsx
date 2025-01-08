@@ -29,8 +29,6 @@ export function Tags({
   const onScroll = useCallback(() => {
     const container = containerRef.current
 
-    console.log(container?.scrollWidth, container?.clientWidth)
-
     if (container && container.scrollWidth > container.clientWidth) {
       setScrollableLeft(container.scrollLeft > 1)
       setScrollableRight(container.scrollWidth - container.clientWidth - container.scrollLeft > 1)
@@ -49,7 +47,6 @@ export function Tags({
   const filteredTags = authorsExpanded ? tags : difference(tags, authorTags)
 
   const isScrollable = isScrollableLeft || isScrollableRight
-  console.log({ isScrollableLeft, isScrollableRight, isScrollable })
 
   if (filteredTags.length === 0) {
     return null
@@ -83,6 +80,7 @@ export function Tags({
           zIndex: 1,
         },
         "&:hover > div": {
+          overflowY: "hidden",
           scrollbarWidth: isScrollable ? "thin" : undefined,
         },
         "&:hover .MuiChip-root": {

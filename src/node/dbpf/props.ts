@@ -1,14 +1,18 @@
 import { toHex } from "@salinco/nice-utils"
 
-import { TGI } from "@common/dbpf"
+import { TGI, parseTGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-import type { PropData } from "@node/data/props"
 
+import type { FamilyID } from "@common/families"
+import type { PropID, PropInfo } from "@common/props"
 import type { Exemplar } from "./types"
 import { getArray, getModelId, getString, getTGI } from "./utils"
 
-export function getPropData(exemplar: Exemplar): PropData {
-  const data: PropData = {}
+export function getPropInfo(exemplar: Exemplar): PropInfo {
+  const data: PropInfo = {
+    file: exemplar.file,
+    id: toHex(parseTGI(exemplar.id)[2], 8) as PropID,
+  }
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
   if (name?.length) {
@@ -17,7 +21,7 @@ export function getPropData(exemplar: Exemplar): PropData {
 
   const familyIds = getArray(exemplar, ExemplarPropertyID.PropFamily)
   if (familyIds?.length) {
-    data.family = familyIds.map(familyId => toHex(familyId, 8)).join(",")
+    data.families = familyIds.map(familyId => toHex(familyId, 8) as FamilyID)
   }
 
   // TODO: Other possibilities?

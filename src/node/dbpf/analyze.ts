@@ -1,38 +1,33 @@
 import path from "node:path"
 
-import { toArray, toHex, values } from "@salinco/nice-utils"
-
-import type { BuildingID } from "@common/buildings"
 import { DBPFDataType, DBPFFileType, getTextureIdRange, isDBPF, parseTGI } from "@common/dbpf"
 import {
+  type ExemplarProperties,
   ExemplarPropertyID,
-  type ExemplarPropertyInfo,
   ExemplarType,
   getExemplarType,
 } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
-import type { LotID } from "@common/lots"
-import type { FloraID } from "@common/mmps"
-import type { PropID } from "@common/props"
+import type { FloraInfo } from "@common/mmps"
 import { Feature } from "@common/types"
-import type { FloraData } from "@node/data/mmps"
-import type { ContentsData } from "@node/data/packages"
+import type { ContentsInfo } from "@common/variants"
 import { loadDBPF } from "@node/dbpf"
-import { getBuildingData } from "@node/dbpf/buildings"
-import { getLotData } from "@node/dbpf/lots"
-import { getFloraData } from "@node/dbpf/mmps"
-import { getPropData } from "@node/dbpf/props"
+import { getBuildingInfo } from "@node/dbpf/buildings"
+import { getLotInfo } from "@node/dbpf/lots"
+import { getFloraInfo } from "@node/dbpf/mmps"
+import { getPropInfo } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
 import { get, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
 import { FileOpenMode, openFile } from "@node/files"
+import { toArray, toHex, values } from "@salinco/nice-utils"
 
 export async function analyzeSC4Files(
   basePath: string,
   filePaths: string[],
-  exemplarProperties: { [id in number]?: ExemplarPropertyInfo },
-): Promise<{ contents: ContentsData; features: Feature[] }> {
+  exemplarProperties: ExemplarProperties,
+): Promise<{ contents: ContentsInfo; features: Feature[] }> {
   const features = new Set<Feature>()
-  const contents: ContentsData = {}
+  const contents: ContentsInfo = {}
 
   for (const filePath of filePaths) {
     console.debug(`Analyzing ${filePath}...`)
@@ -45,7 +40,7 @@ export async function analyzeSC4Files(
       const mmpChains: {
         [instanceId in number]?: {
           next?: number
-          stages: Array<FloraData & { id: FloraID }>
+          stages: FloraInfo[]
         }
       } = {}
 
@@ -62,17 +57,16 @@ export async function analyzeSC4Files(
                 if (isCohort) {
                   const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
                   if (familyId !== undefined && instanceId === getFamilyInstanceId(familyId)) {
-                    contents.buildingFamilies ??= {}
-                    contents.buildingFamilies[filePath] ??= {}
-                    contents.buildingFamilies[filePath][toHex(familyId, 8) as FamilyID] = {
+                    contents.buildingFamilies ??= []
+                    contents.buildingFamilies.push({
+                      file: filePath,
+                      id: toHex(familyId, 8) as FamilyID,
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
-                    }
+                    })
                   }
                 } else {
-                  const buildingId = toHex(instanceId, 8) as BuildingID
-                  contents.buildings ??= {}
-                  contents.buildings[filePath] ??= {}
-                  contents.buildings[filePath][buildingId] = getBuildingData(exemplar)
+                  contents.buildings ??= []
+                  contents.buildings.push(getBuildingInfo(exemplar))
                 }
 
                 break
@@ -92,19 +86,9 @@ export async function analyzeSC4Files(
 
               case ExemplarType.Flora: {
                 if (!isCohort) {
-                  const floraId = toHex(instanceId, 8) as FloraID
-
-                  const chain: {
-                    next?: number
-                    stages: Array<FloraData & { id: FloraID }>
-                  } = {
+                  const chain: { next?: number; stages: FloraInfo[] } = {
                     next: get(exemplar, ExemplarPropertyID.FloraClusterType),
-                    stages: [
-                      {
-                        ...getFloraData(exemplar, file),
-                        id: floraId,
-                      },
-                    ],
+                    stages: [getFloraInfo(exemplar, file)],
                   }
 
                   // Link to next stage
@@ -137,11 +121,8 @@ export async function analyzeSC4Files(
 
               case ExemplarType.LotConfig: {
                 if (!isCohort) {
-                  const lotId = toHex(instanceId, 8) as LotID
-                  const lot = getLotData(exemplar)
-                  contents.lots ??= {}
-                  contents.lots[filePath] ??= {}
-                  contents.lots[filePath][lotId] = lot
+                  contents.lots ??= []
+                  contents.lots.push(getLotInfo(exemplar))
                 }
 
                 break
@@ -156,17 +137,16 @@ export async function analyzeSC4Files(
                 if (isCohort) {
                   const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
                   if (familyId !== undefined && instanceId === getFamilyInstanceId(familyId)) {
-                    contents.propFamilies ??= {}
-                    contents.propFamilies[filePath] ??= {}
-                    contents.propFamilies[filePath][toHex(familyId, 8) as FamilyID] = {
+                    contents.propFamilies ??= []
+                    contents.propFamilies.push({
+                      file: filePath,
+                      id: toHex(familyId, 8) as FamilyID,
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
-                    }
+                    })
                   }
                 } else {
-                  const propId = toHex(instanceId, 8) as PropID
-                  contents.props ??= {}
-                  contents.props[filePath] ??= {}
-                  contents.props[filePath][propId] = getPropData(exemplar)
+                  contents.props ??= []
+                  contents.props.push(getPropInfo(exemplar))
                 }
 
                 break
@@ -218,10 +198,9 @@ export async function analyzeSC4Files(
       }
 
       for (const chain of values(mmpChains)) {
-        const [{ id, ...data }, ...stages] = chain.stages
-        contents.mmps ??= {}
-        contents.mmps[filePath] ??= {}
-        contents.mmps[filePath][id] = { ...data, stages: stages.length ? stages : undefined }
+        const [mmp, ...stages] = chain.stages
+        contents.mmps ??= []
+        contents.mmps.push({ ...mmp, stages: stages.length ? stages : undefined })
       }
     }
   }

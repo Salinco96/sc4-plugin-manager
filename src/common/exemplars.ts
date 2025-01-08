@@ -65,6 +65,10 @@ export type ExemplarProperty<T extends ExemplarValueType = ExemplarValueType> = 
   }
 }[T]
 
+export type ExemplarProperties = {
+  [propertyId in number]?: ExemplarPropertyInfo
+}
+
 export type ExemplarPropertyValue<
   T extends ExemplarValueType = ExemplarValueType,
   Multi extends boolean = boolean,

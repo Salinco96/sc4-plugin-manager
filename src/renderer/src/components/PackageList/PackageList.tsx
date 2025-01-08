@@ -1,21 +1,45 @@
 import { useMemo } from "react"
 
-import { Box, Card, CardContent, Divider, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { Virtuoso } from "react-virtuoso"
 
 import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
-import { Page, useHistory } from "@utils/navigation"
-import { useStore } from "@utils/store"
+import { Header } from "@components/Header"
+import { ListItem } from "@components/ListItem"
+import { collect, isEmpty, mapValues } from "@salinco/nice-utils"
+import { Page, useHistory, useLocation } from "@utils/navigation"
+import { isHexSearch } from "@utils/packages"
+import { usePackageFilters, useStore } from "@utils/store"
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
-import { useMatchingContents } from "./useMatchingContents"
+import { getMatchingContents } from "./useMatchingContents"
 
 export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
-  const exemplars = useStore(store => store.maxis)
+  const { page } = useLocation()
+  const { search } = usePackageFilters()
+
+  const externalPlugins = useStore(store => store.externals)
+  const maxisExemplars = useStore(store => store.maxis)
+
   const history = useHistory()
 
-  const matchingContents = useMatchingContents(exemplars)
+  const matchingMaxisContents = useMemo(() => {
+    if (maxisExemplars && isHexSearch(search) && page === Page.Packages) {
+      return getMatchingContents(maxisExemplars, search)
+    }
+  }, [maxisExemplars, page, search])
+
+  const matchingPluginContents = useMemo(() => {
+    if (isHexSearch(search) && page === Page.Packages) {
+      return mapValues(externalPlugins, contents => {
+        const matching = getMatchingContents(contents, search)
+        return matching.length ? matching : undefined
+      })
+    }
+
+    return {}
+  }, [externalPlugins, page, search])
 
   const initialIndex = useMemo(() => {
     if (history.previous?.page === Page.PackageView) {
@@ -28,32 +52,50 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
     return 0
   }, [history, packageIds])
 
-  if (!packageIds.length && !matchingContents?.length) {
+  if (!packageIds.length && !matchingMaxisContents?.length && isEmpty(matchingPluginContents)) {
     return <EmptyPackageList />
   }
 
   return (
     <>
-      {!!matchingContents?.length && (
-        <FlexBox width="100%">
-          <Card elevation={1} sx={{ display: "flex", margin: 2, width: "100%" }}>
-            <CardContent sx={{ width: "100%" }}>
-              <Typography variant="h6">SimCity 4 (base game)</Typography>
-              <Divider sx={{ marginY: 2 }} />
-              <Typography variant="body2">
-                <b>Match results:</b>
-              </Typography>
-              <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-                {matchingContents.map(({ name, type }) => (
-                  <Typography component="li" key={type} variant="body2">
-                    {type}: {name}
-                  </Typography>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+      {!!matchingMaxisContents?.length && (
+        <FlexBox pt={2} px={2} width="100%">
+          <ListItem header={Header} subtitle="SimCity_1.dat" title="SimCity 4 (base game)">
+            <Typography variant="body2">
+              <b>Match results:</b>
+            </Typography>
+            <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
+              {matchingMaxisContents.map(({ name, type }) => (
+                <Typography component="li" key={type} variant="body2">
+                  {type}: {name}
+                </Typography>
+              ))}
+            </ul>
+          </ListItem>
         </FlexBox>
       )}
+
+      {collect(matchingPluginContents, (matchingContents, pluginPath) => (
+        <FlexBox pt={2} px={2} width="100%">
+          <ListItem
+            header={Header}
+            subtitle={pluginPath}
+            title={pluginPath.split("/").slice(-1)[0]}
+          >
+            <Typography variant="body2">
+              <b>Match results:</b>
+            </Typography>
+            <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
+              {matchingContents.map(({ name, type }) => (
+                <Typography component="li" key={type} variant="body2">
+                  {type}: {name}
+                </Typography>
+              ))}
+            </ul>
+          </ListItem>
+        </FlexBox>
+      ))}
+
       <Virtuoso
         data={packageIds}
         itemContent={(index, packageId) => (

@@ -3,7 +3,6 @@ import {
   filterValues,
   generate,
   isEmpty,
-  isEqual,
   isNumber,
   sum,
   toHex,
@@ -12,12 +11,12 @@ import {
 } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
-import { TGI } from "@common/dbpf"
+import { TGI, parseTGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import { Menu, type MenuID, Submenu } from "@common/submenus"
-import type { BuildingData } from "@node/data/buildings"
-import { writeMenu, writeMenus } from "@node/data/submenus"
 
+import type { BuildingID, BuildingInfo } from "@common/buildings"
+import type { FamilyID } from "@common/families"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -29,28 +28,17 @@ import {
 } from "./types"
 import { get, getArray, getBool, getMap, getModelId, getString, getTGI } from "./utils"
 
-export function getBuildingData(exemplar: Exemplar): BuildingData {
-  const data: BuildingData = {}
+export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
+  const data: BuildingInfo = {
+    file: exemplar.file,
+    id: toHex(parseTGI(exemplar.id)[2], 8) as BuildingID,
+  }
 
   const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
 
-  const menu = getDefaultMenu(ogs)
-  if (menu) {
-    data.menu = writeMenu(menu)
-  }
-
-  const submenus = getSubmenus(exemplar)
-  if (submenus.length) {
-    // Do not write submenu if same as menu
-    if (!menu || !isEqual(submenus, [menu])) {
-      data.submenu = writeMenus(submenus)
-    }
-  }
-
-  const categories = getCategories(exemplar)
-  if (categories.length) {
-    data.categories = categories.join(",")
-  }
+  data.categories = getCategories(exemplar)
+  data.menu = getDefaultMenu(ogs)
+  data.submenus = getSubmenus(exemplar)
 
   const plopCost = get(exemplar, ExemplarPropertyID.PlopCost)
   if (plopCost) {
@@ -84,7 +72,7 @@ export function getBuildingData(exemplar: Exemplar): BuildingData {
 
   const familyIds = getArray(exemplar, ExemplarPropertyID.PropFamily)
   if (familyIds?.length) {
-    data.family = familyIds.map(familyId => toHex(familyId, 8)).join(",")
+    data.families = familyIds.map(familyId => toHex(familyId, 8) as FamilyID)
   }
 
   const worth = get(exemplar, ExemplarPropertyID.BuildingValue)

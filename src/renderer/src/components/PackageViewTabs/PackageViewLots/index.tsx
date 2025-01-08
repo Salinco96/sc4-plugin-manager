@@ -161,11 +161,11 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
 
       if (buildingId) {
         const building =
-          buildings[buildingId] ?? maxis.buildings.find(building => building.id === buildingId)
+          buildings[buildingId] ?? maxis?.buildings?.find(building => building.id === buildingId)
 
         const buildingFamily =
           buildingFamilies[buildingId] ??
-          maxis.buildingFamilies.find(family => family.id === buildingId)
+          maxis?.buildingFamilies?.find(family => family.id === buildingId)
 
         if (building || buildingFamily) {
           groupedByBuilding[buildingId] ??= {
@@ -181,7 +181,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
       }
     })
 
-    for (const maxisLot of maxis.lots) {
+    for (const maxisLot of maxis?.lots ?? []) {
       const buildingId = maxisLot.building
 
       if (buildingId) {
@@ -211,7 +211,8 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
       if (familyId) {
         group.familyBuildings = unionBy(
           values(buildings),
-          maxis.buildings,
+          maxis?.buildings ?? [],
+
           building => building.id,
         ).filter(building => building.families?.includes(familyId))
       }

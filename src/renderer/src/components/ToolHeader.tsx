@@ -4,7 +4,7 @@ import { useToolInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import type { Action } from "./ActionButton"
+import { type Action, ActionButton } from "./ActionButton"
 import { Header } from "./Header"
 import { ToolTags } from "./Tags/ToolTags"
 import type { ToolBeltAction } from "./ToolBelt"
@@ -101,12 +101,16 @@ export function ToolHeader({
 
   return (
     <Header
-      actions={toolActions}
+      actions={
+        <ActionButton
+          actions={toolActions}
+          isLoading={!!toolInfo.action}
+          loadingLabel={toolInfo.action && t(`actions.${toolInfo.action}`)}
+        />
+      }
       description={toolInfo.description}
       images={toolInfo.images}
       isListItem={isListItem}
-      isLoading={!!toolInfo.action}
-      loadingLabel={toolInfo.action && t(`actions.${toolInfo.action}`)}
       location={{ data: { toolId }, page: Page.ToolView }}
       setActive={setActive}
       subtitle={toolId}

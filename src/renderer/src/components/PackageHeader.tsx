@@ -1,56 +1,37 @@
-import { useState } from "react"
-
-import { Box } from "@mui/material"
-
 import type { PackageID } from "@common/packages"
-import { FlexBox } from "@components/FlexBox"
 import { PackageActions } from "@components/PackageActions"
+import { Page, useLocation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-
-import { PackageTools } from "./PackageTools"
+import { Header } from "./Header"
 import { PackageTags } from "./Tags/PackageTags"
-import { Text } from "./Text"
-import { Thumbnail } from "./Thumbnail"
-import { ImageViewer } from "./Viewer/ImageViewer"
 
-export function PackageHeader({ packageId }: { packageId: PackageID }): JSX.Element {
+export function PackageHeader({
+  isListItem,
+  packageId,
+  setActive,
+}: {
+  isListItem?: boolean
+  packageId: PackageID
+  setActive?: (active: boolean) => void
+}): JSX.Element {
+  const { page } = useLocation()
   const packageInfo = usePackageInfo(packageId)
   const variantInfo = useCurrentVariant(packageId)
 
-  const [openImages, setOpenImages] = useState(false)
-
   return (
-    <FlexBox alignItems="center" pb={2} px={2}>
-      {!!variantInfo.images?.length && (
-        <ImageViewer
-          images={variantInfo.images}
-          onClose={() => setOpenImages(false)}
-          open={openImages}
-        />
-      )}
-      {!!variantInfo.thumbnail && (
-        <Thumbnail
-          disabled={!variantInfo.images?.length}
-          mr={2}
-          mt={1}
-          onClick={() => setOpenImages(true)}
-          size={84}
-          src={variantInfo.thumbnail}
-        />
-      )}
-      <Box flex={1} mr={1} overflow="hidden">
-        <Text maxLines={1} title={`${packageInfo.name} (v${variantInfo.version})`} variant="h6">
-          {packageInfo.name} (v{variantInfo.version})
-        </Text>
-        <FlexBox alignItems="center">
-          <Text maxLines={1} title={`${packageId}#${variantInfo.id}`} variant="body2">
-            {packageId}#{variantInfo.id}
-          </Text>
-          <PackageTools packageId={packageId} />
-        </FlexBox>
-        <PackageTags packageId={packageId} />
-      </Box>
-      <PackageActions packageId={packageId} />
-    </FlexBox>
+    <Header
+      actions={<PackageActions filtered={page === Page.Packages} packageId={packageId} />}
+      description={variantInfo.description}
+      images={variantInfo.images}
+      isListItem={isListItem}
+      location={{ data: { packageId }, page: Page.PackageView }}
+      setActive={setActive}
+      subtitle={`${packageId}#${variantInfo.id}`}
+      summary={variantInfo.summary}
+      thumbnail={variantInfo.thumbnail}
+      title={`${packageInfo.name} (${variantInfo.version})`}
+      tags={<PackageTags packageId={packageId} />}
+      // tools={<PackageTools packageId={packageId} />}
+    />
   )
 }

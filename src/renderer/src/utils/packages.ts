@@ -1,4 +1,4 @@
-import { mapValues, parseHex, toHex, values, where } from "@salinco/nice-utils"
+import { mapValues, parseHex, values, where } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import type { BuildingID } from "@common/buildings"
@@ -246,45 +246,55 @@ export function filterVariant(
     }
   }
 
-  if (filters.hex) {
-    if (variantInfo.buildingFamilies?.some(family => family.id === filters.hex)) {
+  const hex = filters.hex
+
+  if (hex) {
+    if (variantInfo.buildingFamilies?.some(family => family.id === hex)) {
       return true
     }
 
-    if (variantInfo.buildings?.some(where("id", filters.hex))) {
+    if (variantInfo.buildings?.some(where("id", hex))) {
       return true
     }
 
-    if (variantInfo.buildings?.some(building => building.families?.includes(filters.hex!))) {
+    if (variantInfo.buildings?.some(building => building.families?.includes(hex))) {
       return true
     }
 
-    if (variantInfo.lots?.some(where("id", filters.hex))) {
+    if (variantInfo.lots?.some(where("id", hex))) {
       return true
     }
 
-    if (variantInfo.mmps?.some(where("id", filters.hex))) {
+    if (variantInfo.mmps?.some(where("id", hex))) {
       return true
     }
 
-    if (variantInfo.mmps?.some(mmp => mmp.stages?.some(where("id", filters.hex)))) {
+    if (variantInfo.mmps?.some(mmp => mmp.stages?.some(where("id", hex)))) {
       return true
     }
 
-    if (variantInfo.propFamilies?.some(family => family.id === filters.hex)) {
+    if (variantInfo.models) {
+      for (const models of values(variantInfo.models)) {
+        if (models.some(modelId => modelId.startsWith(hex))) {
+          return true
+        }
+      }
+    }
+
+    if (variantInfo.propFamilies?.some(family => family.id === hex)) {
       return true
     }
 
-    if (variantInfo.props?.some(where("id", filters.hex))) {
+    if (variantInfo.props?.some(where("id", hex))) {
       return true
     }
 
-    if (variantInfo.props?.some(prop => prop.families?.includes(filters.hex!))) {
+    if (variantInfo.props?.some(prop => prop.families?.includes(hex))) {
       return true
     }
 
     if (variantInfo.textures) {
-      const textureId = getTextureIdRange(parseHex(filters.hex))[0]
+      const textureId = getTextureIdRange(parseHex(hex))[0]
       for (const textures of values(variantInfo.textures)) {
         if (textures.includes(textureId)) {
           return true
@@ -301,11 +311,11 @@ export function filterVariant(
 }
 
 export function isHexSearch(search: string): boolean {
-  return !!search.match(/^(0x)?[0-9a-fA-F]{8}$/)
+  return !!search.match(/^(0x)?[0-9a-fA-F]{8}(-[0-9a-fA-F]{1,4})?$/)
 }
 
 export function toHexSearch(search: string): HexSearch {
-  return toHex(parseHex(search), 8) as HexSearch
+  return search.toLowerCase() as HexSearch
 }
 
 export function computePackageList(

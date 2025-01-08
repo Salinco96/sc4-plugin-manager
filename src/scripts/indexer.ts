@@ -24,7 +24,6 @@ import {
   mapValues,
   merge,
   parseHex,
-  sort,
   union,
   unique,
   values,
@@ -61,10 +60,15 @@ import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
 import { loadAuthors, writeAuthors } from "@node/data/authors"
+import { writeBuildingInfo } from "@node/data/buildings"
+import { writeFamilyInfo } from "@node/data/families"
 import { matchFiles } from "@node/data/files"
+import { writeLotInfo } from "@node/data/lots"
+import { writeFloraInfo } from "@node/data/mmps"
+import { writePropInfo } from "@node/data/props"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
-import { analyzeSC4Files } from "./dbpf/dbpf"
+import { analyzeSC4Files } from "../node/dbpf/analyze"
 import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
 import {
   promptAuthorName,
@@ -422,38 +426,85 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       exemplarProperties,
     )
 
-    await writeConfig(dataAssetsDir, "maxis", data.contents, ConfigFormat.YAML)
-    maxisData = data.contents
+    maxisData = {
+      models: data.contents.models,
+      textures: data.contents.textures,
+    }
+
+    if (data.contents.buildingFamilies) {
+      for (const buildingFamily of data.contents.buildingFamilies) {
+        const { file, id } = buildingFamily
+        if (file) {
+          maxisData.buildingFamilies ??= {}
+          maxisData.buildingFamilies[file] ??= {}
+          maxisData.buildingFamilies[file][id] ??= writeFamilyInfo(buildingFamily)
+        }
+      }
+    }
+
+    if (data.contents.buildings) {
+      for (const building of data.contents.buildings) {
+        const { file, id } = building
+        if (file) {
+          maxisData.buildings ??= {}
+          maxisData.buildings[file] ??= {}
+          maxisData.buildings[file][id] ??= writeBuildingInfo(building, categories)
+        }
+      }
+    }
+
+    if (data.contents.lots) {
+      for (const lot of data.contents.lots) {
+        const { file, id } = lot
+        if (file) {
+          maxisData.lots ??= {}
+          maxisData.lots[file] ??= {}
+          maxisData.lots[file][id] ??= writeLotInfo(lot)
+        }
+      }
+    }
+
+    if (data.contents.mmps) {
+      for (const mmp of data.contents.mmps) {
+        const { file, id } = mmp
+        if (file) {
+          maxisData.mmps ??= {}
+          maxisData.mmps[file] ??= {}
+          maxisData.mmps[file][id] ??= writeFloraInfo(mmp)
+        }
+      }
+    }
+
+    if (data.contents.propFamilies) {
+      for (const propFamily of data.contents.propFamilies) {
+        const { file, id } = propFamily
+        if (file) {
+          maxisData.propFamilies ??= {}
+          maxisData.propFamilies[file] ??= {}
+          maxisData.propFamilies[file][id] ??= writeFamilyInfo(propFamily)
+        }
+      }
+    }
+
+    if (data.contents.props) {
+      for (const prop of data.contents.props) {
+        const { file, id } = prop
+        if (file) {
+          maxisData.props ??= {}
+          maxisData.props[file] ??= {}
+          maxisData.props[file][id] ??= writePropInfo(prop)
+        }
+      }
+    }
+
+    await writeConfig<ContentsData>(dataAssetsDir, "maxis", maxisData, ConfigFormat.YAML)
   }
 
   // Step 4b - Generate Maxis data
   const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
   if (!dbMaxisConfig?.data) {
     console.debug("Writing Maxis contents...")
-
-    // Remove some unnecessary fields
-    const data: ContentsData = {
-      buildingFamilies: maxisData.buildingFamilies ?? {},
-      buildings: mapValues(maxisData.buildings ?? {}, buildings =>
-        mapValues(buildings, ({ model, ...data }) => data),
-      ),
-      lots: mapValues(maxisData.lots ?? {}, lots =>
-        mapValues(lots, ({ props, textures, ...data }) => data),
-      ),
-      mmps: mapValues(maxisData.mmps ?? {}, mmps =>
-        mapValues(mmps, ({ model, stages, ...data }) => ({
-          ...data,
-          stages: stages?.map(({ model, ...stage }) => stage),
-        })),
-      ),
-      propFamilies: maxisData.propFamilies ?? {},
-      props: mapValues(maxisData.props ?? {}, props =>
-        mapValues(props, ({ model, ...data }) => data),
-      ),
-      textures: mapValues(maxisData.textures ?? {}, sort),
-    }
-
-    await writeConfig<ContentsData>(dbDir, "configs/maxis", data, ConfigFormat.YAML)
+    await writeConfig<ContentsData>(dbDir, "configs/maxis", maxisData, ConfigFormat.YAML)
   }
 
   /**
@@ -1513,15 +1564,75 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     // Analyze DBPF contents
     const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
 
-    variantEntry.buildingFamilies = data.contents.buildingFamilies
-    variantEntry.buildings = data.contents.buildings
     variantEntry.features = data.features.length ? data.features : undefined
-    variantEntry.lots = data.contents.lots
-    variantEntry.mmps = data.contents.mmps
     variantEntry.models = data.contents.models
-    variantEntry.propFamilies = data.contents.propFamilies
-    variantEntry.props = data.contents.props
     variantEntry.textures = data.contents.textures
+
+    if (data.contents.buildingFamilies) {
+      for (const buildingFamily of data.contents.buildingFamilies) {
+        const { file, id } = buildingFamily
+        if (file) {
+          variantEntry.buildingFamilies ??= {}
+          variantEntry.buildingFamilies[file] ??= {}
+          variantEntry.buildingFamilies[file][id] ??= writeFamilyInfo(buildingFamily)
+        }
+      }
+    }
+
+    if (data.contents.buildings) {
+      for (const building of data.contents.buildings) {
+        const { file, id } = building
+        if (file) {
+          variantEntry.buildings ??= {}
+          variantEntry.buildings[file] ??= {}
+          variantEntry.buildings[file][id] ??= writeBuildingInfo(building, categories)
+        }
+      }
+    }
+
+    if (data.contents.lots) {
+      for (const lot of data.contents.lots) {
+        const { file, id } = lot
+        if (file) {
+          variantEntry.lots ??= {}
+          variantEntry.lots[file] ??= {}
+          variantEntry.lots[file][id] ??= writeLotInfo(lot)
+        }
+      }
+    }
+
+    if (data.contents.mmps) {
+      for (const mmp of data.contents.mmps) {
+        const { file, id } = mmp
+        if (file) {
+          variantEntry.mmps ??= {}
+          variantEntry.mmps[file] ??= {}
+          variantEntry.mmps[file][id] ??= writeFloraInfo(mmp)
+        }
+      }
+    }
+
+    if (data.contents.propFamilies) {
+      for (const propFamily of data.contents.propFamilies) {
+        const { file, id } = propFamily
+        if (file) {
+          variantEntry.propFamilies ??= {}
+          variantEntry.propFamilies[file] ??= {}
+          variantEntry.propFamilies[file][id] ??= writeFamilyInfo(propFamily)
+        }
+      }
+    }
+
+    if (data.contents.props) {
+      for (const prop of data.contents.props) {
+        const { file, id } = prop
+        if (file) {
+          variantEntry.props ??= {}
+          variantEntry.props[file] ??= {}
+          variantEntry.props[file][id] ??= writePropInfo(prop)
+        }
+      }
+    }
 
     return true
   }

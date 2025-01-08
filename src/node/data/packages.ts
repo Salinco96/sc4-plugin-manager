@@ -625,6 +625,7 @@ export function loadVariantInfo(
     credit => credit.id ?? credit.text,
   )
 
+  const models = { ...packageData.models, ...variantData.models }
   const textures = { ...packageData.textures, ...variantData.textures }
 
   const thanks = unionBy(
@@ -662,6 +663,7 @@ export function loadVariantInfo(
     logs: variantData.logs ?? packageData.logs,
     lots: lots.length ? lots : undefined,
     mmps: mmps.length ? mmps : undefined,
+    models: !isEmpty(models) ? models : undefined,
     name: variantData.name,
     optional: optionalDependencies.length ? optionalDependencies : undefined,
     options: options.length ? options : undefined,
@@ -753,6 +755,12 @@ export function writePackageInfo(
         : firstVariant?.mmps?.filter(mmp =>
             others.every(other => other.mmps?.some(equalsDeep(mmp))),
           ),
+    models:
+      variants.length < 2
+        ? undefined
+        : filterValues(firstVariant?.models ?? {}, (models, file) =>
+            others.every(other => isEqual(models, other.models?.[file])),
+          ),
     optional: firstVariant?.optional?.filter(dependencyId =>
       others.every(other => other.optional?.includes(dependencyId)),
     ),
@@ -841,6 +849,10 @@ export function writePackageInfo(
             logs: variant.logs !== base.logs ? variant.logs : undefined,
             lots: variant.lots?.filter(lot => !base.lots?.some(equalsDeep(lot))),
             mmps: variant.mmps?.filter(mmp => !base.mmps?.some(equalsDeep(mmp))),
+            models: filterValues(
+              variant.models ?? {},
+              (models, file) => !isEqual(models, base.models?.[file]),
+            ),
             name: variant.name,
             optional: difference(variant.optional ?? [], base.optional ?? []),
             options: variant.options?.filter(option => !base.options?.some(equalsDeep(option))),
@@ -1026,6 +1038,7 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
           mapValues(indexBy(instances, get("id")), writeFloraInfo),
         )
       : undefined,
+    models: info.models && !isEmpty(info.models) ? mapValues(info.models, sort) : undefined,
     name: info.name,
     optional: info.optional?.length ? info.optional : undefined,
     options: info.options?.length ? info.options.map(writeOptionInfo) : undefined,

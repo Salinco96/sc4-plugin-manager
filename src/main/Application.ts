@@ -71,9 +71,9 @@ import { loadLotInfo } from "@node/data/lots"
 import { type PackageData, writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
-import { getBuildingData } from "@node/dbpf/buildings"
-import { getLotData } from "@node/dbpf/lots"
-import { getPropData } from "@node/dbpf/props"
+import { getBuildingInfo } from "@node/dbpf/buildings"
+import { getLotInfo } from "@node/dbpf/lots"
+import { getPropInfo } from "@node/dbpf/props"
 import type { Exemplar } from "@node/dbpf/types"
 import { download } from "@node/download"
 import { extractClickTeam, extractRecursively } from "@node/extract"
@@ -111,6 +111,7 @@ import { type AppConfig, loadAppConfig } from "./data/config"
 import {
   loadCategories,
   loadExemplarProperties,
+  loadExternals,
   loadMaxisExemplars,
   loadProfileOptions,
   loadProfileTemplates,
@@ -145,8 +146,9 @@ interface Loaded {
   authors: Authors
   categories: Categories
   exemplarProperties: Record<string, ExemplarPropertyInfo>
+  externals: { [path: string]: ContentsInfo }
   features: Features
-  maxis: Required<ContentsInfo>
+  maxis: ContentsInfo
   packages: Packages
   profiles: Profiles
   profileOptions: OptionInfo[]
@@ -1000,8 +1002,9 @@ export class Application {
       authors,
       categories,
       exemplarProperties,
-      maxis,
+      externals,
       features,
+      maxis,
       packages,
       profiles,
       profileOptions,
@@ -1015,6 +1018,7 @@ export class Application {
       categories,
       downloads: {},
       exemplarProperties,
+      externals,
       features,
       linker: null,
       loader: null,
@@ -1882,7 +1886,7 @@ export class Application {
           this.cleanPackages()
         }
 
-        context.setStep(null)
+        context.setStep("Indexing external plugins...")
 
         const templates = await loadProfileTemplates(context, this.getDatabasePath())
         this.sendStateUpdate({ templates })
@@ -1896,11 +1900,15 @@ export class Application {
         const tools = await loadTools(context, this.getDatabasePath(), assets)
         this.sendStateUpdate({ tools })
 
+        const externals = await loadExternals(context, this.getPluginsPath(), exemplarProperties)
+        this.sendStateUpdate({ externals })
+
         return {
           assets,
           authors,
           categories,
           exemplarProperties,
+          externals,
           features,
           maxis,
           packages,
@@ -2284,7 +2292,7 @@ export class Application {
 
                   if (building) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const data = getBuildingData(exemplar)
+                    const data = getBuildingInfo(exemplar)
                     $merge(building, loadBuildingInfo(filePath, buildingId, data, categories))
                   }
 
@@ -2297,7 +2305,7 @@ export class Application {
 
                   if (lot) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const data = getLotData(exemplar)
+                    const data = getLotInfo(exemplar)
                     $merge(lot, loadLotInfo(filePath, lotId, data))
                   }
 
@@ -2310,7 +2318,7 @@ export class Application {
 
                   if (prop) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
-                    const data = getPropData(exemplar)
+                    const data = getPropInfo(exemplar)
                     $merge(prop, loadPropInfo(filePath, propId, data))
                   }
 

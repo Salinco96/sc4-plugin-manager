@@ -5,6 +5,7 @@ import { collect, entries, forEach, isEnum, mapValues, parseHex, size } from "@s
 
 import type { Categories } from "@common/categories"
 import {
+  type ExemplarProperties,
   type ExemplarPropertyData,
   type ExemplarPropertyInfo,
   ExemplarValueType,
@@ -25,7 +26,9 @@ import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import type { Assets } from "@common/assets"
 import type { ToolID, Tools } from "@common/tools"
 import { type ToolData, loadToolInfo } from "@node/data/tools"
+import { analyzeSC4Files } from "@node/dbpf/analyze"
 import type { TaskContext } from "@node/tasks"
+import { glob } from "glob"
 import { fromProfileData } from "./profiles"
 
 export async function loadCategories(context: TaskContext, basePath: string): Promise<Categories> {
@@ -133,6 +136,44 @@ export async function loadMaxisExemplars(
       props: [],
       textures: {}, // todo
     }
+  }
+}
+
+export async function loadExternals(
+  context: TaskContext,
+  basePath: string,
+  exemplarProperties: ExemplarProperties,
+): Promise<{ [path: string]: ContentsInfo }> {
+  try {
+    context.debug("Indexing external plugins...")
+
+    const pluginFiles = await glob("**/*.{dat,sc4desc,sc4lot,sc4model}", {
+      cwd: basePath,
+      dot: true,
+      nodir: true,
+      withFileTypes: true,
+    })
+
+    const externals: { [path: string]: ContentsInfo } = {}
+
+    for (const file of pluginFiles) {
+      if (!file.isSymbolicLink()) {
+        const relativePath = file.relativePosix()
+
+        try {
+          const { contents } = await analyzeSC4Files(basePath, [relativePath], exemplarProperties)
+
+          externals[relativePath] = contents
+        } catch (error) {
+          context.error(`Failed to analyze ${relativePath}`, error)
+        }
+      }
+    }
+
+    return externals
+  } catch (error) {
+    context.error("Failed to index external plugins", error)
+    return {}
   }
 }
 

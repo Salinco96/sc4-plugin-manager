@@ -1,70 +1,41 @@
-import { ArrowBack as BackIcon, SearchOff as NoResultIcon } from "@mui/icons-material"
-import { IconButton, Tooltip, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
-import { FlexBox } from "@components/FlexBox"
+import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { PackageHeader } from "@components/PackageHeader"
 import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 import { Tabs } from "@components/Tabs"
-import { useHistory } from "@utils/navigation"
+import { View } from "@components/View"
 import { useStore } from "@utils/store"
 
-function PackageViewInner({ packageId }: { packageId: PackageID }): JSX.Element {
+function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
   const isLoading = useStore(store => !store.packages)
   const exists = useStore(store => !!store.packages?.[packageId])
 
   const { t } = useTranslation("PackageView")
 
   if (isLoading) {
-    return <Loader />
+    return (
+      <View>
+        <Loader />
+      </View>
+    )
   }
 
-  if (exists) {
+  if (!exists) {
     return (
-      <>
-        <PackageHeader packageId={packageId} />
-        <Tabs tabs={packageViewTabs} packageId={packageId} />
-      </>
+      <View>
+        <Empty message={t("missing", { packageId })} />
+      </View>
     )
   }
 
   return (
-    <FlexBox
-      alignItems="center"
-      direction="column"
-      flex={1}
-      fontSize={40}
-      justifyContent="center"
-      height="100%"
-    >
-      <NoResultIcon fontSize="inherit" />
-      <Typography variant="subtitle1">{t("missing", { packageId })}</Typography>
-    </FlexBox>
-  )
-}
-
-function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
-  const history = useHistory()
-
-  const { t } = useTranslation("General")
-
-  return (
-    <FlexBox direction="column" height="100%" pt={1}>
-      <Tooltip arrow placement="right" title="Go back">
-        <IconButton
-          aria-label={t("back")}
-          color="inherit"
-          onClick={() => history.back()}
-          size="small"
-          sx={{ alignSelf: "flex-start", marginLeft: 1 }}
-        >
-          <BackIcon />
-        </IconButton>
-      </Tooltip>
-      <PackageViewInner packageId={packageId} />
-    </FlexBox>
+    <View>
+      <PackageHeader packageId={packageId} />
+      <Tabs tabs={packageViewTabs} packageId={packageId} />
+    </View>
   )
 }
 

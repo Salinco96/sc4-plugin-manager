@@ -1,17 +1,19 @@
 import { toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
-import { getTextureIdRange } from "@common/dbpf"
+import { getTextureIdRange, parseTGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-import { ZoneDensity } from "@common/lots"
+import { type LotID, type LotInfo, ZoneDensity } from "@common/lots"
 import type { PropID } from "@common/props"
-import type { LotData } from "@node/data/lots"
 
 import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getString } from "./utils"
 
-export function getLotData(exemplar: Exemplar): LotData {
-  const data: LotData = {}
+export function getLotInfo(exemplar: Exemplar): LotInfo {
+  const data: LotInfo = {
+    file: exemplar.file,
+    id: toHex(parseTGI(exemplar.id)[2], 8) as LotID,
+  }
 
   if (exemplar.file.match(/\bCAM\b/i)) {
     data.requirements ??= {}
@@ -51,7 +53,7 @@ export function getLotData(exemplar: Exemplar): LotData {
   }
 
   if (densities.length) {
-    data.density = densities.length === 3 ? "all" : densities.join(",")
+    data.density = densities
   }
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)

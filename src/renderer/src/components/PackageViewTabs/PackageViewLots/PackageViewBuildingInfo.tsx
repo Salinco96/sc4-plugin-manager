@@ -39,12 +39,14 @@ export function PackageViewBuildingInfo({
   setEnabled,
 }: PackageViewBuildingInfoProps): JSX.Element {
   const features = useFeatures()
-  const exemplars = useStore(store => store.maxis)
   const variantInfo = useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(where("path", building.file))
 
-  const isMaxisBuilding = !!exemplars.buildings.some(where("id", building.id))
+  const isMaxisBuilding = useStore(
+    store => !!store.maxis?.buildings?.some(where("id", building.id)),
+  )
+
   const isMaxisOverride = isMaxisBuilding && building.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

@@ -24,7 +24,7 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
     component: lazy(() => import("./PackageViewLots")),
     count({ packageId }, store) {
       const { buildings, lots } = getCurrentVariant(store, packageId)
-      const maxisLots = store.maxis.lots
+      const maxisLots = store.maxis?.lots ?? []
 
       return unionBy(
         lots ?? [],
@@ -121,6 +121,7 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
 
       return variantInfo.files?.length ?? 0
     },
+    fullsize: true,
     label(t, count) {
       return t("files", { count })
     },

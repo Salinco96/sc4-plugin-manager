@@ -41,13 +41,15 @@ export function PackageViewBuildingFamilyInfo({
   packageId,
   setEnabled,
 }: PackageViewBuildingFamilyInfoProps): JSX.Element {
-  const exemplars = useStore(store => store.maxis)
   const variantInfo = useCurrentVariant(packageId)
 
   const filePath = buildingFamily?.file
   const fileInfo = buildingFamily && variantInfo.files?.find(where("path", filePath))
 
-  const isMaxisFamily = !!exemplars.buildingFamilies.some(where("id", familyId))
+  const isMaxisFamily = useStore(
+    store => !!store.maxis?.buildingFamilies?.some(where("id", familyId)),
+  )
+
   const isMaxisOverride = isMaxisFamily && filePath !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

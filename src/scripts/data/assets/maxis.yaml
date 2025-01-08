@@ -2922,6 +2922,7 @@ buildings:
       ratingRadius: 220
       relief:
         r$$$: 8000
+      submenu: Rewards
       water: 375
       waterPollution: 8
       waterPollutionRadius: 4
@@ -2980,6 +2981,7 @@ buildings:
       relief:
         r$: 20000
         r$$: 150000
+      submenu: Rewards
       water: 10
       waterPollution: 1
       waterPollutionRadius: 2
@@ -2996,6 +2998,7 @@ buildings:
       power: 8
       relief:
         r$: 100000
+      submenu: Rewards
       water: 35
       waterPollution: 1
       waterPollutionRadius: 2
@@ -3021,6 +3024,7 @@ buildings:
       ratingRadius: 220
       relief:
         iht: 150000
+      submenu: Rewards
       water: 350
       waterPollution: 4
       waterPollutionRadius: 3
@@ -3078,6 +3082,7 @@ buildings:
       relief:
         im: 9000
         r$$: 9000
+      submenu: Rewards
       water: 90
       waterPollution: 3
       waterPollutionRadius: 4
@@ -3260,6 +3265,7 @@ buildings:
       pollution: 4
       pollutionRadius: 4
       power: 200
+      submenu: Rewards
       water: 200
       waterPollution: 3
       waterPollutionRadius: 5
@@ -3306,6 +3312,7 @@ buildings:
       radiationRadius: 5
       rating: -10
       ratingRadius: 440
+      submenu: Rewards
       water: 200
       waterPollution: 75
       waterPollutionRadius: 10
@@ -3321,6 +3328,7 @@ buildings:
       pollutionRadius: 6
       rating: -5
       ratingRadius: 440
+      submenu: Rewards
       waterPollution: 10
       waterPollutionRadius: 7
     '03430000':
@@ -3386,6 +3394,7 @@ buildings:
       ratingRadius: 440
       relief:
         im: 100000
+      submenu: Rewards
       water: 250
       waterPollution: 5
       waterPollutionRadius: 5
@@ -3907,6 +3916,7 @@ buildings:
       relief:
         r$$: 5000
         r$$$: 5000
+      submenu: Rewards
       water: 150
       waterPollution: 3
       waterPollutionRadius: 4
@@ -4175,6 +4185,7 @@ buildings:
       ratingRadius: 440
       relief:
         im: 100000
+      submenu: Rewards
       water: 150
       waterPollution: 18
       waterPollutionRadius: 4
@@ -4237,6 +4248,7 @@ buildings:
       pollution: 2
       pollutionRadius: 2
       power: 28
+      submenu: Rewards
       water: 75
       waterPollution: 22
       waterPollutionRadius: 4
@@ -43930,48 +43942,60 @@ mmps:
       model: badb57f1-6e31
       name: Oak Tree clump 1
       stages:
-        - id: 2a0c8213
+        - file: SimCity_1.dat
+          id: 2a0c8213
           model: badb57f1-6e32
           name: Oak Tree clump 2
-        - id: 2a0c8214
+        - file: SimCity_1.dat
+          id: 2a0c8214
           model: badb57f1-6e33
           name: Oak Tree clump 3
-        - id: 2a0c8215
+        - file: SimCity_1.dat
+          id: 2a0c8215
           model: badb57f1-6e34
           name: Oak Tree clump 4
-        - id: 2a0c8216
+        - file: SimCity_1.dat
+          id: 2a0c8216
           model: badb57f1-6e36
           name: Oak Tree clump 5
     2a0c8312:
       model: badb57f1-6e41
       name: Pine Tree clump 1
       stages:
-        - id: 2a0c8313
+        - file: SimCity_1.dat
+          id: 2a0c8313
           model: badb57f1-6e42
           name: Pine Tree clump 2
-        - id: 2a0c8314
+        - file: SimCity_1.dat
+          id: 2a0c8314
           model: badb57f1-6e43
           name: Pine Tree clump 3
-        - id: 2a0c8315
+        - file: SimCity_1.dat
+          id: 2a0c8315
           model: badb57f1-6e44
           name: Pine Tree clump 4
-        - id: 2a0c8316
+        - file: SimCity_1.dat
+          id: 2a0c8316
           model: badb57f1-6e46
           name: Pine Tree clump 5
     2a0c8412:
       model: badb57f1-6e51
       name: Scrub clump 1
       stages:
-        - id: 2a0c8413
+        - file: SimCity_1.dat
+          id: 2a0c8413
           model: badb57f1-6e52
           name: Scrub clump 2
-        - id: 2a0c8414
+        - file: SimCity_1.dat
+          id: 2a0c8414
           model: badb57f1-6e53
           name: Scrub clump 3
-        - id: 2a0c8415
+        - file: SimCity_1.dat
+          id: 2a0c8415
           model: badb57f1-6e54
           name: Scrub clump 4
-        - id: 2a0c8416
+        - file: SimCity_1.dat
+          id: 2a0c8416
           model: badb57f1-6e56
           name: Scrub clump 5
     883da413:

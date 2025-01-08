@@ -1,12 +1,16 @@
-import { DBPFDataType, type DBPFFile, TGI } from "@common/dbpf"
+import { DBPFDataType, type DBPFFile, TGI, parseTGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-import type { FloraData } from "@node/data/mmps"
 
+import type { FloraID, FloraInfo } from "@common/mmps"
+import { toHex } from "@salinco/nice-utils"
 import type { Exemplar } from "./types"
 import { getModelId, getString, getTGI } from "./utils"
 
-export function getFloraData(exemplar: Exemplar, file: DBPFFile): FloraData {
-  const data: FloraData = {}
+export function getFloraInfo(exemplar: Exemplar, file: DBPFFile): FloraInfo {
+  const data: FloraInfo = {
+    file: exemplar.file,
+    id: toHex(parseTGI(exemplar.id)[2], 8) as FloraID,
+  }
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
   if (name?.length) {
