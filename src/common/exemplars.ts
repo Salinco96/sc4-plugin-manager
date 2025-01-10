@@ -89,6 +89,8 @@ export enum ExemplarPropertyID {
   BudgetItemPurpose = 0xea54d285,
   BudgetItemCost = 0xea54d286,
   BuildingFoundation = 0x88fcd877,
+  BuildingIsW2W = 0xaa1dd401,
+  BuildingStyles = 0xaa1dd400,
   BuildingSubmenus = 0xaa1dd399,
   BuildingValue = 0xe91a0b5f,
   BulldozeCost = 0x099afacd,

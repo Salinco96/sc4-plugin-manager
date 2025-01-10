@@ -28,7 +28,14 @@ import type { AssetInfo, Assets } from "@common/assets"
 import type { AuthorID, Authors } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
-import { DBPFDataType, type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
+import {
+  DBPFDataType,
+  type DBPFEntry,
+  type DBPFFile,
+  type GroupID,
+  type TGI,
+  type TypeID,
+} from "@common/dbpf"
 import {
   type ExemplarDataPatch,
   type ExemplarPropertyInfo,
@@ -105,6 +112,7 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
+import { split } from "@common/utils/string"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -2282,44 +2290,41 @@ export class Application {
         for (const entry of values(file.entries)) {
           if (patches[entry.id] !== undefined) {
             if (entry.type === DBPFDataType.EXMP && entry.data && !entry.data.isCohort) {
-              const instanceId = toHex(parseTGI(entry.id)[2], 8)
               switch (getExemplarType(entry.id, entry.data)) {
                 case ExemplarType.Building: {
-                  const buildingId = instanceId as BuildingID
-                  const building = variantInfo.buildings?.find(
-                    where({ file: filePath, id: buildingId }),
-                  )
+                  const [, group, id] = split(entry.id, "-") as [TypeID, GroupID, BuildingID]
+                  const building = variantInfo.buildings?.find(where({ file: filePath, group, id }))
 
                   if (building) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getBuildingInfo(exemplar)
-                    $merge(building, loadBuildingInfo(filePath, buildingId, data, categories))
+                    $merge(building, loadBuildingInfo(filePath, group, id, data, categories))
                   }
 
                   break
                 }
 
                 case ExemplarType.LotConfig: {
-                  const lotId = instanceId as LotID
-                  const lot = variantInfo.lots?.find(where({ file: filePath, id: lotId }))
+                  const [, , id] = split(entry.id, "-") as [TypeID, GroupID, LotID]
+                  const lot = variantInfo.lots?.find(where({ file: filePath, id }))
 
                   if (lot) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getLotInfo(exemplar)
-                    $merge(lot, loadLotInfo(filePath, lotId, data))
+                    $merge(lot, loadLotInfo(filePath, id, data))
                   }
 
                   break
                 }
 
                 case ExemplarType.Prop: {
-                  const propId = instanceId as PropID
-                  const prop = variantInfo.lots?.find(where({ file: filePath, id: propId }))
+                  const [, group, id] = split(entry.id, "-") as [TypeID, GroupID, PropID]
+                  const prop = variantInfo.props?.find(where({ file: filePath, group, id }))
 
                   if (prop) {
                     const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getPropInfo(exemplar)
-                    $merge(prop, loadPropInfo(filePath, propId, data))
+                    $merge(prop, loadPropInfo(filePath, group, id, data))
                   }
 
                   break

@@ -1,10 +1,17 @@
-import type { ID } from "@salinco/nice-utils"
-
 import type { CategoryID } from "./categories"
+import type { GroupID, InstanceID } from "./dbpf"
 import type { FamilyID } from "./families"
 import type { MenuID } from "./submenus"
+import type { ModelID } from "./variants"
 
-export type BuildingID = ID<string, BuildingInfo>
+export type BuildingID = InstanceID<BuildingInfo>
+
+export enum BuildingStyle {
+  Chicago = 0x2000,
+  NY = 0x2001,
+  Houston = 0x2002,
+  Euro = 0x2003,
+}
 
 export interface BuildingInfo {
   /**
@@ -71,6 +78,11 @@ export interface BuildingInfo {
   garbageRadius?: number
 
   /**
+   * Building group ID
+   */
+  group: GroupID
+
+  /**
    * Building instance ID
    */
   id: BuildingID
@@ -122,7 +134,7 @@ export interface BuildingInfo {
   /**
    * Model ID
    */
-  model?: string | null
+  model?: ModelID | null
 
   /**
    * Internal name
@@ -190,6 +202,11 @@ export interface BuildingInfo {
   submenus?: MenuID[]
 
   /**
+   * Building styles
+   */
+  tilesets?: BuildingStyle[]
+
+  /**
    * Water consumed
    */
   water?: number
@@ -213,4 +230,9 @@ export interface BuildingInfo {
    * Building value
    */
   worth?: number
+
+  /**
+   * Whether this building is treated as W2W
+   */
+  w2w?: boolean
 }

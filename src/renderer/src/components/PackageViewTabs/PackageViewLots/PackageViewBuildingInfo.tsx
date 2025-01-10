@@ -1,23 +1,23 @@
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
+import { toHex, where } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import type { BuildingInfo } from "@common/buildings"
 import { CategoryID } from "@common/categories"
+import { TypeID } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import { getMenuLabel } from "@common/submenus"
 import { VariantState } from "@common/types"
+import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
+import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
 import { formatNumber, formatSimoleans } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import { useFeatures, useStore } from "@utils/store"
-
-import { where } from "@salinco/nice-utils"
-import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewBuildingInfoProps {
   building: BuildingInfo
@@ -80,23 +80,26 @@ export function PackageViewBuildingInfo({
               {building.label ?? building.name ?? "Building"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag
+              <Tag
                 color="info"
                 dense
                 tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
               />
             )}
-            {isPatched && (
-              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
-            )}
+            {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
           </FlexBox>
 
-          <ExemplarRef file={building.file} id={building.id} />
+          <ExemplarRef
+            file={building.file}
+            group={building.group}
+            id={building.id}
+            type={TypeID.EXEMPLAR}
+          />
 
           {!!tags?.length && (
             <FlexBox direction="row" gap={1} mt={1}>
               {tags.map(tag => (
-                <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
+                <Tag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
             </FlexBox>
           )}
@@ -131,6 +134,13 @@ export function PackageViewBuildingInfo({
           <Typography variant="body2">
             <b>{`${t("menu")}: `}</b>
             {menus.map(getMenuLabel).join(", ")}
+          </Typography>
+        )}
+
+        {!!building.tilesets?.length && (
+          <Typography variant="body2">
+            <b>{`${t("tilesets")}: `}</b>
+            {building.tilesets.map(tileset => `0x${toHex(tileset)}`).join(", ")}
           </Typography>
         )}
 

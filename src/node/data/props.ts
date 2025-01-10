@@ -1,6 +1,9 @@
+import type { GroupID } from "@common/dbpf"
 import type { FamilyID } from "@common/families"
 import type { PropID, PropInfo } from "@common/props"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
+import { sort } from "@salinco/nice-utils"
+import { loadModelId, writeModelId } from "./packages"
 
 export interface PropData {
   /**
@@ -16,7 +19,7 @@ export interface PropData {
   /**
    * Model ID
    */
-  model?: string | null
+  model?: GroupID | `${GroupID}-${string}` | null
 
   /**
    * Internal exemplar name
@@ -24,16 +27,23 @@ export interface PropData {
   name?: string
 }
 
-export function loadPropInfo(file: string, id: PropID, data: PropData): PropInfo {
-  const { family, ...others } = data
-
-  const families = family ? (parseStringArray(family) as FamilyID[]) : undefined
-
-  return { ...others, families, file, id }
+export function loadPropInfo(file: string, group: GroupID, id: PropID, data: PropData): PropInfo {
+  return {
+    families: data.family ? (parseStringArray(data.family) as FamilyID[]) : undefined,
+    file,
+    group,
+    id,
+    images: data.images,
+    model: data.model && loadModelId(data.model),
+    name: data.name,
+  }
 }
 
 export function writePropInfo(prop: PropInfo): PropData {
-  const { families, file, id, ...others } = prop
-
-  return { ...others, family: families?.length ? families?.join(",") : undefined }
+  return {
+    family: prop.families?.length ? sort(prop.families).join(",") : undefined,
+    images: prop.images,
+    model: prop.model && writeModelId(prop.model),
+    name: prop.name,
+  }
 }

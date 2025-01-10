@@ -8,15 +8,14 @@ import { CategoryID } from "@common/categories"
 import type { FamilyID, FamilyInfo } from "@common/families"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
+import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
+import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { formatRange } from "@utils/format"
 import { useCurrentVariant } from "@utils/packages"
 import { useStore } from "@utils/store"
-
-import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewBuildingFamilyInfoProps {
   buildingFamily?: FamilyInfo
@@ -78,15 +77,13 @@ export function PackageViewBuildingFamilyInfo({
               {buildingFamily?.name ?? "Building family"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag
+              <Tag
                 color="info"
                 dense
                 tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
               />
             )}
-            {isPatched && (
-              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
-            )}
+            {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
           </FlexBox>
 
           <ExemplarRef file={filePath} id={familyId} />
@@ -94,7 +91,7 @@ export function PackageViewBuildingFamilyInfo({
           {!!tags?.length && (
             <FlexBox direction="row" gap={1} mt={1}>
               {tags.map(tag => (
-                <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
+                <Tag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
             </FlexBox>
           )}

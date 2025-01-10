@@ -1,8 +1,9 @@
-import type { ID } from "@salinco/nice-utils"
+import type { GroupID, InstanceID } from "./dbpf"
+import type { ModelID } from "./variants"
 
-export type FloraID = ID<string, FloraInfo>
+export type FloraID = InstanceID<FloraInfo>
 
-export interface FloraInfo {
+export interface FloraInfo extends FloraStageInfo {
   /**
    * Description
    */
@@ -16,9 +17,9 @@ export interface FloraInfo {
   file: string
 
   /**
-   * Flora instance ID
+   * Flora group ID
    */
-  id: FloraID
+  group: GroupID
 
   /**
    * URL or relative path within ~docs
@@ -31,32 +32,24 @@ export interface FloraInfo {
   label?: string
 
   /**
+   * Additional stages
+   */
+  stages?: FloraStageInfo[]
+}
+
+export interface FloraStageInfo {
+  /**
+   * Flora instance ID
+   */
+  id: FloraID
+
+  /**
    * Model ID
    */
-  model?: string | null
+  model?: ModelID | null
 
   /**
    * Internal exemplar name
    */
   name?: string
-
-  /**
-   * Additional stages
-   */
-  stages?: {
-    /**
-     * Flora instance ID
-     */
-    id: FloraID
-
-    /**
-     * Model ID
-     */
-    model?: string | null
-
-    /**
-     * Internal exemplar name
-     */
-    name?: string
-  }[]
 }

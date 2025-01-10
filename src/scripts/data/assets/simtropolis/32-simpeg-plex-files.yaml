@@ -6,6 +6,7 @@ assets:
     category: 32-simpeg-plex-files
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This resource pack is a collection of chain link fence props that can be used on any type of lot that requires\_security fencing.\_ The props in this pack may\_be used by other\_developers to enhance the appearance of their lots.</p>\n<p align=\"justify\">The pack contains two styles of fencing (with or without barb\_wire) and includes extra items such as diagonal fence sections, corner sections, pedestrian gates and automatic rolling styled gates.</p>\n<p>\_</p>\n<p align=\"center\">\_<strong>** This dependency has no dependencies.</strong></p>\n<p align=\"center\"><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: PEG_SecurityFence_RESOURCE_100.zip
     filename: PEG_SecurityFence_RESOURCE_100.zip
     files:
@@ -17,88 +18,88 @@ assets:
       - https://www.simtropolis.com/objects/screens/0026/e93137f82ebbfe8be9f12c8d2085c058-product_image1.jpg
     lastModified: 2008-02-06T08:17:17.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat:
-        - f4a9bdee
-        - 94a9aea4
-        - 54a9bce4
-        - 54a9baea
-        - d4a9e6dd
-        - 74a9d4fe
         - 14a9e631
-        - 74a9e564
-        - 94aa0789
-        - f4aa06ea
         - 34aa054d
-        - f4aa04d1
-        - 74aa1ead
-        - 94aa1c3c
+        - 54a9baea
+        - 54a9bce4
+        - 74a9d4fe
+        - 74a9e564
         - 74a9ebb8
-        - b4aa2a6b
         - 74aa004a
+        - 74aa1ead
+        - 94a9aea4
+        - 94aa0789
+        - 94aa1c3c
+        - b4aa2a6b
+        - d4a9e6dd
+        - f4a9bdee
+        - f4aa04d1
+        - f4aa06ea
     name: PEG Security Fencing Kit
     props:
       PEGPROD/MODs/Security Fencing/PEG_ChainLinkFence_RESOURCE.dat:
-        14ab757b:
+        f38748f8-14ab757b:
           model: 94aa1c3c
           name: PEG_CLFence_Corner_Curve_BW
-        14ab7c72:
+        f38748f8-14ab7c72:
           model: b4aa2a6b
           name: PEG_CLFence_Diag
-        34ab3152:
+        f38748f8-34ab3152:
           model: 54a9baea
           name: PEG_CLFence_Gate_BW
-        34ab75e1:
+        f38748f8-34ab75e1:
           model: f4aa06ea
           name: PEG_CLFence_8m_BW
-        3f9a3639:
+        f38748f8-3f9a3639:
           model: d4a9e6dd
           name: PEG_CLFence_RolloGate_23-5
-        54ab3118:
+        f38748f8-54ab3118:
           model: 54a9bce4
           name: PEG_CLFence_Gate
-        54ab760a:
+        f38748f8-54ab760a:
           model: 34aa054d
           name: PEG_CLFence_Diag-8m
-        54ab7635:
+        f38748f8-54ab7635:
           model: f4aa04d1
           name: PEG_CLFence_Diag-8m_BW
-        54ab76c7:
+        f38748f8-54ab76c7:
           model: 74a9ebb8
           name: PEG_CLFence_Corner_BW
-        54ab770d:
+        f38748f8-54ab770d:
           model: 14a9e631
           name: PEG_CLFence_RolloGate_Open
-        652b17c6:
+        f38748f8-652b17c6:
           name: PEG_CLFence_RolloGate_BW_23-5
-        74ab008e:
+        f38748f8-74ab008e:
           model: 94a9aea4
           name: PEG_CLFence_BW
-        94ab7735:
+        f38748f8-94ab7735:
           model: 74a9e564
           name: PEG_CLFence_RolloGate_Open_BW
-        b3d7384b:
+        f38748f8-b3d7384b:
           name: PEG_CLFence_RolloGate_Open_5-23
-        b4ab30f7:
+        f38748f8-b4ab30f7:
           model: f4a9bdee
           name: PEG_CLFence
-        b4ab75a3:
+        f38748f8-b4ab75a3:
           model: 94aa0789
           name: PEG_CLFence_8m
-        b4ab76a0:
+        f38748f8-b4ab76a0:
           model: 74aa004a
           name: PEG_CLFence_Diag_BW
-        c439c08f:
+        f38748f8-c439c08f:
           name: PEG_CLFence_RolloGate_Open_BW_5-23
-        d4ab753d:
+        f38748f8-d4ab753d:
           model: 74aa1ead
           name: PEG_CLFence_Corner_Curve
-        d4ab76ee:
+        f38748f8-d4ab76ee:
           model: d4a9e6dd
           name: PEG_CLFence_RolloGate
-        f4ab30a2:
+        f38748f8-f4ab30a2:
           model: 74a9d4fe
           name: PEG_CLFence_RolloGate_BW
     sha256: 555ed2486d8180e7dc25184a2e365a3586f1dee462896356cf966663e3f37a1f
@@ -150,6 +151,7 @@ assets:
     dependencies:
       - simtropolis/26079-peg-spam-super-resource-pack
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"color:#c0392b;\"><strong>UPDATE: 04.07.2022</strong></span>\_- The\_<em>PEG_MTP_SUPER_TEXTURES_PACK.dat</em>\_has been replaced by the all inclusive\_<strong><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES.dat</strong>, which contains all, but the textures from the\_<a href=\"https://community.simtropolis.com/files/file/26079-peg-spam-super-resource-pack/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"SimPeg Agricultural Mod\">SPAM</abbr> Super Resource Pack</a>\_(<abbr title=\"Pegasus\">PEG</abbr>-SPAM_TEXTURES_RESOURCE_b200.dat), created and released by Pegasus from the entire collection (including: <abbr title=\"Coastal Development Kit\">CDK</abbr> and <abbr title=\"Coastal Development Kit 3\">CDK3</abbr>, <abbr title=\"Coastal Development Kit 3\">CDK3</abbr>-<abbr title=\"Old Wooden Waterfront\">OWW</abbr>, <abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr> and Marina, Utopia, CSK, PPonds etc...). This update brings all these textures under one DAT (which actually already have held 2/3 of the textures created by Pegasus). Bear in mind this is only part one of a major update and clean-up of this dependency pack focusing on the textures for now.\_\n</p>\n\n<p>\n\tFor the full list of texture contents please check the included *-index.jpg files.\_\n</p>\n\n<p>\n\t<u>Install</u>: copy/extract the\_<strong>PEGPROD\_</strong>parent folder into your plugins. If you extracted the\_<em>_Documents</em>* folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br>\n\tIn the\__Documents\_folder you will find 2 other subfolders:\n</p>\n\n<ul>\n\t<li>\n\t\t<strong><abbr title=\"Pegasus\">PEG</abbr> Readmes</strong>: this folder will be the generic storage of all the readmes and images for the future updated PEGProd contents. This folder also contains the texture catalague index images of the base and overlay textures and the optional EU and <abbr title=\"RealRailway\">RRW</abbr> (Real-RailWay) texture overrides.\n\t</li>\n\t<li>\n\t\t<strong><abbr title=\"Pegasus\">PEG</abbr> Optional Texture Overrides</strong>: as a temporary solution it contains the\_<strong><em><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES_EUOverride.dat</em></strong>\_and\_<strong><em><abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES_RRWOverride.dat</em></strong>\_files. To use either or both of the files, simply move/copy them into the main\_<em>PEGPROD\\Mountain Theme Pack\\_MTP SUPER PACK\\</em>\_folder, but make sure they load after the\_<abbr title=\"Pegasus\">PEG</abbr>-SUPER_TEXTURES.dat.\n\t</li>\n</ul>\n\n<p>\n\tThe <span style=\"color:#c0392b;\"><strong>v1.5</strong></span> update is the first part of a collection wide update and cleanup focusing of the textures only. While the original textures and props where created by Pegasus and his team, this (and the following) update was made by the\_<a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/779745-stex-custodian/?do=hovercard\" data-mentionid=\"779745\" href=\"https://community.simtropolis.com/profile/779745-stex-custodian/\" id=\"ips_uid_6281_6\" rel=\"\">@STEX Custodian</a>\_(with the permission of Pegasus).\n</p>\n\n<p align=\"justify\">\n\t--------------------------------------------------------------------------------------------------------------------------------\n</p>\n\n<p align=\"justify\">\n\t<strong>Faster than a speeding Llama... </strong>( <em>a really old one... with gout </em>)<strong>...</strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>More Powerful than my breath after a Tequila and burrito binge...... </strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>Able to leap tall brown gift boxes in a single install.</strong>\n</p>\n\n<p align=\"justify\">\n\t<strong>\"LOOK !! Up on the <abbr title=\"Simtropolis Exchange\">STEX</abbr> !! Its a Mod !! Its a Lot !! Its...</strong> its...\"\n</p>\n\n<p>\n\t\"Oh forget it. Its just a dependency.\"\n</p>\n\n<p align=\"justify\">\n\tYou asked for it! And now you got it! The all-inclusive... the all encapsulating...one size fits all... <span style=\"font-weight:bold;color:rgb(0,82,0);\"><font color=\"#005b00\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK !!</font></span><br>\n\t<br>\n\t<em>* Tights &amp; Cape sold separately. Tights void where prohibited. Do not wear capes near jet aircraft engines. Installation of the SUPER PACK may not enable you to fly.</em><br>\n\t<br>\n\tThe <span style=\"font-weight:bold;color:rgb(0,82,0);\"><font color=\"#005b00\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK </font></span>combines all the standard <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependencies into a single download... and also includes a substantial amount of new material that will be used in future development. This file will be the primary <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependency listed on all future <abbr title=\"Mountain Theme Pack\">MTP</abbr> lots.\n</p>\n\n<hr>\n<p align=\"justify\">\n\t<strong><em><font color=\"#800000\">Please Note</font></em></strong>: This dependency contains no material that alters the appearance ofgame default props or textures... and will not interfere in any way with playing a non-<abbr title=\"Mountain Theme Pack\">MTP</abbr> or rural themed city.\n</p>\n\n<hr>\n<p align=\"justify\">\n\t<br>\n\tThe <font color=\"#008000\"><strong><font color=\"#006633\"><font color=\"#008000\"><strong><font color=\"#005900\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK </font></strong></font></font></strong></font>combines both <abbr title=\"Mountain Theme Pack\">MTP</abbr> props and textures into a single download. However, it will install props and textures as separate files to make any future updates easier and faster.\n</p>\n\n<p align=\"justify\">\n\tThe <strong><font color=\"#008000\"><font color=\"#005300\"><abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPERPACK</font> </font></strong>replaces the following previous <abbr title=\"Mountain Theme Pack\">MTP</abbr> dependencies... which can now be removed from your Plugins folder:\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr> Mountain Theme Pack</font></strong><br>\n\t( <em>PEG_MTP_RESOURCE_vol1.dat</em> &amp; <em>PEG_MTP_TEXTURES_vol1.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Mountain Theme Pack\">MTP</abbr> Texture Pack Volume 2</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_TEXTURES_vol2.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr>-<abbr title=\"Mountain Theme Pack\">MTP</abbr> Resource Pack 2 [beta]</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_RESOURCE2_b102.dat</em> )\n</p>\n\n<p align=\"justify\">\n\t* <strong><font color=\"#008000\"><abbr title=\"Pegasus\">PEG</abbr> Pine Tree Mod [ resource file only ]</font></strong><br>\n\t( <em><abbr title=\"Pegasus\">PEG</abbr>-MTP_GM-TreeMod_RESOURCE</em> )<br>\n\t<br>\n\t<strong>** This dependency has <u>no</u> dependencies.\_</strong><br>\n\t<br>\n\t<strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\" style=\"color:rgb(51,122,183);\">here</a></u></strong>.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tModerator note (September 9th 2018):<br>\n\tFile updated to version 1.02 from the old <abbr title=\"Pegasus Lot Exchange\">PLEX</abbr> (thanks to <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" id=\"ips_uid_6281_5\" rel=\"\">@Tyberius06</a>\_for providing the updated files). The older v1.01 is available in the changelog section below.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: PEG-MTP MTP SUPER-PACK v1.5.zip
     filename: PEG-MTP MTP SUPER-PACK v1.5.zip
     files:
@@ -168,340 +170,340 @@ assets:
       - https://www.simtropolis.com/objects/screens/0003/0ec036904f575a8efe4bcea5e7624da1-product_image.jpg
     lastModified: 2022-07-04T23:38:52.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat:
-        - b2f49e67
-        - d2f4adcb
-        - 52f4a0ce
-        - 52f462fb
-        - 52f46d61
-        - 72f41d73
-        - 6e420e6a
-        - 8e420bff
-        - 4d2d325b-001f
-        - 2e41e012
-        - '4e415207'
-        - 4e4390e1
-        - ce438cfa
-        - 6e438f55
-        - '6e439246'
-        - 4e41313e
-        - 8e3c4f44
-        - ce93535a
-        - 4e935c14
         - 0e935ca0
-        - f17a2cf3
-        - 6ecadc7f
-        - 72f6cd20
-        - 6e9b5cde
-        - badb57f1-0030
-        - badb57f1-073d
-        - d2fc444b
-        - f2fc3e41
-        - d2fc4629
-        - 52fc4813
-        - f2fc487a
-        - 4ed984d0
         - 0edacc96
         - 12fdba5b
-        - 52fdadae
-        - b2fd81a3
+        - 162015ea
+        - 2e41e012
+        - '2e817875'
+        - 30f9eeaa
+        - 31d4127d
         - 32fd6861
-        - 8edebcbf
-        - aede9d4f
-        - b659e084
         - '36595053'
+        - 4d2d325b-001f
+        - 4e41313e
+        - '4e415207'
+        - 4e4390e1
+        - 4e935c14
+        - 4ed984d0
+        - 50f9f059
+        - 50f9f1f2
+        - 52f462fb
+        - 52f46d61
+        - 52f4a0ce
+        - 52fc4813
+        - 52fdadae
         - '56590523'
-        - '96591858'
         - 565e68dc
+        - 6e420e6a
+        - 6e438f55
+        - '6e439246'
+        - 6e9b5cde
+        - 6ecadc7f
+        - 70fa0287
+        - 70fa0667
+        - 71d4165a
+        - 71d41887
+        - 72f41d73
+        - 72f6cd20
+        - 8e3c4f44
+        - 8e420bff
+        - 8edebcbf
+        - 90fa0b65
+        - 91d41540
+        - 96242b01
+        - '96591858'
+        - aede9d4f
+        - b0f9efc0
         - b0fa038b
         - b0fa04db
-        - 70fa0667
         - b0fa07bb
-        - 90fa0b65
-        - 70fa0287
-        - d0f9e92c
-        - b0f9efc0
-        - 30f9eeaa
-        - 50f9f1f2
-        - 50f9f059
-        - f0f9f979
-        - f0f9ee57
-        - f0f9fc5f
-        - 91d41540
-        - 71d4165a
-        - 31d4127d
-        - 71d41887
-        - '2e817875'
-        - ced1db98
-        - eedeb117
         - b13eba4d
-        - 162015ea
+        - b2f49e67
+        - b2fd81a3
+        - b659e084
+        - badb57f1-0030
+        - badb57f1-073d
+        - ce438cfa
+        - ce93535a
+        - ced1db98
+        - d0f9e92c
+        - d2f4adcb
+        - d2fc444b
+        - d2fc4629
+        - eedeb117
+        - f0f9ee57
+        - f0f9f979
+        - f0f9fc5f
+        - f17a2cf3
+        - f2fc3e41
+        - f2fc487a
         - f6203b20
-        - 96242b01
     name: PEG MTP SUPER PACK
     props:
       PEGPROD/Mountain Theme Pack/_MTP SUPER PACK/PEG_MTP_SUPER_RESOURCE_PACK.dat:
-        '00300211':
-          model: badb57f1-0030
-          name: Cargo_PortaPotty
-        073d45e6:
-          name: PEG_CabinSmoke_24/7
-        073d45f3:
-          name: AR12x12x2_$PoolDboy-anim_10-19
-        073d45f5:
-          name: AR6x3x2_$$PoolModest-swim_10-19
-        073d463e:
-          name: pegLite_BugLite-Short
-        073d463f:
-          name: pegLite_FountainLite
-        073d4698:
-          name: pegLite_ShortLite-NoCone
-        073d4699:
-          name: pegLite_ShortLite-NoCone-Yellow
-        073d469f:
-          family: a0001422
-          name: AR2x2x3_sit-lean-forward-idle_peg9-18
-        073d46a0:
-          family: a0001422
-          name: AR2x2x3_sit-backwardchair-idle_peg9-18
-        073d46a1:
-          family: a0001422
-          name: AR2x2x3_sit-cross-leg-arm-idle_peg9-18
-        073d46a2:
-          family: a0001422
-          name: AR2x2x3_sit-idle_peg9-18
-        073d46af:
-          family: '00001234'
-          name: Effect_train_smoke_6-12
-        073d46b0:
-          family: '00001234'
-          name: Effect_train_smoke_14-20
-        073d46c4:
-          name: pegLite_FireGlow
-        073d4750:
-          name: pegLite_Amber-Glow
-        073d475c:
-          name: PEG_CabinSmoke_5-20
-        073d475d:
-          name: PEG_CabinSmoke_21-4
-        0e420eef:
+        4d2d325b-0e420eef:
           model: 8e420bff
           name: peg_rock-cluster-red
-        0e935cbe:
+        4d2d325b-0e935cbe:
           model: 0e935ca0
           name: peg_log-short
-        10fcaf88:
+        4d2d325b-10fcaf88:
           family: a0001467,a0001468
           model: b0fa038b
           name: PEG-MTP_BillBoards-Large
-        10fcb2a3:
+        4d2d325b-10fcb2a3:
           family: a0001466,a0001468
           model: 50f9f1f2
           name: MTP_BillBoardS_Farmers
-        296f0000:
-          family: a000005c
-          name: ARWStateFair4x4x4_smallmilling_1E9A
-        2a7ccda1:
-          name: Effect_SmallFountainA
-        2e41c014:
+        4d2d325b-2e41c014:
           model: '4e415207'
           name: peg_old steam tractor_rusty
-        '2e447849':
+        4d2d325b-2e447849:
           family: a000140a
           model: b659e084
           name: peg-pinetree_short
-        2e93539e:
+        4d2d325b-2e93539e:
           model: ce93535a
           name: peg_log1
-        306e3d82:
+        4d2d325b-306e3d82:
           family: a000141a
           model: 32fd6861
           name: peg_cabin-log_s1
-        306e835c:
+        4d2d325b-306e835c:
           family: a000141a
           model: 52fdadae
           name: peg_logcabin_s3
-        30fcb2c2:
+        4d2d325b-30fcb2c2:
           family: a0001466,a0001468
           model: 50f9f059
           name: MTP_BillBoardS_Hat
-        '4e439577':
+        4d2d325b-4e439577:
           model: '6e439246'
           name: peg_firtree
-        4e448fe3:
+        4d2d325b-4e448fe3:
           family: a000140a
           model: '96591858'
           name: PEG-Pinetree-utall
-        4ede9e23:
+        4d2d325b-4ede9e23:
           name: peg_horse_chestnut w rider
-        '506e8313':
+        4d2d325b-506e8313:
           family: a000141a
           model: b2fd81a3
           name: peg_logcabin_s2
-        56255dd3:
-          family: a00014d6
-          model: 162015ea
-          name: PEG-MTP_Gazeebo
-        '6e447432':
+        4d2d325b-6e447432:
           family: a000140a
           model: '36595053'
           name: PEG-Pinetree_med1
-        6e8178e4:
+        4d2d325b-6e8178e4:
           model: '2e817875'
           name: peg_walking bridge-grayl
-        6ecaead3:
+        4d2d325b-6ecaead3:
           model: 6ecadc7f
           name: peg_firewood
-        6ed266a3:
+        4d2d325b-6ed266a3:
           model: ced1db98
           name: peg_row boat
-        6edeca20:
+        4d2d325b-6edeca20:
           name: peg_horseback riders
-        7065750e:
+        4d2d325b-7065750e:
           family: a000140a
           model: 52f4a0ce
           name: peg-pinetree_med2
-        706793d4:
+        4d2d325b-706793d4:
           model: 72f6cd20
           name: peg_log-diag
-        '706e8397':
+        4d2d325b-706e8397:
           family: a000141a
           model: 12fdba5b
           name: peg_logcabin_s4
-        70fcaf69:
+        4d2d325b-70fcaf69:
           family: a0001467,a0001468
           model: b0fa04db
           name: PEG-MTP_BillBoards-Large
-        70fcafcf:
+        4d2d325b-70fcafcf:
           family: a0001467,a0001468
           model: 70fa0667
           name: PEG-MTP_BillBoards-Large
-        70fcb27a:
+        4d2d325b-70fcb27a:
           family: a0001466,a0001468
           model: f0f9ee57
           name: MTP_BillBoardS_Sugar
-        70fcb2e8:
+        4d2d325b-70fcb2e8:
           family: a0001466,a0001468
           model: 30f9eeaa
           name: MTP_BillBoardS_Coffee
-        71415d7b:
+        4d2d325b-71415d7b:
           model: b13eba4d
           name: coral fencing-whitewash_curved
-        860a3832:
+        4d2d325b-860a3832:
           family: a000140a
           model: 565e68dc
           name: peg-pinetree_larchpine
-        8edadd56:
+        4d2d325b-8edadd56:
           model: 0edacc96
           name: peg_coral gate-whitewash
-        8f44d3f3:
+        4d2d325b-8f44d3f3:
           model: 31d4127d
           name: peg_umbrella table-red
-        8f44dd33:
+        4d2d325b-8f44dd33:
           model: 91d41540
           name: peg_umbrella table occupied-blue
-        906d0f89:
+        4d2d325b-906d0f89:
           model: 52fc4813
           name: peg_coral-fence_8m
-        ae41edd0:
+        4d2d325b-ae41edd0:
           model: 2e41e012
           name: peg_rusty-water-tank
-        ae420f0e:
+        4d2d325b-ae420f0e:
           model: 6e420e6a
           name: peg_rock-cluster-gray2
-        ae438d45:
+        4d2d325b-ae438d45:
           model: ce438cfa
           name: peg_cedartree
-        ae4395f9:
+        4d2d325b-ae4395f9:
           model: 4e4390e1
           name: peg_larchpine
-        ae5ec61d:
+        4d2d325b-ae5ec61d:
           model: 8e3c4f44
           name: peg_wood-barrel
-        aedec9ad:
+        4d2d325b-aedec9ad:
           model: eedeb117
           name: peg_stable mount
-        aeeaf390:
+        4d2d325b-aeeaf390:
           model: f17a2cf3
           name: picnic table
-        b6255d9b:
-          family: a00014d6
-          model: f6203b20
-          name: PEG-MTP_Gazeebo1
-        ce5ec64c:
+        4d2d325b-ce5ec64c:
           model: 4e41313e
           name: peg_old-steam-engine_rusty
-        cf44dd17:
+        4d2d325b-cf44dd17:
           model: 71d4165a
           name: peg_umbrella table occupied-grn
-        cf44df72:
+        4d2d325b-cf44df72:
           model: 71d41887
           name: peg_L Planter
-        d064e489:
+        4d2d325b-d064e489:
           model: 72f41d73
           name: peg_pine-med3
-        d06d0579:
+        4d2d325b-d06d0579:
           model: d2fc444b
           name: peg_coral-fence
-        d0fc8c9b:
+        4d2d325b-d0fc8c9b:
           family: a0001466,a0001468
           model: d0f9e92c
           name: MTP_BillBoard_SmokeyBear
-        d0fcaf4a:
+        4d2d325b-d0fcaf4a:
           family: a0001467,a0001468
           model: b0fa07bb
           name: PEG-MTP_BillBoards-Large
-        d0fcafaf:
+        4d2d325b-d0fcafaf:
           family: a0001467,a0001468
           model: 90fa0b65
           name: PEG-MTP_BillBoards-Large
-        d0fcb22f:
+        4d2d325b-d0fcb22f:
           family: a0001466,a0001468
           model: f0f9fc5f
           name: MTP_BillBoardS_Overalls
-        d0fcb3b7:
+        4d2d325b-d0fcb3b7:
           family: a0001466,a0001468
           model: b0f9efc0
           name: MTP_BillBoardS_Boots
-        ed34eaf7:
+        4d2d325b-ed34eaf7:
           model: 4d2d325b-001f
           name: peg_pinetree2
-        ee439590:
+        4d2d325b-ee439590:
           model: 6e438f55
           name: peg_cedartree_high
-        ee4490c1:
+        4d2d325b-ee4490c1:
           family: a000140a
           model: '56590523'
           name: PEG-Pinetree-vtall
-        ee9353d1:
+        4d2d325b-ee9353d1:
           model: 4e935c14
           name: peg_log2
-        ee9b5e40:
+        4d2d325b-ee9b5e40:
           name: peg_loggers1
-        eed9859a:
+        4d2d325b-eed9859a:
           model: 4ed984d0
           name: peg_coral fencing-whitewash
-        f06d0527:
+        4d2d325b-f06d0527:
           model: f2fc3e41
           name: peg_coral-fence_gate
-        f06d0f27:
+        4d2d325b-f06d0f27:
           model: f2fc487a
           name: peg_coral-fence_6m
-        f06d0f50:
+        4d2d325b-f06d0f50:
           model: d2fc4629
           name: peg_coral-fence_diag
-        f0fcafeb:
+        4d2d325b-f0fcafeb:
           family: a0001467
           model: 70fa0287
           name: PEG-MTP_BillBoards-Large
-        f0fcb25c:
+        4d2d325b-f0fcb25c:
           family: a0001466,a0001468
           model: f0f9f979
           name: MTP_BillBoardS_JohnDeere
-        f6258e35:
+        c8dbccba-073d463e:
+          name: pegLite_BugLite-Short
+        c8dbccba-073d463f:
+          name: pegLite_FountainLite
+        c8dbccba-073d4698:
+          name: pegLite_ShortLite-NoCone
+        c8dbccba-073d4699:
+          name: pegLite_ShortLite-NoCone-Yellow
+        c8dbccba-073d46c4:
+          name: pegLite_FireGlow
+        c8dbccba-073d4750:
+          name: pegLite_Amber-Glow
+        c977c536-00300211:
+          model: badb57f1-0030
+          name: Cargo_PortaPotty
+        c977c536-073d45e6:
+          name: PEG_CabinSmoke_24/7
+        c977c536-073d45f3:
+          name: AR12x12x2_$PoolDboy-anim_10-19
+        c977c536-073d45f5:
+          name: AR6x3x2_$$PoolModest-swim_10-19
+        c977c536-073d469f:
+          family: a0001422
+          name: AR2x2x3_sit-lean-forward-idle_peg9-18
+        c977c536-073d46a0:
+          family: a0001422
+          name: AR2x2x3_sit-backwardchair-idle_peg9-18
+        c977c536-073d46a1:
+          family: a0001422
+          name: AR2x2x3_sit-cross-leg-arm-idle_peg9-18
+        c977c536-073d46a2:
+          family: a0001422
+          name: AR2x2x3_sit-idle_peg9-18
+        c977c536-073d46af:
+          family: '00001234'
+          name: Effect_train_smoke_6-12
+        c977c536-073d46b0:
+          family: '00001234'
+          name: Effect_train_smoke_14-20
+        c977c536-073d475c:
+          name: PEG_CabinSmoke_5-20
+        c977c536-073d475d:
+          name: PEG_CabinSmoke_21-4
+        c977c536-296f0000:
+          family: a000005c
+          name: ARWStateFair4x4x4_smallmilling_1E9A
+        c977c536-2a7ccda1:
+          name: Effect_SmallFountainA
+        f38748f8-56255dd3:
+          family: a00014d6
+          model: 162015ea
+          name: PEG-MTP_Gazeebo
+        f38748f8-b6255d9b:
+          family: a00014d6
+          model: f6203b20
+          name: PEG-MTP_Gazeebo1
+        f38748f8-f6258e35:
           family: a00014d6
           model: 96242b01
           name: PEG-MTP_Gazebo2
@@ -931,23 +933,23 @@ assets:
       - Pegasus
     buildingFamilies:
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
-        7000004f:
+        a7bddf17-7000004f:
           name: IR30x24_1_8000004F
-        '70000050':
+        a7bddf17-70000050:
           name: IR60x50_3_80000050
-        '70000051':
+        a7bddf17-70000051:
           name: IR24x20_1_80000051
-        '70000052':
+        a7bddf17-70000052:
           name: IR15x7_1_80000052
-        '70000053':
+        a7bddf17-70000053:
           name: IR32x32_2_80000053
-        '70000054':
+        a7bddf17-70000054:
           name: IR16x30_2_80000054
-        '70000055':
+        a7bddf17-70000055:
           name: IR24x24_1_80000055
     buildings:
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
-        '04433758':
+        18d84fbc-04433758:
           bulldoze: 169
           capacity:
             ir: 36
@@ -964,87 +966,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        07e5c5de:
-          bulldoze: 80
-          capacity:
-            ir: 11
-          categories: agriculture
-          family: a0001532
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0850
-          name: SPAM1_IR15x7_D-Shed_Bumpkin Acres
-          pollution: 1
-          pollutionRadius: 4
-          power: 1
-          water: 8
-          waterPollution: 1
-          waterPollutionRadius: 5
-          worth: 466
-        084d0000:
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-084d
-          name: IR30x24_1Farm1_084D_AlvinAcres
-        '084e0000':
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-084e
-          name: IR60x50_3Farm2_084E_PedrinaPlants
-        084f0000:
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-084f
-          name: IR24x20_1Farm3_084F_FarhansFarms
-        '08500000':
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-0850
-          name: IR15x7_1Farm4_0850_PumpkinAcres
-        '08510000':
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-0851
-          name: IR32x32_2Farm5_0851_JezKnight
-        '08520000':
-          bulldoze: 34
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-0852
-          name: IR16x30_2Farm6_0852_BartheletStables
-        '08530000':
-          bulldoze: 50
-          capacity:
-            iht: 56
-            im: 56
-            ir: 56
-          categories: agriculture
-          model: badb57f1-0853
-          name: IR24x24_1Farm7_0853_LlamaAg
-        0cc3ca8a:
+        18d84fbc-0cc3ca8a:
           bulldoze: 169
           capacity:
             ir: 51
@@ -1061,7 +983,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        0dc82a71:
+        18d84fbc-0dc82a71:
           bulldoze: 310
           capacity:
             ir: 68
@@ -1077,32 +999,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        10a8e301:
-          bulldoze: 10
-          capacity:
-            id: 13
-            im: 14
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Orangetree
-        145ed92d:
-          bulldoze: 10
-          capacity:
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Agave
-        1879ed69:
-          bulldoze: 10
-          capacity:
-            id: 15
-            im: 13
-            ir: 17
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Wheat
-        18e92ef0:
+        18d84fbc-18e92ef0:
           bulldoze: 216
           capacity:
             ir: 26
@@ -1119,7 +1016,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        18eabd9a:
+        18d84fbc-18eabd9a:
           bulldoze: 120
           capacity:
             ir: 13
@@ -1136,14 +1033,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        198f529d:
-          bulldoze: 10
-          capacity:
-            ir: 10
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Tilled
-        230ce961:
+        18d84fbc-230ce961:
           bulldoze: 169
           capacity:
             ir: 26
@@ -1160,38 +1050,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        2348d63f:
-          bulldoze: 10
-          capacity:
-            ir: 13
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Grapes
-        275c0c91:
-          bulldoze: 130
-          capacity:
-            ir: 21
-          categories: agriculture
-          family: a0001535
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084f
-          name: SPAM1_IR24x20_D-GHouse_Sativa Arboretum
-          pollution: 1
-          pollutionRadius: 4
-          power: 2
-          water: 16
-          waterPollution: 2
-          waterPollutionRadius: 5
-          worth: 932
-        278a3d53:
-          bulldoze: 10
-          capacity:
-            ir: 12
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Hops
-        28de9881:
+        18d84fbc-28de9881:
           bulldoze: 120
           capacity:
             ir: 27
@@ -1208,16 +1067,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        2a85b88e:
-          bulldoze: 10
-          capacity:
-            id: 14
-            im: 13
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Appletree
-        2ac6c09d:
+        18d84fbc-2ac6c09d:
           bulldoze: 169
           capacity:
             ir: 25
@@ -1234,7 +1084,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        30398a99:
+        18d84fbc-30398a99:
           bulldoze: 216
           capacity:
             ir: 21
@@ -1251,14 +1101,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        30ebdd06:
-          bulldoze: 10
-          capacity:
-            ir: 14
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Switchgrass
-        33d2148a:
+        18d84fbc-33d2148a:
           bulldoze: 310
           capacity:
             ir: 70
@@ -1275,7 +1118,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        341c37ff:
+        18d84fbc-341c37ff:
           bulldoze: 169
           capacity:
             ir: 66
@@ -1291,48 +1134,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        3ae5bcaf:
-          bulldoze: 130
-          capacity:
-            ir: 20
-          categories: agriculture
-          family: a0001535
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084f
-          name: SPAM1_IR24x20_D-GHouse_Bonapartes Farms
-          pollution: 1
-          pollutionRadius: 4
-          power: 2
-          water: 16
-          waterPollution: 2
-          waterPollutionRadius: 5
-          worth: 932
-        3ba190a7:
-          bulldoze: 180
-          capacity:
-            ir: 37
-          categories: agriculture
-          family: a0001533
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084d
-          name: SPAM2_IR30x24_D-BigBarn_Shrinky-Dinky Farms
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        3c5ea03a:
-          bulldoze: 10
-          capacity:
-            ir: 13
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Rubbarb
-        3d9d9921:
+        18d84fbc-3d9d9921:
           bulldoze: 310
           capacity:
             ir: 69
@@ -1349,24 +1151,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        3ddbb8a1:
-          bulldoze: 80
-          capacity:
-            ir: 10
-          categories: agriculture
-          family: a0001532
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0850
-          name: SPAM1_IR15x7_D-Shed_Fertile Farms
-          pollution: 1
-          pollutionRadius: 4
-          power: 1
-          water: 8
-          waterPollution: 1
-          waterPollutionRadius: 5
-          worth: 466
-        3e2a14e2:
+        18d84fbc-3e2a14e2:
           bulldoze: 169
           capacity:
             ir: 34
@@ -1383,7 +1168,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        3fa1a041:
+        18d84fbc-3fa1a041:
           bulldoze: 169
           capacity:
             ir: 52
@@ -1400,16 +1185,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        43a07361:
-          bulldoze: 10
-          capacity:
-            id: 13
-            im: 11
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Corn
-        4ce60e32:
+        18d84fbc-4ce60e32:
           bulldoze: 120
           capacity:
             ir: 29
@@ -1426,7 +1202,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        505c2637:
+        18d84fbc-505c2637:
           bulldoze: 169
           capacity:
             ir: 26
@@ -1443,7 +1219,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        542b32ff:
+        18d84fbc-542b32ff:
           bulldoze: 169
           capacity:
             ir: 27
@@ -1460,7 +1236,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        5489d9a5:
+        18d84fbc-5489d9a5:
           bulldoze: 310
           capacity:
             ir: 38
@@ -1477,7 +1253,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        58ebd3d7:
+        18d84fbc-58ebd3d7:
           bulldoze: 169
           capacity:
             ir: 15
@@ -1494,7 +1270,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        5a062463:
+        18d84fbc-5a062463:
           bulldoze: 120
           capacity:
             ir: 30
@@ -1511,7 +1287,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        5f42b3bb:
+        18d84fbc-5f42b3bb:
           bulldoze: 120
           capacity:
             ir: 34
@@ -1528,14 +1304,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        617c94c7:
-          bulldoze: 10
-          capacity:
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Tomatoes
-        6ae65c35:
+        18d84fbc-6ae65c35:
           bulldoze: 120
           capacity:
             ir: 32
@@ -1552,84 +1321,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        6bb25e7f:
-          bulldoze: 80
-          capacity:
-            ir: 35
-          categories: agriculture
-          family: a0001534
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0852
-          name: SPAM2_IR16x30_D-Stables_Buckbeach Ranch
-          pollution: 2
-          pollutionRadius: 5
-          power: 4
-          water: 40
-          waterPollution: 4
-          waterPollutionRadius: 6
-          worth: 992
-        6cac42fb:
-          bulldoze: 130
-          capacity:
-            ir: 24
-          categories: agriculture
-          family: a0001530
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0851
-          name: SPAM1_IR24x24_D-TriBarn_Sepsis Commune
-          pollution: 3
-          pollutionRadius: 5
-          power: 4
-          water: 50
-          waterPollution: 5
-          waterPollutionRadius: 6
-          worth: 1240
-        6e5b6b89:
-          bulldoze: 130
-          capacity:
-            ir: 51
-          categories: agriculture
-          family: a0001531
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0853
-          name: SPAM3_IR32x32_D-Grain_Kernel Sander's Cornicopia
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        75f8d36d:
-          bulldoze: 10
-          capacity:
-            id: 12
-            im: 11
-            ir: 13
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Lemontree
-        7635f8dc:
-          bulldoze: 130
-          capacity:
-            ir: 32
-          categories: agriculture
-          family: a0001530
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0851
-          name: SPAM1_IR24x24_D-TrBarn_Fred & Ginger's Free Hold
-          pollution: 3
-          pollutionRadius: 5
-          power: 4
-          water: 50
-          waterPollution: 5
-          waterPollutionRadius: 6
-          worth: 1240
-        78e92eac:
+        18d84fbc-78e92eac:
           bulldoze: 216
           capacity:
             ir: 18
@@ -1646,7 +1338,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        78f3cbde:
+        18d84fbc-78f3cbde:
           bulldoze: 310
           capacity:
             ir: 38
@@ -1663,7 +1355,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        7955afd8:
+        18d84fbc-7955afd8:
           bulldoze: 169
           capacity:
             ir: 35
@@ -1680,41 +1372,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        7fc108a1:
-          bulldoze: 130
-          capacity:
-            ir: 52
-          categories: agriculture
-          family: a0001531
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0853
-          name: 'SPAM3_IR32x32_D-Grain_Hogs Granary #29'
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        8160026c:
-          bulldoze: 130
-          capacity:
-            ir: 49
-          categories: agriculture
-          family: a0001531
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0853
-          name: SPAM3_IR32x32_D-Grain_Meastro Co-Op
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        89bf334a:
+        18d84fbc-89bf334a:
           bulldoze: 120
           capacity:
             ir: 33
@@ -1731,40 +1389,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        '94169840':
-          bulldoze: 10
-          capacity:
-            id: 14
-            im: 13
-            ir: 15
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Barley
-        9a4c8535:
-          bulldoze: 10
-          capacity:
-            ir: 11
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Rye
-        9e7e9e46:
-          bulldoze: 130
-          capacity:
-            ir: 25
-          categories: agriculture
-          family: a0001530
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0851
-          name: SPAM1_IR24x24_D-TriBarn_Tungston Farms
-          pollution: 3
-          pollutionRadius: 5
-          power: 4
-          water: 50
-          waterPollution: 5
-          waterPollutionRadius: 6
-          worth: 1240
-        a1441934:
+        18d84fbc-a1441934:
           bulldoze: 169
           capacity:
             ir: 50
@@ -1781,7 +1406,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        a42c8861:
+        18d84fbc-a42c8861:
           bulldoze: 216
           capacity:
             ir: 21
@@ -1798,14 +1423,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        a9270458:
-          bulldoze: 10
-          capacity:
-            ir: 11
-          categories: agriculture
-          model: badb57f1-0e11
-          name: SPAM_1x1_Pasture
-        b7399134:
+        18d84fbc-b7399134:
           bulldoze: 310
           capacity:
             ir: 39
@@ -1822,7 +1440,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1120
-        b8e92ecd:
+        18d84fbc-b8e92ecd:
           bulldoze: 216
           capacity:
             ir: 14
@@ -1839,7 +1457,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        bc8f69a5:
+        18d84fbc-bc8f69a5:
           bulldoze: 120
           capacity:
             ir: 15
@@ -1856,41 +1474,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        bf589ade:
-          bulldoze: 180
-          capacity:
-            ir: 36
-          categories: agriculture
-          family: a0001533
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084d
-          name: SPAM2_IR30x24_D-BigBarn_Krio Farmstead
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        d0109010:
-          bulldoze: 80
-          capacity:
-            ir: 36
-          categories: agriculture
-          family: a0001534
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0852
-          name: SPAM2_IR16x30_D-Stables_GotTrots Horsuary
-          pollution: 2
-          pollutionRadius: 5
-          power: 4
-          water: 40
-          waterPollution: 4
-          waterPollutionRadius: 6
-          worth: 992
-        d6538e5a:
+        18d84fbc-d6538e5a:
           bulldoze: 120
           capacity:
             ir: 14
@@ -1907,41 +1491,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 876
-        d858622c:
-          bulldoze: 80
-          capacity:
-            ir: 12
-          categories: agriculture
-          family: a0001532
-          flamability: 45
-          garbage: 4
-          model: badb57f1-0850
-          name: SPAM1_IR15x7_D-Shed_Jethro Estates
-          pollution: 1
-          pollutionRadius: 4
-          power: 1
-          water: 8
-          waterPollution: 1
-          waterPollutionRadius: 5
-          worth: 466
-        df9ee321:
-          bulldoze: 130
-          capacity:
-            ir: 22
-          categories: agriculture
-          family: a0001535
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084f
-          name: SPAM1_IR24x20_D-GHouse_Bitchen Botanicals
-          pollution: 1
-          pollutionRadius: 4
-          power: 2
-          water: 16
-          waterPollution: 2
-          waterPollutionRadius: 5
-          worth: 932
-        e2b0b7a5:
+        18d84fbc-e2b0b7a5:
           bulldoze: 216
           capacity:
             ir: 20
@@ -1958,24 +1508,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        f05f8545:
-          bulldoze: 180
-          capacity:
-            ir: 38
-          categories: agriculture
-          family: a0001533
-          flamability: 45
-          garbage: 4
-          model: badb57f1-084d
-          name: SPAM2_IR30x24_D-BigBarn_Craigster Co-Op
-          pollution: 2
-          pollutionRadius: 4
-          power: 3
-          water: 24
-          waterPollution: 3
-          waterPollutionRadius: 5
-          worth: 1398
-        f6ce1687:
+        18d84fbc-f6ce1687:
           bulldoze: 169
           capacity:
             ir: 27
@@ -1992,24 +1525,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1057
-        f76986bc:
-          bulldoze: 80
-          capacity:
-            ir: 34
-          categories: agriculture
-          family: a0001534
-          flamability: 50
-          garbage: 4
-          model: badb57f1-0852
-          name: SPAM2_IR16x30_D-Stables_Becca Stables
-          pollution: 2
-          pollutionRadius: 5
-          power: 4
-          water: 40
-          waterPollution: 4
-          waterPollutionRadius: 6
-          worth: 992
-        f8e92e59:
+        18d84fbc-f8e92e59:
           bulldoze: 216
           capacity:
             ir: 17
@@ -2026,7 +1542,7 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        f8e92f11:
+        18d84fbc-f8e92f11:
           bulldoze: 216
           capacity:
             ir: 15
@@ -2043,14 +1559,500 @@ assets:
           waterPollution: 2
           waterPollutionRadius: 6
           worth: 1130
-        f945b3f3:
+        a7bddf17-07e5c5de:
+          bulldoze: 80
+          capacity:
+            ir: 11
+          categories: agriculture
+          family: a0001532
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0850
+          name: SPAM1_IR15x7_D-Shed_Bumpkin Acres
+          pollution: 1
+          pollutionRadius: 4
+          power: 1
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 466
+        a7bddf17-084d0000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-084d
+          name: IR30x24_1Farm1_084D_AlvinAcres
+        a7bddf17-084e0000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-084e
+          name: IR60x50_3Farm2_084E_PedrinaPlants
+        a7bddf17-084f0000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-084f
+          name: IR24x20_1Farm3_084F_FarhansFarms
+        a7bddf17-08500000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-0850
+          name: IR15x7_1Farm4_0850_PumpkinAcres
+        a7bddf17-08510000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-0851
+          name: IR32x32_2Farm5_0851_JezKnight
+        a7bddf17-08520000:
+          bulldoze: 34
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-0852
+          name: IR16x30_2Farm6_0852_BartheletStables
+        a7bddf17-08530000:
+          bulldoze: 50
+          capacity:
+            iht: 56
+            im: 56
+            ir: 56
+          categories: agriculture
+          model: badb57f1-0853
+          name: IR24x24_1Farm7_0853_LlamaAg
+        a7bddf17-10a8e301:
+          bulldoze: 10
+          capacity:
+            id: 13
+            im: 14
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Orangetree
+        a7bddf17-145ed92d:
+          bulldoze: 10
+          capacity:
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Agave
+        a7bddf17-1879ed69:
+          bulldoze: 10
+          capacity:
+            id: 15
+            im: 13
+            ir: 17
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Wheat
+        a7bddf17-198f529d:
+          bulldoze: 10
+          capacity:
+            ir: 10
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Tilled
+        a7bddf17-2348d63f:
+          bulldoze: 10
+          capacity:
+            ir: 13
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Grapes
+        a7bddf17-275c0c91:
+          bulldoze: 130
+          capacity:
+            ir: 21
+          categories: agriculture
+          family: a0001535
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084f
+          name: SPAM1_IR24x20_D-GHouse_Sativa Arboretum
+          pollution: 1
+          pollutionRadius: 4
+          power: 2
+          water: 16
+          waterPollution: 2
+          waterPollutionRadius: 5
+          worth: 932
+        a7bddf17-278a3d53:
+          bulldoze: 10
+          capacity:
+            ir: 12
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Hops
+        a7bddf17-2a85b88e:
+          bulldoze: 10
+          capacity:
+            id: 14
+            im: 13
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Appletree
+        a7bddf17-30ebdd06:
+          bulldoze: 10
+          capacity:
+            ir: 14
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Switchgrass
+        a7bddf17-3ae5bcaf:
+          bulldoze: 130
+          capacity:
+            ir: 20
+          categories: agriculture
+          family: a0001535
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084f
+          name: SPAM1_IR24x20_D-GHouse_Bonapartes Farms
+          pollution: 1
+          pollutionRadius: 4
+          power: 2
+          water: 16
+          waterPollution: 2
+          waterPollutionRadius: 5
+          worth: 932
+        a7bddf17-3ba190a7:
+          bulldoze: 180
+          capacity:
+            ir: 37
+          categories: agriculture
+          family: a0001533
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084d
+          name: SPAM2_IR30x24_D-BigBarn_Shrinky-Dinky Farms
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-3c5ea03a:
+          bulldoze: 10
+          capacity:
+            ir: 13
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Rubbarb
+        a7bddf17-3ddbb8a1:
+          bulldoze: 80
+          capacity:
+            ir: 10
+          categories: agriculture
+          family: a0001532
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0850
+          name: SPAM1_IR15x7_D-Shed_Fertile Farms
+          pollution: 1
+          pollutionRadius: 4
+          power: 1
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 466
+        a7bddf17-43a07361:
+          bulldoze: 10
+          capacity:
+            id: 13
+            im: 11
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Corn
+        a7bddf17-617c94c7:
+          bulldoze: 10
+          capacity:
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Tomatoes
+        a7bddf17-6bb25e7f:
+          bulldoze: 80
+          capacity:
+            ir: 35
+          categories: agriculture
+          family: a0001534
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0852
+          name: SPAM2_IR16x30_D-Stables_Buckbeach Ranch
+          pollution: 2
+          pollutionRadius: 5
+          power: 4
+          water: 40
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 992
+        a7bddf17-6cac42fb:
+          bulldoze: 130
+          capacity:
+            ir: 24
+          categories: agriculture
+          family: a0001530
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0851
+          name: SPAM1_IR24x24_D-TriBarn_Sepsis Commune
+          pollution: 3
+          pollutionRadius: 5
+          power: 4
+          water: 50
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 1240
+        a7bddf17-6e5b6b89:
+          bulldoze: 130
+          capacity:
+            ir: 51
+          categories: agriculture
+          family: a0001531
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0853
+          name: SPAM3_IR32x32_D-Grain_Kernel Sander's Cornicopia
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-75f8d36d:
+          bulldoze: 10
+          capacity:
+            id: 12
+            im: 11
+            ir: 13
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Lemontree
+        a7bddf17-7635f8dc:
+          bulldoze: 130
+          capacity:
+            ir: 32
+          categories: agriculture
+          family: a0001530
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0851
+          name: SPAM1_IR24x24_D-TrBarn_Fred & Ginger's Free Hold
+          pollution: 3
+          pollutionRadius: 5
+          power: 4
+          water: 50
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 1240
+        a7bddf17-7fc108a1:
+          bulldoze: 130
+          capacity:
+            ir: 52
+          categories: agriculture
+          family: a0001531
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0853
+          name: 'SPAM3_IR32x32_D-Grain_Hogs Granary #29'
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-8160026c:
+          bulldoze: 130
+          capacity:
+            ir: 49
+          categories: agriculture
+          family: a0001531
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0853
+          name: SPAM3_IR32x32_D-Grain_Meastro Co-Op
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-94169840:
+          bulldoze: 10
+          capacity:
+            id: 14
+            im: 13
+            ir: 15
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Barley
+        a7bddf17-9a4c8535:
+          bulldoze: 10
+          capacity:
+            ir: 11
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Rye
+        a7bddf17-9e7e9e46:
+          bulldoze: 130
+          capacity:
+            ir: 25
+          categories: agriculture
+          family: a0001530
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0851
+          name: SPAM1_IR24x24_D-TriBarn_Tungston Farms
+          pollution: 3
+          pollutionRadius: 5
+          power: 4
+          water: 50
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 1240
+        a7bddf17-a9270458:
+          bulldoze: 10
+          capacity:
+            ir: 11
+          categories: agriculture
+          model: badb57f1-0e11
+          name: SPAM_1x1_Pasture
+        a7bddf17-bf589ade:
+          bulldoze: 180
+          capacity:
+            ir: 36
+          categories: agriculture
+          family: a0001533
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084d
+          name: SPAM2_IR30x24_D-BigBarn_Krio Farmstead
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-d0109010:
+          bulldoze: 80
+          capacity:
+            ir: 36
+          categories: agriculture
+          family: a0001534
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0852
+          name: SPAM2_IR16x30_D-Stables_GotTrots Horsuary
+          pollution: 2
+          pollutionRadius: 5
+          power: 4
+          water: 40
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 992
+        a7bddf17-d858622c:
+          bulldoze: 80
+          capacity:
+            ir: 12
+          categories: agriculture
+          family: a0001532
+          flamability: 45
+          garbage: 4
+          model: badb57f1-0850
+          name: SPAM1_IR15x7_D-Shed_Jethro Estates
+          pollution: 1
+          pollutionRadius: 4
+          power: 1
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 466
+        a7bddf17-df9ee321:
+          bulldoze: 130
+          capacity:
+            ir: 22
+          categories: agriculture
+          family: a0001535
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084f
+          name: SPAM1_IR24x20_D-GHouse_Bitchen Botanicals
+          pollution: 1
+          pollutionRadius: 4
+          power: 2
+          water: 16
+          waterPollution: 2
+          waterPollutionRadius: 5
+          worth: 932
+        a7bddf17-f05f8545:
+          bulldoze: 180
+          capacity:
+            ir: 38
+          categories: agriculture
+          family: a0001533
+          flamability: 45
+          garbage: 4
+          model: badb57f1-084d
+          name: SPAM2_IR30x24_D-BigBarn_Craigster Co-Op
+          pollution: 2
+          pollutionRadius: 4
+          power: 3
+          water: 24
+          waterPollution: 3
+          waterPollutionRadius: 5
+          worth: 1398
+        a7bddf17-f76986bc:
+          bulldoze: 80
+          capacity:
+            ir: 34
+          categories: agriculture
+          family: a0001534
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0852
+          name: SPAM2_IR16x30_D-Stables_Becca Stables
+          pollution: 2
+          pollutionRadius: 5
+          power: 4
+          water: 40
+          waterPollution: 4
+          waterPollutionRadius: 6
+          worth: 992
+        a7bddf17-f945b3f3:
           bulldoze: 10
           capacity:
             ir: 14
           categories: agriculture
           model: badb57f1-0e11
           name: SPAM_1x1_Lettuce-Mature
-        ffebf1c7:
+        a7bddf17-ffebf1c7:
           bulldoze: 10
           capacity:
             id: 13
@@ -2060,7 +2062,7 @@ assets:
           model: badb57f1-0e11
           name: SPAM_1x1_Peachtree
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
-        073dc000:
+        a7bddf17-073dc000:
           bulldoze: 5
           capacity:
             ir: 1
@@ -2068,95 +2070,95 @@ assets:
           model: badb57f1-0e11
           name: SPAM_FarmField_Tilled
           water: 1
-        073dc001:
+        a7bddf17-073dc001:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Pasture
           pollution: -1
           pollutionRadius: 4
-        073dc002:
+        a7bddf17-073dc002:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Agava
           pollution: -1
           pollutionRadius: 4
-        073dc003:
+        a7bddf17-073dc003:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Tomatoes
           pollution: -1
           pollutionRadius: 4
-        073dc004:
+        a7bddf17-073dc004:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Hops
           pollution: -1
           pollutionRadius: 4
-        073dc005:
+        a7bddf17-073dc005:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Grapes
           pollution: -1
           pollutionRadius: 4
-        073dc006:
+        a7bddf17-073dc006:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Corn
           pollution: -1
           pollutionRadius: 4
-        073dc007:
+        a7bddf17-073dc007:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Wheat
           pollution: -1
           pollutionRadius: 4
-        073dc008:
+        a7bddf17-073dc008:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Barley
           pollution: -1
           pollutionRadius: 4
-        073dc009:
+        a7bddf17-073dc009:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Rye
           pollution: -1
           pollutionRadius: 4
-        073dc00a:
+        a7bddf17-073dc00a:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Switchgrass
           pollution: -1
           pollutionRadius: 4
-        073dc00b:
+        a7bddf17-073dc00b:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Orangetree
           pollution: -1
           pollutionRadius: 4
-        073dc00c:
+        a7bddf17-073dc00c:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Appletree
           pollution: -1
           pollutionRadius: 4
-        073dc00d:
+        a7bddf17-073dc00d:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Lemontree
           pollution: -1
           pollutionRadius: 4
-        073dc00e:
+        a7bddf17-073dc00e:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Peachtree
           pollution: -1
           pollutionRadius: 4
-        073dc00f:
+        a7bddf17-073dc00f:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_Rubbarb
-        073dc010:
+        a7bddf17-073dc010:
           bulldoze: 5
           model: badb57f1-0e11
           name: SPAM_FarmField_LettuceMature
@@ -2238,41 +2240,41 @@ assets:
           density: low
           name: I-r2_1x2_D_FarmMarket
           props:
-            - a0001541
-            - a000007b
+            - 0bf7dc29
+            - 1a3eeb0d
             - '28e00000'
+            - '28e30000'
+            - '28e50000'
+            - 29c20000
             - 2a580000
             - 2e93539e
-            - a000003d
-            - 29c20000
             - 3eea27a4
-            - 0bf7dc29
             - 791b99b3
-            - '28e50000'
-            - '28e30000'
-            - 1a3eeb0d
+            - a000003d
+            - a000007b
+            - a0001541
           size: 1x2
           stage: 1
           textures:
-            - 1da44d95
             - 1da44c05
+            - 1da44d95
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_D_Shed_90001300.SC4Lot:
         '90001300':
           building: a0001532
           density: low
           name: I-r1_1x2_D_Shed
           props:
-            - '29120000'
             - '03060000'
+            - 1a706cba
             - 1cf70000
+            - '29120000'
             - 2a580000
             - 3918c355
-            - e741574f
             - 50d035ae
             - 94fd8c13
             - a0001541
-            - 1a706cba
             - a0dcb9bd
+            - e741574f
           size: 1x2
           stage: 1
           textures:
@@ -2284,22 +2286,22 @@ assets:
           density: low
           name: I-r1_1x2_Homestead
           props:
-            - 1ecf0000
-            - 2ba20000
-            - 1ece0000
-            - 791b99b3
             - 073d475d
-            - 94d11400
-            - 27aa01ad
             - 0bf7dc29
-            - 3eea27a4
+            - 1ece0000
+            - 1ecf0000
+            - 27aa01ad
+            - 2ba20000
             - 2fc11611
+            - 3eea27a4
+            - 791b99b3
+            - 94d11400
             - a0001541
           size: 1x2
           stage: 1
           textures:
-            - 1da44cf5
             - 1da44c65
+            - 1da44cf5
             - 1da44d70
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_1x2_Shed_7921769c.SC4Lot:
         7921769c:
@@ -2307,66 +2309,66 @@ assets:
           density: low
           name: I-r1_1x2_Shed
           props:
-            - 2a580000
-            - 94d11400
-            - d295233d
-            - 2ba20000
+            - 0bf7dc29
             - 1ece0000
             - 1ecf0000
             - 27aa01ad
-            - 9c4ad13b
-            - 791b99b3
-            - 0bf7dc29
-            - e741574f
+            - 2a580000
+            - 2ba20000
             - 3eea27a4
             - '40725970'
+            - 791b99b3
+            - 94d11400
+            - 9c4ad13b
             - a0dcb9bd
+            - d295233d
+            - e741574f
           size: 1x2
           stage: 1
           textures:
-            - 25d60000
-            - 1da44d35
             - 1da44d20
+            - 1da44d35
+            - 25d60000
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x1_BasicBarn_f9235e5a.SC4Lot:
         f9235e5a:
           building: a0001514
           density: low
           name: I-r1_2x1_BasicBarn
           props:
+            - 073d4699
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 29c20000
             - 2ba20000
             - 2e93539e
-            - 29c20000
-            - 0bf7dc29
-            - e741574f
-            - 1a3eeb0d
-            - 073d4699
             - a0001541
+            - e741574f
           size: 2x1
           stage: 1
           textures:
             - 1da44c10
-            - 1da44d85
             - 1da44c65
+            - 1da44d85
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x1_D_Shed_900012f0.SC4Lot:
         900012f0:
           building: a0001532
           density: low
           name: I-r1_2x1_D_Shed
           props:
-            - 27aa01ad
-            - 2ba20000
-            - 791b99b3
             - 1ece0000
             - 1ecf0000
-            - 2a580000
-            - 50d035ae
-            - '40725970'
-            - 94fd8c13
-            - 2fc11611
+            - 27aa01ad
             - 2a490000
+            - 2a580000
+            - 2ba20000
+            - 2fc11611
+            - '40725970'
+            - 50d035ae
+            - 791b99b3
+            - 94fd8c13
+            - a0001541
             - a0001549
             - a0dcb9bd
-            - a0001541
           size: 2x1
           stage: 1
           textures:
@@ -2379,37 +2381,37 @@ assets:
           density: low
           name: I-r1_2x2_D_FarmHouse-Silo
           props:
-            - a0001541
-            - 791b99b3
-            - 5123c52d
             - 0bf7dc29
-            - 2ba20000
-            - 94d11400
             - 1ece0000
             - 29c20000
+            - 2ba20000
+            - 5123c52d
+            - 791b99b3
+            - 94d11400
             - a000007d
-            - a0001549
             - a000150e
+            - a0001541
+            - a0001549
           size: 2x2
           stage: 1
           textures:
+            - 1da44c65
             - 1da44cf5
             - 1da44d75
-            - 1da44d85
             - 1da44d7a
-            - 1da44c65
+            - 1da44d85
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x2_D_FulFarm_90001310.SC4Lot:
         '90001310':
           building: a0001530
           density: low
           name: I-r1_2x2_D_FullFarm
           props:
-            - 791b99b3
-            - c1cd4a24
             - 084fa8ca
-            - 94fd8c13
             - '40725970'
             - 50d035ae
+            - 791b99b3
+            - 94fd8c13
+            - c1cd4a24
           size: 2x2
           stage: 1
           textures:
@@ -2420,124 +2422,124 @@ assets:
           density: low
           name: I-r1_2x2_D_Greenhouse
           props:
-            - a0dcb9bd
             - 0bf7dc29
+            - 1a3eeb0d
             - 1a9935bf
             - 1d300000
-            - a000005f
-            - a000007c
-            - a0000021
+            - 1ece0000
             - 2ba20000
             - 791b99b3
-            - 1a3eeb0d
-            - 1ece0000
+            - a0000021
+            - a000005f
+            - a000007c
             - a0001547
+            - a0dcb9bd
           size: 2x2
           stage: 1
           textures:
             - 1da44cf5
+            - 1da44d15
             - 1da44d70
             - 1da44d7a
-            - 1da44d15
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_BasicBarn_90001390.SC4Lot:
         '90001390':
           building: a0001514
           density: low
           name: I-r1_2x3_D_BasicBarn
           props:
-            - 2a490000
+            - 073d4699
+            - 084fa8ca
+            - 0bf7dc29
+            - 29c20000
             - 2a190000
             - 2a1a0000
             - 2a420000
-            - a0000078
-            - a0000052
-            - a0001540
-            - 791b99b3
-            - a0001541
-            - a000003d
-            - 94fd8c13
+            - 2a490000
+            - 2a580000
+            - 2e93539e
+            - 3eea27a4
             - '40725970'
             - 50d035ae
-            - 084fa8ca
-            - 29c20000
-            - 0bf7dc29
-            - a0dcb9bd
-            - 2e93539e
-            - 073d4699
-            - ae060000
+            - 791b99b3
+            - 94fd8c13
+            - a000003d
+            - a0000052
+            - a0000078
+            - a0001540
+            - a0001541
             - a0001543
-            - 3eea27a4
-            - 2a580000
+            - a0dcb9bd
+            - ae060000
           size: 2x3
           stage: 1
           textures:
-            - 1da44d7a
-            - 1da44d70
-            - 1da44d80
             - 1da44cf5
+            - 1da44d70
             - 1da44d75
+            - 1da44d7a
+            - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_Greenhouses_900012d0.SC4Lot:
         900012d0:
           building: a0001501
           density: low
           name: I-r1_2x3_Greenhouses
           props:
-            - a0001405
-            - b8eabdd5
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 1a9935bf
+            - 27aa01ad
+            - 29c20000
+            - 2fc11611
+            - 3eea27a4
+            - 5034d90b
+            - 50d035ae
             - 791b99b3
             - 95589f6b
-            - a0001542
-            - 2fc11611
+            - a0001405
             - a0001541
-            - 1a3eeb0d
-            - 5034d90b
-            - d0ac71c3
+            - a0001542
+            - b8eabdd5
             - c3b05200
-            - 27aa01ad
-            - 0bf7dc29
-            - 1a9935bf
-            - 50d035ae
-            - 3eea27a4
-            - 29c20000
+            - d0ac71c3
           size: 2x3
           stage: 1
           textures:
             - 1da44ce5
-            - 1da44d90
             - 1da44d05
             - 1da44d30
+            - 1da44d90
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_2x3_D_TriBarn_90001330.SC4Lot:
         '90001330':
           building: a0001530
           density: low
           name: I-r1_2x3_D_TriBarn
           props:
-            - 1c410000
-            - 1de00000
+            - 0bf7dc29
+            - 1c3f0000
             - 1c400000
-            - 2a190000
-            - 2a490000
+            - 1c410000
+            - 1c420000
             - 1d430000
             - 1d4a0000
+            - 1de00000
+            - 2a190000
             - 2a1a0000
             - 2a480000
-            - 1c420000
-            - 2a4c0000
-            - 2a6f0000
-            - 2a6e0000
+            - 2a490000
             - 2a4b0000
-            - 1c3f0000
-            - 791b99b3
-            - 94fd8c13
+            - 2a4c0000
+            - 2a580000
+            - 2a6e0000
+            - 2a6f0000
+            - 2ba20000
             - '40725970'
             - 50d035ae
             - 5123c52d
+            - 791b99b3
             - 94d11400
-            - 0bf7dc29
-            - 2ba20000
-            - a0001541
+            - 94fd8c13
             - a000007b
-            - 2a580000
+            - a0001541
           size: 2x3
           stage: 1
           textures:
@@ -2550,190 +2552,190 @@ assets:
           density: low
           name: I-r1_3x2_D_Farm w silo
           props:
-            - a000150f
-            - '29120000'
-            - 3918c355
-            - 791b99b3
-            - 6a3fcb62
-            - 1a9935bf
-            - 0bf7dc29
-            - a0dcb9bd
-            - a0001546
-            - a0001541
-            - 2e93539e
-            - 2ba20000
-            - a000007d
-            - '40725970'
-            - 95589f6b
-            - 2a580000
-            - 1ece0000
-            - c3b05200
             - 073d4699
+            - 0bf7dc29
+            - 1a9935bf
+            - 1ece0000
+            - '29120000'
+            - 2a580000
+            - 2ba20000
+            - 2e93539e
+            - 3918c355
+            - '40725970'
+            - 6a3fcb62
+            - 791b99b3
+            - 95589f6b
+            - a000007d
+            - a000150f
+            - a0001541
+            - a0001546
+            - a0dcb9bd
+            - c3b05200
           size: 3x2
           stage: 1
           textures:
-            - 1da44cf5
-            - 1da44d75
             - 1da44c65
-            - 1da44d80
-            - 1da44d70
             - 1da44c75
+            - 1da44cf5
+            - 1da44d70
+            - 1da44d75
+            - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_3x2_D_Farm wBarn_900012c0.SC4Lot:
         900012c0:
           building: a0001514
           density: low
           name: I-r1_3x2_D_Farm wBarn
           props:
-            - a0001505
-            - a0001549
-            - 6ba34e09
-            - ae060000
-            - a0001547
-            - a0001541
-            - 791b99b3
-            - 1a706cba
-            - 420521a4
-            - 3eea27a4
-            - e741574f
-            - 0bf7dc29
-            - 1ece0000
-            - d0ac71c3
-            - 2a580000
-            - a000007b
-            - 073d475c
             - 073d4699
+            - 073d475c
+            - 0bf7dc29
+            - 1a706cba
+            - 1ece0000
+            - 2a580000
+            - 3eea27a4
+            - 420521a4
+            - 6ba34e09
+            - 791b99b3
+            - a000007b
+            - a0001505
+            - a0001541
+            - a0001547
+            - a0001549
+            - ae060000
+            - d0ac71c3
+            - e741574f
           size: 3x2
           stage: 1
           textures:
+            - 1da44c55
+            - 1da44c60
+            - 1da44c65
             - 1da44cf5
-            - 1da44d95
             - 1da44d75
             - 1da44d7a
-            - 1da44c60
-            - 1da44c55
-            - 1da44c65
+            - 1da44d95
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_3x2_D_Farmhouse wBarnSilo_90001320.SC4Lot:
         '90001320':
           building: a0001500
           density: low
           name: I-r1_3x2_D_Farmhouse wBarnSilo
           props:
-            - 2fc11611
-            - 073d475d
-            - 791b99b3
-            - 420521a4
-            - 1a706cba
-            - 4079b7a9
-            - 94d11400
-            - e741574f
-            - 3eea27a4
-            - 0bf7dc29
-            - 2a580000
-            - a0001547
-            - a0001541
-            - 1ece0000
-            - 1a3eeb0d
-            - 2a1a0000
-            - 1c420000
-            - 29c20000
-            - a000150b
             - 073d4699
+            - 073d475d
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 1a706cba
+            - 1c420000
+            - 1ece0000
+            - 29c20000
+            - 2a1a0000
+            - 2a580000
+            - 2fc11611
+            - 3eea27a4
+            - 4079b7a9
+            - 420521a4
+            - 791b99b3
+            - 94d11400
+            - a000150b
+            - a0001541
+            - a0001547
+            - e741574f
           size: 3x2
           stage: 1
           textures:
-            - 1da44cf5
-            - 1da44d60
-            - 1da44d90
-            - 1da44d15
-            - 1da44d75
             - 1da44c65
+            - 1da44cf5
+            - 1da44d15
+            - 1da44d60
+            - 1da44d75
+            - 1da44d90
       PEGPROD/SPAM/SPAM_Core_Lots/I-r1_5x6_D_TriBarn_90001311.SC4Lot:
         '90001311':
           building: a0001530
           density: low
           name: I-r1_5x6_D_TriBarn_
           props:
-            - 1c420000
-            - 2a6e0000
-            - 2a4b0000
-            - 2a490000
-            - a000004a
-            - 2a190000
-            - 2a6f0000
-            - 2a4c0000
-            - a0000056
-            - 791b99b3
-            - 1a706cba
-            - 2fc11611
-            - 2a580000
-            - 0bf7dc29
-            - e741574f
-            - 3eea27a4
-            - 2a1a0000
-            - 1c410000
-            - 1a9935bf
             - 073d4750
+            - 0bf7dc29
             - 1a3eeb0d
+            - 1a706cba
+            - 1a9935bf
+            - 1c410000
+            - 1c420000
+            - 1e9a0000
+            - 2a190000
+            - 2a1a0000
+            - 2a490000
+            - 2a4b0000
+            - 2a4c0000
+            - 2a580000
+            - 2a6e0000
+            - 2a6f0000
+            - 2fc11611
+            - 3eea27a4
+            - 774e0edb
+            - 791b99b3
+            - a000004a
+            - a0000056
             - a0001541
             - a0001547
             - a0001549
-            - 1e9a0000
-            - 774e0edb
+            - e741574f
           size: 5x6
           stage: 1
           textures:
-            - 261c0000
-            - 1da44cf5
-            - 1da44d75
-            - 1da44d7a
+            - 1da44820
             - 1da44c50
             - 1da44c55
+            - 1da44c65
+            - 1da44cf5
             - 1da44d15
             - 1da44d5a
-            - 1da44c65
-            - 1da44820
+            - 1da44d75
+            - 1da44d7a
+            - 261c0000
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x1_FancyBarn_f936f4fd.SC4Lot:
         f936f4fd:
           building: a0001516
           density: low
           name: I-r2_2x1_FancyBarn
           props:
-            - 2ba20000
-            - 791b99b3
-            - 2a580000
-            - 2e93539e
-            - 29c20000
-            - 3eea27a4
-            - e741574f
-            - 0bf7dc29
-            - 95589f6b
-            - 1a3eeb0d
-            - 5123c52d
             - 073d4699
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 29c20000
+            - 2a580000
+            - 2ba20000
+            - 2e93539e
             - 2fc11611
+            - 3eea27a4
+            - 5123c52d
+            - 791b99b3
+            - 95589f6b
             - a0001541
+            - e741574f
           size: 2x1
           stage: 2
           textures:
             - 1da44c10
-            - 1da44d85
             - 1da44c65
+            - 1da44d85
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x2_D_Stables_90001350.SC4Lot:
         '90001350':
           building: a0001534
           density: low
           name: I-r2_2x2_D_Stables
           props:
-            - 2fc11611
-            - 95589f6b
+            - 073d4699
             - 0bf7dc29
             - 1a9935bf
-            - 073d4699
-            - e741574f
-            - 4ede9e23
-            - 2a190000
-            - a0001541
             - 29c20000
+            - 2a190000
+            - 2fc11611
+            - 4ede9e23
+            - 95589f6b
+            - a0001541
+            - e741574f
           size: 2x2
           stage: 2
           textures:
@@ -2746,45 +2748,45 @@ assets:
           name: I-r2_2x2_D_BigBarn
           props:
             - 1c410000
-            - 2a490000
             - 1d430000
             - 2a1a0000
+            - 2a490000
+            - 2a580000
             - 50d035ae
+            - 6ba34e09
             - 94fd8c13
             - a0001549
-            - 6ba34e09
-            - 2a580000
           size: 2x2
           stage: 2
           textures:
             - 1da44c05
-            - 1da44d95
             - 1da44c60
             - 1da44d75
+            - 1da44d95
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x3_D_GreenHouse02_90001270.SC4Lot:
         '90001270':
           building: a0001502
           density: low
           name: I-r2_2x3_D_GreenHouse02
           props:
-            - 791b99b3
-            - 1a3eeb0d
             - 0bf7dc29
+            - 1a3eeb0d
+            - 29c20000
+            - 2a580000
+            - 31d610f7
+            - 791b99b3
             - a0001541
             - a0001549
-            - 29c20000
             - c1cd4a24
             - c76943f6
-            - 31d610f7
-            - 2a580000
           size: 2x3
           stage: 2
           textures:
-            - 1da44cf5
-            - 1da44d7a
             - 1da44c65
             - 1da44c6a
+            - 1da44cf5
             - 1da44d70
+            - 1da44d7a
             - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_2x3_D_MultiFarm_90001360.SC4Lot:
         '90001360':
@@ -2792,33 +2794,33 @@ assets:
           density: low
           name: I-r2_2x3_D_MultiFarm
           props:
-            - 2fc11611
-            - 791b99b3
-            - c1cd4a24
+            - 073d4699
             - 073d475d
-            - 3eea27a4
             - 0bf7dc29
+            - 1a3eeb0d
             - 1ece0000
             - 1eff0000
-            - ae060000
-            - 1a3eeb0d
-            - 073d4699
             - 29c20000
-            - a0001541
-            - 9c4ad13b
-            - a454dbc9
+            - 2fc11611
+            - 3eea27a4
             - 725f1723
-            - a0dcb9bd
+            - 791b99b3
+            - 9c4ad13b
             - a0001505
+            - a0001541
+            - a0dcb9bd
+            - a454dbc9
+            - ae060000
+            - c1cd4a24
           size: 2x3
           stage: 2
           textures:
-            - 1da44cf5
-            - 1da44d5a
-            - 1da44d10
-            - 1da44d05
-            - 1da44d15
             - 1da44c6a
+            - 1da44cf5
+            - 1da44d05
+            - 1da44d10
+            - 1da44d15
+            - 1da44d5a
       PEGPROD/SPAM/SPAM_Core_Lots/I-r2_3x2_D_Farm_90001260.SC4Lot:
         '90001260':
           building: a0001533
@@ -2826,426 +2828,426 @@ assets:
           name: I-r2_3x2_D_Farm
           props:
             - 0bf7dc29
-            - 3eea27a4
-            - 29fb0dd2
-            - 94d11400
-            - a0001549
-            - a0001541
-            - 2a580000
-            - e741574f
-            - a000007b
             - 1ece0000
             - 1ecf0000
+            - 29fb0dd2
+            - 2a580000
+            - 3eea27a4
+            - 94d11400
+            - a000007b
+            - a0001541
+            - a0001549
+            - e741574f
           size: 3x2
           stage: 2
           textures:
             - 1da44cf5
-            - 1da44d7a
             - 1da44d70
             - 1da44d75
+            - 1da44d7a
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x2_Elevator_Small_3936f638.SC4Lot:
         3936f638:
           building: a0001510
           density: low
           name: I-r3_2x2_Elevator_Small
           props:
-            - a0001544
-            - a0001540
-            - a0001541
-            - 791b99b3
-            - 5123c52d
             - 0bf7dc29
-            - 2ba20000
-            - 94d11400
             - 1ece0000
             - 29c20000
+            - 2ba20000
+            - 5123c52d
+            - 791b99b3
+            - 94d11400
             - a000007d
+            - a0001540
+            - a0001541
+            - a0001544
           size: 2x2
           stage: 3
           textures:
+            - 1da44c65
             - 1da44cf5
             - 1da44d75
-            - 1da44d85
             - 1da44d7a
-            - 1da44c65
+            - 1da44d85
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x2_Greenhouses_59309f52.SC4Lot:
         59309f52:
           building: a0001503
           density: low
           name: I-r3_2x2_Greenhouses
           props:
-            - a0dcb9bd
             - 0bf7dc29
+            - 1a3eeb0d
+            - '1e060000'
+            - 1e9a0000
+            - 1ece0000
+            - 1edd0000
+            - '29010000'
+            - '29150000'
+            - '29330000'
+            - 29fb0dd2
+            - 2e240fe9
+            - 384e3fd4
+            - 95940fdf
+            - 9fab4942
+            - a000003d
             - a000005f
             - a000007c
-            - 1a3eeb0d
-            - 1ece0000
+            - a0dcb9bd
             - a52f0609
-            - 29fb0dd2
-            - 9fab4942
-            - 384e3fd4
-            - 2e240fe9
-            - 95940fdf
-            - 1e9a0000
-            - 1edd0000
-            - '29150000'
-            - '1e060000'
-            - '29330000'
-            - '29010000'
-            - a000003d
           size: 3x3
           stage: 3
           textures:
-            - 1da44cf5
             - 1da44750
             - 1da447f0
             - 1da447f5
             - 1da44cd5
+            - 1da44cf5
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_2x3_BarnSilo_f9370279.SC4Lot:
         f9370279:
           building: a000150a
           density: low
           name: I-r3_2x3_BarnSilo
           props:
-            - 791b99b3
-            - 1a3eeb0d
-            - 0bf7dc29
+            - 06f6c79c
             - 073d4699
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 29c20000
+            - 5123c52d
+            - 725f1723
+            - 791b99b3
             - a0001541
             - a0001549
-            - 5123c52d
-            - 29c20000
-            - c1cd4a24
-            - 06f6c79c
-            - 725f1723
+            - a454dbc9
             - b063964b
             - b8eabdd5
+            - c1cd4a24
             - c76943f6
-            - a454dbc9
             - c8df1fef
           size: 2x3
           stage: 3
           textures:
-            - 1da44cf5
-            - 1da44d7a
             - 1da44c55
             - 1da44c65
             - 1da44c6a
+            - 1da44cf5
             - 1da44d70
+            - 1da44d7a
       PEGPROD/SPAM/SPAM_Core_Lots/I-r3_6x5_D_Ranch_90001251.SC4Lot:
         '90001251':
           building: 7955afd8
           density: low
           name: I-r3_6x5_D_Ranch
           props:
-            - 2a6f0000
-            - 2a4c0000
-            - 0c0741a7
-            - a48f0664
-            - 29fb0dd2
-            - 384e3fd4
-            - 9fab4942
-            - 791b99b3
-            - 2fc11611
-            - 4ede9e23
-            - 1d1407c2
             - 04996c10
-            - 1a706cba
-            - 420521a4
-            - 2dd315d7
-            - cdd3258d
-            - 6ede9e43
-            - 1c420000
-            - 2a1a0000
-            - 1a9935bf
-            - 3eea27a4
-            - 0bf7dc29
-            - aa739fa7
-            - e741574f
-            - a0dcb9bd
-            - 2a490000
-            - 2a190000
-            - a1ebb58b
-            - 1c410000
-            - a0001540
-            - a0001541
             - 073d4699
+            - 0bf7dc29
+            - 0c0741a7
+            - 1a3eeb0d
+            - 1a706cba
+            - 1a9935bf
+            - 1c410000
+            - 1c420000
+            - 1d1407c2
             - 1e9a0000
             - 29c20000
-            - 1a3eeb0d
+            - 29fb0dd2
+            - 2a190000
+            - 2a1a0000
+            - 2a490000
+            - 2a4c0000
             - 2a580000
+            - 2a6f0000
             - 2aba0000
+            - 2dd315d7
+            - 2fc11611
+            - 384e3fd4
+            - 3eea27a4
+            - 420521a4
+            - 4ede9e23
+            - 6ede9e43
+            - 791b99b3
+            - 9fab4942
+            - a0001540
+            - a0001541
+            - a0dcb9bd
+            - a1ebb58b
+            - a48f0664
+            - aa739fa7
+            - cdd3258d
+            - e741574f
           size: 6x5
           stage: 3
           textures:
-            - 1da44cf5
-            - 1da44d10
-            - 1da44d00
-            - 1da44d70
-            - 1da44c55
-            - 1da44d80
-            - 1da44c60
-            - 1da44d05
-            - 1da44c5a
             - 1da44c50
-            - 1da44d7a
-            - 1da44cca
+            - 1da44c55
+            - 1da44c5a
+            - 1da44c60
             - 1da44c65
+            - 1da44cca
+            - 1da44cf5
+            - 1da44d00
+            - 1da44d05
+            - 1da44d10
+            - 1da44d70
+            - 1da44d7a
+            - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_4x4_D_Dairy_90001280.SC4Lot:
         '90001280':
           building: a0001508
           density: low
           name: I-r4_4x4_D_Dairy
           props:
-            - 2fc11611
-            - 29fb0dd2
+            - 073d4699
+            - 0bf7dc29
+            - 1a3eeb0d
             - 1d1407c2
-            - 473b069f
+            - 1eec0000
+            - 27aa01ad
+            - 29c20000
+            - 29fb0dd2
+            - 2a580000
+            - 2fc11611
+            - 31d610f7
             - 384e3fd4
-            - a0001548
+            - 3eea27a4
+            - 473b069f
+            - 4bb95093
+            - 735641c2
+            - 94d11400
+            - a000006d
+            - a000007d
             - a0001540
             - a0001541
-            - 3eea27a4
-            - 0bf7dc29
-            - 1eec0000
-            - ef183c1d
-            - 735641c2
-            - a1011af0
-            - 4bb95093
             - a0001547
+            - a0001548
+            - a1011af0
             - aa739fa6
-            - a000006d
-            - 2a580000
-            - 29c20000
-            - a000007d
-            - 1a3eeb0d
-            - 31d610f7
             - c3b05200
-            - 27aa01ad
-            - 94d11400
-            - 073d4699
+            - ef183c1d
           size: 4x4
           stage: 4
           textures:
+            - 1da44c00
+            - 1da44c50
+            - 1da44c65
+            - 1da44cca
             - 1da44cf5
+            - 1da44d00
+            - 1da44d05
+            - 1da44d15
+            - 1da44d1a
+            - 1da44d5a
+            - 1da44d70
             - 1da44d80
             - 1da44d90
-            - 1da44d5a
-            - 1da44d00
-            - 1da44d15
-            - 1da44d05
-            - 1da44d1a
-            - 1da44c65
-            - 1da44d70
-            - 1da44c50
-            - 1da44c00
-            - 1da44cca
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_4x4_Dairy_59306c7c.SC4Lot:
         59306c7c:
           building: a0001508
           density: low
           name: I-r4_4x4_Dairy
           props:
-            - 2fc11611
-            - 29fb0dd2
-            - 1d1407c2
-            - 473b069f
-            - 384e3fd4
-            - a0001548
-            - a0001540
-            - a0001541
-            - 3eea27a4
-            - 0bf7dc29
-            - 1eec0000
-            - ef183c1d
-            - 735641c2
-            - a1011af0
-            - 4bb95093
-            - a0001547
-            - aa739fa6
-            - 2a580000
-            - 29c20000
-            - a000007d
-            - 1a3eeb0d
-            - 31d610f7
-            - c3b05200
-            - 27aa01ad
-            - 94d11400
             - 073d4699
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 1ca10000
+            - 1d1407c2
             - 1ece0000
+            - 1eec0000
+            - 27aa01ad
+            - 29c20000
+            - 29fb0dd2
+            - 2a580000
             - 2a6e0000
             - 2a6f0000
+            - 2fc11611
+            - 31d610f7
+            - 384e3fd4
             - 3918c355
-            - 1ca10000
+            - 3eea27a4
+            - 473b069f
+            - 4bb95093
             - 4bcf8d40
+            - 735641c2
+            - 94d11400
+            - a000007d
+            - a0001540
+            - a0001541
+            - a0001547
+            - a0001548
+            - a1011af0
             - a454dbc9
+            - aa739fa6
+            - c3b05200
+            - ef183c1d
           size: 4x4
           stage: 4
           textures:
+            - 1da447b0
+            - 1da44835
+            - 1da44845
+            - 1da44850
+            - 1da44855
+            - 1da44a4a
+            - 1da44a50
+            - 1da44cca
             - 1da44cf5
             - 1da44d15
             - 1da44d1a
-            - 1da44cca
-            - 1da44845
-            - 1da44855
-            - 1da44850
-            - 1da44835
-            - 1da44a50
-            - 1da44a4a
-            - 1da447b0
       PEGPROD/SPAM/SPAM_Core_Lots/I-r4_7x6_D_Dairy_90001341.SC4Lot:
         '90001341':
           building: a0001508
           density: low
           name: I-r4_7x6_D_Dairy
           props:
-            - 2a6f0000
-            - 2a4c0000
-            - aa739fa6
-            - 0c0741a7
-            - 4a080362
-            - 95589f6b
-            - 2fc11611
+            - 073d4699
             - 0bf7dc29
+            - 0c0741a7
+            - 1a3eeb0d
+            - 1c410000
+            - 1ca10000
             - 1ece0000
-            - 4363cfc2
+            - 27aa01ad
+            - 29c20000
+            - 2a1a0000
+            - 2a490000
+            - 2a4c0000
+            - 2a580000
+            - 2a6f0000
+            - 2fc11611
             - 3eea27a4
-            - 94fd8c13
+            - 4363cfc2
+            - 4a080362
             - 50d035ae
+            - 94fd8c13
+            - 95589f6b
+            - a0001540
+            - a0001541
+            - a0001547
+            - a0001548
             - a0001549
+            - aa739fa6
             - c76943f6
             - c8df1fef
-            - a0001547
-            - 1ca10000
-            - 2a1a0000
-            - a0001541
-            - 2a580000
-            - a0001548
-            - a0001540
-            - 29c20000
-            - 073d4699
-            - 1c410000
-            - 2a490000
-            - 27aa01ad
-            - 1a3eeb0d
           size: 7x6
           stage: 4
           textures:
-            - 1da44cf5
-            - 1da44d80
-            - 1da44d70
-            - 1da44d60
-            - 1da44c5a
-            - 1da44d00
-            - 1da44c55
-            - 1da44c65
             - 1da44c50
-            - 1da44d1a
-            - 1da44d05
-            - 1da44d10
+            - 1da44c55
+            - 1da44c5a
+            - 1da44c65
+            - 1da44c6a
             - 1da44cc0
             - 1da44cca
-            - 1da44c6a
+            - 1da44cf5
+            - 1da44d00
+            - 1da44d05
+            - 1da44d10
+            - 1da44d1a
+            - 1da44d60
+            - 1da44d70
+            - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_D_Elevator_900012a0.SC4Lot:
         900012a0:
           building: a0001512
           density: low
           name: I-r5_4x6_D_LargeElevator
           props:
-            - 95589f6b
-            - 791b99b3
+            - 073d4699
+            - 073d489d
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 1c420000
+            - 1e9a0000
+            - 29c20000
+            - 2a1a0000
+            - 2a580000
+            - 2e93539e
             - 2fc11611
+            - 3918c355
+            - '40725970'
+            - 4450a572
+            - 50d035ae
+            - 5123c52d
+            - 6ba34e09
+            - 791b99b3
+            - 94fd8c13
+            - 95589f6b
             - a0001540
             - a0001541
             - a0001544
             - a0001549
-            - 2e93539e
-            - 4450a572
-            - 6ba34e09
-            - a454dbc9
-            - 3918c355
-            - 94fd8c13
-            - 50d035ae
-            - 0bf7dc29
-            - '40725970'
-            - 29c20000
-            - 1e9a0000
-            - 073d489d
-            - 2a1a0000
-            - 1c420000
             - a0dcb9bd
-            - 2a580000
-            - 073d4699
-            - 1a3eeb0d
-            - 5123c52d
+            - a454dbc9
           size: 4x6
           stage: 5
           textures:
-            - 1da44c05
-            - 1da44d70
-            - 1da44d80
-            - 1da44c55
-            - 1da44c50
             - 1da44c00
-            - 1da44d5a
-            - 1da44d15
+            - 1da44c05
+            - 1da44c50
+            - 1da44c55
             - 1da44c6a
             - 1da44ca5
+            - 1da44d15
+            - 1da44d5a
+            - 1da44d70
+            - 1da44d80
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_Elevator_593083cb.SC4Lot:
         593083cb:
           building: a0001512
           density: low
           name: I-r5_4x6_LargeElevator
           props:
-            - 791b99b3
+            - 073d4699
+            - 073d489d
+            - 0bf7dc29
+            - 15896c1c
+            - 1a3eeb0d
+            - 1a706cba
+            - 1c420000
+            - 1e9a0000
+            - 1ece0000
+            - 29c20000
+            - 29fb0dd2
+            - 2a1a0000
+            - 2a580000
+            - 2a6e0000
+            - 2a6f0000
+            - 2e93539e
             - 2fc11611
+            - 384e3fd4
+            - 3d4a4f9d
+            - '40725970'
+            - 4450a572
+            - 50d035ae
+            - 5123c52d
+            - 791b99b3
+            - 84658eea
+            - 94fd8c13
+            - a000003d
             - a0001540
             - a0001541
             - a0001544
             - a0001549
-            - 2e93539e
-            - 4450a572
-            - 50d035ae
-            - 0bf7dc29
-            - '40725970'
-            - 29c20000
-            - 1e9a0000
-            - 073d489d
-            - 2a1a0000
-            - 1c420000
-            - 2a580000
-            - 073d4699
-            - 94fd8c13
-            - 1a3eeb0d
-            - a000003d
-            - 29fb0dd2
-            - 1ece0000
-            - c1cd4a24
-            - 1a706cba
-            - 5123c52d
-            - 2a6e0000
-            - 2a6f0000
             - a657405e
-            - 84658eea
-            - 15896c1c
+            - c1cd4a24
             - ffb26053
-            - 3d4a4f9d
-            - 384e3fd4
           size: 4x6
           stage: 5
           textures:
-            - 1da44855
+            - 1da447b0
+            - 1da447d0
             - 1da44835
+            - 1da44840
             - 1da44845
             - 1da44850
-            - 1da44a50
-            - 1da44840
+            - 1da44855
             - 1da44a4a
-            - 1da447b0
+            - 1da44a50
             - 1da44c00
-            - 1da44c6a
             - 1da44c10
-            - 1da447d0
+            - 1da44c6a
             - 1da44cca
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_4x6_LargeElevator_593083cb.SC4Lot:
         593083cb:
@@ -3253,55 +3255,55 @@ assets:
           density: low
           name: I-r5_4x6_LargeElevator
           props:
-            - 791b99b3
+            - 073d4699
+            - 073d489d
+            - 0bf7dc29
+            - 15896c1c
+            - 1a3eeb0d
+            - 1a706cba
+            - 1c420000
+            - 1e9a0000
+            - 1ece0000
+            - 29c20000
+            - 29fb0dd2
+            - 2a1a0000
+            - 2a580000
+            - 2a6e0000
+            - 2a6f0000
+            - 2e93539e
             - 2fc11611
+            - 384e3fd4
+            - 3d4a4f9d
+            - '40725970'
+            - 4450a572
+            - 50d035ae
+            - 5123c52d
+            - 791b99b3
+            - 84658eea
+            - 94fd8c13
+            - a000003d
             - a0001540
             - a0001541
             - a0001544
             - a0001549
-            - 2e93539e
-            - 4450a572
-            - 50d035ae
-            - 0bf7dc29
-            - '40725970'
-            - 29c20000
-            - 1e9a0000
-            - 073d489d
-            - 2a1a0000
-            - 1c420000
-            - 2a580000
-            - 073d4699
-            - 94fd8c13
-            - 1a3eeb0d
-            - a000003d
-            - 29fb0dd2
-            - 1ece0000
-            - c1cd4a24
-            - 1a706cba
-            - 5123c52d
-            - 2a6e0000
-            - 2a6f0000
             - a657405e
-            - 84658eea
-            - 15896c1c
+            - c1cd4a24
             - ffb26053
-            - 3d4a4f9d
-            - 384e3fd4
           size: 4x6
           stage: 5
           textures:
-            - 1da44855
+            - 1da447b0
+            - 1da447d0
             - 1da44835
+            - 1da44840
             - 1da44845
             - 1da44850
-            - 1da44a50
-            - 1da44840
+            - 1da44855
             - 1da44a4a
-            - 1da447b0
+            - 1da44a50
             - 1da44c00
-            - 1da44c6a
             - 1da44c10
-            - 1da447d0
+            - 1da44c6a
             - 1da44cca
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_5x6_TriBarn_BioFuel_7930b6be.SC4Lot:
         7930b6be:
@@ -3309,107 +3311,107 @@ assets:
           density: low
           name: I-r5_5x6_TriBarn_BioFuel
           props:
-            - 791b99b3
-            - 2fc11611
-            - 2a580000
+            - 073d4699
             - 0bf7dc29
-            - e741574f
-            - 3eea27a4
-            - 1c420000
-            - 2a1a0000
+            - 15ce155b
             - 1a3eeb0d
+            - 1c420000
+            - 1e9a0000
+            - 1ece0000
+            - 299d0000
+            - '299e0000'
+            - '29e50000'
+            - '29e60000'
+            - 29fb0dd2
+            - 2a1a0000
+            - 2a580000
+            - 2fc11611
+            - 3918c355
+            - 3eea27a4
+            - 791b99b3
+            - 95589f6b
+            - a000003d
+            - a000007b
             - a0001541
             - a0001547
             - a0001549
-            - 1e9a0000
-            - 15ce155b
             - b3a209d7
-            - '29e50000'
-            - '29e60000'
-            - a000003d
-            - 3918c355
-            - 95589f6b
-            - 29fb0dd2
-            - 1ece0000
-            - 073d4699
             - d0ac71c3
-            - a000007b
-            - '299e0000'
-            - 299d0000
+            - e741574f
           size: 5x6
           stage: 5
           textures:
-            - 1da44855
-            - 1da44845
-            - 1da44850
-            - 1da44835
-            - 1da44c05
             - 1da447a0
             - 1da447b0
             - 1da447d0
-            - 1da44c00
-            - 1da44840
-            - 1da44a4a
-            - 1da447f5
             - 1da447d5
+            - 1da447f5
+            - 1da44835
+            - 1da44840
+            - 1da44845
+            - 1da44850
+            - 1da44855
+            - 1da44a4a
+            - 1da44c00
+            - 1da44c05
       PEGPROD/SPAM/SPAM_Core_Lots/I-r5_6x4_D_Large Granary_90001290.SC4Lot:
         '90001290':
           building: a0001512
           density: low
           name: I-r5_6x4_D_Large Granary
           props:
+            - 073d4699
+            - 084fa8ca
+            - 0b703b90
+            - 0bf7dc29
+            - 1a3eeb0d
+            - 1a706cba
+            - 1a9935bf
+            - 1ca10000
+            - 1e9a0000
+            - 1ece0000
+            - 29c20000
+            - 2a540000
             - 2a580000
+            - 2de463a4
+            - 2e93539e
+            - 2fc11611
+            - 3918c355
+            - 3eea27a4
+            - '40725970'
+            - 465db454
+            - 50d035ae
+            - 5123c52d
+            - 791b99b3
+            - 7ea69467
+            - 94d11400
+            - 94fd8c13
+            - 95589f6b
+            - a000003d
             - a000004a
             - a000004d
-            - 791b99b3
-            - 1a706cba
-            - 50d035ae
-            - 3eea27a4
-            - 0bf7dc29
-            - '40725970'
-            - 94fd8c13
-            - 084fa8ca
-            - e741574f
-            - 0b703b90
-            - 2de463a4
-            - 2fc11611
-            - 95589f6b
-            - 1a9935bf
-            - a0001540
-            - a0001544
-            - 7ea69467
-            - 2e93539e
-            - a000003d
-            - a0dcb9bd
-            - 465db454
-            - 1ca10000
-            - 2a540000
-            - 3918c355
-            - 94d11400
-            - 5123c52d
-            - 1a3eeb0d
-            - 1e9a0000
             - a000007b
-            - 29c20000
+            - a0001540
             - a0001541
+            - a0001544
             - a000154a
-            - 1ece0000
-            - 073d4699
+            - a0dcb9bd
+            - e741574f
           size: 6x4
           stage: 5
           textures:
             - 1da44c05
-            - 1da44d7a
-            - 1da44c50
-            - 1da44c65
-            - 1da44c60
             - 1da44c10
+            - 1da44c50
             - 1da44c55
+            - 1da44c60
+            - 1da44c65
             - 1da44c75
-            - 1da44d95
-            - 1da44cf5
             - 1da44cd5
+            - 1da44cf5
+            - 1da44d7a
             - 1da44d80
+            - 1da44d95
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
         10a8e301:
           building: 10a8e301
@@ -3421,16 +3423,16 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca0
             - 1da44c05
+            - 1da44ca0
         145ed92d:
           building: 145ed92d
           density: low
           name: I-r1_1x1_Agave
           props:
-            - 878e5f87
-            - 3918c355
             - 2ba20000
+            - 3918c355
+            - 878e5f87
           size: 1x1
           stage: 1
           textures:
@@ -3441,9 +3443,9 @@ assets:
           density: low
           name: I-r1_1x1_Wheat
           props:
+            - 3918c355
             - 7a61d6c1
             - b168a3e3
-            - 3918c355
           size: 1x1
           stage: 1
           textures:
@@ -3455,8 +3457,6 @@ assets:
           name: I-r1_1x1_Tilled
           props:
             - 3918c355
-          requirements:
-            cam: true
           size: 1x1
           stage: 255
           textures:
@@ -3479,8 +3479,8 @@ assets:
           density: low
           name: I-r1_1x1_Hops
           props:
-            - 890ca8a4
             - 3918c355
+            - 890ca8a4
           size: 1x1
           stage: 1
           textures:
@@ -3491,21 +3491,21 @@ assets:
           density: low
           name: I-r1_1x1_Appletree
           props:
-            - ce49cb03
             - 3918c355
+            - ce49cb03
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca0
             - 1da44c05
+            - 1da44ca0
         30ebdd06:
           building: 30ebdd06
           density: low
           name: I-r1_1x1_Switchgrass
           props:
             - 15ce155b
-            - 2e93539e
             - 2ba20000
+            - 2e93539e
           size: 1x1
           stage: 1
           textures:
@@ -3526,26 +3526,26 @@ assets:
           density: low
           name: I-r1_1x1_Corn
           props:
-            - 3918c355
-            - 2ba20000
             - 1ece0000
             - 1ecf0000
-            - aad5b41c
-            - 85750a62
+            - 2ba20000
+            - 3918c355
             - 3e5b097e
+            - 85750a62
+            - aad5b41c
           size: 1x1
           stage: 1
           textures:
-            - 1da44caa
             - 1da44c05
+            - 1da44caa
         617c94c7:
           building: 617c94c7
           density: low
           name: I-r1_1x1_Tomatoes
           props:
-            - 95940fdf
-            - 3918c355
             - 2e93539e
+            - 3918c355
+            - 95940fdf
           size: 1x1
           stage: 1
           textures:
@@ -3568,19 +3568,17 @@ assets:
           density: low
           name: I-r1_1x1
           props:
-            - a000004a
-            - a0000052
-            - a000004b
-            - a000004d
-            - 1d6e0000
-            - 1c410000
-            - 2a190000
             - '16550000'
             - '16630000'
-            - 2a480000
+            - 1c410000
             - 1d430000
-          requirements:
-            cam: true
+            - 1d6e0000
+            - 2a190000
+            - 2a480000
+            - a000004a
+            - a000004b
+            - a000004d
+            - a0000052
           size: 1x1
           stage: 255
           textures:
@@ -3590,10 +3588,10 @@ assets:
           density: low
           name: I-r1_1x1_Barley
           props:
-            - 96af6486
             - 129d1fe1
             - 2ba20000
             - 3918c355
+            - 96af6486
           size: 1x1
           stage: 1
           textures:
@@ -3603,9 +3601,9 @@ assets:
           density: low
           name: I-r1_1x1_Rye
           props:
-            - 8371624e
-            - '48340589'
             - 3918c355
+            - '48340589'
+            - 8371624e
           size: 1x1
           stage: 1
           textures:
@@ -3615,10 +3613,8 @@ assets:
           density: low
           name: I-r1_1x1_Pasture
           props:
-            - 2a1a0000
             - 1c420000
-          requirements:
-            cam: true
+            - 2a1a0000
           size: 1x1
           stage: 255
           textures:
@@ -3628,8 +3624,8 @@ assets:
           density: low
           name: I-r1_1x1_LettuceMature
           props:
-            - 3918c355
             - '29120000'
+            - 3918c355
           size: 1x1
           stage: 1
           textures:
@@ -3639,13 +3635,13 @@ assets:
           density: low
           name: I-r1_1x1_Peachtree
           props:
-            - c9102970
             - 3918c355
+            - c9102970
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca0
             - 1da44c05
+            - 1da44ca0
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
         073dc000:
           building: 073dc000
@@ -3676,8 +3672,8 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 25db0000
             - 1da44ca5
+            - 25db0000
         073dc003:
           building: 073dc003
           density: low
@@ -3695,8 +3691,8 @@ assets:
           density: low
           name: Farm Field-Hops
           props:
-            - 890ca8a4
             - 2a060000
+            - 890ca8a4
           size: 1x1
           stage: 1
           textures:
@@ -3707,8 +3703,8 @@ assets:
           density: low
           name: Farm Field-Grapes
           props:
-            - d1eded6c
             - 2a060000
+            - d1eded6c
           size: 1x1
           stage: 1
           textures:
@@ -3719,21 +3715,21 @@ assets:
           density: low
           name: Farm Field-Corn
           props:
+            - 3e5b097e
             - 85750a62
             - aad5b41c
-            - 3e5b097e
           size: 1x1
           stage: 1
           textures:
-            - 1da44caa
             - 1da44c05
+            - 1da44caa
         073dc007:
           building: 073dc007
           density: low
           name: Farm Field-Wheat
           props:
-            - b168a3e3
             - 7a61d6c1
+            - b168a3e3
           size: 1x1
           stage: 1
           textures:
@@ -3770,8 +3766,8 @@ assets:
           stage: 1
           textures:
             - 1da44c10
-            - 25da0000
             - 1da44c85
+            - 25da0000
         073dc00b:
           building: 073dc00b
           density: low
@@ -3782,20 +3778,20 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca0
             - 1da44c05
+            - 1da44ca0
         073dc00c:
           building: 073dc00c
           density: low
           name: Farm Field-Appletree
           props:
-            - ce49cb03
             - 427d3028
+            - ce49cb03
           size: 1x1
           stage: 1
           textures:
-            - 1da44ca0
             - 1da44c05
+            - 1da44ca0
         073dc00d:
           building: 073dc00d
           density: low
@@ -3806,27 +3802,27 @@ assets:
           size: 1x1
           stage: 1
           textures:
-            - 1da44caa
             - 1da44c05
+            - 1da44caa
         073dc00e:
           building: 073dc00e
           density: low
           name: Farm Field-Peachtree
           props:
-            - c9102970
             - 427d3028
+            - c9102970
           size: 1x1
           stage: 1
           textures:
-            - 1da44caa
             - 1da44c05
+            - 1da44caa
         073dc00f:
           building: 073dc00f
           density: low
           name: Farm Field - Rubbarb
           props:
-            - 33ada2ee
             - 16c136b7
+            - 33ada2ee
           size: 1x1
           stage: 1
           textures:
@@ -3836,769 +3832,770 @@ assets:
           density: low
           name: Farm Field - LettuceMature
           props:
-            - 33ada2ee
             - 16c136b7
+            - 33ada2ee
           size: 1x1
           stage: 1
           textures:
             - 25d90000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
-        - f8fe48a9
-        - '79165048'
-        - 58fc83b1
-        - f8fd2e05
-        - 58fdbbd0
-        - 591cd49a
-        - 18d84fbc-0078
         - 18d84fbc-0077
+        - 18d84fbc-0078
+        - 18d84fbc-007a
         - 18d84fbc-007b
         - 18d84fbc-007c
-        - 18d84fbc-007a
-        - 78fc792b
-        - b91a44f5
-        - f91a4250
-        - 191a35be
-        - 391cce82
-        - 391cc31b
-        - b906581a
-        - 3907c41c
-        - f9079349
-        - 9907bea3
-        - '99079493'
-        - 39079f40
-        - 7907bf2a
-        - 7907ae42
         - 1907a6c3
-        - d907c58d
-        - 9907b46c
-        - b907b69b
-        - 7907c0dd
+        - 191a35be
+        - 39079f40
+        - 3907c41c
+        - 391cc31b
+        - 391cce82
+        - 58fc83b1
+        - 58fdbbd0
         - 5907bd5a
+        - 591cd49a
+        - 78fc792b
+        - 7907ae42
+        - 7907bf2a
+        - 7907c0dd
+        - '79165048'
+        - '99079493'
+        - 9907b46c
+        - 9907bea3
+        - b906581a
+        - b907b69b
+        - b91a44f5
+        - d907c58d
+        - f8fd2e05
+        - f8fe48a9
+        - f9079349
+        - f91a4250
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat:
-        - 79273dc7
-        - f92714a5
-        - b920bf52
-        - f9161376
-        - f9291d5c
-        - 59161e9b
-        - 19154faa
-        - 19155dfd
-        - '19156090'
+        - 1660b6b2
+        - 18d84fbc-0002
+        - 18d84fbc-000c
+        - 18d84fbc-0010
+        - 18d84fbc-0013
+        - 18d84fbc-0014
+        - 18d84fbc-0015
+        - 18d84fbc-0016
+        - 18d84fbc-0017
+        - 18d84fbc-0018
+        - 18d84fbc-0019
+        - 18d84fbc-001a
+        - 18d84fbc-001b
+        - 18d84fbc-001c
+        - 18d84fbc-001d
+        - 18d84fbc-001e
+        - 18d84fbc-0022
+        - 18d84fbc-0023
+        - 18d84fbc-0024
+        - 18d84fbc-0029
+        - 18d84fbc-002d
+        - 18d84fbc-002e
+        - 18d84fbc-002f
+        - 18d84fbc-003f
+        - 18d84fbc-0040
         - 18d84fbc-0043
         - 18d84fbc-0044
-        - 18d84fbc-000c
         - 18d84fbc-0045
-        - 18d84fbc-0002
         - 18d84fbc-0046
         - 18d84fbc-0047
         - 18d84fbc-0048
         - 18d84fbc-0049
         - 18d84fbc-004a
-        - 18d84fbc-0013
-        - 18d84fbc-0014
-        - 18d84fbc-002d
-        - 18d84fbc-002e
-        - 18d84fbc-002f
-        - 18d84fbc-0015
-        - badb57f1-0028
-        - badb57f1-0027
-        - 18d84fbc-0022
-        - 18d84fbc-001c
-        - 18d84fbc-001d
-        - 18d84fbc-001e
-        - 18d84fbc-0023
-        - 18d84fbc-0016
-        - 18d84fbc-0018
-        - 18d84fbc-001a
-        - 18d84fbc-0024
-        - 18d84fbc-0017
-        - 18d84fbc-0019
-        - 18d84fbc-001b
-        - 18d84fbc-0029
-        - 18d84fbc-003f
-        - 18d84fbc-0040
-        - 18d84fbc-0010
-        - '39153746'
-        - '59153e16'
-        - '19154139'
-        - '99154460'
-        - d91546dc
-        - 791548a2
         - 18d84fbc-0052
         - 18d84fbc-0053
         - 18d84fbc-0054
-        - 191634a9
-        - 19162a21
         - 18d84fbc-0055
-        - 3914cec1
+        - '19154139'
+        - 19154faa
+        - 19155dfd
+        - '19156090'
+        - 19162a21
+        - 191634a9
+        - 19180d0c
+        - 191ad914
         - 191d2a81
-        - b993898f
+        - 191ea006
+        - 191ebd06
+        - 1921ed56
+        - '19234775'
+        - 19235ac4
+        - 19251bf9
+        - 19252f97
         - 19977e3e
-        - b91d1879
-        - 391d2d4e
-        - b91d0927
-        - 791d1da5
-        - 1660b6b2
-        - 5917a513
+        - 3914cec1
+        - '39153746'
         - 3917af75
-        - b917b147
+        - 3919fb25
+        - 391b2f44
+        - 391d2d4e
+        - '39221662'
+        - 39231aec
+        - 39242cbc
+        - 392525b3
+        - 39252d68
+        - '59153e16'
+        - 59161e9b
+        - 5917a513
+        - 5917d3d3
+        - 5917fae6
+        - 591b3753
+        - 591b4002
+        - 591d6a0a
+        - 591ea7de
+        - 59235c9e
+        - 5923619c
+        - 59242c5d
+        - 59242eaa
+        - 5926301a
+        - 791548a2
+        - 7917ee26
+        - 7917ff95
+        - 791d1da5
+        - 7922b524
+        - '79233952'
+        - 7923671b
+        - '79243002'
+        - 792520b6
+        - 7925720f
+        - 79273dc7
+        - 7935067c
+        - '99154460'
         - 9917b1db
         - 9917b24c
-        - f917cfb1
-        - 5917d3d3
         - 9917da8f
-        - 7917ee26
-        - 5917fae6
         - 9917fb87
-        - f917fbee
-        - 7917ff95
-        - f918053c
-        - 19180d0c
-        - d9180df4
-        - f9197893
-        - f9197347
-        - 3919fb25
-        - 7935067c
-        - b9350702
-        - 191ea006
-        - b91f6dfb
-        - 591ea7de
-        - f91f73f0
-        - f91ebd79
-        - b91e997e
-        - 191ebd06
-        - d91eae05
-        - d91f91ed
-        - f91fd189
-        - 591d6a0a
-        - 391b2f44
-        - 191ad914
-        - 591b3753
-        - d91b3c0f
-        - b91b80ff
-        - 591b4002
-        - 1921ed56
-        - 7925720f
-        - f921f3f0
-        - b921f7cf
-        - f925738c
-        - 19252f97
-        - b921fca7
-        - d922217c
-        - '39221662'
-        - d922270f
-        - f9225bce
-        - 7922b524
-        - d9231581
-        - 39231aec
-        - 792520b6
-        - d9232a2c
-        - 392525b3
-        - '79233952'
-        - 99252b26
-        - f9253da4
-        - b9249fab
-        - b9251e79
-        - '99251157'
-        - 19251bf9
-        - f9261142
-        - 99264cc6
-        - d925efe8
-        - d925e59e
-        - f925e277
-        - 5926301a
-        - 39252d68
-        - '19234775'
-        - d92347d5
-        - b9234822
-        - 19235ac4
-        - f925260e
-        - 59235c9e
         - 99235e1a
         - 99235ebb
         - '9923e122'
-        - 39242cbc
-        - '79243002'
+        - '99251157'
+        - 99252b26
+        - 99264cc6
+        - b917b147
+        - b91b80ff
+        - b91d0927
+        - b91d1879
+        - b91e997e
+        - b91f6dfb
+        - b920bf52
+        - b921f7cf
+        - b921fca7
+        - b9234822
+        - b9249fab
+        - b9251e79
+        - b9350702
+        - b993898f
+        - badb57f1-0027
+        - badb57f1-0028
+        - d91546dc
+        - d9180df4
+        - d91b3c0f
+        - d91eae05
+        - d91f91ed
+        - d922217c
+        - d922270f
+        - d9231581
+        - d9232a2c
+        - d92347d5
+        - d925e59e
+        - d925efe8
+        - f9161376
+        - f917cfb1
+        - f917fbee
+        - f918053c
+        - f9197347
+        - f9197893
+        - f91ebd79
+        - f91f73f0
+        - f91fd189
+        - f921f3f0
+        - f9225bce
         - f9242e02
-        - 59242eaa
-        - 59242c5d
-        - 7923671b
-        - 5923619c
+        - f925260e
+        - f9253da4
+        - f925738c
+        - f925e277
+        - f9261142
+        - f92714a5
+        - f9291d5c
     name: SimPeg Agricultural Mod (SPAM)
     props:
       PEGPROD/SPAM/SPAM_Mod_Main/PEG-SPAM_MOD-MAIN_b200.dat:
-        16c136b7:
+        c977c536-16c136b7:
           family: a0000071
           name: SPAM_field-grape-picking-anim
-        33ada2ee:
+        c977c536-33ada2ee:
           name: SPAM_IrrigationSprinklers
-        427d3028:
+        c977c536-427d3028:
           family: a0000104
           name: SPAM_tree-fruit-picking-anim
-        d26905bc:
+        c977c536-d26905bc:
           family: a0000071
           name: SPAM_field-picking-anim
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Crops_Resource/PEG-SPAM_CROPS-01_RESOURCE_b200.dat:
-        0b703b90:
+        18d84fbc-0b703b90:
           name: PEG-MTPA_Crop_OrangeGrove_5.1-11.1
-        0c8d15bf:
+        18d84fbc-0c8d15bf:
           name: PEG-MTPA_Crop_LemonGrove_4.15-10.5
-        '11165421':
+        18d84fbc-11165421:
           name: PEG-MTPA_Crop_AppleTree_2.15-11.15
-        129d1fe1:
+        18d84fbc-129d1fe1:
           name: PEG-MTPA_Crop_Barley_Mature_7.16-10.16
-        15ce155b:
+        18d84fbc-15ce155b:
           model: 78fc792b
           name: PEG-MTPA_Crop_SwitchGrass
-        '16550000':
+        18d84fbc-241d5e20:
+          name: PEG-MTPA_Crop_PeachTree_2.1-11.1
+        18d84fbc-2de463a4:
+          name: PEG-MTPA_Crop_OrangeTree_5.1-11.1
+        18d84fbc-3d4a4f9d:
+          name: PEG-MTPA_Crop_LemonTree_5.1-11.1
+        18d84fbc-3e5b097e:
+          name: PEG-MTPA_Crop_Corn_16x16_6.1-10.1
+        18d84fbc-48340589:
+          name: PEG-MTPA_Crop_Rye_Mature_8.2-12.1
+        18d84fbc-7a61d6c1:
+          name: PEG-MTPA_Crop_Wheat_Young_2.14-7.4
+        18d84fbc-8371624e:
+          name: PEG-MTPA_Crop_Rye_Young_4.1-8.1
+        18d84fbc-85750a62:
+          name: PEG-MTPA_Crop_Corn_16x16_10.1-3.1
+        18d84fbc-878e5f87:
+          model: 58fc83b1
+          name: PEG-MTPA_Crop_Blue Agave_365
+        18d84fbc-890ca8a4:
+          name: PEG-MTPA_Crop_Hops_2Stage
+        18d84fbc-95940fdf:
+          name: PEG-MTPA_Crop_Tomatos_16x4
+        18d84fbc-96af6486:
+          name: PEG-MTPA_Crop_Barley_Young_3.15-7.15
+        18d84fbc-aad5b41c:
+          name: PEG-MTPA_Crop_Corn_16x16_3.1-6.1
+        18d84fbc-b168a3e3:
+          name: PEG-MTPA_Crop_Wheat_Mature_7.5-11.1
+        18d84fbc-c9102970:
+          name: PEG-MTPA_Crop_PeachOrchard_2.1-11.1
+        18d84fbc-ce49cb03:
+          name: PEG-MTPA_Crop_AppleOrchard_2.15-11.15
+        c977c536-16550000:
           family: a0000052
           model: f9079349
           name: I5x5x10_Orange-tree_1655
-        '16630000':
+        c977c536-16630000:
           family: a0000052
           model: 39079f40
           name: I5x5x10_Apple-tree_1663
-        241d5e20:
-          name: PEG-MTPA_Crop_PeachTree_2.1-11.1
-        29bd0000:
+        c977c536-29bd0000:
           model: '99079493'
           name: I5x16x10_Apple-treegroup_29BD
-        29be0000:
+        c977c536-29be0000:
           model: b906581a
           name: I5x16x10_Orange-treegroup_29BE
-        2de463a4:
-          name: PEG-MTPA_Crop_OrangeTree_5.1-11.1
-        3d4a4f9d:
-          name: PEG-MTPA_Crop_LemonTree_5.1-11.1
-        3e5b097e:
-          name: PEG-MTPA_Crop_Corn_16x16_6.1-10.1
-        '48340589':
-          name: PEG-MTPA_Crop_Rye_Mature_8.2-12.1
-        7a61d6c1:
-          name: PEG-MTPA_Crop_Wheat_Young_2.14-7.4
-        8371624e:
-          name: PEG-MTPA_Crop_Rye_Young_4.1-8.1
-        85750a62:
-          name: PEG-MTPA_Crop_Corn_16x16_10.1-3.1
-        878e5f87:
-          model: 58fc83b1
-          name: PEG-MTPA_Crop_Blue Agave_365
-        890ca8a4:
-          name: PEG-MTPA_Crop_Hops_2Stage
-        95940fdf:
-          name: PEG-MTPA_Crop_Tomatos_16x4
-        96af6486:
-          name: PEG-MTPA_Crop_Barley_Young_3.15-7.15
-        aad5b41c:
-          name: PEG-MTPA_Crop_Corn_16x16_3.1-6.1
-        b168a3e3:
-          name: PEG-MTPA_Crop_Wheat_Mature_7.5-11.1
-        c9102970:
-          name: PEG-MTPA_Crop_PeachOrchard_2.1-11.1
-        ce49cb03:
-          name: PEG-MTPA_Crop_AppleOrchard_2.15-11.15
-        d1eded6c:
+        c977c536-d1eded6c:
           model: badb57f1-1cf7
           name: PEG-MTPA_Grapevines
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Resource/PEG-SPAM_RESOURCE-01_b200.dat:
-        0109ac1b:
+        18d84fbc-0109ac1b:
           model: 18d84fbc-0055
           name: PEG-MTPA_Elevator-Large_Wood
-        029e1d09:
-          family: a0001543,a0001544
-          name: PEG-MTPA_SAS_Trailer_Grain-Mod_OPEN
-        04996c10:
+        18d84fbc-04996c10:
           model: b917b147
           name: PEG-MTP_Fence_2-rail_8m_DIAG
-        06f6c79c:
-          model: 1660b6b2
-          name: PEG-MTPA-TP_MoonshineStill
-        084fa8ca:
+        18d84fbc-084fa8ca:
           model: f91f73f0
           name: PEG-MTPA_Weed01_Brn_Line
-        08a3fe6d:
+        18d84fbc-08a3fe6d:
           family: a0001505
           model: '99154460'
           name: PEG-MTPA_Farmhouse04
-        0bf7dc29:
+        18d84fbc-0bf7dc29:
           model: b91e997e
           name: PEG-MTPA_Weed01_Grn
-        0f8aaf48:
-          name: PEG-MTPA_SAS_Plow_rnd
-        1504c597:
-          family: a0001547
-          name: PEG-MTPA_SAS_WaterTruck_Small_white
-        15896c1c:
+        18d84fbc-15896c1c:
           name: PEG-MTPA_Cattle-SOTH3
-        1861566c:
+        18d84fbc-1861566c:
           name: PEG-MTPA_CattleCluster_Guernsey
-        19a4b906:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-sas_4-20
-        19abd09f:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-50sFord-2tone_5-21
-        1a3eeb0d:
+        18d84fbc-1a3eeb0d:
           model: d91f91ed
           name: PEG-MTPA_MapleTree01
-        1a706cba:
+        18d84fbc-1a706cba:
           model: 9917b1db
           name: PEG-MTP_Fence_2-rail_8m
-        1a9935bf:
+        18d84fbc-1a9935bf:
           model: d91eae05
           name: PEG-MTPA_Weed01_Grn_Line
-        1d1407c2:
+        18d84fbc-1d1407c2:
           model: f918053c
           name: PEG-MTP_Fence_2-rail_Whilte_16m_GATE
-        1e0f0aa0:
-          family: a0001543,a0001545
-          model: d922217c
-          name: PEG-MTPA_SAS_Trailer_Semi-silver_247
-        21e651ca:
+        18d84fbc-21e651ca:
           name: PEG-MTPA_Cattle-Guernsey1
-        22a7e8e8:
-          family: a0001543,a0001545
-          name: PEG-MTPA_SAS_Trailer_Semi-silver
-        278a1653:
-          family: a0001547
-          model: 99252b26
-          name: PEG-MTPA_SAS_Stakebed_old_green_247
-        27aa01ad:
+        18d84fbc-27aa01ad:
           model: 591d6a0a
           name: PEG-MTPA_DeciduousTree01
-        29fb0dd2:
+        18d84fbc-29fb0dd2:
           model: 7917ee26
           name: PEG-MTP_Fence_2-rail_Whilte_16m
-        2c90dd38:
-          family: a0001540
-          name: PEG-MTPA_SAS_SemiCab_Yellow
-        2cf21e24:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-green_10-22
-        2e240fe9:
-          model: 79273dc7
-          name: PEG-MTPA-TP_Path-DIAG
-        2e63bbc3:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-gray_17-4
-        2fc11611:
+        18d84fbc-2fc11611:
           model: b920bf52
           name: PEG-MTPA_Texas Gate
-        2fceafee:
+        18d84fbc-2fceafee:
           family: a000150e,a000150f
           model: 18d84fbc-004a
           name: PEG-MTPA_GrainSilo_Metal
-        31d610f7:
+        18d84fbc-31d610f7:
           model: b91b80ff
           name: PEG-MTPA_DecTree_Elm_Tall
-        3361e82c:
-          family: a0001541,a0001549
-          model: f9261142
-          name: PEG-MTPA_SAS_FarmTractor_Green_247
-        3408420b:
+        18d84fbc-3408420b:
           family: a0001509
           model: 18d84fbc-0045
           name: PEG-MTPA_DairyFarm_Red
-        35b829d4:
-          family: a0001541
-          model: 59242eaa
-          name: PEG-MTPA_SAS_Pickup-50sFord-blue_247
-        384e3fd4:
+        18d84fbc-384e3fd4:
           model: f917fbee
           name: PEG-MTP_Fence_2-rail_White_8m
-        3918c355:
+        18d84fbc-3918c355:
           model: 3914cec1
           name: PEG-SPAM_Irrigation Tower
-        3b014a61:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-black_11-2
-        3cc45c3a:
-          family: a0001543,a0001548
-          name: PEG-MTPA_SAS_Trailer-Tanker_sas
-        3e742df3:
-          family: a0001541
-          name: PEG-MTPA_SAS_VW Bus-white_8-19
-        3eea27a4:
+        18d84fbc-3eea27a4:
           model: 191ebd06
           name: PEG-MTPA_Weed01_Grn_Small_Line
-        4046b6e2:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-50sFord-yellow_9-22
-        '40725970':
+        18d84fbc-40725970:
           model: 191ea006
           name: PEG-MTPA_Weed01_Brn_Small
-        4079b7a9:
+        18d84fbc-4079b7a9:
           model: 9917b24c
           name: PEG-MTP_Fence_2-rail_4m
-        4094769a:
-          family: a00014dd
-          model: 19977e3e
-          name: PEG-MTPA-TP_Rock3
-        41daabfa:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-blue_5-19
-        420521a4:
+        18d84fbc-420521a4:
           model: f917cfb1
           name: PEG-MTP_Fence_2-rail_4m_GATE
-        4363cfc2:
-          family: a0001546
-          name: PEG-MTPA_SAS_Dumptruck_Grain_sas
-        4450a572:
+        18d84fbc-4450a572:
           family: a000150f
           model: 18d84fbc-0014
           name: PEG-MTPA_GrainSilo_Metal-Portable
-        465db454:
-          model: 391d2d4e
-          name: PEG-MTPA-TP_PicnicTable
-        473b069f:
+        18d84fbc-473b069f:
           model: 7917ff95
           name: PEG-MTP_Fence_2-rail_Whilte_8m_GATE
-        474c3e70:
-          family: a0001543
-          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen
-        4a080362:
+        18d84fbc-4a080362:
           model: 18d84fbc-0040
           name: PEG-MTPA_Greenhouse02
-        4bb95093:
+        18d84fbc-4bb95093:
           name: PEG-MTPA_Cattle-Holstein1
-        4bcf8d40:
+        18d84fbc-4bcf8d40:
           name: PEG-MTPA_Cattle-Holstein3
-        4c932c72:
+        18d84fbc-4c932c72:
           model: 9917fb87
           name: PEG-MTP_Fence_2-rail_Whilte_8m_DIAG
-        5034d90b:
+        18d84fbc-5034d90b:
           model: 391b2f44
           name: PEG-MTPA_DecTree_Elm
-        50d035ae:
+        18d84fbc-50d035ae:
           model: b91f6dfb
           name: PEG-MTPA_Weed01_Brn
-        5123c52d:
+        18d84fbc-5123c52d:
           model: f91fd189
           name: PEG-MTPA_MapleTree01_Small
-        5199ea71:
-          family: a0001543,a0001545
-          model: d922270f
-          name: PEG-MTPA_SAS_Trailer_Semi-white_247
-        5597d3cc:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-70sFord-green_5-22
-        604fb95d:
+        18d84fbc-604fb95d:
           family: a000150b,a000150d
           model: 18d84fbc-0046
           name: PEG-MTPA_BarnSilo_Metal
-        6345538a:
-          family: a0001541
-          model: '79233952'
-          name: PEG-MTPA_SAS_Van-sas_247
-        '69755213':
-          family: a0001543,a0001548
-          name: PEG-MTPA_SAS_Trailer-Tanker_silver2
-        6a3fcb62:
-          model: b993898f
-          name: PEG-MTPA-TP_RockCluster
-        6ba34e09:
-          model: 99264cc6
-          name: PEG-MTPA_SAS_Plow
-        6d371d84:
+        18d84fbc-6d371d84:
           family: a0001511
           model: 18d84fbc-0052
           name: PEG-MTPA_Elevator01_Red
-        6e50cbec:
+        18d84fbc-6e50cbec:
           family: a0001513
           model: 191634a9
           name: PEG-MTPA_Elevator-Large_White
-        6fc6c06d:
-          family: a0001543,a0001548
-          name: PEG-MTPA_SAS_Trailer-Tanker_silver1
-        725f1723:
-          model: b91d0927
-          name: PEG-MTPA-TP_DonkeyEngine
-        735641c2:
+        18d84fbc-735641c2:
           name: PEG-MTPA_Cattle-Guernsey3
-        '74e66356':
-          name: PEG-MTPA_SAS_Flatbed-sas
-        '76417603':
+        18d84fbc-76417603:
           name: PEG-MTPA_CattleCar_RR
-        78e0133c:
+        18d84fbc-78e0133c:
           family: a000150e,a000150f
           model: 18d84fbc-0048
           name: PEG-MTPA_GrainSilo_Concrete
-        791b99b3:
+        18d84fbc-791b99b3:
           model: 5917a513
           name: PEG-MTP_Fence_2-rail_16m
-        7b3842f5:
-          family: a0001541,a0001549
-          model: 5926301a
-          name: PEG-MTPA_SAS_FarmTractor_Red_247
-        7d8deb60:
+        18d84fbc-7d8deb60:
           model: f9197893
           name: PEG-MTP_Fence_2-rail_Whilte_16m_CURVE
-        7ea69467:
-          family: a0001546
-          name: PEG-MTPA_SAS_Dumptruck_empty
-        80bf922e:
-          family: a0001543,a0001545
-          name: PEG-MTPA_SAS_Trailer_Semi-sas
-        8152e0a5:
+        18d84fbc-8152e0a5:
           family: a0001509
           model: 18d84fbc-000c
           name: PEG-MTPA_DairyFarm_Yellow
-        8214eb02:
-          family: a0001543,a0001544
-          name: PEG-MTPA_SAS_Trailer_Grain-sas_EMPTY
-        '8217e157':
+        18d84fbc-8217e157:
           family: a0001507,a000150d,a0001517
           model: 19155dfd
           name: PEG-MTPA_Barn02_White
-        843aca4f:
-          family: a0001540
-          name: PEG-MTPA_SAS_SemiCab_CO-SGreen
-        84658eea:
+        18d84fbc-84658eea:
           name: PEG-MTPA_Cattle-SOTH2
-        89cf6fed:
+        18d84fbc-89cf6fed:
           family: a0001511
           model: 18d84fbc-0053
           name: PEG-MTPA_Elevator01_White
-        8daf8804:
-          family: a0001541
-          model: b9234822
-          name: PEG-MTPA_SAS_Pickup-red_247
-        8e7bad93:
+        18d84fbc-8e7bad93:
           family: a0001511
           model: 18d84fbc-0054
           name: PEG-MTPA_Elevator01_Wood
-        8ee3afb6:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-white_4-20
-        932806d3:
-          family: a0001543,a0001544
-          name: PEG-MTPA_SAS_Trailer_Grain-sas
-        94435f4f:
+        18d84fbc-94435f4f:
           family: a0001509
           model: 18d84fbc-0044
           name: PEG-MTPA_DairyFarm_White
-        94d11400:
-          model: 191d2a81
-          name: PEG-MTPA-TP_RockCluster_small
-        94fd8c13:
+        18d84fbc-94fd8c13:
           model: 591ea7de
           name: PEG-MTPA_Weed01_Brn_Small_Line
-        95589f6b:
+        18d84fbc-95589f6b:
           model: 3919fb25
           name: PEG-MTP_Fence_Barbwire_16m
-        99301be4:
+        18d84fbc-99301be4:
           name: PEG-MTPA_Cattle-Holstein2
-        9c4ad13b:
+        18d84fbc-9c4ad13b:
           model: 18d84fbc-0015
           name: PEG-MTPA_FuelTank
-        9cfcfe7b:
+        18d84fbc-9cfcfe7b:
           family: a0001505
           model: '59153e16'
           name: PEG-MTPA_Farmhouse02
-        9fab4942:
+        18d84fbc-9fab4942:
           model: 19180d0c
           name: PEG-MTP_Fence_2-rail_White_4m
-        a0dcb9bd:
-          model: f92714a5
-          name: PEG-MTPA-TP_Path
-        a1011af0:
+        18d84fbc-a1011af0:
           name: PEG-MTPA_Cattle-Guernsey2
-        a1ebb58b:
-          family: a0001543
-          model: b921fca7
-          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen_247
-        a233de04:
+        18d84fbc-a233de04:
           family: a0001505
           model: '39153746'
           name: PEG-MTPA_Farmhouse01
-        a2671354:
+        18d84fbc-a2671354:
           family: a0001505
           model: '19154139'
           name: PEG-MTPA_Farmhouse03
-        a454dbc9:
+        18d84fbc-a454dbc9:
           model: 18d84fbc-002d
           name: PEG-MTPA_Windmill_Metal
-        a48f0664:
+        18d84fbc-a48f0664:
           model: f9197347
           name: PEG-MTP_Fence_2-rail_Whilte_8m_CURVE
-        a4be174e:
+        18d84fbc-a4be174e:
           model: 3917af75
           name: PEG-MTP_Fence_2-rail_16m_DIAG
-        a52f0609:
+        18d84fbc-a52f0609:
           model: 18d84fbc-0010
           name: PEG-MTPA_Greenhouse03
-        a657405e:
+        18d84fbc-a657405e:
           name: PEG-MTPA_Cattle-SOTH1
-        a8736d3b:
+        18d84fbc-a8736d3b:
           model: 191ad914
           name: PEG-MTPA_DecTree_Tupelo
-        ab4dc6e0:
-          family: a0001542
-          name: PEG-MTPA_SAS_Bobtail-sas_silver
-        abacb128:
+        18d84fbc-abacb128:
           family: a000150b,a000150d
           model: 18d84fbc-0047
           name: PEG-MTPA_BarnSilo_Red
-        aed3101d:
-          family: a0001543,a0001545
-          name: PEG-MTPA_SAS_Trailer_Semi-white
-        b063964b:
-          model: 791d1da5
-          name: PEG-MTPA-TP_Shack
-        b13f2cac:
+        18d84fbc-b13f2cac:
           name: PEG-MTPA_CattleChute
-        b16c494e:
+        18d84fbc-b16c494e:
           model: 5917d3d3
           name: PEG-MTP_Fence_2-rail_8m_GATE
-        b1f6f30d:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-LR-tan_10-21
-        b3a209d7:
+        18d84fbc-b3a209d7:
           family: a000150f
           model: 18d84fbc-0013
           name: PEG-MTPA_GrainSilo_Metal-Fixed
-        b4149ed5:
+        18d84fbc-b4149ed5:
           model: b9350702
           name: PEG-MTP_Fence_Barbwire_8m_DIAG
-        b6020369:
+        18d84fbc-b6020369:
           model: 18d84fbc-0043
           name: PEG-MTPA_Barn02_UnderConstruction
-        b64f50cf:
+        18d84fbc-b64f50cf:
           model: 5917fae6
           name: PEG-MTP_Fence_2-rail_White_16m_DIAG
-        b8eabdd5:
+        18d84fbc-b8eabdd5:
           model: 18d84fbc-003f
           name: PEG-MTPA_Greenhouse01
-        b8ebd3a2:
+        18d84fbc-b8ebd3a2:
           family: a0001507,a000150d,a0001515
           model: f9161376
           name: PEG-MTPA_Barn-Basic_red
-        bb3725a3:
-          family: a0001546
-          name: PEG-MTPA_SAS_Dumptruck_Maters_sas
-        bdfbee7c:
+        18d84fbc-bdfbee7c:
           family: a0001507,a000150d,a0001517
           model: 19154faa
           name: PEG-MTPA_Barn-Fancy_Red
-        bf516f60:
-          model: 19252f97
-          name: PEG-MTPA_SAS_SemiCab_SGreen_DIAG
-        c1cd4a24:
+        18d84fbc-c1cd4a24:
           model: 9917da8f
           name: PEG-MTP_Fence_2-rail_16m_GATE
-        c20b3c93:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-LR--green_6-18
-        c3a1a4e5:
-          family: a000154a
-          name: PEG-MTPA_SAS_FarmTractor_Red_rnd
-        c3b05200:
+        18d84fbc-c3b05200:
           model: 591b3753
           name: PEG-MTPA_DecTree_Tupelo1_Tall
-        c56fd41c:
-          family: a0001543,a0001544
-          name: PEG-MTPA_SAS_Trailer_Grain-Mod
-        c721a958:
+        18d84fbc-c721a958:
           family: a0001507,a000150d,a0001515
           model: f9291d5c
           name: PEG-MTPA_Barn-Basic_wood
-        c76943f6:
+        18d84fbc-c76943f6:
           model: 18d84fbc-002f
           name: PEG-MTPA_WaterResevoir
-        c8df1fef:
+        18d84fbc-c8df1fef:
           model: 18d84fbc-002e
           name: PEG-MTPA_Windmill_Wood
-        c8fc183b:
+        18d84fbc-c8fc183b:
           family: a0001507,a000150d,a0001515
           model: 59161e9b
           name: PEG-MTPA_Barn-Basic_white
-        cc1e7e17:
-          family: a0001543,a0001545
-          model: '39221662'
-          name: PEG-MTPA_SAS_Trailer_Semi-sas_247
-        ce4c847d:
+        18d84fbc-ce4c847d:
           family: a0001507,a000150d,a0001517
           model: '19156090'
           name: PEG-MTPA_Barn02_Wood
-        d0ac71c3:
+        18d84fbc-d0ac71c3:
           model: 591b4002
           name: PEG-MTPA_DecTree_Elm_VTall
-        d295233d:
-          family: a00014df
-          model: b91d1879
-          name: PEG-MTPA-TP_TreeStump
-        d42ac71b:
-          family: a0001541
-          name: PEG-MTPA_SAS_Dunebuggy-red_11,18
-        d8d32715:
-          family: a0001542
-          name: PEG-MTPA_SAS_Bobtail-sas
-        d9913aa5:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-50sFord-brown_16-3
-        e3f9beda:
+        18d84fbc-e3f9beda:
           family: a0001505
           model: d91546dc
           name: PEG-MTPA_Farmhouse05
-        e70e1492:
+        18d84fbc-e70e1492:
           family: a0001505
           model: 791548a2
           name: PEG-MTPA_Farmhouse06
-        e741574f:
+        18d84fbc-e741574f:
           model: f91ebd79
           name: PEG-MTPA_Weed01_Grn_Small
-        e7e10acd:
-          family: a0001540
-          name: PEG-MTPA_SAS_SemiCab_SGreen
-        e92c33ef:
-          model: f921f3f0
-          name: PEG-MTPA_SAS_SemiCab_CO-SGreen_DIAG
-        ebbf4c8b:
+        18d84fbc-ebbf4c8b:
           model: 7935067c
           name: PEG-MTP_Fence_Barbwire_8m
-        ed764a9c:
+        18d84fbc-ed764a9c:
           model: d91b3c0f
           name: PEG-MTPA_DecTree_Tupelo1_VTall
-        ee3f58c4:
+        18d84fbc-ee3f58c4:
           model: d9180df4
           name: PEG-MTP_Fence_2-rail_Whilte_4m_GATE
-        ef183c1d:
+        18d84fbc-ef183c1d:
           name: PEG-MTPA_CattleCluster_Holsteins
-        f1a32a82:
-          family: a0001540
-          name: PEG-MTPA_SAS_SemiCab_CO-White
-        f1f3e00b:
-          family: a0001541
-          name: PEG-MTPA_SAS_Pickup-50sFord-white_4-20
-        f3d3fbee:
+        18d84fbc-f3d3fbee:
           family: a0001513
           model: 19162a21
           name: PEG-MTPA_Elevator-Large_Red
-        f6d7436e:
-          family: a000154a
-          name: PEG-MTPA_SAS_FarmTractor_Green_rnd
-        f81118e4:
+        18d84fbc-f81118e4:
           family: a000150b,a000150d
           model: 18d84fbc-0002
           name: PEG-MTPA_BarnSilo_Wood
-        fa74cf68:
-          family: a0001547
-          name: PEG-MTPA_SAS_WaterTruck_Small_sas
-        fb0aea1e:
+        18d84fbc-fb0aea1e:
           family: a000150e,a000150f
           model: 18d84fbc-0049
           name: PEG-MTPA_GrainSilo_Red
-        ffb26053:
+        18d84fbc-ffb26053:
           name: PEG-MTPA_CattleCluster_SOTH
+        c977c536-029e1d09:
+          family: a0001543,a0001544
+          name: PEG-MTPA_SAS_Trailer_Grain-Mod_OPEN
+        c977c536-0f8aaf48:
+          name: PEG-MTPA_SAS_Plow_rnd
+        c977c536-1504c597:
+          family: a0001547
+          name: PEG-MTPA_SAS_WaterTruck_Small_white
+        c977c536-19a4b906:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-sas_4-20
+        c977c536-19abd09f:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-2tone_5-21
+        c977c536-1e0f0aa0:
+          family: a0001543,a0001545
+          model: d922217c
+          name: PEG-MTPA_SAS_Trailer_Semi-silver_247
+        c977c536-22a7e8e8:
+          family: a0001543,a0001545
+          name: PEG-MTPA_SAS_Trailer_Semi-silver
+        c977c536-278a1653:
+          family: a0001547
+          model: 99252b26
+          name: PEG-MTPA_SAS_Stakebed_old_green_247
+        c977c536-2c90dd38:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_Yellow
+        c977c536-2cf21e24:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-green_10-22
+        c977c536-2e63bbc3:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-gray_17-4
+        c977c536-3361e82c:
+          family: a0001541,a0001549
+          model: f9261142
+          name: PEG-MTPA_SAS_FarmTractor_Green_247
+        c977c536-35b829d4:
+          family: a0001541
+          model: 59242eaa
+          name: PEG-MTPA_SAS_Pickup-50sFord-blue_247
+        c977c536-3b014a61:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-black_11-2
+        c977c536-3cc45c3a:
+          family: a0001543,a0001548
+          name: PEG-MTPA_SAS_Trailer-Tanker_sas
+        c977c536-3e742df3:
+          family: a0001541
+          name: PEG-MTPA_SAS_VW Bus-white_8-19
+        c977c536-4046b6e2:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-yellow_9-22
+        c977c536-41daabfa:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-blue_5-19
+        c977c536-4363cfc2:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_Grain_sas
+        c977c536-474c3e70:
+          family: a0001543
+          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen
+        c977c536-5199ea71:
+          family: a0001543,a0001545
+          model: d922270f
+          name: PEG-MTPA_SAS_Trailer_Semi-white_247
+        c977c536-5597d3cc:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-70sFord-green_5-22
+        c977c536-6345538a:
+          family: a0001541
+          model: '79233952'
+          name: PEG-MTPA_SAS_Van-sas_247
+        c977c536-69755213:
+          family: a0001543,a0001548
+          name: PEG-MTPA_SAS_Trailer-Tanker_silver2
+        c977c536-6ba34e09:
+          model: 99264cc6
+          name: PEG-MTPA_SAS_Plow
+        c977c536-6fc6c06d:
+          family: a0001543,a0001548
+          name: PEG-MTPA_SAS_Trailer-Tanker_silver1
+        c977c536-74e66356:
+          name: PEG-MTPA_SAS_Flatbed-sas
+        c977c536-7b3842f5:
+          family: a0001541,a0001549
+          model: 5926301a
+          name: PEG-MTPA_SAS_FarmTractor_Red_247
+        c977c536-7ea69467:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_empty
+        c977c536-80bf922e:
+          family: a0001543,a0001545
+          name: PEG-MTPA_SAS_Trailer_Semi-sas
+        c977c536-8214eb02:
+          family: a0001543,a0001544
+          name: PEG-MTPA_SAS_Trailer_Grain-sas_EMPTY
+        c977c536-843aca4f:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_CO-SGreen
+        c977c536-8daf8804:
+          family: a0001541
+          model: b9234822
+          name: PEG-MTPA_SAS_Pickup-red_247
+        c977c536-8ee3afb6:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-white_4-20
+        c977c536-932806d3:
+          family: a0001543,a0001544
+          name: PEG-MTPA_SAS_Trailer_Grain-sas
+        c977c536-a1ebb58b:
+          family: a0001543
+          model: b921fca7
+          name: PEG-MTPA_SAS_Trailer_Flatbed_SGreen_247
+        c977c536-ab4dc6e0:
+          family: a0001542
+          name: PEG-MTPA_SAS_Bobtail-sas_silver
+        c977c536-aed3101d:
+          family: a0001543,a0001545
+          name: PEG-MTPA_SAS_Trailer_Semi-white
+        c977c536-b1f6f30d:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-LR-tan_10-21
+        c977c536-bb3725a3:
+          family: a0001546
+          name: PEG-MTPA_SAS_Dumptruck_Maters_sas
+        c977c536-bf516f60:
+          model: 19252f97
+          name: PEG-MTPA_SAS_SemiCab_SGreen_DIAG
+        c977c536-c20b3c93:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-LR--green_6-18
+        c977c536-c3a1a4e5:
+          family: a000154a
+          name: PEG-MTPA_SAS_FarmTractor_Red_rnd
+        c977c536-c56fd41c:
+          family: a0001543,a0001544
+          name: PEG-MTPA_SAS_Trailer_Grain-Mod
+        c977c536-cc1e7e17:
+          family: a0001543,a0001545
+          model: '39221662'
+          name: PEG-MTPA_SAS_Trailer_Semi-sas_247
+        c977c536-d42ac71b:
+          family: a0001541
+          name: PEG-MTPA_SAS_Dunebuggy-red_11,18
+        c977c536-d8d32715:
+          family: a0001542
+          name: PEG-MTPA_SAS_Bobtail-sas
+        c977c536-d9913aa5:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-brown_16-3
+        c977c536-e7e10acd:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_SGreen
+        c977c536-e92c33ef:
+          model: f921f3f0
+          name: PEG-MTPA_SAS_SemiCab_CO-SGreen_DIAG
+        c977c536-f1a32a82:
+          family: a0001540
+          name: PEG-MTPA_SAS_SemiCab_CO-White
+        c977c536-f1f3e00b:
+          family: a0001541
+          name: PEG-MTPA_SAS_Pickup-50sFord-white_4-20
+        c977c536-f6d7436e:
+          family: a000154a
+          name: PEG-MTPA_SAS_FarmTractor_Green_rnd
+        c977c536-fa74cf68:
+          family: a0001547
+          name: PEG-MTPA_SAS_WaterTruck_Small_sas
+        f38748f8-06f6c79c:
+          model: 1660b6b2
+          name: PEG-MTPA-TP_MoonshineStill
+        f38748f8-2e240fe9:
+          model: 79273dc7
+          name: PEG-MTPA-TP_Path-DIAG
+        f38748f8-4094769a:
+          family: a00014dd
+          model: 19977e3e
+          name: PEG-MTPA-TP_Rock3
+        f38748f8-465db454:
+          model: 391d2d4e
+          name: PEG-MTPA-TP_PicnicTable
+        f38748f8-6a3fcb62:
+          model: b993898f
+          name: PEG-MTPA-TP_RockCluster
+        f38748f8-725f1723:
+          model: b91d0927
+          name: PEG-MTPA-TP_DonkeyEngine
+        f38748f8-94d11400:
+          model: 191d2a81
+          name: PEG-MTPA-TP_RockCluster_small
+        f38748f8-a0dcb9bd:
+          model: f92714a5
+          name: PEG-MTPA-TP_Path
+        f38748f8-b063964b:
+          model: 791d1da5
+          name: PEG-MTPA-TP_Shack
+        f38748f8-d295233d:
+          family: a00014df
+          model: b91d1879
+          name: PEG-MTPA-TP_TreeStump
     sha256: 8fa8a47362011caf5b4c4a91bc43fc0a2dcac5d3111929836de60018480f9df7
     size: 7531583
     support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     textures:
       PEGPROD/SPAM/SPAM_Super_Resource_Pack/SPAM_Textures/PEG-SPAM_TEXTURES_RESOURCE_b200.dat:
+        - 1da44725
         - 1da44c00
         - 1da44c05
         - 1da44c10
@@ -4614,36 +4611,44 @@ assets:
         - 1da44c75
         - 1da44c7a
         - 1da44c80
-        - 1da44c8a
         - 1da44c85
-        - 1da44caa
-        - 1da44ca5
+        - 1da44c8a
         - 1da44ca0
-        - 1da44cba
-        - 1da44cb5
+        - 1da44ca5
+        - 1da44caa
         - 1da44cb0
-        - 1da44cca
-        - 1da44cc5
+        - 1da44cb5
+        - 1da44cba
         - 1da44cc0
-        - 1da44cda
-        - 1da44cd5
+        - 1da44cc5
+        - 1da44cca
         - 1da44cd0
-        - 25d60000
-        - 1da44d95
-        - 1da44cfa
-        - 1da44cf5
-        - 1da44cf0
-        - 1da44ce5
+        - 1da44cd5
+        - 1da44cda
         - 1da44ce0
-        - 1da44725
+        - 1da44ce5
+        - 1da44cf0
+        - 1da44cf5
+        - 1da44cfa
         - 1da44d00
         - 1da44d05
         - 1da44d0a
         - 1da44d10
-        - 1da44d1a
         - 1da44d15
+        - 1da44d1a
+        - 1da44d20
+        - 1da44d25
+        - 1da44d2a
+        - 1da44d30
+        - 1da44d35
+        - 1da44d3a
+        - 1da44d40
+        - 1da44d45
+        - 1da44d4a
+        - 1da44d50
         - 1da44d5a
         - 1da44d60
+        - 1da44d65
         - 1da44d70
         - 1da44d75
         - 1da44d7a
@@ -4651,17 +4656,8 @@ assets:
         - 1da44d85
         - 1da44d8a
         - 1da44d90
-        - 1da44d65
-        - 1da44d50
-        - 1da44d4a
-        - 1da44d45
-        - 1da44d40
-        - 1da44d3a
-        - 1da44d35
-        - 1da44d30
-        - 1da44d2a
-        - 1da44d25
-        - 1da44d20
+        - 1da44d95
+        - 25d60000
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2012/thumb-39a2a7e52169570a7f3ca1b46e9174d9-.jpg
     timestamp: 2024-08-15T14:29:31.994Z
     uncompressed: 9883193
@@ -4716,7 +4712,7 @@ assets:
       - Pegasus
     buildings:
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
-        16fdac0f:
+        07bddf1c-16fdac0f:
           bulldoze: 10
           cost: 10
           label: PPond Turbulance
@@ -4729,7 +4725,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        56fdac74:
+        07bddf1c-56fdac74:
           bulldoze: 10
           cost: 5
           label: 'PPond 1x '
@@ -4742,7 +4738,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        96fdb0e5:
+        07bddf1c-96fdb0e5:
           bulldoze: 10
           cost: 10
           label: PPond Waterfall
@@ -4755,7 +4751,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        d6fe0d77:
+        07bddf1c-d6fe0d77:
           bulldoze: 10
           cost: 11
           label: PPond Dam Output
@@ -4774,6 +4770,7 @@ assets:
     dependencies:
       - simtropolis/27712-the-peg-terrain-kit-7-n-1
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<strong><span style=\"color:#800000;\">The <abbr title=\"Pegasus\">PEG</abbr> Terrain Kit (7 n 1)</span></strong><br>\n\t<strong><span style=\"color:#800000;\">By Pegasus</span></strong><br>\n\t<br>\n\tThis package contains a number of separate files, mainly <em>Mayor Mode Ploppables </em>(MMP) that are widely used for terrain detailing.<br>\n\t<br>\n\tThe number of available files has been continuously growing over the years - causing a steadily growing list of dependencies as well, tedious to keep track of, download one-by-one or having to list them again and again.<br>\n\t<br>\n\tTo make things easier we decided to organize a selection of these files into one single pack, so for users it will be much easier to download, while producers can just list them as a single dependency. Since most of these files are very slim, we feel this is appropriate - it is not a huge pack to download and it's organized to leave you in full control which items to load into your plugins.<br>\n\t<br>\n\t<br>\n\t<strong>The 'Kit' bundles the following sets:</strong><br>\n\t<br>\n\t* <a href=\"https://community.simtropolis.com/files/file/21661-peg-ppond-kit/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> PPond Kit</a><br>\n\t* <strong><abbr title=\"Pegasus\">PEG</abbr> PP Lot Editor Terrain Props</strong> (Only available in this package)<br>\n\t* <a href=\"https://community.simtropolis.com/files/file/22701-peg-ppond-terrain-props-pack-1/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> PPond Terrain Prop Pack 1</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20916-peg-mtp-mayor-mode-forest-scenes/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Mode Forest Scenes</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20915-peg-mtp-mayor-mode-flora-mod/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Mode Flora Mod</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20895-peg-mtp-mayor-menu-logging-scenes/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Menu Logging Scenes</a><br>\n\t* <a href=\"https://community.simtropolis.com/files/file/20930-peg-mtp-mayor-menu-scrub-brush-mod/\" rel=\"\"><abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> Mayor Menu Scrub Brush Mod</a><br>\n\t<br>\n\t<strong>NOTICE</strong><br>\n\t<br>\n\tThere is <strong>NO NEW MATERIAL</strong> in this package. It is merely a compilation of previously published material. And of course every single component will stay available on the<strong> </strong><abbr title=\"Pegasus Lot Exchange\">PLEX</abbr><strong> </strong>as well.<br>\n\t<br>\n\tSo those of you that have been <abbr title=\"Mountain Theme Pack\">MTP</abbr>'ing for some time will not need this pack as you most probably have downloaded all the individual sets long time ago... But all folks new to <abbr title=\"Mountain Theme Pack\">MTP</abbr> or terrain detailing or even preparing a fresh install might find this useful.<br>\n\t<br>\n\tWhen you unpack this download you'll find a folder 'Documentation' including the following material -<br>\n\t<br>\n\t* complete set of the original ReadMe files with images<br>\n\t* complete listing of all included files, useful for version control<br>\n\t* <s>complete listing of URLs pointing to the (still available) individual downloads</s><br>\n\t\_ ^ Contains a URL_Individual.txt file which all point to the now lost SimPeg website.<br>\n\t* a few notes on this or that... ;-)<br>\n\t<br>\n\tStore the documentation anywhere outside your Plugins, for future reference...\n</p>\n\n<p>\n\t<strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\" style=\"color:rgb(51,122,183);\">here</a></u></strong>.<br>\n\t<br>\n\t<img alt=\"pdt_logo01.png\" class=\"ipsImage\" src=\"http://i211.photobucket.com/albums/bb210/abcvs/Pegasus%20Productions/pdt_logo01.png\">\n</p>\n\n<p>\n\t<br>\n\t<strong><span style=\"color:#2980b9;\">-Cori Edit: </span></strong><span style=\"color:#2980b9;\">Updated linkys to individual packs and mods.</span>\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: The_Terrain_Kit.zip
     filename: The_Terrain_Kit.zip
     files:
@@ -4818,8 +4815,8 @@ assets:
           name: PEG-PPOND_Tahoe_TURB
           props:
             - 073d46c2
-            - 8d948460
             - 16fdaa85
+            - 8d948460
           size: 1x1
           textures:
             - 261f0000
@@ -4842,24 +4839,24 @@ assets:
             - e2f04e0f
           size: 1x2
           textures:
-            - 261f0000
             - 1da444d5
+            - 261f0000
         d6fe0d77:
           building: d6fe0d77
           name: PEG-PPOND_Tahoe_Pipes
           props:
-            - 8d948460
             - 16fdaa85
             - 4c8497a5
+            - 8d948460
           size: 1x1
           textures:
             - 261f0000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     mmps:
       The_Terrain_Kit/PEGPROD/MTP/MTP MM2 Scrub Brush/PEG-MTP_MM2-ScrubBrush_MOD_100.dat:
-        073d48f0:
+        e83e0437-073d48f0:
           description: One click plants a clump of Scrub Brush. Additional clicks on the plopped clump cycle through the 4 progressively smaller sizes.
           label: Scrub Brush
           model: badb57f1-6e53
@@ -4878,7 +4875,7 @@ assets:
               model: badb57f1-6e51
               name: Scrub Brush
       The_Terrain_Kit/PEGPROD/MTP/MTP MM3 Forest Flora/PEG-MTP_MM3-ForestFlora_MOD_100.dat:
-        073d48e0:
+        e83e0437-073d48e0:
           description: One click plants a Forest Flora. Additional clicks on the plopped flora cycles through the 5 additional styles.
           label: PEG Forest Flora
           model: '365e5321'
@@ -4900,7 +4897,7 @@ assets:
               model: 365e53c9
               name: Scrub Tree
       The_Terrain_Kit/PEGPROD/MTP/MTP MM7 Logging Scenes/PEG-MTP_MM7-ForestLogging_MOD_103.dat:
-        073d48e5:
+        e83e0437-073d48e5:
           description: One click plants a Forest Logging Scene. Additional clicks on the plopped scene cycles through the 5 additional styles. Larger scenes may look best on level land. If a larger scene will not fit in a specific area, you will not be able to cycle to it.
           label: PEG Logging Scenes
           model: 165f5220
@@ -4925,7 +4922,7 @@ assets:
               model: '366089e0'
               name: '"TIM-BERrrr !!"'
       The_Terrain_Kit/PEGPROD/MTP/MTP MM8 Forest Scenes/PEG-MTP_MM5-ForestStuff_MOD_100.dat:
-        073d48da:
+        e83e0437-073d48da:
           description: One click plops an item. Click again on the plopped item to cycle through the 4 additional items.
           label: PEG Forest Accessories
           model: f17a2cf3
@@ -4950,28 +4947,28 @@ assets:
               model: 9664bff7
               name: Hot Springs
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
-        12f37bfb:
+        e83e0437-12f37bfb:
           description: Single click to plop one water section... or hold down the mouse button & drag to paint water freely across the terrain.
           label: PEG Pond
           model: 598d50ed
           name: PEG-PPOND_1x
-        57dea43f:
+        e83e0437-57dea43f:
           description: Water Lillies. Single click to plop a water section with Lilly Pads... or hold down the mouse button & drag to paint water freely across the terrain.
           label: PEG Pond - Lillies
           model: b99234da
           name: PEG-PPOND_1x_Lillies
-        92b59d87:
+        e83e0437-92b59d87:
           description: 1/4 Tile Version. Single click to plop one water section... or hold down the mouse button & drag to paint water freely across the terrain.
           label: PEG Pond - 1/4
           model: d9922970
           name: PEG-PPOND_1x_1/4
-        f2153b9b:
+        e83e0437-f2153b9b:
           description: Water Lillies. Single click to plop a 1/4 water section with Cattails... or hold down the mouse button & drag to paint water freely across the terrain.
           label: PEG Pond - Cattails
           model: 3997ee5f
           name: PEG-PPOND_1/4x_Cattails
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_102.dat:
-        042010d4:
+        e83e0437-042010d4:
           description: One click pops a rock. Additional clicks on the plopped rock cycle through the 4 additional sizes.
           label: PEGl Rocks - Small
           model: '59977e98'
@@ -4989,12 +4986,12 @@ assets:
             - id: 042010d8
               model: 3997738a
               name: PEG_Rock-Plop_Small5
-        37a24970:
+        e83e0437-37a24970:
           description: Single click plops a sandy shoreline texture.. Click, hold and drag will paint the path as you move the cursor. Can be used to paint pathways.
           label: PEG Shoreline Plop - Sand
           model: 9994b762
           name: PEG-PPond_Sand
-        6c3c4e35:
+        e83e0437-6c3c4e35:
           description: One click pops a boulder. Additional clicks on the plopped rock cycle through the 4 additional sizes.
           label: PEG Boulders
           model: d993ba03
@@ -5012,446 +5009,434 @@ assets:
             - id: 6c3c4e39
               model: d993f522
               name: PEG_Rock-Plop5
-        765d44bb:
+        e83e0437-765d44bb:
           description: Single click plops a smaller, slightly darker shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor.
           label: PEG Shoreline Plop - Small
           model: '19928022'
           name: PEG-PPond_Shore-Plop_Small
-        85fbb82d:
+        e83e0437-85fbb82d:
           description: Single click plops a small shoreline rock cluster texture. Click, hold and drag will paint the shoreline as you move the cursor.
           label: PEG Shoreline Plop - Rock Cluster
           model: b993898f
           name: PEG_Shore-Rock Cluster
-        8e40e142:
+        e83e0437-8e40e142:
           description: Single click plops a pebble shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor. Can be used to paint pathways.
           label: PEG Shoreline Plop - Pebble
           model: 99791c34
           name: PEG-PPond_Shore-Plop-Pebble
-        fa175f2a:
+        e83e0437-fa175f2a:
           description: 'Single click plops a mossy shoreline texture. Click, hold and drag will paint the shoreline as you move the cursor. Can be used to add a mossy texture almost anywhere on the terrain. '
           label: PEG Shoreline Plop - Moss
           model: d994d108
           name: PEG-PPond_Shore-Plop-Moss
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat:
-        0a062619:
+        e83e0437-0a062619:
           description: Single click plops a clump of Poppies. Click, hold and drag will paint the poppies as you move the cursor. Can be used to paint pathways.
           label: Poppies
           model: f9b5c983
           name: PEG-PP_Ground-Poppys
-        3763d37d:
+        e83e0437-3763d37d:
           description: Single click plops a clump of dandy Vandy Lions. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
           label: Vandy Lions
           model: 59b5b9e0
           name: PEG-PP_Ground-VandyLions
-        6fc4f757:
+        e83e0437-6fc4f757:
           description: Single click plops a clump of Daiseys. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
           label: Daiseys
           model: d9b5cd71
           name: PEG-PP_Ground-Daiseys
-        fa2447b0:
+        e83e0437-fa2447b0:
           description: Single click plops a clump of Prairie Rose. Click, hold and drag will paint the flowers as you move the cursor. Can be used to paint pathways.
           label: Prairie Rose
           model: 59b5cd43
           name: PEG-PP_Ground-Prairie Rose
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat:
-        9e0c4310:
+        e83e0437-9e0c4310:
           description: Single click plops a patch of Grass. Click, hold and drag will paint the grass as you move the cursor. Can be used to paint pathways.
           label: Grass
           model: 99b71222
           name: PEG-PP_Ground-Grass
-        e9220068:
+        e83e0437-e9220068:
           description: Single click plops a patch of Clover. Click, hold and drag will paint the clover as you move the cursor. Can be used to paint pathways.
           label: Clover
           model: 79b715f4
           name: PEG-PP_Ground-Clover
-        feb86dca:
+        e83e0437-feb86dca:
           description: Single click plops a clump of Leaves. Click, hold and drag will paint the leaves as you move the cursor. Can be used to paint pathways.
           label: Leaves
           model: d9b5e4a6
           name: PEG-PP_Ground-Leaves
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat:
-        28b93602:
+        e83e0437-28b93602:
           description: Single click plops a cluster of RipRap. Click, hold and drag will paint the RipRap as you move the cursor. Can be used to paint pathways.
           label: RipRap
           model: 79b736ef
           name: PEG-PP_RipRap
-        4880ba97:
+        e83e0437-4880ba97:
           description: Single click plops a slightly smaller/denser Pebble texture. Click, hold and drag will paint the sand as you move the cursor. Can be used to paint pathways.
           label: PEG Shorline Plop - Gravel
           model: 39a9b42f
           name: PEG-PP_ShorePlop_Gravel
-        7d793ec4:
+        e83e0437-7d793ec4:
           description: Single click plops a slightly darker sand texture. Click, hold and drag will paint the sand as you move the cursor. Can be used to paint pathways.
           label: PEG Shorline Plop - Sand2
           model: b9a9e0ad
           name: PEG-TPond_Shore-Sand2
-        cce2232a:
+        e83e0437-cce2232a:
           description: Single click plops a bit of Ballast designed to line rails and roads. Click, hold and drag will paint the ballast as you move the cursor. Can be used to paint pathways.
           label: Ballast
           model: 19b5a5cf
           name: PEG-TP_Ground-Ballast
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat:
-        1153f533:
+        e83e0437-1153f533:
           description: One click pops a clump of Dead Weeds. Additional clicks on the weeds will cycle through the 4 additional sizes.
           label: Dead Weeds
           model: d9b87ff9
           name: PEG-TP_DeadWeeds1
           stages:
             - id: 1153f534
-              label: Dead Weeds
               model: 99b885dc
               name: PEG-TP_DeadWeeds2
             - id: 1153f535
-              label: Dead Weeds
               model: d9b88ac4
               name: PEG-TP_DeadWeeds3
             - id: 1153f536
-              label: Dead Weeds
               model: 59b88b0f
               name: PEG-TP_DeadWeeds4
             - id: 1153f537
-              label: Dead Weeds
               model: d9b88a30
               name: PEG-TP_DeadWeeds5
-        3658aad0:
+        e83e0437-3658aad0:
           description: One click pops a clump of Weeds. Additional clicks on the weeds will cycle through the 4 additional sizes.
           label: Weeds
           model: 59b8b6a4
           name: PEG-TP_Weeds1
           stages:
             - id: 3658aad1
-              label: Weeds
               model: f9b8b63c
               name: PEG-TP_Weeds2
             - id: 3658aad2
-              label: Weeds
               model: 99b8b5c9
               name: PEG-TP_Weeds3
             - id: 3658aad3
-              label: Weeds
               model: 59b8b508
               name: PEG-TP_Weeds4
             - id: 3658aad4
-              label: Weeds
               model: d9b8b56d
               name: PEG-TP_Weeds5
-        b2c023b1:
+        e83e0437-b2c023b1:
           description: One click pops a  Dead Tree. Additional clicks on the weeds will cycle through the 4 additional sizes.
           label: Dead Trees
           model: ba710564
           name: PEG-TP_DeadTree1
           stages:
             - id: b2c023b2
-              label: Dead Trees
               model: 1a710b0a
               name: PEG-TP_DeadTree2
             - id: b2c023b3
-              label: Dead Trees
               model: 5a711056
               name: PEG-TP_DeadTree3
             - id: b2c023b4
-              label: Dead Trees
               model: 1a712013
               name: PEG-TP_DeadTree4
             - id: b2c023b5
-              label: Dead Trees
               model: 1a7115f2
               name: PEG-TP_DeadTree5
     models:
       The_Terrain_Kit/PEGPROD/MTP/MTP MM3 Forest Flora/PEG-MTP_MM3-ForestFlora_MOD_100.dat:
         - '365e5321'
-        - d65b7def
+        - 365e53c9
+        - b65b6fa0
         - b65b77cd
         - b65b84fa
-        - b65b6fa0
-        - 365e53c9
+        - d65b7def
       The_Terrain_Kit/PEGPROD/MTP/MTP MM7 Logging Scenes/PEG-MTP_MM7-ForestLogging_MOD_103.dat:
-        - 965d96b2
-        - b65abdc0
         - 165f5220
-        - f65f4eef
-        - b65f4d26
-        - 965f44d2
         - '366089e0'
+        - 965d96b2
+        - 965f44d2
+        - b65abdc0
+        - b65f4d26
+        - f65f4eef
       The_Terrain_Kit/PEGPROD/MTP/MTP MM8 Forest Scenes/PEG-MTP_MM5-ForestStuff_MOD_100.dat:
-        - 9664bff7
         - 1660b6b2
-        - 5664aaa5
-        - f66367ad
-        - '76620698'
         - 565e89c7
+        - 5664aaa5
+        - '76620698'
+        - 9664bff7
         - f17a2cf3
+        - f66367ad
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Props_Tahoe_STYLE.dat:
-        - 99791c34
         - '19928022'
+        - 1993c9ea
+        - '19977e03'
+        - 19977e3e
+        - 3993ee50
+        - 3997738a
+        - '59977e98'
+        - 99791c34
+        - 9994b762
+        - '99978242'
         - b993898f
         - d993ba03
-        - d994b315
-        - 3993ee50
-        - 1993c9ea
         - d993f522
-        - 9994b762
+        - d994b315
         - d994d108
-        - '59977e98'
-        - '99978242'
-        - 19977e3e
-        - '19977e03'
-        - 3997738a
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Tahoe_STYLE.dat:
-        - 598d50ed
         - 3991adcd
-        - d9922970
-        - b99234da
         - 3997ee5f
+        - 598d50ed
+        - b99234da
+        - d9922970
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat:
         - 59b5b9e0
-        - d9b5cd71
         - 59b5cd43
+        - d9b5cd71
         - f9b5c983
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat:
-        - d9b5e4a6
-        - 99b71222
         - 79b715f4
+        - 99b71222
+        - d9b5e4a6
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat:
         - 19b5a5cf
-        - b9a9e0ad
-        - 79b736ef
         - 39a9b42f
+        - 79b736ef
+        - b9a9e0ad
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat:
-        - d9b87ff9
-        - ba710564
-        - 99b885dc
-        - d9b88ac4
-        - 59b88b0f
-        - d9b88a30
-        - 59b8b6a4
-        - f9b8b63c
-        - 99b8b5c9
-        - 59b8b508
-        - d9b8b56d
         - 1a710b0a
-        - 5a711056
-        - 1a712013
         - 1a7115f2
+        - 1a712013
+        - 59b88b0f
+        - 59b8b508
+        - 59b8b6a4
+        - 5a711056
+        - 99b885dc
+        - 99b8b5c9
+        - ba710564
+        - d9b87ff9
+        - d9b88a30
+        - d9b88ac4
+        - d9b8b56d
+        - f9b8b63c
     name: The PEG Terrain Kit (7 n 1)
     props:
       The_Terrain_Kit/PEGPROD/PPonds/LE Terrain Props/PEG-PP_Lot-Props_101.dat:
-        00b700ba:
+        f38748f8-00b700ba:
           family: a00014df
           model: b65b84fa
           name: PEG-TP_Fern-Med
-        1e499f59:
+        f38748f8-1e499f59:
           model: 598d50ed
           name: PEG-TP_Water
-        25cb1dfc:
+        f38748f8-25cb1dfc:
           model: 1660b6b2
           name: PEG-TP_MoonshineStill
-        3616f850:
+        f38748f8-3616f850:
           model: '19928022'
           name: PEG-TP_DarkSand
-        3b57eab8:
+        f38748f8-3b57eab8:
           family: a00014dd
           model: 3997738a
           name: PEG-TP_Rock5
-        41b86487:
+        f38748f8-41b86487:
           family: a00014df
           model: 165f5220
           name: PEG-TP_TreeStump
-        42baf1d0:
+        f38748f8-42baf1d0:
           model: 3997ee5f
           name: PEG-TP_Cattails
-        48a24fc2:
+        f38748f8-48a24fc2:
           model: 5664aaa5
           name: PEG-TP_PicnicArea
-        53cf7bbc:
+        f38748f8-53cf7bbc:
           family: a00014dd
           model: 19977e3e
           name: PEG-TP_Rock3
-        6bce5444:
+        f38748f8-6bce5444:
           family: a00014df
           model: d65b7def
           name: PEG-TP_Fern-Small
-        6c24bfe4:
+        f38748f8-6c24bfe4:
           model: b993898f
           name: PEG-TP_RockCluster
-        7400f0be:
+        f38748f8-7400f0be:
           family: a00014de
           model: 1993c9ea
           name: PEG-TP_Boulder4
-        '78022e23':
+        f38748f8-78022e23:
           family: a00014df
           model: b65b6fa0
           name: PEG-TP_Fern-Tree
-        7a49fa3d:
+        f38748f8-7a49fa3d:
           model: b99234da
           name: PEG-TP_Water-Lillies
-        7ca743da:
+        f38748f8-7ca743da:
           family: a00014de
           model: 3993ee50
           name: PEG-TP_Boulder3
-        8c11a01c:
+        f38748f8-8c11a01c:
           family: a00014de
           model: d994b315
           name: PEG-TP_Boulder2
-        8d8ad196:
+        f38748f8-8d8ad196:
           family: a00014dd
           model: '19977e03'
           name: PEG-TP_Rock4
-        9034ac83:
+        f38748f8-9034ac83:
           family: a00014dd
           model: '99978242'
           name: PEG-TP_Rock2
-        94ba0efd:
+        f38748f8-94ba0efd:
           model: 9664bff7
           name: PEG-TP_HotSprings
-        9717f0a3:
+        f38748f8-9717f0a3:
           model: 9994b762
           name: PEG-TP_Sand
-        9b3d975e:
+        f38748f8-9b3d975e:
           family: a00014de
           model: d993ba03
           name: PEG-TP_Boulder1
-        a27d8893:
+        f38748f8-a27d8893:
           model: d993f522
           name: PEG-TP_Boulder5
-        ab5c83f7:
+        f38748f8-ab5c83f7:
           family: a00014df
           model: '365e5321'
           name: PEG-TP_Weeds
-        af4e30c5:
+        f38748f8-af4e30c5:
           model: f66367ad
           name: PEG-TP_Shack
-        b61b12b6:
+        f38748f8-b61b12b6:
           family: a00014df
           model: b65b77cd
           name: PEG-TP_Fern-Large
-        c43d112f:
+        f38748f8-c43d112f:
           family: a00014dd
           model: '59977e98'
           name: PEG-TP_Rock1
-        c5eef733:
+        f38748f8-c5eef733:
           model: d994d108
           name: PEG-TP_Moss/Ivy
-        c601f82c:
+        f38748f8-c601f82c:
           model: 565e89c7
           name: PEG-TP_FireTower
-        c95894ed:
+        f38748f8-c95894ed:
           model: f17a2cf3
           name: PEG-TP_PicnicTable
-        cdb16baa:
+        f38748f8-cdb16baa:
           model: 99791c34
           name: PEG-TP_Pebbles
-        d8b22f02:
+        f38748f8-d8b22f02:
           model: '76620698'
           name: PEG-TP_DonkeyEngine
-        ddf87525:
+        f38748f8-ddf87525:
           model: d9922970
           name: PEG-TP_Water-Small
-        e234809e:
+        f38748f8-e234809e:
           family: a00014df
           model: 365e53c9
           name: PEG-TP_ScrubBrush
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Kit_102.dat:
-        073d46c2:
+        c977c536-073d46c2:
           name: Effect_Peg_Waterfall_Turbulance
-        26f5cac5:
+        c977c536-26f5cac5:
           name: PEG-Effect_SmallFountainC
-        '33638e48':
+        c977c536-33638e48:
           name: PEG-Effect_SmallFountainB
-        4c8497a5:
+        c977c536-4c8497a5:
           name: PEG-Effect_Lateral Turbulance
-        50a6f904:
+        c977c536-50a6f904:
           name: PEG-Effect_Sparkles
-        8d948460:
+        c977c536-8d948460:
           name: PEG-Effect_Sparkles_Small
-        c1ff58f7:
+        c977c536-c1ff58f7:
           name: PEG-Effect_SmallFountainA
-        e2f04e0f:
+        c977c536-e2f04e0f:
           name: PEG-Effect_Mist
       The_Terrain_Kit/PEGPROD/PPonds/PPond_Kit/PEG-PPond_Tahoe_STYLE.dat:
-        16fdaa85:
+        f38748f8-16fdaa85:
           model: 3991adcd
           name: PEG_Water-Plop1x
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Flowers_101.dat:
-        '24942861':
+        f38748f8-24942861:
           model: 59b5cd43
           name: PEG-TP_Flowers-Prairie Rose
-        2595c220:
+        f38748f8-2595c220:
           model: f9b5c983
           name: PEG-TP_Flowers-Poppys
-        81dad581:
+        f38748f8-81dad581:
           model: d9b5cd71
           name: PEG-TP_Flowers-Daiseys
-        b38dddfa:
+        f38748f8-b38dddfa:
           model: 59b5b9e0
           name: PEG-TP_Flowers-VandyLions
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Grass_101.dat:
-        0445bb45:
+        f38748f8-0445bb45:
           model: 79b715f4
           name: PEG-TP_Grass-Clover
-        205f99f7:
+        f38748f8-205f99f7:
           model: 99b71222
           name: PEG-TP_Grass
-        3525dae8:
+        f38748f8-3525dae8:
           model: d9b5e4a6
           name: PEG-TP_Leaves
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Ground_101.dat:
-        3b2fe034:
+        f38748f8-3b2fe034:
           model: b9a9e0ad
           name: PEG-TP_Sand2
-        7612c0f3:
+        f38748f8-7612c0f3:
           model: 79b736ef
           name: PEG-TP_RipRap
-        bdc2dc4f:
+        f38748f8-bdc2dc4f:
           model: 19b5a5cf
           name: PEG-TP_Ground-Ballast
-        e68489f3:
+        f38748f8-e68489f3:
           model: 39a9b42f
           name: PEG-TP_Gravel
       The_Terrain_Kit/PEGPROD/PPonds/Terrain Props 1/PEG-PP_TerrainProps_Weeds_101.dat:
-        00a25f3d:
+        f38748f8-00a25f3d:
           model: 5a711056
           name: PEG-TP_DeadTree3
-        050690bd:
+        f38748f8-050690bd:
           model: 1a710b0a
           name: PEG-TP_DeadTree2
-        054f0e9e:
+        f38748f8-054f0e9e:
           model: d9b88a30
           name: PEG-TP_DeadWeeds5
-        0fe13f84:
+        f38748f8-0fe13f84:
           model: 99b8b5c9
           name: PEG-TP_Weeds3
-        '18023858':
+        f38748f8-18023858:
           model: d9b88ac4
           name: PEG-TP_DeadWeeds3
-        1861d769:
+        f38748f8-1861d769:
           model: d9b8b56d
           name: PEG-TP_Weeds5
-        32dfc8ca:
+        f38748f8-32dfc8ca:
           model: d9b87ff9
           name: PEG-TP_DeadWeeds1
-        3e4cfb8c:
+        f38748f8-3e4cfb8c:
           model: 59b8b6a4
           name: PEG-TP_Weeds1
-        9239283e:
+        f38748f8-9239283e:
           model: 1a7115f2
           name: PEG-TP_DeadTree5
-        9a4ebf43:
+        f38748f8-9a4ebf43:
           model: 59b88b0f
           name: PEG-TP_DeadWeeds4
-        af51a57f:
+        f38748f8-af51a57f:
           model: ba710564
           name: PEG-TP_DeadTree1
-        ba4a9bcf:
+        f38748f8-ba4a9bcf:
           model: 1a712013
           name: PEG-TP_DeadTree4
-        d2da4be2:
+        f38748f8-d2da4be2:
           model: f9b8b63c
           name: PEG-TP_Weeds2
-        e65447a2:
+        f38748f8-e65447a2:
           model: 99b885dc
           name: PEG-TP_DeadWeeds2
-        efa3effd:
+        f38748f8-efa3effd:
           model: 59b8b508
           name: PEG-TP_Weeds4
     sha256: 2ff2f43e8bed9f779195cbbf650f4784a5ac2578a591e6e1bf7e78f7639cc247

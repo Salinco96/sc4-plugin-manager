@@ -1,12 +1,17 @@
-import type { ID } from "@salinco/nice-utils"
+import type { GroupID, InstanceID } from "./dbpf"
 
-export type FamilyID = ID<string, FamilyInfo>
+export type FamilyID = InstanceID<FamilyInfo>
 
 export interface FamilyInfo {
   /**
    * Path to exemplar file (POSIX)
    */
   file?: string
+
+  /**
+   * Group ID
+   */
+  group?: GroupID
 
   /**
    * Family ID

@@ -1,6 +1,13 @@
 import path from "node:path"
 
-import { DBPFDataType, DBPFFileType, getTextureIdRange, isDBPF, parseTGI } from "@common/dbpf"
+import {
+  DBPFDataType,
+  DBPFFileType,
+  type GroupID,
+  getTextureIdRange,
+  isDBPF,
+  parseTGI,
+} from "@common/dbpf"
 import {
   type ExemplarProperties,
   ExemplarPropertyID,
@@ -47,7 +54,7 @@ export async function analyzeSC4Files(
       for (const entry of values(file.entries)) {
         switch (entry.type) {
           case DBPFDataType.EXMP: {
-            const instanceId = parseTGI(entry.id)[2]
+            const [, groupId, instanceId] = parseTGI(entry.id)
             const exemplar = { ...entry, file: filePath } as Exemplar
             const exemplarType = getExemplarType(entry.id, entry.data)
             const isCohort = !!entry.data?.isCohort
@@ -56,10 +63,11 @@ export async function analyzeSC4Files(
               case ExemplarType.Building: {
                 if (isCohort) {
                   const familyId = get(exemplar, ExemplarPropertyID.PropFamily)
-                  if (familyId !== undefined && instanceId === getFamilyInstanceId(familyId)) {
+                  if (familyId && instanceId === getFamilyInstanceId(familyId)) {
                     contents.buildingFamilies ??= []
                     contents.buildingFamilies.push({
                       file: filePath,
+                      group: toHex(groupId, 8) as GroupID,
                       id: toHex(familyId, 8) as FamilyID,
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
                     })
@@ -140,6 +148,7 @@ export async function analyzeSC4Files(
                     contents.propFamilies ??= []
                     contents.propFamilies.push({
                       file: filePath,
+                      group: toHex(groupId, 8) as GroupID,
                       id: toHex(familyId, 8) as FamilyID,
                       name: getString(exemplar, ExemplarPropertyID.ExemplarName),
                     })

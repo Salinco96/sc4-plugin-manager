@@ -5,7 +5,7 @@ assets:
       - Jeronij
     buildings:
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue Full_30c05b68.SC4Lot:
-        30c05b68:
+        07bddf1c-30c05b68:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -25,7 +25,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Blue/JRJ Toyama3 blue_d0bf13e3.SC4Lot:
-        d0bf13e3:
+        07bddf1c-d0bf13e3:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -45,7 +45,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green Full_30c052e8.SC4Lot:
-        30c052e8:
+        07bddf1c-30c052e8:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -65,7 +65,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Green/JRJ Toyama3 Green_f0bf0dab.SC4Lot:
-        f0bf0dab:
+        07bddf1c-f0bf0dab:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -85,7 +85,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red Full_d0c05314.SC4Lot:
-        d0c05314:
+        07bddf1c-d0c05314:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -105,7 +105,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Red/JRJ Toyama3 red_d0bf0a44.SC4Lot:
-        d0bf0a44:
+        07bddf1c-d0bf0a44:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -125,7 +125,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow Full_f0c045df.SC4Lot:
-        f0c045df:
+        07bddf1c-f0c045df:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -145,7 +145,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/JRJ Maritime Toyama Yellow/JRJ Toyama3 yellow_d0bf0413.SC4Lot:
-        d0bf0413:
+        07bddf1c-d0bf0413:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -165,7 +165,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/Juan J. Sister/JRJ Sister_90be0bd3.SC4Lot:
-        90be0bd3:
+        07bddf1c-90be0bd3:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -185,7 +185,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd01_90c1db9e.SC4Lot:
-        90c1db9e:
+        07bddf1c-90c1db9e:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -205,7 +205,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/Ned Lloyd/JRJ Nedlloyd02_90c204fd.SC4Lot:
-        90c204fd:
+        07bddf1c-90c204fd:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -225,7 +225,7 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 1
       Jeronij/JRJ Ships Compilation/RMS Titanic/JRJ Titanic_70b5cb20.SC4Lot:
-        70b5cb20:
+        07bddf1c-70b5cb20:
           bulldoze: 5
           categories: landmarks
           cost: 7
@@ -250,6 +250,7 @@ assets:
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p><span style=\"font-family: Arial, Helvetica, sans-serif;\">These are all water plopable landmarks which include mostly two versions of cargo ships (loaded and unloaded) like the\_Ned Lloyd\_and the\_Maritime Toyoma\_cargo ships in different colour variation.\_</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">Useful for industrial harbour areas.</span><span style=\"font-family: Arial, Helvetica, sans-serif;\">\_The compilation also contains the</span>\_Spanish\_passenger ferry ship\_Juan J. Sister\_and the\_Harland &amp; Wolff RMS Titanic.</p>\r\n<p>These models are based on real life ships, for the cargo ships there are two versions included, one with a full container cargo, and the other one empty. The ships are to scale. Be advised !!!</p>\r\n<p>Before installing the modpack read the readme contained in the <em><strong>~Documents</strong></em> folder and run the <strong>cleanitol</strong> file to have a clean installation of the mods.</p>\r\n<p><span style=\"text-decoration: underline;\">Installation</span>: Copy/extract the <strong>BSC </strong>and the <strong>Jeronij </strong>parent folders into your plugins. If you extracted the <em>_Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder<span style=\"font-family: Arial, Helvetica, sans-serif;\">.</span></p>\r\n<p><strong><span style=\"font-family: Arial, Helvetica, sans-serif;\">Dependencies:</span></strong></p>\r\n<p><span style=\"font-family: Arial, Helvetica, sans-serif;\">BSC MEGA Props - JRJ Vol01 v2.dat - INCLUDED (you can find it in the BSC/BSCProps folder).</span></p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_JJSister.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg\" alt=\"JRJ_Ships_JJSister\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Titanic.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Titanic.jpg\" alt=\"JRJ_Ships_Titanic2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/JRJ_Ships_Toyama_blue.jpg\" data-lightbox=\"lightbox165\" data-alt=\"lightboxJRJ_Ships_JJSister.jpg|JRJ_Ships_Titanic.jpg|JRJ_Ships_Toyama_blue\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_Toyama_blue.jpg\" alt=\"JRJ_Ships_Toyama_blue3\" ></a> </span>\r\n        </div> \r\n</body>"
     downloads: 735
+    features: []
     file: SC4D_LEX_LEGACY_Jeronij Ship Pack.zip
     files:
       - BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat
@@ -389,71 +390,71 @@ assets:
             - 70b5ca2f
           size: 1x1
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat:
-        - 93510e0f
-        - d351314d
-        - b34d42e5
-        - 534e4a5e
-        - d34f8ced
-        - 534e44f3
-        - d34f8584
-        - 734e40cf
-        - b34f7bbc
-        - f34e3aa0
         - 334f74fb
         - 5344f7dc
+        - 534e44f3
+        - 534e4a5e
+        - 734e40cf
+        - 93510e0f
+        - b34d42e5
+        - b34f7bbc
+        - d34f8584
+        - d34f8ced
+        - d351314d
+        - f34e3aa0
     name: SC4D LEX LEGACY - Jeronij Ship Pack
     props:
       BSC/BSCProps/BSC MEGA Props - JRJ Vol01 v2.dat:
-        15699a1a:
-          name: JRJ_V_Toyama_Ship_RedTimed
-        50be0b56:
+        0f55ca9c-50be0b56:
           model: b34d42e5
           name: JRJ_V_JJ_Sister2
-        50c05283:
+        0f55ca9c-50c05283:
           model: b34f7bbc
           name: JRJ_V_Toyama_Ship_Red_Full
-        50c1db01:
+        0f55ca9c-50c1db01:
           model: 93510e0f
           name: JRJ_V_Nedlloyd01
-        70b5ca2f:
+        0f55ca9c-70b5ca2f:
           model: 5344f7dc
           name: JRJ_V_RMS_Titanic
-        70c0526a:
+        0f55ca9c-70c0526a:
           model: d34f8584
           name: JRJ_V_Toyama_Ship_Green_full
-        70c05af8:
+        0f55ca9c-70c05af8:
           model: d34f8ced
           name: JRJ_V_Toyama_Ship_Blue_full
-        70c20440:
+        0f55ca9c-70c20440:
           model: d351314d
           name: JRJ_V_Nedlloydfull02
-        756999f9:
-          name: JRJ_V_Toyama_Ship_BlueTimed
-        90bf037b:
+        0f55ca9c-90bf037b:
           model: f34e3aa0
           name: JRJ_V_Toyama_Ship_Yellow
-        90bf09fe:
+        0f55ca9c-90bf09fe:
           model: 734e40cf
           name: JRJ_V_Toyama_Ship_Red
-        90bf0d55:
+        0f55ca9c-90bf0d55:
           model: 534e44f3
           name: JRJ_V_Toyama_Ship_Green
-        90bf1390:
+        0f55ca9c-90bf1390:
           model: 534e4a5e
           name: JRJ_V_Toyama_Ship_Blue
-        b5699a0b:
-          name: JRJ_V_Toyama_Ship_GreenTimed
-        d56999c1:
-          name: JRJ_V_Nedlloyd01Timed
-        d5699a2f:
-          name: JRJ_V_Toyama_Ship_YellowTimed
-        f0c044bc:
+        0f55ca9c-f0c044bc:
           model: 334f74fb
           name: JRJ_V_Toyama_Ship_Yellow_full
+        b263c71d-15699a1a:
+          name: JRJ_V_Toyama_Ship_RedTimed
+        b263c71d-756999f9:
+          name: JRJ_V_Toyama_Ship_BlueTimed
+        b263c71d-b5699a0b:
+          name: JRJ_V_Toyama_Ship_GreenTimed
+        b263c71d-d56999c1:
+          name: JRJ_V_Nedlloyd01Timed
+        b263c71d-d5699a2f:
+          name: JRJ_V_Toyama_Ship_YellowTimed
     sha256: 655d592ae43b5c95f143eee8ae3bb4d536b0941d606a012bb9be8bcdb7136bbc
     size: 11699133
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/JRJ_Ships_JJSister.jpg

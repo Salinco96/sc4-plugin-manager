@@ -1,15 +1,18 @@
-import { DBPFDataType, type DBPFFile, TGI, parseTGI } from "@common/dbpf"
+import { DBPFDataType, type DBPFFile, type GroupID, type TypeID } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 
 import type { FloraID, FloraInfo } from "@common/mmps"
-import { toHex } from "@salinco/nice-utils"
+import { split } from "@common/utils/string"
 import type { Exemplar } from "./types"
 import { getModelId, getString, getTGI } from "./utils"
 
 export function getFloraInfo(exemplar: Exemplar, file: DBPFFile): FloraInfo {
+  const [, group, id] = split(exemplar.id, "-") as [TypeID, GroupID, FloraID]
+
   const data: FloraInfo = {
     file: exemplar.file,
-    id: toHex(parseTGI(exemplar.id)[2], 8) as FloraID,
+    group,
+    id,
   }
 
   const name = getString(exemplar, ExemplarPropertyID.ExemplarName)
@@ -40,7 +43,7 @@ export function getFloraInfo(exemplar: Exemplar, file: DBPFFile): FloraInfo {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
+    data.model = model.endsWith("00000000") ? null : getModelId(model)
   }
 
   return data

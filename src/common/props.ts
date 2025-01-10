@@ -1,7 +1,8 @@
-import type { ID } from "@salinco/nice-utils"
+import type { GroupID, InstanceID } from "./dbpf"
 import type { FamilyID } from "./families"
+import type { ModelID } from "./variants"
 
-export type PropID = ID<string, PropInfo>
+export type PropID = InstanceID<PropInfo>
 
 export interface PropInfo {
   /**
@@ -13,6 +14,11 @@ export interface PropInfo {
    * Path to exemplar file (POSIX)
    */
   file: string
+
+  /**
+   * Prop group ID
+   */
+  group: GroupID
 
   /**
    * Prop instance ID
@@ -27,7 +33,7 @@ export interface PropInfo {
   /**
    * Model ID
    */
-  model?: string | null
+  model?: ModelID | null
 
   /**
    * Internal exemplar name

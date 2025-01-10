@@ -2,18 +2,18 @@ import { Card, CardContent, Divider, List, ListItem } from "@mui/material"
 import { forEach, get, groupBy, mapValues, sortBy, values } from "@salinco/nice-utils"
 import { Fragment, useEffect, useMemo, useState } from "react"
 
+import { TypeID } from "@common/dbpf"
+import type { FamilyID, FamilyInfo } from "@common/families"
+import { type PackageID, checkFile } from "@common/packages"
+import type { PropID, PropInfo } from "@common/props"
+import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
+import { Page } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
-
-import type { FamilyID, FamilyInfo } from "@common/families"
-import { type PackageID, checkFile } from "@common/packages"
-import type { PropID, PropInfo } from "@common/props"
-import { Page } from "@utils/navigation"
-import { ExemplarRef } from "../ExemplarRef"
 
 export default function PackageViewProps({ packageId }: { packageId: PackageID }): JSX.Element {
   const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
@@ -105,10 +105,18 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
     })
 
     // Sort families
-    return sortBy(
-      values(groupedByFamily),
-      group => group.familyId || group.props[0].name || group.props[0].id,
-    )
+    return [
+      ...sortBy(
+        values(groupedByFamily),
+        group => group.familyId || group.props[0].name || group.props[0].id,
+      ),
+      ...sortBy(
+        values(propFamilies)
+          .filter(family => !groupedByFamily[family.id])
+          .map(family => ({ family, familyId: family.id, props: [] })),
+        group => group.familyId,
+      ),
+    ]
   }, [features, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
@@ -126,6 +134,15 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
 
                     <ExemplarRef file={family?.file} id={familyId} />
                   </FlexBox>
+                )}
+
+                {familyId && props.length === 0 && (
+                  <>
+                    <Divider sx={{ marginY: 2 }} />
+                    <Text maxLines={1} sx={{ fontStyle: "italic" }} variant="body2">
+                      This package does not include any props in this family.
+                    </Text>
+                  </>
                 )}
 
                 {props.map((prop, index) => {
@@ -158,7 +175,12 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
                               </Text>
                             </FlexBox>
 
-                            <ExemplarRef file={prop.file} id={prop.id} />
+                            <ExemplarRef
+                              file={prop.file}
+                              group={prop.group}
+                              id={prop.id}
+                              type={TypeID.EXEMPLAR}
+                            />
                           </FlexBox>
                         </FlexBox>
                       </FlexBox>

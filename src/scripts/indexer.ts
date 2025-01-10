@@ -16,18 +16,17 @@ import {
   getRequired,
   groupBy,
   indexBy,
-  isEmpty,
   isEqual,
   isString,
   keys,
   mapDefined,
+  mapKeys,
   mapValues,
   merge,
   parseHex,
   union,
   unique,
   values,
-  where,
 } from "@salinco/nice-utils"
 import { config } from "dotenv"
 import { glob } from "glob"
@@ -48,11 +47,18 @@ import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { VariantAssetInfo, VariantInfo } from "@common/variants"
+import type { ContentsInfo, VariantAssetInfo, VariantInfo } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
-import { type PackageData, loadPackageInfo, writePackageInfo } from "@node/data/packages"
+import {
+  type PackageData,
+  loadContentsInfo,
+  loadPackageInfo,
+  writeContentsInfo,
+  writeModelId,
+  writePackageInfo,
+} from "@node/data/packages"
 import type { ContentsData } from "@node/data/packages"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
@@ -60,12 +66,6 @@ import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
 import { loadAuthors, writeAuthors } from "@node/data/authors"
-import { writeBuildingInfo } from "@node/data/buildings"
-import { writeFamilyInfo } from "@node/data/families"
-import { matchFiles } from "@node/data/files"
-import { writeLotInfo } from "@node/data/lots"
-import { writeFloraInfo } from "@node/data/mmps"
-import { writePropInfo } from "@node/data/props"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "../node/dbpf/analyze"
@@ -146,7 +146,7 @@ runIndexer({
       }
     },
   },
-  refetchIntervalHours: 20,
+  refetchIntervalHours: 200,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
 })
@@ -416,94 +416,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
    * STEP 4 - Analyze Maxis files if necessary
    */
 
-  // Step 4a - Analyze Maxis files
-  const indexerMaxisConfig = await loadConfig<ContentsData>(dataAssetsDir, "maxis")
-  let maxisData = indexerMaxisConfig?.data
-  if (!maxisData) {
+  const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
+
+  let maxisContents: ContentsInfo
+  if (dbMaxisConfig?.data) {
+    maxisContents = loadContentsInfo(dbMaxisConfig.data, categories)
+  } else {
     const data = await analyzeSC4Files(
       gameDir,
       ["SimCity_1.dat", "SimCity_2.dat", "SimCity_3.dat", "SimCity_4.dat", "SimCity_5.dat"],
       exemplarProperties,
     )
 
-    maxisData = {
-      models: data.contents.models,
-      textures: data.contents.textures,
-    }
+    maxisContents = data.contents
+    const maxisData = writeContentsInfo(data.contents, categories)
 
-    if (data.contents.buildingFamilies) {
-      for (const buildingFamily of data.contents.buildingFamilies) {
-        const { file, id } = buildingFamily
-        if (file) {
-          maxisData.buildingFamilies ??= {}
-          maxisData.buildingFamilies[file] ??= {}
-          maxisData.buildingFamilies[file][id] ??= writeFamilyInfo(buildingFamily)
-        }
-      }
-    }
-
-    if (data.contents.buildings) {
-      for (const building of data.contents.buildings) {
-        const { file, id } = building
-        if (file) {
-          maxisData.buildings ??= {}
-          maxisData.buildings[file] ??= {}
-          maxisData.buildings[file][id] ??= writeBuildingInfo(building, categories)
-        }
-      }
-    }
-
-    if (data.contents.lots) {
-      for (const lot of data.contents.lots) {
-        const { file, id } = lot
-        if (file) {
-          maxisData.lots ??= {}
-          maxisData.lots[file] ??= {}
-          maxisData.lots[file][id] ??= writeLotInfo(lot)
-        }
-      }
-    }
-
-    if (data.contents.mmps) {
-      for (const mmp of data.contents.mmps) {
-        const { file, id } = mmp
-        if (file) {
-          maxisData.mmps ??= {}
-          maxisData.mmps[file] ??= {}
-          maxisData.mmps[file][id] ??= writeFloraInfo(mmp)
-        }
-      }
-    }
-
-    if (data.contents.propFamilies) {
-      for (const propFamily of data.contents.propFamilies) {
-        const { file, id } = propFamily
-        if (file) {
-          maxisData.propFamilies ??= {}
-          maxisData.propFamilies[file] ??= {}
-          maxisData.propFamilies[file][id] ??= writeFamilyInfo(propFamily)
-        }
-      }
-    }
-
-    if (data.contents.props) {
-      for (const prop of data.contents.props) {
-        const { file, id } = prop
-        if (file) {
-          maxisData.props ??= {}
-          maxisData.props[file] ??= {}
-          maxisData.props[file][id] ??= writePropInfo(prop)
-        }
-      }
-    }
-
-    await writeConfig<ContentsData>(dataAssetsDir, "maxis", maxisData, ConfigFormat.YAML)
-  }
-
-  // Step 4b - Generate Maxis data
-  const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
-  if (!dbMaxisConfig?.data) {
-    console.debug("Writing Maxis contents...")
     await writeConfig<ContentsData>(dbDir, "configs/maxis", maxisData, ConfigFormat.YAML)
   }
 
@@ -535,326 +462,229 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     textures: {},
   }
 
-  if (!isEmpty(generatingPackages)) {
-    // Step 5a - Index instances
-    console.debug("Indexing contents...")
+  // Step 5a - Index instances
+  console.debug("Indexing contents...")
 
-    if (maxisData.buildingFamilies) {
-      forEach(maxisData.buildingFamilies, buildingFamilies => {
-        for (const id of keys(buildingFamilies)) {
-          if (!index.buildingFamilies[id]?.includes(baseGameId)) {
-            index.buildingFamilies[id] ??= []
-            index.buildingFamilies[id].push(baseGameId)
-          }
-        }
-      })
+  if (maxisContents.buildingFamilies) {
+    for (const { id } of maxisContents.buildingFamilies) {
+      if (!index.buildingFamilies[id]?.includes(baseGameId)) {
+        index.buildingFamilies[id] ??= []
+        index.buildingFamilies[id].push(baseGameId)
+      }
     }
-
-    if (maxisData.buildings) {
-      forEach(maxisData.buildings, buildings => {
-        forEach(buildings, ({ family: familyIds }, id) => {
-          if (!index.buildings[id]?.includes(baseGameId)) {
-            index.buildings[id] ??= []
-            index.buildings[id].push(baseGameId)
-          }
-
-          if (familyIds) {
-            // todo
-            for (const familyId of parseStringArray(familyIds) as FamilyID[]) {
-              if (!index.buildingFamilies[familyId]?.includes(baseGameId)) {
-                index.buildingFamilies[familyId] ??= []
-                index.buildingFamilies[familyId].push(baseGameId)
-              }
-            }
-          }
-        })
-      })
-    }
-
-    if (maxisData.lots) {
-      forEach(maxisData.lots, lots => {
-        for (const id of keys(lots)) {
-          if (!index.lots[id]?.includes(baseGameId)) {
-            index.lots[id] ??= []
-            index.lots[id].push(baseGameId)
-          }
-        }
-      })
-    }
-
-    if (maxisData.mmps) {
-      forEach(maxisData.mmps, mmps => {
-        for (const id of keys(mmps)) {
-          if (!index.mmps[id]?.includes(baseGameId)) {
-            index.mmps[id] ??= []
-            index.mmps[id].push(baseGameId)
-          }
-        }
-      })
-    }
-
-    if (maxisData.models) {
-      forEach(maxisData.models, models => {
-        for (const id of models) {
-          if (!index.models[id]?.includes(baseGameId)) {
-            index.models[id] ??= []
-            index.models[id].push(baseGameId)
-          }
-        }
-      })
-    }
-
-    if (maxisData.propFamilies) {
-      forEach(maxisData.propFamilies, propFamilies => {
-        for (const id of keys(propFamilies)) {
-          if (!index.propFamilies[id]?.includes(baseGameId)) {
-            index.propFamilies[id] ??= []
-            index.propFamilies[id].push(baseGameId)
-          }
-        }
-      })
-    }
-
-    if (maxisData.props) {
-      forEach(maxisData.props, props => {
-        forEach(props, ({ family: familyIds }, id) => {
-          if (!index.props[id]?.includes(baseGameId)) {
-            index.props[id] ??= []
-            index.props[id].push(baseGameId)
-          }
-
-          if (familyIds) {
-            // todo
-            for (const familyId of parseStringArray(familyIds) as FamilyID[]) {
-              if (!index.propFamilies[familyId]?.includes(baseGameId)) {
-                index.propFamilies[familyId] ??= []
-                index.propFamilies[familyId].push(baseGameId)
-              }
-            }
-          }
-        })
-      })
-    }
-
-    if (maxisData.textures) {
-      forEach(maxisData.textures, textures => {
-        for (const id of textures) {
-          if (!index.textures[id]?.includes(baseGameId)) {
-            index.textures[id] ??= []
-            index.textures[id].push(baseGameId)
-          }
-        }
-      })
-    }
-
-    forEach(packages, (packageInfo, packageId) => {
-      forEach(packageInfo.variants, variantInfo => {
-        if (variantInfo.buildingFamilies) {
-          for (const { id } of variantInfo.buildingFamilies) {
-            if (!index.buildingFamilies[id]?.includes(packageId)) {
-              index.buildingFamilies[id] ??= []
-              index.buildingFamilies[id].push(packageId)
-            }
-          }
-        }
-
-        if (variantInfo.buildings) {
-          for (const { families, id } of variantInfo.buildings) {
-            if (!index.buildings[id]?.includes(packageId)) {
-              index.buildings[id] ??= []
-              index.buildings[id].push(packageId)
-            }
-
-            if (families) {
-              for (const family of families) {
-                if (!index.buildingFamilies[family]?.includes(packageId)) {
-                  index.buildingFamilies[family] ??= []
-                  index.buildingFamilies[family].push(packageId)
-                }
-              }
-            }
-          }
-        }
-
-        if (variantInfo.lots) {
-          for (const { id } of variantInfo.lots) {
-            if (!index.lots[id]?.includes(packageId)) {
-              index.lots[id] ??= []
-              index.lots[id].push(packageId)
-            }
-          }
-        }
-
-        if (variantInfo.models) {
-          for (const id of values(variantInfo.models).flat()) {
-            if (!index.models[id]?.includes(packageId)) {
-              index.models[id] ??= []
-              index.models[id].push(packageId)
-            }
-          }
-        }
-
-        if (variantInfo.mmps) {
-          for (const { id, stages } of variantInfo.mmps) {
-            if (!index.mmps[id]?.includes(packageId)) {
-              index.mmps[id] ??= []
-              index.mmps[id].push(packageId)
-            }
-
-            if (stages) {
-              for (const { id } of stages) {
-                if (!index.mmps[id]?.includes(packageId)) {
-                  index.mmps[id] ??= []
-                  index.mmps[id].push(packageId)
-                }
-              }
-            }
-          }
-        }
-
-        if (variantInfo.propFamilies) {
-          for (const { id } of variantInfo.propFamilies) {
-            if (!index.propFamilies[id]?.includes(packageId)) {
-              index.propFamilies[id] ??= []
-              index.propFamilies[id].push(packageId)
-            }
-          }
-        }
-
-        if (variantInfo.props) {
-          for (const { families, id } of variantInfo.props) {
-            if (!index.props[id]?.includes(packageId)) {
-              index.props[id] ??= []
-              index.props[id].push(packageId)
-            }
-
-            if (families) {
-              for (const family of families) {
-                if (!index.propFamilies[family]?.includes(packageId)) {
-                  index.propFamilies[family] ??= []
-                  index.propFamilies[family].push(packageId)
-                }
-              }
-            }
-          }
-        }
-
-        if (variantInfo.textures) {
-          for (const id of values(variantInfo.textures).flat()) {
-            if (!index.textures[id]?.includes(packageId)) {
-              index.textures[id] ??= []
-              index.textures[id].push(packageId)
-            }
-          }
-        }
-
-        if (variantInfo.assets) {
-          for (const variantAsset of variantInfo.assets) {
-            const [assetId, variant] = variantAsset.id.split("#", 2) as [AssetID, string?]
-            const entry = getEntry(getEntryId(assetId))
-            const variantEntry = variant ? entry.variants?.[variant] : entry
-            if (!variantEntry) {
-              continue
-            }
-
-            const { matchedPaths } = matchFiles(variantEntry.files ?? [], {
-              exclude: variantAsset.exclude,
-              include: variantAsset.include ?? [{ path: "" }],
-              options: variantInfo.options,
-            })
-
-            forEach(matchedPaths, (file, oldPath) => {
-              if (file) {
-                const models = variantEntry.models?.[oldPath]
-                if (models) {
-                  for (const id of models) {
-                    if (!index.models[id]?.includes(packageId)) {
-                      index.models[id] ??= []
-                      index.models[id].push(packageId)
-                    }
-                  }
-                }
-
-                const buildings = variantEntry.buildings?.[oldPath]
-                if (buildings) {
-                  forEach(buildings, (data, id) => {
-                    if (data.model === "00000000-0000") {
-                      data.model = null
-                    }
-
-                    const building = variantInfo.buildings?.find(where({ id, file: file.path }))
-                    if (building) {
-                      building.model ??= data.model
-                    }
-                  })
-                }
-
-                const lots = variantEntry.lots?.[oldPath]
-                if (lots) {
-                  forEach(lots, (data, id) => {
-                    const lot = variantInfo.lots?.find(where({ id, file: file.path }))
-                    if (lot) {
-                      lot.props ??= data.props
-                      lot.textures ??= data.textures
-                    }
-                  })
-                }
-
-                const mmps = variantEntry.mmps?.[oldPath]
-                if (mmps) {
-                  forEach(mmps, (data, id) => {
-                    if (data.model === "00000000-0000") {
-                      data.model = null
-                    }
-
-                    const mmp = variantInfo.mmps?.find(where({ id, file: file.path }))
-                    if (mmp) {
-                      mmp.model ??= data.model
-                    }
-
-                    data.stages?.forEach((stage, index) => {
-                      if (stage.model === "00000000-0000") {
-                        stage.model = null
-                      }
-
-                      const stageInfo = mmp?.stages?.[index]
-                      if (stageInfo) {
-                        stageInfo.model ??= stage.model
-                      }
-                    })
-                  })
-                }
-
-                const props = variantEntry.props?.[oldPath]
-                if (props) {
-                  forEach(props, (data, id) => {
-                    if (data.model === "00000000-0000") {
-                      data.model = null
-                    }
-
-                    const prop = variantInfo.props?.find(where({ id, file: file.path }))
-                    if (prop) {
-                      prop.model ??= data.model
-                    }
-                  })
-                }
-              }
-            })
-          }
-        }
-      })
-    })
-
-    // Step 5b - Generate index file
-    console.debug("Writing index...")
-    await writeConfig(dataAssetsDir, "index", index, ConfigFormat.YAML)
-
-    /**
-     * STEP 6 - Check the consistency of data repository (e.g. dependencies must exist)
-     */
-    console.debug("Checking packages...")
-    await forEachAsync(packages, checkPackage)
   }
+
+  if (maxisContents.buildings) {
+    for (const { families, id } of maxisContents.buildings) {
+      if (!index.buildings[id]?.includes(baseGameId)) {
+        index.buildings[id] ??= []
+        index.buildings[id].push(baseGameId)
+      }
+
+      if (families) {
+        for (const familyId of families) {
+          if (!index.buildingFamilies[familyId]?.includes(baseGameId)) {
+            index.buildingFamilies[familyId] ??= []
+            index.buildingFamilies[familyId].push(baseGameId)
+          }
+        }
+      }
+    }
+  }
+
+  if (maxisContents.lots) {
+    for (const { id } of maxisContents.lots) {
+      if (!index.lots[id]?.includes(baseGameId)) {
+        index.lots[id] ??= []
+        index.lots[id].push(baseGameId)
+      }
+    }
+  }
+
+  if (maxisContents.mmps) {
+    for (const { id } of maxisContents.mmps) {
+      if (!index.mmps[id]?.includes(baseGameId)) {
+        index.mmps[id] ??= []
+        index.mmps[id].push(baseGameId)
+      }
+    }
+  }
+
+  if (maxisContents.models) {
+    forEach(maxisContents.models, models => {
+      for (const id of models) {
+        if (!index.models[id]?.includes(baseGameId)) {
+          index.models[id] ??= []
+          index.models[id].push(baseGameId)
+        }
+      }
+    })
+  }
+
+  if (maxisContents.propFamilies) {
+    for (const { id } of maxisContents.propFamilies) {
+      if (!index.propFamilies[id]?.includes(baseGameId)) {
+        index.propFamilies[id] ??= []
+        index.propFamilies[id].push(baseGameId)
+      }
+    }
+  }
+
+  if (maxisContents.props) {
+    for (const { families, id } of maxisContents.props) {
+      if (!index.props[id]?.includes(baseGameId)) {
+        index.props[id] ??= []
+        index.props[id].push(baseGameId)
+      }
+
+      if (families) {
+        for (const familyId of families) {
+          if (!index.propFamilies[familyId]?.includes(baseGameId)) {
+            index.propFamilies[familyId] ??= []
+            index.propFamilies[familyId].push(baseGameId)
+          }
+        }
+      }
+    }
+  }
+
+  if (maxisContents.textures) {
+    forEach(maxisContents.textures, textures => {
+      for (const id of textures) {
+        if (!index.textures[id]?.includes(baseGameId)) {
+          index.textures[id] ??= []
+          index.textures[id].push(baseGameId)
+        }
+      }
+    })
+  }
+
+  forEach(packages, (packageInfo, packageId) => {
+    forEach(packageInfo.variants, variantInfo => {
+      if (variantInfo.buildingFamilies) {
+        for (const { id } of variantInfo.buildingFamilies) {
+          if (!index.buildingFamilies[id]?.includes(packageId)) {
+            index.buildingFamilies[id] ??= []
+            index.buildingFamilies[id].push(packageId)
+          }
+        }
+      }
+
+      if (variantInfo.buildings) {
+        for (const { families, id } of variantInfo.buildings) {
+          if (!index.buildings[id]?.includes(packageId)) {
+            index.buildings[id] ??= []
+            index.buildings[id].push(packageId)
+          }
+
+          if (families) {
+            for (const family of families) {
+              if (!index.buildingFamilies[family]?.includes(packageId)) {
+                index.buildingFamilies[family] ??= []
+                index.buildingFamilies[family].push(packageId)
+              }
+            }
+          }
+        }
+      }
+
+      if (variantInfo.lots) {
+        for (const { id } of variantInfo.lots) {
+          if (!index.lots[id]?.includes(packageId)) {
+            index.lots[id] ??= []
+            index.lots[id].push(packageId)
+          }
+        }
+      }
+
+      if (variantInfo.models) {
+        for (const id of values(variantInfo.models).flat()) {
+          if (!index.models[id]?.includes(packageId)) {
+            index.models[id] ??= []
+            index.models[id].push(packageId)
+          }
+        }
+      }
+
+      if (variantInfo.mmps) {
+        for (const { id, stages } of variantInfo.mmps) {
+          if (!index.mmps[id]?.includes(packageId)) {
+            index.mmps[id] ??= []
+            index.mmps[id].push(packageId)
+          }
+
+          if (stages) {
+            for (const { id } of stages) {
+              if (!index.mmps[id]?.includes(packageId)) {
+                index.mmps[id] ??= []
+                index.mmps[id].push(packageId)
+              }
+            }
+          }
+        }
+      }
+
+      if (variantInfo.models) {
+        for (const id of values(variantInfo.models).flat()) {
+          if (!index.models[id]?.includes(packageId)) {
+            index.models[id] ??= []
+            index.models[id].push(packageId)
+          }
+        }
+      }
+
+      if (variantInfo.propFamilies) {
+        for (const { id } of variantInfo.propFamilies) {
+          if (!index.propFamilies[id]?.includes(packageId)) {
+            index.propFamilies[id] ??= []
+            index.propFamilies[id].push(packageId)
+          }
+        }
+      }
+
+      if (variantInfo.props) {
+        for (const { families, id } of variantInfo.props) {
+          if (!index.props[id]?.includes(packageId)) {
+            index.props[id] ??= []
+            index.props[id].push(packageId)
+          }
+
+          if (families) {
+            for (const family of families) {
+              if (!index.propFamilies[family]?.includes(packageId)) {
+                index.propFamilies[family] ??= []
+                index.propFamilies[family].push(packageId)
+              }
+            }
+          }
+        }
+      }
+
+      if (variantInfo.textures) {
+        for (const id of values(variantInfo.textures).flat()) {
+          if (!index.textures[id]?.includes(packageId)) {
+            index.textures[id] ??= []
+            index.textures[id].push(packageId)
+          }
+        }
+      }
+    })
+  })
+
+  // Step 5b - Generate index file
+  console.debug("Writing index...")
+  await writeConfig(
+    dataAssetsDir,
+    "index",
+    { ...index, models: mapKeys(index.models, writeModelId) },
+    ConfigFormat.YAML,
+  )
+
+  /**
+   * STEP 6 - Check the consistency of data repository (e.g. dependencies must exist)
+   */
+  console.debug("Checking packages...")
+  await forEachAsync(packages, checkPackage)
 
   /**
    * STEP 7 - Write generated data back to files
@@ -1563,76 +1393,17 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     // Analyze DBPF contents
     const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
+    const contents = writeContentsInfo(data.contents, categories)
 
-    variantEntry.features = data.features.length ? data.features : undefined
-    variantEntry.models = data.contents.models
-    variantEntry.textures = data.contents.textures
-
-    if (data.contents.buildingFamilies) {
-      for (const buildingFamily of data.contents.buildingFamilies) {
-        const { file, id } = buildingFamily
-        if (file) {
-          variantEntry.buildingFamilies ??= {}
-          variantEntry.buildingFamilies[file] ??= {}
-          variantEntry.buildingFamilies[file][id] ??= writeFamilyInfo(buildingFamily)
-        }
-      }
-    }
-
-    if (data.contents.buildings) {
-      for (const building of data.contents.buildings) {
-        const { file, id } = building
-        if (file) {
-          variantEntry.buildings ??= {}
-          variantEntry.buildings[file] ??= {}
-          variantEntry.buildings[file][id] ??= writeBuildingInfo(building, categories)
-        }
-      }
-    }
-
-    if (data.contents.lots) {
-      for (const lot of data.contents.lots) {
-        const { file, id } = lot
-        if (file) {
-          variantEntry.lots ??= {}
-          variantEntry.lots[file] ??= {}
-          variantEntry.lots[file][id] ??= writeLotInfo(lot)
-        }
-      }
-    }
-
-    if (data.contents.mmps) {
-      for (const mmp of data.contents.mmps) {
-        const { file, id } = mmp
-        if (file) {
-          variantEntry.mmps ??= {}
-          variantEntry.mmps[file] ??= {}
-          variantEntry.mmps[file][id] ??= writeFloraInfo(mmp)
-        }
-      }
-    }
-
-    if (data.contents.propFamilies) {
-      for (const propFamily of data.contents.propFamilies) {
-        const { file, id } = propFamily
-        if (file) {
-          variantEntry.propFamilies ??= {}
-          variantEntry.propFamilies[file] ??= {}
-          variantEntry.propFamilies[file][id] ??= writeFamilyInfo(propFamily)
-        }
-      }
-    }
-
-    if (data.contents.props) {
-      for (const prop of data.contents.props) {
-        const { file, id } = prop
-        if (file) {
-          variantEntry.props ??= {}
-          variantEntry.props[file] ??= {}
-          variantEntry.props[file][id] ??= writePropInfo(prop)
-        }
-      }
-    }
+    variantEntry.buildingFamilies = contents.buildingFamilies
+    variantEntry.buildings = contents.buildings
+    variantEntry.features = data.features
+    variantEntry.lots = contents.lots
+    variantEntry.mmps = contents.mmps
+    variantEntry.models = contents.models
+    variantEntry.propFamilies = contents.propFamilies
+    variantEntry.props = contents.props
+    variantEntry.textures = contents.textures
 
     return true
   }

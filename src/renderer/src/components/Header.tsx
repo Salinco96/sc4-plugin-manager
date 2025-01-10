@@ -72,7 +72,7 @@ export function Header({
     <FlexBox alignItems="center" px={isListItem ? 0 : 2}>
       <FlexBox direction="column" flex="1 1 0" pr={1} sx={{ overflow: "hidden" }}>
         <FlexBox direction="row">
-          {images?.length && (
+          {!!images?.length && (
             <ImageViewer images={images} onClose={() => setOpenImages(false)} open={openImages} />
           )}
 

@@ -1,10 +1,21 @@
+import { sort } from "@salinco/nice-utils"
+
 import type { BuildingID, BuildingInfo } from "@common/buildings"
 import type { Categories } from "@common/categories"
+import type { GroupID } from "@common/dbpf"
 import type { FamilyID } from "@common/families"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
-import { loadCategories } from "./categories"
-import { writeCategories } from "./categories"
-import { parseMenu, parseMenus, writeMenu, writeMenus } from "./submenus"
+
+import { loadCategories, writeCategories } from "./categories"
+import { loadModelId, writeModelId } from "./packages"
+import {
+  parseMenu,
+  parseMenus,
+  parseTilesets,
+  writeMenu,
+  writeMenus,
+  writeTilesets,
+} from "./submenus"
 
 export interface BuildingData {
   /**
@@ -112,7 +123,7 @@ export interface BuildingData {
   /**
    * Model ID
    */
-  model?: string | null
+  model?: GroupID | `${GroupID}-${string}` | null
 
   /**
    * Internal exemplar name
@@ -180,6 +191,11 @@ export interface BuildingData {
   submenu?: MaybeArray<number | string>
 
   /**
+   * Building styles
+   */
+  tilesets?: MaybeArray<number | string>
+
+  /**
    * Water consumed
    */
   water?: number
@@ -203,37 +219,102 @@ export interface BuildingData {
    * Building value
    */
   worth?: number
+
+  /**
+   * Whether this building is treated as W2W
+   */
+  w2w?: boolean
 }
 
 export function loadBuildingInfo(
   file: string,
+  group: GroupID,
   id: BuildingID,
   data: BuildingData,
   categories: Categories,
 ): BuildingInfo {
-  const { family, menu, submenu, ...others } = data
-
   return {
-    ...others,
+    bulldoze: data.bulldoze,
+    capacity: data.capacity,
     categories: data.categories ? loadCategories(data.categories, categories) : undefined,
-    families: family ? (parseStringArray(family) as FamilyID[]) : undefined,
+    cost: data.cost,
+    description: data.description,
+    families: data.family ? (parseStringArray(data.family) as FamilyID[]) : undefined,
+    flamability: data.flamability,
     file,
+    garbage: data.garbage,
+    garbageRadius: data.garbageRadius,
+    group,
     id,
-    menu: menu ? parseMenu(menu) : undefined,
-    submenus: submenu ? parseMenus(submenu) : undefined,
+    images: data.images,
+    income: data.income,
+    jobs: data.jobs,
+    label: data.label,
+    landmark: data.landmark,
+    landmarkRadius: data.landmarkRadius,
+    maintenance: data.maintenance,
+    menu: data.menu ? parseMenu(data.menu) : undefined,
+    model: data.model && loadModelId(data.model),
+    name: data.name,
+    pollution: data.pollution,
+    pollutionRadius: data.pollutionRadius,
+    power: data.power,
+    powerProduction: data.powerProduction,
+    radiation: data.radiation,
+    radiationRadius: data.radiationRadius,
+    rating: data.rating,
+    ratingRadius: data.ratingRadius,
+    relief: data.relief,
+    submenus: data.submenu ? parseMenus(data.submenu) : undefined,
+    tilesets: data.tilesets ? parseTilesets(data.tilesets) : undefined,
+    water: data.water,
+    waterPollution: data.waterPollution,
+    waterPollutionRadius: data.waterPollutionRadius,
+    waterProduction: data.waterProduction,
+    worth: data.worth,
+    w2w: data.w2w,
   }
 }
 
 export function writeBuildingInfo(building: BuildingInfo, categories: Categories): BuildingData {
-  const { categories: buildingCategories, families, file, id, menu, submenus, ...others } = building
-
   return {
-    ...others,
-    categories: buildingCategories?.length
-      ? writeCategories(buildingCategories, categories)
+    bulldoze: building.bulldoze,
+    capacity: building.capacity,
+    categories: building.categories?.length
+      ? writeCategories(building.categories, categories)
       : undefined,
-    family: families?.length ? families?.join(",") : undefined,
-    menu: menu ? writeMenu(menu) : undefined,
-    submenu: submenus?.length ? writeMenus(submenus) : undefined,
+    cost: building.cost,
+    description: building.description,
+    family: building.families?.length ? sort(building.families)?.join(",") : undefined,
+    flamability: building.flamability,
+    garbage: building.garbage,
+    garbageRadius: building.garbageRadius,
+    images: building.images,
+    income: building.income,
+    jobs: building.jobs,
+    label: building.label,
+    landmark: building.landmark,
+    landmarkRadius: building.landmarkRadius,
+    maintenance: building.maintenance,
+    menu: building.menu ? writeMenu(building.menu) : undefined,
+    model: building.model && writeModelId(building.model),
+    name: building.name,
+    pollution: building.pollution,
+    pollutionRadius: building.pollutionRadius,
+    power: building.power,
+    powerProduction: building.powerProduction,
+    radiation: building.radiation,
+    radiationRadius: building.radiationRadius,
+    rating: building.rating,
+    ratingRadius: building.ratingRadius,
+    relief: building.relief,
+    submenu: building.submenus?.length ? writeMenus(building.submenus) : undefined,
+    tilesets: building.tilesets?.length ? writeTilesets(building.tilesets) : undefined,
+    water: building.water,
+    waterPollution: building.waterPollution,
+    waterPollutionRadius: building.waterPollutionRadius,
+    waterProduction: building.waterProduction,
+    worth: building.worth,
+    w2w: building.w2w || undefined,
   }
 }

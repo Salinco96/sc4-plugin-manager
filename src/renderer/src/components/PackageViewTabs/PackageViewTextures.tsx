@@ -2,15 +2,14 @@ import { Card, CardContent, List, ListItem } from "@mui/material"
 import { collect, entries, mapValues, sortBy } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { getTextureIdRange } from "@common/dbpf"
+import { GroupID, TypeID, getTextureIdRange } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
+import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
 import { Text } from "@components/Text"
+import { Page } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
-
-import { Page } from "@utils/navigation"
-import { ExemplarRef } from "../ExemplarRef"
 
 export default function PackageViewTextures({ packageId }: { packageId: PackageID }): JSX.Element {
   const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
@@ -96,7 +95,12 @@ export default function PackageViewTextures({ packageId }: { packageId: PackageI
                         </Text>
                       </FlexBox>
 
-                      <ExemplarRef file={texture.file} id={getTextureIdRange(texture.id)} />
+                      <ExemplarRef
+                        file={texture.file}
+                        group={GroupID.FSH_TEXTURE}
+                        id={getTextureIdRange(texture.id)}
+                        type={TypeID.FSH}
+                      />
                     </FlexBox>
                   </FlexBox>
                 </FlexBox>

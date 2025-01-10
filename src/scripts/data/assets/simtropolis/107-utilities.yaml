@@ -3978,7 +3978,7 @@ assets:
       - Buggi
     buildings:
       Up2x2_WindBlaster_cc060d0d.SC4Lot:
-        cc060d0d:
+        c8dbccba-cc060d0d:
           bulldoze: 20
           categories: power
           cost: 500
@@ -3994,6 +3994,7 @@ assets:
     category: 107-utilities
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This is the windmill I use when I do not want to worry about power requirements in a city. Puts out 100,000 power.</p>\n<p>\_</p>\n<p>\nAll values can be edited, so feel free to balance it how you wish, you can also tweak the props, as they don't line up at every angle <img src=\"https://community.simtropolis.com/assets/emoticons/Sad.gif\" alt=\":(\" srcset=\"https://community.simtropolis.com/assets/emoticons/Sad@2x.gif 2x\" width=\"30\" height=\"30\" ></p>\n<p>\_</p>\n<p>\nUpdate: Just made sure it was marked as Rush Hour compatible.</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: WindBlaster.zip
     filename: WindBlaster.zip
     files:
@@ -4007,13 +4008,13 @@ assets:
           building: cc060d0d
           name: Up2x2_WindBlaster
           props:
-            - ea9c4a1a
             - 0c07417f
+            - ea9c4a1a
           size: 2x2
           textures:
             - 25d60000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Buggi Mark X WindBlaster
     sha256: b5cbfcc2277248fcff2deee3e2423555e564a4079aaacd849f08b7b48e07399e
@@ -5043,7 +5044,7 @@ assets:
       - WannGLondon
     buildings:
       Sign Prop Pack/PLOP_3x3_Sign Tester Lot_94d5a141.SC4Lot:
-        94d5a141:
+        1c2d4663-94d5a141:
           bulldoze: 5
           categories: power
           cost: 10
@@ -5058,6 +5059,7 @@ assets:
     category: 107-utilities
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tReceived a couple of requests for signs after some members saw my Apartments 2 upload - I did not know these would go over so well. 5 props are included.\n</p>\n\n<p>\n\tThese were certainly fun to make so more may be coming!\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Sign Prop Pack.zip
     files:
       - Sign Prop Pack/Candlejoy Sign-0x6534284a-0x1c2d4663-0x14d5a040.SC4Desc
@@ -5082,15 +5084,15 @@ assets:
           building: 94d5a141
           name: PLOP_3x3_Sign Tester Lot
           props:
-            - 94d5a069
-            - b4d5a075
             - 74d5a088
+            - 94d5a069
             - 94d5a080
+            - b4d5a075
           size: 3x3
           textures:
             - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Sign Prop Pack/Candlejoy-0x5ad0e817_0x3455b7ad_0x30000.SC4Model:
@@ -5106,23 +5108,23 @@ assets:
     name: Vintage Sign Prop Pack
     props:
       Sign Prop Pack/Candlejoy Sign-0x6534284a-0x1c2d4663-0x14d5a040.SC4Desc:
-        14d5a040:
+        1c2d4663-14d5a040:
           model: 3455b7ad
           name: Candlejoy Sign
       Sign Prop Pack/Eagle Motors Sign-0x6534284a-0x1c2d4663-0x94d5a069.SC4Desc:
-        94d5a069:
+        1c2d4663-94d5a069:
           model: 1455bb8c
           name: Eagle Motors Sign
       Sign Prop Pack/Palms Club Sign-0x6534284a-0x1c2d4663-0xb4d5a075.SC4Desc:
-        b4d5a075:
+        1c2d4663-b4d5a075:
           model: f455b9ae
           name: Palms Club Sign
       Sign Prop Pack/Starlight Sign-0x6534284a-0x1c2d4663-0x94d5a080.SC4Desc:
-        94d5a080:
+        1c2d4663-94d5a080:
           model: 5454ac7c
           name: Starlight Sign
       Sign Prop Pack/Summerland Sign-0x6534284a-0x1c2d4663-0x74d5a088.SC4Desc:
-        74d5a088:
+        1c2d4663-74d5a088:
           model: 9455bdf2
           name: Summerland Sign
     sha256: d50789f3cbe9450d45bb3881ec6226493f0449ff5be87c94ba95c7c3cd80a997

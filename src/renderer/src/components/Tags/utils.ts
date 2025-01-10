@@ -7,7 +7,7 @@ import { getStateLabel } from "@common/variants"
 import { isEnum } from "@salinco/nice-utils"
 import type { TagColor } from "./Tag"
 
-export type Tag<T extends TagType = TagType> = {
+export type TagInfo<T extends TagType = TagType> = {
   [K in T]: {
     type: K
     value: TagValue<K>
@@ -34,14 +34,14 @@ export function getAuthorName(authorId: AuthorID, authors: Authors): string {
   return authors[authorId]?.name ?? authorId
 }
 
-export function deserializeTag<T extends TagType>(tag: SerializedTag<T>): Tag<T> {
+export function deserializeTag<T extends TagType>(tag: SerializedTag<T>): TagInfo<T> {
   const [type, value] = tag.split(":", 2)
-  return { type, value } as Tag<T>
+  return { type, value } as TagInfo<T>
 }
 
 export function getTagLongLabel(
   t: TFunction<Namespace>,
-  tag: Tag,
+  tag: TagInfo,
   authors: Authors,
   categories: Categories,
 ): string {
@@ -51,7 +51,7 @@ export function getTagLongLabel(
 
 export function getTagLabel(
   t: TFunction<Namespace>,
-  tag: Tag,
+  tag: TagInfo,
   authors: Authors,
   categories: Categories,
 ): string {
@@ -72,7 +72,7 @@ export function isValidTag(tag: string): tag is SerializedTag {
   return isEnum(type, TagType)
 }
 
-export function createTag<T extends TagType>(type: T, value: TagValue<T>): Tag<T> {
+export function createTag<T extends TagType>(type: T, value: TagValue<T>): TagInfo<T> {
   return { type, value }
 }
 

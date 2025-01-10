@@ -1,13 +1,13 @@
 import { Link, Typography } from "@mui/material"
-import { memo } from "react"
+import { memo, useMemo } from "react"
 
 import type { PackageID } from "@common/packages"
 import { ListItem } from "@components/ListItem"
 import { PackageHeader } from "@components/PackageHeader"
-import { Page, useHistory } from "@utils/navigation"
+import { Page, useHistory, useLocation } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
-import { useMatchingContents } from "./useMatchingContents"
+import { getMatchingContents, isHexSearch } from "@utils/search"
+import { usePackageFilters, useStoreActions } from "@utils/store"
 
 export const PackageListItem = memo(function PackageListItem({
   isDisabled,
@@ -16,11 +16,18 @@ export const PackageListItem = memo(function PackageListItem({
   isDisabled?: boolean
   packageId: PackageID
 }): JSX.Element {
+  const { page } = useLocation()
+  const { search } = usePackageFilters()
+
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
   const history = useHistory()
 
-  const matchingContents = useMatchingContents(variantInfo)
+  const matchingContents = useMemo(() => {
+    if (isHexSearch(search) && page === Page.Packages) {
+      return getMatchingContents(variantInfo, search.trim().toLowerCase())
+    }
+  }, [page, search, variantInfo])
 
   return (
     <ListItem header={PackageHeader} isDisabled={isDisabled} packageId={packageId}>

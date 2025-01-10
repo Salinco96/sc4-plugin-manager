@@ -1,9 +1,11 @@
-import { isArray, isNumber, isString, toHex } from "@salinco/nice-utils"
+import { isArray, isNumber, isString } from "@salinco/nice-utils"
 
-import { TGI, parseTGI } from "@common/dbpf"
+import { TGI } from "@common/dbpf"
 import type { ExemplarPropertyID } from "@common/exemplars"
 
+import { split } from "@common/utils/string"
 import { bitMask } from "@common/utils/types"
+import type { ModelID } from "@common/variants"
 import type { Exemplar } from "./types"
 
 export function get(exemplar: Exemplar, id: ExemplarPropertyID, index = 0): number | undefined {
@@ -79,9 +81,7 @@ export function getFamilyInstanceId(familyId: number): number {
   return bitMask(familyId + 0x10000000, 0xffffffff)
 }
 
-export function getModelId(tgi: TGI): string {
-  const [, g, i] = parseTGI(tgi)
-  return bitMask(i, 0xffff0000) === 0x00030000
-    ? toHex(g, 8)
-    : `${toHex(g, 8)}-${toHex(bitMask(i, 0xffff0000), 8).slice(0, 4)}` // Ignore zoom/rotation
+export function getModelId(tgi: TGI): ModelID {
+  const [, groupId, instanceId] = split(tgi, "-")
+  return `${groupId}-${instanceId.slice(0, 4)}0000` as ModelID // Ignore zoom/rotation
 }

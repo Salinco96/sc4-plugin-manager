@@ -2,6 +2,7 @@ import {
   containsAny,
   filterValues,
   generate,
+  intersection,
   isEmpty,
   isNumber,
   sum,
@@ -10,13 +11,14 @@ import {
   values,
 } from "@salinco/nice-utils"
 
+import { type BuildingID, type BuildingInfo, BuildingStyle } from "@common/buildings"
 import { CategoryID } from "@common/categories"
-import { TGI, parseTGI } from "@common/dbpf"
+import type { GroupID, TypeID } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-import { Menu, type MenuID, Submenu } from "@common/submenus"
-
-import type { BuildingID, BuildingInfo } from "@common/buildings"
 import type { FamilyID } from "@common/families"
+import { Menu, type MenuID, Submenu } from "@common/submenus"
+import { split } from "@common/utils/string"
+
 import {
   BudgetItemDepartment,
   DemandID,
@@ -29,9 +31,12 @@ import {
 import { get, getArray, getBool, getMap, getModelId, getString, getTGI } from "./utils"
 
 export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
+  const [, group, id] = split(exemplar.id, "-") as [TypeID, GroupID, BuildingID]
+
   const data: BuildingInfo = {
     file: exemplar.file,
-    id: toHex(parseTGI(exemplar.id)[2], 8) as BuildingID,
+    group,
+    id,
   }
 
   const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups) ?? []
@@ -170,7 +175,7 @@ export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType0) ??
     getTGI(exemplar, ExemplarPropertyID.ResourceKeyType1)
   if (model) {
-    data.model = model === TGI(0, 0, 0) ? null : getModelId(model)
+    data.model = model.endsWith("00000000") ? null : getModelId(model)
   }
 
   const capacitySatisfied = getMap<DeveloperID>(exemplar, ExemplarPropertyID.CapacitySatisfied)
@@ -235,6 +240,9 @@ export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
       data.relief = relief
     }
   }
+
+  data.tilesets = getTilesets(exemplar)
+  data.w2w = isBuildingW2W(exemplar)
 
   return data
 }
@@ -644,4 +652,36 @@ function getSubmenus(exemplar: Exemplar): MenuID[] {
   }
 
   return submenus as MenuID[]
+}
+
+function getTilesets(exemplar: Exemplar): BuildingStyle[] | undefined {
+  const tilesets = getArray(exemplar, ExemplarPropertyID.BuildingStyles)
+
+  if (tilesets) {
+    return tilesets
+  }
+
+  const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups)
+
+  return ogs && intersection(ogs, values(BuildingStyle))
+}
+
+function isBuildingW2W(exemplar: Exemplar): boolean {
+  if (getBool(exemplar, ExemplarPropertyID.BuildingIsW2W)) {
+    return true
+  }
+
+  const ogs = getArray(exemplar, ExemplarPropertyID.OccupantGroups)
+
+  return (
+    !!ogs &&
+    containsAny(ogs, [
+      OccupantGroup.BteCommercialW2W,
+      OccupantGroup.BteGeneralW2W,
+      OccupantGroup.BteIndustrialW2W,
+      OccupantGroup.BteResidentialW2W,
+      OccupantGroup.SfbtHamburgW2W,
+      OccupantGroup.SfbtParisW2W,
+    ])
+  )
 }

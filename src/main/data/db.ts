@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { collect, entries, forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
+import { forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
 
 import type { Categories } from "@common/categories"
 import {
@@ -15,12 +15,7 @@ import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
 import type { ContentsInfo } from "@common/variants"
 import { loadConfig, readConfig } from "@node/configs"
-import { loadBuildingInfo } from "@node/data/buildings"
-import { loadFamilyInfo } from "@node/data/families"
-import { loadLotInfo } from "@node/data/lots"
-import { loadFloraInfo } from "@node/data/mmps"
-import type { ContentsData } from "@node/data/packages"
-import { loadPropInfo } from "@node/data/props"
+import { type ContentsData, loadContentsInfo } from "@node/data/packages"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 
 import type { Assets } from "@common/assets"
@@ -94,7 +89,7 @@ export async function loadMaxisExemplars(
   context: TaskContext,
   basePath: string,
   categories: Categories,
-): Promise<Required<ContentsInfo>> {
+): Promise<ContentsInfo> {
   try {
     const config = await loadConfig<ContentsData>(basePath, FILENAMES.dbMaxisExemplars)
 
@@ -102,40 +97,10 @@ export async function loadMaxisExemplars(
       throw Error(`Missing config ${FILENAMES.dbMaxisExemplars}`)
     }
 
-    return {
-      buildingFamilies: entries(config.data.buildingFamilies ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
-      ),
-      buildings: entries(config.data.buildings ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadBuildingInfo(file, id, data, categories)),
-      ),
-      lots: entries(config.data.lots ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadLotInfo(file, id, data)),
-      ),
-      mmps: entries(config.data.mmps ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadFloraInfo(file, id, data)),
-      ),
-      models: config.data.models ?? {}, // todo
-      propFamilies: entries(config.data.propFamilies ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
-      ),
-      props: entries(config.data.props ?? {}).flatMap(([file, instances]) =>
-        collect(instances, (data, id) => loadPropInfo(file, id, data)),
-      ),
-      textures: config.data.textures ?? {},
-    }
+    return loadContentsInfo(config.data, categories)
   } catch (error) {
     context.error("Failed to load Maxis exemplars", error)
-    return {
-      buildingFamilies: [],
-      buildings: [],
-      lots: [],
-      mmps: [],
-      models: {}, // todo
-      propFamilies: [],
-      props: [],
-      textures: {}, // todo
-    }
+    return {}
   }
 }
 

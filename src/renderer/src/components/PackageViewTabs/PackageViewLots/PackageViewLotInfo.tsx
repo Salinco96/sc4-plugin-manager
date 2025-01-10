@@ -5,13 +5,14 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { CategoryID } from "@common/categories"
-import { DBPFFileType, type TGI } from "@common/dbpf"
+import { DBPFFileType, GroupID, type TGI, TypeID } from "@common/dbpf"
 import { type LotInfo, isSC4LotFile } from "@common/lots"
 import { getRequirementText } from "@common/options"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
+import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
+import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
@@ -19,8 +20,6 @@ import { formatNumber } from "@utils/format"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import { useStore, useStoreActions } from "@utils/store"
 import { useEffectEvent } from "@utils/useEffectEvent"
-
-import { ExemplarRef } from "../../ExemplarRef"
 
 export interface PackageViewLotInfoProps {
   isCompatible: boolean
@@ -106,18 +105,21 @@ export function PackageViewLotInfo({
               {lot.name ?? "Lot"}
             </Text>
             {isMaxisOverride && (
-              <PackageTag
+              <Tag
                 dense
                 color="info"
                 tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
               />
             )}
-            {isPatched && (
-              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
-            )}
+            {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
           </FlexBox>
 
-          <ExemplarRef file={lot.file} id={lot.id} />
+          <ExemplarRef
+            file={lot.file}
+            group={GroupID.LOT_CONFIG}
+            id={lot.id}
+            type={TypeID.EXEMPLAR}
+          />
         </FlexBox>
 
         {isTogglable && !isToggleHidden && (

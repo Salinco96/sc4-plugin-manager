@@ -5,7 +5,7 @@ import type { AssetID } from "./assets"
 import type { AuthorID } from "./authors"
 import type { BuildingInfo } from "./buildings"
 import type { CategoryID } from "./categories"
-import type { TGI } from "./dbpf"
+import type { GroupID, InstanceID, TGI } from "./dbpf"
 import type { ExemplarDataPatch } from "./exemplars"
 import type { FamilyInfo } from "./families"
 import type { LotInfo } from "./lots"
@@ -18,18 +18,21 @@ import type { Feature, PackageWarning, VariantState } from "./types"
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
 
+export type ModelID = `${GroupID}-${InstanceID}`
+export type TextureID = InstanceID<{ __type: "texture" }>
+
 export interface ContentsInfo {
   buildingFamilies?: FamilyInfo[]
   buildings?: BuildingInfo[]
   lots?: LotInfo[]
   mmps?: FloraInfo[]
   models?: {
-    [path in string]?: string[]
+    [path in string]?: ModelID[]
   }
   propFamilies?: FamilyInfo[]
   props?: PropInfo[]
   textures?: {
-    [path in string]?: string[]
+    [path in string]?: TextureID[]
   }
 }
 

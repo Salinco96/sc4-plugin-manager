@@ -1,7 +1,9 @@
 import { Chip, type ChipProps, Tooltip } from "@mui/material"
-import { useAuthors, useStore } from "@utils/store"
 import { useTranslation } from "react-i18next"
-import { STATE_TAGS, type Tag as TagInfo, TagType, getTagLabel } from "./utils"
+
+import { useAuthors, useStore } from "@utils/store"
+
+import { STATE_TAGS, type TagInfo, TagType, getTagLabel } from "./utils"
 
 export type TagColor = "error" | "info" | "success" | "warning"
 

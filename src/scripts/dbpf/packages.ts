@@ -1,12 +1,12 @@
-import path from "node:path"
-
 import {
   collect,
   difference,
   forEach,
   intersection,
   mapKeys,
+  mapValues,
   matchGroups,
+  merge,
   reduce,
   remove,
   toArray,
@@ -22,8 +22,6 @@ import { type Categories, CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
 import type { PackageInfo } from "@common/types"
 import type { VariantAssetInfo, VariantID, VariantInfo } from "@common/variants"
-import { loadBuildingInfo } from "@node/data/buildings"
-import { loadFamilyInfo } from "@node/data/families"
 import {
   CLEANITOL_EXTENSIONS,
   DOC_EXTENSIONS,
@@ -31,11 +29,10 @@ import {
   SC4_EXTENSIONS,
   matchFiles,
 } from "@node/data/files"
-import { loadLotInfo } from "@node/data/lots"
-import { loadFloraInfo } from "@node/data/mmps"
-import { loadPropInfo } from "@node/data/props"
 import { getExtension } from "@node/files"
 
+import path from "node:path"
+import { loadContentsInfo } from "@node/data/packages"
 import type { IndexerEntry } from "../types"
 import { htmlToMd } from "../utils"
 
@@ -128,6 +125,7 @@ export function registerVariantAsset(
   }
 
   const variantInfo = packageInfo.variants[variantId]
+  const isNewVariant = !variantInfo.lastGenerated
 
   variantInfo.assets ??= []
 
@@ -229,7 +227,7 @@ export function registerVariantAsset(
     variantAsset.docs ??= []
   }
 
-  if (unmatchedDocPaths.length) {
+  if (unmatchedDocPaths.length && (variantAsset.docs || isNewVariant)) {
     variantAsset.docs ??= []
     for (const oldPath of unmatchedDocPaths) {
       variantAsset.docs.push({ path: oldPath })
@@ -239,9 +237,16 @@ export function registerVariantAsset(
 
   if (excludedSC4Paths.length) {
     variantAsset.include ??= []
+
+    if (isNewVariant) {
+      variantAsset.exclude ??= []
+      for (const oldPath of excludedSC4Paths) {
+        variantAsset.exclude.push(oldPath)
+      }
+    }
   }
 
-  if (unmatchedSC4Paths.length) {
+  if (unmatchedSC4Paths.length && (variantAsset.include || isNewVariant)) {
     variantAsset.include ??= []
     for (const oldPath of unmatchedSC4Paths) {
       const priority = filePriorities[oldPath]
@@ -321,11 +326,11 @@ export function generateVariantInfo(
 
   // Fields derived from main entry only
   variantInfo.deprecated ??= mainEntry.category?.includes("obsolete")
-  // variantInfo.logs = mainEntry.description?.match(/\b[\w-]+[.]log\b/)?.at(0) ?? variantInfo.logs
-  // variantInfo.repository = mainEntry.repository ?? variantInfo.repository
-  // variantInfo.support = mainEntry.support ?? variantInfo.support
-  // variantInfo.thumbnail = mainEntry.thumbnail ?? variantInfo.thumbnail
-  // variantInfo.url = mainEntry.url ?? variantInfo.url
+  variantInfo.logs = mainEntry.description?.match(/\b[\w-]+[.]log\b/)?.at(0) ?? variantInfo.logs
+  variantInfo.repository = mainEntry.repository ?? variantInfo.repository
+  variantInfo.support = mainEntry.support ?? variantInfo.support
+  variantInfo.thumbnail = mainEntry.thumbnail ?? variantInfo.thumbnail
+  variantInfo.url = mainEntry.url ?? variantInfo.url
 
   const features = new Set(packageInfo.features)
   const variantCategories = new Set(variantInfo.categories)
@@ -464,109 +469,86 @@ export function generateVariantInfo(
   const readmePaths = docPaths.filter(path => README_EXTENSIONS.includes(getExtension(path)))
   variantInfo.readme = union(intersection(variantInfo.readme ?? [], docPaths), readmePaths)
 
-  variantInfo.buildingFamilies = unionBy(
+  const contents = mapValues(entries, entry =>
+    loadContentsInfo(
+      {
+        buildingFamilies:
+          entry.buildingFamilies &&
+          mapKeys(
+            entry.buildingFamilies,
+            oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null,
+          ),
+        buildings:
+          entry.buildings &&
+          mapKeys(entry.buildings, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        lots:
+          entry.lots &&
+          mapKeys(entry.lots, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        mmps:
+          entry.mmps &&
+          mapKeys(entry.mmps, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        models:
+          entry.models &&
+          mapKeys(entry.models, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        propFamilies:
+          entry.propFamilies &&
+          mapKeys(entry.propFamilies, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        props:
+          entry.props &&
+          mapKeys(entry.props, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+        textures:
+          entry.textures &&
+          mapKeys(entry.textures, oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null),
+      },
+      categories,
+    ),
+  )
+
+  variantInfo.buildingFamilies = mergeItems(
     variantInfo.buildingFamilies?.filter(
       instance => instance.file && includedSC4Paths.has(instance.file),
     ) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.buildingFamilies ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadFamilyInfo(newPath, id, data))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.buildingFamilies ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
-  variantInfo.buildings = unionBy(
+  variantInfo.buildings = mergeItems(
     variantInfo.buildings?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.buildings ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadBuildingInfo(newPath, id, data, categories))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.buildings ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
-  variantInfo.lots = unionBy(
+  variantInfo.lots = mergeItems(
     variantInfo.lots?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.lots ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadLotInfo(newPath, id, data))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.lots ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
-  variantInfo.mmps = unionBy(
+  variantInfo.mmps = mergeItems(
     variantInfo.mmps?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.mmps ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadFloraInfo(newPath, id, data))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.mmps ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
-  variantInfo.propFamilies = unionBy(
+  variantInfo.models = reduce(contents, (models, entry) => ({ ...models, ...entry.models }), {})
+
+  variantInfo.propFamilies = mergeItems(
     variantInfo.propFamilies?.filter(
       instance => instance.file && includedSC4Paths.has(instance.file),
     ) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.propFamilies ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadFamilyInfo(newPath, id, data))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.propFamilies ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
-  variantInfo.props = unionBy(
+  variantInfo.props = mergeItems(
     variantInfo.props?.filter(instance => includedSC4Paths.has(instance.file)) ?? [],
-    values(entries).flatMap(entry => {
-      return collect(entry.props ?? {}, (instances, oldPath) => {
-        const newPath = translatePaths[entry.asset.id]?.[oldPath]
-        if (newPath) {
-          return collect(instances, (data, id) => loadPropInfo(newPath, id, data))
-        }
-
-        return []
-      }).flat()
-    }),
-    instance => `${instance.file}:${instance.id}`,
+    values(contents).flatMap(content => content.props ?? []),
+    isSame(instance => `${instance.file}:${instance.id}`),
   )
 
   variantInfo.textures = reduce(
-    entries,
-    (textures, entry) => ({
-      ...mapKeys(
-        entry.textures ?? {},
-        oldPath => translatePaths[entry.asset.id]?.[oldPath] ?? null,
-      ),
-      ...textures,
-    }),
+    contents,
+    (textures, entry) => ({ ...textures, ...entry.textures }),
     {},
   )
 
@@ -594,4 +576,27 @@ export function generateVariantInfo(
 
   variantInfo.categories = toArray(variantCategories)
   packageInfo.features = toArray(features)
+}
+
+function isSame<T, R>(fn: (value: T) => R): (value: T, other: T) => boolean {
+  return (value, other) => fn(value) === fn(other)
+}
+
+function mergeItems<T>(
+  values: readonly T[],
+  others: readonly T[],
+  compareFn: (value: T, other: T) => boolean,
+  mergeFn: (value: T, other: T) => T = merge,
+): T[] {
+  return [...values, ...others].reduce<T[]>((result, other) => {
+    const index = result.findIndex(value => compareFn(value, other))
+
+    if (index < 0) {
+      result.push(other)
+    } else {
+      result[index] = mergeFn(result[index], other)
+    }
+
+    return result
+  }, [])
 }

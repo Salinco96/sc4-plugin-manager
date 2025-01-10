@@ -2386,7 +2386,10 @@ simtropolis/33761-dutch-bicyclepaths:
 
 simtropolis/33889-seasonal-woods-2nd-iteration:
   packageId: 11241036/seasonal-woods-2
-  variantId: default
+  paths:
+    zGSW_Evergreen Woods Override.dat:
+      variantId: evergreen
+  variantId: default,evergreen
 
 simtropolis/33965-girafe-maxis-fence-hd-replacement-mod:
   packageId: flann/girafe-maxis-fence-hd-replacement-mod

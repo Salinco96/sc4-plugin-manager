@@ -16472,7 +16472,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72d0302742_WellingtonPlace02.jpg.cdb62376ac0d8fc7d3d091889aacf1c2.jpg
     lastModified: 2020-05-22T01:50:49.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Wellington Place
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2020_05/5ec72ff883fff_WellingtonPlace00.thumb.jpg.c78f1680c7f5ab2dc0be5dfb6f07009a.jpg
@@ -16481,7 +16481,7 @@ assets:
       '181086':
         buildings:
           Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
-            5c46eb0e:
+            7b647f18-5c46eb0e:
               bulldoze: 692
               capacity:
                 r$: 647
@@ -16494,10 +16494,12 @@ assets:
               pollution: 3
               pollutionRadius: 5
               power: 5
+              tilesets: Euro,NY
               water: 14
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 9336
+        features: []
         filename: Jasoncw - Wellington Place (MN).zip
         files:
           - Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (MN).SC4Model
@@ -16511,8 +16513,8 @@ assets:
               size: 2x3
               stage: 6
               textures:
-                - 258f0000
                 - 258c0000
+                - 258f0000
                 - 25bf0000
         models:
           Jasoncw - Wellington Place (MN)/Jasoncw - Wellington Place (MN).SC4Model:
@@ -16523,7 +16525,7 @@ assets:
       '181087':
         buildings:
           Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (R$$6_2x3).SC4Lot:
-            5c46eb0e:
+            7b647f18-5c46eb0e:
               bulldoze: 692
               capacity:
                 r$: 647
@@ -16536,10 +16538,12 @@ assets:
               pollution: 3
               pollutionRadius: 5
               power: 5
+              tilesets: Euro,NY
               water: 14
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 9336
+        features: []
         filename: Jasoncw - Wellington Place (DN).zip
         files:
           - Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (DN).SC4Model
@@ -16553,8 +16557,8 @@ assets:
               size: 2x3
               stage: 6
               textures:
-                - 258f0000
                 - 258c0000
+                - 258f0000
                 - 25bf0000
         models:
           Jasoncw - Wellington Place (DN)/Jasoncw - Wellington Place (DN).SC4Model:
@@ -20694,7 +20698,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2022_06/62abad619690b_Kallax01.jpg.51791c318e49290a418f1e5efbc981c3.jpg
     lastModified: 2022-06-16T22:25:04.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Kallax Residential
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_06/62abadbfe31fc_Kallax00.thumb.jpg.cf6444932d0d86300b4f1d3b8d518cae.jpg
@@ -20703,7 +20707,7 @@ assets:
       '194433':
         buildings:
           Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
-            be11ed96:
+            7b647f18-be11ed96:
               bulldoze: 531
               capacity:
                 r$: 320
@@ -20717,12 +20721,13 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 10
+              tilesets: Euro
               water: 16
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 4886
           Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax Housing - TP (DN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
-            1e11a30e:
+            7b647f18-1e11a30e:
               bulldoze: 530
               capacity:
                 r$: 507
@@ -20736,12 +20741,13 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 16
+              tilesets: Euro
               water: 24
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 7741
           Jasoncw - Kallax Residential (DN)/Jasoncw - Palisades Place - TT (DN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
-            1e11b0c5:
+            7b647f18-1e11b0c5:
               bulldoze: 531
               capacity:
                 r$: 726
@@ -20755,10 +20761,12 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 23
+              tilesets: Euro
               water: 33
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 11086
+        features: []
         filename: Jasoncw - Kallax Residential (DN).zip
         files:
           - Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House (DN).SC4Model
@@ -20797,14 +20805,14 @@ assets:
               density: medium,high
               name: R$$$6_3x2_Palisades Place
               props:
-                - 2ac80000
-                - 2ac30000
                 - 2a8a0000
+                - 2ac30000
+                - 2ac80000
               size: 3x2
               stage: 6
               textures:
-                - 258f0000
                 - 251c0000
+                - 258f0000
                 - 25ab0000
         models:
           Jasoncw - Kallax Residential (DN)/Jasoncw - Kallax House  - T (DN)/Jasoncw - Kallax House (DN).SC4Model:
@@ -20819,7 +20827,7 @@ assets:
       '194434':
         buildings:
           Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House - T - Grow (R$$$6_2x2).SC4Lot:
-            be11ed96:
+            7b647f18-be11ed96:
               bulldoze: 531
               capacity:
                 r$: 320
@@ -20833,12 +20841,13 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 10
+              tilesets: Euro
               water: 16
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 4886
           Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax Housing - TP (MN)/Jasoncw - Kallax Housing - TP - Grow (R$$$6_3x2).SC4Lot:
-            1e11a30e:
+            7b647f18-1e11a30e:
               bulldoze: 530
               capacity:
                 r$: 507
@@ -20852,12 +20861,13 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 16
+              tilesets: Euro
               water: 24
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 7741
           Jasoncw - Kallax Residential (MN)/Jasoncw - Palisades Place - TT (MN)/Jasoncw - Palisades Place - TT - Grow (R$$$6_3x2).SC4Lot:
-            1e11b0c5:
+            7b647f18-1e11b0c5:
               bulldoze: 531
               capacity:
                 r$: 726
@@ -20871,10 +20881,12 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 23
+              tilesets: Euro
               water: 33
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 11086
+        features: []
         filename: Jasoncw - Kallax Residential (MN).zip
         files:
           - Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House (MN).SC4Model
@@ -20913,14 +20925,14 @@ assets:
               density: medium,high
               name: R$$$6_3x2_Palisades Place
               props:
-                - 2ac80000
-                - 2ac30000
                 - 2a8a0000
+                - 2ac30000
+                - 2ac80000
               size: 3x2
               stage: 6
               textures:
-                - 258f0000
                 - 251c0000
+                - 258f0000
                 - 25ab0000
         models:
           Jasoncw - Kallax Residential (MN)/Jasoncw - Kallax House - T (MN)/Jasoncw - Kallax House (MN).SC4Model:
@@ -21046,7 +21058,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2022_09/63129802ef495_BeaconApartmentsL01-STEX.jpg.7bf6a82dc2560f1939c579a338a4eae8.jpg
     lastModified: 2022-09-02T23:58:21.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Beacon Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_09/6312989ce763a_BeaconApartmentsL00-STEX.thumb.jpg.93698c8e164b4a9fb1aff1706e4ccab6.jpg
@@ -21055,7 +21067,7 @@ assets:
       '195210':
         buildings:
           Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
-            d097ca4e:
+            7b647f18-d097ca4e:
               bulldoze: 307
               capacity:
                 r$: 90
@@ -21068,12 +21080,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: NY,Chicago
               water: 3
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 1298
           Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
-            d097c841:
+            7b647f18-d097c841:
               bulldoze: 313
               capacity:
                 r$: 91
@@ -21086,10 +21099,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: NY,Chicago
               water: 3
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 1313
+        features: []
         filename: Jasoncw - Beacon Apartments (MN).zip
         files:
           - Jasoncw - Beacon Apartments (MN)/Jasoncw - Beacon Apartments L (MN).SC4Model
@@ -21128,7 +21143,7 @@ assets:
       '195211':
         buildings:
           Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (R$$5_1x2).SC4Lot:
-            d097ca4e:
+            7b647f18-d097ca4e:
               bulldoze: 307
               capacity:
                 r$: 90
@@ -21141,12 +21156,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: NY,Chicago
               water: 3
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 1298
           Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments R (R$$5_1x2).SC4Lot:
-            d097c841:
+            7b647f18-d097c841:
               bulldoze: 313
               capacity:
                 r$: 91
@@ -21159,10 +21175,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: NY,Chicago
               water: 3
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 1313
+        features: []
         filename: Jasoncw - Beacon Apartments (DN).zip
         files:
           - Jasoncw - Beacon Apartments (DN)/Jasoncw - Beacon Apartments L (DN).SC4Model
@@ -21421,7 +21439,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_01/63c389de6a0c4_Paragonimage01.jpg.daab757d6d50cd7290fa20071ef95927.jpg
     lastModified: 2023-01-15T05:08:15.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: The Paragon
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_01/63c38a3e7d148_Paragonimage00.thumb.jpg.944145b0c1203f524a6f0ca557167ea8.jpg
@@ -21430,7 +21448,7 @@ assets:
       '196163':
         buildings:
           Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
-            1030c920:
+            7b647f18-1030c920:
               bulldoze: 720
               capacity:
                 r$: 1155
@@ -21444,10 +21462,12 @@ assets:
               pollution: 4
               pollutionRadius: 6
               power: 36
+              tilesets: Euro
               water: 50
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 17636
+        features: []
         filename: Jasoncw - The Paragon (MN).zip
         files:
           - Jasoncw - The Paragon (MN)/Jasoncw - The Paragon (MN).SC4Model
@@ -21473,7 +21493,7 @@ assets:
       '196164':
         buildings:
           Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (R$$$7_2x2).SC4Lot:
-            1030c920:
+            7b647f18-1030c920:
               bulldoze: 720
               capacity:
                 r$: 1155
@@ -21487,10 +21507,12 @@ assets:
               pollution: 4
               pollutionRadius: 6
               power: 36
+              tilesets: Euro
               water: 50
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 17636
+        features: []
         filename: Jasoncw - The Paragon (DN).zip
         files:
           - Jasoncw - The Paragon (DN)/Jasoncw - The Paragon (DN).SC4Model
@@ -21757,7 +21779,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_09/64ffb3eb3c963_EmersonApartments01.jpg.70306f3421019bef21649de1391dd0e9.jpg
     lastModified: 2023-09-12T00:43:08.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Emerson Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/64ffb41b9f83b_EmersonApartments00.thumb.jpg.8d407f97723c4172ab4ee58d2164567b.jpg
@@ -21766,7 +21788,7 @@ assets:
       '197629':
         buildings:
           Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
-            5093d15b:
+            7b647f18-5093d15b:
               bulldoze: 257
               capacity:
                 r$: 162
@@ -21779,10 +21801,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 2
+              tilesets: Euro,Houston
               water: 5
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 2337
+        features: []
         filename: Jasoncw - Emerson Apartments (MN).zip
         files:
           - Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (MN).SC4Model
@@ -21799,8 +21823,8 @@ assets:
               size: 2x2
               stage: 5
               textures:
-                - 25f40000
                 - 258f0000
+                - 25f40000
         models:
           Jasoncw - Emerson Apartments (MN)/Jasoncw - Emerson Apartments (MN).SC4Model:
             - '701299e2'
@@ -21810,7 +21834,7 @@ assets:
       '197630':
         buildings:
           Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (R$$5_2x2).SC4Lot:
-            5093d15b:
+            7b647f18-5093d15b:
               bulldoze: 257
               capacity:
                 r$: 162
@@ -21823,10 +21847,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 2
+              tilesets: Euro,Houston
               water: 5
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 2337
+        features: []
         filename: Jasoncw - Emerson Apartments (DN).zip
         files:
           - Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (DN).SC4Model
@@ -21843,8 +21869,8 @@ assets:
               size: 2x2
               stage: 5
               textures:
-                - 25f40000
                 - 258f0000
+                - 25f40000
         models:
           Jasoncw - Emerson Apartments (DN)/Jasoncw - Emerson Apartments (DN).SC4Model:
             - '701299e2'
@@ -22029,7 +22055,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a00cf1ff31_RasmussenPlace01.jpg.4ce1630a789a12ac22f8e7802c50e622.jpg
     lastModified: 2023-12-25T22:24:19.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Rasmussen Place
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a0112cbf29_RasmussenPlace00.thumb.jpg.abc5ff06e0b5e3679449a0f417677b0b.jpg
@@ -22038,7 +22064,7 @@ assets:
       '198956':
         buildings:
           Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
-            '910e6007':
+            7b647f18-910e6007:
               bulldoze: 723
               capacity:
                 r$: 666
@@ -22052,12 +22078,13 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 21
+              tilesets: Euro
               water: 30
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 10169
           Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
-            710e5f9c:
+            7b647f18-710e5f9c:
               bulldoze: 723
               capacity:
                 r$: 666
@@ -22071,10 +22098,12 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 21
+              tilesets: Euro
               water: 30
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 10169
+        features: []
         filename: Jasoncw - Rasmussen Place (MN).zip
         files:
           - Jasoncw - Rasmussen Place (MN)/Jasoncw - Rasmussen Place (MN).SC4Model
@@ -22112,7 +22141,7 @@ assets:
       '198957':
         buildings:
           Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$6_2x2).SC4Lot:
-            '910e6007':
+            7b647f18-910e6007:
               bulldoze: 723
               capacity:
                 r$: 666
@@ -22126,12 +22155,13 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 21
+              tilesets: Euro
               water: 30
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 10169
           Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (R$$$8_2x1).SC4Lot:
-            710e5f9c:
+            7b647f18-710e5f9c:
               bulldoze: 723
               capacity:
                 r$: 666
@@ -22145,10 +22175,12 @@ assets:
               pollution: 2
               pollutionRadius: 6
               power: 21
+              tilesets: Euro
               water: 30
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 10169
+        features: []
         filename: Jasoncw - Rasmussen Place (DN).zip
         files:
           - Jasoncw - Rasmussen Place (DN)/Jasoncw - Rasmussen Place (DN).SC4Model
@@ -22197,7 +22229,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a03751ee0a_SurfsideApartments01.jpg.3381f10b9e3d986b6be9e956c3754ab1.jpg
     lastModified: 2023-12-25T22:38:45.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Surfside Apartments
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a04744b119_SurfsideApartments00.thumb.jpg.5424452d5b352074b35d5b02b879af16.jpg
@@ -22206,7 +22238,7 @@ assets:
       '198960':
         buildings:
           Jasoncw - Surfside Apartments (MN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
-            310fe459:
+            7b647f18-310fe459:
               bulldoze: 220
               capacity:
                 r$: 116
@@ -22218,12 +22250,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro
               water: 2
               waterPollution: 1
               waterPollutionRadius: 5
               worth: 1576
           Jasoncw - Surfside Apartments (MN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
-            b10fe1b7:
+            7b647f18-b10fe1b7:
               bulldoze: 220
               capacity:
                 r$: 116
@@ -22235,10 +22268,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro
               water: 2
               waterPollution: 1
               waterPollutionRadius: 5
               worth: 1576
+        features: []
         filename: Jasoncw - Surfside Apartments (MN).zip
         files:
           - Jasoncw - Surfside Apartments (MN)/Jasoncw - Surfside Apartments (MN).SC4Model
@@ -22251,15 +22286,15 @@ assets:
               density: medium,high
               name: R$5_2x2_Surfside Apartments
               props:
-                - a0000038
                 - a000000f
+                - a0000038
               size: 2x2
               stage: 5
               textures:
                 - 258d0000
+                - '25900000'
                 - 25b40000
                 - 25bc0000
-                - '25900000'
           Jasoncw - Surfside Apartments (MN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
             e10fe1dc:
               building: b10fe1b7
@@ -22278,7 +22313,7 @@ assets:
       '198961':
         buildings:
           Jasoncw - Surfside Apartments (DN)/R$5_2x2_Surfside Apartments_610fe482.SC4Lot:
-            310fe459:
+            7b647f18-310fe459:
               bulldoze: 220
               capacity:
                 r$: 116
@@ -22290,12 +22325,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro
               water: 2
               waterPollution: 1
               waterPollutionRadius: 5
               worth: 1576
           Jasoncw - Surfside Apartments (DN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
-            b10fe1b7:
+            7b647f18-b10fe1b7:
               bulldoze: 220
               capacity:
                 r$: 116
@@ -22307,10 +22343,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro
               water: 2
               waterPollution: 1
               waterPollutionRadius: 5
               worth: 1576
+        features: []
         filename: Jasoncw - Surfside Apartments (DN).zip
         files:
           - Jasoncw - Surfside Apartments (DN)/Jasoncw - Surfside Apartments (DN).SC4Model
@@ -22323,15 +22361,15 @@ assets:
               density: medium,high
               name: R$5_2x2_Surfside Apartments
               props:
-                - a0000038
                 - a000000f
+                - a0000038
               size: 2x2
               stage: 5
               textures:
                 - 258d0000
+                - '25900000'
                 - 25b40000
                 - 25bc0000
-                - '25900000'
           Jasoncw - Surfside Apartments (DN)/R$6_2x1_Surfside Apartments_e10fe1dc.SC4Lot:
             e10fe1dc:
               building: b10fe1b7
@@ -22362,7 +22400,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2023_12/658a0753e12a1_NapierTower01.jpg.7df3519482172f75ad9676fa9b5e5fb4.jpg
     lastModified: 2023-12-25T22:51:51.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Napier Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/658a078740781_NapierTower00.thumb.jpg.c6a205c5d33f7fa1e0db92d8e7857135.jpg
@@ -22371,7 +22409,7 @@ assets:
       '198973':
         buildings:
           Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
-            1185792c:
+            1182aadc-1185792c:
               bulldoze: 1214
               capacity:
                 r$: 2692
@@ -22385,10 +22423,12 @@ assets:
               pollution: 9
               pollutionRadius: 6
               power: 82
+              tilesets: Euro
               water: 111
               waterPollution: 3
               waterPollutionRadius: 7
               worth: 41106
+        features: []
         filename: Jasoncw - Napier Tower (MN).zip
         files:
           - Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower (MN).SC4Model
@@ -22402,9 +22442,9 @@ assets:
               size: 3x3
               stage: 7
               textures:
+                - 258d0000
                 - 258f0000
                 - f5c04025
-                - 258d0000
         models:
           Jasoncw - Napier Tower (MN)/Jasoncw - Napier Tower (MN).SC4Model:
             - 910432d3
@@ -22414,7 +22454,7 @@ assets:
       '198974':
         buildings:
           Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower - Grow (R$$$7_3x3).SC4Lot:
-            1185792c:
+            1182aadc-1185792c:
               bulldoze: 1214
               capacity:
                 r$: 2692
@@ -22428,10 +22468,12 @@ assets:
               pollution: 9
               pollutionRadius: 6
               power: 82
+              tilesets: Euro
               water: 111
               waterPollution: 3
               waterPollutionRadius: 7
               worth: 41106
+        features: []
         filename: Jasoncw - Napier Tower (DN).zip
         files:
           - Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower (DN).SC4Model
@@ -22445,9 +22487,9 @@ assets:
               size: 3x3
               stage: 7
               textures:
+                - 258d0000
                 - 258f0000
                 - f5c04025
-                - 258d0000
         models:
           Jasoncw - Napier Tower (DN)/Jasoncw - Napier Tower (DN).SC4Model:
             - 910432d3
@@ -22560,7 +22602,7 @@ assets:
       - WannGLondon
     buildings:
       NY Building 12_DN/Mirror/NY Bldg 12 Mirror_DN-0x6534284a-0x1c2d4663-0xd2b2a720.SC4Desc:
-        d2b2a720:
+        1c2d4663-d2b2a720:
           bulldoze: 1043
           capacity:
             r$: 1228
@@ -22574,12 +22616,13 @@ assets:
           pollution: 4
           pollutionRadius: 6
           power: 38
+          tilesets: NY
           water: 53
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 18751
       NY Building 12_DN/NY Bldg 12_DN-0x6534284a-0x1c2d4663-0x92b14b28.SC4Desc:
-        92b14b28:
+        1c2d4663-92b14b28:
           bulldoze: 1043
           capacity:
             r$: 1228
@@ -22593,6 +22636,7 @@ assets:
           pollution: 4
           pollutionRadius: 6
           power: 38
+          tilesets: NY
           water: 53
           waterPollution: 1
           waterPollutionRadius: 7
@@ -22600,6 +22644,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA luxurious, pre-war building based on one found in the West Village of Manhattan. Mirror version included.\n</p>\n\n<p>\n\t- High wealth residential\n</p>\n\n<p>\n\t- NY Tileset\n</p>\n\n<p>\n\t- Medium &amp; High Density zones\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: NY Building 12_DN.zip
     files:
       - NY Building 12_DN/Mirror/NY Bldg 12 Mirror_DN-0x6534284a-0x1c2d4663-0xd2b2a720.SC4Desc
@@ -22625,25 +22670,25 @@ assets:
           size: 2x2
           stage: 8
           textures:
-            - '26060000'
             - 252f0000
+            - '26060000'
       NY Building 12_DN/R$$$8_2x2_NY Bldg 12_DN_b2b14b35.SC4Lot:
         b2b14b35:
           building: 92b14b28
           density: medium,high
           name: R$$$8_2x2_NY Bldg 12_DN
           props:
-            - 2a8a0000
-            - a0000050
-            - a000004f
             - 1dfb0000
+            - 2a8a0000
+            - a000004f
+            - a0000050
           size: 2x2
           stage: 8
           textures:
-            - '26060000'
             - 252d0000
+            - '26060000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       NY Building 12_DN/Mirror/NYBldg12MirrorDN-0x5ad0e817_0x52316b7b_0x30000.SC4Model:
@@ -22776,7 +22821,7 @@ assets:
       - WannGLondon
     buildings:
       Medit Bldg 59_DN/Medit Flats 59_DN-0x6534284a-0x1c2d4663-0x538d8a99.SC4Desc:
-        538d8a99:
+        1c2d4663-538d8a99:
           bulldoze: 403
           capacity:
             r$: 723
@@ -22790,6 +22835,7 @@ assets:
           pollution: 2
           pollutionRadius: 6
           power: 22
+          tilesets: Houston
           water: 32
           waterPollution: 1
           waterPollutionRadius: 7
@@ -22797,6 +22843,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tI have been modeling quite a lot, but have been so busy playing the game that I have not uploaded for a while. This model is based on one found flanking Mount Boron in Nice, France. This is lotted to meet the wants of my city, but please feel free to re-lot with <abbr title=\"Plugin Manager\">PIM</abbr>/Lot Editor.\n</p>\n\n<p>\n\t- High-wealth residential\n</p>\n\n<p>\n\t- Houston Tileset\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Medit Bldg 59_DN.zip
     files:
       - Medit Bldg 59_DN/Medit Flats 59_DN-0x6534284a-0x1c2d4663-0x538d8a99.SC4Desc
@@ -22813,16 +22860,16 @@ assets:
           density: high
           name: R$$$5_2x6_Medit Flats 59_DN
           props:
-            - b38d8a80
             - 1f0b0000
+            - b38d8a80
           size: 2x6
           stage: 5
           textures:
-            - 25f40000
-            - 259a0000
             - 251f0000
+            - 259a0000
+            - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Medit Bldg 59_DN/MeditBldg59DN-0x5ad0e817_0x330d9ebf_0x30000.SC4Model:
@@ -22943,7 +22990,7 @@ assets:
       - WannGLondon
     buildings:
       Tower 4_DN/Tower 4_DN-0x6534284a-0x1c2d4663-0x93bd096b.SC4Desc:
-        93bd096b:
+        1c2d4663-93bd096b:
           bulldoze: 1114
           capacity:
             r$: 1777
@@ -22956,6 +23003,7 @@ assets:
           pollution: 8
           pollutionRadius: 5
           power: 14
+          tilesets: Houston
           water: 37
           waterPollution: 4
           waterPollutionRadius: 6
@@ -22963,6 +23011,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tNeeded some generic, mid-century residential towers to fill my cities so I created this.\n</p>\n\n<p>\n\t- 3 x 2 R$$\n</p>\n\n<p>\n\t- Houston tileset\n</p>\n\n<p>\n\t- High Density\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: Tower 4_DN.zip
     filename: Tower 4_DN.zip
     files:
@@ -22984,10 +23033,10 @@ assets:
           stage: 8
           textures:
             - 25f40000
-            - dddd05b0
             - '26060000'
+            - dddd05b0
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Tower 4_DN/Tower4DN-0x5ad0e817_0x333d1905_0x30000.SC4Model:
@@ -23187,7 +23236,7 @@ assets:
       - WannGLondon
     buildings:
       LA Home Pack/LA Home 1/LA Home 1-0x6534284a-0x1c2d4663-0x93d8ab70.SC4Desc:
-        93d8ab70:
+        1c2d4663-93d8ab70:
           bulldoze: 122
           capacity:
             r$: 15
@@ -23200,12 +23249,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston,Chicago
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 216
       LA Home Pack/LA Home 2/LA Home 2-0x6534284a-0x1c2d4663-0x93ddf7f4.SC4Desc:
-        93ddf7f4:
+        1c2d4663-93ddf7f4:
           bulldoze: 112
           capacity:
             r$: 18
@@ -23218,12 +23268,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 259
       LA Home Pack/LA Home 3/LA Home 3-0x6534284a-0x1c2d4663-0x73e863c7.SC4Desc:
-        73e863c7:
+        1c2d4663-73e863c7:
           bulldoze: 122
           capacity:
             r$: 22
@@ -23236,12 +23287,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 317
       LA Home Pack/LA Home 4/LA Home 4-0x6534284a-0x1c2d4663-0x33e9d555.SC4Desc:
-        33e9d555:
+        1c2d4663-33e9d555:
           bulldoze: 112
           capacity:
             r$: 14
@@ -23254,6 +23306,7 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
@@ -23261,6 +23314,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAfter another viewing of <em>L.A. Confidential</em>, I created a\_pack of four homes (and a lotted bungalow court) found all over beautiful Los Angeles, California (my home). These sprung up all over the city in the 1920s and there are a plethora of them still around today, also found in neighboring cities. I personally love them and even lotted a bungalow court (another LA favorite style of mine).\n</p>\n\n<p>\n\t- Medium wealth, 1x2 lots\n</p>\n\n<p>\n\t- Chicago Tileset\n</p>\n\n<p>\n\t- All densities\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: LA Home Pack.zip
     filename: LA Home Pack.zip
     files:
@@ -23288,20 +23342,20 @@ assets:
           density: low
           name: R$$1_2x3_LA Bungalow Court
           props:
-            - b3d8ab13
             - 1dfb0000
+            - a000000d
+            - a000003f
             - a0000050
             - a0000051
-            - a000003f
-            - a000000d
+            - b3d8ab13
           size: 2x3
           stage: 1
           textures:
-            - 25f40000
-            - 25fa0000
             - 251b0000
             - 252a0000
             - 25ba0000
+            - 25f40000
+            - 25fa0000
       LA Home Pack/LA Home 1/R$$2_1x2_LA Home 1_d3d8ab88.SC4Lot:
         d3d8ab88:
           building: 93d8ab70
@@ -23313,9 +23367,9 @@ assets:
           size: 1x2
           stage: 2
           textures:
-            - 25f40000
             - 251f0000
             - 253a0000
+            - 25f40000
       LA Home Pack/LA Home 2/R$$3_1x2_LA Home 2_c3ddf80b.SC4Lot:
         c3ddf80b:
           building: 93ddf7f4
@@ -23328,9 +23382,9 @@ assets:
           size: 1x2
           stage: 3
           textures:
-            - 25f40000
-            - 253a0000
             - '25350000'
+            - 253a0000
+            - 25f40000
       LA Home Pack/LA Home 3/R$$3_1x2_LA Home 3_73e863e7.SC4Lot:
         73e863e7:
           building: 73e863c7
@@ -23342,9 +23396,9 @@ assets:
           size: 1x2
           stage: 3
           textures:
-            - 25f40000
             - '25350000'
             - 253d0000
+            - 25f40000
       LA Home Pack/LA Home 4/R$$3_1x2_LA Home 4_c3e9d565.SC4Lot:
         c3e9d565:
           building: 33e9d555
@@ -23352,16 +23406,16 @@ assets:
           name: R$$3_1x2_LA Home 4
           props:
             - 1f0b0000
-            - a0000050
             - a000000d
+            - a0000050
           size: 1x2
           stage: 3
           textures:
-            - 25f40000
             - '25350000'
             - 253d0000
+            - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       LA Home Pack/LA Home 1/LAHome1-0x5ad0e817_0x53586d3e_0x30000.SC4Model:
@@ -23375,7 +23429,7 @@ assets:
     name: Los Angeles Home Pack 1
     props:
       LA Home Pack/LA Home 1/LA Home1 Prop-0x6534284a-0x1c2d4663-0xb3d8ab13.SC4Desc:
-        b3d8ab13:
+        1c2d4663-b3d8ab13:
           model: 53586d3e
           name: LA Home1 Prop
     sha256: d72aef5a5b0680e8e539ebe91992124c018dfff3b978aa636b6670484e00ea03
@@ -23831,7 +23885,7 @@ assets:
       - WannGLondon
     buildings:
       SF Bldg 1_DN/1A/SF Bldg 1A_DN-0x6534284a-0x1c2d4663-0x72ce354c.SC4Desc:
-        72ce354c:
+        1c2d4663-72ce354c:
           bulldoze: 298
           capacity:
             r$: 101
@@ -23844,12 +23898,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 4
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1457
       SF Bldg 1_DN/1B/SF Bldg 1B_DN-0x6534284a-0x1c2d4663-0x52ce4243.SC4Desc:
-        52ce4243:
+        1c2d4663-52ce4243:
           bulldoze: 298
           capacity:
             r$: 101
@@ -23862,12 +23917,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 4
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1457
       SF Bldg 1_DN/1C/SF Bldg 1C_DN-0x6534284a-0x1c2d4663-0xb2ce42a3.SC4Desc:
-        b2ce42a3:
+        1c2d4663-b2ce42a3:
           bulldoze: 298
           capacity:
             r$: 101
@@ -23880,12 +23936,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 4
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1457
       SF Bldg 1_DN/SF Bldg 1_DN-0x6534284a-0x1c2d4663-0x72ccdef4.SC4Desc:
-        72ccdef4:
+        1c2d4663-72ccdef4:
           bulldoze: 298
           capacity:
             r$: 101
@@ -23898,6 +23955,7 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Chicago
           water: 4
           waterPollution: 1
           waterPollutionRadius: 6
@@ -23905,6 +23963,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tIt has always astonished me how few BATs there are from beautiful San Francisco, California. This is my attempt to help close that gap.\n</p>\n\n<p>\n\t- R$$ Stage 5\n</p>\n\n<p>\n\t- 1x2 lots\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: SF Bldg 1_DN.zip
     filename: SF Bldg 1_DN.zip
     files:
@@ -23931,13 +23990,13 @@ assets:
           name: R$$5_1x2_SF Bldg 1A_DN
           props:
             - 2a8a0000
-            - a0000050
             - a000004f
+            - a0000050
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 253a0000
+            - '26060000'
       SF Bldg 1_DN/1B/R$$5_1x2_SF Bldg 1B_DN_a2ce4251.SC4Lot:
         a2ce4251:
           building: 52ce4243
@@ -23949,8 +24008,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 253d0000
+            - '26060000'
       SF Bldg 1_DN/1C/R$$5_1x2_SF Bldg 1C_DN_42ce42b1.SC4Lot:
         42ce42b1:
           building: b2ce42a3
@@ -23961,8 +24020,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 253a0000
+            - '26060000'
       SF Bldg 1_DN/R$$5_1x2_SF Bldg 1_DN_32ccdf16.SC4Lot:
         32ccdf16:
           building: 72ccdef4
@@ -23974,10 +24033,10 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 251f0000
+            - '26060000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       SF Bldg 1_DN/1A/SFBldg1A-0x5ad0e817_0xd24d000b_0x30000.SC4Model:
@@ -24344,7 +24403,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/670bcea712142_02.jpg.12fa24047c534aca074d34f7908dbb7e.jpg
     lastModified: 2024-10-13T13:44:11.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Coco Samsung apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Day.thumb.jpg.b8e1c2ecf42c9d4bb60d7f1a66179195.jpg
@@ -24353,7 +24412,7 @@ assets:
       '203881':
         buildings:
           Coco_SamsungApt_MN/Coco_SamsungAPT-0x6534284a-0xb21fc9d1-0x54184b56.SC4Desc:
-            54184b56:
+            b21fc9d1-54184b56:
               bulldoze: 703
               capacity:
                 r$: 3161
@@ -24370,7 +24429,7 @@ assets:
               waterPollutionRadius: 5
               worth: 42957
           Coco_SamsungApt_MN/Coco_SamsungAPT-0x6534284a-0xb21fc9d1-0xd4184728.SC4Desc:
-            d4184728:
+            b21fc9d1-d4184728:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -24392,7 +24451,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_SamsungApt_MN/Coco_SamsungApt_LM 7x3_d41847ed.SC4Lot:
-            d41847ed:
+            b21fc9d1-d41847ed:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -24416,6 +24475,7 @@ assets:
         categories:
           - r$
           - landmarks
+        features: []
         file: Coco_SamsungApt_MN.zip
         filename: Coco_SamsungApt_MN.zip
         files:
@@ -24433,39 +24493,39 @@ assets:
               density: high
               name: Coco_SamsungAPT_R$7x3_MN
               props:
-                - 2a160000
-                - 2a110000
+                - 1eca0000
+                - 1ece0000
+                - 1ed30000
                 - '29830000'
                 - 29c20000
+                - 2a110000
+                - 2a160000
                 - 2a170000
-                - 1ed30000
-                - 1ece0000
-                - 1eca0000
               size: 7x3
               stage: 7
               textures:
                 - 251c0000
-                - 25ae0000
                 - 258f0000
+                - 25ae0000
           Coco_SamsungApt_MN/Coco_SamsungApt_LM 7x3_d41847ed.SC4Lot:
             d41847ed:
               building: d41847ed
               name: Coco_SamsungApt_LM 7x3
               props:
-                - 1ecb0000
-                - 2a110000
-                - 1edc0000
-                - '29830000'
-                - 2a170000
                 - 164b0000
+                - 1ecb0000
+                - 1edc0000
                 - '28330000'
+                - '29830000'
                 - 29c20000
+                - 2a110000
                 - 2a160000
+                - 2a170000
               size: 7x3
               textures:
                 - 252b0000
-                - 25b00000
                 - 25ae0000
+                - 25b00000
         models:
           Coco_SamsungApt_MN/Coco_SamsungAPT-0x5ad0e817_0xb21fc9d1_0x70000.SC4Model:
             - b21fc9d1-0007
@@ -24475,7 +24535,7 @@ assets:
       '203882':
         buildings:
           Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x6534284a-0xb21fc9d1-0xd418529b.SC4Desc:
-            d418529b:
+            b21fc9d1-d418529b:
               bulldoze: 703
               capacity:
                 r$: 3161
@@ -24492,7 +24552,7 @@ assets:
               waterPollutionRadius: 5
               worth: 42957
           Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x6534284a-0xb21fc9d1-0xf4185278.SC4Desc:
-            f4185278:
+            b21fc9d1-f4185278:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -24514,7 +24574,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_SamsungApt_DN/Coco_SamsungApt_DN_LM 7x3_d4185370.SC4Lot:
-            d4185370:
+            b21fc9d1-d4185370:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -24538,6 +24598,7 @@ assets:
         categories:
           - r$
           - landmarks
+        features: []
         file: Coco_SamsungApt_DN.zip
         filename: Coco_SamsungApt_DN.zip
         files:
@@ -24555,40 +24616,40 @@ assets:
               density: high
               name: Coco_SamsungAPT_R$7x3_DN
               props:
-                - 2a160000
-                - 2a110000
+                - 1eca0000
+                - 1ece0000
+                - 1ed30000
                 - '29830000'
                 - 29c20000
+                - 2a110000
+                - 2a160000
                 - 2a170000
-                - 1ed30000
-                - 1ece0000
-                - 1eca0000
               size: 7x3
               stage: 7
               textures:
                 - 251c0000
-                - 25ae0000
                 - 258f0000
+                - 25ae0000
           Coco_SamsungApt_DN/Coco_SamsungApt_DN_LM 7x3_d4185370.SC4Lot:
             d4185370:
               building: d4185370
               name: Coco_SamsungApt_DN_LM 7x3
               props:
+                - 164b0000
                 - 1ecb0000
-                - 2a110000
                 - 1ed30000
                 - 1edc0000
-                - '29830000'
-                - 2a170000
-                - 164b0000
                 - '28330000'
+                - '29830000'
                 - 29c20000
+                - 2a110000
                 - 2a160000
+                - 2a170000
               size: 7x3
               textures:
                 - 252b0000
-                - 25b00000
                 - 25ae0000
+                - 25b00000
         models:
           Coco_SamsungApt_DN/Coco_SamsungAPT_DN-0x5ad0e817_0xb21fc9d1_0x90000.SC4Model:
             - b21fc9d1-0009
@@ -24602,7 +24663,7 @@ assets:
       - WannGLondon
     buildings:
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes 1A_DN-0x6534284a-0x1c2d4663-0x30bcb6bc.SC4Desc:
-        30bcb6bc:
+        1c2d4663-30bcb6bc:
           bulldoze: 253
           capacity:
             r$: 52
@@ -24616,12 +24677,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 2
+          tilesets: Chicago
           water: 6
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 794
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes 1B_DN-0x6534284a-0x1c2d4663-0x10bcb759.SC4Desc:
-        10bcb759:
+        1c2d4663-10bcb759:
           bulldoze: 253
           capacity:
             r$: 52
@@ -24635,12 +24697,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 2
+          tilesets: Chicago
           water: 6
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 794
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes 1C_DN-0x6534284a-0x1c2d4663-0x30c0139f.SC4Desc:
-        30c0139f:
+        1c2d4663-30c0139f:
           bulldoze: 253
           capacity:
             r$: 52
@@ -24654,12 +24717,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 2
+          tilesets: Chicago
           water: 6
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 794
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes 1D_DN-0x6534284a-0x1c2d4663-0x70c01450.SC4Desc:
-        70c01450:
+        1c2d4663-70c01450:
           bulldoze: 253
           capacity:
             r$: 52
@@ -24673,12 +24737,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 2
+          tilesets: Chicago
           water: 6
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 794
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes 1_DN-0x6534284a-0x1c2d4663-0x10bca14a.SC4Desc:
-        10bca14a:
+        1c2d4663-10bca14a:
           bulldoze: 253
           capacity:
             r$: 52
@@ -24692,12 +24757,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 2
+          tilesets: Chicago
           water: 6
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 794
       American Rowhomes Pack 1/Townhomes 2_DN/Townhomes 2A_DN-0x6534284a-0x1c2d4663-0x1135b110.SC4Desc:
-        1135b110:
+        1c2d4663-1135b110:
           bulldoze: 350
           capacity:
             r$: 83
@@ -24711,12 +24777,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1267
       American Rowhomes Pack 1/Townhomes 2_DN/Townhomes 2B_DN-0x6534284a-0x1c2d4663-0x5135b1aa.SC4Desc:
-        5135b1aa:
+        1c2d4663-5135b1aa:
           bulldoze: 350
           capacity:
             r$: 83
@@ -24730,12 +24797,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1267
       American Rowhomes Pack 1/Townhomes 2_DN/Townhomes 2_DN-0x6534284a-0x1c2d4663-0xd124b6cd.SC4Desc:
-        d124b6cd:
+        1c2d4663-d124b6cd:
           bulldoze: 350
           capacity:
             r$: 79
@@ -24749,12 +24817,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1206
       American Rowhomes Pack 1/Townhomes 4A_DN/Townhomes 4A_DN-0x6534284a-0x1c2d4663-0x91a063df.SC4Desc:
-        91a063df:
+        1c2d4663-91a063df:
           bulldoze: 236
           capacity:
             r$: 77
@@ -24767,12 +24836,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1111
       American Rowhomes Pack 1/Townhomes 4B_DN/Townhomes 4B_DN-0x6534284a-0x1c2d4663-0xd1a0644f.SC4Desc:
-        d1a0644f:
+        1c2d4663-d1a0644f:
           bulldoze: 236
           capacity:
             r$: 77
@@ -24785,12 +24855,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1111
       American Rowhomes Pack 1/Townhomes 4C_DN/Townhomes 4C_DN-0x6534284a-0x1c2d4663-0x51a064ac.SC4Desc:
-        51a064ac:
+        1c2d4663-51a064ac:
           bulldoze: 236
           capacity:
             r$: 77
@@ -24803,12 +24874,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1111
       American Rowhomes Pack 1/Townhomes 4_DN/Townhomes 4_DN-0x6534284a-0x1c2d4663-0x71a04e25.SC4Desc:
-        71a04e25:
+        1c2d4663-71a04e25:
           bulldoze: 236
           capacity:
             r$: 77
@@ -24821,12 +24893,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1111
       American Rowhomes Pack 1/Townhomes 5_DN/Corner Left/Townhomes 5 Corner L_DN-0x6534284a-0x1c2d4663-0xd1aec783.SC4Desc:
-        d1aec783:
+        1c2d4663-d1aec783:
           bulldoze: 350
           capacity:
             r$: 105
@@ -24840,12 +24913,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 4
+          tilesets: Chicago
           water: 8
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1603
       American Rowhomes Pack 1/Townhomes 5_DN/Townhomes 5 Corner R_DN-0x6534284a-0x1c2d4663-0xb1adf0c7.SC4Desc:
-        b1adf0c7:
+        1c2d4663-b1adf0c7:
           bulldoze: 350
           capacity:
             r$: 105
@@ -24859,12 +24933,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 4
+          tilesets: Chicago
           water: 8
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1603
       American Rowhomes Pack 1/Townhomes 6_DN/6A/Townhomes 6A_DN-0x6534284a-0x1c2d4663-0x526de392.SC4Desc:
-        526de392:
+        1c2d4663-526de392:
           bulldoze: 275
           capacity:
             r$: 84
@@ -24878,12 +24953,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1282
       American Rowhomes Pack 1/Townhomes 6_DN/6B/Townhomes 6B_DN-0x6534284a-0x1c2d4663-0x526e3121.SC4Desc:
-        '526e3121':
+        1c2d4663-526e3121:
           bulldoze: 275
           capacity:
             r$: 84
@@ -24897,12 +24973,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1282
       American Rowhomes Pack 1/Townhomes 6_DN/6C/Townhomes 6C_DN-0x6534284a-0x1c2d4663-0x526f8c8e.SC4Desc:
-        526f8c8e:
+        1c2d4663-526f8c8e:
           bulldoze: 275
           capacity:
             r$: 84
@@ -24916,12 +24993,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1282
       American Rowhomes Pack 1/Townhomes 6_DN/6D/Townhomes 6D_DN-0x6534284a-0x1c2d4663-0x726f8d05.SC4Desc:
-        726f8d05:
+        1c2d4663-726f8d05:
           bulldoze: 275
           capacity:
             r$: 84
@@ -24935,12 +25013,13 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 1282
       American Rowhomes Pack 1/Townhomes 6_DN/Townhomes 6_DN-0x6534284a-0x1c2d4663-0xb26d31c2.SC4Desc:
-        b26d31c2:
+        1c2d4663-b26d31c2:
           bulldoze: 275
           capacity:
             r$: 84
@@ -24954,6 +25033,7 @@ assets:
           pollution: 1
           pollutionRadius: 6
           power: 3
+          tilesets: Chicago
           water: 7
           waterPollution: 1
           waterPollutionRadius: 7
@@ -24961,6 +25041,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHello Community! Here are some old rowhomes I created which were uploaded to the <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> and I never uploaded them here. There are also some in this pack that have never been uploaded before. These are based on the pretty rowhomes found in Chicago, New York, and Philadelphia.\n</p>\n\n<p>\n\t- Medium &amp; High Wealth residential 1x2 lots\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n<p>\n\t- Townhomes 3 were included in the New York pack upload\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: American Rowhomes Pack 1.zip
     files:
       - American Rowhomes Pack 1/Townhomes 1_DN/R$$$5_1x2_Townhomes 1A_DN_30bcb6c7.SC4Lot
@@ -25045,14 +25126,14 @@ assets:
           name: R$$$5_1x2_Townhomes 1A_DN
           props:
             - 1de60000
-            - a0000092
             - 2a8a0000
             - a0000050
+            - a0000092
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 1_DN/R$$$5_1x2_Townhomes 1B_DN_00bcb765.SC4Lot:
         00bcb765:
           building: 10bcb759
@@ -25060,14 +25141,14 @@ assets:
           name: R$$$5_1x2_Townhomes 1B_DN
           props:
             - 1de60000
-            - a0000092
-            - a0000091
             - a000004f
+            - a0000091
+            - a0000092
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 251f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 1_DN/R$$$5_1x2_Townhomes 1C_DN_d0c013ac.SC4Lot:
         d0c013ac:
           building: 30c0139f
@@ -25075,14 +25156,14 @@ assets:
           name: R$$$5_1x2_Townhomes 1C_DN
           props:
             - 1de60000
-            - a0000092
             - 2a8a0000
             - a0000050
+            - a0000092
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - '25280000'
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 1_DN/R$$$5_1x2_Townhomes 1D_DN_40c0145c.SC4Lot:
         40c0145c:
           building: 70c01450
@@ -25090,13 +25171,13 @@ assets:
           name: R$$$5_1x2_Townhomes 1D_DN
           props:
             - 1de60000
-            - a0000092
             - a000003a
+            - a0000092
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - '251e0000'
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 1_DN/R$$$5_1x2_Townhomes 1_DN_70bca162.SC4Lot:
         70bca162:
           building: 10bca14a
@@ -25104,13 +25185,13 @@ assets:
           name: R$$$5_1x2_Townhomes 1_DN
           props:
             - 1de60000
-            - a0000092
             - a000004f
+            - a0000092
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252d0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 2_DN/R$$$5_1x2_Townhomes 2A_DN_c135b124.SC4Lot:
         c135b124:
           building: 1135b110
@@ -25124,8 +25205,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252a0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 2_DN/R$$$5_1x2_Townhomes 2B_DN_3135b1bb.SC4Lot:
         3135b1bb:
           building: 5135b1aa
@@ -25140,8 +25221,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 2_DN/R$$$5_1x2_Townhomes 2_DN_8124b6ee.SC4Lot:
         8124b6ee:
           building: d124b6cd
@@ -25149,16 +25230,16 @@ assets:
           name: R$$$5_1x2_Townhomes 2_DN
           props:
             - 1de60000
+            - 2a8a0000
             - a000003a
             - a000004f
-            - a0000051
-            - 2a8a0000
             - a0000050
+            - a0000051
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 251f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 4A_DN/R$$5_1x2_Townhomes 4A_DN_91a063ef.SC4Lot:
         91a063ef:
           building: 91a063df
@@ -25171,8 +25252,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 251f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 4B_DN/R$$5_1x2_Townhomes 4B_DN_01a06460.SC4Lot:
         01a06460:
           building: d1a0644f
@@ -25185,22 +25266,22 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252a0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 4C_DN/R$$5_1x2_Townhomes 4C_DN_21a064bc.SC4Lot:
         21a064bc:
           building: 51a064ac
           density: medium,high
           name: R$$5_1x2_Townhomes 4C_DN
           props:
-            - a0000051
-            - a0000050
             - 2a8a0000
+            - a0000050
+            - a0000051
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - '25250000'
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 4_DN/R$$5_1x2_Townhomes 4_DN_11a04e3c.SC4Lot:
         11a04e3c:
           building: 71a04e25
@@ -25213,8 +25294,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 251b0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 5_DN/Corner Left/R$$$6_1x2_Townhomes 5 Corner L_DN_61aec78e.SC4Lot:
         61aec78e:
           building: d1aec783
@@ -25228,23 +25309,23 @@ assets:
           size: 1x2
           stage: 6
           textures:
-            - '26060000'
             - 252d0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 5_DN/R$$$6_1x2_Townhomes 5 Corner R_DN_d1adf0d6.SC4Lot:
         d1adf0d6:
           building: b1adf0c7
           density: medium,high
           name: R$$$6_1x2_Townhomes 5 Corner R_DN
           props:
-            - a000003a
-            - a0000051
-            - a0000050
             - 2a8a0000
+            - a000003a
+            - a0000050
+            - a0000051
           size: 1x2
           stage: 6
           textures:
-            - '26060000'
             - '25340000'
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 6_DN/6A/R$$$5_1x2_Townhomes 6A_DN_a26de39a.SC4Lot:
         a26de39a:
           building: 526de392
@@ -25252,14 +25333,14 @@ assets:
           name: R$$$5_1x2_Townhomes 6A_DN
           props:
             - 2a8a0000
+            - a000000c
             - a0000050
             - a0000051
-            - a000000c
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 6_DN/6B/R$$$5_1x2_Townhomes 6B_DN_026e312d.SC4Lot:
         026e312d:
           building: '526e3121'
@@ -25272,8 +25353,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252f0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 6_DN/6C/R$$$5_1x2_Townhomes 6C_DN_826f8c9d.SC4Lot:
         826f8c9d:
           building: 526f8c8e
@@ -25281,14 +25362,14 @@ assets:
           name: R$$$5_1x2_Townhomes 6C_DN
           props:
             - 2a8a0000
+            - a000004f
             - a0000050
             - a0000051
-            - a000004f
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - '25240000'
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 6_DN/6D/R$$$5_1x2_Townhomes 6D_DN_e26f8d10.SC4Lot:
         e26f8d10:
           building: 726f8d05
@@ -25300,8 +25381,8 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 253b0000
+            - '26060000'
       American Rowhomes Pack 1/Townhomes 6_DN/R$$$5_1x2_Townhomes 6_DN_c26d31ce.SC4Lot:
         c26d31ce:
           building: b26d31c2
@@ -25314,10 +25395,10 @@ assets:
           size: 1x2
           stage: 5
           textures:
-            - '26060000'
             - 252a0000
+            - '26060000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       American Rowhomes Pack 1/Townhomes 1_DN/Townhomes1ADN-0x5ad0e817_0xb03b7f65_0x30000.SC4Model:
@@ -25416,7 +25497,7 @@ assets:
       - WannGLondon
     buildings:
       Townhomes 8_DN/Mirror/Townhomes 8 Mirror-0x6534284a-0x1c2d4663-0xb49943bf.SC4Desc:
-        b49943bf:
+        1c2d4663-b49943bf:
           bulldoze: 272
           capacity:
             r$: 80
@@ -25429,12 +25510,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 1154
       Townhomes 8_DN/Townhomes 8-0x6534284a-0x1c2d4663-0x949844b4.SC4Desc:
-        949844b4:
+        1c2d4663-949844b4:
           bulldoze: 272
           capacity:
             r$: 80
@@ -25447,6 +25529,7 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: NY,Chicago
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
@@ -25454,6 +25537,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA corner residential to complement other American rowhomes. Mirror version is included.\_Townhomes 7 to be uploaded soon as well.\n</p>\n\n<p>\n\t- R$$ 1x2 lot\n</p>\n\n<p>\n\t- Chicago &amp; NY tilesets\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Townhomes 8_DN.zip
     files:
       - Townhomes 8_DN/Mirror/R$$6_1x2_Townhomes 8 Mirror_449943cb.SC4Lot
@@ -25480,8 +25564,8 @@ assets:
           size: 1x2
           stage: 6
           textures:
-            - '26060000'
             - '25340000'
+            - '26060000'
       Townhomes 8_DN/R$$6_1x2_Townhomes 8_649844c1.SC4Lot:
         649844c1:
           building: 949844b4
@@ -25490,15 +25574,15 @@ assets:
           props:
             - 1dfb0000
             - 2a8a0000
-            - a0000050
             - a000004f
+            - a0000050
           size: 1x2
           stage: 6
           textures:
-            - '26060000'
             - '25340000'
+            - '26060000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Townhomes 8_DN/Mirror/Townhomes8MirrorDN-0x5ad0e817_0x141960d7_0x30000.SC4Model:
@@ -25527,7 +25611,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_10/671b24b4a0ef1_.jpg.14eab625ca0db7a7d364bc494f49beb6.jpg
     lastModified: 2024-10-25T05:08:04.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Coco Hillstate apartment
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/671b255b5ef5e_01.thumb.jpg.bddc6d57b0e430364b6ec44b22e2c3eb.jpg
@@ -25536,7 +25620,7 @@ assets:
       '204092':
         buildings:
           Coco_Hillstate_APT-0x6534284a-0x94136420-0xb426a240.SC4Desc:
-            b426a240:
+            94136420-b426a240:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25558,7 +25642,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_Hillstate_APT-0x6534284a-0xb21fc9d1-0x1426bca5.SC4Desc:
-            1426bca5:
+            b21fc9d1-1426bca5:
               bulldoze: 1740
               capacity:
                 r$: 3076
@@ -25576,7 +25660,7 @@ assets:
               waterPollutionRadius: 6
               worth: 44390
           Coco_Hillstate_APT_LM_MN_4x2_3426a2a4.SC4Lot:
-            3426a2a4:
+            94136420-3426a2a4:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25600,6 +25684,7 @@ assets:
         categories:
           - r$$
           - landmarks
+        features: []
         file: Coco_Hillstate_APT_MN.zip
         filename: Coco_Hillstate_APT_MN.zip
         files:
@@ -25616,14 +25701,14 @@ assets:
               building: 3426a2a4
               name: Coco_Hillstate_APT_LM_MN_4x2
               props:
-                - 2bd40000
+                - 1dfb0000
                 - 2a8a0000
                 - 2b1a0000
-                - 1dfb0000
+                - 2bd40000
               size: 4x2
               textures:
-                - '262e0000'
                 - 259d0000
+                - '262e0000'
           Coco_Hillstate_APT_R$$_4x2_7426bfa5.SC4Lot:
             7426bfa5:
               building: 1426bca5
@@ -25631,13 +25716,13 @@ assets:
               name: Coco_Hillstate_APT_R$$_4x2
               props:
                 - 1dfb0000
-                - a0000078
                 - 2a8a0000
+                - a0000078
               size: 4x2
               stage: 8
               textures:
-                - '262e0000'
                 - 259d0000
+                - '262e0000'
         models:
           Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model:
             - 94136420-0004
@@ -25647,7 +25732,7 @@ assets:
       '204093':
         buildings:
           Coco_Hillstate_APT-0x6534284a-0x94136420-0x7426a43d.SC4Desc:
-            7426a43d:
+            94136420-7426a43d:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25669,7 +25754,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_Hillstate_APT-0x6534284a-0xb21fc9d1-0x1426d33d.SC4Desc:
-            1426d33d:
+            b21fc9d1-1426d33d:
               bulldoze: 1740
               capacity:
                 r$: 3076
@@ -25687,7 +25772,7 @@ assets:
               waterPollutionRadius: 6
               worth: 44390
           Coco_Hillstate_APT_LM_DN_4x2_9426d3df.SC4Lot:
-            9426d3df:
+            94136420-9426d3df:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25711,6 +25796,7 @@ assets:
         categories:
           - r$$
           - landmarks
+        features: []
         file: Coco_Hillstate_APt_DN.zip
         filename: Coco_Hillstate_APt_DN.zip
         files:
@@ -25727,14 +25813,14 @@ assets:
               building: 9426d3df
               name: Coco_Hillstate_APT_LM_DN_4x2
               props:
-                - 2bd40000
+                - 1dfb0000
                 - 2a8a0000
                 - 2b1a0000
-                - 1dfb0000
+                - 2bd40000
               size: 4x2
               textures:
-                - '262e0000'
                 - 259d0000
+                - '262e0000'
           Coco_Hillstate_APT_R$$_4x2_DN_d426d49e.SC4Lot:
             d426d49e:
               building: 1426d33d
@@ -25742,13 +25828,13 @@ assets:
               name: Coco_Hillstate_APT_R$$_4x2_DN
               props:
                 - 1dfb0000
-                - a0000078
                 - 2a8a0000
+                - a0000078
               size: 4x2
               stage: 8
               textures:
-                - '262e0000'
                 - 259d0000
+                - '262e0000'
         models:
           Coco_Hillstate_APT-0x5ad0e817_0x94136420_0x40000.SC4Model:
             - 94136420-0004
@@ -25771,7 +25857,7 @@ assets:
       - Dead_End
     buildings:
       DE_Witte Villa-0x6534284a-0x50508c53-0x1483f821.SC4Desc:
-        1483f821:
+        50508c53-1483f821:
           bulldoze: 256
           capacity:
             r$: 44
@@ -25801,6 +25887,7 @@ assets:
       - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
       - sc4evermore/13-sfbt-essentials
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tClassic villas like this can be found in rather posh areas of the Netherlands. Or in other countries for that matter... I imagine this wouldn't look out of place in any European style town. It's a relot of an older building by the great <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/38724-haarlemmergold/?do=hovercard\" data-mentionid=\"38724\" href=\"https://community.simtropolis.com/profile/38724-haarlemmergold/\" rel=\"\">@Haarlemmergold</a>\n</p>\n\n<p>\n\tCapacity satisfied: R$44, R$$26, R$$$13. It should grow on any tileset.\n</p>\n\n<p>\n\tThe attached screenshots show my custom pavement (created through <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/651629-rsc204/?do=hovercard\" data-mentionid=\"651629\" href=\"https://community.simtropolis.com/profile/651629-rsc204/\" rel=\"\">@rsc204</a>'s <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/171-haarl-mega-props-dutch-vol-01\" rel=\"external nofollow\">HAARL MEGA Props Dutch Vol 01</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33651-11241036-textures/\" rel=\"\">11241036 Textures</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33965-girafe-maxis-fence-hd-replacement-mod/\" rel=\"\">Girafe Maxis Fence HD Replacement Mod</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Daisy, Poplars, Rowan trees)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\"><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</a> (Specifically SFBT_Temroc_Props.dat)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG Prop Pack 1</a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: DE_Witte_Villa.zip
     files:
       - DE_Witte Villa-0x6534284a-0x50508c53-0x1483f821.SC4Desc
@@ -25815,14 +25902,14 @@ assets:
           density: all
           name: R$$$4_2x2_DE_Witte Villa
           props:
-            - dd37fbc0
-            - 109f9dcc
             - 034ead8c
-            - 93b035de
+            - 109f9dcc
             - 279c1f0d
-            - 9a829a18
-            - 7a829999
             - 5f85b906
+            - 7a829999
+            - 93b035de
+            - 9a829a18
+            - dd37fbc0
           size: 2x2
           stage: 4
           textures:
@@ -25830,7 +25917,7 @@ assets:
             - f85d4790
             - f85d47b5
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: White Villa
     sha256: c745f5019d39932defcb0afdf9f5d3ff902f484d9160e550c7c68e02fec4b391
@@ -25858,7 +25945,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_11/Add.png.02eca0f2ea8cf0069cfe3b5cddfdc646.png
     lastModified: 2024-11-15T17:29:13.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Coco_e Pyeonhansesang_APT
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_11/673781b189dcb_01-15--131731685185.thumb.png.db754f5982b034ebdc67df0919389cd7.png
@@ -25867,7 +25954,7 @@ assets:
       '204395':
         buildings:
           Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x7443f7d1.SC4Desc:
-            7443f7d1:
+            3442801b-7443f7d1:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25889,7 +25976,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x944405cd.SC4Desc:
-            944405cd:
+            3442801b-944405cd:
               bulldoze: 1849
               capacity:
                 r$: 6186
@@ -25907,7 +25994,7 @@ assets:
               waterPollutionRadius: 6
               worth: 89267
           Coco_ePyeonhanAPT_LM4x3_1443f7f3.SC4Lot:
-            1443f7f3:
+            3442801b-1443f7f3:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -25931,6 +26018,7 @@ assets:
         categories:
           - r$$
           - landmarks
+        features: []
         file: Coco_ePyeonhan_APT_MN.Zip
         filename: Coco_ePyeonhan_APT_MN.Zip
         files:
@@ -25947,56 +26035,56 @@ assets:
               building: 1443f7f3
               name: Coco_ePyeonhanAPT_LM4x3
               props:
-                - 2a8a0000
-                - 2b1a0000
-                - f8fb3305
-                - 98f5eeb5
-                - 2cb00000
-                - 2a8b0000
-                - '1e120000'
-                - 788f5a8f
-                - 995b7a8e
-                - 586f64f1
-                - 3a17fd00
-                - 786cc686
-                - ae0ab3b6
                 - 0eb5b000
-                - f86913b1
+                - '1e120000'
+                - 2a8a0000
+                - 2a8b0000
+                - 2b1a0000
+                - 2cb00000
                 - 395b7af1
+                - 3a17fd00
+                - 586f64f1
+                - 786cc686
+                - 788f5a8f
+                - 98f5eeb5
+                - 995b7a8e
+                - ae0ab3b6
+                - f86913b1
+                - f8fb3305
               size: 4x3
               textures:
-                - '262e0000'
                 - 25b90000
                 - 25bb0000
+                - '262e0000'
           Coco_ePyeonhan_APT_R$$_4x3_d4440620.SC4Lot:
             d4440620:
               building: 944405cd
               density: high
               name: Coco_ePyeonhan_APT_R$$_4x3
               props:
-                - a0000078
+                - 0eb5b000
+                - 18f5eef9
+                - '1e120000'
                 - 2a8a0000
                 - 2a8b0000
-                - 69ad0000
-                - '1e120000'
                 - 2a8c0000
-                - 995b7a8e
-                - 586f64f1
-                - 9869d403
-                - b868bdfc
-                - 788f5a55
-                - 788f5481
-                - 98f77c68
-                - 18f5eef9
                 - 3868d2e7
-                - 0eb5b000
+                - 586f64f1
+                - 69ad0000
+                - 788f5481
+                - 788f5a55
+                - 9869d403
+                - 98f77c68
+                - 995b7a8e
+                - a0000078
                 - ae0ab3b6
+                - b868bdfc
               size: 4x3
               stage: 8
               textures:
-                - '262e0000'
                 - 25b90000
                 - 25bb0000
+                - '262e0000'
         models:
           Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model:
             - 3442801b-0012
@@ -26006,7 +26094,7 @@ assets:
       '204396':
         buildings:
           Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0x5443fd4d.SC4Desc:
-            5443fd4d:
+            3442801b-5443fd4d:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -26028,7 +26116,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Coco_ePyeonhanAPT-0x6534284a-0x3442801b-0xd4441231.SC4Desc:
-            d4441231:
+            3442801b-d4441231:
               bulldoze: 1849
               capacity:
                 r$: 6186
@@ -26046,7 +26134,7 @@ assets:
               waterPollutionRadius: 6
               worth: 89267
           Coco_ePyeonhanAPT_LM4x3_DN_1443fd77.SC4Lot:
-            1443fd77:
+            3442801b-1443fd77:
               bulldoze: 100
               categories: landmarks
               cost: 110000
@@ -26070,6 +26158,7 @@ assets:
         categories:
           - r$$
           - landmarks
+        features: []
         file: Coco_ePyeonhan_APT_DN.zip
         filename: Coco_ePyeonhan_APT_DN.zip
         files:
@@ -26086,57 +26175,57 @@ assets:
               building: 1443fd77
               name: Coco_ePyeonhanAPT_LM4x3_DN
               props:
-                - 2a8a0000
-                - 2b1a0000
-                - f8fb3305
-                - b8690d6d
-                - 98f5eeb5
-                - 2cb00000
-                - 2a8b0000
-                - '1e120000'
-                - 2a8c0000
-                - 29b30000
-                - 788f5a8f
                 - 1a237cf6
-                - 995b7a8e
-                - 586f64f1
+                - '1e120000'
+                - 29b30000
+                - 2a8a0000
+                - 2a8b0000
+                - 2a8c0000
+                - 2b1a0000
+                - 2cb00000
                 - 3a17fd00
-                - f86cc6d3
+                - 586f64f1
                 - 786cc686
+                - 788f5a8f
+                - 98f5eeb5
+                - 995b7a8e
+                - b8690d6d
+                - f86cc6d3
+                - f8fb3305
               size: 4x3
               textures:
-                - '262e0000'
                 - 25b90000
                 - 25bb0000
+                - '262e0000'
           Coco_ePyeonhan_APT_R$$_4x3_DN_14441268.SC4Lot:
             '14441268':
               building: d4441231
               density: high
               name: Coco_ePyeonhan_APT_R$$_4x3_DN
               props:
-                - a0000078
+                - 0eb5b000
+                - 18f5eef9
+                - '1e120000'
                 - 2a8a0000
                 - 2a8b0000
-                - 69ad0000
-                - '1e120000'
                 - 2a8c0000
-                - 995b7a8e
-                - 586f64f1
-                - 9869d403
-                - b868bdfc
-                - 788f5a55
-                - 788f5481
-                - 98f77c68
-                - 18f5eef9
                 - 3868d2e7
-                - 0eb5b000
+                - 586f64f1
+                - 69ad0000
+                - 788f5481
+                - 788f5a55
+                - 9869d403
+                - 98f77c68
+                - 995b7a8e
+                - a0000078
                 - ae0ab3b6
+                - b868bdfc
               size: 4x3
               stage: 8
               textures:
-                - '262e0000'
                 - 25b90000
                 - 25bb0000
+                - '262e0000'
         models:
           Coco_ePyeonhanAPT-0x5ad0e817_0x3442801b_0x120000.SC4Model:
             - 3442801b-0012
@@ -26195,7 +26284,7 @@ assets:
       - WannGLondon
     buildings:
       Mid Century Modern Homes Pack/MidCentHome1/Mid Cent Home 1-0x6534284a-0x1c2d4663-0xb4c083ee.SC4Desc:
-        b4c083ee:
+        1c2d4663-b4c083ee:
           bulldoze: 135
           capacity:
             r$: 29
@@ -26208,12 +26297,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 418
       Mid Century Modern Homes Pack/MidCentHome2/Mid Cent Home 2-0x6534284a-0x1c2d4663-0x94c2046d.SC4Desc:
-        94c2046d:
+        1c2d4663-94c2046d:
           bulldoze: 102
           capacity:
             r$: 22
@@ -26226,12 +26316,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 317
       Mid Century Modern Homes Pack/MidCentHome3/Mid Cent Home 3-0x6534284a-0x1c2d4663-0x74c2768b.SC4Desc:
-        74c2768b:
+        1c2d4663-74c2768b:
           bulldoze: 133
           capacity:
             r$: 30
@@ -26244,6 +26335,7 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston
           water: 2
           waterPollution: 1
           waterPollutionRadius: 6
@@ -26252,6 +26344,7 @@ assets:
     dependencies:
       - simtropolis/34720-agc-environment-dlc
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAfter a recent trip to Palm Springs, I became re-inspired by mid century architecture and whipped these up. Straight out of the Racquet Club tract and complete with breeze blocks, geometric shapes, and rugged stone walls!\n</p>\n\n<p>\n\t- Stage 3 R$$\n</p>\n\n<p>\n\t- Houston tileset\n</p>\n\n<p>\n\t- 2x2 lots\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n<p>\n\tAnd I did finally use a dependency on these lots, Barocco Hispano's trees <a href=\"https://community.simtropolis.com/files/file/34720-agc-environment-dlc/\" rel=\"\">here</a>. Thanks, mate!\n</p>\n\n<p>\n\tFeel free to re-lot as desired as I am not a very great lotter.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Mid Century Modern Homes Pack.zip
     files:
       - Mid Century Modern Homes Pack/MidCentHome1/Mid Cent Home 1-0x6534284a-0x1c2d4663-0xb4c083ee.SC4Desc
@@ -26283,10 +26376,10 @@ assets:
           size: 2x2
           stage: 3
           textures:
-            - 25f40000
-            - '25350000'
-            - '25310000'
             - 252b0000
+            - '25310000'
+            - '25350000'
+            - 25f40000
       Mid Century Modern Homes Pack/MidCentHome2/R$$3_2x2_Mid Cent Home 2_04c20482.SC4Lot:
         04c20482:
           building: 94c2046d
@@ -26294,21 +26387,21 @@ assets:
           name: R$$3_2x2_Mid Cent Home 2
           props:
             - 1f0b0000
+            - 4f92b3a9
+            - 6f8d569a
             - a0000014
             - a000003a
             - a0000050
             - a0000051
             - af92b2f4
-            - 4f92b3a9
-            - 6f8d569a
           size: 2x2
           stage: 3
           textures:
-            - 25f40000
             - '25350000'
             - '25370000'
-            - 253d0000
             - 253a0000
+            - 253d0000
+            - 25f40000
       Mid Century Modern Homes Pack/MidCentHome3/R$$3_2x2_Mid Cent Home 3_d4c27699.SC4Lot:
         d4c27699:
           building: 74c2768b
@@ -26316,23 +26409,23 @@ assets:
           name: R$$3_2x2_Mid Cent Home 3
           props:
             - 1f0b0000
+            - 2eaea741
+            - 6ead60d2
             - a000004f
             - a0000050
             - a0000051
-            - af92b2f4
-            - aeafa5c1
-            - 2eaea741
             - aeae899e
-            - 6ead60d2
+            - aeafa5c1
+            - af92b2f4
           size: 2x2
           stage: 3
           textures:
-            - 25f40000
+            - '25240000'
             - '25290000'
             - 252a0000
-            - '25240000'
+            - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Mid Century Modern Homes Pack/MidCentHome1/MidCentHome1-0x5ad0e817_0x1440a122_0x30000.SC4Model:
@@ -26354,7 +26447,7 @@ assets:
       - Dead_End
     buildings:
       Hisingen Apartments-0x6534284a-0x50508c53-0x54c1312c.SC4Desc:
-        54c1312c:
+        50508c53-54c1312c:
           bulldoze: 184
           capacity:
             r$: 41
@@ -26384,6 +26477,7 @@ assets:
       - sc4evermore/27-sc4d-lex-legacy-bsc-vip-girafe-flora
       - cycledogg/mega-props-vol01
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tThis 3x2 lot features two lovely apartments set around a small courtyard. It's named after the island of Hisingen near Gothenburg, Sweden.\n</p>\n\n<p>\n\tCapacity: R$$ 24\n</p>\n\n<p>\n\tThe attached screenshots show my custom pavement (created through rsc204's <a href=\"https://community.simtropolis.com/files/file/30033-mgb-maxis-texture-replacement-dev-kit/\" rel=\"\">MTRDK</a>) and grass (Lowkee's <a href=\"https://www.sc4evermore.com/index.php/downloads/download/37-terrain-mods-and-tree-controllers/41-appalachian-terrain-mod-by-lowkee33\" rel=\"external nofollow\">Appalachian terrain mod</a>). As far as I know the used texture ID's are standard, so it should work whether or not you're using particular mods. Let me know in the comments if you run into any trouble!\n</p>\n\n<p>\n\t<strong>Dependencies</strong>\n</p>\n\n<ul>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33552-malmberget-proppack-vol1/\" rel=\"\">Malmberget proppack vol1</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/33651-11241036-textures/\" rel=\"\">11241036 textures</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Legacy - <abbr title=\"BATT Squad Certification\">BSC</abbr> Common Dependencies Pack</a> (Specifically <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props CP Vol01)\n\t</li>\n\t<li>\n\t\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/25-flora-fauna-and-mayor-mode-ploppables/27-sc4d-lex-legacy-bsc-vip-girafe-flora\" rel=\"external nofollow\"><abbr title=\"BATT Squad Certification\">BSC</abbr> VIP Girafe Flora Pack</a> (Specifically the files for Bushes, Daisy, Oaks)\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/27563-shk-parking-pack/\" rel=\"\">SHK Parking Pack</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/31374-rdg-prop-pack-1/\" rel=\"\">RDG Prop Pack 1</a>\n\t</li>\n\t<li>\n\t\t<a href=\"https://community.simtropolis.com/files/file/25681-murimk-props-vol01-bicycle-props-with-bikers-mmp/\" rel=\"\">Murimk - Props Vol01 - Bicycle Props with Bikers <abbr title=\"Mayor Mode Ploppable\">MMP</abbr></a>\n\t</li>\n</ul>\n\n<p>\n\tThis may seem like quite a list, but most are well-used by the community and will probably be in your plugins folder already. I tend to reuse the same textures and props, so if you like my lots it might be worth getting the files <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Hisingen Apartments.zip
     files:
       - Hisingen Apartments-0x6534284a-0x50508c53-0x54c1312c.SC4Desc
@@ -26399,30 +26493,30 @@ assets:
           density: all
           name: R$$2_3x2_Hisingen Apartments
           props:
-            - 8b90e718
             - 109f9dcc
-            - 8cfbb144
+            - 1e9a0000
+            - 2a8c0000
+            - 33b0363a
+            - 4cdd25f1
             - 5f85b910
             - 5f85b911
-            - 93b035de
-            - 33b0363a
-            - 2a8c0000
-            - 1e9a0000
-            - ccdd25cc
+            - 8b90e718
             - 8cdd25e1
-            - 4cdd25f1
+            - 8cfbb144
+            - 93b035de
             - a00005f9
+            - ccdd25cc
           size: 3x2
           stage: 2
           textures:
             - 25f40000
-            - f85d47da
-            - f85d47d0
-            - f85d478a
             - f85d4785
+            - f85d478a
+            - f85d47d0
             - f85d47d5
+            - f85d47da
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Hisingen Apartments
     sha256: a5e7b11a336f9df6aed916ad8e563ceabf352cfd989167f1eccea82c46dc5989
@@ -26437,7 +26531,7 @@ assets:
       - WannGLondon
     buildings:
       Apartments 2-/Apartments 2 w Sign/Apartments 2-0x6534284a-0x1c2d4663-0xd4c4b3a6.SC4Desc:
-        d4c4b3a6:
+        1c2d4663-d4c4b3a6:
           bulldoze: 584
           capacity:
             r$: 687
@@ -26451,12 +26545,13 @@ assets:
           pollution: 2
           pollutionRadius: 6
           power: 21
+          tilesets: Chicago
           water: 31
           waterPollution: 1
           waterPollutionRadius: 7
           worth: 10490
       Apartments 2-/Apartments 2/Apartments 2-0x6534284a-0x1c2d4663-0x14c9c48b.SC4Desc:
-        14c9c48b:
+        1c2d4663-14c9c48b:
           bulldoze: 584
           capacity:
             r$: 684
@@ -26470,6 +26565,7 @@ assets:
           pollution: 2
           pollutionRadius: 6
           power: 21
+          tilesets: Chicago
           water: 31
           waterPollution: 1
           waterPollutionRadius: 7
@@ -26477,6 +26573,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tLA has its fair share of chateau-inspired architecture and during a recent outing these style of apartment buildings really inspired me. I have created two versions; one with and one without the rooftop sign (very common here in Los Angeles).\n</p>\n\n<p>\n\t- Stage 6\_R$$$\n</p>\n\n<p>\n\t- Chicago tileset\n</p>\n\n<p>\n\t- 2x3\_lots\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n<p>\n\t- No dependencies\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Apartments 2-.zip
     files:
       - Apartments 2-/Apartments 2 w Sign/Apartments 2-0x6534284a-0x1c2d4663-0xd4c4b3a6.SC4Desc
@@ -26497,8 +26594,8 @@ assets:
           density: high
           name: R$$$6_2x3_Apartments 2
           props:
-            - 1f0b0000
             - 1de50000
+            - 1f0b0000
             - a0000039
             - a000003a
             - a0000050
@@ -26506,19 +26603,19 @@ assets:
           size: 2x3
           stage: 6
           textures:
-            - 25f40000
-            - '25350000'
-            - '25300000'
-            - '25280000'
             - '251e0000'
+            - '25280000'
+            - '25300000'
+            - '25350000'
+            - 25f40000
       Apartments 2-/Apartments 2/R$$$6_2x3_Apartments 2_84c9c497.SC4Lot:
         84c9c497:
           building: 14c9c48b
           density: high
           name: R$$$6_2x3_Apartments 2
           props:
-            - 1f0b0000
             - 1de50000
+            - 1f0b0000
             - a000003a
             - a000003f
             - a0000050
@@ -26526,14 +26623,14 @@ assets:
           size: 2x3
           stage: 6
           textures:
-            - 25f40000
-            - '25210000'
-            - '25300000'
             - '251e0000'
-            - 252a0000
+            - '25210000'
             - '25280000'
+            - 252a0000
+            - '25300000'
+            - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Apartments 2-/Apartments 2 w Sign/Apartments2-0x5ad0e817_0x9444cd78_0x30000.SC4Model:
@@ -26553,7 +26650,7 @@ assets:
       - WannGLondon
     buildings:
       Apartments 3/Apartments 3-0x6534284a-0x1c2d4663-0x14d0958f.SC4Desc:
-        14d0958f:
+        1c2d4663-14d0958f:
           bulldoze: 401
           capacity:
             r$: 979
@@ -26566,6 +26663,7 @@ assets:
           pollution: 4
           pollutionRadius: 5
           power: 8
+          tilesets: NY
           water: 21
           waterPollution: 2
           waterPollutionRadius: 6
@@ -26573,6 +26671,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tAnother grand apartment building inspired by one found in my favorite neighborhood in Los Angeles, Hancock Park.\n</p>\n\n<p>\n\t- R$$ 3x3 left corner lot\n</p>\n\n<p>\n\t- New York tileset\n</p>\n\n<p>\n\t- Medium &amp; High density zones\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Apartments 3.zip
     files:
       - Apartments 3/Apartments 3-0x6534284a-0x1c2d4663-0x14d0958f.SC4Desc
@@ -26597,10 +26696,10 @@ assets:
           size: 3x3
           stage: 6
           textures:
-            - '26060000'
             - 25bc0000
+            - '26060000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Apartments 3/Apartments3DN-0x5ad0e817_0x1450abe4_0x30000.SC4Model:
@@ -26618,7 +26717,7 @@ assets:
       - WannGLondon
     buildings:
       Tulum Homes/Tulum Bldg 1_DN/Tulum Bldg 1_DN-0x6534284a-0x1c2d4663-0x7180df77.SC4Desc:
-        7180df77:
+        1c2d4663-7180df77:
           bulldoze: 195
           capacity:
             r$: 59
@@ -26631,12 +26730,13 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 851
       Tulum Homes/Tulum Bldg 2_DN/Tulum Bldg 2-0x6534284a-0x1c2d4663-0x5493edf5.SC4Desc:
-        5493edf5:
+        1c2d4663-5493edf5:
           bulldoze: 174
           capacity:
             r$: 51
@@ -26649,6 +26749,7 @@ assets:
           pollution: 1
           pollutionRadius: 5
           power: 1
+          tilesets: Houston
           water: 3
           waterPollution: 1
           waterPollutionRadius: 6
@@ -26656,6 +26757,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tAfter a number of visits to Tulum, Mexico I became inspired by the modern and unique architecture found there.\n</p>\n\n<p>\n\t- R$$ 1x2 lots\n</p>\n\n<p>\n\t- Houston tileset\n</p>\n\n<p>\n\t- All density zones\n</p>\n\n<p>\n\t- DarkNite versions only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     filename: Tulum Homes.zip
     files:
       - Tulum Homes/Tulum Bldg 1_DN/R$$4_1x2_Tulum Bldg 1_DN_d180df89.SC4Lot
@@ -26675,33 +26777,33 @@ assets:
           density: low
           name: R$$4_1x2_Tulum Bldg 1_DN
           props:
-            - a0000050
-            - a000004d
             - 2a0f0000
             - 313c9645
+            - a000004d
             - a000004f
+            - a0000050
           size: 1x2
           stage: 4
           textures:
-            - '26060000'
-            - 252a0000
             - 251f0000
+            - 252a0000
+            - '26060000'
       Tulum Homes/Tulum Bldg 2_DN/R$$4_1x2_Tulum Bldg 2_3493ee05.SC4Lot:
         3493ee05:
           building: 5493edf5
           density: low
           name: R$$4_1x2_Tulum Bldg 2
           props:
-            - 2a180000
             - 2a0f0000
+            - 2a180000
           size: 1x2
           stage: 4
           textures:
-            - 25f40000
-            - '25240000'
             - '251e0000'
+            - '25240000'
+            - 25f40000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       Tulum Homes/Tulum Bldg 1_DN/TulumBldg1DN-0x5ad0e817_0xf0ffaa14_0x30000.SC4Model:
@@ -26729,7 +26831,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_12/6751210f5763a_SkycliffeTower01.jpg.42d8e812e2906982dc4badb47119aedf.jpg
     lastModified: 2024-12-05T03:44:31.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Skycliffe Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/6751219f350ab_SkycliffeTower00.thumb.jpg.d68fb61857b5ea6290396a16ed04b3e7.jpg
@@ -26738,7 +26840,7 @@ assets:
       '204577':
         buildings:
           Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
-            '32769e11':
+            1182aadc-32769e11:
               bulldoze: 2947
               capacity:
                 r$: 4431
@@ -26752,10 +26854,12 @@ assets:
               pollution: 15
               pollutionRadius: 6
               power: 135
+              tilesets: Euro
               water: 181
               waterPollution: 5
               waterPollutionRadius: 7
               worth: 67661
+        features: []
         filename: Jasoncw - Skycliffe Tower (MN).zip
         files:
           - Jasoncw - Skycliffe Tower (MN)/Jasoncw - Skycliffe Tower (MN).SC4Model
@@ -26781,7 +26885,7 @@ assets:
       '204578':
         buildings:
           Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (R$$$8_3x2).SC4Lot:
-            '32769e11':
+            1182aadc-32769e11:
               bulldoze: 2947
               capacity:
                 r$: 4431
@@ -26795,10 +26899,12 @@ assets:
               pollution: 15
               pollutionRadius: 6
               power: 135
+              tilesets: Euro
               water: 181
               waterPollution: 5
               waterPollutionRadius: 7
               worth: 67661
+        features: []
         filename: Jasoncw - Skycliffe Tower (DN).zip
         files:
           - Jasoncw - Skycliffe Tower (DN)/Jasoncw - Skycliffe Tower (DN).SC4Model
@@ -26824,7 +26930,7 @@ assets:
       '204579':
         buildings:
           Jasoncw - Skycliffe Tower (CAM)/Jasoncw - Skycliffe Tower - CAM (R$$$10_3x2).SC4Lot:
-            '32769e11':
+            1182aadc-32769e11:
               bulldoze: 2947
               capacity:
                 r$: 4431
@@ -26838,10 +26944,12 @@ assets:
               pollution: 15
               pollutionRadius: 6
               power: 135
+              tilesets: Euro
               water: 181
               waterPollution: 5
               waterPollutionRadius: 7
               worth: 67661
+        features: []
         filename: Jasoncw - Skycliffe Tower (CAM).zip
         files:
           - Jasoncw - Skycliffe Tower (CAM)/Jasoncw - Skycliffe Tower - CAM (R$$$10_3x2).SC4Lot
@@ -26876,7 +26984,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_12/6751221be6cb9_OtautahiMews01.jpg.b8e4d81cf3b9cffe71453399fa0c855c.jpg
     lastModified: 2024-12-05T04:06:43.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Otautahi Mews
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/675126d35bb79_OtautahiMews00.thumb.jpg.13b58f5832299fd7aef8b984c82a7ade.jpg
@@ -26885,7 +26993,7 @@ assets:
       '204582':
         buildings:
           Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
-            528101d0:
+            1182aadc-528101d0:
               bulldoze: 166
               capacity:
                 r$: 42
@@ -26898,10 +27006,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro,Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 606
+        features: []
         filename: Jasoncw - Otautahi Mews (MN).zip
         files:
           - Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (MN).SC4Model
@@ -26913,15 +27023,15 @@ assets:
               density: all
               name: R$$4_1x3_Otautahi Mews
               props:
-                - 2ac80000
                 - '16690000'
+                - 2ac80000
                 - a000000f
               size: 1x3
               stage: 4
               textures:
+                - 251c0000
                 - 258d0000
                 - 25b30000
-                - 251c0000
         models:
           Jasoncw - Otautahi Mews (MN)/Jasoncw - Otautahi Mews (MN).SC4Model:
             - 91ffcbff
@@ -26931,7 +27041,7 @@ assets:
       '204583':
         buildings:
           Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (R$$4_1x3).SC4Lot:
-            528101d0:
+            1182aadc-528101d0:
               bulldoze: 166
               capacity:
                 r$: 42
@@ -26944,10 +27054,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Euro,Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 606
+        features: []
         filename: Jasoncw - Otautahi Mews (DN).zip
         files:
           - Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (DN).SC4Model
@@ -26959,15 +27071,15 @@ assets:
               density: all
               name: R$$4_1x3_Otautahi Mews
               props:
-                - 2ac80000
                 - '16690000'
+                - 2ac80000
                 - a000000f
               size: 1x3
               stage: 4
               textures:
+                - 251c0000
                 - 258d0000
                 - 25b30000
-                - 251c0000
         models:
           Jasoncw - Otautahi Mews (DN)/Jasoncw - Otautahi Mews (DN).SC4Model:
             - 91ffcbff
@@ -26988,7 +27100,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_12/NewportHouse01.jpg.5c623fc4436b446b8430b0c1862e998c.jpg
     lastModified: 2024-12-05T04:10:52.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Newport House
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/NewportHouse00.thumb.jpg.5ba159c59cb236600eca69863df8c581.jpg
@@ -26997,7 +27109,7 @@ assets:
       '204586':
         buildings:
           Jasoncw - Newport House (MN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
-            d2a5de32:
+            1182aadc-d2a5de32:
               bulldoze: 307
               capacity:
                 r$: 48
@@ -27011,10 +27123,12 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 2
+              tilesets: Euro
               water: 5
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 732
+        features: []
         filename: Jasoncw - Newport House (MN).zip
         files:
           - Jasoncw - Newport House (MN)/Jasoncw - Newport House (MN).SC4Model
@@ -27039,7 +27153,7 @@ assets:
       '204587':
         buildings:
           Jasoncw - Newport House (DN)/Jasoncw - Newport House (R$$$5_1x2).SC4Lot:
-            d2a5de32:
+            1182aadc-d2a5de32:
               bulldoze: 307
               capacity:
                 r$: 48
@@ -27053,10 +27167,12 @@ assets:
               pollution: 1
               pollutionRadius: 6
               power: 2
+              tilesets: Euro
               water: 5
               waterPollution: 1
               waterPollutionRadius: 7
               worth: 732
+        features: []
         filename: Jasoncw - Newport House (DN).zip
         files:
           - Jasoncw - Newport House (DN)/Jasoncw - Newport House (DN).SC4Model
@@ -27092,7 +27208,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_12/675a7853915a6_BasildonTerrace01.jpg.5b81bde3533c2cdd96cae230a822a66a.jpg
     lastModified: 2024-12-12T05:46:27.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Basildon Terraces
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/675a78b3453b3_BasildonTerrace00.thumb.jpg.c6aa443be8fd867b9e5f7a408ec5b8fe.jpg
@@ -27101,7 +27217,7 @@ assets:
       '204649':
         buildings:
           Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
-            b2a602f4:
+            1182aadc-b2a602f4:
               bulldoze: 184
               capacity:
                 r$: 26
@@ -27114,12 +27230,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 375
           Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
-            12a60a62:
+            1182aadc-12a60a62:
               bulldoze: 184
               capacity:
                 r$: 26
@@ -27132,10 +27249,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 375
+        features: []
         filename: Jasoncw - Basildon Terraces (MN).zip
         files:
           - Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (MN).SC4Model
@@ -27148,16 +27267,16 @@ assets:
               density: medium,high
               name: R$$4_1x2_Basildon Terraces
               props:
-                - a000003d
                 - 1f0b0000
+                - a000003d
                 - a000004a
                 - a0000050
               size: 1x2
               stage: 4
               textures:
-                - 25f40000
-                - 25b90000
                 - 25ae0000
+                - 25b90000
+                - 25f40000
           Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
             b2a60a95:
               building: 12a60a62
@@ -27168,8 +27287,8 @@ assets:
               size: 1x1
               stage: 5
               textures:
-                - 25f40000
                 - 25ae0000
+                - 25f40000
         models:
           Jasoncw - Basildon Terraces (MN)/Jasoncw - Basildon Terraces (MN).SC4Model:
             - 3224cec6
@@ -27179,7 +27298,7 @@ assets:
       '204650':
         buildings:
           Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$4_1x2).SC4Lot:
-            b2a602f4:
+            1182aadc-b2a602f4:
               bulldoze: 184
               capacity:
                 r$: 26
@@ -27192,12 +27311,13 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 375
           Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
-            12a60a62:
+            1182aadc-12a60a62:
               bulldoze: 184
               capacity:
                 r$: 26
@@ -27210,10 +27330,12 @@ assets:
               pollution: 1
               pollutionRadius: 5
               power: 1
+              tilesets: Houston
               water: 2
               waterPollution: 1
               waterPollutionRadius: 6
               worth: 375
+        features: []
         filename: Jasoncw - Basildon Terraces (DN).zip
         files:
           - Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (DN).SC4Model
@@ -27226,16 +27348,16 @@ assets:
               density: medium,high
               name: R$$4_1x2_Basildon Terraces
               props:
-                - a000003d
                 - 1f0b0000
+                - a000003d
                 - a000004a
                 - a0000050
               size: 1x2
               stage: 4
               textures:
-                - 25f40000
-                - 25b90000
                 - 25ae0000
+                - 25b90000
+                - 25f40000
           Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (R$$5_1x1).SC4Lot:
             b2a60a95:
               building: 12a60a62
@@ -27246,8 +27368,8 @@ assets:
               size: 1x1
               stage: 5
               textures:
-                - 25f40000
                 - 25ae0000
+                - 25f40000
         models:
           Jasoncw - Basildon Terraces (DN)/Jasoncw - Basildon Terraces (DN).SC4Model:
             - 3224cec6
@@ -27905,6 +28027,7 @@ assets:
     category: 101-residential
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>This set is similar to the Commercial 6BY Collection in that it gives a wider range of buildings to be built on many zoning styles.</p>\n<p>\_</p>\n<p>\nThis set edits all THREE wealth levels of Residental. It not only add function to those 4x4 buildings such as Ong Condos, but also a couple other buildings that were previously restricted to 2 or 3 squares.</p>\n<p>\_</p>\n<p>\nOverall gives the game a much broader range of buildings to use while developing your city.</p>\n<p>\_</p>\n<p>\nScreenshots are of Project Bootstrap and the Byall Tower.</p>\n<p>\_</p>\n<p>\n*Update*</p>\n<p>\nThese are compatible with RushHour and are used for the Euro tileset.</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: Residential.zip
     filename: Residential.zip
     files:
@@ -27938,29 +28061,29 @@ assets:
           density: medium,high
           name: R$$$7_4x6
           props:
-            - a0000055
             - '1e120000'
+            - a0000055
           size: 4x6
           stage: 6
           textures:
+            - 252b0000
             - '258e0000'
             - 259d0000
-            - 252b0000
       R$$$7_4x6_cc20967a.SC4Lot:
         cc20967a:
           building: '10000035'
           density: medium,high
           name: R$$$7_4x6
           props:
-            - a000000f
-            - '1e130000'
             - 1dfb0000
+            - '1e130000'
+            - a000000f
           size: 4x6
           stage: 6
           textures:
-            - '25920000'
             - 252b0000
             - '258e0000'
+            - '25920000'
             - '26200000'
       R$$$7_4x6_ec2097ac.SC4Lot:
         ec2097ac:
@@ -27968,17 +28091,17 @@ assets:
           density: medium,high
           name: R$$$7_4x6
           props:
-            - '1e120000'
-            - a0000077
-            - 2a7ccda1
-            - 1dff0000
             - 1dfb0000
+            - 1dff0000
+            - '1e120000'
+            - 2a7ccda1
             - a000000f
+            - a0000077
           size: 4x6
           stage: 6
           textures:
-            - '258e0000'
             - 251c0000
+            - '258e0000'
             - '25920000'
             - '26200000'
       R$$$8_4x4_6c209468.SC4Lot:
@@ -27987,12 +28110,12 @@ assets:
           density: high
           name: R$$$8_4x4
           props:
+            - '1e990000'
             - 1e9a0000
+            - 1e9b0000
+            - '29010000'
             - a000000c
             - a000003a
-            - 1e9b0000
-            - '1e990000'
-            - '29010000'
           size: 4x4
           stage: 7
           textures:
@@ -28015,12 +28138,12 @@ assets:
           density: high
           name: R$$$8_4x4
           props:
-            - a0000069
+            - 1dfc0000
+            - '1e120000'
             - 1e9b0000
             - 28fe0000
             - '29320000'
-            - 1dfc0000
-            - '1e120000'
+            - a0000069
           size: 4x4
           stage: 7
           textures:
@@ -28031,13 +28154,13 @@ assets:
           density: high
           name: R$$$8_4x4
           props:
-            - a0000050
-            - 28fe0000
             - 1e9a0000
-            - a0000051
             - 1e9b0000
-            - 1f000000
             - 1ed80000
+            - 1f000000
+            - 28fe0000
+            - a0000050
+            - a0000051
           size: 4x4
           stage: 7
           textures:
@@ -28056,9 +28179,9 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 259f0000
-            - '258e0000'
             - 251c0000
+            - '258e0000'
+            - 259f0000
             - 25f40000
       R$$$8_4x6_cc2093d6.SC4Lot:
         cc2093d6:
@@ -28078,58 +28201,58 @@ assets:
           density: high
           name: R$$8_4x6
           props:
-            - a0000066
             - a000004a
             - a000004b
             - a000004d
+            - a0000066
           size: 4x6
           stage: 7
           textures:
-            - 25b00000
+            - 251c0000
             - 252b0000
             - 258f0000
+            - 25b00000
             - 25fb0100
-            - 251c0000
       R$$8_4x6_cc21e746.SC4Lot:
         cc21e746:
           building: '10000020'
           density: high
           name: R$$8_4x6
           props:
-            - a000007c
-            - a0000050
-            - 2a8a0000
-            - 291f0000
             - 1d380000
+            - '1e110000'
             - 1eca0000
             - '29010000'
-            - '1e110000'
+            - 291f0000
+            - 2a8a0000
+            - a0000050
+            - a000007c
           size: 4x6
           stage: 7
           textures:
+            - 251c0000
             - 258f0000
             - a990c300
-            - 251c0000
       R$8_4x3_0c21e6db.SC4Lot:
         0c21e6db:
           building: 1000000b
           density: high
           name: R$8_4x3
           props:
-            - a000004c
-            - a0000050
-            - a000004a
-            - a000004d
             - 1d380000
-            - 2a580000
             - '29850000'
+            - 2a580000
+            - a000004a
+            - a000004c
+            - a000004d
+            - a0000050
           size: 4x3
           stage: 7
           textures:
-            - 25c30000
             - 251c0100
-            - 25c10000
             - '25900000'
+            - 25c10000
+            - 25c30000
       R$8_4x3_2c21e683.SC4Lot:
         2c21e683:
           building: 1000000b
@@ -28141,9 +28264,9 @@ assets:
           size: 4x3
           stage: 7
           textures:
-            - 25c10000
             - 251c0000
             - '25900000'
+            - 25c10000
       R$8_4x3_6c21e652.SC4Lot:
         6c21e652:
           building: 1000000b
@@ -28163,13 +28286,13 @@ assets:
           name: R$8_4x3
           props:
             - '29170000'
-            - a000004d
             - 2a8a0000
+            - a000004d
           size: 4x3
           stage: 7
           textures:
-            - 25c30000
             - '25900000'
+            - 25c30000
       R$8_4x6_6c21e545.SC4Lot:
         6c21e545:
           building: 1000000c
@@ -28178,9 +28301,9 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - '25900000'
             - 251c0000
             - '25210000'
+            - '25900000'
       R$8_4x6_8c21e57d.SC4Lot:
         8c21e57d:
           building: 1000000c
@@ -28192,26 +28315,26 @@ assets:
           size: 4x6
           stage: 7
           textures:
-            - 25c10000
             - 251c0000
             - '25900000'
             - 259d0000
+            - 25c10000
       R$8_4x6_ac21e5a2.SC4Lot:
         ac21e5a2:
           building: 1000000c
           density: high
           name: R$8_4x6
           props:
+            - a000004a
             - a000004b
             - a000004d
-            - a000004a
           size: 4x6
           stage: 7
           textures:
-            - 25c10000
-            - '25900000'
-            - 252b0000
             - 251c0000
+            - 252b0000
+            - '25900000'
+            - 25c10000
       R$8_4x6_ec21e5c0.SC4Lot:
         ec21e5c0:
           building: 1000000c
@@ -28219,16 +28342,16 @@ assets:
           name: R$8_4x6
           props:
             - 291f0000
+            - 2a8a0000
             - a000004a
             - a000004b
-            - 2a8a0000
           size: 4x6
           stage: 7
           textures:
-            - '25900000'
             - 251c0000
+            - '25900000'
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Residential 6BY Collection
     sha256: 2928addd4d37bdb6e40bfe30c167497ae6c66c26172aa5573270d50ab2314d09

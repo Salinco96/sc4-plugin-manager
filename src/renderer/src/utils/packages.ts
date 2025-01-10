@@ -1,12 +1,7 @@
-import { mapValues, parseHex, values, where } from "@salinco/nice-utils"
+import { mapValues, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
-import type { BuildingID } from "@common/buildings"
 import { CategoryID, isCategory } from "@common/categories"
-import { getTextureIdRange } from "@common/dbpf"
-import type { FamilyID } from "@common/families"
-import type { LotID } from "@common/lots"
-import type { FloraID } from "@common/mmps"
 import {
   type PackageID,
   isError,
@@ -16,7 +11,6 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { ProfileInfo } from "@common/profiles"
-import type { PropID } from "@common/props"
 import {
   type PackageInfo,
   type PackageStatus,
@@ -28,6 +22,7 @@ import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
 import type { ToolID, ToolInfo } from "@common/tools"
+import { hasMatchingContents, isHexSearch } from "./search"
 import {
   type PackageFilters,
   type PackageUi,
@@ -37,8 +32,6 @@ import {
   getToolInfo,
   useStore,
 } from "./store"
-
-export type HexSearch = BuildingID & FamilyID & FloraID & LotID & PropID
 
 function getFilteredPackages(store: Store): PackageID[] {
   return store.filteredPackages
@@ -186,7 +179,7 @@ export function filterVariant(
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
-  filters: Omit<PackageFilters, "search"> & { hex?: HexSearch; pattern?: RegExp },
+  filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp },
 ): boolean {
   const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
@@ -246,61 +239,8 @@ export function filterVariant(
     }
   }
 
-  const hex = filters.hex
-
-  if (hex) {
-    if (variantInfo.buildingFamilies?.some(family => family.id === hex)) {
-      return true
-    }
-
-    if (variantInfo.buildings?.some(where("id", hex))) {
-      return true
-    }
-
-    if (variantInfo.buildings?.some(building => building.families?.includes(hex))) {
-      return true
-    }
-
-    if (variantInfo.lots?.some(where("id", hex))) {
-      return true
-    }
-
-    if (variantInfo.mmps?.some(where("id", hex))) {
-      return true
-    }
-
-    if (variantInfo.mmps?.some(mmp => mmp.stages?.some(where("id", hex)))) {
-      return true
-    }
-
-    if (variantInfo.models) {
-      for (const models of values(variantInfo.models)) {
-        if (models.some(modelId => modelId.startsWith(hex))) {
-          return true
-        }
-      }
-    }
-
-    if (variantInfo.propFamilies?.some(family => family.id === hex)) {
-      return true
-    }
-
-    if (variantInfo.props?.some(where("id", hex))) {
-      return true
-    }
-
-    if (variantInfo.props?.some(prop => prop.families?.includes(hex))) {
-      return true
-    }
-
-    if (variantInfo.textures) {
-      const textureId = getTextureIdRange(parseHex(hex))[0]
-      for (const textures of values(variantInfo.textures)) {
-        if (textures.includes(textureId)) {
-          return true
-        }
-      }
-    }
+  if (filters.hex && hasMatchingContents(variantInfo, filters.hex)) {
+    return true
   }
 
   if (filters.pattern && !filters.pattern?.test(`${packageInfo.id}|${packageInfo.name}`)) {
@@ -308,14 +248,6 @@ export function filterVariant(
   }
 
   return true
-}
-
-export function isHexSearch(search: string): boolean {
-  return !!search.match(/^(0x)?[0-9a-fA-F]{8}(-[0-9a-fA-F]{1,4})?$/)
-}
-
-export function toHexSearch(search: string): HexSearch {
-  return search.toLowerCase() as HexSearch
 }
 
 export function computePackageList(
@@ -338,12 +270,12 @@ export function computePackageList(
   // Match search query from start of words only, ignoring leading/trailing spaces
   const search = packageFilters.search.trim()
 
-  const filters: Omit<PackageFilters, "search"> & { hex?: HexSearch; pattern?: RegExp } = {
+  const filters: Omit<PackageFilters, "search"> & { hex?: string; pattern?: RegExp } = {
     ...packageFilters,
     dependencies: packageFilters.dependencies || packageFilters.onlyErrors,
     experimental: packageFilters.experimental || packageFilters.onlyErrors,
     incompatible: packageFilters.incompatible || packageFilters.onlyErrors,
-    hex: isHexSearch(search) ? toHexSearch(search) : undefined,
+    hex: isHexSearch(search) ? search.toLowerCase() : undefined,
     pattern: search ? getStartOfWordSearchRegex(search) : undefined,
   }
 

@@ -1,14 +1,14 @@
 import { Card, CardContent, Divider, ListItem, Typography } from "@mui/material"
 import { Fragment, useEffect, useState } from "react"
 
-import { DBPFFileType, type TGI } from "@common/dbpf"
+import { DBPFFileType, type TGI, TypeID } from "@common/dbpf"
 import type { FloraInfo } from "@common/mmps"
 import { type PackageID, checkFile } from "@common/packages"
 import { VariantState } from "@common/types"
 import { ExemplarRef } from "@components/ExemplarRef"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
-import { type Tag, TagType, serializeTag } from "@components/Tags/utils"
+import { Tag } from "@components/Tags/Tag"
+import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
 import { useCurrentVariant } from "@utils/packages"
@@ -97,8 +97,6 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
 
   const images = mmp.images?.length ? mmp.images : (icons ?? [])
 
-  const tags: Tag[] = [] // todo
-
   return (
     <ListItem sx={{ padding: 0 }}>
       <Card
@@ -125,19 +123,11 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
                   {mmp.label ?? mmp.name ?? "MMP"}
                 </Text>
                 {isPatched && (
-                  <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
+                  <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
                 )}
               </FlexBox>
 
-              <ExemplarRef file={mmp.file} id={mmp.id} />
-
-              {!!tags?.length && (
-                <FlexBox direction="row" gap={1} mt={1}>
-                  {tags.map(tag => (
-                    <PackageTag key={serializeTag(tag.type, tag.value)} tag={tag} />
-                  ))}
-                </FlexBox>
-              )}
+              <ExemplarRef file={mmp.file} group={mmp.group} id={mmp.id} type={TypeID.EXEMPLAR} />
             </FlexBox>
           </FlexBox>
 

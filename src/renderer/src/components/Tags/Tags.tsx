@@ -4,7 +4,7 @@ import { useAuthors } from "@utils/store"
 import { type ComponentType, useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Tag } from "./Tag"
-import { type Tag as TagInfo, TagType, getAuthorName, serializeTag } from "./utils"
+import { type TagInfo, TagType, getAuthorName, serializeTag } from "./utils"
 
 export function Tags({
   component: TagComponent = Tag,

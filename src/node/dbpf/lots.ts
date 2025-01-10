@@ -1,18 +1,22 @@
 import { toHex, values } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
-import { getTextureIdRange, parseTGI } from "@common/dbpf"
+import { type GroupID, type TypeID, getTextureIdRange } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import { type LotID, type LotInfo, ZoneDensity } from "@common/lots"
 import type { PropID } from "@common/props"
 
+import { split } from "@common/utils/string"
+import type { TextureID } from "@common/variants"
 import { type Exemplar, LotConfigPropertyType, ZoneType } from "./types"
 import { get, getArray, getString } from "./utils"
 
 export function getLotInfo(exemplar: Exemplar): LotInfo {
+  const [, , id] = split(exemplar.id, "-") as [TypeID, GroupID, LotID]
+
   const data: LotInfo = {
     file: exemplar.file,
-    id: toHex(parseTGI(exemplar.id)[2], 8) as LotID,
+    id,
   }
 
   if (exemplar.file.match(/\bCAM\b/i)) {
@@ -71,7 +75,7 @@ export function getLotInfo(exemplar: Exemplar): LotInfo {
   if (stage && !isPlop) {
     data.stage = stage
 
-    if (stage > 8) {
+    if (stage > 8 && stage <= 32) {
       data.requirements ??= {}
       data.requirements.cam = true
     }
@@ -84,7 +88,7 @@ export function getLotInfo(exemplar: Exemplar): LotInfo {
   )
 
   const props = new Set<PropID>()
-  const textures = new Set<string>()
+  const textures = new Set<TextureID>()
 
   for (const lotConfigProperty of lotConfigProperties) {
     const value = lotConfigProperty.value as number[]

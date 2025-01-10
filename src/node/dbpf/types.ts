@@ -138,10 +138,16 @@ export enum OccupantGroup {
   IndustrialHighTech = 0x14400,
   SgEntertainment = 0xb5c00157,
   SgWaterway = 0xb5c00185,
+  BteCommercialW2W = 0xb5c00a05,
   BteEntertainment = 0xb5c00a0a,
+  BteResidentialW2W = 0xb5c00b05,
   BteWaterfront = 0xb5c00dd6,
   BteInlandWaterway = 0xb5c00dd8,
+  BteGeneralW2W = 0xb5c00dde,
   BteReligious = 0xb5c00ddf,
+  SfbtHamburgW2W = 0xb5c00f0a,
+  SfbtParisW2W = 0xb5c00f0b,
+  BteIndustrialW2W = 0xd02c802e,
 }
 
 export enum PowerPlantType {

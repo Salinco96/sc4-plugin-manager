@@ -3,7 +3,8 @@ import { type LotID, type LotInfo, ZoneDensity } from "@common/lots"
 import type { Requirements } from "@common/options"
 import type { PropID } from "@common/props"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
-import { isEnum, size, unique, values } from "@salinco/nice-utils"
+import type { TextureID } from "@common/variants"
+import { isEnum, size, sort, unique, values } from "@salinco/nice-utils"
 
 export interface LotData {
   /**
@@ -66,30 +67,46 @@ export interface LotData {
   /**
    * Instance IDs of all textures used by this lot
    */
-  textures?: string[]
+  textures?: TextureID[]
 }
 
 export function loadLotInfo(file: string, id: LotID, data: LotData): LotInfo {
-  const { density, props, textures, ...others } = data
-
   return {
-    ...others,
+    building: data.building,
+    default: data.default,
     density:
-      density === "all"
+      data.density === "all"
         ? values(ZoneDensity)
-        : density?.length
-          ? unique(parseStringArray(density).filter(value => isEnum(value, ZoneDensity)))
+        : data.density?.length
+          ? unique(parseStringArray(data.density).filter(value => isEnum(value, ZoneDensity)))
           : undefined,
     file,
+    images: data.images,
     id,
+    name: data.name,
+    props: data.props,
+    replace: data.replace,
+    replaceMaxis: data.replaceMaxis,
+    requirements: data.requirements,
+    size: data.size,
+    stage: data.stage,
+    textures: data.textures,
   }
 }
 
 export function writeLotInfo(lot: LotInfo): LotData {
-  const { density, file, id, ...others } = lot
-
   return {
-    ...others,
-    density: density?.length === size(ZoneDensity) ? "all" : density?.join(","),
+    building: lot.building,
+    default: lot.default,
+    density: lot.density?.length === size(ZoneDensity) ? "all" : lot.density?.join(","),
+    images: lot.images,
+    name: lot.name,
+    props: lot.props && sort(lot.props),
+    replace: lot.replace,
+    replaceMaxis: lot.replaceMaxis,
+    requirements: lot.requirements,
+    size: lot.size,
+    stage: lot.stage,
+    textures: lot.textures && sort(lot.textures),
   }
 }

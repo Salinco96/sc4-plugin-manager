@@ -15,14 +15,14 @@ assets:
       - Mikeseith
     buildings:
       mikeseith/Garages/Modular Parking Garage 2 Lvl/Mikeseith 2 Level Garages_Lots.dat:
-        1960bfda:
+        07bddf1c-1960bfda:
           bulldoze: 10
           categories: transport
           cost: 56
           menu: MiscTransit
           model: badb57f1-0e11
           name: MS_2Lvl_Inside (1 Row)
-        3962e3b9:
+        07bddf1c-3962e3b9:
           bulldoze: 10
           categories: transport
           cost: 50
@@ -38,7 +38,7 @@ assets:
           water: 1
           waterPollution: 1
           waterPollutionRadius: 1
-        5960c034:
+        07bddf1c-5960c034:
           bulldoze: 10
           categories: transport
           cost: 54
@@ -48,21 +48,21 @@ assets:
           pollution: 1
           power: 1
           water: 1
-        5960c0eb:
+        07bddf1c-5960c0eb:
           bulldoze: 10
           categories: transport
           cost: 55
           menu: MiscTransit
           model: badb57f1-0e11
           name: MS_2Lvl_Ramp
-        7960bf97:
+        07bddf1c-7960bf97:
           bulldoze: 10
           categories: transport
           cost: 57
           menu: MiscTransit
           model: badb57f1-0e11
           name: MS_2Lvl_Inside (2 Rows)
-        7960c078:
+        07bddf1c-7960c078:
           bulldoze: 10
           categories: transport
           cost: 53
@@ -72,14 +72,14 @@ assets:
           pollution: 1
           power: 1
           water: 1
-        9960bf4b:
+        07bddf1c-9960bf4b:
           bulldoze: 10
           categories: transport
           cost: 51
           menu: MiscTransit
           model: badb57f1-0e11
           name: MS_2Lvl_Wall (1 Row)
-        b960bedd:
+        07bddf1c-b960bedd:
           bulldoze: 10
           categories: transport
           cost: 52
@@ -87,7 +87,7 @@ assets:
           model: badb57f1-0e11
           name: MS_2Lvl_Wall (2 Rows)
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level Airport Shuttle_RTMT/zOpt_8 Level Airport Shuttle_RTMT.dat:
-        dd0ef80b:
+        07bddf1c-dd0ef80b:
           bulldoze: 100
           categories: bus
           cost: 100
@@ -107,7 +107,7 @@ assets:
           waterPollution: 3
           waterPollutionRadius: 1
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/!Opt_8 Level BusStop_RTMT/zOpt_8 Level BusStop_RTMT.dat:
-        3d184784:
+        36ab2c8e-3d184784:
           bulldoze: 100
           categories: bus
           cost: 100
@@ -127,220 +127,7 @@ assets:
           waterPollution: 3
           waterPollutionRadius: 1
       mikeseith/Garages/Modular Parking Garage 8 Lvl#/Mikeseith 8 Level Garages_Lots.dat:
-        1cf37210:
-          bulldoze: 100
-          categories: transport
-          cost: 69
-          garbage: 2
-          maintenance: 25
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Bridge Corner A
-          pollution: 2
-          pollutionRadius: 1
-          power: 2
-          water: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-        1cf8e57f:
-          bulldoze: 100
-          categories: transport
-          cost: 50
-          flamability: 50
-          garbage: 4
-          landmark: 36
-          landmarkRadius: 14
-          maintenance: 20
-          menu: MiscTransit
-          model: 3d15a045
-          name: MS_8Lvl_Entrance
-          pollution: 1
-          pollutionRadius: 1
-          power: 3
-          water: 2
-          waterPollution: 3
-          waterPollutionRadius: 1
-        3cf369e5:
-          bulldoze: 100
-          categories: transport
-          cost: 65
-          maintenance: 20
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Centre (5 Car Row)
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        3d184784:
-          bulldoze: 100
-          categories: bus
-          cost: 100
-          flamability: 38
-          garbage: 4
-          jobs:
-            $: 5
-            $$: 2
-          maintenance: 5
-          menu: MiscTransit
-          model: 3d15a045
-          name: MS_8Lvl_BusStop
-          pollution: 1
-          pollutionRadius: 1
-          power: 3
-          submenu: MiscTransit/Bus
-          water: 2
-          waterPollution: 3
-          waterPollutionRadius: 1
-        3d205411:
-          bulldoze: 100
-          categories: transport
-          cost: 70
-          garbage: 2
-          maintenance: 25
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Bridge Corner B
-          pollution: 2
-          pollutionRadius: 1
-          power: 2
-          water: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-        5cf36ce3:
-          bulldoze: 100
-          categories: transport
-          cost: 57
-          flamability: 50
-          garbage: 1
-          maintenance: 20
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Elevator
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        5cf36e24:
-          bulldoze: 100
-          categories: transport
-          cost: 54
-          garbage: 1
-          maintenance: 20
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Ramp
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        5cf37074:
-          bulldoze: 100
-          categories: transport
-          cost: 68
-          garbage: 2
-          maintenance: 25
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Bridge Centre
-          pollution: 2
-          pollutionRadius: 1
-          power: 2
-          water: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-        5cf37444:
-          bulldoze: 100
-          categories: transport
-          cost: 53
-          maintenance: 10
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_OuterCorner
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        bcf36100:
-          bulldoze: 100
-          categories: transport
-          cost: 56
-          maintenance: 10
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_RampDown
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        bcf36894:
-          bulldoze: 100
-          categories: transport
-          cost: 55
-          maintenance: 10
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_RampUp
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        bcf36f3c:
-          bulldoze: 100
-          categories: transport
-          cost: 66
-          garbage: 2
-          maintenance: 25
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Bridge Edge A
-          pollution: 2
-          pollutionRadius: 1
-          power: 2
-          water: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-        dcf36951:
-          bulldoze: 100
-          categories: transport
-          cost: 51
-          garbage: 1
-          maintenance: 20
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Wall
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        dcf36a78:
-          bulldoze: 100
-          categories: transport
-          cost: 64
-          maintenance: 20
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Centre (4 Car Row)
-          pollution: 1
-          pollutionRadius: 1
-          power: 1
-          water: 1
-        dcf36fc8:
-          bulldoze: 100
-          categories: transport
-          cost: 67
-          garbage: 2
-          maintenance: 25
-          menu: MiscTransit
-          model: badb57f1-0e11
-          name: MS_8Lvl_Bridge Edge B
-          pollution: 2
-          pollutionRadius: 1
-          power: 2
-          water: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-        dd0ef80b:
+        07bddf1c-dd0ef80b:
           bulldoze: 100
           categories: bus
           cost: 100
@@ -360,7 +147,220 @@ assets:
           water: 2
           waterPollution: 3
           waterPollutionRadius: 1
-        dd16f12b:
+        36ab2c8e-1cf37210:
+          bulldoze: 100
+          categories: transport
+          cost: 69
+          garbage: 2
+          maintenance: 25
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Bridge Corner A
+          pollution: 2
+          pollutionRadius: 1
+          power: 2
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+        36ab2c8e-1cf8e57f:
+          bulldoze: 100
+          categories: transport
+          cost: 50
+          flamability: 50
+          garbage: 4
+          landmark: 36
+          landmarkRadius: 14
+          maintenance: 20
+          menu: MiscTransit
+          model: 3d15a045
+          name: MS_8Lvl_Entrance
+          pollution: 1
+          pollutionRadius: 1
+          power: 3
+          water: 2
+          waterPollution: 3
+          waterPollutionRadius: 1
+        36ab2c8e-3cf369e5:
+          bulldoze: 100
+          categories: transport
+          cost: 65
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Centre (5 Car Row)
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-3d184784:
+          bulldoze: 100
+          categories: bus
+          cost: 100
+          flamability: 38
+          garbage: 4
+          jobs:
+            $: 5
+            $$: 2
+          maintenance: 5
+          menu: MiscTransit
+          model: 3d15a045
+          name: MS_8Lvl_BusStop
+          pollution: 1
+          pollutionRadius: 1
+          power: 3
+          submenu: MiscTransit/Bus
+          water: 2
+          waterPollution: 3
+          waterPollutionRadius: 1
+        36ab2c8e-3d205411:
+          bulldoze: 100
+          categories: transport
+          cost: 70
+          garbage: 2
+          maintenance: 25
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Bridge Corner B
+          pollution: 2
+          pollutionRadius: 1
+          power: 2
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+        36ab2c8e-5cf36ce3:
+          bulldoze: 100
+          categories: transport
+          cost: 57
+          flamability: 50
+          garbage: 1
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Elevator
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-5cf36e24:
+          bulldoze: 100
+          categories: transport
+          cost: 54
+          garbage: 1
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Ramp
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-5cf37074:
+          bulldoze: 100
+          categories: transport
+          cost: 68
+          garbage: 2
+          maintenance: 25
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Bridge Centre
+          pollution: 2
+          pollutionRadius: 1
+          power: 2
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+        36ab2c8e-5cf37444:
+          bulldoze: 100
+          categories: transport
+          cost: 53
+          maintenance: 10
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_OuterCorner
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-bcf36100:
+          bulldoze: 100
+          categories: transport
+          cost: 56
+          maintenance: 10
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_RampDown
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-bcf36894:
+          bulldoze: 100
+          categories: transport
+          cost: 55
+          maintenance: 10
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_RampUp
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-bcf36f3c:
+          bulldoze: 100
+          categories: transport
+          cost: 66
+          garbage: 2
+          maintenance: 25
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Bridge Edge A
+          pollution: 2
+          pollutionRadius: 1
+          power: 2
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+        36ab2c8e-dcf36951:
+          bulldoze: 100
+          categories: transport
+          cost: 51
+          garbage: 1
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Wall
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-dcf36a78:
+          bulldoze: 100
+          categories: transport
+          cost: 64
+          maintenance: 20
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Centre (4 Car Row)
+          pollution: 1
+          pollutionRadius: 1
+          power: 1
+          water: 1
+        36ab2c8e-dcf36fc8:
+          bulldoze: 100
+          categories: transport
+          cost: 67
+          garbage: 2
+          maintenance: 25
+          menu: MiscTransit
+          model: badb57f1-0e11
+          name: MS_8Lvl_Bridge Edge B
+          pollution: 2
+          pollutionRadius: 1
+          power: 2
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+        36ab2c8e-dd16f12b:
           bulldoze: 10
           categories: police
           cost: 80
@@ -376,7 +376,7 @@ assets:
           powerProduction: 1
           submenu: Police/Small
           water: 1
-        fcf36d53:
+        36ab2c8e-fcf36d53:
           bulldoze: 100
           categories: transport
           cost: 52
@@ -399,6 +399,7 @@ assets:
       - sc4evermore/18
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>The <strong>SC4D LEX Legacy - Mikeseith Multi-level Modular Garages</strong> contains the popular 2-level and 8-level Modular Parking Garages by MikeSeith, including the Airport Shuttle automatas. The 2-level garages have 8 modular pieces, including entrances (in prop family), several wall pieces and ramp piece. The 8-level garages have 18 modular pieces, including an entrance, two different types of ramps, several wall pieces, overhanging bride pieces over other networks, a\_police kiosk/parking security,\_but stop\_and an\_airport shuttle spawner bus stop. The original lots were created by MikeSeith, however they underwent some necessary revision and updates mostly performed by\_rsc204/mgb204.\_<strong><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits/?tab=comments#comment-1767404\">Most of the changes that he made are detailed in this post</a></span></strong>. A final revision and update was made by Tyberius06 for this legacy compilation.</p>\r\n<p class=\"text_normal\" align=\"justify\"><span style=\"text-decoration: underline;\"><strong><big>The highlights:</big></strong></span></p>\r\n<ul>\r\n<li class=\"text_normal\">Only the\_<strong>Entrance\_lot(s)</strong> and the\_<strong>Airport Shuttle Busstop</strong> have TE (transti enabled) parking garage function.</li>\r\n<li class=\"text_normal\">All the lots (except the former Police Kiosk, now Parking Security which can be found in the Civic - Police menu) have been moved to the Misc Transportation menu from the Park menu.</li>\r\n<li class=\"text_normal\">The former Police Kiosk is now called as\_<strong>Parking Security</strong>\_and after some tweaks it sits somewhere between the Maxis Kiosk and Small Police Station in terms of it's effectiveness, with a larger radius to keep it in line with the intended function around Airports.<br><strong><span style=\"color: #e03e2d;\">!!! VERY IMPORTANT !!!</span></strong> -\_As with the Police Station Fix above, you can NOT use this override, until all prior instances of the original Police Station from this pack are removed from your cities. But given the overall modifications here, that's a good idea more generally too if using this update.</li>\r\n<li class=\"text_normal\">The\_<strong>Bus Stop</strong>, mainly just modded to conform to more modern TE standards.</li>\r\n<li class=\"text_normal\">The\_<strong>Airport Shuttle</strong> now acts as a BusStop with parking function and optionally spawning airport shuttle automatas if the\_airport shuttles.dat\_is installed.<br><span style=\"text-decoration: underline;\">Optionally</span>, both the Bus Stop and the Airport Shuttle lot recevied RTMT replacement versions, which alternately use the Bus Shelter and Bus Sign Props from your RTMT setup, (v3.6 or later compatible), instead of the default prop.</li>\r\n<li class=\"text_normal\">Some pieces, like the entrance and the corner pieces are offering commercial service jobs.</li>\r\n<li class=\"text_normal\"> This legacy compilation meant to replace any previous versions of these parking garages. The formerly available <em>BSC MEGA Props Mikeseith vol02</em> (which exclusively contains models and props only for these sets and which was formerly released as an individual upload on the SC4D LEX file exchange, then released as part of the SC4D LEX Legacy - BSC Common Dependencies V6 and prior) has been included with this compilation (you will find it in the BSC/BSCProps folder) and will be removed with later updates from the BSC Common Dependnecies (from version 7). So <span style=\"color: #e03e2d;\"><strong>LOTters using these models and props need to reference this upload (SC4D LEX Legacy - Mikeseith Multi-level Modular Garages)</strong></span>, instead of the former SC4Devotion LEX link or the BSC Common Dependencies compilation.\_</li>\r\n<li class=\"text_normal\">For more details check out the readme file in the <em>~Documents</em> folder. You will find a cleanitol file and prop catalogue index image of the contents of the included dependency pack.</li>\r\n</ul>\r\n<p><span style=\"text-decoration: underline;\"><strong>Installation:</strong></span></p>\r\n<p class=\"text_normal\"><strong>Installation</strong>: Run the Java installer (.jar extension), which will guide you through the installation process, or open it using 7-zip or Keka for manual install. If doing a manual install, go into the \"installation\" folder, then copy/extract the\_BSC and Mikeseith\_parent folders into your plugins. If you extracted the\_<em>~Documents</em>\_folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.</p>\r\n<p class=\"text_normal\">It is highly recommended to run the cleanitol with the installer and remove any previous versions from your plugins. It might be necessary to bulldoze any existing lots from the previous versions of these sets before you install this new version.<br>Optionally in the\_~Documents\_folder in the main ZIP you can find the\_<em>Cleanitol_SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.txt</em>\_file and by using either the newer\_<strong><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\">nos.17's SC4 Cleanitol</a></strong>\_or the older\_<strong><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\">BSC Cleanitol</a></strong>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<p class=\"text_normal\"><strong>Un-Installing</strong>: To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n<p class=\"text_normal\"><span style=\"text-decoration: underline;\"><strong>Dependencies:</strong></span></p>\r\n<p class=\"text_normal\">To ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.</p>\r\n<ul>\r\n<li>BSC MEGA Props Mikeseith Vol02 v2 -\_<strong><span style=\"color: #e03e2d;\">INCLUDED</span></strong><br>The formerly released version, that was available in the BSC Common Dependencies V6 (and prior), have been updated and have been removed from the BSC Common Dependencies compilation and have been made available exclusively with this SC4D LEX Legacy - Mikeseith Multi-Level Modular Garages.</li>\r\n</ul>\r\n<p><strong><span style=\"text-decoration: underline;\">Credits:</span></strong></p>\r\n<p> These modular parking garages pieces were modelled and originally lotted by Mikeseith. MGB204/RSC204 made significant facelift on the functionality of the lots, see details above. Final update, packing the assembly of the prop pack, that is\_containing these models were originally created for Project ZIP then SC4D Legacy Restoration by Tyberius06. \_</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeiths 2 garages front.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeiths 2 garages front.jpg\" alt=\"MikeSeiths 2 garages front\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/mikeseith 8 level garages1.JPG\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/mikeseith 8 level garages1.JPG\" alt=\"mikeseith 8 level garages12\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/MikeSeith - airport shuttle.jpg\" data-lightbox=\"lightbox204\" data-alt=\"lightboxMikeSeiths 2 garages front.jpg|mikeseith 8 level garages1.JPG|MikeSeith - airport shuttle\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/MikeSeith - airport shuttle.jpg\" alt=\"MikeSeith - airport shuttle3\" ></a> </span>\r\n        </div> \r\n</body>"
     downloads: 913
+    features: []
     file: SC4D LEX Legacy - Mikeseith Multi-level Modular Garages.zip
     files:
       - ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat
@@ -468,8 +469,8 @@ assets:
           building: 5960c0eb
           name: 2 lvl garage - ramp
           props:
-            - 1961ee42
             - 1958c786
+            - 1961ee42
           size: 2x1
           textures:
             - 251c0000
@@ -496,8 +497,8 @@ assets:
           building: 9960bf4b
           name: 2 lvl garage - wall 1 row
           props:
-            - d9506e18
             - 1961ee41
+            - d9506e18
           size: 1x1
           textures:
             - 251c0000
@@ -515,16 +516,16 @@ assets:
           building: dd0ef80b
           name: 8 lvl airport shuttle spawner_RTMT
           props:
+            - 0c9db009
+            - 0c9db00a
+            - 1961ee50
+            - 1d2c0000
+            - 29dc0000
+            - 29dd0000
             - a000004a
             - a000004b
             - a0000078
-            - 29dd0000
-            - 29dc0000
-            - 1d2c0000
-            - 1961ee50
             - cb650011
-            - 0c9db009
-            - 0c9db00a
           size: 1x1
           textures:
             - 251c0000
@@ -534,16 +535,16 @@ assets:
           building: 3d184784
           name: 8 lvl garage bus stop_RTMT
           props:
+            - 0c9db009
+            - 0c9db00a
+            - 1961ee50
+            - 1d2c0000
+            - 29dc0000
+            - 29dd0000
             - a000004a
             - a000004b
             - a0000078
-            - 29dd0000
-            - 29dc0000
-            - 1d2c0000
-            - 1961ee50
             - cb650011
-            - 0c9db009
-            - 0c9db00a
           size: 1x1
           textures:
             - 251c0000
@@ -579,13 +580,13 @@ assets:
           building: 3d184784
           name: 8 lvl garage bus stop
           props:
+            - 1961ee50
+            - 1d2c0000
+            - 29dc0000
+            - 29dd0000
             - a000004a
             - a000004b
             - a0000078
-            - 29dd0000
-            - 29dc0000
-            - 1d2c0000
-            - 1961ee50
           size: 1x1
           textures:
             - 251c0000
@@ -615,8 +616,8 @@ assets:
           building: 5cf36e24
           name: 8 lvl new straight ramp
           props:
-            - 1961ee56
             - 1961ee50
+            - 1961ee56
           size: 2x2
           textures:
             - 251c0000
@@ -633,8 +634,8 @@ assets:
           name: 8 lvl new outside corner stairs
           props:
             - '28330000'
-            - a0000051
             - 9998e34b
+            - a0000051
           size: 2x1
           textures:
             - 251c0000
@@ -656,14 +657,14 @@ assets:
             - d97843a1
           size: 1x2
           textures:
-            - '258e0000'
             - 251c0000
+            - '258e0000'
         bcf36f3c:
           building: bcf36f3c
           name: 8 lvl new bridge edge A
           props:
-            - '28330000'
             - 1961ee58
+            - '28330000'
           size: 2x1
           textures:
             - 251c0000
@@ -671,10 +672,10 @@ assets:
           building: dcf36951
           name: 8 lvl new wall
           props:
+            - 1961ee50
             - a000004a
             - a000004d
             - a0000050
-            - 1961ee50
             - b988598d
           size: 1x1
           textures:
@@ -692,9 +693,9 @@ assets:
           building: dcf36fc8
           name: 8 lvl new bridge edge B
           props:
+            - 1961ee59
             - '28330000'
             - a0000050
-            - 1961ee59
           size: 2x1
           textures:
             - 251c0000
@@ -702,13 +703,13 @@ assets:
           building: dd0ef80b
           name: 8 lvl airport shuttle spawner
           props:
-            - bd0ef682
             - 1961ee50
             - 1eda0000
-            - 2a170000
             - 29dd0000
+            - 2a170000
             - 7df5cdae
             - a000005c
+            - bd0ef682
           size: 1x1
           textures:
             - 251c0000
@@ -717,9 +718,9 @@ assets:
           building: dd16f12b
           name: 8 lvl garage police
           props:
-            - dd16efe2
             - a000004a
             - a0000050
+            - dd16efe2
           size: 1x1
           textures:
             - 251c0000
@@ -727,155 +728,155 @@ assets:
           building: fcf36d53
           name: 8 lvl new inside coner
           props:
-            - '28330000'
             - 1961ee57
+            - '28330000'
             - f99a5099
           size: 1x1
           textures:
             - 251c0000
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat:
-        - 3d15a045
-        - 1cf0aaeb
-        - 199e3b14
-        - b99f8042
-        - 399f84fc
-        - 799f8876
-        - 79a136ef
-        - 3d0238ad
-        - 9d023cc8
-        - 1cfb89e7
-        - fd1b3344
-        - f99d42c0
-        - 199e749a
-        - 999f71a3
-        - d99ebc13
-        - b99f8eb0
-        - f99fe1cc
-        - d983eea7
-        - 3962215d
-        - f983f16a
-        - d983f4b4
-        - d9840cd1
-        - 3962258a
-        - 9962287c
-        - b9745067
-        - '39819e29'
-        - 9981a0e1
-        - 3983f9f5
-        - f983fd8f
-        - f9840123
-        - f9840443
-        - d98406fc
-        - 19840a28
-        - 9984271a
-        - 7cf8dee2
-        - 79817f98
-        - 5cf8e517
-        - 7cf8e860
-        - 7cf8eba8
-        - 7d219aa5
-        - f9842160
-        - '59842422'
-        - 39844fdd
-        - 9cf8f5a4
-        - 3cf8f896
-        - 7cf9b03f
-        - fcf9b6b4
-        - bcf9b957
-        - 997a9016
-        - fcf9bbf9
-        - 9cf9bef2
-        - bcf9d13b
-        - bcf9d37b
-        - dd171827
-        - b9963508
-        - 59963b81
-        - '19965279'
-        - 39965a84
-        - bd037751
-        - '59943183'
+        - 194b4954
+        - 194b83f6
+        - '19578234'
+        - 195ef290
+        - 195f06df
+        - 195f1ecf
         - 1961cafe
-        - b961cf07
-        - '19953232'
-        - 7995779f
-        - 5d021efb
-        - f961b21f
-        - 7961b88a
-        - 9961bea9
-        - 7969b087
-        - b969b835
-        - '7961e506'
-        - '79620151'
-        - 797a7bc5
         - 1969bdef
         - 1969d3a3
+        - 19840a28
+        - '19953232'
+        - '19965279'
+        - 199e3b14
+        - 199e749a
+        - 1cf0aaeb
+        - 1cfb89e7
+        - 394a0d42
+        - 394a4462
+        - 394b65bd
+        - 394bab29
+        - 394bb98d
+        - 394bbb86
+        - 395c2c59
+        - 395dba0b
+        - 395dec3e
+        - 3962215d
+        - 3962258a
         - 3969dabb
-        - 3cef3fc4
-        - fcf9cd59
-        - 7cf9d868
-        - fcf9ea1b
-        - bcf9fc90
         - 397a83b0
-        - 5cfa03c9
+        - '39819e29'
+        - 3983f9f5
+        - 39844fdd
+        - 39965a84
+        - 399f84fc
+        - 3cef3fc4
+        - 3cf8f896
         - 3cfa35ba
         - 3cfb8347
-        - bd144455
-        - 5d144bc4
-        - dd0c533c
-        - 394b65bd
-        - 595b569f
-        - 195ef290
-        - d94ba841
-        - 395dec3e
+        - 3d0238ad
+        - 3d15a045
         - 594b5ff3
-        - 994ca681
-        - 394bab29
-        - 194b83f6
-        - d94ca2e5
-        - 395c2c59
-        - b95eefb6
-        - d95b9784
+        - 595b569f
+        - 595e264b
+        - 595f1cee
+        - '59842422'
+        - '59943183'
+        - 59963b81
+        - 5cf8e517
+        - 5cfa03c9
+        - 5d021efb
+        - 5d144bc4
         - 794c92ff
+        - 795c39d0
+        - 7961b88a
+        - '7961e506'
+        - '79620151'
+        - 7969b087
+        - 797a7bc5
+        - 79817f98
+        - 7995779f
+        - 799f8876
+        - 79a136ef
+        - 7cf8dee2
+        - 7cf8e860
+        - 7cf8eba8
+        - 7cf9b03f
+        - 7cf9d868
+        - 7d219aa5
+        - 994ca681
+        - 9958dc04
+        - 995dc433
+        - 9961bea9
+        - 9962287c
+        - 997a9016
+        - 9981a0e1
+        - 9984271a
+        - 999f71a3
+        - 9cf8f5a4
+        - 9cf9bef2
+        - 9d023cc8
         - b94c93ff
         - b94c9513
-        - b95f05c5
-        - 195f06df
-        - b95f1a8f
-        - 595f1cee
-        - 195f1ecf
-        - f94bb227
-        - 595e264b
-        - f95e2789
-        - f95efe7d
-        - f94bb111
-        - d95dd3cb
-        - f95ddf09
-        - 395dba0b
-        - 995dc433
         - b954d050
-        - f94b1b7c
-        - d94b44fa
-        - 194b4954
-        - f958d7e9
-        - 9958dc04
+        - b9573c22
+        - b957581d
+        - b958d314
         - b958deed
         - b958e2a7
         - b95b43f2
-        - 394bb98d
-        - 795c39d0
+        - b95eefb6
+        - b95f05c5
+        - b95f1a8f
+        - b961cf07
+        - b969b835
+        - b9745067
+        - b9963508
+        - b99f8042
+        - b99f8eb0
+        - bcf9b957
+        - bcf9d13b
+        - bcf9d37b
+        - bcf9fc90
+        - bd037751
+        - bd144455
         - d94a13b7
-        - 394a4462
-        - b9573c22
-        - b958d314
-        - '19578234'
-        - b957581d
+        - d94b44fa
+        - d94ba841
+        - d94ca2e5
+        - d95b9784
+        - d95dd3cb
+        - d983eea7
+        - d983f4b4
+        - d98406fc
+        - d9840cd1
+        - d99ebc13
+        - dd0c533c
+        - dd171827
+        - f94b1b7c
+        - f94bb111
+        - f94bb227
         - f9575448
-        - 394bbb86
-        - 394a0d42
+        - f958d7e9
+        - f95ddf09
+        - f95e2789
+        - f95efe7d
+        - f961b21f
+        - f983f16a
+        - f983fd8f
+        - f9840123
+        - f9840443
+        - f9842160
+        - f99d42c0
+        - f99fe1cc
+        - fcf9b6b4
+        - fcf9bbf9
+        - fcf9cd59
+        - fcf9ea1b
+        - fd1b3344
       mikeseith/Automatas/Airport Shuttles#/!Airport shuttle Dollar/Airport shuttle Dollar.dat:
         - badb57f1-1961
         - badb57f1-eaea
@@ -918,514 +919,514 @@ assets:
     name: SC4D LEX LEGACY - Mikeseith Multi-level Modular Garages
     props:
       ^BSC/BSCProps#/^BSC MEGA Props - Mikeseith Vol02 v2/BSC MEGA Props - Mikeseith Vol02 v2.dat:
-        194f8bd1:
+        36ab2c8e-194f8bd1:
           family: 1961ee44
           model: 394b65bd
           name: 2lvl corner a
-        194f8c54:
+        36ab2c8e-194f8c54:
           family: 1961ee41
           model: d94b44fa
           name: 2lvl wall 1side b
-        19506dfa:
+        36ab2c8e-19506dfa:
           model: f94bb227
           name: 2lvl inside 2side model
-        '19508e13':
+        36ab2c8e-19508e13:
           family: 1961ee46
           model: b94c9513
           name: 2lvl inside 2side c
-        1958c786:
+        36ab2c8e-1958c786:
           model: b954d050
           name: 2lvl ramp model
-        19602cbd:
+        36ab2c8e-19602cbd:
           family: 1961ee41
           model: 9958dc04
           name: 2lvl wall 1side e
-        19602ccd:
+        36ab2c8e-19602ccd:
           family: 1961ee41
           model: b958deed
           name: 2lvl wall 1side f
-        19602ce6:
+        36ab2c8e-19602ce6:
           family: 1961ee41
           model: b95b43f2
           name: 2lvl wall 1side h
-        '19603776':
+        36ab2c8e-19603776:
           family: 1961ee40
           model: f9575448
           name: 2lvl wall 2side h
-        19620de6:
+        36ab2c8e-19620de6:
           family: 1961ee45
           model: 395dec3e
           name: 2lvl corner stairs 1
-        19621d1c:
+        36ab2c8e-19621d1c:
           family: 1961ee47
           model: 595e264b
           name: 2lvl inside1side a
-        1962fcfb:
+        36ab2c8e-1962fcfb:
           family: 1961ee46
           model: 195f06df
           name: 2lvl inside 2side e
-        1978434e:
+        36ab2c8e-1978434e:
           family: 1961ee50
           model: 7961b88a
           name: 8 lvl garage wall b
-        197ae106:
+        36ab2c8e-197ae106:
           family: 1961ee52
           model: 9962287c
           name: 8 lvl garage center edge b
-        '19885079':
+        36ab2c8e-19885079:
           family: 1961ee52
           model: f983fd8f
           name: 8 lvl garage center edge g
-        '19885186':
+        36ab2c8e-19885186:
           family: 1961ee51
           model: '59842422'
           name: 8 lvl garage center g
-        19a2a904:
+        36ab2c8e-19a2a904:
           family: 1961ee59
           model: 199e749a
           name: 8 lvl garage bridge wall edge 1
-        19a53c64:
+        36ab2c8e-19a53c64:
           family: 1961ee5c
           model: 79a136ef
           name: 8 lvl garage bridge center e
-        1cff8c4f:
+        36ab2c8e-1cff8c4f:
           family: 1961ee51
           model: 3cf8f896
           name: 8 lvl garage center j
-        1cff8c5e:
+        36ab2c8e-1cff8c5e:
           family: 1961ee51
           model: 7cf9b03f
           name: 8 lvl garage center k
-        1cff8d0e:
+        36ab2c8e-1cff8d0e:
           family: 1961ee52
           model: 5cf8e517
           name: 8 lvl garage center edge n
-        1d2983d7:
+        36ab2c8e-1d2983d7:
           family: 1961ee52
           model: 7d219aa5
           name: 8 lvl garage center edge q
-        394f8c60:
+        36ab2c8e-394f8c60:
           family: 1961ee41
           model: 194b4954
           name: 2lvl wall 1side c
-        '39508e03':
+        36ab2c8e-39508e03:
           family: 1961ee46
           model: b94c93ff
           name: 2lvl inside 2side b
-        396345cd:
+        36ab2c8e-396345cd:
           family: 1961ee46
           model: 595f1cee
           name: 2lvl inside 2side g
-        3978430d:
+        36ab2c8e-3978430d:
           family: 1961ee50
           model: b969b835
           name: 8 lvl garage wall e
-        3978431b:
+        36ab2c8e-3978431b:
           family: 1961ee50
           model: 7969b087
           name: 8 lvl garage wall d
-        '39784387':
+        36ab2c8e-39784387:
           family: 1961ee53
           model: '7961e506'
           name: 8 lvl garage wall elevator a
-        '39885085':
+        36ab2c8e-39885085:
           family: 1961ee52
           model: f9840123
           name: 8 lvl garage center edge h
-        '39885191':
+        36ab2c8e-39885191:
           family: 1961ee51
           model: 39844fdd
           name: 8 lvl garage center h
-        '39997156':
+        36ab2c8e-39997156:
           family: 1961ee56
           model: 7995779f
           name: 8 lvl garage straight ramp bb
-        399971ed:
+        36ab2c8e-399971ed:
           family: 1961ee56
           model: '19953232'
           name: 8 lvl garage straight ramp aa
-        399a4b51:
+        36ab2c8e-399a4b51:
           family: 1961ee57
           model: 59963b81
           name: 8 lvl garage inside corner b
-        39a3f282:
+        36ab2c8e-39a3f282:
           family: 1961ee58
           model: b99f8eb0
           name: 8 lvl garage bridge wall edge b
-        3cff8bc4:
+        36ab2c8e-3cff8bc4:
           family: 1961ee50
           model: 5cfa03c9
           name: 8 lvl garage wall n
-        3cff8c6d:
+        36ab2c8e-3cff8c6d:
           family: 1961ee51
           model: fcf9b6b4
           name: 8 lvl garage center l
-        3cff8c7a:
+        36ab2c8e-3cff8c7a:
           family: 1961ee51
           model: bcf9b957
           name: 8 lvl garage center m
-        594f8bef:
+        36ab2c8e-594f8bef:
           family: 1961ee43
           model: 194b83f6
           name: 2lvl enerance a
-        594f8c48:
+        36ab2c8e-594f8c48:
           family: 1961ee41
           model: f94b1b7c
           name: 2lvl wall 1side a
-        594f8c6e:
+        36ab2c8e-594f8c6e:
           family: 1961ee40
           model: 394a0d42
           name: 2lvl wall 2side
-        59602c23:
+        36ab2c8e-59602c23:
           family: 1961ee43
           model: d94ca2e5
           name: 2lvl enerance b
-        59602ca6:
+        36ab2c8e-59602ca6:
           family: 1961ee41
           model: f958d7e9
           name: 2lvl wall 1side d
-        59602cdb:
+        36ab2c8e-59602cdb:
           family: 1961ee41
           model: b958e2a7
           name: 2lvl wall 1side g
-        597842f4:
+        36ab2c8e-597842f4:
           family: 1961ee50
           model: 1969bdef
           name: 8 lvl garage wall f
-        597ae0fb:
+        36ab2c8e-597ae0fb:
           family: 1961ee52
           model: b9745067
           name: 8 lvl garage center edge c
-        59a3f293:
+        36ab2c8e-59a3f293:
           family: 1961ee58
           model: f99fe1cc
           name: 8 lvl garage bridge wall edge c
-        5cff8ba7:
+        36ab2c8e-5cff8ba7:
           family: 1961ee50
           model: fcf9ea1b
           name: 8 lvl garage wall l
-        5d19d1de:
+        36ab2c8e-5d19d1de:
           model: dd171827
           name: 8 lvl garage entrance new
-        7960373f:
+        36ab2c8e-7960373f:
           family: 1961ee40
           model: b9573c22
           name: 2lvl wall 2side d
-        7961de2f:
+        36ab2c8e-7961de2f:
           family: 1961ee42
           model: f95ddf09
           name: 2lvl ramp 2
-        796345d9:
+        36ab2c8e-796345d9:
           family: 1961ee46
           model: 195f1ecf
           name: 2lvl inside 2side h
-        797842ce:
+        36ab2c8e-797842ce:
           family: 1961ee50
           model: 3969dabb
           name: 8 lvl garage wall h
-        7978435d:
+        36ab2c8e-7978435d:
           family: 1961ee50
           model: f961b21f
           name: 8 lvl garage wall a
-        7978437a:
+        36ab2c8e-7978437a:
           family: 1961ee53
           model: '79620151'
           name: 8 lvl garage wall elevator b
-        7988505a:
+        36ab2c8e-7988505a:
           family: 1961ee52
           model: 9981a0e1
           name: 8 lvl garage center edge e
-        7988506a:
+        36ab2c8e-7988506a:
           family: 1961ee52
           model: 3983f9f5
           name: 8 lvl garage center edge f
-        798850f1:
+        36ab2c8e-798850f1:
           family: 1961ee52
           model: 19840a28
           name: 8 lvl garage center edge k
-        '79885240':
+        36ab2c8e-79885240:
           family: 1961ee51
           model: d9840cd1
           name: 8 lvl garage center e
-        '79885953':
+        36ab2c8e-79885953:
           model: 797a7bc5
           name: 8 lvl garage wall elevator model
-        799a4b5e:
+        36ab2c8e-799a4b5e:
           family: 1961ee57
           model: b9963508
           name: 8 lvl garage inside corner a
-        79a3f2be:
+        36ab2c8e-79a3f2be:
           family: 1961ee5c
           model: b99f8042
           name: 8 lvl garage bridge center b
-        7cf31fa9:
+        36ab2c8e-7cf31fa9:
           family: 1961ee50
           model: 3cef3fc4
           name: 8 lvl garage wall i
-        7d04c784:
+        36ab2c8e-7d04c784:
           model: 5d021efb
           name: 8 lvl garage straight ramp model
-        7df5cdae:
-          model: 3d15a045
-          name: 8 lvl garage bus shelter
-        99506de6:
+        36ab2c8e-99506de6:
           model: 394bab29
           name: 2lvl corner stairs model
-        99602bf2:
+        36ab2c8e-99602bf2:
           family: 1961ee44
           model: 595b569f
           name: 2lvl corner b
-        99602c08:
+        36ab2c8e-99602c08:
           family: 1961ee45
           model: 994ca681
           name: 2lvl corner stairs b
-        996036d6:
+        36ab2c8e-996036d6:
           family: 1961ee40
           model: 795c39d0
           name: 2lvl wall 2side a
-        9960376a:
+        36ab2c8e-9960376a:
           family: 1961ee40
           model: b957581d
           name: 2lvl wall 2side g
-        99603a9c:
+        36ab2c8e-99603a9c:
           family: 1961ee40
           model: 394a4462
           name: 2lvl wall 2side c
-        997842df:
+        36ab2c8e-997842df:
           family: 1961ee50
           model: 1969d3a3
           name: 8 lvl garage wall g
-        9987ec4c:
+        36ab2c8e-9987ec4c:
           family: 1961ee51
           model: d983eea7
           name: 8 lvl garage center aa
-        '99885173':
+        36ab2c8e-99885173:
           family: 1961ee51
           model: f9842160
           name: 8 lvl garage center f
-        9988597f:
+        36ab2c8e-9988597f:
           model: 79817f98
           name: 8 lvl garage center edge model
-        9998e34b:
+        36ab2c8e-9998e34b:
           model: '59943183'
           name: 8 lvl garage outside corner stairs a
-        9cff8b83:
+        36ab2c8e-9cff8b83:
           family: 1961ee50
           model: fcf9cd59
           name: 8 lvl garage wall j
-        9cff8b97:
+        36ab2c8e-9cff8b97:
           family: 1961ee50
           model: 7cf9d868
           name: 8 lvl garage wall k
-        9cff8c2e:
+        36ab2c8e-9cff8c2e:
           family: 1961ee51
           model: 9cf8f5a4
           name: 8 lvl garage center i
-        b94f8be1:
+        36ab2c8e-b94f8be1:
           family: 1961ee45
           model: 594b5ff3
           name: 2lvl corner stairs a
-        b9506dde:
+        36ab2c8e-b9506dde:
           model: d94ba841
           name: 2lvl corner model
-        b9506e03:
+        36ab2c8e-b9506e03:
           model: f94bb111
           name: 2lvl inside1side model
-        b9508df1:
+        36ab2c8e-b9508df1:
           family: 1961ee46
           model: 794c92ff
           name: 2lvl inside 2side a
-        b961c796:
+        36ab2c8e-b961c796:
           family: 1961ee42
           model: 395dba0b
           name: 2lvl ramp 3
-        b9621d29:
+        36ab2c8e-b9621d29:
           family: 1961ee47
           model: f95e2789
           name: 2lvl inside1side b
-        b962fcc4:
+        36ab2c8e-b962fcc4:
           family: 1961ee44
           model: 195ef290
           name: 2lvl corner c
-        b96308e8:
+        36ab2c8e-b96308e8:
           model: b95eefb6
           name: 2lvl enerance model
-        b98850fc:
+        36ab2c8e-b98850fc:
           family: 1961ee52
           model: 9984271a
           name: 8 lvl garage center edge l
-        b988598d:
+        36ab2c8e-b988598d:
           model: 397a83b0
           name: 8 lvl garage wall model
-        b9a2393a:
+        36ab2c8e-b9a2393a:
           family: 1961ee5c
           model: 199e3b14
           name: 8 lvl garage bridge center a
-        b9a3f2cd:
+        36ab2c8e-b9a3f2cd:
           family: 1961ee5c
           model: 399f84fc
           name: 8 lvl garage bridge center c
-        bcff8bdf:
+        36ab2c8e-bcff8bdf:
           family: 1961ee50
           model: 3cfb8347
           name: 8 lvl garage wall p
-        bcff8cae:
+        36ab2c8e-bcff8cae:
           family: 1961ee51
           model: fcf9bbf9
           name: 8 lvl garage center n
-        bcff8cfe:
+        36ab2c8e-bcff8cfe:
           family: 1961ee52
           model: 7cf8dee2
           name: 8 lvl garage center edge m
-        bcff8d28:
+        36ab2c8e-bcff8d28:
           family: 1961ee52
           model: 7cf8eba8
           name: 8 lvl garage center edge p
-        bd0ef682:
+        36ab2c8e-bd0ef682:
           model: dd0c533c
           name: airport traffic spawner
-        bd1defae:
+        36ab2c8e-bd1defae:
           model: fd1b3344
           name: 8 lvl garage bridge wall 1
-        d94f8c7b:
+        36ab2c8e-d94f8c7b:
           family: 1961ee40
           model: d94a13b7
           name: 2lvl wall 2side b
-        d9506e18:
+        36ab2c8e-d9506e18:
           model: 394bb98d
           name: 2lvl wall 1side model
-        d9506e20:
+        36ab2c8e-d9506e20:
           model: 394bbb86
           name: 2lvl wall 2side model
-        d9602c2f:
+        36ab2c8e-d9602c2f:
           family: 1961ee43
           model: 395c2c59
           name: 2lvl enerance c
-        d960375c:
+        36ab2c8e-d960375c:
           family: 1961ee40
           model: '19578234'
           name: 2lvl wall 2side f
-        d961de3e:
+        36ab2c8e-d961de3e:
           family: 1961ee42
           model: d95dd3cb
           name: 2lvl ramp 1
-        d962fcdf:
+        36ab2c8e-d962fcdf:
           family: 1961ee47
           model: f95efe7d
           name: 2lvl inside1side d
-        d96345c1:
+        36ab2c8e-d96345c1:
           family: 1961ee46
           model: b95f1a8f
           name: 2lvl inside 2side F
-        d9784334:
+        36ab2c8e-d9784334:
           family: 1961ee50
           model: 9961bea9
           name: 8 lvl garage wall c
-        d97843a1:
+        36ab2c8e-d97843a1:
           model: b961cf07
           name: 8 lvl garage round ramp up
-        d987ec29:
+        36ab2c8e-d987ec29:
           family: 1961ee51
           model: d983f4b4
           name: 8 lvl garage center d
-        d9885091:
+        36ab2c8e-d9885091:
           family: 1961ee52
           model: f9840443
           name: 8 lvl garage center edge i
-        d9885967:
+        36ab2c8e-d9885967:
           model: 997a9016
           name: 8 lvl garage center model
-        d9a2be1f:
+        36ab2c8e-d9a2be1f:
           family: 1961ee58
           model: d99ebc13
           name: 8 lvl garage bridge wall edge a
-        d9a3f2a5:
+        36ab2c8e-d9a3f2a5:
           family: 1961ee59
           model: 999f71a3
           name: 8 lvl garage bridge wall edge 2
-        dcff8bd1:
+        36ab2c8e-dcff8bd1:
           family: 1961ee50
           model: 3cfa35ba
           name: 8 lvl garage wall o
-        dcff8cd4:
+        36ab2c8e-dcff8cd4:
           family: 1961ee51
           model: bcf9d13b
           name: 8 lvl garage center p
-        dcff91e3:
+        36ab2c8e-dcff91e3:
           model: 1cfb89e7
           name: 8 lvl garage bridge center model
-        dd16efe2:
+        36ab2c8e-dd16efe2:
           model: bd144455
           name: 8 lvl garage wall police
-        f9602c67:
+        36ab2c8e-f9602c67:
           family: 1961ee47
           model: d95b9784
           name: 2lvl inside 1side c
-        f960374d:
+        36ab2c8e-f960374d:
           family: 1961ee40
           model: b958d314
           name: 2lvl wall 2side e
-        f961c7a5:
+        36ab2c8e-f961c7a5:
           family: 1961ee42
           model: 995dc433
           name: 2lvl ramp 4
-        f962fcef:
+        36ab2c8e-f962fcef:
           family: 1961ee46
           model: b95f05c5
           name: 2lvl inside 2side d
-        f97843b0:
+        36ab2c8e-f97843b0:
           model: 1961cafe
           name: 8 lvl garage round ramp dn
-        f97ae0d4:
+        36ab2c8e-f97ae0d4:
           family: 1961ee51
           model: 3962215d
           name: 8 lvl garage center b
-        f97ae114:
+        36ab2c8e-f97ae114:
           family: 1961ee52
           model: 3962258a
           name: 8 lvl garage center edge a
-        f987ec3c:
+        36ab2c8e-f987ec3c:
           family: 1961ee51
           model: f983f16a
           name: 8 lvl garage center cc
-        f98850a6:
+        36ab2c8e-f98850a6:
           family: 1961ee52
           model: d98406fc
           name: 8 lvl garage center edge j
-        f98850c4:
+        36ab2c8e-f98850c4:
           family: 1961ee52
           model: '39819e29'
           name: 8 lvl garage center edge d
-        f99a4b3f:
+        36ab2c8e-f99a4b3f:
           family: 1961ee57
           model: '19965279'
           name: 8 lvl garage inside corner c
-        f99a5099:
+        36ab2c8e-f99a5099:
           model: 39965a84
           name: 8 lvl garage inside corner model
-        f9a1407f:
+        36ab2c8e-f9a1407f:
           model: f99d42c0
           name: 8 lvl garage bridge wall a
-        f9a3f2dd:
+        36ab2c8e-f9a3f2dd:
           family: 1961ee5c
           model: 799f8876
           name: 8 lvl garage bridge center d
-        fcff8bb7:
+        36ab2c8e-fcff8bb7:
           family: 1961ee50
           model: bcf9fc90
           name: 8 lvl garage wall m
-        fcff8cc1:
+        36ab2c8e-fcff8cc1:
           family: 1961ee51
           model: 9cf9bef2
           name: 8 lvl garage center o
-        fcff8ce0:
+        36ab2c8e-fcff8ce0:
           family: 1961ee51
           model: bcf9d37b
           name: 8 lvl garage center q
-        fcff8d1b:
+        36ab2c8e-fcff8d1b:
           family: 1961ee52
           model: 7cf8e860
           name: 8 lvl garage center edge o
+        9b9d22a8-7df5cdae:
+          model: 3d15a045
+          name: 8 lvl garage bus shelter
     sha256: beb5a4c113046109b25f9130832962bc699d3c59bf9efd9f0a4b0ed9a137964e
     size: 23338074
     support: https://community.simtropolis.com/forums/topic/761517-mgbs-lil-bits

@@ -13,7 +13,7 @@ import type { PackageID } from "@common/packages"
 import { VariantState, isOverride } from "@common/types"
 import type { FileInfo } from "@common/variants"
 import { FlexBox } from "@components/FlexBox"
-import { PackageTag } from "@components/Tags/PackageTag"
+import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { useCurrentVariant } from "@utils/packages"
@@ -66,11 +66,9 @@ export function PackageFile({
         <Typography color="inherit" flex={1} textTransform="unset" variant="button">
           <FlexBox alignItems="center" gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
-            {isPatched && (
-              <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
-            )}
+            {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
             {isOverride(file) && (
-              <PackageTag
+              <Tag
                 color="info"
                 dense
                 tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}

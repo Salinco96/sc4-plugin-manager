@@ -163,13 +163,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
 
       return !!variantInfo.options?.length || !!variantInfo.lots?.some(isTogglableLot)
     },
-    count({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
-
-      return variantInfo.options?.length ?? 0
-    },
-    label(t, count) {
-      return t("options", { count })
+    label(t) {
+      return t("options")
     },
   },
   {

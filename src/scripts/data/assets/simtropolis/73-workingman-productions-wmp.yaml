@@ -23,7 +23,7 @@ assets:
       - d_j_p1
     buildings:
       WMP/DocRorlach/The Bridges of Shoreline County/WMP_Bridges_Lots_v2.dat:
-        1accaa87:
+        07bddf1c-1accaa87:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -37,7 +37,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        1accb36d:
+        07bddf1c-1accb36d:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -51,7 +51,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        1accbc51:
+        07bddf1c-1accbc51:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -65,7 +65,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        1accc739:
+        07bddf1c-1accc739:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -79,7 +79,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        3acb3405:
+        07bddf1c-3acb3405:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -93,7 +93,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        9accac41:
+        07bddf1c-9accac41:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -107,7 +107,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        bacb3321:
+        07bddf1c-bacb3321:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -121,7 +121,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        bacb33c7:
+        07bddf1c-bacb33c7:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -135,7 +135,7 @@ assets:
             r$: 250
             r$$: 250
             r$$$: 250
-        facc175c:
+        07bddf1c-facc175c:
           bulldoze: 16
           categories: transport
           cost: 80
@@ -154,6 +154,7 @@ assets:
       - simtropolis/33621-wmp-mega-props-vol-01-misc-general-props
       - simtropolis/33620-wmp-essentials-v101
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe Bridges of Shoreline County, batte(re)d &amp; lotted by DocRorlach WorkingMan BATtery\n</p>\n\n<p>\n\tA series of eye-candy only bridges for both rural and urban areas. All bridges, with the exception of the transit-enabled version of the Wooden Bridge (5x1), are 1x1 lots with the respective bridge off-set. The covered bridges and the standard wooden bridge are for heights up to 8m; the Hang Ten bridge can cover variable heights and even small rivers or bays. The Pont Tarielle and the transit-enabled Wooden Bridge have a clearing height of 5m which is sufficient for cars but not for trucks or buses. Covered bridges have a clearing height of 7.5m. All lots come with a transparent base, and should work well with ploppable water.\n</p>\n\n<p>\n\t<strong>Lot Details and Information can be found in the readme. Read it.</strong>\n</p>\n\n<table bgcolor=\"#FFFFFF\" border=\"0\" cellpadding=\"4\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"2\">\n\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<strong>Dependencies</strong>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"2\">\n\t\t\t\t<div>\n\t\t\t\t\t<p>\n\t\t\t\t\t\tTo ensure the proper functionality, make sure the files mentioned below are installed in the plugins folder.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\tRequired WMP Dependencies:\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong>wmp_bridge_props_v2.dat</strong>\_(INCLUDED) (Models/props and custom paths for the TE bridge. It also contains the models for the\_<strong>Abteibruecke</strong>)\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong><a href=\"https://community.simtropolis.com/files/file/33621-wmp-mega-props-vol-01-misc-general-props/\" rel=\"\">WMP Mega Props vol. 01 - Misc General Props</a></strong>\_and for the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3970\" rel=\"external nofollow\" title=\"WMP Mega Props vol. 01\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Link</a></strong>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<strong><a href=\"https://community.simtropolis.com/files/file/33620-wmp-essentials-v10/\" rel=\"\" title=\"Custom UI, Building examplars\">WMP Essentials v1.0\_</a></strong>and for the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3975\" rel=\"external nofollow\" title=\"WMP Essentials v1.0\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Link</a></strong>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask<span>\_</span><a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\" style=\"color:#ffffff;font-size:12.6px;padding:0px 5px;\">@Tyberius06</a></em>.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Credits</strong>:\n</p>\n\n<ul style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<li>\n\t\t<div>\n\t\t\t<em><u>Original Creditings</u></em>: Thanks to everyone around the Pegasus site for their help with our first attempts at the <abbr title=\"Building Architect Tool\">BAT</abbr>. Credit for the custom pathing of the wooden bridge goes to rivit, ever the expert.\n\t\t</div>\n\t</li>\n\t<li>\n\t\t<div>\n\t\t\t<em><u>Additional Credits:</u></em>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\t<b>DocRorlach</b><span>\_</span>and the<span>\_</span><b>WMP team</b><span>\_</span>and his associates for creating the models, props and the original lots.\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tTyberius06 (STEX Custodian) and xxdita for the restoration/rehosting of these contents.\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</li>\n</ul>\n\n<div style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Support</strong>:\n</div>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">here</a>\_or in the<span>\_</span><a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\" style=\"background-color:transparent;color:#1f5e8d;\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n<p>\n\t(These very same lots can be/will be found on the <strong><a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> </a></strong>too, look for the <strong>WMP </strong>contents.)\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: WMP The Bridges of Shoreline County.zip
     filename: WMP The Bridges of Shoreline County.zip
     files:
@@ -206,9 +207,9 @@ assets:
           name: wmp_paeng_shed
           props:
             - 5abb9069
+            - 5aceebbc
             - dabb904e
             - dacdb47a
-            - 5aceebbc
           size: 1x1
         bacb3321:
           building: bacb3321
@@ -229,55 +230,55 @@ assets:
             - dacf63c1
           size: 1x1
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       WMP/Props/wmp_bridge_props_v2.dat:
-        - 3be82e6d
-        - db30629c
+        - 1a7af1f3
+        - 3a7a9c59
         - 3ac20f06
+        - 3be82e6d
         - 5aa3449d
         - 9aa361f3
-        - ba7aa3dc
-        - fa7aa853
         - 9aa36d29
-        - 3a7a9c59
+        - ba7aa3dc
         - ba7af797
-        - 1a7af1f3
+        - db30629c
+        - fa7aa853
     name: WMP The Bridges of Shoreline County
     props:
       WMP/Props/wmp_bridge_props_v2.dat:
-        1acc9abc:
+        7aab65ab-1acc9abc:
           model: 3a7a9c59
           name: wmp_pont_tarielle
-        1b2f61ce:
+        7aab65ab-1b2f61ce:
           model: 3be82e6d
           name: wmp_abteibruecke_wood
-        1b347816:
+        7aab65ab-1b347816:
           model: db30629c
           name: wmp_abteibruecke_stone
-        9acdb49b:
+        7aab65ab-9acdb49b:
           model: 3ac20f06
           name: wmp_covered_bridge
-        9acdb4bb:
+        7aab65ab-9acdb4bb:
           model: 5aa3449d
           name: wmp_paengs_bridge__covered02
-        dacc9c2e:
+        7aab65ab-dacc9c2e:
           model: ba7aa3dc
           name: wmp_justins_bridge__metal01
-        daccb08d:
+        7aab65ab-daccb08d:
           model: 1a7af1f3
           name: wmp_wooden_bridge
-        daccb5bd:
+        7aab65ab-daccb5bd:
           model: ba7af797
           name: wmp_wooden_bridge_os
-        dacdb47a:
+        7aab65ab-dacdb47a:
           model: 9aa361f3
           name: wmp_paengs_shed
-        dacf63c1:
+        7aab65ab-dacf63c1:
           model: 9aa36d29
           name: wmp_hang_ten_suspension_bridge
-        facc9a4b:
+        7aab65ab-facc9a4b:
           model: fa7aa853
           name: wmp_daves_bridge__metal02
     sha256: ee6fc0eca3f4a145e89046da4810e2f91feac0d6576efa0a79f92b446209f386
@@ -570,7 +571,7 @@ assets:
       - STEX Custodian
     buildings:
       WMP/Essentials/WMP Essentials.dat:
-        7b113aa4:
+        7aab65ab-7b113aa4:
           bulldoze: 100
           cost: 100
           description: Insert ploppable description here.
@@ -586,7 +587,7 @@ assets:
             r$: 750
             r$$: 750
             r$$$: 750
-        7b17be32:
+        7aab65ab-7b17be32:
           bulldoze: 225
           capacity:
             cs$: 15
@@ -600,7 +601,7 @@ assets:
           power: 25
           water: 8
           worth: 500
-        7b5e90fc:
+        7aab65ab-7b5e90fc:
           bulldoze: 100
           categories: subway
           cost: 100
@@ -616,7 +617,7 @@ assets:
           name: wmp_subway_dummy
           power: 61
           submenu: MiscTransit/Subway
-        bb191ad1:
+        7aab65ab-bb191ad1:
           bulldoze: 345
           categories: landmarks
           cost: 750
@@ -636,7 +637,7 @@ assets:
           water: 10
           waterPollution: 1
           waterPollutionRadius: 2
-        db3c3b65:
+        7aab65ab-db3c3b65:
           bulldoze: 450
           categories: ferry
           cost: 985
@@ -657,7 +658,7 @@ assets:
           water: 24
           waterPollution: 5
           waterPollutionRadius: 6
-        fb113a6e:
+        7aab65ab-fb113a6e:
           bulldoze: 100
           categories: landmarks
           cost: 110000
@@ -678,7 +679,7 @@ assets:
           ratingRadius: 256
           waterPollution: 1
           waterPollutionRadius: 2
-        fb1a3d17:
+        7aab65ab-fb1a3d17:
           bulldoze: 10
           cost: 10
           description: Insert ploppable description here.
@@ -693,7 +694,7 @@ assets:
             r$: 750
             r$$: 750
             r$$$: 750
-        fb4c50cf:
+        7aab65ab-fb4c50cf:
           bulldoze: 190
           capacity:
             iht: 1
@@ -711,6 +712,7 @@ assets:
     category: 73-workingman-productions-wmp
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe<strong> WMP Essentials v1.0</strong> is a <strong><span style=\"color:#c0392b;\">must have dependency pack</span></strong> for all the previously released WMP custom contents by <strong>DocRorlach</strong>. It completely replaces the previously released wmp_dummies.dat file.<br>\n\t<br>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:#ffffff;font-size:14px;\">This is a\_</span>dependency package<span style=\"background-color:#ffffff;font-size:14px;\">, and it doesn't contain any ploppable or growable elements.</span></span></strong>\n</p>\n\n<p>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:#ffffff;font-size:14px;\"><u>DO NOT USE THIS PACK FOR YOUR OWN LOTTING PROJECTS!!!</u></span></span></strong>\n</p>\n\n<p>\n\tSince the original\_workingman-productions.co.uk/\_website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr></a>\_and\_<a href=\"https://community.simtropolis.com/files/category/73-workingman-productions-wmp/\" rel=\"\" title=\"Simtropolis Exchange - Workingman Productions (WMP)\">STEX</a>) as legacy contents on behalf of <strong>DocRorlach</strong>. For easier access and due to a more userfriendly approach, we put together these mega packs, which are completely replacing the previous smaller prop packs.\n</p>\n\n<p>\n\tIt is highly recommended to use the attached cleanitol file (<strong>WMP Essentials.cleanitol.txt</strong>) and remove all the listed contents. The best way to do it, if you use the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97\" rel=\"external nofollow\"><span style=\"color:#c0392b;\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong>\_tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.\n</p>\n\n<p>\n\tThis Essential file contains following elements from the previously released WMP creations:\n</p>\n\n<ul>\n\t<li>\n\t\t- all the previously released wmp dummies/blank model files\n\t</li>\n\t<li>\n\t\t- all the different WMP custom queries and UIs from the prop packs, resource files and lot sets.\n\t</li>\n\t<li>\n\t\t- all the custom made TE network paths for the WMP lots (the default paths in the WMP Essentials.dat support RHD setup)\n\t</li>\n\t<li>\n\t\t-<span>\_</span><b><span style=\"color:#c0392b;\">Since the original Causeway set and Boardwalk set had the same custom queries, a new UI property (with new <abbr title=\"Instance ID\">IID</abbr>) has been added which gives a slightly modified text to the WMP Murimk Boardwalks.</span> (NEW!!! WMP Essentials v1.0.1)</b>\n\t</li>\n\t<li>\n\t\t- as an addition IF you use\_<strong><span style=\"color:#c0392b;\">Left-Hand Drive (LHD) setup</span></strong>, you can find a LHD support file in the Documents folder. You need to place/copy that z___zWMP_LHD_Paths folder into the Plugins\\WMP\\Essentials\\ folder if you used the default/provided folder structue, otherwise it\_<span style=\"color:#c0392b;\"><strong>MUST\_load after</strong></span>\_the WMP Essentials.dat file.\n\t</li>\n</ul>\n\n<p>\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p>\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\">@Tyberius06</a></em>.\n</p>\n\n<p>\n\t<strong>Credits</strong>:\n</p>\n\n<ul>\n\t<li>\n\t\t<b>DocRorlach</b>, the<span>\_</span><b>WMP Team</b><span>\_</span>for creating these original contents: custom paths, UIs, dummie model files.\n\t</li>\n\t<li>\n\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t</li>\n\t<li>\n\t\txxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>\n\t\t\_\n\t</li>\n</ul>\n\n<div>\n\t<strong>Support</strong>:\n</div>\n\n<p>\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\">here</a>\_or in the <a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: WMP Essentials v1.0.1.zip
     filename: WMP Essentials v1.0.1.zip
     files:
@@ -728,18 +730,18 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbdd9685da1_WMPEssentials02.jpg.6b0cd032a598b827cbc172090d896016.jpg
     lastModified: 2020-06-15T15:26:35.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       WMP/Essentials/WMP Essentials.dat:
         - 1b0cc388
         - 5b0cc2f4
-        - fb13c988
         - 7a2f8c49
-        - db149a72
-        - 9b485c20
-        - 7b5a9c61
         - 7b3846c7
+        - 7b5a9c61
+        - 9b485c20
+        - db149a72
+        - fb13c988
     name: WMP Essentials v1.0.1
     sha256: ef1b76ff6a9b2654ecbb20052358d6bda8728a663a39d6eb7897e658c209b1f6
     size: 2235482
@@ -756,6 +758,7 @@ assets:
     category: 73-workingman-productions-wmp
     dependencies: []
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe <strong>WMP Mega Props vol. 01</strong>\_is the first dependency pack, which superseds many of the previously released single, individual WMP prop packs by <strong>DocRorlach</strong>.\_<br>\n\t<br>\n\t<strong><span style=\"color:#c0392b;\"><span style=\"background-color:rgb(255,255,255);font-size:14px;\">This is a\_</span>dependency package<span style=\"background-color:rgb(255,255,255);font-size:14px;\">, and it doesn't contain any ploppable or growable elements. </span></span><span><span style=\"background-color:rgb(255,255,255);font-size:14px;\">Although it can be used for creating new lots with Maxis Lot Editor or\_</span><abbr title=\"Plugin Manager\">PIM</abbr><span style=\"background-color:rgb(255,255,255);font-size:14px;\">-X.</span></span></strong>\n</p>\n\n<p>\n\tSince the original\_workingman-productions.co.uk/\_website is no longer up and running, the decision has been made, that these contents of <strong>DocRorlach</strong>'s will be re-hosted on the main exchanges (<a href=\"https://www.sc4devotion.com/csxlex/lex_main.php\" rel=\"external nofollow\"><abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr></a>\_and\_<a href=\"https://community.simtropolis.com/files/category/73-workingman-productions-wmp/\" rel=\"\" title=\"Simtropolis Exchange - Workingman Productions (WMP)\">STEX</a>) as legacy contents on behalf of DocRorlach. For easier access and due to a more userfriendly approach, we put together these mega prop packs which are completely replacing the previous smaller prop packs.\n</p>\n\n<p>\n\tIt is highly recommended to use the attached cleanitol file (WMP Mega Props Vol. 01-05 cleanitol.txt) and remove all the listed contents. The best way to do it, if you use the\_<strong><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=97\" rel=\"external nofollow\"><span style=\"color:#c0392b;\"><abbr title=\"BATT Squad Certification\">BSC</abbr> Cleanitol TM (v1.0)</span></a></strong>\_tool. Install the application (if you don't already have), run it, browse the attached *.cleanitol.txt file and let the program remove the listed elements.<br>\n\t<br>\n\t<span style=\"color:#c0392b;\"><strong>Also from now, these mega prop packs are required to be referenced as dependencies instead of the single prop packs.</strong></span>\n</p>\n\n<p>\n\t<strong>Installation</strong>:\_Unzip the whole bundle, or COPY the \"<strong>WMP</strong>\" folder from the *.zip into your plugin folder. You don't need to keep the \"<em>_Documents</em>\" folder. To uninstall, bulldoze any instance of this lot in your city, then remove the file(s) from your Plugins.\n</p>\n\n<p>\n\t<em>For further details, please read the provided readme\_AND IF\_you still have questions, ask <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/660284-tyberius06/?do=hovercard\" data-mentionid=\"660284\" href=\"https://community.simtropolis.com/profile/660284-tyberius06/\" rel=\"\">@Tyberius06</a></em>.\n</p>\n\n<p>\n\t<strong>Credits</strong>:\n</p>\n\n<ul>\n\t<li>\n\t\tDocRorlach and the WMP team for creating the models, props and the original prop packs.\n\t</li>\n\t<li>\n\t\tDavid (djp) for keeping the original site alive so many years, and letting us rehosting the files on the exchanges\n\t</li>\n\t<li>\n\t\txxdita and Tyberius06 (and the STEX Custodian) for putting together the mega packs and making the files available again.<br>\n\t\t\_\n\t</li>\n</ul>\n\n<div>\n\t<strong>Support</strong>:\n</div>\n\n<p>\n\tThese WMP/DocRorlach creations are now legacy contents and therefore their support is very limited, however support from the wider community can be requested\_<a href=\"https://www.sc4devotion.com/forums/index.php?topic=18355.40\" rel=\"external nofollow\">here</a>\_or in the <a href=\"https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic\" rel=\"\">STEX Custodian General Support Topic</a>. Best include a screen-shot illustrating the problem.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: WMP Mega Props vol. 01 - Misc General Props.zip
     filename: WMP Mega Props vol. 01 - Misc General Props.zip
     files:
@@ -781,1990 +784,1990 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2020_05/5ecbe363f14ca_WMPmegapackvol1-05.jpg.8a4ccddb48c036b076e76e578443e5d9.jpg
     lastModified: 2020-05-25T15:25:45.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     models:
       WMP/Props/WMP Mega Props vol. 01 - Misc General Props.dat:
-        - 1aa73aab
-        - badb57f1-428e
-        - 5c14b78b
-        - 9b8123b9
-        - 7b88a0d6
-        - db7f3a99
-        - 7b483202
-        - 1b5fb542
-        - 9b38b74b
-        - 1a59f6a8
-        - fb1f7a88
-        - 1a59f31e
-        - fb38ad01
-        - db1f83c7
-        - 9b484e20
-        - bb48535d
-        - 5b3a061e
-        - bb3a046e
-        - 1a7abd4c
-        - bac0abb1
-        - dad9e334
-        - 7ae825e9
-        - 1acaf691
-        - 9a7ab3e4
-        - 5adc3dc1
-        - 7aebedc9
-        - 3aebec31
-        - 1aebeb36
-        - faec48bf
-        - 1aec4596
-        - 1ae6f5de
-        - 9ae705bd
-        - 9ae6f0d1
-        - 1ae543b3
-        - dae54337
-        - 3aea56f8
-        - faec23df
-        - 3aed010b
-        - baed004a
-        - 1aea5483
-        - 1ae70760
-        - fae8fb34
-        - baea449a
-        - fae8fc51
-        - 1ae8fdcc
-        - fae90720
-        - fae9054f
-        - 1aea5759
-        - 9aea55d9
-        - ddccea25
-        - 3d3288b3
-        - fb6e990c
-        - baa4a0e4
-        - 5b45ff68
-        - 5a7bf9ee
-        - bb051ba1
-        - 3b051fae
-        - db003cfe
-        - fbbf109e
-        - 3b00377d
-        - 7affeaa7
-        - 3bbf37ba
-        - 1bbf2dcc
-        - 1b000804
-        - 5afecae9
-        - 9afed1e1
-        - 9b149e91
-        - 1b06c5fe
-        - 5b45e617
-        - 9b4722cc
-        - 1b471c7d
-        - bb471ac1
-        - d41c2ca0
-        - b41c2d11
-        - aecdd2e9
-        - 7acc3911
-        - db6e816f
-        - daf6bc2c
-        - 5af6bad7
-        - 7b10de11
-        - 5b14b444
-        - daa5f02a
-        - faa6110e
-        - daa61431
-        - 7af6c5f6
-        - 3b02c053
-        - 1b02c23f
-        - bb02c452
-        - 9b03777c
-        - 1a58b81a
-        - 1aa60f3f
-        - 5aa64dfb
-        - 3aa622f7
-        - 3b47516f
-        - bb97c47e
-        - bb00e89f
-        - fb00108d
-        - 5aa54750
-        - 1a58b9cd
-        - 9aa5f304
-        - faa5fffe
-        - 7af6c2f2
-        - daf6c376
-        - 3acc3bb8
-        - 9b460456
-        - bb6da588
-        - 7b473839
-        - 1b6db3fd
-        - 7afe8ec1
-        - db02b82e
-        - 3aa5c399
-        - 5aa5f202
-        - 9a2f525b
-        - daf6c28c
-        - 9b1cbff0
-        - 3b02c740
-        - 5b473c72
-        - 3b6e54a2
-        - 1b6e5653
-        - 5b0df5c4
-        - bbbeebb5
-        - 5bbee97b
-        - bbbee899
-        - 5bbef076
-        - db00c473
-        - bb6e5bdd
         - 1a2f2d49
-        - 7ab5e189
-        - fab4df09
-        - 9ab4de66
-        - 3ab5e0ef
-        - 7aab65ab-0027
-        - 7aab65ab-0026
-        - 7aab65ab-002d
-        - 7aab65ab-0047
-        - bb1cc31c
-        - 3a5898be
-        - fb460097
-        - 7b6e9643
-        - 9b150c6d
-        - ba5894c2
-        - da589246
-        - da589064
-        - bb979c2e
-        - 5a7d8919
-        - 3acd707e
-        - 1acd7fc9
-        - facd8ff8
-        - db1396c6
-        - 1b1e78cb
-        - da582c10
         - 1a58adb9
-        - 5a58ae53
-        - ba58aea1
-        - 9a58aef6
-        - 9a58af55
+        - 1a58b81a
+        - 1a58b9cd
+        - 1a59f31e
+        - 1a59f6a8
+        - 1a7abd4c
+        - 1a7bc1a6
+        - 1a7c1c9a
+        - 1aa5508e
+        - 1aa60f3f
+        - 1aa73aab
+        - 1ac18d95
+        - 1acaf691
+        - 1acd7fc9
+        - 1add8a81
+        - 1ae543b3
+        - 1ae6f5de
+        - 1ae70760
+        - 1ae8fdcc
+        - 1aea5483
+        - 1aea5759
+        - 1aebeb36
+        - 1aec4596
+        - 1b000804
+        - 1b016ac0
+        - 1b02c23f
+        - 1b039036
+        - 1b041ffe
+        - 1b04d3a4
+        - 1b0508b8
+        - 1b050961
+        - 1b06c5fe
+        - 1b08278e
+        - 1b089fcf
+        - 1b08a1ea
+        - 1b0fac89
+        - 1b1e78cb
+        - 1b20ee1a
+        - 1b2a198d
+        - 1b2c656b
+        - 1b44d421
+        - 1b471c7d
+        - 1b4751d0
+        - 1b482528
+        - 1b487b93
+        - 1b487d54
+        - 1b5fb542
+        - 1b6db3fd
+        - 1b6e24b3
+        - 1b6e5653
         - 1b9673cf
-        - 9b97c331
         - 1b967768
         - 1b97787b
         - 1b97abcd
-        - fb97aced
-        - 3b037d5a
-        - fb037364
-        - fb033a48
-        - 7b308181
-        - db308327
-        - 7b308272
-        - fd5def56
-        - dd5df300
-        - 9d5deb91
-        - 9d5b925c
-        - dd214d0b
-        - bd1fd9ef
-        - 1d15d757
-        - 1d15968c
-        - 1d1188aa
-        - dd159463
-        - 7d15d71e
-        - dd15d665
-        - dd1593fc
-        - fd1d3793
-        - 7d1d3761
-        - 7b0fd315
-        - 9b0ff7da
-        - fd2d3387
-        - 5d2d33a7
-        - bb0fdbdd
-        - 7b109bf7
-        - db109955
-        - 9b10a646
-        - 3b10a87f
-        - fb10b459
-        - bbb41db4
-        - 7bb41dde
-        - 7bb17212
-        - bbb42984
+        - 1bb172f5
         - 1bb41f38
-        - 3ad9ef8f
-        - bbb1759e
-        - 5bb54e19
-        - 7b151e9d
-        - 7b15076f
+        - 1bbedec3
+        - 1bbf2dcc
+        - 1bbfa9bf
+        - 1c4f957b
+        - 1d1188aa
+        - 1d11b165
+        - 1d1590c8
+        - 1d15968c
+        - 1d15d757
+        - 1d1c494c
+        - 1d1c496d
+        - 1d1ffe53
+        - 3a2f21e0
+        - 3a2f2ee4
+        - 3a5898be
+        - 3aa5c399
+        - 3aa5ed87
+        - 3aa5ee14
+        - 3aa622f7
+        - 3ab5e0ef
+        - 3ac18fe7
+        - 3acc3bb8
+        - 3acd707e
         - 3acdd03b
-        - 7acddcab
-        - bb0a8857
-        - 9b0d1eee
+        - 3ad9ef8f
+        - 3adc1f14
+        - 3aea56f8
+        - 3aebec31
+        - 3aed010b
+        - 3aed2797
+        - 3aed2937
+        - 3af6ba2e
+        - 3af794d1
+        - 3af80803
+        - 3b00377d
+        - 3b02c053
+        - 3b02c740
+        - 3b037d5a
+        - 3b04cb65
+        - 3b04cccd
+        - 3b050aa5
+        - 3b051fae
+        - 3b07a200
+        - 3b081e05
+        - 3b08ae5d
+        - 3b0e029e
+        - 3b0faf14
+        - 3b0ffa14
+        - 3b10a87f
+        - 3b10d804
+        - 3b2a18c1
+        - 3b45de83
+        - 3b470933
+        - 3b47516f
+        - 3b5c0f8c
+        - 3b6e2c46
+        - 3b6e54a2
+        - 3b711410
+        - 3b9739ea
         - 3bb17272
-        - 9bb1728f
-        - bbb172b4
-        - 7aab65ab-0011
-        - 7aab65ab-001d
-        - 7aab65ab-002b
-        - 7aab65ab-002e
-        - 7aab65ab-001b
-        - 7aab65ab-001c
-        - 7aab65ab-0020
-        - 7aab65ab-001f
-        - 7aab65ab-001a
-        - 7aab65ab-0021
-        - 7aab65ab-0040
-        - 7aab65ab-001e
-        - 7aab65ab-0019
-        - 7aab65ab-002f
-        - faa5e378
-        - 9b95e347
-        - baa551d3
+        - 3bbf37ba
+        - 3bc07261
+        - 3d15936b
+        - 3d1afafd
+        - 3d1afb20
+        - 3d2016c4
+        - 3d2d3f9d
+        - 3d328858
+        - 3d3288b3
+        - 5a2f26a8
+        - 5a2f280d
+        - 5a58ae53
+        - 5a7bc21d
+        - 5a7bf9ee
+        - 5a7d8919
+        - 5aa54750
+        - 5aa5f202
+        - 5aa64dfb
+        - 5ac18f3b
+        - 5adc3dc1
+        - 5aed2b8b
+        - 5af6bad7
+        - 5af80488
+        - 5afecae9
+        - 5b016ed9
+        - 5b03d63e
+        - 5b041c78
+        - 5b042164
+        - 5b04cd77
+        - 5b04ce6d
+        - 5b08268a
+        - 5b0df5c4
+        - 5b0e041f
+        - 5b0fb3d8
+        - 5b14b444
+        - 5b1f6cec
+        - 5b3a061e
+        - 5b45e617
+        - 5b45ff68
+        - 5b473c72
+        - 5b48019e
+        - 5b48775c
+        - 5b6e67f8
+        - 5b6ec9f7
+        - 5b6ed88e
+        - 5b832e14
+        - 5b95475f
         - 5b95e494
         - 5b95e520
-        - 7b95ebff
-        - fbbe08b9
-        - 9bbe0df5
-        - 7b470851
-        - bbbe1be7
-        - 3b470933
-        - dbbe110b
-        - 1b016ac0
-        - bb016b8a
-        - fb95e6a3
-        - 7b470bbb
-        - 7b95e7b3
-        - 1b44d421
-        - bb96248c
-        - 5b6e67f8
-        - 3b45de83
-        - bb45dbc4
-        - db45e128
-        - 7b45e245
-        - db44b98e
-        - 9b45dd5d
-        - 7b45d8c9
-        - 1bbedec3
-        - faa4a310
-        - baa4a3ad
-        - 1a7bc1a6
-        - 1b6e24b3
-        - 5a7bc21d
-        - fb6e2590
-        - bb6e26a3
-        - da7bc405
-        - ba7bbeae
-        - ba7bbff1
-        - baffa0f6
-        - 5b6ed88e
-        - daffe62a
-        - 9b6e2f26
-        - 5b6ec9f7
-        - 3b6e2c46
+        - 5b9759b9
+        - 5bb54e19
+        - 5bbee97b
+        - 5bbef076
         - 5bbf07e8
-        - fbbec9d5
-        - 1a7c1c9a
-        - 7aab65ab-003e
-        - 7aab65ab-003d
-        - 3aed2937
-        - faed298a
-        - 3aed2797
-        - 5aed2b8b
-        - faed25ab
-        - 1b2c656b
-        - 1b2a198d
-        - 7b2a1b76
-        - db2a1caa
-        - db2a1ee1
-        - 3b2a18c1
-        - 9b2a2084
-        - bb954094
-        - 7b95425a
-        - 7b954c4c
-        - 5b95475f
-        - daa5c08b
+        - 5bcaa850
+        - 5c14b78b
+        - 5cf0b086
+        - 5d11b0a3
+        - 5d15de12
+        - 5d1ff96a
+        - 5d2d33a7
+        - 7a2f25e4
+        - 7a2f2bc4
         - 7aa5bda8
         - 7aa5bf6d
-        - 9aa54d37
-        - 1aa5508e
-        - db97add4
-        - fa2f36e2
-        - fb0ffbae
-        - 5b0fb3d8
-        - ba2f38e8
-        - 9b97aff9
-        - 9a2f3eaa
-        - daa64f8b
-        - 7accc60c
-        - baccc5e1
-        - 3aa5ee14
-        - daa5ee5e
-        - 3aa5ed87
-        - baa5eed6
-        - 7acd7e8d
-        - 9d11b147
-        - 9d11b02f
-        - dd11b123
-        - 5d11b0a3
-        - fd11b0ed
-        - dd11b0c7
-        - 1d11b165
-        - 5d15de12
-        - 5a2f280d
-        - 5a2f26a8
-        - da2f2676
-        - 7a2f25e4
-        - 9b10d625
-        - 3a2f21e0
-        - ba2f2483
-        - 3b10d804
-        - 7a2f2bc4
-        - bac18f9b
-        - 3ac18fe7
-        - 5ac18f3b
-        - 1ac18d95
-        - 1b050961
-        - 5b04ce6d
-        - 9b050841
-        - 3b04cb65
-        - 1b0508b8
-        - 3b050aa5
-        - 3b04cccd
-        - 5b04cd77
-        - db04d012
-        - 1b04d3a4
-        - 1b089fcf
-        - 5b08268a
-        - 3b081e05
-        - 9b08fc88
-        - 1b08a1ea
-        - 7b0823cd
-        - 1b08278e
-        - 9d5b8fe5
-        - dd5df794
-        - fd1ff821
-        - dd1ff2e5
-        - 5d1ff96a
-        - 1d1ffe53
-        - 3d1afafd
-        - bd1afad5
-        - fd1afb59
-        - 3d1afb20
-        - badc891b
-        - 7b040ff7
-        - 5b9759b9
-        - dadc90b5
-        - bb0415b7
-        - badc8a92
-        - 7b0416e3
-        - da56392d
-        - fb041987
-        - 7b6ec7f7
-        - 5b041c78
-        - fb470fbb
-        - 3af6ba2e
-        - 7bbfa7d8
-        - 7bbfa902
-        - bbbfa871
-        - 1bbfa9bf
-        - 3adc1f14
-        - 1b041ffe
-        - dadda0ce
-        - 1add8a81
-        - 5b042164
-        - db6ed9b2
-        - 9b976267
-        - 7b03475c
-        - db034b4c
-        - 9b702ce0
-        - 3bc07261
-        - 3b9739ea
-        - baa618ce
-        - baec1e04
-        - e924203c
-        - faec4a24
-        - baec5155
-        - faa5c4ac
-        - db977151
-        - 7adc4985
-        - 3a2f2ee4
-        - 3d15936b
-        - fd1c4210
-        - bd1c43bd
-        - 7d2d38ba
-        - 9d2d3c57
-        - 3d2d3f9d
-        - 5b48775c
-        - 1b487b93
-        - 1b487d54
-        - fb4883c8
-        - bb488558
-        - 1d1590c8
-        - 9b832e87
-        - 5b832e14
-        - 7b8334b9
-        - db3b4bad
-        - 9af78bbe
-        - 7af78f70
-        - 3af794d1
-        - daf77d3d
-        - 5b1f6cec
-        - 5af80488
-        - 3af80803
-        - db1f6b0d
-        - 5b48019e
-        - 1b482528
-        - 7b482ed6
-        - 3b711410
-        - db7127f9
-        - fb6e863a
-        - 7afed613
-        - 3b08ae5d
-        - faf66feb
-        - 7af680c5
-        - 3b0ffa14
-        - 9b0ff92e
-        - 3b0faf14
-        - 1b0fac89
-        - db0fb227
-        - 7b053104
-        - 9b6e60d7
-        - db0532d9
-        - 7b079f69
-        - 3b07a200
-        - fb07a770
-        - 5b016ed9
-        - db6e5e8d
-        - 5b03d63e
-        - 5bcaa850
-        - 1d1c496d
-        - 1d1c494c
-        - 3d2016c4
-        - 9d15fa62
-        - fd32881b
-        - 3d328858
-        - 9b5a6f7a
-        - fb5a72b2
-        - fbb1732e
-        - 1bb172f5
-        - 9b47487a
-        - 1b4751d0
-        - 7b038bb4
-        - bb038e47
-        - 1b039036
-        - 3b5c0f8c
-        - fb04e2c9
-        - 9b49a95c
+        - 7aab65ab-0011
+        - 7aab65ab-0019
+        - 7aab65ab-001a
+        - 7aab65ab-001b
+        - 7aab65ab-001c
+        - 7aab65ab-001d
+        - 7aab65ab-001e
+        - 7aab65ab-001f
+        - 7aab65ab-0020
+        - 7aab65ab-0021
+        - 7aab65ab-0026
+        - 7aab65ab-0027
         - 7aab65ab-0028
         - 7aab65ab-002a
+        - 7aab65ab-002b
         - 7aab65ab-002c
-        - badeef4d
-        - 3b0e029e
+        - 7aab65ab-002d
+        - 7aab65ab-002e
+        - 7aab65ab-002f
+        - 7aab65ab-003d
+        - 7aab65ab-003e
+        - 7aab65ab-0040
+        - 7aab65ab-0047
+        - 7ab5e189
+        - 7acc3911
+        - 7accc60c
+        - 7acd7e8d
+        - 7acddcab
+        - 7adc4985
         - 7adeef0a
-        - db0e036e
-        - 5b0e041f
+        - 7ae825e9
+        - 7aebedc9
+        - 7af680c5
+        - 7af6c2f2
+        - 7af6c5f6
+        - 7af78f70
+        - 7afe8ec1
+        - 7afed613
+        - 7affeaa7
+        - 7b03475c
+        - 7b038bb4
+        - 7b040ff7
+        - 7b0416e3
+        - 7b053104
+        - 7b079f69
+        - 7b0823cd
+        - 7b0fd315
+        - 7b109bf7
+        - 7b10de11
+        - 7b15076f
+        - 7b151e9d
+        - 7b2a1b76
+        - 7b308181
+        - 7b308272
+        - 7b45d8c9
+        - 7b45e245
+        - 7b470851
+        - 7b470bbb
+        - 7b473839
+        - 7b482ed6
+        - 7b483202
+        - 7b6e9643
+        - 7b6ec7f7
+        - 7b8334b9
+        - 7b88a0d6
+        - 7b95425a
+        - 7b954c4c
+        - 7b95e7b3
+        - 7b95ebff
+        - 7bb17212
+        - 7bb41dde
+        - 7bbfa7d8
+        - 7bbfa902
+        - 7d15d71e
+        - 7d1d3761
+        - 7d2d38ba
+        - 9a2f3eaa
+        - 9a2f525b
+        - 9a58aef6
+        - 9a58af55
+        - 9a7ab3e4
+        - 9aa54d37
+        - 9aa5f304
+        - 9ab4de66
+        - 9ae6f0d1
+        - 9ae705bd
+        - 9aea55d9
+        - 9af78bbe
+        - 9afed1e1
+        - 9b03777c
+        - 9b050841
+        - 9b08fc88
+        - 9b0d1eee
+        - 9b0ff7da
+        - 9b0ff92e
+        - 9b10a646
+        - 9b10d625
+        - 9b149e91
+        - 9b150c6d
+        - 9b1cbff0
+        - 9b2a2084
         - 9b2bab59
-        - db20ee5a
-        - 1b20ee1a
-        - da59f231
-        - fcf0b01c
-        - 5cf0b086
-        - 1c4f957b
+        - 9b38b74b
+        - 9b45dd5d
+        - 9b460456
+        - 9b4722cc
+        - 9b47487a
+        - 9b484e20
+        - 9b49a95c
+        - 9b5a6f7a
+        - 9b6e2f26
+        - 9b6e60d7
+        - 9b702ce0
+        - 9b8123b9
+        - 9b832e87
+        - 9b95e347
+        - 9b976267
+        - 9b97aff9
+        - 9b97c331
+        - 9bb1728f
+        - 9bbe0df5
+        - 9d11b02f
+        - 9d11b147
+        - 9d15fa62
+        - 9d2d3c57
+        - 9d5b8fe5
+        - 9d5b925c
+        - 9d5deb91
+        - aecdd2e9
+        - b41c2d11
+        - ba2f2483
+        - ba2f38e8
+        - ba5894c2
+        - ba58aea1
+        - ba7bbeae
+        - ba7bbff1
+        - baa4a0e4
+        - baa4a3ad
+        - baa551d3
+        - baa5eed6
+        - baa618ce
+        - bac0abb1
+        - bac18f9b
+        - baccc5e1
+        - badb57f1-1d78
+        - badb57f1-428e
+        - badb57f1-4e0d
+        - badb57f1-94ed
         - badb57f1-f423
         - badb57f1-ff66
-        - badb57f1-1d78
-        - badb57f1-94ed
-        - badb57f1-4e0d
+        - badc891b
+        - badc8a92
+        - badeef4d
+        - baea449a
+        - baec1e04
+        - baec5155
+        - baed004a
+        - baffa0f6
+        - bb00e89f
+        - bb016b8a
+        - bb02c452
+        - bb038e47
+        - bb0415b7
+        - bb051ba1
+        - bb0a8857
+        - bb0fdbdd
+        - bb1cc31c
+        - bb3a046e
+        - bb45dbc4
+        - bb471ac1
+        - bb48535d
+        - bb488558
+        - bb6da588
+        - bb6e26a3
+        - bb6e5bdd
+        - bb954094
+        - bb96248c
+        - bb979c2e
+        - bb97c47e
+        - bbb172b4
+        - bbb1759e
+        - bbb41db4
+        - bbb42984
+        - bbbe1be7
+        - bbbee899
+        - bbbeebb5
+        - bbbfa871
+        - bd1afad5
+        - bd1c43bd
+        - bd1fd9ef
+        - d41c2ca0
+        - da2f2676
+        - da56392d
+        - da582c10
+        - da589064
+        - da589246
+        - da59f231
+        - da7bc405
+        - daa5c08b
+        - daa5ee5e
+        - daa5f02a
+        - daa61431
+        - daa64f8b
+        - dad9e334
+        - dadc90b5
+        - dadda0ce
+        - dae54337
+        - daf6bc2c
+        - daf6c28c
+        - daf6c376
+        - daf77d3d
+        - daffe62a
+        - db003cfe
+        - db00c473
+        - db02b82e
+        - db034b4c
+        - db04d012
+        - db0532d9
+        - db0e036e
+        - db0fb227
+        - db109955
+        - db1396c6
+        - db1f6b0d
+        - db1f83c7
+        - db20ee5a
+        - db2a1caa
+        - db2a1ee1
+        - db308327
+        - db3b4bad
+        - db44b98e
+        - db45e128
+        - db6e5e8d
+        - db6e816f
+        - db6ed9b2
+        - db7127f9
+        - db7f3a99
+        - db977151
+        - db97add4
+        - dbbe110b
+        - dd11b0c7
+        - dd11b123
+        - dd1593fc
+        - dd159463
+        - dd15d665
+        - dd1ff2e5
+        - dd214d0b
+        - dd5df300
+        - dd5df794
+        - ddccea25
+        - e924203c
+        - fa2f36e2
+        - faa4a310
+        - faa5c4ac
+        - faa5e378
+        - faa5fffe
+        - faa6110e
+        - fab4df09
+        - facd8ff8
+        - fae8fb34
+        - fae8fc51
+        - fae9054f
+        - fae90720
+        - faec23df
+        - faec48bf
+        - faec4a24
+        - faed25ab
+        - faed298a
+        - faf66feb
+        - fb00108d
+        - fb033a48
+        - fb037364
+        - fb041987
+        - fb04e2c9
+        - fb07a770
+        - fb0ffbae
+        - fb10b459
+        - fb1f7a88
+        - fb38ad01
+        - fb460097
+        - fb470fbb
+        - fb4883c8
+        - fb5a72b2
+        - fb6e2590
+        - fb6e863a
+        - fb6e990c
+        - fb95e6a3
+        - fb97aced
+        - fbb1732e
+        - fbbe08b9
+        - fbbec9d5
+        - fbbf109e
+        - fcf0b01c
+        - fd11b0ed
+        - fd1afb59
+        - fd1c4210
+        - fd1d3793
+        - fd1ff821
+        - fd2d3387
+        - fd32881b
+        - fd5def56
     name: WMP Mega Props vol. 01 - Misc General Props
     props:
       WMP/Props/WMP Mega Props vol. 01 - Misc General Props.dat:
-        03807da9:
-          name: wmp_LightGlobe_spam
-        06ab4063:
-          name: wmp_Cone_Orange
-        144d2812:
-          name: wmp_cars_queue02-tz2 16-22
-        1abc3299:
-          model: 7aab65ab-0027
-          name: wmp_bwalk_stairs
-        1abc32b4:
-          model: 7aab65ab-0026
-          name: wmp_bwalk_stairs_wide
-        1acc99cf:
-          model: 9a7ab3e4
-          name: wmp_people_16_zanda
-        1aeb17a7:
-          model: 9ae705bd
-          name: wmp_planter_01_large
-        1aecfd6e:
-          model: fae90720
-          name: wmp_people_suitcase_03_os
-        1aecfd79:
-          model: fae9054f
-          name: wmp_people_suitcase_03
-        1aefe928:
-          model: 1aebeb36
-          name: wmp_bollards6
-        1af0469f:
-          model: faec4a24
-          name: wmp_taxi02
-        1af55756:
-          model: ba7bbff1
-          name: wmp_ga_fence16_np
-        1afd2ddd:
-          model: 1b6e24b3
-          name: wmp_ga_fence8_1pl
-        1afd2e24:
-          model: fb460097
-          name: wmp_gardenshed_02
-        1afd2e5f:
-          model: 7b45e245
-          name: wmp_villa_wall16s
-        1afd2ecd:
-          model: 7b45d8c9
-          name: wmp_villa_wall_arch
-        1afd7f2d:
-          model: 5b6ec9f7
-          name: wmp_ga_gate1_small_diag
-        1afe89cd:
-          model: 5b95e520
-          name: wmp_villa_hedge8_diag2
-        1b02434f:
-          model: 3b00377d
-          name: wmp_cube_villa06_diag
-        1b024366:
-          model: 3bbf37ba
-          name: wmp_cube_villa07_diag
-        1b0243a2:
-          model: 7affeaa7
-          name: wmp_cube_villa06
-        1b024455:
-          model: 5bbf07e8
-          name: wmp_ga_gate2_big_diag_a
-        1b0405ba:
-          model: fb00108d
-          name: wmp_oven
-        1b06c294:
-          model: 3b02c740
-          name: wmp_swing01
-        1b074185:
-          model: db034b4c
-          name: wmp_pickup06a
-        1b07418e:
-          model: 7b03475c
-          name: wmp_pickup05a
-        1b078563:
-          model: bb038e47
-          name: wmp_old_lamppost2
-        1b0816b6:
-          model: 5b041c78
-          name: wmp_cars05b_delivery_white
-        1b09001a:
-          model: 9b050841
-          name: wmp_slatfence4m_2p
-        1b0bef3c:
-          model: 7b079f69
-          name: wmp_powerpole_double3
-        1b0e91f6:
-          model: bb0a8857
-          name: wmp_bucket_rack
-        1b14aa01:
-          model: 7b109bf7
-          name: wmp_tree_04_hd
-        1b14d2d1:
-          model: 3b10d804
-          name: wmp_simpleFance2m_Gate
-        1b1c7b94:
-          model: ba58aea1
-          name: wmp_sp_oc
-        1b1dc158:
-          model: 3aa5c399
-          name: wmp_pool07
-        1b1dc191:
-          model: baa551d3
-          name: wmp_villa_hedge8_A
-        1b1dc1a0:
-          model: 1aa5508e
-          name: wmp_lattice_w_16mG
-        1b1e2807:
-          model: faa6110e
-          name: wmp_deckchair2
-        1b1e28a1:
-          model: daa5f02a
-          name: wmp_cooler2
-        1b1f5630:
-          model: 7acd7e8d
-          name: wmp_picket_16m_entry
-        1b1f9ac5:
-          model: 3acdd03b
-          name: wmp_market03
-        1b20f62a:
-          model: daf6c376
-          name: wmp_planter_10
-        1b20f64c:
-          model: daf6bc2c
-          name: wmp_arbor03
-        1b23b972:
-          model: 1b4751d0
-          name: wmp_ga_lamppostB
-        1b2518f5:
-          model: 9b702ce0
-          name: wmp_pickup08_hd
-        1b2602b0:
-          model: 9b976267
-          name: wmp_pickup04_hd
-        1b260300:
-          model: 3b9739ea
-          name: wmp_van01_hd
-        1b26630d:
-          model: 1b97abcd
-          name: wmp_log03
-        1b2f6290:
-          model: 3b2a18c1
-          name: wmp_oldwall_gate8
-        1b3cb381:
-          model: fb38ad01
-          name: wmp_recycling_corner
-        1b4c28e6:
-          model: 5b48019e
-          name: wmp_cars_queue09
-        1bec6579:
-          model: bb488558
-          name: wmp_cars_parked05
-        1bee6454:
-          model: bb96248c
-          name: wmp_villa_gate2
-        1beffd81:
-          model: 9af78bbe
-          name: wmp_cars_queue01
-        1beffd8f:
-          model: 7af78f70
-          name: wmp_cars_queue02
-        1bf000ec:
-          model: 5b832e14
-          name: wmp_cars_parked08_rdock_parking02
-        1bf6c60f:
-          name: wmp_cars_parked07_rdock_parking01-tz 9-15
-        1d14a2e7:
-          model: dd11b0c7
-          name: wmp_woodfence_16m2p
-        1d14a352:
-          model: fd11b0ed
-          name: wmp_woodfence_16m1p
-        1d185f10:
-          model: dd159463
-          name: wmp_spam_vet_kennel02
-        1d185f20:
-          model: dd1593fc
-          name: wmp_spam_vet_horse
-        1d187c7a:
-          model: dd15d665
-          name: wmp_spam_vet_saddles
-        1d188133:
-          model: 5d15de12
-          name: wmp_woodfence_16m_gate2
-        1d1dbfe4:
-          model: fd1afb59
-          name: wmp_spam_fencewall_16m
-        1d1eecad:
-          model: 1d1c494c
-          name: wmp_spam_lampost_diag
-        1d4e7cae:
-          model: 5c14b78b
-          name: wmp_hydrant_ruralDock
-        1d786ba4:
-          name: wmp_cone_ethanol_orange_cone2
-        34148b91:
-          name: wmp_Globe_Light
-        350dda10:
-          name: WMP_Streetlight1xdiagonal_WMP
-        3abdb4cd:
-          model: 7aab65ab-0040
-          name: wmp_bwalk_fence8_90_blend
-        3ac5b50a:
-          model: 3ac18fe7
-          name: wmp_modern_wall16
-        3addf9a9:
-          model: 3ad9ef8f
-          name: wmp_prop_clock01
-        3ae04c32:
-          model: 3adc1f14
-          name: wmp_pickup01
-        3ae0849b:
-          model: badc8a92
-          name: wmp_cars03_suv_orange_angled
-        3ae084a6:
-          model: badc891b
-          name: wmp_cars01_suv_blue
-        3ae2e6f6:
-          model: badeef4d
-          name: wmp_lampost06_diag
-        3ae958d7:
-          model: 1ae543b3
-          name: wmp_pbench_diag
-        3aec73e0:
-          model: 7ae825e9
-          name: wmp_bau_container
-        3aefe90c:
-          model: 7aebedc9
-          name: wmp_bollards2
-        3af019d9:
-          model: faec23df
-          name: wmp_people_sit
-        3af0468e:
-          model: baec5155
-          name: wmp_taxi03
-        3af12053:
-          model: 5aed2b8b
-          name: wmp_sw_fence_oc
-        3af1208f:
-          model: 3aed2937
-          name: wmp_sw_fence16
-        3af120a0:
-          model: 3aed2797
-          name: wmp_sw_fence16_ban
-        3af55700:
-          model: 5a7bf9ee
-          name: wmp_cellmast
-        3af82626:
-          model: 7acc3911
-          name: wmp_arbor01
-        3afa943e:
-          model: 9b1cbff0
-          name: wmp_playpen
-        3afd2cbb:
-          model: db6e816f
-          name: wmp_arbor02
-        3afd2d2b:
-          model: db6e5e8d
-          name: wmp_powerpole_end
-        3afd2d3f:
-          model: bb6e5bdd
-          name: wmp_compost
-        3afd2d7c:
-          model: 9b6e2f26
-          name: wmp_ga_gate2_big_open
-        3afd2e37:
-          model: 5b45ff68
-          name: wmp_cellmast_tall
-        3afd2ec0:
-          model: bb45dbc4
-          name: wmp_villa_wall8
-        3afe8999:
-          model: 7b95e7b3
-          name: wmp_villa_hedge_sc1
-        3aff6208:
-          model: bbbe1be7
-          name: wmp_villa_hedge16g
-        3b02438e:
-          model: 1bbf2dcc
-          name: wmp_cube_villa07
-        3b0244bf:
-          model: fbbec9d5
-          name: wmp_ga_fence_post
-        3b038234:
-          model: db003cfe
-          name: wmp_clubhouse
-        3b0382ef:
-          model: 7afe8ec1
-          name: wmp_pool05
-        3b0531f5:
-          model: db00c473
-          name: wmp_dumpster02
-        3b06c2a6:
-          model: bb02c452
-          name: wmp_pbench21_oc
-        3b06c2b9:
-          model: 1b02c23f
-          name: wmp_bench_wood02
-        3b078572:
-          model: 7b038bb4
-          name: wmp_old_lamppost
-        3b08cacb:
-          model: 3b04cb65
-          name: wmp_slatfence8m
-        3b08fffe:
-          model: 1b050961
-          name: wmp_slatfence2m
-        3b138de6:
-          model: 5b0df5c4
-          name: wmp_barrow03
-        3b13d6d7:
-          model: db0fb227
-          name: wmp_singlepole_house
-        3b191b6b:
-          model: 7b151e9d
-          name: wmp_market01
-        3b191bab:
-          model: 7b15076f
-          name: wmp_market02
-        3b1a21f6:
-          model: 9a2f3eaa
-          name: wmp_ivyfence_16m_gate
-        3b1a229a:
-          model: 5a2f280d
-          name: wmp_simpleFence2m
-        3b1bb7a2:
-          model: da589064
-          name: wmp_gardenshed_07
-        3b1c7b2b:
-          model: 1a58b81a
-          name: wmp_flowerbin
-        3b1dc165:
-          model: daa5c08b
-          name: wmp_lattice_w_4m
-        3b1e2922:
-          model: daa5ee5e
-          name: wmp_picket_8m1pr
-        3b1f55ff:
-          model: facd8ff8
-          name: wmp_gardenshed_12
-        3b1f9ab5:
-          model: 7acddcab
-          name: wmp_market04
-        3b23a45e:
-          model: 5b473c72
-          name: wmp_swing03
-        3b261318:
-          model: db977151
-          name: wmp_caravan2
-        3b263c50:
-          model: bb979c2e
-          name: wmp_gardenshed_08
-        3b2662e0:
-          model: 9b97aff9
-          name: wmp_ivyfence_8m_gate
-        3b27858a:
-          model: 3bc07261
-          name: wmp_pickup09_hd
-        3b347804:
-          model: 7b308181
-          name: wmp_bollards16_chain
-        3b3cb313:
-          model: 9b38b74b
-          name: wmp_newskiosk
-        3b3e1d77:
-          model: bb3a046e
-          name: wmp_tollbooth
-        3b4c47fb:
-          model: bb48535d
-          name: wmp_sbarrier3
-        3b4c7acb:
-          name: wmp_cars_parked03-tz 10-17
-        3b74d06c:
-          model: db20ee5a
-          name: wmp_lampost10_hd
-        3b74d07d:
-          model: 1b20ee1a
-          name: wmp_lampost11_hd
-        3b85eb45:
-          model: 9b8123b9
-          name: wmp_billboard01_rdock
-        3b865799:
-          name: wmp_cars_parked08_rdock_parking02-tz 13-22
-        3b8729f4:
-          name: wmp_cars_parked09_rdock_parking03-tz 11-18
-        3bb56a60:
-          model: fbb1732e
-          name: wmp_ad_lamppost01
-        3bb9464f:
-          model: 5bb54e19
-          name: wmp_ad_rembard
-        3bcec43c:
-          model: 5bcaa850
-          name: wmp_powerpole_railyard
-        3bec656f:
-          model: 1b487d54
-          name: wmp_cars_parked03
-        3d14a2ca:
-          model: 1d11b165
-          name: wmp_woodfence_16m_gate
-        3d185f46:
-          model: 1d1590c8
-          name: wmp_cars_parked06_vet_parking
-        3d189dfe:
-          model: 9d15fa62
-          name: wmp_spam_vet_streetlight
-        3d1eec91:
-          model: bd1c43bd
-          name: wmp_spam_vehicle02_truck
-        3d576cfb:
-          model: 7d2d38ba
-          name: wmp_spam_vehicle03_vw_bus_02
-        4e0daf5c:
-          name: wmp_cone_ethanol_orange_cone3
-        4fbdc124:
+        0abd7567-4fbdc124:
           name: wmp_LightGlobe_ruralDock
-        561a4066:
-          model: aecdd2e9
-          name: wmp_causeway_hedge
-        5abb9069:
-          model: 7aab65ab-001a
-          name: wmp_bwalk_fence8m
-        5abba2d8:
-          model: 7aab65ab-001f
-          name: wmp_bwalk_fence6m
-        5abdad82:
-          model: 7aab65ab-002f
-          name: wmp_bwalk_fence16m_90_blend
-        5abe097e:
-          model: 7aab65ab-0047
-          name: wmp_bwalk_boatpass2
-        5ac5b520:
-          model: bac18f9b
-          name: wmp_modern_wall8
-        5aceebbc:
-          model: 1acaf691
-          name: wmp_pine_01
-        5ae04c10:
-          model: 7adc4985
-          name: wmp_trailer01
-        5ae04c1c:
-          model: 5adc3dc1
-          name: wmp_people_09
-        5aeb1742:
-          model: 1ae70760
-          name: wmp_planter_02_square
-        5af5571d:
-          model: da7bc405
-          name: wmp_ga_fence8_oc
-        5af55767:
-          model: ba7bbeae
-          name: wmp_ga_fence16_1pl
-        5af82612:
-          model: 3acc3bb8
-          name: wmp_pool01
-        5afa9412:
-          model: bb1cc31c
-          name: wmp_gardenshed_01
-        5afb9060:
-          model: 1b44d421
-          name: wmp_villa_gate
-        5afd2d4f:
-          model: 1b6e5653
-          name: wmp_barrow02
-        5afd2e10:
-          model: 9b460456
-          name: wmp_pool02
-        5afdb076:
-          model: 5b95475f
-          name: wmp_lattice_b_16mG
-        5afdb098:
-          model: bb954094
-          name: wmp_lattice_b_8m
-        5afe8a08:
-          model: 9b95e347
-          name: wmp_villa_hedge8
-        5aff6238:
-          model: dbbe110b
-          name: wmp_villa_hedge16b
-        5aff624c:
-          model: 9bbe0df5
-          name: wmp_villa_hedge16s
-        5aff6257:
-          model: fbbe08b9
-          name: wmp_villa_hedge8_oc4
-        5b024483:
-          model: bbbeebb5
-          name: wmp_bins01
-        5b0244a8:
-          model: 1bbedec3
-          name: wmp_villa_wall_chute
-        5b03826b:
-          model: baffa0f6
-          name: wmp_ga_gate1_small_closed
-        5b0405de:
-          model: daffe62a
-          name: wmp_ga_gate2_big_closed
-        5b078555:
-          model: 1b039036
-          name: wmp_old_lamppost3
-        5b07cb6b:
-          model: 5b03d63e
-          name: wmp_powerpole_street
-        5b08ca88:
-          model: 1b04d3a4
-          name: wmp_slatfence_gate
-        5b08cabe:
-          model: 3b04cccd
-          name: wmp_slatfence16m
-        5b0bef23:
-          model: fb07a770
-          name: wmp_powerpole_ic
-        5b113b22:
-          model: 9b0d1eee
-          name: wmp_bucket_rack2
-        5b13f05b:
-          model: fb0ffbae
-          name: wmp_ivyfence_8m_a
-        5b14a9e8:
-          model: 3b10a87f
-          name: wmp_planter_04_hd
-        5b191c26:
-          model: 9b149e91
-          name: wmp_people_mowerman
-        5b1a223e:
-          model: fa2f36e2
-          name: wmp_ivyfence_8m
-        5b1a227d:
-          model: 7a2f2bc4
-          name: wmp_simpleFence6m_Gate
-        5b1a2335:
-          model: 3a2f21e0
-          name: wmp_simpleFence16m
-        5b1bb745:
-          model: 3a5898be
-          name: wmp_gardenshed_01b
-        5b1c7b15:
-          model: 1a58b9cd
-          name: wmp_planter_04
-        5b1c7b51:
-          model: 9a58af55
-          name: wmp_sp_tee
-        5b1c7bbe:
-          model: 1a58adb9
-          name: wmp_sp_exit_l
-        5b1dc1bd:
-          model: da582c10
-          name: wmp_sp_cross
-        5b1e27d3:
-          model: baa618ce
-          name: wmp_vw_bus
-        5b1e2932:
-          model: 3aa5ee14
-          name: wmp_picket_8m1pl
-        5b1e4831:
-          model: 5aa64dfb
-          name: wmp_garden_water2
-        5b20f632:
-          model: 7af6c2f2
-          name: wmp_planter_09
-        5b20f66b:
-          model: 3af6ba2e
-          name: wmp_cars07_motorcycle_orange_hd
-        5b2518d8:
-          model: 1b967768
-          name: wmp_log01
-        5b2617a2:
-          model: 1b97787b
-          name: wmp_log02
-        5b26d9c1:
-          model: bbbfa871
-          name: wmp_cars11_old_red_hd
-        5b2f620d:
-          model: db2a1ee1
-          name: wmp_oldwall_oc8m
-        5b3477df:
-          model: db308327
-          name: wmp_bollards4_chain
-        5b497c32:
-          model: daf77d3d
-          name: wmp_cars_queue04
-        5b4c47b0:
-          model: 9b484e20
-          name: wmp_sbarrier2
-        5b4c7aea:
-          model: 5b48775c
-          name: wmp_cars_parked01
-        5b5e6764:
-          model: fb5a72b2
-          name: wmp_parking_lamp02
-        5bb56a9b:
-          model: 9bb1728f
-          name: wmp_ad_fence8m
-        5bee5898:
-          model: faf66feb
-          name: wmp_transformer3
-        5bee5ba6:
-          model: 7b6e9643
-          name: wmp_gardenshed_03
-        5bee5f0b:
-          model: faed25ab
-          name: wmp_sw_post
-        5c3e242f:
-          model: fb6e863a
-          name: wmp_transformer
-        5d14a305:
-          model: 9d11b02f
-          name: wmp_woodfence_8m1p
-        5d14a310:
-          model: 5d11b0a3
-          name: wmp_woodfence_8m2p_ivy
-        5d185f2a:
-          model: 1d15d757
-          name: wmp_spam_vet_horse_pen
-        5d185f37:
-          model: 3d15936b
-          name: wmp_trailer02_spam_vet_horse_trailer
-        5d187c8d:
-          model: 7d15d71e
-          name: wmp_spam_vet_haybale
-        5d1dbff3:
-          model: bd1afad5
-          name: wmp_spam_fencewall_8m2
-        5d33a433:
-          model: ddccea25
-          name: wmp_spam_busstop02
-        5d576ce4:
-          model: fd2d3387
-          name: wmp_spam_dumpster01
-        5d576d0c:
-          model: 3d2d3f9d
-          name: wmp_spam_vehicle05_pickup02
-        5ede26cc:
-          name: wmp_LightGlobe_Cv2
-        6108d75c:
+        17d2e479-03807da9:
+          name: wmp_LightGlobe_spam
+        3224a93f-6108d75c:
           model: b41c2d11
           name: wmp_causeway_fence_post
-        74cc01dc:
-          name: WMP_Streetlight1xStreetlight_WMP
-        79f1736a:
-          name: WMP_Streetlight1Offset
-        7abb9034:
-          model: 7aab65ab-001c
-          name: wmp_bwalk_fence4m_rail
-        7abba300:
-          model: 7aab65ab-001e
-          name: wmp_bwalk_fence16m_v1
-        7abc52f1:
-          model: 7aab65ab-002a
-          name: wmp_lampost04
-        7abc5b39:
-          model: 7aab65ab-002b
-          name: wmp_bwalk_sign3
-        7ac5b53f:
-          model: 1ac18d95
-          name: wmp_modern_wallGate
-        7addfac6:
-          model: dad9e334
-          name: wmp_people_15
-        7aeb1969:
-          model: 1ae6f5de
-          name: wmp_dumpster01
-        7aecfd9f:
-          model: fae8fc51
-          name: wmp_people_suitcase_01
-        7af046aa:
-          model: faec48bf
-          name: wmp_cctv01
-        7af1206e:
-          model: 7aab65ab-003e
-          name: wmp_sw_fence4
-        7af55742:
-          model: 1a7bc1a6
-          name: wmp_ga_fence8_1p
-        7af8265e:
-          model: baa4a0e4
-          name: wmp_cellmast_prop
-        7afd2dce:
-          model: fb6e2590
-          name: wmp_ga_fence8_1pl_diag
-        7afdb068:
-          model: 7b954c4c
-          name: wmp_lattice_b_8mG
-        7b0405c6:
-          model: 1b000804
-          name: wmp_cube_villa09
-        7b0531e7:
-          model: bb00e89f
-          name: wmp_bbq01
-        7b0663f6:
-          model: db02b82e
-          name: wmp_pool06
-        7b06c2c7:
-          model: 3b02c053
-          name: wmp_bench_wood01
-        7b074196:
-          model: fb033a48
-          name: wmp_stray_sign2
-        7b0816a2:
-          model: 5b042164
-          name: wmp_pickup03a
-        7b0816aa:
-          model: 1b041ffe
-          name: wmp_pickup01a
-        7b08ca95:
-          model: db04d012
-          name: wmp_slatfence_OC
-        7b08caa5:
-          model: 5b04ce6d
-          name: wmp_slatfence4m
-        7b0bef30:
-          model: 3b07a200
-          name: wmp_powerpole_triple
-        7b0c9c60:
-          model: 1b08a1ea
-          name: wmp_wirefence_oc
-        7b138d8e:
-          model: 5b0e041f
-          name: wmp_lampost08_hd_diag
-        7b14a9f4:
-          model: 9b10a646
-          name: wmp_tree_06
-        7b14aa14:
-          model: db109955
-          name: wmp_tree_05_hd
-        7b14d2df:
-          model: 9b10d625
-          name: wmp_simpleFence12m
-        7b189fda:
-          model: 7ab5e189
-          name: wmp_bwalk_straight8m__murimk
-        7b191c03:
-          model: 5b14b444
-          name: wmp_cooler
-        7b1a22a8:
-          model: 5a2f26a8
-          name: wmp_simpleFence6mP1
-        7b1bb75e:
-          model: ba5894c2
-          name: wmp_gardenshed_05
-        7b1e2883:
-          model: 9aa5f304
-          name: wmp_planter_04a_hd
-        7b1e2891:
-          model: 5aa5f202
-          name: wmp_umbrella
-        7b1e293f:
-          model: 3aa5ed87
-          name: wmp_picket_8m2p
-        7b1e294c:
-          model: faa5e378
-          name: wmp_villa_hedge2_A
-        7b20f61e:
-          model: 7af6c5f6
-          name: wmp_deckchair4
-        7b2fa1d1:
-          model: 9b2bab59
-          name: wmp_lampost09_hd
-        7b3e1d6a:
-          model: 5b3a061e
-          name: wmp_schranke
-        7b44ba23:
-          model: 1a59f31e
-          name: wmp_pmeter
-        7b497bf8:
-          name: wmp_cars_queue02-tz1 8-13
-        7b4c7ac0:
-          model: fb4883c8
-          name: wmp_cars_parked04
-        7b4d9757:
-          model: 3b711410
-          name: wmp_cars_queue12
-        7b76b508:
-          model: 9b49a95c
-          name: wmp_old_lamppost5
-        7bb56ab4:
-          model: 7bb17212
-          name: wmp_ad_busstop
-        7bee589d:
-          model: 7af680c5
-          name: wmp_water_supply
-        7bee6179:
-          model: 3b08ae5d
-          name: wmp_transformer2
-        7beffd9d:
-          model: 3af794d1
-          name: wmp_cars_queue03
-        7d14a2f7:
-          model: 9d11b147
-          name: wmp_woodfence_4m2p
-        7d1dbfff:
-          model: 3d1afb20
-          name: wmp_spam_fencewall_16m2
-        7d228980:
-          model: dd214d0b
-          name: wmp_spam_watermill01
-        7d609fa6:
-          model: fd5def56
-          name: wmp_spam_horse_man
-        7d609fe2:
-          model: 9d5deb91
-          name: wmp_spam_horse_wagon
-        887ed085:
-          name: wmp_Cone_White
-        8c95120e:
-          model: 3ab5e0ef
-          name: wmp_bwalk_ic__murimk
-        8d7a894b:
-          name: wmp_cone_ethanol_orange_cone
-        8d8d8736:
-          name: wmp_cars_queue01-tz2 16-19
-        9209b009:
-          name: wmp_cars_queue03-tz2 16-24
-        93e80ca5:
-          name: wmp_LightGlobe_B
-        94ed0174:
-          name: wmp_cone_ethanol_white_cone2
-        9790d3c6:
-          name: wmp_LightGlobe_Cv1
-        993d9239:
-          name: wmp_LightGlobe_A
-        9ae08558:
-          model: dadc90b5
-          name: wmp_cars02_white
-        9aeb19d5:
-          model: 9ae6f0d1
-          name: wmp_newsstand
-        9aecfd82:
-          model: 1ae8fdcc
-          name: wmp_people_suitcase_02
-        9af10300:
-          model: 3aed010b
-          name: wmp_planter_03x
-        9af1030a:
-          model: baed004a
-          name: wmp_planter_05x
-        9af82642:
-          model: faa4a310
-          name: wmp_ga_fence4_1pl
-        9afd2d0c:
-          model: 9b6e60d7
-          name: wmp_powerpole_double
-        9afd2d5c:
-          model: 3b6e54a2
-          name: wmp_barrow01
-        9afd2dbe:
-          model: bb6e26a3
-          name: wmp_ga_fence8_1pl_diag2
-        9afd2e75:
-          model: db45e128
-          name: wmp_villa_wall16
-        9afd7f3c:
-          model: 7b6ec7f7
-          name: wmp_cars05_delivery_white
-        9b03829d:
-          model: 5afecae9
-          name: wmp_garages01
-        9b066407:
-          model: 5b016ed9
-          name: wmp_powerpole_corner
-        9b078581:
-          model: 3b037d5a
-          name: wmp_atm01
-        9b08f366:
-          model: fb04e2c9
-          name: wmp_old_lamppost4_a
-        9b08fff1:
-          model: 3b050aa5
-          name: wmp_slatfence8m_broke
-        9b091690:
-          model: 3b051fae
-          name: wmp_ped_sign3
-        9b0927b3:
-          model: db0532d9
-          name: wmp_powerpole_double2
-        9b13d683:
-          model: 7b0fd315
-          name: wmp_dumpster03
-        9b13f081:
-          model: 9b0ff7da
-          name: wmp_dumpster04
-        9b1a21e6:
-          model: 9a2f525b
-          name: wmp_well
-        9b1a222e:
-          model: ba2f38e8
-          name: wmp_ivyfence_16m
-        9b1a2324:
-          model: ba2f2483
-          name: wmp_simpleFence16m_step
-        9b1d135d:
-          model: 5a7d8919
-          name: wmp_gardenshed_09
-        9b1dc181:
-          model: 7aa5bda8
-          name: wmp_lattice_w_8m
-        9b1e27f4:
-          model: daa61431
-          name: wmp_deckchair3
-        9b1f5614:
-          model: 1acd7fc9
-          name: wmp_gardenshed_11
-        9b20f65d:
-          model: 5af6bad7
-          name: wmp_arbor04
-        9b26d9a6:
-          model: 7bbfa902
-          name: wmp_cars10_green_hd
-        9b26d9cb:
-          model: 7bbfa7d8
-          name: wmp_cars09_old_luxory01_hd
-        9b2f6202:
-          model: 9b2a2084
-          name: wmp_oldwall_gate16
-        9b2f621f:
-          model: db2a1caa
-          name: wmp_oldwall_end8m
-        9b2f622d:
-          model: 7b2a1b76
-          name: wmp_oldwall16m
-        9b49feee:
-          model: 5af80488
-          name: wmp_cars_queue06
-        9b4b0d71:
-          model: fb1f7a88
-          name: wmp_pissoir
-        9b4b0da1:
-          model: db1f6b0d
-          name: wmp_cars_queue08
-        9b4d9749:
-          model: db7127f9
-          name: wmp_cars_queue13
-        9b601296:
-          model: 3b5c0f8c
-          name: wmp_old_lamppost4
-        9bb56a90:
-          model: bbb172b4
-          name: wmp_ad_fence16m
-        9bb81796:
-          model: 1bb41f38
-          name: wmp_ad_tree
-        9c352f11:
+        3224a93f-9c352f11:
           model: d41c2ca0
           name: wmp_causeway_fence
-        9c39defa:
-          model: 7aab65ab-0019
-          name: wmp_bwalk_fence16m_v2
-        9c52392b:
-          model: 1c4f957b
-          name: wmp_floodlight_railyard
-        9d14a2db:
-          model: dd11b123
-          name: wmp_woodfence_8m2p
-        9d1dc00c:
-          model: 3d1afafd
-          name: wmp_spam_fencewall_8m
-        9d1eec9e:
-          model: 1d1c496d
-          name: wmp_spam_lampost
-        9d21b073:
-          model: bd1fd9ef
-          name: wmp_spam_watermill02
-        9d22bc55:
-          model: 3d2016c4
-          name: wmp_spam_pub_lamp
-        9d352d0a:
-          model: 3d328858
-          name: wmp_tall_lantern
-        9d352d17:
-          model: 3d3288b3
-          name: wmp_spam_busstop03
-        9d576d21:
-          model: 5d2d33a7
-          name: wmp_spam_dumpster02
-        9d609fb2:
-          model: dd5df794
-          name: wmp_spam_logfence_gate
-        9e697e25:
+        4ce4381b-887ed085:
+          name: wmp_Cone_White
+        5966e113-9e697e25:
           name: wmp_Globe_Light_ruralDock
-        a26e0f98:
-          name: WMP_Streetlight1xDiagonalAVE
-        b8adc8d4:
+        59807bb0-93e80ca5:
+          name: wmp_LightGlobe_B
+        7a44934c-b8adc8d4:
           name: wmp_Cone_Orange2
-        bab9fd0b:
-          model: fab4df09
-          name: wmp_bwalk_straight16m__murimk
-        babc4756:
-          model: 7aab65ab-0028
-          name: wmp_lampost03
-        baddf705:
+        7aab65ab-144d2812:
+          name: wmp_cars_queue02-tz2 16-22
+        7aab65ab-1abc3299:
+          model: 7aab65ab-0027
+          name: wmp_bwalk_stairs
+        7aab65ab-1abc32b4:
+          model: 7aab65ab-0026
+          name: wmp_bwalk_stairs_wide
+        7aab65ab-1acc99cf:
+          model: 9a7ab3e4
+          name: wmp_people_16_zanda
+        7aab65ab-1aeb17a7:
+          model: 9ae705bd
+          name: wmp_planter_01_large
+        7aab65ab-1aecfd6e:
+          model: fae90720
+          name: wmp_people_suitcase_03_os
+        7aab65ab-1aecfd79:
+          model: fae9054f
+          name: wmp_people_suitcase_03
+        7aab65ab-1aefe928:
+          model: 1aebeb36
+          name: wmp_bollards6
+        7aab65ab-1af0469f:
+          model: faec4a24
+          name: wmp_taxi02
+        7aab65ab-1af55756:
+          model: ba7bbff1
+          name: wmp_ga_fence16_np
+        7aab65ab-1afd2ddd:
+          model: 1b6e24b3
+          name: wmp_ga_fence8_1pl
+        7aab65ab-1afd2e24:
+          model: fb460097
+          name: wmp_gardenshed_02
+        7aab65ab-1afd2e5f:
+          model: 7b45e245
+          name: wmp_villa_wall16s
+        7aab65ab-1afd2ecd:
+          model: 7b45d8c9
+          name: wmp_villa_wall_arch
+        7aab65ab-1afd7f2d:
+          model: 5b6ec9f7
+          name: wmp_ga_gate1_small_diag
+        7aab65ab-1afe89cd:
+          model: 5b95e520
+          name: wmp_villa_hedge8_diag2
+        7aab65ab-1b02434f:
+          model: 3b00377d
+          name: wmp_cube_villa06_diag
+        7aab65ab-1b024366:
+          model: 3bbf37ba
+          name: wmp_cube_villa07_diag
+        7aab65ab-1b0243a2:
+          model: 7affeaa7
+          name: wmp_cube_villa06
+        7aab65ab-1b024455:
+          model: 5bbf07e8
+          name: wmp_ga_gate2_big_diag_a
+        7aab65ab-1b0405ba:
+          model: fb00108d
+          name: wmp_oven
+        7aab65ab-1b06c294:
+          model: 3b02c740
+          name: wmp_swing01
+        7aab65ab-1b074185:
+          model: db034b4c
+          name: wmp_pickup06a
+        7aab65ab-1b07418e:
+          model: 7b03475c
+          name: wmp_pickup05a
+        7aab65ab-1b078563:
+          model: bb038e47
+          name: wmp_old_lamppost2
+        7aab65ab-1b0816b6:
+          model: 5b041c78
+          name: wmp_cars05b_delivery_white
+        7aab65ab-1b09001a:
+          model: 9b050841
+          name: wmp_slatfence4m_2p
+        7aab65ab-1b0bef3c:
+          model: 7b079f69
+          name: wmp_powerpole_double3
+        7aab65ab-1b0e91f6:
+          model: bb0a8857
+          name: wmp_bucket_rack
+        7aab65ab-1b14aa01:
+          model: 7b109bf7
+          name: wmp_tree_04_hd
+        7aab65ab-1b14d2d1:
+          model: 3b10d804
+          name: wmp_simpleFance2m_Gate
+        7aab65ab-1b1c7b94:
+          model: ba58aea1
+          name: wmp_sp_oc
+        7aab65ab-1b1dc158:
+          model: 3aa5c399
+          name: wmp_pool07
+        7aab65ab-1b1dc191:
+          model: baa551d3
+          name: wmp_villa_hedge8_A
+        7aab65ab-1b1dc1a0:
+          model: 1aa5508e
+          name: wmp_lattice_w_16mG
+        7aab65ab-1b1e2807:
+          model: faa6110e
+          name: wmp_deckchair2
+        7aab65ab-1b1e28a1:
+          model: daa5f02a
+          name: wmp_cooler2
+        7aab65ab-1b1f5630:
+          model: 7acd7e8d
+          name: wmp_picket_16m_entry
+        7aab65ab-1b1f9ac5:
+          model: 3acdd03b
+          name: wmp_market03
+        7aab65ab-1b20f62a:
+          model: daf6c376
+          name: wmp_planter_10
+        7aab65ab-1b20f64c:
+          model: daf6bc2c
+          name: wmp_arbor03
+        7aab65ab-1b23b972:
+          model: 1b4751d0
+          name: wmp_ga_lamppostB
+        7aab65ab-1b2518f5:
+          model: 9b702ce0
+          name: wmp_pickup08_hd
+        7aab65ab-1b2602b0:
+          model: 9b976267
+          name: wmp_pickup04_hd
+        7aab65ab-1b260300:
+          model: 3b9739ea
+          name: wmp_van01_hd
+        7aab65ab-1b26630d:
+          model: 1b97abcd
+          name: wmp_log03
+        7aab65ab-1b2f6290:
+          model: 3b2a18c1
+          name: wmp_oldwall_gate8
+        7aab65ab-1b3cb381:
+          model: fb38ad01
+          name: wmp_recycling_corner
+        7aab65ab-1b4c28e6:
+          model: 5b48019e
+          name: wmp_cars_queue09
+        7aab65ab-3abdb4cd:
+          model: 7aab65ab-0040
+          name: wmp_bwalk_fence8_90_blend
+        7aab65ab-3ac5b50a:
+          model: 3ac18fe7
+          name: wmp_modern_wall16
+        7aab65ab-3addf9a9:
+          model: 3ad9ef8f
+          name: wmp_prop_clock01
+        7aab65ab-3ae04c32:
+          model: 3adc1f14
+          name: wmp_pickup01
+        7aab65ab-3ae0849b:
+          model: badc8a92
+          name: wmp_cars03_suv_orange_angled
+        7aab65ab-3ae084a6:
+          model: badc891b
+          name: wmp_cars01_suv_blue
+        7aab65ab-3ae2e6f6:
+          model: badeef4d
+          name: wmp_lampost06_diag
+        7aab65ab-3ae958d7:
+          model: 1ae543b3
+          name: wmp_pbench_diag
+        7aab65ab-3aec73e0:
+          model: 7ae825e9
+          name: wmp_bau_container
+        7aab65ab-3aefe90c:
+          model: 7aebedc9
+          name: wmp_bollards2
+        7aab65ab-3af019d9:
+          model: faec23df
+          name: wmp_people_sit
+        7aab65ab-3af0468e:
+          model: baec5155
+          name: wmp_taxi03
+        7aab65ab-3af12053:
+          model: 5aed2b8b
+          name: wmp_sw_fence_oc
+        7aab65ab-3af1208f:
+          model: 3aed2937
+          name: wmp_sw_fence16
+        7aab65ab-3af120a0:
+          model: 3aed2797
+          name: wmp_sw_fence16_ban
+        7aab65ab-3af55700:
+          model: 5a7bf9ee
+          name: wmp_cellmast
+        7aab65ab-3af82626:
+          model: 7acc3911
+          name: wmp_arbor01
+        7aab65ab-3afa943e:
+          model: 9b1cbff0
+          name: wmp_playpen
+        7aab65ab-3afd2cbb:
+          model: db6e816f
+          name: wmp_arbor02
+        7aab65ab-3afd2d2b:
+          model: db6e5e8d
+          name: wmp_powerpole_end
+        7aab65ab-3afd2d3f:
+          model: bb6e5bdd
+          name: wmp_compost
+        7aab65ab-3afd2d7c:
+          model: 9b6e2f26
+          name: wmp_ga_gate2_big_open
+        7aab65ab-3afd2e37:
+          model: 5b45ff68
+          name: wmp_cellmast_tall
+        7aab65ab-3afd2ec0:
+          model: bb45dbc4
+          name: wmp_villa_wall8
+        7aab65ab-3afe8999:
+          model: 7b95e7b3
+          name: wmp_villa_hedge_sc1
+        7aab65ab-3aff6208:
+          model: bbbe1be7
+          name: wmp_villa_hedge16g
+        7aab65ab-3b02438e:
+          model: 1bbf2dcc
+          name: wmp_cube_villa07
+        7aab65ab-3b0244bf:
+          model: fbbec9d5
+          name: wmp_ga_fence_post
+        7aab65ab-3b038234:
+          model: db003cfe
+          name: wmp_clubhouse
+        7aab65ab-3b0382ef:
+          model: 7afe8ec1
+          name: wmp_pool05
+        7aab65ab-3b0531f5:
+          model: db00c473
+          name: wmp_dumpster02
+        7aab65ab-3b06c2a6:
+          model: bb02c452
+          name: wmp_pbench21_oc
+        7aab65ab-3b06c2b9:
+          model: 1b02c23f
+          name: wmp_bench_wood02
+        7aab65ab-3b078572:
+          model: 7b038bb4
+          name: wmp_old_lamppost
+        7aab65ab-3b08cacb:
+          model: 3b04cb65
+          name: wmp_slatfence8m
+        7aab65ab-3b08fffe:
+          model: 1b050961
+          name: wmp_slatfence2m
+        7aab65ab-3b138de6:
+          model: 5b0df5c4
+          name: wmp_barrow03
+        7aab65ab-3b13d6d7:
+          model: db0fb227
+          name: wmp_singlepole_house
+        7aab65ab-3b191b6b:
+          model: 7b151e9d
+          name: wmp_market01
+        7aab65ab-3b191bab:
+          model: 7b15076f
+          name: wmp_market02
+        7aab65ab-3b1a21f6:
+          model: 9a2f3eaa
+          name: wmp_ivyfence_16m_gate
+        7aab65ab-3b1a229a:
+          model: 5a2f280d
+          name: wmp_simpleFence2m
+        7aab65ab-3b1bb7a2:
+          model: da589064
+          name: wmp_gardenshed_07
+        7aab65ab-3b1c7b2b:
+          model: 1a58b81a
+          name: wmp_flowerbin
+        7aab65ab-3b1dc165:
+          model: daa5c08b
+          name: wmp_lattice_w_4m
+        7aab65ab-3b1e2922:
+          model: daa5ee5e
+          name: wmp_picket_8m1pr
+        7aab65ab-3b1f55ff:
+          model: facd8ff8
+          name: wmp_gardenshed_12
+        7aab65ab-3b1f9ab5:
+          model: 7acddcab
+          name: wmp_market04
+        7aab65ab-3b23a45e:
+          model: 5b473c72
+          name: wmp_swing03
+        7aab65ab-3b261318:
+          model: db977151
+          name: wmp_caravan2
+        7aab65ab-3b263c50:
+          model: bb979c2e
+          name: wmp_gardenshed_08
+        7aab65ab-3b2662e0:
+          model: 9b97aff9
+          name: wmp_ivyfence_8m_gate
+        7aab65ab-3b27858a:
+          model: 3bc07261
+          name: wmp_pickup09_hd
+        7aab65ab-3b347804:
+          model: 7b308181
+          name: wmp_bollards16_chain
+        7aab65ab-3b3cb313:
+          model: 9b38b74b
+          name: wmp_newskiosk
+        7aab65ab-3b3e1d77:
+          model: bb3a046e
+          name: wmp_tollbooth
+        7aab65ab-3b4c47fb:
+          model: bb48535d
+          name: wmp_sbarrier3
+        7aab65ab-3b4c7acb:
+          name: wmp_cars_parked03-tz 10-17
+        7aab65ab-3b74d06c:
+          model: db20ee5a
+          name: wmp_lampost10_hd
+        7aab65ab-3b74d07d:
+          model: 1b20ee1a
+          name: wmp_lampost11_hd
+        7aab65ab-3b85eb45:
+          model: 9b8123b9
+          name: wmp_billboard01_rdock
+        7aab65ab-3b865799:
+          name: wmp_cars_parked08_rdock_parking02-tz 13-22
+        7aab65ab-3b8729f4:
+          name: wmp_cars_parked09_rdock_parking03-tz 11-18
+        7aab65ab-5abb9069:
+          model: 7aab65ab-001a
+          name: wmp_bwalk_fence8m
+        7aab65ab-5abba2d8:
+          model: 7aab65ab-001f
+          name: wmp_bwalk_fence6m
+        7aab65ab-5abdad82:
+          model: 7aab65ab-002f
+          name: wmp_bwalk_fence16m_90_blend
+        7aab65ab-5abe097e:
+          model: 7aab65ab-0047
+          name: wmp_bwalk_boatpass2
+        7aab65ab-5ac5b520:
+          model: bac18f9b
+          name: wmp_modern_wall8
+        7aab65ab-5aceebbc:
           model: 1acaf691
           name: wmp_pine_01
-        bae958ef:
+        7aab65ab-5ae04c10:
+          model: 7adc4985
+          name: wmp_trailer01
+        7aab65ab-5ae04c1c:
+          model: 5adc3dc1
+          name: wmp_people_09
+        7aab65ab-5aeb1742:
+          model: 1ae70760
+          name: wmp_planter_02_square
+        7aab65ab-5af5571d:
+          model: da7bc405
+          name: wmp_ga_fence8_oc
+        7aab65ab-5af55767:
+          model: ba7bbeae
+          name: wmp_ga_fence16_1pl
+        7aab65ab-5af82612:
+          model: 3acc3bb8
+          name: wmp_pool01
+        7aab65ab-5afa9412:
+          model: bb1cc31c
+          name: wmp_gardenshed_01
+        7aab65ab-5afb9060:
+          model: 1b44d421
+          name: wmp_villa_gate
+        7aab65ab-5afd2d4f:
+          model: 1b6e5653
+          name: wmp_barrow02
+        7aab65ab-5afd2e10:
+          model: 9b460456
+          name: wmp_pool02
+        7aab65ab-5afdb076:
+          model: 5b95475f
+          name: wmp_lattice_b_16mG
+        7aab65ab-5afdb098:
+          model: bb954094
+          name: wmp_lattice_b_8m
+        7aab65ab-5afe8a08:
+          model: 9b95e347
+          name: wmp_villa_hedge8
+        7aab65ab-5aff6238:
+          model: dbbe110b
+          name: wmp_villa_hedge16b
+        7aab65ab-5aff624c:
+          model: 9bbe0df5
+          name: wmp_villa_hedge16s
+        7aab65ab-5aff6257:
+          model: fbbe08b9
+          name: wmp_villa_hedge8_oc4
+        7aab65ab-5b024483:
+          model: bbbeebb5
+          name: wmp_bins01
+        7aab65ab-5b0244a8:
+          model: 1bbedec3
+          name: wmp_villa_wall_chute
+        7aab65ab-5b03826b:
+          model: baffa0f6
+          name: wmp_ga_gate1_small_closed
+        7aab65ab-5b0405de:
+          model: daffe62a
+          name: wmp_ga_gate2_big_closed
+        7aab65ab-5b078555:
+          model: 1b039036
+          name: wmp_old_lamppost3
+        7aab65ab-5b07cb6b:
+          model: 5b03d63e
+          name: wmp_powerpole_street
+        7aab65ab-5b08ca88:
+          model: 1b04d3a4
+          name: wmp_slatfence_gate
+        7aab65ab-5b08cabe:
+          model: 3b04cccd
+          name: wmp_slatfence16m
+        7aab65ab-5b0bef23:
+          model: fb07a770
+          name: wmp_powerpole_ic
+        7aab65ab-5b113b22:
+          model: 9b0d1eee
+          name: wmp_bucket_rack2
+        7aab65ab-5b13f05b:
+          model: fb0ffbae
+          name: wmp_ivyfence_8m_a
+        7aab65ab-5b14a9e8:
+          model: 3b10a87f
+          name: wmp_planter_04_hd
+        7aab65ab-5b191c26:
+          model: 9b149e91
+          name: wmp_people_mowerman
+        7aab65ab-5b1a223e:
+          model: fa2f36e2
+          name: wmp_ivyfence_8m
+        7aab65ab-5b1a227d:
+          model: 7a2f2bc4
+          name: wmp_simpleFence6m_Gate
+        7aab65ab-5b1a2335:
+          model: 3a2f21e0
+          name: wmp_simpleFence16m
+        7aab65ab-5b1bb745:
+          model: 3a5898be
+          name: wmp_gardenshed_01b
+        7aab65ab-5b1c7b15:
+          model: 1a58b9cd
+          name: wmp_planter_04
+        7aab65ab-5b1c7b51:
+          model: 9a58af55
+          name: wmp_sp_tee
+        7aab65ab-5b1c7bbe:
+          model: 1a58adb9
+          name: wmp_sp_exit_l
+        7aab65ab-5b1dc1bd:
+          model: da582c10
+          name: wmp_sp_cross
+        7aab65ab-5b1e27d3:
+          model: baa618ce
+          name: wmp_vw_bus
+        7aab65ab-5b1e2932:
+          model: 3aa5ee14
+          name: wmp_picket_8m1pl
+        7aab65ab-5b1e4831:
+          model: 5aa64dfb
+          name: wmp_garden_water2
+        7aab65ab-5b20f632:
+          model: 7af6c2f2
+          name: wmp_planter_09
+        7aab65ab-5b20f66b:
+          model: 3af6ba2e
+          name: wmp_cars07_motorcycle_orange_hd
+        7aab65ab-5b2518d8:
+          model: 1b967768
+          name: wmp_log01
+        7aab65ab-5b2617a2:
+          model: 1b97787b
+          name: wmp_log02
+        7aab65ab-5b26d9c1:
+          model: bbbfa871
+          name: wmp_cars11_old_red_hd
+        7aab65ab-5b2f620d:
+          model: db2a1ee1
+          name: wmp_oldwall_oc8m
+        7aab65ab-5b3477df:
+          model: db308327
+          name: wmp_bollards4_chain
+        7aab65ab-5b497c32:
+          model: daf77d3d
+          name: wmp_cars_queue04
+        7aab65ab-5b4c47b0:
+          model: 9b484e20
+          name: wmp_sbarrier2
+        7aab65ab-5b4c7aea:
+          model: 5b48775c
+          name: wmp_cars_parked01
+        7aab65ab-5b5e6764:
+          model: fb5a72b2
+          name: wmp_parking_lamp02
+        7aab65ab-7abb9034:
+          model: 7aab65ab-001c
+          name: wmp_bwalk_fence4m_rail
+        7aab65ab-7abba300:
+          model: 7aab65ab-001e
+          name: wmp_bwalk_fence16m_v1
+        7aab65ab-7abc52f1:
+          model: 7aab65ab-002a
+          name: wmp_lampost04
+        7aab65ab-7abc5b39:
+          model: 7aab65ab-002b
+          name: wmp_bwalk_sign3
+        7aab65ab-7ac5b53f:
+          model: 1ac18d95
+          name: wmp_modern_wallGate
+        7aab65ab-7addfac6:
+          model: dad9e334
+          name: wmp_people_15
+        7aab65ab-7aeb1969:
+          model: 1ae6f5de
+          name: wmp_dumpster01
+        7aab65ab-7aecfd9f:
+          model: fae8fc51
+          name: wmp_people_suitcase_01
+        7aab65ab-7af046aa:
+          model: faec48bf
+          name: wmp_cctv01
+        7aab65ab-7af1206e:
+          model: 7aab65ab-003e
+          name: wmp_sw_fence4
+        7aab65ab-7af55742:
+          model: 1a7bc1a6
+          name: wmp_ga_fence8_1p
+        7aab65ab-7af8265e:
+          model: baa4a0e4
+          name: wmp_cellmast_prop
+        7aab65ab-7afd2dce:
+          model: fb6e2590
+          name: wmp_ga_fence8_1pl_diag
+        7aab65ab-7afdb068:
+          model: 7b954c4c
+          name: wmp_lattice_b_8mG
+        7aab65ab-7b0405c6:
+          model: 1b000804
+          name: wmp_cube_villa09
+        7aab65ab-7b0531e7:
+          model: bb00e89f
+          name: wmp_bbq01
+        7aab65ab-7b0663f6:
+          model: db02b82e
+          name: wmp_pool06
+        7aab65ab-7b06c2c7:
+          model: 3b02c053
+          name: wmp_bench_wood01
+        7aab65ab-7b074196:
+          model: fb033a48
+          name: wmp_stray_sign2
+        7aab65ab-7b0816a2:
+          model: 5b042164
+          name: wmp_pickup03a
+        7aab65ab-7b0816aa:
+          model: 1b041ffe
+          name: wmp_pickup01a
+        7aab65ab-7b08ca95:
+          model: db04d012
+          name: wmp_slatfence_OC
+        7aab65ab-7b08caa5:
+          model: 5b04ce6d
+          name: wmp_slatfence4m
+        7aab65ab-7b0bef30:
+          model: 3b07a200
+          name: wmp_powerpole_triple
+        7aab65ab-7b0c9c60:
+          model: 1b08a1ea
+          name: wmp_wirefence_oc
+        7aab65ab-7b138d8e:
+          model: 5b0e041f
+          name: wmp_lampost08_hd_diag
+        7aab65ab-7b14a9f4:
+          model: 9b10a646
+          name: wmp_tree_06
+        7aab65ab-7b14aa14:
+          model: db109955
+          name: wmp_tree_05_hd
+        7aab65ab-7b14d2df:
+          model: 9b10d625
+          name: wmp_simpleFence12m
+        7aab65ab-7b191c03:
+          model: 5b14b444
+          name: wmp_cooler
+        7aab65ab-7b1a22a8:
+          model: 5a2f26a8
+          name: wmp_simpleFence6mP1
+        7aab65ab-7b1bb75e:
+          model: ba5894c2
+          name: wmp_gardenshed_05
+        7aab65ab-7b1e2883:
+          model: 9aa5f304
+          name: wmp_planter_04a_hd
+        7aab65ab-7b1e2891:
+          model: 5aa5f202
+          name: wmp_umbrella
+        7aab65ab-7b1e293f:
+          model: 3aa5ed87
+          name: wmp_picket_8m2p
+        7aab65ab-7b1e294c:
+          model: faa5e378
+          name: wmp_villa_hedge2_A
+        7aab65ab-7b20f61e:
+          model: 7af6c5f6
+          name: wmp_deckchair4
+        7aab65ab-7b2fa1d1:
+          model: 9b2bab59
+          name: wmp_lampost09_hd
+        7aab65ab-7b3e1d6a:
+          model: 5b3a061e
+          name: wmp_schranke
+        7aab65ab-7b44ba23:
+          model: 1a59f31e
+          name: wmp_pmeter
+        7aab65ab-7b497bf8:
+          name: wmp_cars_queue02-tz1 8-13
+        7aab65ab-7b4c7ac0:
+          model: fb4883c8
+          name: wmp_cars_parked04
+        7aab65ab-7b4d9757:
+          model: 3b711410
+          name: wmp_cars_queue12
+        7aab65ab-7b76b508:
+          model: 9b49a95c
+          name: wmp_old_lamppost5
+        7aab65ab-8d8d8736:
+          name: wmp_cars_queue01-tz2 16-19
+        7aab65ab-9209b009:
+          name: wmp_cars_queue03-tz2 16-24
+        7aab65ab-9ae08558:
+          model: dadc90b5
+          name: wmp_cars02_white
+        7aab65ab-9aeb19d5:
+          model: 9ae6f0d1
+          name: wmp_newsstand
+        7aab65ab-9aecfd82:
+          model: 1ae8fdcc
+          name: wmp_people_suitcase_02
+        7aab65ab-9af10300:
+          model: 3aed010b
+          name: wmp_planter_03x
+        7aab65ab-9af1030a:
+          model: baed004a
+          name: wmp_planter_05x
+        7aab65ab-9af82642:
+          model: faa4a310
+          name: wmp_ga_fence4_1pl
+        7aab65ab-9afd2d0c:
+          model: 9b6e60d7
+          name: wmp_powerpole_double
+        7aab65ab-9afd2d5c:
+          model: 3b6e54a2
+          name: wmp_barrow01
+        7aab65ab-9afd2dbe:
+          model: bb6e26a3
+          name: wmp_ga_fence8_1pl_diag2
+        7aab65ab-9afd2e75:
+          model: db45e128
+          name: wmp_villa_wall16
+        7aab65ab-9afd7f3c:
+          model: 7b6ec7f7
+          name: wmp_cars05_delivery_white
+        7aab65ab-9b03829d:
+          model: 5afecae9
+          name: wmp_garages01
+        7aab65ab-9b066407:
+          model: 5b016ed9
+          name: wmp_powerpole_corner
+        7aab65ab-9b078581:
+          model: 3b037d5a
+          name: wmp_atm01
+        7aab65ab-9b08f366:
+          model: fb04e2c9
+          name: wmp_old_lamppost4_a
+        7aab65ab-9b08fff1:
+          model: 3b050aa5
+          name: wmp_slatfence8m_broke
+        7aab65ab-9b091690:
+          model: 3b051fae
+          name: wmp_ped_sign3
+        7aab65ab-9b0927b3:
+          model: db0532d9
+          name: wmp_powerpole_double2
+        7aab65ab-9b13d683:
+          model: 7b0fd315
+          name: wmp_dumpster03
+        7aab65ab-9b13f081:
+          model: 9b0ff7da
+          name: wmp_dumpster04
+        7aab65ab-9b1a21e6:
+          model: 9a2f525b
+          name: wmp_well
+        7aab65ab-9b1a222e:
+          model: ba2f38e8
+          name: wmp_ivyfence_16m
+        7aab65ab-9b1a2324:
+          model: ba2f2483
+          name: wmp_simpleFence16m_step
+        7aab65ab-9b1d135d:
+          model: 5a7d8919
+          name: wmp_gardenshed_09
+        7aab65ab-9b1dc181:
+          model: 7aa5bda8
+          name: wmp_lattice_w_8m
+        7aab65ab-9b1e27f4:
+          model: daa61431
+          name: wmp_deckchair3
+        7aab65ab-9b1f5614:
+          model: 1acd7fc9
+          name: wmp_gardenshed_11
+        7aab65ab-9b20f65d:
+          model: 5af6bad7
+          name: wmp_arbor04
+        7aab65ab-9b26d9a6:
+          model: 7bbfa902
+          name: wmp_cars10_green_hd
+        7aab65ab-9b26d9cb:
+          model: 7bbfa7d8
+          name: wmp_cars09_old_luxory01_hd
+        7aab65ab-9b2f6202:
+          model: 9b2a2084
+          name: wmp_oldwall_gate16
+        7aab65ab-9b2f621f:
+          model: db2a1caa
+          name: wmp_oldwall_end8m
+        7aab65ab-9b2f622d:
+          model: 7b2a1b76
+          name: wmp_oldwall16m
+        7aab65ab-9b49feee:
+          model: 5af80488
+          name: wmp_cars_queue06
+        7aab65ab-9b4b0d71:
+          model: fb1f7a88
+          name: wmp_pissoir
+        7aab65ab-9b4b0da1:
+          model: db1f6b0d
+          name: wmp_cars_queue08
+        7aab65ab-9b4d9749:
+          model: db7127f9
+          name: wmp_cars_queue13
+        7aab65ab-9b601296:
+          model: 3b5c0f8c
+          name: wmp_old_lamppost4
+        7aab65ab-babc4756:
+          model: 7aab65ab-0028
+          name: wmp_lampost03
+        7aab65ab-baddf705:
+          model: 1acaf691
+          name: wmp_pine_01
+        7aab65ab-bae958ef:
           model: dae54337
           name: wmp_pbench_ortho
-        baecfda9:
+        7aab65ab-baecfda9:
           model: fae8fb34
           name: wmp_stray_sign
-        baee511a:
+        7aab65ab-baee511a:
           model: baea449a
           name: wmp_people_suitcase_01_os16
-        baefe919:
+        7aab65ab-baefe919:
           model: 3aebec31
           name: wmp_bollards4
-        baf04698:
+        7aab65ab-baf04698:
           model: e924203c
           name: wmp_taxi01b_yellow
-        baf046c3:
+        7aab65ab-baf046c3:
           model: 1aec4596
           name: wmp_cctv02
-        baf3ba4d:
+        7aab65ab-baf3ba4d:
           model: da56392d
           name: wmp_cars04_suv_orange_hd
-        baf82631:
+        7aab65ab-baf82631:
           model: baa4a3ad
           name: wmp_ga_fence4_npl
-        bafd2ccf:
+        7aab65ab-bafd2ccf:
           model: 5b6e67f8
           name: wmp_villa_gate_os4
-        bafd2e01:
+        7aab65ab-bafd2e01:
           model: bb6da588
           name: wmp_pool03
-        bafd2e9f:
+        7aab65ab-bafd2e9f:
           model: 9b45dd5d
           name: wmp_villa_wall_OC
-        bafd7f13:
+        7aab65ab-bafd7f13:
           model: db6ed9b2
           name: wmp_pickup04
-        bafe8988:
+        7aab65ab-bafe8988:
           model: 7b95ebff
           name: wmp_villa_hedge8_diag3
-        bafe89fb:
+        7aab65ab-bafe89fb:
           model: 5b95e494
           name: wmp_villa_hedge8_diag1
-        bb02442a:
+        7aab65ab-bb02442a:
           model: fbbf109e
           name: wmp_cube_villa05
-        bb0531ca:
+        7aab65ab-bb0531ca:
           model: 1b016ac0
           name: wmp_villa_hedge16diag
-        bb0531d8:
+        7aab65ab-bb0531d8:
           model: bb016b8a
           name: wmp_villa_hedge16r
-        bb0816d9:
+        7aab65ab-bb0816d9:
           model: 7b040ff7
           name: wmp_cars01a_suv_lblue_angled
-        bb0c9ca0:
+        7aab65ab-bb0c9ca0:
           model: 7b0823cd
           name: wmp_wirefence_gate
-        bb0cf73e:
+        7aab65ab-bb0cf73e:
           model: 9b08fc88
           name: wmp_wirefence_ic
-        bb138da5:
+        7aab65ab-bb138da5:
           model: db0e036e
           name: wmp_lampost07_hd
-        bb13d6ca:
+        7aab65ab-bb13d6ca:
           model: 5b0fb3d8
           name: wmp_ivyfence_8m_os
-        bb13d6ff:
+        7aab65ab-bb13d6ff:
           model: 1b0fac89
           name: wmp_singlepole_end
-        bb13f077:
+        7aab65ab-bb13f077:
           model: 9b0ff92e
           name: wmp_singlepole_long
-        bb14a9d5:
+        7aab65ab-bb14a9d5:
           model: fb10b459
           name: wmp_planter_06
-        bb14d2c6:
+        7aab65ab-bb14d2c6:
           model: 7b10de11
           name: wmp_arbor05_simpleArbor
-        bb1a225c:
+        7aab65ab-bb1a225c:
           model: 1a2f2d49
           name: wmp_compost2
-        bb1a22b8:
+        7aab65ab-bb1a22b8:
           model: da2f2676
           name: wmp_simpleFence6mP2
-        bb1dc143:
+        7aab65ab-bb1dc143:
           model: faa5c4ac
           name: wmp_caravan
-        bb1dc172:
+        7aab65ab-bb1dc172:
           model: 7aa5bf6d
           name: wmp_lattice_w_8m_a
-        bb1dc1ab:
+        7aab65ab-bb1dc1ab:
           model: 9aa54d37
           name: wmp_lattice_w_16m
-        bb1f5640:
+        7aab65ab-bb1f5640:
           model: 3acd707e
           name: wmp_gardenshed_10
-        bb1f5663:
+        7aab65ab-bb1f5663:
           model: baccc5e1
           name: wmp_picket_6m1pr
-        bb239019:
+        7aab65ab-bb239019:
           model: 9b4722cc
           name: wmp_tree_09_hd
-        bb239024:
+        7aab65ab-bb239024:
           model: 1b471c7d
           name: wmp_tree_10_hd
-        bb23903a:
+        7aab65ab-bb23903a:
           model: fb470fbb
           name: wmp_cars06_old_car_blue_hd
-        bb239048:
+        7aab65ab-bb239048:
           model: 7b470bbb
           name: wmp_villa_hedge_oc1_a
-        bb239053:
+        7aab65ab-bb239053:
           model: 3b470933
           name: wmp_villa_hedge16g_a
-        bb2602bc:
+        7aab65ab-bb2602bc:
           model: 5b9759b9
           name: wmp_cars01b_suv_red_hd
-        bb26d99c:
+        7aab65ab-bb26d99c:
           model: 1bbfa9bf
           name: wmp_cars12_old_luxory02_hd
-        bb2f6280:
+        7aab65ab-bb2f6280:
           model: 1b2a198d
           name: wmp_oldwall8m
-        bb30ab89:
+        7aab65ab-bb30ab89:
           model: 1b2c656b
           name: wmp_oldwall4m
-        bb3f5642:
+        7aab65ab-bb3f5642:
           model: db3b4bad
           name: wmp_cars_parked10_trucks_parking
-        bb44ba13:
+        7aab65ab-bb44ba13:
           model: 1a59f6a8
           name: wmp_pbrarrier_8m
-        bb44ba2f:
+        7aab65ab-bb44ba2f:
           model: da59f231
           name: wmp_floodlight
-        bb497bea:
+        7aab65ab-bb497bea:
           name: wmp_cars_queue03-tz1 8-13
-        bb4c28a4:
+        7aab65ab-bb4c28a4:
           model: 1b482528
           name: wmp_cars_queue10
-        bb4c7ad8:
+        7aab65ab-bb4c7ad8:
           model: 1b487b93
           name: wmp_cars_parked02
-        bb5e677e:
+        7aab65ab-bb5e677e:
           model: 9b5a6f7a
           name: wmp_parking_lamp01
-        bb63a9e7:
+        7aab65ab-bb63a9e7:
           model: 1b5fb542
           name: wmp_cctv05
-        bbb56a48:
-          model: bbb1759e
-          name: wmp_taxi_sign
-        bbb9494e:
-          model: baec1e04
-          name: wmp_taxi01_orange
-        bbf000dd:
-          model: 9b832e87
-          name: wmp_cars_parked07_rdock_parking01
-        bcf300f8:
-          model: fcf0b01c
-          name: wmp_floodlight_ethanol
-        bcf36bb7:
-          model: 5cf0b086
-          name: wmp_floodlight_ethanol_diag
-        bd1fdac7:
-          model: 7d1d3761
-          name: wmp_spam_vet_horse3
-        bd22a192:
-          model: dd1ff2e5
-          name: wmp_spam_ivyfence_16m
-        bd352cf2:
-          model: fd32881b
-          name: wmp_short_lantern
-        c9083f73:
-          name: wmp_cone_ethanol_white_cone
-        dabb6826:
+        7aab65ab-dabb6826:
           model: 7aab65ab-0011
           name: wmp_bwalk_sign
-        dabb904e:
+        7aab65ab-dabb904e:
           model: 7aab65ab-001b
           name: wmp_bwalk_fence4m
-        dabba2c0:
+        7aab65ab-dabba2c0:
           model: 7aab65ab-0020
           name: wmp_bwalk_fence5m
-        dabc89f4:
+        7aab65ab-dabc89f4:
           model: 7aab65ab-002d
           name: wmp_bwalk_ramp
-        dac5b52f:
+        7aab65ab-dac5b52f:
           model: 5ac18f3b
           name: wmp_modern_wallOC
-        daddfae8:
+        7aab65ab-daddfae8:
           model: bac0abb1
           name: wmp_people_14
-        dae17f83:
+        7aab65ab-dae17f83:
           model: 1add8a81
           name: wmp_pickup03
-        dae2e708:
+        7aab65ab-dae2e708:
           model: 7adeef0a
           name: wmp_lampost07
-        daee50d9:
+        7aab65ab-daee50d9:
           model: 1aea5759
           name: wmp_taxi_shelter
-        daee50ea:
+        7aab65ab-daee50ea:
           model: 3aea56f8
           name: wmp_ped_sign
-        daee50fc:
+        7aab65ab-daee50fc:
           model: 9aea55d9
           name: wmp_taxi_sign
-        dafd2d8f:
+        7aab65ab-dafd2d8f:
           model: 3b6e2c46
           name: wmp_ga_gate2_big_diag
-        dafd2e52:
+        7aab65ab-dafd2e52:
           model: 5b45e617
           name: wmp_tree_01
-        dafdb086:
+        7aab65ab-dafdb086:
           model: 7b95425a
           name: wmp_lattice_b_16m
-        db024475:
+        7aab65ab-db024475:
           model: 5bbef076
           name: wmp_bins04
-        db02448f:
+        7aab65ab-db02448f:
           model: 5bbee97b
           name: wmp_bins02
-        db038256:
+        7aab65ab-db038256:
           model: 7afed613
           name: wmp_transformer_prop
-        db038286:
+        7aab65ab-db038286:
           model: 9afed1e1
           name: wmp_garages02
-        db0785a5:
+        7aab65ab-db0785a5:
           model: fb037364
           name: wmp_tickets_short
-        db0816c8:
+        7aab65ab-db0816c8:
           model: 7b0416e3
           name: wmp_cars03_suv_orange_angled_hd
-        db0816d0:
+        7aab65ab-db0816d0:
           model: bb0415b7
           name: wmp_cars02_red_hd
-        db090009:
+        7aab65ab-db090009:
           model: 1b0508b8
           name: wmp_slatfence8m_2p
-        db0abf0a:
+        7aab65ab-db0abf0a:
           model: 1b06c5fe
           name: wmp_pine_02_hd
-        db0c9c6e:
+        7aab65ab-db0c9c6e:
           model: 1b089fcf
           name: wmp_wirefence8
-        db13d6ee:
+        7aab65ab-db13d6ee:
           model: 3b0faf14
           name: wmp_singlepole_middle
-        db17befd:
+        7aab65ab-db17befd:
           model: db1396c6
           name: wmp_allot_centre
-        db1a2311:
+        7aab65ab-db1a2311:
           model: 7a2f25e4
           name: wmp_simpleFence8m
-        db1c7ba1:
+        7aab65ab-db1c7ba1:
           model: 5a58ae53
           name: wmp_sp_exit_r
-        db1e27c2:
+        7aab65ab-db1e27c2:
           model: 3aa622f7
           name: wmp_grill
-        db1e2827:
+        7aab65ab-db1e2827:
           model: 1aa60f3f
           name: wmp_garden_water
-        db1e4823:
+        7aab65ab-db1e4823:
           model: daa64f8b
           name: wmp_picket_4m1pr
-        db1f5658:
+        7aab65ab-db1f5658:
           model: 7accc60c
           name: wmp_picket_6m1pl
-        db239062:
+        7aab65ab-db239062:
           model: 7b470851
           name: wmp_villa_hedge16s_a
-        db23a46a:
+        7aab65ab-db23a46a:
           model: 7b473839
           name: wmp_pool03_a
-        db2518e3:
+        7aab65ab-db2518e3:
           model: 1b9673cf
           name: wmp_lanterns
-        db2662f2:
+        7aab65ab-db2662f2:
           model: db97add4
           name: wmp_ivyfence_4m
-        db266302:
+        7aab65ab-db266302:
           model: fb97aced
           name: wmp_log04
-        db46dab8:
+        7aab65ab-db46dab8:
           model: 1aa73aab
           name: wmp_floodlight_a_tall
-        db497c04:
+        7aab65ab-db497c04:
           name: wmp_cars_queue01-tz1 8-13
-        db49fee1:
+        7aab65ab-db49fee1:
           model: 3af80803
           name: wmp_cars_queue07
-        db4b0d66:
+        7aab65ab-db4b0d66:
           model: db1f83c7
           name: wmp_sbarrier
-        db4b0d96:
+        7aab65ab-db4b0d96:
           model: 5b1f6cec
           name: wmp_cars_queue05
-        db4c2875:
+        7aab65ab-db4c2875:
           model: 7b482ed6
           name: wmp_cars_queue11
-        db76b4bd:
+        7aab65ab-db76b4bd:
           model: db7f3a99
           name: wmp_recycling2
-        dbb56aa6:
-          model: 3bb17272
-          name: wmp_ad_fence4m
-        dbb817a0:
-          model: 7bb41dde
-          name: wmp_ad_bench_half
-        dbf000f8:
-          model: 7b8334b9
-          name: wmp_cars_parked09_rdock_parking03
-        dc3e2244:
-          model: fb6e990c
-          name: wmp_cellmast_bldg
-        dd1eec82:
-          model: fd1c4210
-          name: wmp_spam_vehicle01_van_brown
-        dd1fdab9:
-          model: fd1d3793
-          name: wmp_spam_vet_horse2
-        dd22a185:
-          model: fd1ff821
-          name: wmp_spam_ivyfence_4m
-        dd22a1b0:
-          model: 1d1ffe53
-          name: wmp_spam_ivyfence_gate2
-        dd576cef:
-          model: 9d2d3c57
-          name: wmp_spam_vehicle04_pickup01
-        dd5e358e:
-          model: 9d5b925c
-          name: wmp_spam_horses3
-        dd609fc6:
-          model: dd5df300
-          name: wmp_spam_horse_rider
-        ec60a57e:
-          model: 9ab4de66
-          name: wmp_bwalk_oc__murimk
-        fabb901d:
+        7aab65ab-fabb901d:
           model: 7aab65ab-001d
           name: wmp_bwalk_sign2
-        fabba27e:
+        7aab65ab-fabba27e:
           model: 7aab65ab-0021
           name: wmp_bwalk_fence8m_banner
-        fabc7377:
+        7aab65ab-fabc7377:
           model: 7aab65ab-002c
           name: wmp_lampost05_diag
-        fabca19a:
+        7aab65ab-fabca19a:
           model: 7aab65ab-002e
           name: wmp_bwalk_fence2m
-        facc99b3:
+        7aab65ab-facc99b3:
           model: 1a7abd4c
           name: wmp_people_13_marius
-        fae196ad:
+        7aab65ab-fae196ad:
           model: dadda0ce
           name: wmp_pickup02
-        faee5108:
+        7aab65ab-faee5108:
           model: 1aea5483
           name: wmp_people_pram_os
-        faf12061:
+        7aab65ab-faf12061:
           model: 7aab65ab-003d
           name: wmp_sw_fence8
-        faf12081:
+        7aab65ab-faf12081:
           model: faed298a
           name: wmp_sw_fence16_np
-        faf55731:
+        7aab65ab-faf55731:
           model: 5a7bc21d
           name: wmp_ga_fence8_np
-        faf588c5:
+        7aab65ab-faf588c5:
           model: 1a7c1c9a
           name: wmp_ga_fullfence
-        fafd2deb:
+        7aab65ab-fafd2deb:
           model: 1b6db3fd
           name: wmp_pool04
-        fafd2e82:
+        7aab65ab-fafd2e82:
           model: db44b98e
           name: wmp_villa_wall32
-        fafd2e90:
+        7aab65ab-fafd2e90:
           model: 3b45de83
           name: wmp_villa_wall4_end
-        fafd7f1c:
+        7aab65ab-fafd7f1c:
           model: 5b6ed88e
           name: wmp_ga_gate1_small_open
-        fafe8fe4:
+        7aab65ab-fafe8fe4:
           model: fb95e6a3
           name: wmp_villa_hedge_oc1
-        fb02449b:
+        7aab65ab-fb02449b:
           model: bbbee899
           name: wmp_bins03
-        fb078598:
+        7aab65ab-fb078598:
           model: 9b03777c
           name: wmp_pbench22_oc
-        fb0816c1:
+        7aab65ab-fb0816c1:
           model: fb041987
           name: wmp_cars04b_suv_orange_hd
-        fb08cab1:
+        7aab65ab-fb08cab1:
           model: 5b04cd77
           name: wmp_slatfence32m
-        fb09169a:
+        7aab65ab-fb09169a:
           model: bb051ba1
           name: wmp_ped_sign2
-        fb0927be:
+        7aab65ab-fb0927be:
           model: 7b053104
           name: wmp_powerpole_single
-        fb0c9c7f:
+        7aab65ab-fb0c9c7f:
           model: 1b08278e
           name: wmp_wirefence_post
-        fb0c9c8b:
+        7aab65ab-fb0c9c8b:
           model: 5b08268a
           name: wmp_wirefence16
-        fb0c9cae:
+        7aab65ab-fb0c9cae:
           model: 3b081e05
           name: wmp_wirefence32
-        fb138db7:
+        7aab65ab-fb138db7:
           model: 3b0e029e
           name: wmp_lampost06_hd
-        fb13d66b:
+        7aab65ab-fb13d66b:
           model: bb0fdbdd
           name: wmp_tree_03
-        fb13f068:
+        7aab65ab-fb13f068:
           model: 3b0ffa14
           name: wmp_singlepole_short
-        fb191b93:
+        7aab65ab-fb191b93:
           model: 9b150c6d
           name: wmp_gardenshed_04
-        fb1a224b:
+        7aab65ab-fb1a224b:
           model: 3a2f2ee4
           name: wmp_trailer01_hd
-        fb1bb784:
+        7aab65ab-fb1bb784:
           model: da589246
           name: wmp_gardenshed_06
-        fb1c7b83:
+        7aab65ab-fb1c7b83:
           model: 9a58aef6
           name: wmp_sp_single
-        fb1dc1e4:
+        7aab65ab-fb1dc1e4:
           model: 5aa54750
           name: wmp_patio_table2
-        fb1e2855:
+        7aab65ab-fb1e2855:
           model: faa5fffe
           name: wmp_planter_08
-        fb1e2912:
+        7aab65ab-fb1e2912:
           model: baa5eed6
           name: wmp_picket_16m1pr
-        fb20f63b:
+        7aab65ab-fb20f63b:
           model: daf6c28c
           name: wmp_garden_lamp
-        fb226fbb:
+        7aab65ab-fb226fbb:
           model: 1b1e78cb
           name: wmp_crossover
-        fb23902e:
+        7aab65ab-fb23902e:
           model: bb471ac1
           name: wmp_tree_12
-        fb23b97f:
+        7aab65ab-fb23b97f:
           model: 3b47516f
           name: wmp_grill2
-        fb23b990:
+        7aab65ab-fb23b990:
           model: 9b47487a
           name: wmp_ga_lamppostA
-        fb2662c0:
+        7aab65ab-fb2662c0:
           model: 9b97c331
           name: wmp_lanterns2
-        fb2663b2:
+        7aab65ab-fb2663b2:
           model: bb97c47e
           name: wmp_grill3
-        fb3477f1:
+        7aab65ab-fb3477f1:
           model: 7b308272
           name: wmp_bollards6_chain
-        fb4c2865:
+        7aab65ab-fb4c2865:
           model: 7b483202
           name: wmp_cctv03
-        fb4c7ab2:
+        7aab65ab-fb4c7ab2:
           name: wmp_cars_parked05-tz 10-14
-        fb85eb2f:
+        7aab65ab-fb85eb2f:
           model: 7b88a0d6
           name: wmp_billboard02_rdock
-        fbb56a6a:
+        9b9d22a8-1bec6579:
+          model: bb488558
+          name: wmp_cars_parked05
+        9b9d22a8-1bee6454:
+          model: bb96248c
+          name: wmp_villa_gate2
+        9b9d22a8-1beffd81:
+          model: 9af78bbe
+          name: wmp_cars_queue01
+        9b9d22a8-1beffd8f:
+          model: 7af78f70
+          name: wmp_cars_queue02
+        9b9d22a8-1bf000ec:
+          model: 5b832e14
+          name: wmp_cars_parked08_rdock_parking02
+        9b9d22a8-1bf6c60f:
+          name: wmp_cars_parked07_rdock_parking01-tz 9-15
+        9b9d22a8-3bec656f:
+          model: 1b487d54
+          name: wmp_cars_parked03
+        9b9d22a8-5bee5898:
+          model: faf66feb
+          name: wmp_transformer3
+        9b9d22a8-5bee5ba6:
+          model: 7b6e9643
+          name: wmp_gardenshed_03
+        9b9d22a8-5bee5f0b:
+          model: faed25ab
+          name: wmp_sw_post
+        9b9d22a8-5c3e242f:
+          model: fb6e863a
+          name: wmp_transformer
+        9b9d22a8-7bee589d:
+          model: 7af680c5
+          name: wmp_water_supply
+        9b9d22a8-7bee6179:
+          model: 3b08ae5d
+          name: wmp_transformer2
+        9b9d22a8-7beffd9d:
+          model: 3af794d1
+          name: wmp_cars_queue03
+        9b9d22a8-9c39defa:
+          model: 7aab65ab-0019
+          name: wmp_bwalk_fence16m_v2
+        9b9d22a8-bbf000dd:
+          model: 9b832e87
+          name: wmp_cars_parked07_rdock_parking01
+        9b9d22a8-dbf000f8:
+          model: 7b8334b9
+          name: wmp_cars_parked09_rdock_parking03
+        9b9d22a8-dc3e2244:
+          model: fb6e990c
+          name: wmp_cellmast_bldg
+        9bb4b06e-1d14a2e7:
+          model: dd11b0c7
+          name: wmp_woodfence_16m2p
+        9bb4b06e-1d14a352:
+          model: fd11b0ed
+          name: wmp_woodfence_16m1p
+        9bb4b06e-1d185f10:
+          model: dd159463
+          name: wmp_spam_vet_kennel02
+        9bb4b06e-1d185f20:
+          model: dd1593fc
+          name: wmp_spam_vet_horse
+        9bb4b06e-1d187c7a:
+          model: dd15d665
+          name: wmp_spam_vet_saddles
+        9bb4b06e-1d188133:
+          model: 5d15de12
+          name: wmp_woodfence_16m_gate2
+        9bb4b06e-1d1dbfe4:
+          model: fd1afb59
+          name: wmp_spam_fencewall_16m
+        9bb4b06e-1d1eecad:
+          model: 1d1c494c
+          name: wmp_spam_lampost_diag
+        9bb4b06e-3bb56a60:
+          model: fbb1732e
+          name: wmp_ad_lamppost01
+        9bb4b06e-3bb9464f:
+          model: 5bb54e19
+          name: wmp_ad_rembard
+        9bb4b06e-3bcec43c:
+          model: 5bcaa850
+          name: wmp_powerpole_railyard
+        9bb4b06e-3d14a2ca:
+          model: 1d11b165
+          name: wmp_woodfence_16m_gate
+        9bb4b06e-3d185f46:
+          model: 1d1590c8
+          name: wmp_cars_parked06_vet_parking
+        9bb4b06e-3d189dfe:
+          model: 9d15fa62
+          name: wmp_spam_vet_streetlight
+        9bb4b06e-3d1eec91:
+          model: bd1c43bd
+          name: wmp_spam_vehicle02_truck
+        9bb4b06e-5bb56a9b:
+          model: 9bb1728f
+          name: wmp_ad_fence8m
+        9bb4b06e-5d14a305:
+          model: 9d11b02f
+          name: wmp_woodfence_8m1p
+        9bb4b06e-5d14a310:
+          model: 5d11b0a3
+          name: wmp_woodfence_8m2p_ivy
+        9bb4b06e-5d185f2a:
+          model: 1d15d757
+          name: wmp_spam_vet_horse_pen
+        9bb4b06e-5d185f37:
+          model: 3d15936b
+          name: wmp_trailer02_spam_vet_horse_trailer
+        9bb4b06e-5d187c8d:
+          model: 7d15d71e
+          name: wmp_spam_vet_haybale
+        9bb4b06e-5d1dbff3:
+          model: bd1afad5
+          name: wmp_spam_fencewall_8m2
+        9bb4b06e-7bb56ab4:
+          model: 7bb17212
+          name: wmp_ad_busstop
+        9bb4b06e-7d14a2f7:
+          model: 9d11b147
+          name: wmp_woodfence_4m2p
+        9bb4b06e-7d1dbfff:
+          model: 3d1afb20
+          name: wmp_spam_fencewall_16m2
+        9bb4b06e-7d228980:
+          model: dd214d0b
+          name: wmp_spam_watermill01
+        9bb4b06e-9bb56a90:
+          model: bbb172b4
+          name: wmp_ad_fence16m
+        9bb4b06e-9bb81796:
+          model: 1bb41f38
+          name: wmp_ad_tree
+        9bb4b06e-9c52392b:
+          model: 1c4f957b
+          name: wmp_floodlight_railyard
+        9bb4b06e-9d14a2db:
+          model: dd11b123
+          name: wmp_woodfence_8m2p
+        9bb4b06e-9d1dc00c:
+          model: 3d1afafd
+          name: wmp_spam_fencewall_8m
+        9bb4b06e-9d1eec9e:
+          model: 1d1c496d
+          name: wmp_spam_lampost
+        9bb4b06e-9d21b073:
+          model: bd1fd9ef
+          name: wmp_spam_watermill02
+        9bb4b06e-9d22bc55:
+          model: 3d2016c4
+          name: wmp_spam_pub_lamp
+        9bb4b06e-bbb56a48:
+          model: bbb1759e
+          name: wmp_taxi_sign
+        9bb4b06e-bbb9494e:
+          model: baec1e04
+          name: wmp_taxi01_orange
+        9bb4b06e-bcf300f8:
+          model: fcf0b01c
+          name: wmp_floodlight_ethanol
+        9bb4b06e-bcf36bb7:
+          model: 5cf0b086
+          name: wmp_floodlight_ethanol_diag
+        9bb4b06e-bd1fdac7:
+          model: 7d1d3761
+          name: wmp_spam_vet_horse3
+        9bb4b06e-bd22a192:
+          model: dd1ff2e5
+          name: wmp_spam_ivyfence_16m
+        9bb4b06e-dbb56aa6:
+          model: 3bb17272
+          name: wmp_ad_fence4m
+        9bb4b06e-dbb817a0:
+          model: 7bb41dde
+          name: wmp_ad_bench_half
+        9bb4b06e-dd1eec82:
+          model: fd1c4210
+          name: wmp_spam_vehicle01_van_brown
+        9bb4b06e-dd1fdab9:
+          model: fd1d3793
+          name: wmp_spam_vet_horse2
+        9bb4b06e-dd22a185:
+          model: fd1ff821
+          name: wmp_spam_ivyfence_4m
+        9bb4b06e-dd22a1b0:
+          model: 1d1ffe53
+          name: wmp_spam_ivyfence_gate2
+        9bb4b06e-fbb56a6a:
           model: 1bb172f5
           name: wmp_ad_lamppost02
-        fbb817ab:
+        9bb4b06e-fbb817ab:
           model: bbb41db4
           name: wmp_ad_bench_full
-        fbb817b6:
+        9bb4b06e-fbb817b6:
           model: bbb42984
           name: wmp_ad_fountain
-        fd142c9f:
+        9bb4b06e-fd142c9f:
           model: 1d1188aa
           name: wmp_spam_vet_kennel01
-        fd177ccc:
+        9bb4b06e-fd177ccc:
           model: 1d15968c
           name: wmp_spam_vet_house
-        fd22a1a1:
+        9bb4b06e-fd22a1a1:
           model: 5d1ff96a
           name: wmp_spam_ivyfence_gate
-        fd5e359d:
+        a2ed0375-fe110190:
+          name: wmp_Cone_White_2
+        a5089969-06ab4063:
+          name: wmp_Cone_Orange
+        b92e7674-7b189fda:
+          model: 7ab5e189
+          name: wmp_bwalk_straight8m__murimk
+        b92e7674-8c95120e:
+          model: 3ab5e0ef
+          name: wmp_bwalk_ic__murimk
+        b92e7674-bab9fd0b:
+          model: fab4df09
+          name: wmp_bwalk_straight16m__murimk
+        b92e7674-ec60a57e:
+          model: 9ab4de66
+          name: wmp_bwalk_oc__murimk
+        bd33a432-1d4e7cae:
+          model: 5c14b78b
+          name: wmp_hydrant_ruralDock
+        bd33a432-3d576cfb:
+          model: 7d2d38ba
+          name: wmp_spam_vehicle03_vw_bus_02
+        bd33a432-5d33a433:
+          model: ddccea25
+          name: wmp_spam_busstop02
+        bd33a432-5d576ce4:
+          model: fd2d3387
+          name: wmp_spam_dumpster01
+        bd33a432-5d576d0c:
+          model: 3d2d3f9d
+          name: wmp_spam_vehicle05_pickup02
+        bd33a432-7d609fa6:
+          model: fd5def56
+          name: wmp_spam_horse_man
+        bd33a432-7d609fe2:
+          model: 9d5deb91
+          name: wmp_spam_horse_wagon
+        bd33a432-9d352d0a:
+          model: 3d328858
+          name: wmp_tall_lantern
+        bd33a432-9d352d17:
+          model: 3d3288b3
+          name: wmp_spam_busstop03
+        bd33a432-9d576d21:
+          model: 5d2d33a7
+          name: wmp_spam_dumpster02
+        bd33a432-9d609fb2:
+          model: dd5df794
+          name: wmp_spam_logfence_gate
+        bd33a432-bd352cf2:
+          model: fd32881b
+          name: wmp_short_lantern
+        bd33a432-dd576cef:
+          model: 9d2d3c57
+          name: wmp_spam_vehicle04_pickup01
+        bd33a432-dd5e358e:
+          model: 9d5b925c
+          name: wmp_spam_horses3
+        bd33a432-dd609fc6:
+          model: dd5df300
+          name: wmp_spam_horse_rider
+        bd33a432-fd5e359d:
           model: 9d5b8fe5
           name: wmp_spam_logfence_8m
-        fe110190:
-          name: wmp_Cone_White_2
+        bdd18622-34148b91:
+          name: wmp_Globe_Light
+        c8dbccba-1d786ba4:
+          name: wmp_cone_ethanol_orange_cone2
+        c8dbccba-4e0daf5c:
+          name: wmp_cone_ethanol_orange_cone3
+        c8dbccba-8d7a894b:
+          name: wmp_cone_ethanol_orange_cone
+        c8dbccba-94ed0174:
+          name: wmp_cone_ethanol_white_cone2
+        c8dbccba-9790d3c6:
+          name: wmp_LightGlobe_Cv1
+        c8dbccba-c9083f73:
+          name: wmp_cone_ethanol_white_cone
+        c977c536-350dda10:
+          name: WMP_Streetlight1xdiagonal_WMP
+        c977c536-74cc01dc:
+          name: WMP_Streetlight1xStreetlight_WMP
+        c977c536-79f1736a:
+          name: WMP_Streetlight1Offset
+        c977c536-993d9239:
+          name: wmp_LightGlobe_A
+        c977c536-a26e0f98:
+          name: WMP_Streetlight1xDiagonalAVE
+        cea1154a-561a4066:
+          model: aecdd2e9
+          name: wmp_causeway_hedge
+        f4b80a58-5ede26cc:
+          name: wmp_LightGlobe_Cv2
     sha256: 17f2114203cd3f5500db649c49c19f9c737282b577dec9ab136203acc8b89ec0
     size: 21050911
     support: https://community.simtropolis.com/forums/topic/758502-stex-custodian-general-support-topic

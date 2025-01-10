@@ -1,19 +1,19 @@
 import { useMemo } from "react"
 
 import { Box, Typography } from "@mui/material"
+import { collect, isEmpty, mapValues } from "@salinco/nice-utils"
 import { Virtuoso } from "react-virtuoso"
 
 import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
-import { collect, isEmpty, mapValues } from "@salinco/nice-utils"
 import { Page, useHistory, useLocation } from "@utils/navigation"
-import { isHexSearch } from "@utils/packages"
+import { type MatchResult, getMatchingContents, isHexSearch } from "@utils/search"
 import { usePackageFilters, useStore } from "@utils/store"
+
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
-import { getMatchingContents } from "./useMatchingContents"
 
 export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
   const { page } = useLocation()
@@ -26,14 +26,14 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
 
   const matchingMaxisContents = useMemo(() => {
     if (maxisExemplars && isHexSearch(search) && page === Page.Packages) {
-      return getMatchingContents(maxisExemplars, search)
+      return getMatchingContents(maxisExemplars, search.trim().toLowerCase())
     }
   }, [maxisExemplars, page, search])
 
   const matchingPluginContents = useMemo(() => {
     if (isHexSearch(search) && page === Page.Packages) {
       return mapValues(externalPlugins, contents => {
-        const matching = getMatchingContents(contents, search)
+        const matching = getMatchingContents(contents, search.trim().toLowerCase())
         return matching.length ? matching : undefined
       })
     }
@@ -57,6 +57,30 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
   }
 
   return (
+    <Virtuoso
+      components={{ Header: SearchResults }}
+      context={{ matchingMaxisContents, matchingPluginContents }}
+      data={packageIds}
+      itemContent={(index, packageId) => (
+        <Box padding={2} paddingTop={index === 0 ? 2 : 0}>
+          <PackageListItem packageId={packageId} />
+        </Box>
+      )}
+      initialTopMostItemIndex={initialIndex}
+      style={{ flex: 1, width: "100%" }}
+    />
+  )
+}
+
+function SearchResults({
+  context: { matchingMaxisContents, matchingPluginContents = {} } = {},
+}: {
+  context?: {
+    matchingMaxisContents?: MatchResult[]
+    matchingPluginContents?: { [path in string]?: MatchResult[] }
+  }
+}): JSX.Element {
+  return (
     <>
       {!!matchingMaxisContents?.length && (
         <FlexBox pt={2} px={2} width="100%">
@@ -75,7 +99,7 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
         </FlexBox>
       )}
 
-      {collect(matchingPluginContents, (matchingContents, pluginPath) => (
+      {collect(matchingPluginContents, (contents, pluginPath) => (
         <FlexBox pt={2} px={2} width="100%">
           <ListItem
             header={Header}
@@ -86,7 +110,7 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
               <b>Match results:</b>
             </Typography>
             <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-              {matchingContents.map(({ name, type }) => (
+              {contents.map(({ name, type }) => (
                 <Typography component="li" key={type} variant="body2">
                   {type}: {name}
                 </Typography>
@@ -95,17 +119,6 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
           </ListItem>
         </FlexBox>
       ))}
-
-      <Virtuoso
-        data={packageIds}
-        itemContent={(index, packageId) => (
-          <Box padding={2} paddingTop={index === 0 ? 2 : 0}>
-            <PackageListItem packageId={packageId} />
-          </Box>
-        )}
-        initialTopMostItemIndex={initialIndex}
-        style={{ flex: 1, width: "100%" }}
-      />
     </>
   )
 }

@@ -521,6 +521,7 @@
     "requirements": "Requirements",
     "size": "Size",
     "stage": "Growth stage",
+    "tilesets": "Building styles",
     "water": "Water consumption",
     "waterPollution": "Water pollution",
     "waterProduction": "Water production"
@@ -741,8 +742,7 @@
     "lots_other": "{{count}} lots",
     "mmps_one": "{{count}} MMP",
     "mmps_other": "{{count}} MMPs",
-    "options_one": "{{count}} option",
-    "options_other": "{{count}} options",
+    "options": "Options",
     "optionalDependencies_one": "{{count}} optional dependency",
     "optionalDependencies_other": "{{count}} optional dependencies",
     "packages_one": "{{count}} package",

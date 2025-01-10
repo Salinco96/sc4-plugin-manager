@@ -93,7 +93,7 @@ export async function loadDBPF(
     }
   }
 
-  const dir = contents.entries[DBPFFileType.DIR]
+  const dir = contents.entries[DBPFFileType.DIR as TGI]
 
   if (dir) {
     const dirEntryCount = dir.size / DIR_ENTRY_SIZE

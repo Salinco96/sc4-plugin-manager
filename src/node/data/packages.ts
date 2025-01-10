@@ -5,8 +5,6 @@ import {
   filterValues,
   generate,
   get,
-  groupBy,
-  indexBy,
   isEmpty,
   isEqual,
   isEqualDeep,
@@ -27,25 +25,29 @@ import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
-import type { TGI } from "@common/dbpf"
+import { type GroupID, InstanceID, type TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
-import type { FloraID } from "@common/mmps"
 import type { Requirements } from "@common/options"
 import { type PackageID, getOwnerId, isNew } from "@common/packages"
 import type { PropID } from "@common/props"
 import type { Feature, PackageInfo, PackageWarning } from "@common/types"
+import { split } from "@common/utils/string"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import type {
+  ContentsInfo,
   DependencyInfo,
   FileInfo,
+  ModelID,
+  TextureID,
   VariantAssetInfo,
   VariantID,
   VariantInfo,
 } from "@common/variants"
 import { toPosix } from "@node/files"
 
+import type { FloraID } from "@common/mmps"
 import type { AssetData } from "./assets"
 import { type BuildingData, loadBuildingInfo, writeBuildingInfo } from "./buildings"
 import { writeCategories } from "./categories"
@@ -62,7 +64,7 @@ export interface ContentsData {
    */
   buildingFamilies?: {
     [path in string]?: {
-      [familyId in FamilyID]?: FamilyData
+      [id in `${GroupID}-${FamilyID}`]?: FamilyData
     }
   }
 
@@ -71,7 +73,7 @@ export interface ContentsData {
    */
   buildings?: {
     [path in string]?: {
-      [instanceId in BuildingID]?: BuildingData
+      [id in `${GroupID}-${BuildingID}`]?: BuildingData
     }
   }
 
@@ -80,7 +82,7 @@ export interface ContentsData {
    */
   lots?: {
     [path in string]?: {
-      [instanceId in LotID]?: LotData
+      [id in LotID]?: LotData
     }
   }
 
@@ -89,7 +91,7 @@ export interface ContentsData {
    */
   mmps?: {
     [path in string]?: {
-      [instanceId in FloraID]?: FloraData
+      [id in `${GroupID}-${BuildingID}`]?: FloraData
     }
   }
 
@@ -97,7 +99,7 @@ export interface ContentsData {
    * Included S3D model IDs, grouped by file
    */
   models?: {
-    [path in string]?: string[]
+    [path in string]?: Array<GroupID | `${GroupID}-${string}`>
   }
 
   /**
@@ -105,7 +107,7 @@ export interface ContentsData {
    */
   propFamilies?: {
     [path in string]?: {
-      [familyId in FamilyID]?: FamilyData
+      [id in `${GroupID}-${FamilyID}`]?: FamilyData
     }
   }
 
@@ -114,7 +116,7 @@ export interface ContentsData {
    */
   props?: {
     [path in string]?: {
-      [instanceId in PropID]?: PropData
+      [id in `${GroupID}-${PropID}`]?: PropData
     }
   }
 
@@ -122,7 +124,7 @@ export interface ContentsData {
    * Included FSH texture IDs, grouped by file
    */
   textures?: {
-    [path in string]?: string[]
+    [path in string]?: TextureID[]
   }
 }
 
@@ -265,7 +267,7 @@ export interface VariantAssetData extends AssetData {
    * - By default, all txt files with containing "cleanitol" are included.
    * - If specified, *only* the provided paths are included.
    */
-  cleanitol?: string[]
+  cleanitol?: MaybeArray<string>
 
   /**
    * List of documentation paths (glob patterns)
@@ -273,12 +275,12 @@ export interface VariantAssetData extends AssetData {
    * - By default, all txt/pdf/html/css and image files are included.
    * - If specified, *only* the provided paths are included.
    */
-  docs?: Array<FileData | FileDataRecord | string>
+  docs?: Array<FileData | FileDataRecord | string> | string
 
   /**
    * List of paths to exclude (glob patterns)
    */
-  exclude?: string[]
+  exclude?: MaybeArray<string>
 
   /**
    * List of paths to include (glob patterns, including condition replacements)
@@ -286,7 +288,7 @@ export interface VariantAssetData extends AssetData {
    * - By default, all dat/dll/sc4desc/sc4lot/sc4model files are included.
    * - If specified, *only* the provided paths are included.
    */
-  include?: Array<FileData | FileDataRecord | string>
+  include?: Array<FileData | FileDataRecord | string> | string
 
   /**
    * Asset ID
@@ -559,59 +561,65 @@ export function loadVariantInfo(
 
   const images = union(variantData.images ?? [], packageData.images ?? [])
 
-  const buildingFamilies = entries({
-    ...packageData.buildingFamilies,
-    ...mapValues(variantData.buildingFamilies ?? {}, (families, file) => ({
-      ...packageData.buildingFamilies?.[file],
-      ...families,
-    })),
-  }).flatMap(([file, instances]) =>
-    collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
+  const contents = loadContentsInfo(
+    {
+      buildingFamilies: {
+        ...packageData.buildingFamilies,
+        ...mapValues(variantData.buildingFamilies ?? {}, (families, file) => ({
+          ...packageData.buildingFamilies?.[file],
+          ...families,
+        })),
+      },
+      buildings: {
+        ...packageData.buildings,
+        ...mapValues(variantData.buildings ?? {}, (buildings, file) => ({
+          ...packageData.buildings?.[file],
+          ...buildings,
+        })),
+      },
+      lots: {
+        ...packageData.lots,
+        ...mapValues(variantData.lots ?? {}, (lots, file) => ({
+          ...packageData.lots?.[file],
+          ...lots,
+        })),
+      },
+      mmps: {
+        ...packageData.mmps,
+        ...mapValues(variantData.mmps ?? {}, (mmps, file) => ({
+          ...packageData.mmps?.[file],
+          ...mmps,
+        })),
+      },
+      models: {
+        ...packageData.models,
+        ...mapValues(variantData.models ?? {}, (models, file) =>
+          union(packageData.models?.[file] ?? [], models),
+        ),
+      },
+      propFamilies: {
+        ...packageData.propFamilies,
+        ...mapValues(variantData.propFamilies ?? {}, (families, file) => ({
+          ...packageData.propFamilies?.[file],
+          ...families,
+        })),
+      },
+      props: {
+        ...packageData.props,
+        ...mapValues(variantData.props ?? {}, (props, file) => ({
+          ...packageData.props?.[file],
+          ...props,
+        })),
+      },
+      textures: {
+        ...packageData.textures,
+        ...mapValues(variantData.textures ?? {}, (textures, file) =>
+          union(packageData.textures?.[file] ?? [], textures),
+        ),
+      },
+    },
+    categories,
   )
-
-  const buildings = entries({
-    ...packageData.buildings,
-    ...mapValues(variantData.buildings ?? {}, (buildings, file) => ({
-      ...packageData.buildings?.[file],
-      ...buildings,
-    })),
-  }).flatMap(([file, instances]) =>
-    collect(instances, (data, id) => loadBuildingInfo(file, id, data, categories)),
-  )
-
-  const lots = entries({
-    ...packageData.lots,
-    ...mapValues(variantData.lots ?? {}, (lots, file) => ({
-      ...packageData.lots?.[file],
-      ...lots,
-    })),
-  }).flatMap(([file, instances]) => collect(instances, (data, id) => loadLotInfo(file, id, data)))
-
-  const mmps = entries({
-    ...packageData.mmps,
-    ...mapValues(variantData.mmps ?? {}, (mmps, file) => ({
-      ...packageData.mmps?.[file],
-      ...mmps,
-    })),
-  }).flatMap(([file, instances]) => collect(instances, (data, id) => loadFloraInfo(file, id, data)))
-
-  const propFamilies = entries({
-    ...packageData.propFamilies,
-    ...mapValues(variantData.propFamilies ?? {}, (families, file) => ({
-      ...packageData.propFamilies?.[file],
-      ...families,
-    })),
-  }).flatMap(([file, instances]) =>
-    collect(instances, (data, id) => loadFamilyInfo(file, id, data)),
-  )
-
-  const props = entries({
-    ...packageData.props,
-    ...mapValues(variantData.props ?? {}, (props, file) => ({
-      ...packageData.props?.[file],
-      ...props,
-    })),
-  }).flatMap(([file, instances]) => collect(instances, (data, id) => loadPropInfo(file, id, data)))
 
   const options = unionBy(
     mapDefined(variantData.options ?? [], loadOptionInfo),
@@ -624,9 +632,6 @@ export function loadVariantInfo(
     loadCredits(packageData.credits ?? []),
     credit => credit.id ?? credit.text,
   )
-
-  const models = { ...packageData.models, ...variantData.models }
-  const textures = { ...packageData.textures, ...variantData.textures }
 
   const thanks = unionBy(
     loadCredits(variantData.thanks ?? []),
@@ -644,45 +649,38 @@ export function loadVariantInfo(
   const release = variantData.release ?? packageData.release
 
   const variantInfo: VariantInfo = {
-    assets: assets.length ? assets : undefined,
+    ...contents,
+    assets,
     authors: mergedAuthors,
-    buildingFamilies: buildingFamilies.length ? buildingFamilies : undefined,
-    buildings: buildings.length ? buildings : undefined,
     categories: mergedCategories,
-    credits: credits.length ? credits : undefined,
-    dependencies: dependencies.length ? dependencies : undefined,
+    credits,
+    dependencies,
     deprecated: variantData.deprecated ?? packageData.deprecated,
     description: variantData.description ?? packageData.description,
     disabled: variantData.disabled ?? packageData.disabled,
     experimental: variantData.experimental ?? packageData.experimental,
     files: variantData.files?.flatMap(loadFileInfo),
     id: variantId,
-    images: images.length ? images : undefined,
+    images,
     lastGenerated: lastGenerated ? new Date(lastGenerated) : undefined,
     lastModified: lastModified ? new Date(lastModified) : undefined,
     logs: variantData.logs ?? packageData.logs,
-    lots: lots.length ? lots : undefined,
-    mmps: mmps.length ? mmps : undefined,
-    models: !isEmpty(models) ? models : undefined,
     name: variantData.name,
-    optional: optionalDependencies.length ? optionalDependencies : undefined,
-    options: options.length ? options : undefined,
+    optional: optionalDependencies,
+    options,
     priority:
       variantData.priority ?? packageData.priority ?? getPriority(mergedCategories, categories),
-    propFamilies: propFamilies.length ? propFamilies : undefined,
-    props: props.length ? props : undefined,
     readme: isString(readme) ? [readme] : readme,
     release: release ? new Date(release) : undefined,
     repository: variantData.repository ?? packageData.repository,
-    requirements: !isEmpty(requirements) ? requirements : undefined,
+    requirements,
     summary: variantData.summary ?? packageData.summary,
     support: variantData.support ?? packageData.support,
-    textures: !isEmpty(textures) ? textures : undefined,
-    thanks: thanks.length ? thanks : undefined,
+    thanks,
     thumbnail: variantData.thumbnail ?? packageData.thumbnail,
     url: variantData.url ?? packageData.url,
     version: variantData.version ?? packageData.version ?? "0.0.0",
-    warnings: warnings.length ? warnings : undefined,
+    warnings,
   }
 
   variantInfo.new = isNew(variantInfo)
@@ -948,11 +946,13 @@ function loadVariantAssetInfo(data: VariantAssetData | AssetID): VariantAssetInf
   }
 
   return {
-    cleanitol: data.cleanitol?.map(toPosix),
-    docs: data.docs?.flatMap(loadFileInfo),
-    exclude: data.exclude?.map(toPosix),
+    cleanitol: isString(data.cleanitol) ? [toPosix(data.cleanitol)] : data.cleanitol?.map(toPosix),
+    docs: isString(data.docs) ? loadFileInfo(data.docs) : data.docs?.flatMap(loadFileInfo),
+    exclude: isString(data.exclude) ? [toPosix(data.exclude)] : data.exclude?.map(toPosix),
     id: data.id,
-    include: data.include?.flatMap(loadFileInfo),
+    include: isString(data.include)
+      ? loadFileInfo(data.include)
+      : data.include?.flatMap(loadFileInfo),
   }
 }
 
@@ -992,28 +992,20 @@ function writeFileInfo({ path, ...info }: FileInfo): FileDataRecord | string {
 function writeVariantAssetInfo(info: VariantAssetInfo): VariantAssetData | AssetID {
   return {
     ...info,
+    cleanitol: info.cleanitol?.length === 1 ? info.cleanitol[0] : info.cleanitol,
     docs: info.docs?.map(writeFileInfo),
-    include: info.include?.map(writeFileInfo),
+    include:
+      info.include?.length === 1 && info.include[0].path === ""
+        ? info.include[0].path
+        : info.include?.map(writeFileInfo),
   }
 }
 
 function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): VariantData {
   return {
+    ...writeContentsInfo(info, categories),
     assets: info.assets?.length ? info.assets?.map(writeVariantAssetInfo) : undefined,
     authors: info.authors?.length ? sort(info.authors) : undefined,
-    buildingFamilies: info.buildingFamilies?.length
-      ? mapValues(
-          groupBy(info.buildingFamilies, family => family.file ?? null),
-          instances => mapValues(indexBy(instances, get("id")), writeFamilyInfo),
-        )
-      : undefined,
-    buildings: info.buildings?.length
-      ? mapValues(groupBy(info.buildings, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), instance =>
-            writeBuildingInfo(instance, categories),
-          ),
-        )
-      : undefined,
     categories: info.categories?.length ? writeCategories(info.categories, categories) : undefined,
     credits: info.credits?.length ? writeCredits(info.credits) : undefined,
     dependencies: info.dependencies?.length
@@ -1028,31 +1020,9 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     lastGenerated: info.lastGenerated,
     lastModified: info.lastModified,
     logs: info.logs,
-    lots: info.lots?.length
-      ? mapValues(groupBy(info.lots, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), writeLotInfo),
-        )
-      : undefined,
-    mmps: info.mmps?.length
-      ? mapValues(groupBy(info.mmps, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), writeFloraInfo),
-        )
-      : undefined,
-    models: info.models && !isEmpty(info.models) ? mapValues(info.models, sort) : undefined,
     name: info.name,
     optional: info.optional?.length ? info.optional : undefined,
     options: info.options?.length ? info.options.map(writeOptionInfo) : undefined,
-    propFamilies: info.propFamilies?.length
-      ? mapValues(
-          groupBy(info.propFamilies, family => family.file ?? null),
-          instances => mapValues(indexBy(instances, get("id")), writeFamilyInfo),
-        )
-      : undefined,
-    props: info.props?.length
-      ? mapValues(groupBy(info.props, get("file")), instances =>
-          mapValues(indexBy(instances, get("id")), writePropInfo),
-        )
-      : undefined,
     readme: info.readme?.length
       ? info.readme.length === 1
         ? info.readme[0]
@@ -1063,11 +1033,165 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
     requirements: info.requirements && !isEmpty(info.requirements) ? info.requirements : undefined,
     summary: info.summary,
     support: info.support,
-    textures: info.textures && !isEmpty(info.textures) ? mapValues(info.textures, sort) : undefined,
     thanks: info.thanks?.length ? writeCredits(info.thanks) : undefined,
     thumbnail: info.thumbnail,
     url: info.url,
     version: info.version,
     warnings: info.warnings?.length ? info.warnings : undefined,
   }
+}
+
+export function loadContentsInfo(data: ContentsData, categories: Categories): ContentsInfo {
+  return {
+    buildingFamilies:
+      data.buildingFamilies &&
+      entries(data.buildingFamilies).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          const [groupId, instanceId] = split(
+            id.includes("-") ? id : `${"00000000" as GroupID}-${id as FamilyID}`,
+            "-",
+          )
+          return loadFamilyInfo(file, groupId, instanceId, data)
+        }),
+      ),
+    buildings:
+      data.buildings &&
+      entries(data.buildings).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          const [groupId, instanceId] = split(
+            id.includes("-") ? id : `${"00000000" as GroupID}-${id as BuildingID}`,
+            "-",
+          )
+          return loadBuildingInfo(file, groupId, instanceId, data, categories)
+        }),
+      ),
+    lots:
+      data.lots &&
+      entries(data.lots).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          return loadLotInfo(file, id, data)
+        }),
+      ),
+    mmps:
+      data.mmps &&
+      entries(data.mmps).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          const [groupId, instanceId] = split(
+            id.includes("-") ? id : `${"00000000" as GroupID}-${id as FloraID}`,
+            "-",
+          )
+          return loadFloraInfo(file, groupId, instanceId, data)
+        }),
+      ),
+    models: data.models && mapValues(data.models, ids => ids.map(loadModelId)),
+    propFamilies:
+      data.propFamilies &&
+      entries(data.propFamilies).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          const [groupId, instanceId] = split(
+            id.includes("-") ? id : `${"00000000" as GroupID}-${id as FamilyID}`,
+            "-",
+          )
+          return loadFamilyInfo(file, groupId, instanceId, data)
+        }),
+      ),
+    props:
+      data.props &&
+      entries(data.props).flatMap(([file, instances]) =>
+        collect(instances, (data, id) => {
+          const [groupId, instanceId] = split(
+            id.includes("-") ? id : `${"00000000" as GroupID}-${id as PropID}`,
+            "-",
+          )
+          return loadPropInfo(file, groupId, instanceId, data)
+        }),
+      ),
+    textures: data.textures,
+  }
+}
+
+export function writeContentsInfo(contents: ContentsInfo, categories: Categories): ContentsData {
+  const data: ContentsData = {}
+
+  if (contents.buildingFamilies) {
+    for (const buildingFamily of contents.buildingFamilies) {
+      const { file, group, id } = buildingFamily
+      if (file && group) {
+        data.buildingFamilies ??= {}
+        data.buildingFamilies[file] ??= {}
+        data.buildingFamilies[file][`${group}-${id}`] ??= writeFamilyInfo(buildingFamily)
+      }
+    }
+  }
+
+  if (contents.buildings) {
+    for (const building of contents.buildings) {
+      const { file, group, id } = building
+
+      data.buildings ??= {}
+      data.buildings[file] ??= {}
+      data.buildings[file][`${group}-${id}`] ??= writeBuildingInfo(building, categories)
+    }
+  }
+
+  if (contents.lots) {
+    for (const lot of contents.lots) {
+      const { file, id } = lot
+
+      data.lots ??= {}
+      data.lots[file] ??= {}
+      data.lots[file][id] ??= writeLotInfo(lot)
+    }
+  }
+
+  if (contents.mmps) {
+    for (const mmp of contents.mmps) {
+      const { file, group, id } = mmp
+
+      data.mmps ??= {}
+      data.mmps[file] ??= {}
+      data.mmps[file][`${group}-${id}`] ??= writeFloraInfo(mmp)
+    }
+  }
+
+  if (contents.models && !isEmpty(contents.models)) {
+    data.models = mapValues(contents.models, ids => sort(ids.map(writeModelId)))
+  }
+
+  if (contents.propFamilies) {
+    for (const propFamily of contents.propFamilies) {
+      const { file, group, id } = propFamily
+      if (file && group) {
+        data.propFamilies ??= {}
+        data.propFamilies[file] ??= {}
+        data.propFamilies[file][`${group}-${id}`] ??= writeFamilyInfo(propFamily)
+      }
+    }
+  }
+
+  if (contents.props) {
+    for (const prop of contents.props) {
+      const { file, group, id } = prop
+
+      data.props ??= {}
+      data.props[file] ??= {}
+      data.props[file][`${group}-${id}`] ??= writePropInfo(prop)
+    }
+  }
+
+  if (contents.textures && !isEmpty(contents.textures)) {
+    data.textures = mapValues(contents.textures, ids => sort(ids))
+  }
+
+  return data
+}
+
+export function loadModelId(id: GroupID | `${GroupID}-${string}`): ModelID {
+  const [groupId, instanceId = InstanceID.S3D] = split(id, "-") as [GroupID, string?]
+  return `${groupId}-${instanceId.padEnd(8, "0") as InstanceID}`
+}
+
+export function writeModelId(id: ModelID): GroupID | `${GroupID}-${string}` {
+  const [groupId, instanceId] = split(id, "-")
+  return instanceId === InstanceID.S3D ? groupId : `${groupId}-${instanceId.slice(0, 4)}`
 }

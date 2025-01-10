@@ -7,13 +7,13 @@ import { DBPFDataType, type DBPFEntry, type DBPFFile } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
 import type { FileInfo } from "@common/variants"
-import { PackageTag } from "@components/Tags/PackageTag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { EntryViewer } from "@components/Viewer/EntryViewer"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
+import { Tag } from "@components/Tags/Tag"
 import { getDBPFEntryLabel } from "./utils"
 
 const EDITABLETYPES = [
@@ -112,7 +112,7 @@ export function PackageEntry({
           }}
         />
       )}
-      {isPatched && <PackageTag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
+      {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
       {isViewing && (
         <EntryViewer
           entry={entry}

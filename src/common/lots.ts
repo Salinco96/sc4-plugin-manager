@@ -1,12 +1,13 @@
-import { type ID, unique } from "@salinco/nice-utils"
+import { unique } from "@salinco/nice-utils"
 import type { BuildingID } from "./buildings"
+import type { InstanceID } from "./dbpf"
 import type { OptionInfo, Requirements } from "./options"
 import { type PackageID, checkCondition } from "./packages"
 import type { ProfileInfo } from "./profiles"
 import type { PropID } from "./props"
 import type { Settings } from "./settings"
 import type { Features, PackageConfig } from "./types"
-import type { VariantInfo } from "./variants"
+import type { TextureID, VariantInfo } from "./variants"
 
 export enum ZoneDensity {
   LOW = "low",
@@ -14,7 +15,7 @@ export enum ZoneDensity {
   HIGH = "high",
 }
 
-export type LotID = ID<string, LotInfo>
+export type LotID = InstanceID<LotInfo>
 
 export interface LotInfo {
   /**
@@ -55,7 +56,7 @@ export interface LotInfo {
   name?: string
 
   /**
-   * Prop IDS - indexer only
+   * Prop IDs
    */
   props?: PropID[]
 
@@ -85,9 +86,9 @@ export interface LotInfo {
   stage?: number
 
   /**
-   * Texture IDS - indexer only
+   * Texture IDs
    */
-  textures?: string[]
+  textures?: TextureID[]
 }
 
 export function isSC4LotFile(filePath: string): boolean {

@@ -1646,7 +1646,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0009/4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
     lastModified: 2020-05-25T21:46:54.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Small Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2005/thumb-4f045418b37757adb641cd92ee4bc0ea-batframe4.jpg
@@ -1707,7 +1707,7 @@ assets:
       '181217':
         buildings:
           Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station_Utils1x2_PassengerRailStation_d04dae96.SC4Lot:
-            d04dae96:
+            10121420-d04dae96:
               bulldoze: 100
               categories: passengers
               cost: 75
@@ -1728,6 +1728,7 @@ assets:
               water: 5
               waterPollution: 1
               waterPollutionRadius: 2
+        features: []
         filename: Jasoncw - Small Train Station V1.1.zip
         files:
           - Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model
@@ -1739,17 +1740,17 @@ assets:
               building: d04dae96
               name: Jasoncw - Small Train Station_Utils1x2_PassengerRailStation
               props:
-                - 2bfc0000
-                - a000007b
-                - '1e120000'
                 - '1e010000'
                 - '1e090000'
+                - '1e120000'
+                - 2bfc0000
+                - a000007b
               size: 2x1
               textures:
-                - 25c10000
-                - 263d0000
-                - 25db0000
                 - '25900000'
+                - 25c10000
+                - 25db0000
+                - 263d0000
         models:
           Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model:
             - 10121420-000f
@@ -1858,7 +1859,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0013/717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
     lastModified: 2020-05-25T21:47:19.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Medium Sized Train Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_11_2005/thumb-717f8e48fb84b1960984cf24ef003bca-batframe5.jpg
@@ -1869,7 +1870,7 @@ assets:
       '181220':
         buildings:
           Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation_90644677.SC4Lot:
-            '90644677':
+            10121420-90644677:
               bulldoze: 150
               categories: passengers
               cost: 125
@@ -1890,6 +1891,7 @@ assets:
               water: 8
               waterPollution: 2
               waterPollutionRadius: 2
+        features: []
         filename: Jasoncw - Medium Train Station V1.1.zip
         files:
           - Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station (1x4).SC4Model
@@ -1901,21 +1903,21 @@ assets:
               building: '90644677'
               name: Jasoncw - Medium Train Station_Utils1x4_PassengerRailStation
               props:
-                - 2bfc0000
-                - a000007b
-                - '1e120000'
+                - 1dfb0000
                 - '1e010000'
                 - '1e090000'
+                - '1e120000'
                 - '29020000'
-                - 1dfb0000
                 - 2a8c0000
+                - 2bfc0000
+                - a000007b
               size: 4x1
               textures:
+                - '25900000'
+                - 25bf0000
                 - 25c10000
                 - 25db0000
                 - 263d0000
-                - '25900000'
-                - 25bf0000
         models:
           Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station (1x4).SC4Model:
             - 10121420-0013
@@ -2939,7 +2941,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0009/47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-2.jpg
     lastModified: 2020-05-25T21:48:51.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Train Station Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2006/thumb-47c4ef14c422ae4e529546e731356177-BAT-Frame-Train-Set-1.jpg
@@ -2950,7 +2952,7 @@ assets:
       '181231':
         buildings:
           Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station_9184ac98.SC4Lot:
-            9184ac98:
+            2f601cf9-9184ac98:
               bulldoze: 75
               categories: passengers
               cost: 75
@@ -2972,7 +2974,7 @@ assets:
               waterPollution: 1
               waterPollutionRadius: 2
           Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot:
-            b184c540:
+            2f601cf9-b184c540:
               bulldoze: 150
               categories: passengers
               cost: 125
@@ -2994,7 +2996,7 @@ assets:
               waterPollution: 2
               waterPollutionRadius: 2
           Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station_f184e53f.SC4Lot:
-            f184e53f:
+            2f601cf9-f184e53f:
               bulldoze: 300
               categories: passengers
               cost: 300
@@ -3015,6 +3017,7 @@ assets:
               water: 16
               waterPollution: 4
               waterPollutionRadius: 3
+        features: []
         filename: Jasoncw - Train Station Set V1.1.zip
         files:
           - Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station (1x2) V2.SC4Model
@@ -3037,47 +3040,47 @@ assets:
               building: 9184ac98
               name: Jasoncw - Small Train Station
               props:
+                - 1d2c0000
                 - 1dfb0000
+                - '1e090000'
+                - '1e120000'
                 - '29010000'
+                - '290e0000'
+                - '29140000'
+                - '29150000'
+                - 2a8b0000
+                - 2ab90000
+                - 69ae0000
                 - a000004a
                 - a000004b
                 - a000004d
                 - a0000057
-                - '29150000'
                 - a0000078
-                - '1e120000'
                 - a000007b
-                - 2a8b0000
-                - 2ab90000
-                - '1e090000'
-                - 1d2c0000
-                - '290e0000'
-                - '29140000'
-                - 69ae0000
               size: 2x1
               textures:
-                - 263d0000
                 - '25900000'
+                - 263d0000
           Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot:
             b184c540:
               building: b184c540
               name: Jasoncw - Medium Train Station
               props:
+                - 1d2c0000
                 - 1dfb0000
-                - 291f0000
+                - '1e120000'
                 - '29010000'
+                - '29150000'
+                - 291f0000
+                - 2a8b0000
+                - 2bfc0000
                 - a000004a
                 - a000004b
                 - a000004d
-                - a0000057
                 - a000004e
-                - '1e120000'
+                - a0000057
                 - a0000078
-                - '29150000'
                 - a000007b
-                - 2a8b0000
-                - 2bfc0000
-                - 1d2c0000
               size: 4x1
               textures:
                 - '25900000'
@@ -3087,31 +3090,31 @@ assets:
               building: f184e53f
               name: Jasoncw - Large Train Station
               props:
-                - 1dfb0000
-                - a0000055
-                - a000004b
-                - a0000078
-                - a0000077
-                - 2a8a0000
-                - 291f0000
-                - '29010000'
-                - a000004a
-                - a000004d
-                - a0000057
-                - a000004e
-                - '1e120000'
-                - '29150000'
-                - a000007b
-                - 2a8b0000
-                - 2bfb0000
-                - 2bf70000
-                - 2bfc0000
-                - '29130000'
-                - 2a6c0000
-                - '290e0000'
-                - '29170000'
                 - 1d240000
                 - 1d2c0000
+                - 1dfb0000
+                - '1e120000'
+                - '29010000'
+                - '290e0000'
+                - '29130000'
+                - '29150000'
+                - '29170000'
+                - 291f0000
+                - 2a6c0000
+                - 2a8a0000
+                - 2a8b0000
+                - 2bf70000
+                - 2bfb0000
+                - 2bfc0000
+                - a000004a
+                - a000004b
+                - a000004d
+                - a000004e
+                - a0000055
+                - a0000057
+                - a0000077
+                - a0000078
+                - a000007b
               size: 4x2
               textures:
                 - '25900000'
@@ -5665,7 +5668,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/0010/591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-21.jpg
     lastModified: 2020-05-25T21:48:04.000Z
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Perry Station
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_02_2008/thumb-591c0920c3184be644e604633e81d4bb-Perry-Station-BAT-Frame-1.jpg
@@ -5676,7 +5679,7 @@ assets:
       '181227':
         buildings:
           Jasoncw - Perry Station V1.1/Jasoncw - Perry Station_54b0b9a8.SC4Lot:
-            54b0b9a8:
+            b1d39911-54b0b9a8:
               bulldoze: 2800
               categories: passengers
               cost: 30000
@@ -5699,6 +5702,7 @@ assets:
               water: 19
               waterPollution: 5
               waterPollutionRadius: 2
+        features: []
         filename: Jasoncw - Perry Station V1.1.zip
         files:
           - Jasoncw - Perry Station V1.1/Jasoncw - Perry Station - ReadMe.html
@@ -5711,12 +5715,12 @@ assets:
               name: Jasoncw - Perry Station
               size: 7x4
               textures:
-                - 25db0000
-                - 263d0000
-                - '26060000'
-                - 25fa0000
                 - 258c0000
+                - 25db0000
                 - 25f60000
+                - 25fa0000
+                - '26060000'
+                - 263d0000
         models:
           Jasoncw - Perry Station V1.1/Jasoncw - Perry Station.SC4Model:
             - b1d39911-003e
@@ -12744,441 +12748,441 @@ assets:
       - '11241036'
     buildings:
       STEX/Traffic Blocker Set.dat:
-        1f4259aa:
+        cdfa20b8-1f4259aa:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 3 Pegasus Dirt Road C
           submenu: MiscTransit/Tram
-        1f425adc:
+        cdfa20b8-1f425adc:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 8 Cobblestone Street C
           submenu: MiscTransit/Tram
-        1f426486:
+        cdfa20b8-1f426486:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker MIS B
           submenu: MiscTransit/Tram
-        1f4264c4:
+        cdfa20b8-1f4264c4:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-4 B
           submenu: MiscTransit/Tram
-        1f426533:
+        cdfa20b8-1f426533:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 4 Gravel Road B
           submenu: MiscTransit/Tram
-        1f426564:
+        cdfa20b8-1f426564:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 9 Red Brick Street B
           submenu: MiscTransit/Tram
-        1f426572:
+        cdfa20b8-1f426572:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Street F
           submenu: MiscTransit/Tram
-        1f5deabc:
+        cdfa20b8-1f5deabc:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 10 Japanese Street C
           submenu: MiscTransit/Tram
-        33e447a3:
+        cdfa20b8-33e447a3:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 11 Industrial Street C
           submenu: MiscTransit/Tram
-        3f42584f:
+        cdfa20b8-3f42584f:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker MIS F
           submenu: MiscTransit/Tram
-        3f425898:
+        cdfa20b8-3f425898:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker OneWay C
           submenu: MiscTransit/Tram
-        3f425a81:
+        cdfa20b8-3f425a81:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 7 Asphalt Street C
           submenu: MiscTransit/Tram
-        3f425bf4:
+        cdfa20b8-3f425bf4:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-8 F
           submenu: MiscTransit/Tram
-        3f4264bb:
+        cdfa20b8-3f4264bb:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-2 B
           submenu: MiscTransit/Tram
-        3f4264e5:
+        cdfa20b8-3f4264e5:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 2 Herringbone Street B
           submenu: MiscTransit/Tram
-        3f4264f4:
+        cdfa20b8-3f4264f4:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 3 Pegasus Dirt Road B
           submenu: MiscTransit/Tram
-        3f5deaa4:
+        cdfa20b8-3f5deaa4:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 6 Klinker Street C
           submenu: MiscTransit/Tram
-        5f425912:
+        cdfa20b8-5f425912:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-4 F
           submenu: MiscTransit/Tram
-        5f4259dd:
+        cdfa20b8-5f4259dd:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 4 Gravel Road C
           submenu: MiscTransit/Tram
-        5f425a18:
+        cdfa20b8-5f425a18:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 5 Trolca Dirt Road C
           submenu: MiscTransit/Tram
-        5f425c06:
+        cdfa20b8-5f425c06:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-10 F
           submenu: MiscTransit/Tram
-        5f4264de:
+        cdfa20b8-5f4264de:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Road F
           submenu: MiscTransit/Tram
-        5f426549:
+        cdfa20b8-5f426549:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 7 Asphalt Street B
           submenu: MiscTransit/Tram
-        5f426558:
+        cdfa20b8-5f426558:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 8 Cobblestone Street B
           submenu: MiscTransit/Tram
-        5f42656f:
+        cdfa20b8-5f42656f:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Street B
           submenu: MiscTransit/Tram
-        5f578575:
+        cdfa20b8-5f578575:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonAvenue F
           submenu: MiscTransit/Tram
-        5f5785b8:
+        cdfa20b8-5f5785b8:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonStreet B
           submenu: MiscTransit/Tram
-        '62663833':
+        cdfa20b8-62663833:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 11 Industrial Street F
           submenu: MiscTransit/Tram
-        7f4257f0:
+        cdfa20b8-7f4257f0:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Avenue C
           submenu: MiscTransit/Tram
-        7f426473:
+        cdfa20b8-7f426473:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Avenue B
           submenu: MiscTransit/Tram
-        7f4264a7:
+        cdfa20b8-7f4264a7:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker OneWay F
           submenu: MiscTransit/Tram
-        7f4264b1:
+        cdfa20b8-7f4264b1:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-10 B
           submenu: MiscTransit/Tram
-        7f4264f8:
+        cdfa20b8-7f4264f8:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 3 Pegasus Dirt Road F
           submenu: MiscTransit/Tram
-        7f42654c:
+        cdfa20b8-7f42654c:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 7 Asphalt Street F
           submenu: MiscTransit/Tram
-        7f42770a:
+        cdfa20b8-7f42770a:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-6 B
           submenu: MiscTransit/Tram
-        9f425b51:
+        cdfa20b8-9f425b51:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Street C
           submenu: MiscTransit/Tram
-        9f426477:
+        cdfa20b8-9f426477:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Avenue F
           submenu: MiscTransit/Tram
-        9f5785c0:
+        cdfa20b8-9f5785c0:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonStreet F
           submenu: MiscTransit/Tram
-        9f5dea93:
+        cdfa20b8-9f5dea93:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 10 Japanese Street B
           submenu: MiscTransit/Tram
-        9f5deae1:
+        cdfa20b8-9f5deae1:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 10 Japanese Street F
           submenu: MiscTransit/Tram
-        bf425983:
+        cdfa20b8-bf425983:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 2 Herringbone Street C
           submenu: MiscTransit/Tram
-        bf42653d:
+        cdfa20b8-bf42653d:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 5 Trolca Dirt Road B
           submenu: MiscTransit/Tram
-        bf578569:
+        cdfa20b8-bf578569:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonAvenue B
           submenu: MiscTransit/Tram
-        bf5dead6:
+        cdfa20b8-bf5dead6:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 6 Klinker Street F
           submenu: MiscTransit/Tram
-        df4258d8:
+        cdfa20b8-df4258d8:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-2 F
           submenu: MiscTransit/Tram
-        df425947:
+        cdfa20b8-df425947:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Road C
           submenu: MiscTransit/Tram
-        df4264a4:
+        cdfa20b8-df4264a4:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker OneWay B
           submenu: MiscTransit/Tram
-        df4264d3:
+        cdfa20b8-df4264d3:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-8 B
           submenu: MiscTransit/Tram
-        df4264e9:
+        cdfa20b8-df4264e9:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 2 Herringbone Street F
           submenu: MiscTransit/Tram
-        df426537:
+        cdfa20b8-df426537:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 4 Gravel Road F
           submenu: MiscTransit/Tram
-        df426568:
+        cdfa20b8-df426568:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 9 Red Brick Street F
           submenu: MiscTransit/Tram
-        df578534:
+        cdfa20b8-df578534:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonRoad B
           submenu: MiscTransit/Tram
-        df578541:
+        cdfa20b8-df578541:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonRoad F
           submenu: MiscTransit/Tram
-        df5785bc:
+        cdfa20b8-df5785bc:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonStreet C
           submenu: MiscTransit/Tram
-        df5dea7e:
+        cdfa20b8-df5dea7e:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 6 Klinker Street B
           submenu: MiscTransit/Tram
-        e0ed19ba:
+        cdfa20b8-e0ed19ba:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 11 Industrial Street B
           submenu: MiscTransit/Tram
-        ff425af2:
+        cdfa20b8-ff425af2:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 9 Red Brick Street C
           submenu: MiscTransit/Tram
-        ff4264da:
+        cdfa20b8-ff4264da:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker Road B
           submenu: MiscTransit/Tram
-        ff426541:
+        cdfa20b8-ff426541:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 5 Trolca Dirt Road F
           submenu: MiscTransit/Tram
-        ff42655b:
+        cdfa20b8-ff42655b:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker SAM 8 Cobblestone Street F
           submenu: MiscTransit/Tram
-        ff42770f:
+        cdfa20b8-ff42770f:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker RHW-6 F
           submenu: MiscTransit/Tram
-        ff57853d:
+        cdfa20b8-ff57853d:
           bulldoze: 5
           categories: tram
           cost: 10
           menu: MiscTransit
           name: Traffic Blocker TramonRoad C
           submenu: MiscTransit/Tram
-        ff578571:
+        cdfa20b8-ff578571:
           bulldoze: 5
           categories: tram
           cost: 10
@@ -13193,6 +13197,7 @@ assets:
       - sc4evermore/13-sfbt-essentials
       - sc4evermore/90-mgb204-texture-pack
     description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Short Description:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">This is a set of car, freight car, and bus traffic blockers for default maxis, <abbr title=\"Street Addon Mod\">SAM</abbr>, <abbr title=\"Ground Light Rail\">GLR</abbr>, and <abbr title=\"RealHighway\">RHW</abbr> routes. They will block one kind of traffic while allowing the other kinds of traffic and pedestrians to pass. This may be useful for creating bus lines, simply reducing traffic, preventing cars from taking a shortcut through settlements, keeping freight cars away from residential zones and so on. Traffic blockers for roads, one-way roads, avenues, side roads, and railway are already existing on the STEX, but not for <abbr title=\"Street Addon Mod\">SAM</abbr> and <abbr title=\"RealHighway\">RHW</abbr> routes, so I thought they might be useful.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">I've tried to keep them as inconspicuous as possible (so not to disrupt the look of your city); therefore the screenshots won't be spectacular. The screenshot below shows a small city where buses and pedestrians are taking the <abbr title=\"Street Addon Mod\">SAM</abbr> 2 Herringbone Street to get to work, while cars are forced to take a detour.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">There are traffic blockers for the subsequently mentioned traffic routes:</span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Maxis routes: road, street, avenue, one-way road</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"Street Addon Mod\">SAM</abbr> streets: 2-11</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"RealHighway\">RHW</abbr> routes: <abbr title=\"RealHighway\">RHW</abbr>-2, <abbr title=\"RealHighway\">RHW</abbr>-4, <abbr title=\"RealHighway\">RHW</abbr>-6, <abbr title=\"RealHighway\">RHW</abbr>-8, <abbr title=\"RealHighway\">RHW</abbr>-10, <abbr title=\"Modular Interchange System\">MIS</abbr></span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><abbr title=\"Ground Light Rail\">GLR</abbr>: Tram-on-Road (only with concrete pavement in the center), Tram-on-Avenue, Tram-on-Street</span>\n\t</li>\n</ul>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">For further information, please refer to the readme in the download.</span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:#e74c3c;\"><strong>Note: </strong>If you have downloaded this between April 15<sup>th</sup>, 2020, and June 16<sup>th</sup>, 2020, please remove the file TBS_Textures.dat, since it has become obsolete with the release of the 11241036 Textures. Please download this dependency package instead.</span></span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span style=\"color:rgb(0,0,255);\"><strong>Dependencies:</strong></span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong><abbr title=\"SimForum BAT Team\">SFBT</abbr> Essentials</strong></span>\n</p>\n\n<p>\n\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-sfbt-essentials\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/13-<abbr title=\"SimForum BAT Team\">sfbt</abbr>-essentials</a>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>MGB Texture Pack</strong></span>\n</p>\n\n<p>\n\t<a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/90-mgb204-texture-pack</a>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Network Addon Mod Version 37.0 or newer</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><a href=\"https://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite\" rel=\"\">http://community.simtropolis.com/files/file/26793-network-addon-mod-for-windows-installer-offsite</a></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>11241036 Textures</strong></span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed3450166797\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/33651-11241036-textures/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>SC4Fix: Third-party patches for SC4</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Not really required, but it resolves that nasty crash-to-desktop bug occurring whenever you hover with a puzzle piece over a transit-enabled lot.</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2719018586\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Currently available languages: </strong>English, German</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Installation:</strong></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span lang=\"en-us\" xml:lang=\"en-us\">Download the archive and extract all files to a folder where you will find them. Move or copy this folder into your Plugins sub-folder of your edition of SimCity 4 (for instance: C:/Programs/Maxis/SimCity 4/Plugins).</span></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><span lang=\"en-us\" xml:lang=\"en-us\">To uninstall, please bulldoze all instances of this plugin in your cities, then remove all of its files from your Plugins subfolder.</span></span>\n</p>\n\n<p style=\"text-align:justify;\">\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><b><span lang=\"en-us\" xml:lang=\"en-us\">Note, if you have versions prior to version 3 installed:</span></b><span lang=\"en-us\" xml:lang=\"en-us\"> Please remove it before installing the new plugin. You don’t need to bulldoze your already existing traffic stops, and nothing will change in-game. However, to tidy up this plugin, I’ve reorganized the files and packed them into one big file. You’ll have them twice if you simply copy this plugin into your plugin folder.</span></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><b><span lang=\"en-us\" xml:lang=\"en-us\">Extra note:</span></b><span lang=\"en-us\" xml:lang=\"en-us\"> For people using my Cobblestone Street Override mod, I’ve added the extra file <i>z_TBS <abbr title=\"Street Addon Mod\">SAM</abbr> 8 Override.dat</i>, which will alter the base texture to a cobblestone texture. Remove this file if you don’t want this (see screenshots).</span></span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Compatibility:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Since this plugin requires installation of the Network Addon Mod, it is only compatible with SimCity 4: Rush Hour, or SimCity Deluxe.</span>\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Credits:</strong></span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">The Network Addon Mod Team for the textures of the routes</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">odrzutowiec for the idea of introducing the <abbr title=\"Ground Light Rail\">GLR</abbr> traffic blockers</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>Support:</strong></span>\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Please feel free to post issues, bug reports, and suggestions in this thread:</span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2740235343\" scrolling=\"no\" src=\"https://community.simtropolis.com/forums/topic/759685-11241036-lottingmodding-thread/?do=embed\" style=\"height:208px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-family:Arial, Helvetica, sans-serif;\"><strong>To be done:</strong></span>\n</p>\n\n<ul>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">Also, I'd appreciate if someone could explain me how to make Menu Management Lots. Although traffic blockers are sometimes helpful, we probably won't use them everyday, and therefore you may probably want to save space in your game menu.</span>\n\t</li>\n\t<li>\n\t\t<span style=\"font-family:Arial, Helvetica, sans-serif;\">If I'm getting enough requests, I may include other traffic blockers in later updates.</span>\n\t</li>\n</ul>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
     file: Traffic Blocker Set.zip
     filename: Traffic Blocker Set.zip
     files:
@@ -13226,15 +13231,15 @@ assets:
           name: Traffic Blocker MIS B
           size: 1x1
           textures:
-            - 5de4b100
             - 251c0000
+            - 5de4b100
         1f4264c4:
           building: 1f4264c4
           name: Traffic Blocker RHW-4 B
           size: 1x1
           textures:
-            - 5eb4b100
             - 251c0000
+            - 5eb4b100
         1f426533:
           building: 1f426533
           name: Traffic Blocker SAM 4 Gravel Road B
@@ -13275,15 +13280,15 @@ assets:
           name: Traffic Blocker MIS F
           size: 1x1
           textures:
-            - 5de4b100
             - 251c0000
+            - 5de4b100
         3f425898:
           building: 3f425898
           name: Traffic Blocker OneWay C
           size: 1x1
           textures:
-            - '26380000'
             - 258f0000
+            - '26380000'
         3f425a81:
           building: 3f425a81
           name: Traffic Blocker SAM 7 Asphalt Street C
@@ -13296,16 +13301,16 @@ assets:
           name: Traffic Blocker RHW-8 F
           size: 2x1
           textures:
+            - 251c0000
             - 5ed4b100
             - 5ef5b100
-            - 251c0000
         3f4264bb:
           building: 3f4264bb
           name: Traffic Blocker RHW-2 B
           size: 1x1
           textures:
-            - 5e004b00
             - 251c0000
+            - 5e004b00
         3f4264e5:
           building: 3f4264e5
           name: Traffic Blocker SAM 2 Herringbone Street B
@@ -13332,8 +13337,8 @@ assets:
           name: Traffic Blocker RHW-4 F
           size: 1x1
           textures:
-            - 5eb4b100
             - 251c0000
+            - 5eb4b100
         5f4259dd:
           building: 5f4259dd
           name: Traffic Blocker SAM 4 Gravel Road C
@@ -13346,16 +13351,16 @@ assets:
           name: Traffic Blocker SAM 5 Trolca Dirt Road C
           size: 1x1
           textures:
-            - f834996a
             - 25db0000
+            - f834996a
         5f425c06:
           building: 5f425c06
           name: Traffic Blocker RHW-10 F
           size: 2x1
           textures:
+            - 251c0000
             - 5ef4b100
             - 5ef5b100
-            - 251c0000
         5f4264de:
           building: 5f4264de
           name: Traffic Blocker Road F
@@ -13409,30 +13414,30 @@ assets:
           name: Traffic Blocker Avenue C
           size: 2x1
           textures:
-            - '26360000'
             - 258f0000
+            - '26360000'
         7f426473:
           building: 7f426473
           name: Traffic Blocker Avenue B
           size: 2x1
           textures:
-            - '26360000'
             - 258f0000
+            - '26360000'
         7f4264a7:
           building: 7f4264a7
           name: Traffic Blocker OneWay F
           size: 1x1
           textures:
-            - '26380000'
             - 258f0000
+            - '26380000'
         7f4264b1:
           building: 7f4264b1
           name: Traffic Blocker RHW-10 B
           size: 2x1
           textures:
+            - 251c0000
             - 5ef4b100
             - 5ef5b100
-            - 251c0000
         7f4264f8:
           building: 7f4264f8
           name: Traffic Blocker SAM 3 Pegasus Dirt Road F
@@ -13452,9 +13457,9 @@ assets:
           name: Traffic Blocker RHW-6 B
           size: 2x1
           textures:
+            - 251c0000
             - 5ec6b100
             - 5ef5b100
-            - 251c0000
         9f425b51:
           building: 9f425b51
           name: Traffic Blocker Street C
@@ -13467,8 +13472,8 @@ assets:
           name: Traffic Blocker Avenue F
           size: 2x1
           textures:
-            - '26360000'
             - 258f0000
+            - '26360000'
         9f5785c0:
           building: 9f5785c0
           name: Traffic Blocker TramonStreet F
@@ -13502,8 +13507,8 @@ assets:
           name: Traffic Blocker SAM 5 Trolca Dirt Road B
           size: 1x1
           textures:
-            - f834996a
             - 25db0000
+            - f834996a
         bf578569:
           building: bf578569
           name: Traffic Blocker TramonAvenue B
@@ -13522,8 +13527,8 @@ assets:
           name: Traffic Blocker RHW-2 F
           size: 1x1
           textures:
-            - 5e004b00
             - 251c0000
+            - 5e004b00
         df425947:
           building: df425947
           name: Traffic Blocker Road C
@@ -13536,16 +13541,16 @@ assets:
           name: Traffic Blocker OneWay B
           size: 1x1
           textures:
-            - '26380000'
             - 258f0000
+            - '26380000'
         df4264d3:
           building: df4264d3
           name: Traffic Blocker RHW-8 B
           size: 2x1
           textures:
+            - 251c0000
             - 5ed4b100
             - 5ef5b100
-            - 251c0000
         df4264e9:
           building: df4264e9
           name: Traffic Blocker SAM 2 Herringbone Street F
@@ -13619,8 +13624,8 @@ assets:
           name: Traffic Blocker SAM 5 Trolca Dirt Road F
           size: 1x1
           textures:
-            - f834996a
             - 25db0000
+            - f834996a
         ff42655b:
           building: ff42655b
           name: Traffic Blocker SAM 8 Cobblestone Street F
@@ -13633,9 +13638,9 @@ assets:
           name: Traffic Blocker RHW-6 F
           size: 2x1
           textures:
+            - 251c0000
             - 5ec6b100
             - 5ef5b100
-            - 251c0000
         ff57853d:
           building: ff57853d
           name: Traffic Blocker TramonRoad C
@@ -13654,24 +13659,24 @@ assets:
           name: Traffic Blocker SAM 8 Cobblestone Street C
           size: 1x1
           textures:
-            - f834997a
             - '30360000'
+            - f834997a
         5f426558:
           building: 5f426558
           name: Traffic Blocker SAM 8 Cobblestone Street B
           size: 1x1
           textures:
-            - f834997a
             - '30360000'
+            - f834997a
         ff42655b:
           building: ff42655b
           name: Traffic Blocker SAM 8 Cobblestone Street F
           size: 1x1
           textures:
-            - f834997a
             - '30360000'
+            - f834997a
     meta:
-      timestamp: 2025-01-06T12:12:25.449Z
+      timestamp: 2025-01-09T16:18:23.576Z
       version: 1
     name: Traffic Blocker Set
     sha256: da8c7c6ba9db976391137412e1390185d3e13ded4b5347e8f390ac4f0783c698

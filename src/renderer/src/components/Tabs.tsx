@@ -1,23 +1,23 @@
 import { TabContext, TabList, TabPanel } from "@mui/lab"
 import { Box, Tab } from "@mui/material"
+import { mapDefined } from "@salinco/nice-utils"
+import type { TFunction } from "i18next"
 import { type ComponentType, Suspense } from "react"
+import { useTranslation } from "react-i18next"
 
 import { FlexBox } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { PackageTag } from "@components/Tags/PackageTag"
+import { useLocation } from "@utils/navigation"
 import { type Store, useStore, useStoreActions } from "@utils/store"
 
-import { mapDefined } from "@salinco/nice-utils"
-import { useLocation } from "@utils/navigation"
-import type { TFunction } from "i18next"
-import { useTranslation } from "react-i18next"
-import type { Tag } from "./Tags/utils"
+import { Tag } from "./Tags/Tag"
+import type { TagInfo } from "./Tags/utils"
 
 export type TabInfo<T> = {
   component: ComponentType<Omit<T, "tabs">>
   id: string
   label: (t: TFunction<"Tabs">, count: number) => string
-  labelTag?: (props: Omit<T, "tabs">, store: Store) => Tag | undefined
+  labelTag?: (props: Omit<T, "tabs">, store: Store) => TagInfo | undefined
   condition?: (props: Omit<T, "tabs">, store: Store) => boolean
   count?: (props: Omit<T, "tabs">, store: Store) => number
   fullsize?: boolean
@@ -64,7 +64,7 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
                 label={
                   <FlexBox alignItems="center" gap={1}>
                     {label}
-                    {labelTag && <PackageTag dense tag={labelTag} />}
+                    {labelTag && <Tag dense tag={labelTag} />}
                   </FlexBox>
                 }
                 value={id}
