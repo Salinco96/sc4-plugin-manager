@@ -116,7 +116,7 @@ export async function extract7z(
     logger?: Logger
   },
 ): Promise<{ size: number }> {
-  const exePath = await options.exePath("cicdec" as ToolID)
+  const exePath = await options.exePath("7z" as ToolID)
 
   const stdout = await runFile(exePath, {
     args: ["x", "-y", `-o${extractPath}`, archivePath],

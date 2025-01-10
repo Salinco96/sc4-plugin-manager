@@ -8587,10 +8587,10 @@ assets:
             - abb14aee
           size: 7x6
           textures:
-            - '25270000'
+            - '25272000'
             - 257c0000
-            - 258f0000
-            - 25fb0100
+            - 258f2000
+            - 25fb1100
       SpacePort Fix Mod (use only one of these)/Spaceport Fix Mod.dat:
         4bb1058d:
           building: '03840000'
@@ -8600,10 +8600,10 @@ assets:
             - abb14aee
           size: 7x6
           textures:
-            - '25270000'
+            - '25272000'
             - 257c0000
-            - 258f0000
-            - 25fb0100
+            - 258f2000
+            - 25fb1100
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -9930,6 +9930,19 @@ assets:
     sha256: 06af6ea74c1f424859e0245c55480d78e8721228803786bfec0470ff465bf509
     size: 384994
     support: https://community.simtropolis.com/forums/topic/758070-wheres-my-water-and-other-stupid-questions
+    textures:
+      z_Deuteranopia/Deuteranopia Zone Manager v2.0.dat:
+        - '00002000'
+        - '00002100'
+        - '00002200'
+        - '00002300'
+        - '00002400'
+        - '00002500'
+        - '00002600'
+        - '00002700'
+        - '00002800'
+        - '00002900'
+        - '00003000'
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_04/5cc0d84777793_01-CBV-DeuteranopiaLogo.thumb.png.710085a992055e2a8c859ce968b57da0.png
     uncompressed: 402325
     url: https://community.simtropolis.com/files/file/32881-color-blind-views-for-deuteranopia/
@@ -10511,4 +10524,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
 meta:
-  timestamp: 2025-01-08T11:24:26.356Z
+  timestamp: 2025-01-10T09:30:55.357Z

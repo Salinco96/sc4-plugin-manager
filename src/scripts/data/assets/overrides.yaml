@@ -362,9 +362,15 @@ sc4evermore/279-sc4d-lex-legacy-bsc-custodian-rubik-wtc-complex: null
 
 sc4evermore/281-bsc-jestarr-mayor-mode-ploppable-livestock:
   packageId: jestarr/mmp-livestock
+  paths:
+    BSC/BSCProps: null
+  variantId: default
 
 sc4evermore/282-bsc-jestarr-mayor-mode-ploppable-rocks:
   packageId: jestarr/mmp-rocks
+  paths:
+    BSC/BSCProps: null
+  variantId: default
 
 sc4evermore/283-sc4d-lex-legacy-bsc-parks-collection:
   packageId: bsc/parks-collection
@@ -1343,6 +1349,7 @@ simtropolis/22787-fsh-file-thumbnails-for-windows-xp-vista-7-and-8: null
 
 simtropolis/22823-paeng-textures-vol104:
   packageId: paeng/textures
+  variantId: default
 
 simtropolis/22887-batch-png-to-fsh-tool: null
 
@@ -1841,10 +1848,12 @@ simtropolis/30648-peg-cdk-tutorial:
   packageId: pegasus/cdk-tutorial
 
 simtropolis/30732-hd-north-american-semi-truck-cabs-vol1:
-  packageId: mushymushy/hd-north-american-semi-truck-cabs-vol01
+  packageId: mushymushy/semi-truck-cabs-vol01
+  variantId: default
 
 simtropolis/30733-hd-north-american-40ft-semi-trailers-vol1:
-  packageId: mushymushy/hd-north-american-40ft-semi-trailers-vol01
+  packageId: mushymushy/40ft-semi-trailers-vol01
+  variantId: default
 
 simtropolis/30745-b62-remastered-sears-grand:
   packageId: nos-17/b62-remastered-sears-grand
@@ -1858,7 +1867,8 @@ simtropolis/30749-b62-remastered-wawa-gas-car-show:
   packageId: nos-17/b62-remastered-wawa-car-show
 
 simtropolis/30773-hd-north-american-53ft-semi-trailers-vol1:
-  packageId: mushymushy/hd-north-american-53ft-semi-trailers-vol01
+  packageId: mushymushy/53ft-semi-trailers-vol01
+  variantId: default
 
 simtropolis/30785-b62-remastered-cvs-pharmacy:
   packageId: nos-17/b62-remastered-cvs-pharmacy
@@ -2413,6 +2423,10 @@ simtropolis/34027-coris-no-kickout-lower-wealth-mod:
   packageId: corinamarie/no-kickout-lower-wealth
   variantId: default
 
+simtropolis/34163-agc-automobile-dlc:
+  packageId: agc/automobile-dlc
+  variantId: default
+
 simtropolis/34196-kk-wind-farm-maintenance-facility:
   packageId: kloudkicker/wind-farm-maintenance-facility
 
@@ -2742,6 +2756,10 @@ simtropolis/35438-esa-stores:
   packageId: oidaas/esa-stores
   variantId: default
 
+simtropolis/35470-pre-2000-car-props-pack:
+  packageId: art128/pre-2000-car-props
+  variantId: default
+
 simtropolis/35519-ow-roundabout-set:
   variants:
     '197017':
@@ -2790,6 +2808,10 @@ simtropolis/35617-emerson-apartments:
       variantId: darknite
 
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
+
+simtropolis/35633-1x1-dirty-industrials:
+  packageId: jestarr/1x1-dirty-industrials
+  variantId: default
 
 simtropolis/35635-ulisse-wolf-five-nights-at-freddys:
   packageId: ulisse-wolf/five-nights-at-freddys
@@ -2851,6 +2873,7 @@ simtropolis/35721-elviras-halloween-emporium:
 
 simtropolis/35753-jes_resourcepack_vol27-v6:
   packageId: jestarr/resourcepack-vol27
+  variantId: default
 
 simtropolis/35759-sc4-disable-cheats:
   packageId: null-45/disable-cheats
@@ -2960,12 +2983,20 @@ simtropolis/35927-malmberget-proppack-vol-2:
   packageId: oidaas/malmberget-props-vol02
   variantId: default
 
+simtropolis/35961-bsc-batprops_hd-jes-vol10:
+  packageId: jestarr/batprops-vol10
+  variantId: default
+
 simtropolis/35978-sc4-more-demand-info:
   packageId: null-45/more-demand-info
   paths:
     Census Repository v3.5 Patch:
       packageId: ripplejet/census-repository-building
       variantId: more-demand-info
+  variantId: default
+
+simtropolis/36006-bsc-batprops_hd-jes-vol11:
+  packageId: jestarr/batprops-vol11
   variantId: default
 
 simtropolis/36016-census-repository-patch-for-moredemandinfo: null
@@ -2979,8 +3010,20 @@ simtropolis/36034-post-offices-pack-2:
       packageId: justforfun/post-offices-pack-2
       variantId: default
 
+simtropolis/36046-bsc-batprops_hd-jes-vol12:
+  packageId: jestarr/batprops-vol12
+  variantId: default
+
 simtropolis/36048:
   superseded: simtropolis/36120-sc4-cpu-options
+
+simtropolis/36051-jes_sawsharpeningshop_hd:
+  packageId: jestarr/saw-sharpening-shop
+  variantId: hd
+
+simtropolis/36052-jes_weldingshop2_hd:
+  packageId: jestarr/welding-shop-2
+  variantId: hd
 
 simtropolis/36053:
   superseded: simtropolis/36120-sc4-cpu-options
@@ -3001,12 +3044,32 @@ simtropolis/36091-sc4-graphics-options:
   packageId: null-45/graphics-options
   variantId: default
 
+simtropolis/36094-bsc-batprops_hd-jes-vol13:
+  packageId: jestarr/batprops-vol13
+  variantId: default
+
 simtropolis/36095:
   superseded: simtropolis/36091-sc4-graphics-options
+
+simtropolis/36098-jes_substation2_hd:
+  packageId: jestarr/substation-2
+  variantId: hd
+
+simtropolis/36110-bsc-batprops_hd-jes-vol14:
+  packageId: jestarr/batprops-vol14
+  variantId: default
 
 simtropolis/36112-allow-more-building-styles-dll-plugin:
   packageId: null-45/more-building-styles
   variantId: default
+
+simtropolis/36114-jes_guidosredhots_hd:
+  packageId: jestarr/guidos-red-hots
+  variantId: hd
+
+simtropolis/36115-jes_guidossmallenginerepair_hd:
+  packageId: jestarr/guidos-small-engine-repair
+  variantId: hd
 
 simtropolis/36120-sc4-cpu-options:
   packageId: null-45/cpu-options
@@ -3019,6 +3082,16 @@ simtropolis/36126-sc4-disable-lot-plop-smoke:
 simtropolis/36132-sc4-disable-network-construction-sounds:
   packageId: null-45/disable-network-construction-sounds
   variantId: default
+
+simtropolis/36137-thibodeausturnbucklecompany:
+  packageId: jestarr/thibodeaus-turnbuckle-company
+  variants:
+    '200388':
+      packageId: jestarr/thibodeaus-turnbuckle-company
+      variantId: hd
+    '200389':
+      packageId: jestarr/thibodeaus-turnbuckle-company
+      variantId: sd
 
 simtropolis/36142-submenus-dll:
   packageId: memo/submenus-dll
@@ -3048,6 +3121,14 @@ simtropolis/36188-3d-camera-dll-for-simcity-4:
   packageId: memo/3d-camera
   variantId: default
 
+simtropolis/36194-bsc-batprops_hd-jes-vol15:
+  packageId: jestarr/batprops-vol15
+  variantId: default
+
+simtropolis/36195-the-hancock-peanut-factory:
+  packageId: jestarr/hancock-peanut-factory
+  variantId: default
+
 simtropolis/36202-query-tool-ui-extensions-dll-for-simcity-4:
   packageId: null-45/query-tool-ui-extensions
   variantId: default
@@ -3055,6 +3136,16 @@ simtropolis/36202-query-tool-ui-extensions-dll-for-simcity-4:
 simtropolis/36204-plopable-rretail-ta-truckstop-with-new-menus-and-sound: null
 
 simtropolis/36207-plopable-rretail-flying-j-truckstop-with-new-menus-and-sound: null
+
+simtropolis/36208-hadmore-paint-company:
+  packageId: jestarr/hadmore-paint-company
+  variants:
+    '200934':
+      packageId: jestarr/hadmore-paint-company
+      variantId: sd
+    '200935':
+      packageId: jestarr/hadmore-paint-company
+      variantId: hd
 
 simtropolis/36213-medit-bldg-59:
   packageId: wannglondon/mediterranean-building-59
@@ -3065,6 +3156,16 @@ simtropolis/36214-ancient-ampitheater:
   variantId: default
 
 simtropolis/36221-plopable-rretail-loves-truckstop-with-new-menus-and-sound: null
+
+simtropolis/36224-robertson-sons-manufacturing:
+  packageId: jestarr/robertson-manufacturing
+  variants:
+    '201032':
+      packageId: jestarr/robertson-manufacturing
+      variantId: sd
+    '201033':
+      packageId: jestarr/robertson-manufacturing
+      variantId: hd
 
 simtropolis/36226-colossus-addon-mod-v-25-legacy-controller: null
 
@@ -3108,7 +3209,7 @@ simtropolis/36248-central-co-op-creamery:
   packageId: jestarr/central-coop-creamery
   variants:
     '201340':
-      variantId: default
+      variantId: sd
     '201341':
       variantId: hd
 
@@ -3125,6 +3226,10 @@ simtropolis/36255-10-villas-low-wealth:
 
 simtropolis/36257-discord-rich-presence-dll-for-simcity-4: null
 
+simtropolis/36258-bsc-batprops_hd-jes-vol16:
+  packageId: jestarr/batprops-vol16
+  variantId: default
+
 simtropolis/36264-rowhouses-8:
   packageId: sander97/rowhouse-8
 
@@ -3134,9 +3239,11 @@ simtropolis/36268-cathedral:
 simtropolis/36271-the-moxie-bottling-company:
   variants:
     '201514':
+      packageId: jestarr/moxie-bottling-company
       variantId: hd
     '201515':
-      variantId: default
+      packageId: jestarr/moxie-bottling-company
+      variantId: sd
 
 simtropolis/36273-quigley-acres:
   packageId: leonv93/quigley-acres
@@ -3175,6 +3282,10 @@ simtropolis/36317-next-gen-planes-pack-1:
       packageId: joelmk2/next-gen-planes-vol01
       variantId: default
 
+simtropolis/36318-bsc-batprops_hd-jes-vol17:
+  packageId: jestarr/batprops-vol17
+  variantId: default
+
 simtropolis/36320-jes_buildingprops:
   variants:
     '201805': null
@@ -3184,7 +3295,7 @@ simtropolis/36320-jes_buildingprops:
       variantId: hd
     '202236':
       packageId: jestarr/warehouses-props
-      variantId: default
+      variantId: sd
 
 simtropolis/36329-fa2-and-fa3-mid-rises:
   variants:
@@ -3236,9 +3347,11 @@ simtropolis/36362-diego-del-llano-models-2022-23-24:
 simtropolis/36370-small-brick-factory:
   variants:
     '202227':
+      packageId: jestarr/small-brick-factory
       variantId: hd
     '202228':
-      variantId: default
+      packageId: jestarr/small-brick-factory
+      variantId: sd
 
 simtropolis/36372-fa2-and-fa3-giraffemountain-growify-residential-ploppables:
   packageId: giraffemountain/fa2-mid-rises
@@ -3261,9 +3374,11 @@ simtropolis/36381-fall-river-mill:
     '202344': null
     '202345': null
     '202683':
+      packageId: jestarr/fall-river-mill
       variantId: hd
     '202684':
-      variantId: default
+      packageId: jestarr/fall-river-mill
+      variantId: sd
 
 simtropolis/36383-effthegrids-fa3-181-east-gun-hill-rd:
   packageId: effthegrid/fa3-181-east-gun-hill-rd
@@ -3337,6 +3452,10 @@ simtropolis/36442-model-discount-furniture:
       packageId: jasoncw/model-discount-furniture
       variantId: darknite
 
+simtropolis/36451-jones-bros-hd:
+  packageId: jestarr/jones-bros
+  variantId: default
+
 simtropolis/36453-pizza-ribs-sushi:
   packageId: jasoncw/pizza-ribs-sushi
   variants:
@@ -3349,6 +3468,10 @@ simtropolis/36453-pizza-ribs-sushi:
 
 simtropolis/36457-grimstad-pharmacy:
   packageId: dead-end/grimstad-pharmacy
+  variantId: default
+
+simtropolis/36460-trackside-maintenance-building-hd:
+  packageId: jestarr/trackside-maintenance-building
   variantId: default
 
 simtropolis/36465-magasin-valois:
@@ -3368,6 +3491,10 @@ simtropolis/36481-custom-budget-departments-dll-plugin:
 simtropolis/36482-raven-hollow-inn:
   packageId: wannglondon/raven-hollow-inn
   variantId: darknite
+
+simtropolis/36494-willis-nut-bolt-hd:
+  packageId: jestarr/willis-nut-bolt
+  variantId: default
 
 simtropolis/36495-coco-samsung-apartment:
   packageId: cococity/coco-samsung-apartment
@@ -3412,6 +3539,10 @@ simtropolis/36507-delitz-designer-gallery:
     '203921':
       packageId: jasoncw/delitz-designer-gallery
       variantId: darknite
+
+simtropolis/36521-allied-pickle-works-hd:
+  packageId: jestarr/allied-pickle-works
+  variantId: hd
 
 simtropolis/36523-american-rowhome-8:
   packageId: wannglondon/american-rowhome-8
@@ -3490,6 +3621,10 @@ simtropolis/36549-pietzsch-house:
 simtropolis/36561-konsum:
   packageId: dead-end/konsum
   variantId: default
+
+simtropolis/36563-gravelymfg_hd:
+  packageId: jestarr/gravely-mfg
+  variantId: hd
 
 simtropolis/36567-mid-century-modern-homes-pack:
   packageId: wannglondon/mid-century-modern-homes-pack

@@ -4997,11 +4997,120 @@ assets:
     assetId: simtropolis/36098-jes_substation2_hd
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/jes_Substation2_HD/3x1/jes_3x1_Substation2_HD_f2c56c4a.SC4Lot:
+        32ab1e4d-f2c56c4a:
+          bulldoze: 20
+          categories: power
+          cost: 1000
+          description: A small electrical substation.
+          flamability: 20
+          jobs:
+            $: 2
+            $$: 1
+          label: jes_SubstationBuilding2_HD
+          maintenance: 25
+          menu: Power
+          model: 12be97ea
+          name: jes_SubstationBuilding2_HD
+          power: 1
+          powerProduction: 100
+          submenu: Power/Misc
+          water: 5
+      BSC/jestarr/jes_Substation2_HD/4x1/jes_4x1_Substation2_HD_f2c55143.SC4Lot:
+        32ab1e4d-f2c55143:
+          bulldoze: 20
+          categories: power
+          cost: 1000
+          description: A small electrical substation.
+          flamability: 20
+          jobs:
+            $: 2
+            $$: 1
+          label: jes_SubstationBuilding2_HD
+          maintenance: 25
+          menu: Power
+          model: 12be97ea
+          name: jes_SubstationBuilding2_HD
+          power: 1
+          powerProduction: 100
+          submenu: Power/Misc
+          water: 5
     category: 107-utilities
+    dependencies:
+      - simtropolis/34163-agc-automobile-dlc
+      - simtropolis/35961-bsc-batprops_hd-jes-vol10
+      - simtropolis/36094-bsc-batprops_hd-jes-vol13
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tSubstation2_HD\n</p>\n\n<p>\n\t<br>\n\tA pair of electrical substation lots — a 3x1 and a 4x1.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: 3x1 and 4x1 tiles<br>\n\tBuilding style(s): Building: Utility, Building: Power, BTE: Utility - Power<br>\n\tGrowth stage: N/A<br>\n\tMenu position: Utilities - Power<br>\n\tDemand Created: $ - 2; $$ - 1<br>\n\tPlop Cost: $1,000<br>\n\tBulldoze Cost: $20<br>\n\tConstruction Time: N/A<br>\n\tMax. Fire Stage: 1<br>\n\tPower consumption:\_\_ \_1 MWh/month<br>\n\tWater consumption:\_\_ \_5 Gallons/month<br>\n\tBudget Item: Cost $25<br>\n\tPower Generated: 100KW<br>\n\tHard Failure Type: Doesn't Explode\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.\n</p>\n\n<p>\n\tBSCTextures Vol02<br>\n\tBSCTextures Vol03 v4<br>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/.</a>\n</p>\n\n<p>\n\tAGC - Automobile DLC<br>\n\tThe above file is available at<br>\n\t<a href=\"https://community.simtropolis.com/files/file/34163-agc-automobile-dlc/\" rel=\"\">https://community.simtropolis.com/files/file/34163-agc-automobile-dlc/.</a>\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> BATProps_HD - JES Vol10<br>\n\tThe above file is available at<br>\n\t<a href=\"https://community.simtropolis.com/files/file/35961-bsc-batprops_hd-jes-vol10/\" rel=\"\">https://community.simtropolis.com/files/file/35961-bsc-batprops_hd-jes-vol10/.</a>\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> BATProps_HD - JES Vol13<br>\n\tThe above file is available at<br>\n\t<a href=\"https://community.simtropolis.com/files/file/36094-bsc-batprops_hd-jes-vol13/\" rel=\"\">https://community.simtropolis.com/files/file/36094-bsc-batprops_hd-jes-vol13/.</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_Substation2_HD.zip
+    files:
+      - BSC/BSCProps/jes_SubstationBuilding2_HD-0x5ad0e817_0x12be97ea_0x30000.SC4Model
+      - BSC/jestarr/jes_Substation2_HD/3x1/jes_3x1_Substation2_HD_f2c56c4a.SC4Lot
+      - BSC/jestarr/jes_Substation2_HD/4x1/jes_4x1_Substation2_HD_f2c55143.SC4Lot
+      - Documentation/Readme_Substation2_HD.html
+      - Documentation/Styles/stylesheet.css
+      - Documentation/images/3x1_Substation2.jpg
+      - Documentation/images/4x1_Substation2.jpg
+      - Documentation/images/footer1.jpg
+      - Documentation/images/logo.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/3x1_Substation2_Day.jpg.a9572d8e316e794ef9b5f66848b929ae.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/3x1_Substation2_Nite.jpg.7581acc1ae6729a692a43e0612f74e6c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/4x1_Substation2_Day.jpg.0fb25a1c7ba9a93cb6ab67635af23fba.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/4x1_Substation2_Nite.jpg.6ec876bf1ce603e27cbfe5186db788d7.jpg
     lastModified: 2024-02-04T18:51:52.000Z
+    lots:
+      BSC/jestarr/jes_Substation2_HD/3x1/jes_3x1_Substation2_HD_f2c56c4a.SC4Lot:
+        f2c56c4a:
+          building: f2c56c4a
+          name: jes_3x1_Substation2_HD
+          props:
+            - 1e9a0000
+            - '53193763'
+            - '53231890'
+            - 732016b7
+            - 931ee57a
+            - b33e9394
+            - b34211d2
+          size: 3x1
+          textures:
+            - fb745000
+            - fbd10000
+      BSC/jestarr/jes_Substation2_HD/4x1/jes_4x1_Substation2_HD_f2c55143.SC4Lot:
+        f2c55143:
+          building: f2c55143
+          name: jes_4x1_Substation2_HD
+          props:
+            - '0e848034'
+            - 1e9a0000
+            - '33394e19'
+            - '53193763'
+            - '53231890'
+            - 533e93a3
+            - 732016b7
+            - 931ee57a
+            - b30df18f
+            - b33e9394
+            - b34211d2
+          size: 4x1
+          textures:
+            - fb745000
+            - fbd10000
+    meta:
+      timestamp: 2025-01-10T09:56:25.941Z
+      version: 1
+    models:
+      BSC/BSCProps/jes_SubstationBuilding2_HD-0x5ad0e817_0x12be97ea_0x30000.SC4Model:
+        - 12be97ea
     name: jes_Substation2_HD
+    sha256: f9620dc3b971cb7e99a8ca3b392c6fcb27228e8eb4333c0ef3a5443563207d73
+    size: 800819
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/3x1_Substation2_Day.thumb.jpg.d40d0037e9ae0b09a375345086680898.jpg
+    uncompressed: 881587
     url: https://community.simtropolis.com/files/file/36098-jes_substation2_hd/
+    version: 1.0.0
   simtropolis/36156:
     assetId: simtropolis/36156-leatherhead-pumping-station
     authors:
@@ -5735,4 +5844,4 @@ assets:
     url: https://community.simtropolis.com/files/file/983-hydro-electric-dam/
 
 meta:
-  timestamp: 2025-01-08T11:24:26.356Z
+  timestamp: 2025-01-10T09:30:55.357Z

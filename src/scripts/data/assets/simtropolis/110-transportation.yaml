@@ -1747,10 +1747,10 @@ assets:
                 - a000007b
               size: 2x1
               textures:
-                - '25900000'
-                - 25c10000
+                - '25901000'
+                - 25c11000
                 - 25db0000
-                - 263d0000
+                - 263d2000
         models:
           Jasoncw - Small Train Station V1.1/Jasoncw - Small Train Station (1x2)-0x5ad0e817_0x10121420_0xf0000.SC4Model:
             - 10121420-000f
@@ -1913,11 +1913,11 @@ assets:
                 - a000007b
               size: 4x1
               textures:
-                - '25900000'
-                - 25bf0000
-                - 25c10000
+                - '25901000'
+                - 25bf1000
+                - 25c11000
                 - 25db0000
-                - 263d0000
+                - 263d2000
         models:
           Jasoncw - Medium Train Station V1.1/Jasoncw - Medium Train Station (1x4).SC4Model:
             - 10121420-0013
@@ -3059,8 +3059,8 @@ assets:
                 - a000007b
               size: 2x1
               textures:
-                - '25900000'
-                - 263d0000
+                - '25901000'
+                - 263d2000
           Jasoncw - Train Station Set V1.1/Jasoncw - 1x4 Medium Train Station/Jasoncw - Medium Train Station_b184c540.SC4Lot:
             b184c540:
               building: b184c540
@@ -3083,8 +3083,8 @@ assets:
                 - a000007b
               size: 4x1
               textures:
-                - '25900000'
-                - 263d0000
+                - '25901000'
+                - 263d2000
           Jasoncw - Train Station Set V1.1/Jasoncw - 2x4 Large Train Station/Jasoncw - Large Train Station_f184e53f.SC4Lot:
             f184e53f:
               building: f184e53f
@@ -3117,8 +3117,8 @@ assets:
                 - a000007b
               size: 4x2
               textures:
-                - '25900000'
-                - 263d0000
+                - '25901000'
+                - 263d2000
         models:
           Jasoncw - Train Station Set V1.1/Jasoncw - 1x2 Small Train Station/Jasoncw - Small Train Station (1x2) V2.SC4Model:
             - 10121420-0047
@@ -3236,14 +3236,14 @@ assets:
     images:
       - https://www.simtropolis.com/objects/screens/0004/195c4fa65c373a74b16e342dca6b49bc-LPLeft2.jpg
       - https://www.simtropolis.com/objects/screens/0004/195c4fa65c373a74b16e342dca6b49bc-LPRight2.jpg
-    lastModified: 2006-06-08T01:24:01.000Z
-    name: Logistics Centres MegaPack
+    lastModified: 2025-01-10T01:02:36.000Z
+    name: Logistics Centres Lots MegaPack
     sha256: 00239627fd77370b128af8425b825b324030dffc4dc3fbd2b943d24e630c6812
     size: 1470569
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2008/thumb-195c4fa65c373a74b16e342dca6b49bc-LPLeft2.jpg
     timestamp: 2024-07-24T12:13:33.510Z
     uncompressed: 1484240
-    url: https://community.simtropolis.com/files/file/16119-logistics-centres-megapack/
+    url: https://community.simtropolis.com/files/file/16119-logistics-centres-lots-megapack/
     version: '1.0'
   simtropolis/16121:
     assetId: simtropolis/16121-german-highway-signs-grass-version
@@ -5715,12 +5715,12 @@ assets:
               name: Jasoncw - Perry Station
               size: 7x4
               textures:
-                - 258c0000
+                - 258c2000
                 - 25db0000
                 - 25f60000
                 - 25fa0000
                 - '26060000'
-                - 263d0000
+                - 263d2000
         models:
           Jasoncw - Perry Station V1.1/Jasoncw - Perry Station.SC4Model:
             - b1d39911-003e
@@ -13224,21 +13224,21 @@ assets:
           name: Traffic Blocker SAM 8 Cobblestone Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834997a
         1f426486:
           building: 1f426486
           name: Traffic Blocker MIS B
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5de4b100
         1f4264c4:
           building: 1f4264c4
           name: Traffic Blocker RHW-4 B
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5eb4b100
         1f426533:
           building: 1f426533
@@ -13252,56 +13252,56 @@ assets:
           name: Traffic Blocker SAM 9 Red Brick Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349980
         1f426572:
           building: 1f426572
           name: Traffic Blocker Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8344600
         1f5deabc:
           building: 1f5deabc
           name: Traffic Blocker SAM 10 Japanese Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349985
         33e447a3:
           building: 33e447a3
           name: Traffic Blocker SAM 11 Industrial Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349990
         3f42584f:
           building: 3f42584f
           name: Traffic Blocker MIS F
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5de4b100
         3f425898:
           building: 3f425898
           name: Traffic Blocker OneWay C
           size: 1x1
           textures:
-            - 258f0000
-            - '26380000'
+            - 258f2000
+            - '26382000'
         3f425a81:
           building: 3f425a81
           name: Traffic Blocker SAM 7 Asphalt Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349975
         3f425bf4:
           building: 3f425bf4
           name: Traffic Blocker RHW-8 F
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ed4b100
             - 5ef5b100
         3f4264bb:
@@ -13309,14 +13309,14 @@ assets:
           name: Traffic Blocker RHW-2 B
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5e004b00
         3f4264e5:
           building: 3f4264e5
           name: Traffic Blocker SAM 2 Herringbone Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834995a
         3f4264f4:
           building: 3f4264f4
@@ -13330,14 +13330,14 @@ assets:
           name: Traffic Blocker SAM 6 Klinker Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349970
         5f425912:
           building: 5f425912
           name: Traffic Blocker RHW-4 F
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5eb4b100
         5f4259dd:
           building: 5f4259dd
@@ -13358,7 +13358,7 @@ assets:
           name: Traffic Blocker RHW-10 F
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ef4b100
             - 5ef5b100
         5f4264de:
@@ -13366,28 +13366,28 @@ assets:
           name: Traffic Blocker Road F
           size: 1x1
           textures:
-            - 258f0000
-            - '26370000'
+            - 258f2000
+            - '26372000'
         5f426549:
           building: 5f426549
           name: Traffic Blocker SAM 7 Asphalt Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349975
         5f426558:
           building: 5f426558
           name: Traffic Blocker SAM 8 Cobblestone Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834997a
         5f42656f:
           building: 5f42656f
           name: Traffic Blocker Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8344600
         5f578575:
           building: 5f578575
@@ -13400,42 +13400,42 @@ assets:
           name: Traffic Blocker TramonStreet B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f85c405a
         '62663833':
           building: '62663833'
           name: Traffic Blocker SAM 11 Industrial Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349990
         7f4257f0:
           building: 7f4257f0
           name: Traffic Blocker Avenue C
           size: 2x1
           textures:
-            - 258f0000
-            - '26360000'
+            - 258f2000
+            - '26362000'
         7f426473:
           building: 7f426473
           name: Traffic Blocker Avenue B
           size: 2x1
           textures:
-            - 258f0000
-            - '26360000'
+            - 258f2000
+            - '26362000'
         7f4264a7:
           building: 7f4264a7
           name: Traffic Blocker OneWay F
           size: 1x1
           textures:
-            - 258f0000
-            - '26380000'
+            - 258f2000
+            - '26382000'
         7f4264b1:
           building: 7f4264b1
           name: Traffic Blocker RHW-10 B
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ef4b100
             - 5ef5b100
         7f4264f8:
@@ -13450,14 +13450,14 @@ assets:
           name: Traffic Blocker SAM 7 Asphalt Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349975
         7f42770a:
           building: 7f42770a
           name: Traffic Blocker RHW-6 B
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ec6b100
             - 5ef5b100
         9f425b51:
@@ -13465,42 +13465,42 @@ assets:
           name: Traffic Blocker Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8344600
         9f426477:
           building: 9f426477
           name: Traffic Blocker Avenue F
           size: 2x1
           textures:
-            - 258f0000
-            - '26360000'
+            - 258f2000
+            - '26362000'
         9f5785c0:
           building: 9f5785c0
           name: Traffic Blocker TramonStreet F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f85c405a
         9f5dea93:
           building: 9f5dea93
           name: Traffic Blocker SAM 10 Japanese Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349985
         9f5deae1:
           building: 9f5deae1
           name: Traffic Blocker SAM 10 Japanese Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349985
         bf425983:
           building: bf425983
           name: Traffic Blocker SAM 2 Herringbone Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834995a
         bf42653d:
           building: bf42653d
@@ -13520,35 +13520,35 @@ assets:
           name: Traffic Blocker SAM 6 Klinker Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349970
         df4258d8:
           building: df4258d8
           name: Traffic Blocker RHW-2 F
           size: 1x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5e004b00
         df425947:
           building: df425947
           name: Traffic Blocker Road C
           size: 1x1
           textures:
-            - 258f0000
-            - '26370000'
+            - 258f2000
+            - '26372000'
         df4264a4:
           building: df4264a4
           name: Traffic Blocker OneWay B
           size: 1x1
           textures:
-            - 258f0000
-            - '26380000'
+            - 258f2000
+            - '26382000'
         df4264d3:
           building: df4264d3
           name: Traffic Blocker RHW-8 B
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ed4b100
             - 5ef5b100
         df4264e9:
@@ -13556,7 +13556,7 @@ assets:
           name: Traffic Blocker SAM 2 Herringbone Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834995a
         df426537:
           building: df426537
@@ -13570,7 +13570,7 @@ assets:
           name: Traffic Blocker SAM 9 Red Brick Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349980
         df578534:
           building: df578534
@@ -13589,36 +13589,36 @@ assets:
           name: Traffic Blocker TramonStreet C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f85c405a
         df5dea7e:
           building: df5dea7e
           name: Traffic Blocker SAM 6 Klinker Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349970
         e0ed19ba:
           building: e0ed19ba
           name: Traffic Blocker SAM 11 Industrial Street B
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349990
         ff425af2:
           building: ff425af2
           name: Traffic Blocker SAM 9 Red Brick Street C
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f8349980
         ff4264da:
           building: ff4264da
           name: Traffic Blocker Road B
           size: 1x1
           textures:
-            - 258f0000
-            - '26370000'
+            - 258f2000
+            - '26372000'
         ff426541:
           building: ff426541
           name: Traffic Blocker SAM 5 Trolca Dirt Road F
@@ -13631,14 +13631,14 @@ assets:
           name: Traffic Blocker SAM 8 Cobblestone Street F
           size: 1x1
           textures:
-            - 258f0000
+            - 258f2000
             - f834997a
         ff42770f:
           building: ff42770f
           name: Traffic Blocker RHW-6 F
           size: 2x1
           textures:
-            - 251c0000
+            - 251c1000
             - 5ec6b100
             - 5ef5b100
         ff57853d:
@@ -19822,4 +19822,4 @@ assets:
     url: https://community.simtropolis.com/files/file/999-bus-stop-with-allotments/
 
 meta:
-  timestamp: 2025-01-08T11:24:26.356Z
+  timestamp: 2025-01-10T09:30:55.357Z

@@ -47,7 +47,13 @@ import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { ContentsInfo, VariantAssetInfo, VariantInfo } from "@common/variants"
+import type {
+  ContentsInfo,
+  ModelID,
+  TextureID,
+  VariantAssetInfo,
+  VariantInfo,
+} from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
@@ -117,6 +123,7 @@ runIndexer({
       "dead-end": 2000,
       cococity: 2000,
       jasoncw: 2020, // todo
+      jestarr: 2024, // todo
       madhatter106: 2012, // todo
       memo: 2000,
       "null-45": 2000,
@@ -129,12 +136,14 @@ runIndexer({
       "simtropolis/15758",
       "simtropolis/21339",
       "simtropolis/22771",
+      "simtropolis/22823",
       "simtropolis/23089",
       "simtropolis/27340",
       "simtropolis/27712",
       "simtropolis/29749",
       "simtropolis/30836",
       "simtropolis/33889",
+      "simtropolis/35470",
     ],
   },
   migrate: {
@@ -146,7 +155,7 @@ runIndexer({
       }
     },
   },
-  refetchIntervalHours: 200,
+  refetchIntervalHours: 20,
   sources: [SC4EVERMORE, SIMTROPOLIS],
   version: 1,
 })
@@ -160,6 +169,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
   } = {}
 
+  const warnings = new Set<string>()
   const errors = new Set<string>()
 
   const assetIds: { [entryId in EntryID]?: AssetID } = {}
@@ -422,14 +432,22 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   if (dbMaxisConfig?.data) {
     maxisContents = loadContentsInfo(dbMaxisConfig.data, categories)
   } else {
-    const data = await analyzeSC4Files(
-      gameDir,
-      ["SimCity_1.dat", "SimCity_2.dat", "SimCity_3.dat", "SimCity_4.dat", "SimCity_5.dat"],
-      exemplarProperties,
-    )
+    const files = [
+      "SimCity_1.dat",
+      "SimCity_2.dat",
+      "SimCity_3.dat",
+      "SimCity_4.dat",
+      "SimCity_5.dat",
+      "SimCityLocale.dat",
+      "Sound.dat",
+      "EP1.dat",
+    ]
 
-    maxisContents = data.contents
-    const maxisData = writeContentsInfo(data.contents, categories)
+    const { contents } = await analyzeSC4Files(gameDir, files, exemplarProperties)
+
+    maxisContents = contents
+
+    const maxisData = writeContentsInfo(contents, categories)
 
     await writeConfig<ContentsData>(dbDir, "configs/maxis", maxisData, ConfigFormat.YAML)
   }
@@ -445,10 +463,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     buildings: { [id in BuildingID]?: PackageID[] }
     lots: { [id in LotID]?: PackageID[] }
     mmps: { [id in FloraID]?: PackageID[] }
-    models: { [id in string]?: PackageID[] }
+    models: { [id in ModelID]?: PackageID[] }
     propFamilies: { [id in FamilyID]?: PackageID[] }
     props: { [id in PropID]?: PackageID[] }
-    textures: { [id in string]?: PackageID[] }
+    textures: { [id in TextureID]?: PackageID[] }
   }
 
   const index: Index = {
@@ -749,6 +767,17 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   /**
    * STEP 8 - Show all errors encountered during this run
    */
+  if (warnings.size) {
+    const n = 100
+    console.warn("".padEnd(n, "*"))
+    console.warn(`* ${"WARNINGS".padStart((n + 8 - 4) / 2, " ").padEnd(n - 4, " ")} *`)
+    console.warn("".padEnd(n, "*"))
+    for (const warn of warnings) {
+      console.warn(warn)
+      console.warn("---")
+    }
+  }
+
   if (errors.size) {
     const n = 100
     console.error("".padEnd(n, "*"))
@@ -823,6 +852,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (!packages[dependency.id]) {
           errors.add(`${prefix} - Dependency ${dependency.id} does not exist`)
         }
+
+        // Should list individual packages rather than whole BSC dependencies
+        if (dependency.id === "bsc/common-dependencies") {
+          errors.add(`${prefix} - Dependency set '${dependency.id}' listed as direct dependency`)
+        }
       }
     }
 
@@ -843,8 +877,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     }
 
-    // todo: check that dependencies contain the needed props/models/textures...
-
     if (variantInfo.buildings) {
       for (const building of variantInfo.buildings) {
         if (building.categories) {
@@ -864,9 +896,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (building.model) {
           const ids = index.models[building.model]
           if (!ids) {
-            // errors.add(
-            //   `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} does not exist`,
-            // )
+            warnings.add(
+              `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} does not exist`,
+            )
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
               `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} is not listed as dependency: ${ids.join(", ")}`,
@@ -881,12 +913,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (lot.building) {
           const ids = index.buildings[lot.building] ?? index.buildingFamilies[lot.building]
           if (!ids) {
-            // errors.add(
-            //   `${prefix}, building ${lot.name} (${lot.id}) - Building ${lot.building} does not exist`,
-            // )
+            warnings.add(
+              `${prefix}, lot ${lot.name} (${lot.id}) - Building ${lot.building} does not exist`,
+            )
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
-              `${prefix}, building ${lot.name} (${lot.id}) - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
+              `${prefix}, lot ${lot.name} (${lot.id}) - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
             )
           }
         }
@@ -895,10 +927,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           for (const id of lot.props) {
             const ids = index.props[id] ?? index.propFamilies[id]
             if (!ids) {
-              // errors.add(`${prefix}, building ${lot.name} (${lot.id}) - Prop ${id} does not exist`)
+              warnings.add(`${prefix}, lot ${lot.name} (${lot.id}) - Prop ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
               errors.add(
-                `${prefix}, building ${lot.name} (${lot.id}) - Prop ${id} is not listed as dependency: ${ids.join(", ")}`,
+                `${prefix}, lot ${lot.name} (${lot.id}) - Prop ${id} is not listed as dependency: ${ids.join(", ")}`,
               )
             }
           }
@@ -908,12 +940,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           for (const id of lot.textures) {
             const ids = index.textures[id]
             if (!ids) {
-              // errors.add(
-              //   `${prefix}, building ${lot.name} (${lot.id}) - Texture ${id} does not exist`,
-              // )
+              warnings.add(`${prefix}, lot ${lot.name} (${lot.id}) - Texture ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
               errors.add(
-                `${prefix}, building ${lot.name} (${lot.id}) - Texture ${id} is not listed as dependency: ${ids.join(", ")}`,
+                `${prefix}, lot ${lot.name} (${lot.id}) - Texture ${id} is not listed as dependency: ${ids.join(", ")}`,
               )
             }
           }
@@ -926,7 +956,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (mmp.model) {
           const ids = index.models[mmp.model]
           if (!ids) {
-            // errors.add(`${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} does not exist`)
+            warnings.add(
+              `${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} does not exist`,
+            )
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
               `${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
@@ -939,9 +971,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             if (stage.model) {
               const ids = index.models[stage.model]
               if (!ids) {
-                // errors.add(
-                //   `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} does not exist`,
-                // )
+                warnings.add(
+                  `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} does not exist`,
+                )
               } else if (!containsAny(ids, packageIds)) {
                 errors.add(
                   `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
@@ -958,9 +990,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (prop.model) {
           const ids = index.models[prop.model]
           if (!ids) {
-            // errors.add(
-            //   `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} does not exist`,
-            // )
+            warnings.add(
+              `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} does not exist`,
+            )
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
               `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,

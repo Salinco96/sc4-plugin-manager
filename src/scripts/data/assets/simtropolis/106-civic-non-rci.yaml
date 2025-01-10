@@ -12216,10 +12216,10 @@ assets:
             - 2a130000
           size: 3x5
           textures:
-            - 25c00000
-            - 25c10000
+            - 25c01000
+            - 25c11000
             - 25d60000
-            - '26300000'
+            - '26303000'
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -14656,79 +14656,79 @@ assets:
           name: WhiteBrick1 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         05221bcc:
           building: 05221bcc
           name: ConcreteBlocks8 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         25221ba4:
           building: 25221ba4
           name: LightBrick1 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         25221bf5:
           building: 25221bf5
           name: Concrete2 Maxis
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         25221bfd:
           building: 25221bfd
           name: Concrete3 Maxis
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         65221b9c:
           building: 65221b9c
           name: MossyConcrete1 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         85221bae:
           building: 85221bae
           name: GreyStone3 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         85221be3:
           building: 85221be3
           name: BrownStone2 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         a5221bd8:
           building: a5221bd8
           name: CheckeredConcrete Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         c5221b88:
           building: c5221b88
           name: WhiteBrick2 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         c5221bbf:
           building: c5221bbf
           name: GreyBrick5 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         c5221bef:
           building: c5221bef
           name: Concrete1 Maxis
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
         e5221bb5:
           building: e5221bb5
           name: GreyStone2 Mas71
           size: 1x1
           textures:
-            - 251c0000
+            - 251c3000
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -18130,7 +18130,7 @@ assets:
             - a0000078
           size: 5x4
           textures:
-            - 258d0000
+            - 258d1000
             - 25c90000
             - 25cb0000
             - 25d50000
@@ -18143,7 +18143,7 @@ assets:
             - 25fa0000
             - 25fc0000
             - '26060000'
-            - '26210000'
+            - '26213000'
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -18873,9 +18873,9 @@ assets:
                 - 2a170000
               size: 4x4
               textures:
-                - 252b0000
-                - '25900000'
-                - 25c00000
+                - 252b3000
+                - '25901000'
+                - 25c01000
         models:
           Jasoncw - Judith Krug Branch Library (MN)/Jasoncw - Judith Krug Branch Library (MN).SC4Model:
             - 0c54880b
@@ -18921,9 +18921,9 @@ assets:
                 - 2a170000
               size: 4x4
               textures:
-                - 252b0000
-                - '25900000'
-                - 25c00000
+                - 252b3000
+                - '25901000'
+                - 25c01000
         models:
           Jasoncw - Judith Krug Branch Library (DN)/Jasoncw - Judith Krug Branch Library (DN).SC4Model:
             - 0c54880b
@@ -18991,9 +18991,9 @@ assets:
                 - 2ad20000
               size: 6x6
               textures:
-                - 252b0000
-                - 25ae0000
-                - '262e0000'
+                - 252b3000
+                - 25ae2000
+                - '262e3000'
         models:
           Jasoncw - Murray Museum of Modern Art (MN)/Jasoncw - Murray Museum of Modern Art (MN).SC4Model:
             - 2c8d0709
@@ -19041,9 +19041,9 @@ assets:
                 - 2ad20000
               size: 6x6
               textures:
-                - 252b0000
-                - 25ae0000
-                - '262e0000'
+                - 252b3000
+                - 25ae2000
+                - '262e3000'
         models:
           Jasoncw - Murray Muesum of Modern Art (DN)/Jasoncw - Murray Museum of Modern Art (DN).SC4Model:
             - 2c8d0709
@@ -19594,9 +19594,9 @@ assets:
               name: PLOP_2x3_Small Police Station 1
               size: 2x3
               textures:
-                - 258d0000
-                - 258f0000
-                - 25bc0000
+                - 258d1000
+                - 258f2000
+                - 25bc1000
                 - 25f00000
                 - 25fc0000
         models:
@@ -19640,9 +19640,9 @@ assets:
               name: PLOP_2x3_Small Police Station 1
               size: 2x3
               textures:
-                - 258d0000
-                - 258f0000
-                - 25bc0000
+                - 258d1000
+                - 258f2000
+                - 25bc1000
                 - 25f00000
                 - 25fc0000
         models:
@@ -19710,11 +19710,11 @@ assets:
                 - 2adf0000
               size: 3x3
               textures:
-                - 252b0000
-                - 258d0000
-                - 25bb0000
-                - 25bc0000
-                - '26250000'
+                - 252b3000
+                - 258d1000
+                - 25bb1000
+                - 25bc1000
+                - '26252000'
         models:
           Jasoncw - Small Police Station 2 (MN)/Jasoncw - Small Police Station 2 (MN).SC4Model:
             - 903b9e8f
@@ -19760,11 +19760,11 @@ assets:
                 - 2adf0000
               size: 3x3
               textures:
-                - 252b0000
-                - 258d0000
-                - 25bb0000
-                - 25bc0000
-                - '26250000'
+                - 252b3000
+                - 258d1000
+                - 25bb1000
+                - 25bc1000
+                - '26252000'
         models:
           Jasoncw - Small Police Station 2 (DN)/Jasoncw - Small Police Station 2 (DN).SC4Model:
             - 903b9e8f
@@ -19943,8 +19943,8 @@ assets:
             - aa836b49
           size: 3x3
           textures:
-            - '25930000'
-            - 25a00000
+            - '25933000'
+            - 25a03000
             - '26060000'
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
@@ -20054,9 +20054,9 @@ assets:
           size: 5x2
           textures:
             - 1da44a20
-            - 251c0000
-            - 259d0000
-            - '259e0000'
+            - 251c2000
+            - 259d3000
+            - '259e3000'
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -20431,9 +20431,9 @@ assets:
     description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>\n\t<span style=\"background-color:#ffffff;color:#353535;font-size:14px;\">This DLC contains\_props\_(Doesn't include lots).\_So far it only includes a Bucket Wheel Excavator. I will add more machinery later.</span>\n</p>\n\n<p>\n\t<strong style=\"background-color:#ffffff;color:#3498db;font-size:14px;\"><span style=\"background-color:#ffffff;font-size:14px;\">Lot editor:</span></strong>\n</p>\n\n<p>\n\t<strong style=\"background-color:#ffffff;color:#353535;font-size:14px;\"><span style=\"background-color:#ffffff;color:#353535;font-size:14px;\">AGC_BWE_</span></strong>\n</p>\n\n<p>\n\t<strong style=\"background-color:#ffffff;color:#27ae60;font-size:14px;\">I will update this DLC constantly so you must be on the lookout.</strong>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong style=\"color:#2980b9;font-size:16px;\">Includes Maxisnite and Darknite\_(Choose just\_one).</strong>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong style=\"color:#353535;font-size:14px;\">Scale of the models:</strong><span style=\"color:#353535;font-size:14px;\"><span><span>\_</span></span></span><span style=\"background-color:#ffffff;color:#2980b9;font-size:14px;\"><strong>133% on all axes.</strong></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span style=\"color:#006600;\"><strong>If you like my work, you can make a donation to fund my other projects!\_<img alt=\"*:thumb:\" data-emoticon=\"\" height=\"20\" src=\"https://community.simtropolis.com/assets/emoticons/default_44.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/default_44@2x.gif 2x\" style=\"border:0px none;vertical-align:middle;\" title=\"*:thumb:\" width=\"33\" ></strong></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span style=\"font-size:20px;\"><a href=\"https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.paypal.com/donate/?hosted_button_id=WF9FDNHXCHDVU</a></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<strong>Thanks to the few people who have donated to me.</strong>\n</p>\n\n\t\t\t\t\t\t</body>"
     images:
       - https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.jpg.1883881dd25ca14609bc70ccba688501.jpg
-    lastModified: 2024-06-07T12:56:57.000Z
+    lastModified: 2025-01-09T23:49:16.000Z
     name: AGC - Heavy Machinery DLC
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_06/Red-D3D-HeavyMachines.thumb.jpg.c466d829acbde1691482c66470778b6e.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/A_Heavy_Machinery_DLC_ICON.thumb.png.7c49091d2db069f49329d452dc9b5fae.png
     timestamp: 2024-07-24T12:13:33.510Z
     url: https://community.simtropolis.com/files/file/36292-agc-heavy-machinery-dlc/
     variants:
@@ -22031,8 +22031,8 @@ assets:
             - dd37fbc0
           size: 1x1
           textures:
-            - '251e0000'
-            - 258f0000
+            - '251e2000'
+            - 258f2000
     meta:
       timestamp: 2025-01-09T16:18:23.576Z
       version: 1
@@ -22190,11 +22190,11 @@ assets:
             - eebe9b3a
           size: 5x4
           textures:
-            - 251c0000
-            - 258c0000
-            - 258f0000
-            - 25ae0000
-            - 25af0000
+            - 251c2000
+            - 258c2000
+            - 258f2000
+            - 25ae2000
+            - 25af2000
             - f5f84300
             - f8a04055
             - f8a04095
@@ -22315,7 +22315,7 @@ assets:
             - ff4b689c
           size: 5x5
           textures:
-            - 251c0000
+            - 251c2000
             - 25f10000
             - f2144650
             - f2144710
@@ -22422,7 +22422,7 @@ assets:
                 - a000004b
               size: 1x2
               textures:
-                - 258f0000
+                - 258f2000
                 - f5c04005
                 - f5c04010
         models:
@@ -22467,7 +22467,7 @@ assets:
                 - a000004b
               size: 1x2
               textures:
-                - 258f0000
+                - 258f2000
                 - f5c04005
                 - f5c04010
         models:
@@ -22548,7 +22548,7 @@ assets:
             - ecdd2644
           size: 4x5
           textures:
-            - 251c0000
+            - 251c2000
             - 25f10000
             - f2144650
             - f21446e0
@@ -24768,4 +24768,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2025-01-08T11:24:26.356Z
+  timestamp: 2025-01-10T09:30:55.357Z

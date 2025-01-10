@@ -48,7 +48,7 @@ export async function promptUrl(label: string, initial?: string): Promise<string
 export async function promptVariantId(hint: VariantID, filename?: string): Promise<VariantID> {
   const variantId = await input({
     default: hint,
-    message: `Variant ID${filename ? ` (${filename}):` : ""}:`,
+    message: `Variant ID${filename ? ` (${filename})` : ""}:`,
     validate: value => {
       if (!/^[a-z0-9-]+$/.test(value)) {
         return "Invalid variant ID"
