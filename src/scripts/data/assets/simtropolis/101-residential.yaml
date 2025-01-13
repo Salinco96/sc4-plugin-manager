@@ -18069,10 +18069,520 @@ assets:
     authors:
       - WannGLondon
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\tFilling in more gaps of Parisian growables as there is a lack of hotel particuliers when it comes to custom content posted on the forum. Inspired by those found in the 7th arrondissement and Le Marais. One model is mirrored as well. Please feel free to re-lot these models and input your favorite props as the courtyards are open due to custom <abbr title=\"Level Of Detail\">LOD</abbr>-ing. These are growable, however you may use the <abbr title=\"Plugin Manager\">PIM</abbr> to make them ploppable as you may not want these unique structures popping up all over your city. To mitigate this, I did make the high wealth growth stage somewhat lower so they may be replaced by more 'generic' structures.\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t*Most of the backsides are modeled too should you wish to plops gardens behind them, much like real-life hotel particuliers.\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t- Hight wealth residential (stage 5 &amp; 6)\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t- Euro Tileset\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t- Low, Medium &amp; High Density zones\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t- Nightlighted, either MaxisNite or DarkNite*\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t- No dependencies\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t*DarkNite version requires SimFox's DayNNite Mod\n\t</p>\n\n\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t*These have been tested, however please let me know if you find any issues\n\t</p>\n</div>\n\n<div style=\"background-color:#ffffff;border-top:1px solid rgba(0,0,0,.075);color:#353535;font-size:14px;\">\n\t<div>\n\t\t<div style=\"font-size:12px;\">\n\t\t\t<div style=\"text-align:right;\">\n\t\t\t\t<ul style=\"padding:0px;\">\n\t\t\t\t\t<li style=\"border:1px solid rgba(0,0,0,.1);\">\n\t\t\t\t\t\t\_\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/60495e6f40b5a_HotelParticulierPackDay.png.18e5157e89e04b0fec6d1d3862380c23.png
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/60495e74a3443_HotelParticulierPackNight.png.a3b36de9e87186ac33814aa0686d8c69.png
     lastModified: 2021-03-11T00:10:15.000Z
+    meta:
+      timestamp: 2025-01-13T11:26:38.072Z
+      version: 1
     name: WannG Hotel Particulier Pack
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/60495fe3e7f56_HotelParticulierPackDay.thumb.png.7bb301ef5c58e58a6c0a5d877821202b.png
     url: https://community.simtropolis.com/files/file/34268-wanng-hotel-particulier-pack/
+    variants:
+      '186231':
+        buildings:
+          Hotel Particulier Pack 1_DN/HP_1/Hotel Particulier 1_DN-0x6534284a-0x1c2d4663-0x3dc7bb90.SC4Desc:
+            1c2d4663-3dc7bb90:
+              bulldoze: 232
+              capacity:
+                r$: 159
+                r$$: 89
+                r$$$: 41
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 0fdda04f
+              name: Hotel Particulier 1_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro
+              water: 10
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2427
+          Hotel Particulier Pack 1_DN/HP_2/Hotel Particulier 2_DN-0x6534284a-0x1c2d4663-0x9dc924d7.SC4Desc:
+            1c2d4663-9dc924d7:
+              bulldoze: 284
+              capacity:
+                r$: 458
+                r$$: 254
+                r$$$: 113
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: efdf0d8c
+              name: Hotel Particulier 2_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 14
+              tilesets: Euro
+              water: 22
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 6993
+          Hotel Particulier Pack 1_DN/HP_3/Hotel Particulier 3A_DN-0x6534284a-0x1c2d4663-0xbdcba4b0.SC4Desc:
+            1c2d4663-bdcba4b0:
+              bulldoze: 336
+              capacity:
+                r$: 572
+                r$$: 317
+                r$$$: 140
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 4fe18c56
+              name: Hotel Particulier 3A_DN
+              pollution: 2
+              pollutionRadius: 6
+              power: 18
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 8734
+          Hotel Particulier Pack 1_DN/HP_3/Hotel Particulier 3_DN-0x6534284a-0x1c2d4663-0xbdcba56b.SC4Desc:
+            1c2d4663-bdcba56b:
+              bulldoze: 330
+              capacity:
+                r$: 562
+                r$$: 312
+                r$$$: 138
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 6fe125d5
+              name: Hotel Particulier 3_DN
+              pollution: 2
+              pollutionRadius: 6
+              power: 18
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 8581
+          Hotel Particulier Pack 1_DN/HP_4/Hotel Particulier 4_DN-0x6534284a-0x1c2d4663-0xbdccf903.SC4Desc:
+            1c2d4663-bdccf903:
+              bulldoze: 324
+              capacity:
+                r$: 285
+                r$$: 159
+                r$$$: 71
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: cfe2e25f
+              name: Hotel Particulier 4_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 9
+              tilesets: Euro
+              water: 15
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 4351
+          Hotel Particulier Pack 1_DN/HP_5/Hotel Particulier 5_DN-0x6534284a-0x1c2d4663-0xbdce5aec.SC4Desc:
+            1c2d4663-bdce5aec:
+              bulldoze: 282
+              capacity:
+                r$: 704
+                r$$: 390
+                r$$$: 172
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 0fe441ae
+              name: Hotel Particulier 5_DN
+              pollution: 2
+              pollutionRadius: 6
+              power: 22
+              tilesets: Euro
+              water: 32
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10750
+        features: []
+        filename: Hotel Particulier Pack 1_DN.zip
+        files:
+          - Hotel Particulier Pack 1_DN/HP_1/HP1DN-0x5ad0e817_0xfdda04f_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_1/Hotel Particulier 1_DN-0x6534284a-0x1c2d4663-0x3dc7bb90.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_1/R$$$5_2x2_Hotel Particulier 1_DN_4dc7bb9c.SC4Lot
+          - Hotel Particulier Pack 1_DN/HP_2/HP2DN-0x5ad0e817_0xefdf0d8c_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_2/Hotel Particulier 2_DN-0x6534284a-0x1c2d4663-0x9dc924d7.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_2/R$$$5_2x3_Hotel Particulier 2_DN_ddc924e3.SC4Lot
+          - Hotel Particulier Pack 1_DN/HP_3/HP3ADN-0x5ad0e817_0x4fe18c56_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_3/HP3DN-0x5ad0e817_0x6fe125d5_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_3/Hotel Particulier 3A_DN-0x6534284a-0x1c2d4663-0xbdcba4b0.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_3/Hotel Particulier 3_DN-0x6534284a-0x1c2d4663-0xbdcba56b.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_3/R$$$5_2x3_Hotel Particulier 3A_DN_9dcba4c3.SC4Lot
+          - Hotel Particulier Pack 1_DN/HP_3/R$$$5_2x3_Hotel Particulier 3_DN_5dcba578.SC4Lot
+          - Hotel Particulier Pack 1_DN/HP_4/HP4DN-0x5ad0e817_0xcfe2e25f_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_4/Hotel Particulier 4_DN-0x6534284a-0x1c2d4663-0xbdccf903.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_4/R$$$5_2x2_Hotel Particulier 4_DN_cdccf90f.SC4Lot
+          - Hotel Particulier Pack 1_DN/HP_5/HP5DN-0x5ad0e817_0xfe441ae_0x30000.SC4Model
+          - Hotel Particulier Pack 1_DN/HP_5/Hotel Particulier 5_DN-0x6534284a-0x1c2d4663-0xbdce5aec.SC4Desc
+          - Hotel Particulier Pack 1_DN/HP_5/R$$$6_3x3_Hotel Particulier 5_DN_adce5af5.SC4Lot
+        lots:
+          Hotel Particulier Pack 1_DN/HP_1/R$$$5_2x2_Hotel Particulier 1_DN_4dc7bb9c.SC4Lot:
+            4dc7bb9c:
+              building: 3dc7bb90
+              density: all
+              name: R$$$5_2x2_Hotel Particulier 1_DN
+              props:
+                - 1e0d0000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f00000
+                - 25f90000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_DN/HP_2/R$$$5_2x3_Hotel Particulier 2_DN_ddc924e3.SC4Lot:
+            ddc924e3:
+              building: 9dc924d7
+              density: all
+              name: R$$$5_2x3_Hotel Particulier 2_DN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 2x3
+              stage: 5
+              textures:
+                - 25f90000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_DN/HP_3/R$$$5_2x3_Hotel Particulier 3A_DN_9dcba4c3.SC4Lot:
+            9dcba4c3:
+              building: bdcba4b0
+              density: medium,high
+              name: R$$$5_2x3_Hotel Particulier 3A_DN
+              props:
+                - 1ecb0000
+                - 1ed30000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x3
+              stage: 5
+              textures:
+                - 259a3000
+                - '26060000'
+          Hotel Particulier Pack 1_DN/HP_3/R$$$5_2x3_Hotel Particulier 3_DN_5dcba578.SC4Lot:
+            5dcba578:
+              building: bdcba56b
+              density: medium,high
+              name: R$$$5_2x3_Hotel Particulier 3_DN
+              props:
+                - 1dfb0000
+                - 1ed30000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x3
+              stage: 5
+              textures:
+                - 259a3000
+                - '26060000'
+          Hotel Particulier Pack 1_DN/HP_4/R$$$5_2x2_Hotel Particulier 4_DN_cdccf90f.SC4Lot:
+            cdccf90f:
+              building: bdccf903
+              density: medium,high
+              name: R$$$5_2x2_Hotel Particulier 4_DN
+              props:
+                - 1ed30000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f70000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_DN/HP_5/R$$$6_3x3_Hotel Particulier 5_DN_adce5af5.SC4Lot:
+            adce5af5:
+              building: bdce5aec
+              density: all
+              name: R$$$6_3x3_Hotel Particulier 5_DN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 3x3
+              stage: 6
+              textures:
+                - '25933000'
+                - 259a3000
+                - 25ee0000
+                - 25ef0000
+                - 25f70000
+                - '26060000'
+        models:
+          Hotel Particulier Pack 1_DN/HP_1/HP1DN-0x5ad0e817_0xfdda04f_0x30000.SC4Model:
+            - 0fdda04f
+          Hotel Particulier Pack 1_DN/HP_2/HP2DN-0x5ad0e817_0xefdf0d8c_0x30000.SC4Model:
+            - efdf0d8c
+          Hotel Particulier Pack 1_DN/HP_3/HP3ADN-0x5ad0e817_0x4fe18c56_0x30000.SC4Model:
+            - 4fe18c56
+          Hotel Particulier Pack 1_DN/HP_3/HP3DN-0x5ad0e817_0x6fe125d5_0x30000.SC4Model:
+            - 6fe125d5
+          Hotel Particulier Pack 1_DN/HP_4/HP4DN-0x5ad0e817_0xcfe2e25f_0x30000.SC4Model:
+            - cfe2e25f
+          Hotel Particulier Pack 1_DN/HP_5/HP5DN-0x5ad0e817_0xfe441ae_0x30000.SC4Model:
+            - 0fe441ae
+        sha256: a43a7de3ddee247e963e81e82e28e4dfb76cc9fa64980276d9b37837676684ae
+        size: 3855367
+        uncompressed: 4655314
+      '186232':
+        buildings:
+          Hotel Particulier Pack 1_MN/HP_1/Hotel Particulier 1_MN-0x6534284a-0x1c2d4663-0x9dc7ba3e.SC4Desc:
+            1c2d4663-9dc7ba3e:
+              bulldoze: 232
+              capacity:
+                r$: 159
+                r$$: 89
+                r$$$: 41
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 0fdda04f
+              name: Hotel Particulier 1_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro
+              water: 10
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2427
+          Hotel Particulier Pack 1_MN/HP_2/Hotel Particulier 2_MN-0x6534284a-0x1c2d4663-0x3dc92419.SC4Desc:
+            1c2d4663-3dc92419:
+              bulldoze: 284
+              capacity:
+                r$: 458
+                r$$: 254
+                r$$$: 113
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: efdf0d8c
+              name: Hotel Particulier 2_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 14
+              tilesets: Euro
+              water: 22
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 6993
+          Hotel Particulier Pack 1_MN/HP_3/Hotel Particulier 3A_MN-0x6534284a-0x1c2d4663-0x5dcba297.SC4Desc:
+            1c2d4663-5dcba297:
+              bulldoze: 336
+              capacity:
+                r$: 572
+                r$$: 317
+                r$$$: 140
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 4fe18c56
+              name: Hotel Particulier 3A_MN
+              pollution: 2
+              pollutionRadius: 6
+              power: 18
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 8734
+          Hotel Particulier Pack 1_MN/HP_3/Hotel Particulier 3_MN-0x6534284a-0x1c2d4663-0xddcba403.SC4Desc:
+            1c2d4663-ddcba403:
+              bulldoze: 330
+              capacity:
+                r$: 562
+                r$$: 312
+                r$$$: 138
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 6fe125d5
+              name: Hotel Particulier 3_MN
+              pollution: 2
+              pollutionRadius: 6
+              power: 18
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 8581
+          Hotel Particulier Pack 1_MN/HP_4/Hotel Particulier 4_MN-0x6534284a-0x1c2d4663-0xbdccf7ff.SC4Desc:
+            1c2d4663-bdccf7ff:
+              bulldoze: 324
+              capacity:
+                r$: 285
+                r$$: 159
+                r$$$: 71
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: cfe2e25f
+              name: Hotel Particulier 4_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 9
+              tilesets: Euro
+              water: 15
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 4351
+          Hotel Particulier Pack 1_MN/HP_5/Hotel Particulier 5_MN-0x6534284a-0x1c2d4663-0x9dce59df.SC4Desc:
+            1c2d4663-9dce59df:
+              bulldoze: 282
+              capacity:
+                r$: 704
+                r$$: 390
+                r$$$: 172
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 0fe441ae
+              name: Hotel Particulier 5_MN
+              pollution: 2
+              pollutionRadius: 6
+              power: 22
+              tilesets: Euro
+              water: 32
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 10750
+        features: []
+        filename: Hotel Particulier Pack 1_MN.zip
+        files:
+          - Hotel Particulier Pack 1_MN/HP_1/HP1MN-0x5ad0e817_0xfdda04f_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_1/Hotel Particulier 1_MN-0x6534284a-0x1c2d4663-0x9dc7ba3e.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_1/R$$$5_2x2_Hotel Particulier 1_MN_6dc7ba4e.SC4Lot
+          - Hotel Particulier Pack 1_MN/HP_2/HP2MN-0x5ad0e817_0xefdf0d8c_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_2/Hotel Particulier 2_MN-0x6534284a-0x1c2d4663-0x3dc92419.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_2/R$$$5_2x3_Hotel Particulier 2_MN_4dc92426.SC4Lot
+          - Hotel Particulier Pack 1_MN/HP_3/HP3AMN-0x5ad0e817_0x4fe18c56_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_3/HP3MN-0x5ad0e817_0x6fe125d5_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_3/Hotel Particulier 3A_MN-0x6534284a-0x1c2d4663-0x5dcba297.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_3/Hotel Particulier 3_MN-0x6534284a-0x1c2d4663-0xddcba403.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_3/R$$$5_2x3_Hotel Particulier 3A_MN_8dcba2ba.SC4Lot
+          - Hotel Particulier Pack 1_MN/HP_3/R$$$5_2x3_Hotel Particulier 3_MN_1dcba417.SC4Lot
+          - Hotel Particulier Pack 1_MN/HP_4/HP4MN-0x5ad0e817_0xcfe2e25f_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_4/Hotel Particulier 4_MN-0x6534284a-0x1c2d4663-0xbdccf7ff.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_4/R$$$5_2x2_Hotel Particulier 4_MN_9dccf80b.SC4Lot
+          - Hotel Particulier Pack 1_MN/HP_5/HP5MN-0x5ad0e817_0xfe441ae_0x30000.SC4Model
+          - Hotel Particulier Pack 1_MN/HP_5/Hotel Particulier 5_MN-0x6534284a-0x1c2d4663-0x9dce59df.SC4Desc
+          - Hotel Particulier Pack 1_MN/HP_5/R$$$6_3x3_Hotel Particulier 5_MN_4dce59f3.SC4Lot
+        lots:
+          Hotel Particulier Pack 1_MN/HP_1/R$$$5_2x2_Hotel Particulier 1_MN_6dc7ba4e.SC4Lot:
+            6dc7ba4e:
+              building: 9dc7ba3e
+              density: all
+              name: R$$$5_2x2_Hotel Particulier 1_MN
+              props:
+                - 1e0d0000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f00000
+                - 25f90000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_MN/HP_2/R$$$5_2x3_Hotel Particulier 2_MN_4dc92426.SC4Lot:
+            4dc92426:
+              building: 3dc92419
+              density: all
+              name: R$$$5_2x3_Hotel Particulier 2_MN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 2x3
+              stage: 5
+              textures:
+                - 25f90000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_MN/HP_3/R$$$5_2x3_Hotel Particulier 3A_MN_8dcba2ba.SC4Lot:
+            8dcba2ba:
+              building: 5dcba297
+              density: medium,high
+              name: R$$$5_2x3_Hotel Particulier 3A_MN
+              props:
+                - 1ecb0000
+                - 1ed30000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x3
+              stage: 5
+              textures:
+                - 259a3000
+                - '26060000'
+          Hotel Particulier Pack 1_MN/HP_3/R$$$5_2x3_Hotel Particulier 3_MN_1dcba417.SC4Lot:
+            1dcba417:
+              building: ddcba403
+              density: medium,high
+              name: R$$$5_2x3_Hotel Particulier 3_MN
+              props:
+                - 1dfb0000
+                - 1ed30000
+                - 2a8a0000
+                - 2acf0000
+              size: 2x3
+              stage: 5
+              textures:
+                - 259a3000
+                - '26060000'
+          Hotel Particulier Pack 1_MN/HP_4/R$$$5_2x2_Hotel Particulier 4_MN_9dccf80b.SC4Lot:
+            9dccf80b:
+              building: bdccf7ff
+              density: medium,high
+              name: R$$$5_2x2_Hotel Particulier 4_MN
+              props:
+                - 1ed30000
+              size: 2x2
+              stage: 5
+              textures:
+                - 25f70000
+                - 25fa0000
+                - '26060000'
+          Hotel Particulier Pack 1_MN/HP_5/R$$$6_3x3_Hotel Particulier 5_MN_4dce59f3.SC4Lot:
+            4dce59f3:
+              building: 9dce59df
+              density: all
+              name: R$$$6_3x3_Hotel Particulier 5_MN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 3x3
+              stage: 6
+              textures:
+                - '25933000'
+                - 259a3000
+                - 25ee0000
+                - 25ef0000
+                - 25f70000
+                - '26060000'
+        models:
+          Hotel Particulier Pack 1_MN/HP_1/HP1MN-0x5ad0e817_0xfdda04f_0x30000.SC4Model:
+            - 0fdda04f
+          Hotel Particulier Pack 1_MN/HP_2/HP2MN-0x5ad0e817_0xefdf0d8c_0x30000.SC4Model:
+            - efdf0d8c
+          Hotel Particulier Pack 1_MN/HP_3/HP3AMN-0x5ad0e817_0x4fe18c56_0x30000.SC4Model:
+            - 4fe18c56
+          Hotel Particulier Pack 1_MN/HP_3/HP3MN-0x5ad0e817_0x6fe125d5_0x30000.SC4Model:
+            - 6fe125d5
+          Hotel Particulier Pack 1_MN/HP_4/HP4MN-0x5ad0e817_0xcfe2e25f_0x30000.SC4Model:
+            - cfe2e25f
+          Hotel Particulier Pack 1_MN/HP_5/HP5MN-0x5ad0e817_0xfe441ae_0x30000.SC4Model:
+            - 0fe441ae
+        sha256: 08994ffc607b5f3baab762628a096ecdcd65ff3309d6a92d72da86cd9d41765a
+        size: 3861043
+        uncompressed: 4649465
+    version: 1.0.0
   simtropolis/34269:
     assetId: simtropolis/34269-villa-glendale
     authors:
@@ -18667,10 +19177,118 @@ assets:
     authors:
       - WannGLondon
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tInspired by a recent trip to Las Vegas and researching old Vegas architecture, this residential tower is loosely inspired by the old Sands Hotel (now demolished). Personally, I am a huge fan of mid-century architecture, including Googie style like this. I know it is not everyone's cup-of-tea <img alt=\":)\" data-emoticon=\"\" height=\"30\" src=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile.gif\" srcset=\"https://community.simtropolis.com/assets/emoticons/LlamaSmile@2x.gif 2x\" title=\":)\" width=\"30\" >\_I am also looking at making an alternative version of this model with some Vegas-style neon lights and alternate colors than this more subdued version. I think this would make an excellent hotel tower for you fantastic Lotters out there (I am not one). Anyway, different from the French BATs I have been producing, here are the stats:\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Houston Tileset\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium Wealth Residential (stage 7)\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium &amp; High Density zones\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- No dependencies\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*This has been tested, however please let me know if you find any issues\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_04/6088ac9e5f467_RetroTower1Day.png.4495981c68f0cad8bddbec7053d10e5b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2021_04/6088aca1e152a_RetroTower1Night.png.a2b674b4b70e28568bdce21aa0901323.png
     lastModified: 2021-04-28T00:40:22.000Z
+    meta:
+      timestamp: 2025-01-13T11:26:38.072Z
+      version: 1
     name: Retro Tower 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_04/6088aef4b8012_RetroTower1Day.thumb.png.43909a90aec16fa5b47a6edb675e849d.png
     url: https://community.simtropolis.com/files/file/34416-retro-tower-1/
+    variants:
+      '187699':
+        buildings:
+          Retro Tower 1_DN/Retro Tower 1_DN-0x6534284a-0x1c2d4663-0x1e0bcdd6.SC4Desc:
+            1c2d4663-1e0bcdd6:
+              bulldoze: 649
+              capacity:
+                r$: 1037
+                r$$: 574
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 501e327b
+              name: Retro Tower 1_DN
+              pollution: 4
+              pollutionRadius: 5
+              power: 8
+              tilesets: Houston
+              water: 22
+              waterPollution: 2
+              waterPollutionRadius: 6
+              worth: 14963
+        features: []
+        filename: Retro Tower 1_DN.zip
+        files:
+          - Retro Tower 1_DN/R$$7_3x2_Retro Tower 1_DN_8e0bcde3.SC4Lot
+          - Retro Tower 1_DN/Retro Tower 1_DN-0x6534284a-0x1c2d4663-0x1e0bcdd6.SC4Desc
+          - Retro Tower 1_DN/RetroTower1DN-0x5ad0e817_0x501e327b_0x30000.SC4Model
+        lots:
+          Retro Tower 1_DN/R$$7_3x2_Retro Tower 1_DN_8e0bcde3.SC4Lot:
+            8e0bcde3:
+              building: 1e0bcdd6
+              density: medium,high
+              name: R$$7_3x2_Retro Tower 1_DN
+              props:
+                - 1dfb0000
+                - '1e120000'
+                - 1ed30000
+                - 2a8a0000
+              size: 3x2
+              stage: 7
+              textures:
+                - '25993000'
+                - '26060000'
+        models:
+          Retro Tower 1_DN/RetroTower1DN-0x5ad0e817_0x501e327b_0x30000.SC4Model:
+            - 501e327b
+        sha256: b92227734266fca86c3fe4136531c46adcbdc24ed687caf00fd77ad6021bbb97
+        size: 909975
+        uncompressed: 1079305
+      '187700':
+        buildings:
+          Retro Tower 1_MN/Retro Tower 1_MN-0x6534284a-0x1c2d4663-0xde0bccde.SC4Desc:
+            1c2d4663-de0bccde:
+              bulldoze: 649
+              capacity:
+                r$: 1037
+                r$$: 574
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 501e327b
+              name: Retro Tower 1_MN
+              pollution: 4
+              pollutionRadius: 5
+              power: 8
+              tilesets: Houston
+              water: 22
+              waterPollution: 2
+              waterPollutionRadius: 6
+              worth: 14963
+        features: []
+        filename: Retro Tower 1_MN.zip
+        files:
+          - Retro Tower 1_MN/R$$7_3x2_Retro Tower 1_MN_4e0bccef.SC4Lot
+          - Retro Tower 1_MN/Retro Tower 1_MN-0x6534284a-0x1c2d4663-0xde0bccde.SC4Desc
+          - Retro Tower 1_MN/RetroTower1MN-0x5ad0e817_0x501e327b_0x30000.SC4Model
+        lots:
+          Retro Tower 1_MN/R$$7_3x2_Retro Tower 1_MN_4e0bccef.SC4Lot:
+            4e0bccef:
+              building: de0bccde
+              density: medium,high
+              name: R$$7_3x2_Retro Tower 1_MN
+              props:
+                - 1dfb0000
+                - '1e120000'
+                - 1ed30000
+                - 2a8a0000
+              size: 3x2
+              stage: 7
+              textures:
+                - '25993000'
+                - '26060000'
+        models:
+          Retro Tower 1_MN/RetroTower1MN-0x5ad0e817_0x501e327b_0x30000.SC4Model:
+            - 501e327b
+        sha256: 090a1d10094b2910a41282368092e2df5ec8bed90acecb10644dea134fb11092
+        size: 903647
+        uncompressed: 1069350
+    version: 1.0.0
   simtropolis/34420:
     assetId: simtropolis/34420-nautilus-house
     authors:
@@ -18729,10 +19347,324 @@ assets:
     authors:
       - WannGLondon
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tFinally living up to my username name-sake, here are a set of London-inspired rowhomes based on those found near Victoria Station in the capital of the UK. I plan on creating many more terraces from London as it is my favorite city in the world (despite the nothing-but-French BATs I have been creating). Please excuse the poor lotting. Here are the stats:\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Euro Tileset, 1x1 lots\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium Wealth Residential (stage 4)\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Low, Medium &amp; High Density zones\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- No dependencies\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*This has been tested, however please let me know if you find any issues\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_05/608e147e73383_LondonFlats1Day.png.23ad398e5a219308308719e33724bca3.png
+      - https://www.simtropolis.com/objects/screens/monthly_2021_05/608e148215412_LondonFlats1Night.png.364cf6bf501ab536c2c69bbb0d0b4d5e.png
     lastModified: 2021-05-02T02:58:22.000Z
+    meta:
+      timestamp: 2025-01-13T11:26:38.072Z
+      version: 1
     name: London Flats 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_05/608e154bca3db_LondonFlats1Day.thumb.png.a9a39229ac351b3945d9b84d0a99a6e4.png
     url: https://community.simtropolis.com/files/file/34427-london-flats-1/
+    variants:
+      '187746':
+        buildings:
+          London Flats 1_DN/1A/London Flats 1A_DN-0x6534284a-0x1c2d4663-0x3deb06d8.SC4Desc:
+            1c2d4663-3deb06d8:
+              bulldoze: 293
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 9000f32c
+              name: London Flats 1A_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+          London Flats 1_DN/1B/London Flats 1B_DN-0x6534284a-0x1c2d4663-0x3deb10c9.SC4Desc:
+            1c2d4663-3deb10c9:
+              bulldoze: 257
+              capacity:
+                r$: 38
+                r$$: 22
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 7000fd02
+              name: London Flats 1B_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 548
+          London Flats 1_DN/1C/London Flats 1C_DN-0x6534284a-0x1c2d4663-0x1e131e78.SC4Desc:
+            1c2d4663-1e131e78:
+              bulldoze: 257
+              capacity:
+                r$: 38
+                r$$: 23
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f0290bb3
+              name: London Flats 1C_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 548
+          London Flats 1_DN/London Flats 1_DN-0x6534284a-0x1c2d4663-0x5dea059c.SC4Desc:
+            1c2d4663-5dea059c:
+              bulldoze: 293
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 0ffff046
+              name: London Flats 1_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+        features: []
+        filename: London Flats 1_DN.zip
+        files:
+          - London Flats 1_DN/1A/London Flats 1A_DN-0x6534284a-0x1c2d4663-0x3deb06d8.SC4Desc
+          - London Flats 1_DN/1A/LondonFlats1ADN-0x5ad0e817_0x9000f32c_0x30000.SC4Model
+          - London Flats 1_DN/1A/R$$4_1x1_London Flats 1A_DN_3deb06e7.SC4Lot
+          - London Flats 1_DN/1B/London Flats 1B_DN-0x6534284a-0x1c2d4663-0x3deb10c9.SC4Desc
+          - London Flats 1_DN/1B/LondonFlats1BDN-0x5ad0e817_0x7000fd02_0x30000.SC4Model
+          - London Flats 1_DN/1B/R$$4_1x1_London Flats 1B_DN_2deb10d4.SC4Lot
+          - London Flats 1_DN/1C/London Flats 1C_DN-0x6534284a-0x1c2d4663-0x1e131e78.SC4Desc
+          - London Flats 1_DN/1C/LondonFlats1CDN-0x5ad0e817_0xf0290bb3_0x30000.SC4Model
+          - London Flats 1_DN/1C/R$$4_1x1_London Flats 1C_DN_8e131e87.SC4Lot
+          - London Flats 1_DN/London Flats 1_DN-0x6534284a-0x1c2d4663-0x5dea059c.SC4Desc
+          - London Flats 1_DN/LondonFlats1DN-0x5ad0e817_0xffff046_0x30000.SC4Model
+          - London Flats 1_DN/R$$4_1x1_London Flats 1_DN_bdea05a6.SC4Lot
+        lots:
+          London Flats 1_DN/1A/R$$4_1x1_London Flats 1A_DN_3deb06e7.SC4Lot:
+            3deb06e7:
+              building: 3deb06d8
+              density: medium,high
+              name: R$$4_1x1_London Flats 1A_DN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 4
+              textures:
+                - 252a2000
+                - '26060000'
+          London Flats 1_DN/1B/R$$4_1x1_London Flats 1B_DN_2deb10d4.SC4Lot:
+            2deb10d4:
+              building: 3deb10c9
+              density: all
+              name: R$$4_1x1_London Flats 1B_DN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 4
+              textures:
+                - 252f2000
+                - '26060000'
+          London Flats 1_DN/1C/R$$4_1x1_London Flats 1C_DN_8e131e87.SC4Lot:
+            8e131e87:
+              building: 1e131e78
+              density: all
+              name: R$$4_1x1_London Flats 1C_DN
+              size: 1x1
+              stage: 4
+              textures:
+                - 252a2000
+                - '26060000'
+          London Flats 1_DN/R$$4_1x1_London Flats 1_DN_bdea05a6.SC4Lot:
+            bdea05a6:
+              building: 5dea059c
+              density: medium,high
+              name: R$$4_1x1_London Flats 1_DN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '25352000'
+                - '26060000'
+        models:
+          London Flats 1_DN/1A/LondonFlats1ADN-0x5ad0e817_0x9000f32c_0x30000.SC4Model:
+            - 9000f32c
+          London Flats 1_DN/1B/LondonFlats1BDN-0x5ad0e817_0x7000fd02_0x30000.SC4Model:
+            - 7000fd02
+          London Flats 1_DN/1C/LondonFlats1CDN-0x5ad0e817_0xf0290bb3_0x30000.SC4Model:
+            - f0290bb3
+          London Flats 1_DN/LondonFlats1DN-0x5ad0e817_0xffff046_0x30000.SC4Model:
+            - 0ffff046
+        sha256: 60f99c0d4061da757ab15e31f2b03ae9c1c83b72755ca3956d93b5763682f745
+        size: 739637
+        uncompressed: 902634
+      '187747':
+        buildings:
+          London Flats 1_MN/1A/London Flats 1A_MN-0x6534284a-0x1c2d4663-0x1deb0650.SC4Desc:
+            1c2d4663-1deb0650:
+              bulldoze: 293
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 9000f32c
+              name: London Flats 1A_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+          London Flats 1_MN/1B/London Flats 1B_MN-0x6534284a-0x1c2d4663-0x5deb1052.SC4Desc:
+            1c2d4663-5deb1052:
+              bulldoze: 257
+              capacity:
+                r$: 38
+                r$$: 22
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 7000fd02
+              name: London Flats 1B_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 548
+          London Flats 1_MN/1C/London Flats 1C_MN-0x6534284a-0x1c2d4663-0x1e131df3.SC4Desc:
+            1c2d4663-1e131df3:
+              bulldoze: 257
+              capacity:
+                r$: 38
+                r$$: 23
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 50290a85
+              name: London Flats 1C_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 548
+          London Flats 1_MN/London Flats 1_MN-0x6534284a-0x1c2d4663-0xbdea04e8.SC4Desc:
+            1c2d4663-bdea04e8:
+              bulldoze: 293
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 0ffff046
+              name: London Flats 1_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+        features: []
+        filename: London Flats 1_MN.zip
+        files:
+          - London Flats 1_MN/1A/London Flats 1A_MN-0x6534284a-0x1c2d4663-0x1deb0650.SC4Desc
+          - London Flats 1_MN/1A/LondonFlats1AMN-0x5ad0e817_0x9000f32c_0x30000.SC4Model
+          - London Flats 1_MN/1A/R$$4_1x1_London Flats 1A_MN_ddeb065d.SC4Lot
+          - London Flats 1_MN/1B/London Flats 1B_MN-0x6534284a-0x1c2d4663-0x5deb1052.SC4Desc
+          - London Flats 1_MN/1B/LondonFlats1BMN-0x5ad0e817_0x7000fd02_0x30000.SC4Model
+          - London Flats 1_MN/1B/R$$4_1x1_London Flats 1B_MN_ddeb1061.SC4Lot
+          - London Flats 1_MN/1C/London Flats 1C_MN-0x6534284a-0x1c2d4663-0x1e131df3.SC4Desc
+          - London Flats 1_MN/1C/LondonFlats1CMN-0x5ad0e817_0x50290a85_0x30000.SC4Model
+          - London Flats 1_MN/1C/R$$4_1x1_London Flats 1C_MN_2e131e00.SC4Lot
+          - London Flats 1_MN/London Flats 1_MN-0x6534284a-0x1c2d4663-0xbdea04e8.SC4Desc
+          - London Flats 1_MN/LondonFlats1MN-0x5ad0e817_0xffff046_0x30000.SC4Model
+          - London Flats 1_MN/R$$4_1x1_London Flats 1_MN_adea04f6.SC4Lot
+        lots:
+          London Flats 1_MN/1A/R$$4_1x1_London Flats 1A_MN_ddeb065d.SC4Lot:
+            ddeb065d:
+              building: 1deb0650
+              density: medium,high
+              name: R$$4_1x1_London Flats 1A_MN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 4
+              textures:
+                - 252a2000
+                - '26060000'
+          London Flats 1_MN/1B/R$$4_1x1_London Flats 1B_MN_ddeb1061.SC4Lot:
+            ddeb1061:
+              building: 5deb1052
+              density: all
+              name: R$$4_1x1_London Flats 1B_MN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 4
+              textures:
+                - 252f2000
+                - '26060000'
+          London Flats 1_MN/1C/R$$4_1x1_London Flats 1C_MN_2e131e00.SC4Lot:
+            2e131e00:
+              building: 1e131df3
+              density: all
+              name: R$$4_1x1_London Flats 1C_MN
+              size: 1x1
+              stage: 4
+              textures:
+                - 252a2000
+                - '26060000'
+          London Flats 1_MN/R$$4_1x1_London Flats 1_MN_adea04f6.SC4Lot:
+            adea04f6:
+              building: bdea04e8
+              density: medium,high
+              name: R$$4_1x1_London Flats 1_MN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '25352000'
+                - '26060000'
+        models:
+          London Flats 1_MN/1A/LondonFlats1AMN-0x5ad0e817_0x9000f32c_0x30000.SC4Model:
+            - 9000f32c
+          London Flats 1_MN/1B/LondonFlats1BMN-0x5ad0e817_0x7000fd02_0x30000.SC4Model:
+            - 7000fd02
+          London Flats 1_MN/1C/LondonFlats1CMN-0x5ad0e817_0x50290a85_0x30000.SC4Model:
+            - 50290a85
+          London Flats 1_MN/LondonFlats1MN-0x5ad0e817_0xffff046_0x30000.SC4Model:
+            - 0ffff046
+        sha256: e7992d44e9fa9b67f5ce080bf39553e3b9e2cd18dd00724cf3d5ef0c90de4010
+        size: 744928
+        uncompressed: 907071
+    version: 1.0.0
   simtropolis/34428:
     assetId: simtropolis/34428-condominio-pecs
     authors:

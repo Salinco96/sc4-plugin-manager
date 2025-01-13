@@ -2427,22 +2427,330 @@ simtropolis/34027-coris-no-kickout-lower-wealth-mod:
   packageId: corinamarie/no-kickout-lower-wealth
   variantId: default
 
+simtropolis/34082-old-mediterranean-pack:
+  packageId: wannglondon/old-mediterranean-pack
+  variantId: default
+
+simtropolis/34088-mediterranean-flats:
+  packageId: wannglondon/mediterranean-flats
+  variants:
+    '185025':
+      packageId: wannglondon/mediterranean-flats
+      variantId: darknite
+    '185026':
+      packageId: wannglondon/mediterranean-flats
+      variantId: default
+
+simtropolis/34117-mediterranean-flats-corner-a:
+  packageId: wannglondon/mediterranean-flats-a
+  variants:
+    '185172':
+      packageId: wannglondon/mediterranean-flats-a
+      variantId: darknite
+    '185173':
+      packageId: wannglondon/mediterranean-flats-a
+      variantId: default
+
+simtropolis/34119-mediterranean-flats-corner-b:
+  packageId: wannglondon/mediterranean-flats-b
+  variants:
+    '185182':
+      packageId: wannglondon/mediterranean-flats-b
+      variantId: darknite
+    '185183':
+      packageId: wannglondon/mediterranean-flats-b
+      variantId: default
+
+simtropolis/34150-wanng-paris-pack-1-r:
+  collectionId: wannglondon/paris-buildings
+  variants:
+    '185417':
+      packageId: wannglondon/paris-building-1
+      paths:
+        Paris Pack 1_DN/Batiment 2:
+          packageId: wannglondon/paris-building-2
+          variantId: darknite
+        Paris Pack 1_DN/Batiment 3:
+          packageId: wannglondon/paris-building-3
+          variantId: darknite
+        Paris Pack 1_DN/Batiment 4:
+          packageId: wannglondon/paris-building-4
+          variantId: darknite
+        Paris Pack 1_DN/Batiment 5:
+          packageId: wannglondon/paris-building-5
+          variantId: darknite
+      variantId: darknite
+    '185418':
+      packageId: wannglondon/paris-building-1
+      paths:
+        Paris Pack 1_MN/Batiment 2:
+          packageId: wannglondon/paris-building-2
+          variantId: default
+        Paris Pack 1_MN/Batiment 3:
+          packageId: wannglondon/paris-building-3
+          variantId: default
+        Paris Pack 1_MN/Batiment 4:
+          packageId: wannglondon/paris-building-4
+          variantId: default
+        Paris Pack 1_MN/Batiment 5:
+          packageId: wannglondon/paris-building-5
+          variantId: default
+      variantId: default
+
 simtropolis/34163-agc-automobile-dlc:
   packageId: agc/automobile-dlc
   variantId: default
 
+simtropolis/34169-wanng-paris-pack-2-r:
+  collectionId: wannglondon/paris-buildings
+  variants:
+    '185537':
+      packageId: wannglondon/paris-building-6
+      paths:
+        Paris Pack 2_DN/Batiment 7:
+          packageId: wannglondon/paris-building-7
+          variantId: darknite
+        Paris Pack 2_DN/Batiment 8:
+          packageId: wannglondon/paris-building-8
+          variantId: darknite
+      variantId: darknite
+    '185538':
+      packageId: wannglondon/paris-building-6
+      paths:
+        Paris Pack 2_MN/Batiment 7:
+          packageId: wannglondon/paris-building-7
+          variantId: default
+        Paris Pack 2_MN/Batiment 8:
+          packageId: wannglondon/paris-building-8
+          variantId: default
+      variantId: default
+
+simtropolis/34172-paris-batiment-9-left-corner:
+  packageId: wannglondon/paris-building-9
+  variants:
+    '185555':
+      packageId: wannglondon/paris-building-9
+      variantId: darknite
+    '185556':
+      packageId: wannglondon/paris-building-9
+      variantId: default
+
+simtropolis/34175-paris-batiment-10-right-corner:
+  packageId: wannglondon/paris-building-10
+  variants:
+    '185584':
+      packageId: wannglondon/paris-building-10
+      variantId: darknite
+    '185585':
+      packageId: wannglondon/paris-building-10
+      variantId: default
+
 simtropolis/34196-kk-wind-farm-maintenance-facility:
   packageId: kloudkicker/wind-farm-maintenance-facility
+
+simtropolis/34214-wanng-paris-pack-3-r:
+  collectionId: wannglondon/paris-buildings
+  variants:
+    '185904':
+      packageId: wannglondon/paris-building-11
+      paths:
+        Paris Pack 3_DN/Batiment 12:
+          packageId: wannglondon/paris-building-12
+          variantId: darknite
+        Paris Pack 3_DN/Batiment 13:
+          packageId: wannglondon/paris-building-13
+          variantId: darknite
+        Paris Pack 3_DN/Batiment 14:
+          packageId: wannglondon/paris-building-14
+          variantId: darknite
+      variantId: darknite
+    '185905':
+      packageId: wannglondon/paris-building-11
+      paths:
+        Paris Pack 3_MN/Batiment 12:
+          packageId: wannglondon/paris-building-12
+          variantId: default
+        Paris Pack 3_MN/Batiment 13:
+          packageId: wannglondon/paris-building-13
+          variantId: default
+        Paris Pack 3_MN/Batiment 14:
+          packageId: wannglondon/paris-building-14
+          variantId: default
+      variantId: default
+
+simtropolis/34268-wanng-hotel-particulier-pack:
+  packageId: wannglondon/hotel-particuliers
+  variants:
+    '186231':
+      packageId: wannglondon/hotel-particuliers
+      variantId: darknite
+    '186232':
+      packageId: wannglondon/hotel-particuliers
+      variantId: default
 
 simtropolis/34273-kk-transformer-lots-small:
   packageId: kloudkicker/small-transformers
 
+simtropolis/34297-paris-batiment-15:
+  packageId: wannglondon/paris-building-15
+  variants:
+    '186440':
+      packageId: wannglondon/paris-building-15
+      variantId: darknite
+    '186441':
+      packageId: wannglondon/paris-building-15
+      variantId: default
+
 simtropolis/34316-sm2-mega-prop-pack-vol5:
   packageId: simmer2/mega-props-vol05
+
+simtropolis/34318-paris-batiments-16-18:
+  packageId: wannglondon/paris-building-16
+  variants:
+    '186764':
+      packageId: wannglondon/paris-building-16
+      variantId: darknite
+    '186765':
+      packageId: wannglondon/paris-building-16
+      variantId: default
+    '186766':
+      packageId: wannglondon/paris-building-18
+      variantId: darknite
+    '186767':
+      packageId: wannglondon/paris-building-18
+      variantId: default
 
 simtropolis/34338-medium-wealth-commercial-shops-volume-1:
   packageId: madhatter106/medium-wealth-shops-vol01
   variantId: default
+
+simtropolis/34416-retro-tower-1:
+  packageId: wannglondon/retro-tower-1
+  variants:
+    '187699':
+      packageId: wannglondon/retro-tower-1
+      variantId: darknite
+    '187700':
+      packageId: wannglondon/retro-tower-1
+      variantId: default
+
+simtropolis/34427-london-flats-1:
+  packageId: wannglondon/london-flats-1
+  variants:
+    '187746':
+      packageId: wannglondon/london-flats-1
+      variantId: darknite
+    '187747':
+      packageId: wannglondon/london-flats-1
+      variantId: default
+
+simtropolis/34608-mediterranean-flats-2:
+  packageId: wannglondon/mediterranean-flats-2
+  variants:
+    '189401':
+      packageId: wannglondon/mediterranean-flats-c
+      paths:
+        Medit Pack 2_DN/Mediterranean Flats D_DN:
+          packageId: wannglondon/mediterranean-flats-d
+          variantId: darknite
+        Medit Pack 2_DN/Mediterranean Flats E_DN:
+          packageId: wannglondon/mediterranean-flats-e
+          variantId: darknite
+      variantId: darknite
+    '189402':
+      packageId: wannglondon/mediterranean-flats-c
+      paths:
+        Medit Pack 2_MN/Mediterranean Flats D_MN:
+          packageId: wannglondon/mediterranean-flats-d
+          variantId: default
+        Medit Pack 2_MN/Mediterranean Flats E_MN:
+          packageId: wannglondon/mediterranean-flats-e
+          variantId: default
+      variantId: default
+
+simtropolis/34715-mediterranean-pack-1:
+  packageId: wannglondon/mediterranean-pack-1
+  variants:
+    '190211':
+      packageId: wannglondon/mediterranean-building-1
+      paths:
+        Mediterranean Pack 2_DN/Medit Bldg 10_DN:
+          packageId: wannglondon/mediterranean-building-10
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 11_DN:
+          packageId: wannglondon/mediterranean-building-11
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 2_DN:
+          packageId: wannglondon/mediterranean-building-2
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 3_DN:
+          packageId: wannglondon/mediterranean-building-3
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 4_DN:
+          packageId: wannglondon/mediterranean-building-4
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 5_DN:
+          packageId: wannglondon/mediterranean-building-5
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 6_DN:
+          packageId: wannglondon/mediterranean-building-6
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 7_DN:
+          packageId: wannglondon/mediterranean-building-7
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 8_DN:
+          packageId: wannglondon/mediterranean-building-8
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Bldg 9_DN:
+          packageId: wannglondon/mediterranean-building-9
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Flats F_DN:
+          packageId: wannglondon/mediterranean-flats-f
+          variantId: darknite
+        Mediterranean Pack 2_DN/Medit Flats G_DN:
+          packageId: wannglondon/mediterranean-flats-g
+          variantId: darknite
+      variantId: darknite
+    '190212':
+      packageId: wannglondon/mediterranean-building-1
+      paths:
+        Mediterranean Pack 2_MN/Medit Bldg 10_MN:
+          packageId: wannglondon/mediterranean-building-10
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 11_MN:
+          packageId: wannglondon/mediterranean-building-11
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 2_MN:
+          packageId: wannglondon/mediterranean-building-2
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 3_MN:
+          packageId: wannglondon/mediterranean-building-3
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 4_MN:
+          packageId: wannglondon/mediterranean-building-4
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 5_MN:
+          packageId: wannglondon/mediterranean-building-5
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 6_MN:
+          packageId: wannglondon/mediterranean-building-6
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 7_MN:
+          packageId: wannglondon/mediterranean-building-7
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 8_MN:
+          packageId: wannglondon/mediterranean-building-8
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Bldg 9_MN:
+          packageId: wannglondon/mediterranean-building-9
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Flats F_MN:
+          packageId: wannglondon/mediterranean-flats-f
+          variantId: default
+        Mediterranean Pack 2_MN/Medit Flats G_MN:
+          packageId: wannglondon/mediterranean-flats-g
+          variantId: default
+      variantId: default
 
 simtropolis/34719-agc-benito-ju%C3%A1rez-monument-01:
   packageId: barroco-hispano/agc-benito-juarez-monument-01
@@ -2527,6 +2835,22 @@ simtropolis/34761-db-franklin-co:
     '190657':
       packageId: jasoncw/db-franklin-co
       variantId: darknite
+
+simtropolis/34770-mediterranean-buildings-13-14:
+  packageId: wannglondon/mediterranean-buildings-13-14
+  variants:
+    '190714':
+      packageId: wannglondon/mediterranean-building-13
+      variantId: darknite
+    '190715':
+      packageId: wannglondon/mediterranean-building-13
+      variantId: default
+    '190716':
+      packageId: wannglondon/mediterranean-building-14
+      variantId: darknite
+    '190717':
+      packageId: wannglondon/mediterranean-building-14
+      variantId: default
 
 simtropolis/34777-esa-rail-prop-pack:
   packageId: oidaas/esa-rail-props-vol01
@@ -2961,11 +3285,11 @@ simtropolis/35566-medit-bldg-50:
   variantId: darknite
 
 simtropolis/35568-london-flats-5:
-  packageId: wannglondon/london-building-5
+  packageId: wannglondon/london-flats-5
   variantId: darknite
 
 simtropolis/35571-london-flats-3:
-  packageId: wannglondon/london-building-3
+  packageId: wannglondon/london-flats-3
   variantId: darknite
 
 simtropolis/35575-grand-arch:
