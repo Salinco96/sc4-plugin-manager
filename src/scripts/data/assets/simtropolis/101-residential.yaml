@@ -20275,10 +20275,121 @@ assets:
     authors:
       - WannGLondon
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\tA quick <abbr title=\"Building Architect Tool\">BAT</abbr>/lot I created inspired by a building located near Covent Garden in London.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Euro tileset\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium/High density\_zones\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- No dependencies\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/6239f570296e7_Central-Jan.1714661647827170.png.031626db6c1ad38368bdde0851da004e.png
     lastModified: 2022-03-22T16:13:47.000Z
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
     name: London Building 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_03/6239f5b9c071b_Central-Jan.1714661647827170.thumb.png.dc59717f35a38a206b3a210d3754cf3e.png
     url: https://community.simtropolis.com/files/file/35017-london-building-1/
+    variants:
+      '192571':
+        buildings:
+          London Bldg 1_DN/London Bldg 1_DN-0x6534284a-0x1c2d4663-0x3fbce29c.SC4Desc:
+            1c2d4663-3fbce29c:
+              bulldoze: 350
+              capacity:
+                cs$: 80
+                cs$$: 22
+                cs$$$: 11
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 6f3babe5
+              name: London Bldg 1_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 777
+        features: []
+        filename: London Bldg 1_DN.zip
+        files:
+          - London Bldg 1_DN/CS$$$2_1x2_London Bldg 1_DN_2fbce2aa.SC4Lot
+          - London Bldg 1_DN/London Bldg 1_DN-0x6534284a-0x1c2d4663-0x3fbce29c.SC4Desc
+          - London Bldg 1_DN/LondonBldg1DN-0x5ad0e817_0x6f3babe5_0x30000.SC4Model
+        lots:
+          London Bldg 1_DN/CS$$$2_1x2_London Bldg 1_DN_2fbce2aa.SC4Lot:
+            2fbce2aa:
+              building: 3fbce29c
+              density: medium,high
+              name: CS$$$2_1x2_London Bldg 1_DN
+              props:
+                - 1d9c0000
+                - 1dfb0000
+                - 1ecb0000
+                - 2a8a0000
+                - 2b1a0000
+              size: 1x2
+              stage: 2
+              textures:
+                - 25b81000
+                - '26060000'
+        models:
+          London Bldg 1_DN/LondonBldg1DN-0x5ad0e817_0x6f3babe5_0x30000.SC4Model:
+            - 6f3babe5
+        sha256: 463c99d29c863029d318595b25c2a0dcf8f7087236012f4b135a1fd5fe68c08e
+        size: 288041
+        uncompressed: 356588
+      '192572':
+        buildings:
+          London Bldg 1_MN/London Bldg 1_MN-0x6534284a-0x1c2d4663-0x3fbce1dc.SC4Desc:
+            1c2d4663-3fbce1dc:
+              bulldoze: 350
+              capacity:
+                cs$: 80
+                cs$$: 22
+                cs$$$: 11
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 6f3babe5
+              name: London Bldg 1_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro
+              water: 26
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 777
+        features: []
+        filename: London Bldg 1_MN.zip
+        files:
+          - London Bldg 1_MN/CS$$$2_1x2_London Bldg 1_MN_5fbce1e5.SC4Lot
+          - London Bldg 1_MN/London Bldg 1_MN-0x6534284a-0x1c2d4663-0x3fbce1dc.SC4Desc
+          - London Bldg 1_MN/LondonBldg1MN-0x5ad0e817_0x6f3babe5_0x30000.SC4Model
+        lots:
+          London Bldg 1_MN/CS$$$2_1x2_London Bldg 1_MN_5fbce1e5.SC4Lot:
+            5fbce1e5:
+              building: 3fbce1dc
+              density: medium,high
+              name: CS$$$2_1x2_London Bldg 1_MN
+              props:
+                - 1d9c0000
+                - 1dfb0000
+                - 1ecb0000
+                - 2a150000
+                - 2a8a0000
+              size: 1x2
+              stage: 2
+              textures:
+                - 25b81000
+                - '26060000'
+        models:
+          London Bldg 1_MN/LondonBldg1MN-0x5ad0e817_0x6f3babe5_0x30000.SC4Model:
+            - 6f3babe5
+        sha256: f47f4ed66126bc857c163be4e7d1fa7a56c7911208d96fd7d01cb94c010a1fa3
+        size: 283390
+        uncompressed: 350511
+    version: 1.0.0
   simtropolis/35018:
     assetId: simtropolis/35018-palazzo-sagesta
     authors:

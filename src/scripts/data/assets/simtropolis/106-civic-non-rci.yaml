@@ -19193,11 +19193,224 @@ assets:
     assetId: simtropolis/35022-french-hospital
     authors:
       - WannGLondon
+    buildings:
+      Hopital 1_DN/PLOP_2x2_Hospital Corner_1fc233f9.SC4Lot:
+        1c2d4663-1fc233f9:
+          bulldoze: 1050
+          categories: health
+          cost: 9250
+          description: This building was made by a Typing Monkey
+          flamability: 36
+          jobs:
+            $: 121
+            $$: 352
+            $$$: 116
+          label: Hospital Corner
+          maintenance: 800
+          menu: Health
+          model: 6f3e5668
+          name: Hospital Corner
+          pollution: 1
+          pollutionRadius: 3
+          power: 3
+          submenu: Health/Large
+          water: 8
+      Hopital 1_DN/PLOP_2x2_Hospital Intersection_8fc234eb.SC4Lot:
+        1c2d4663-8fc234eb:
+          bulldoze: 1200
+          categories: health
+          cost: 10700
+          description: This building was made by a Typing Monkey
+          flamability: 36
+          jobs:
+            $: 142
+            $$: 414
+            $$$: 137
+          label: Hospital Intersection
+          maintenance: 950
+          menu: Health
+          model: af3e635a
+          name: Hospital Intersection
+          pollution: 1
+          pollutionRadius: 3
+          power: 3
+          submenu: Health/Large
+          water: 10
+          waterPollution: 1
+          waterPollutionRadius: 4
+      Hopital 1_DN/PLOP_2x2_Hospital Middle_9fc2355d.SC4Lot:
+        1c2d4663-9fc2355d:
+          bulldoze: 1000
+          categories: health
+          cost: 8950
+          description: This building was made by a Typing Monkey
+          flamability: 36
+          jobs:
+            $: 117
+            $$: 339
+            $$$: 112
+          label: Hospital Middle
+          maintenance: 800
+          menu: Health
+          model: 2f40fd80
+          name: Hospital Middle
+          pollution: 1
+          pollutionRadius: 3
+          power: 3
+          submenu: Health/Large
+          water: 8
+      Hopital 1_DN/PLOP_2x4_Hospital End_afc2346e.SC4Lot:
+        1c2d4663-afc2346e:
+          bulldoze: 1600
+          categories: health
+          cost: 14450
+          description: This building was made by a Typing Monkey
+          flamability: 36
+          garbage: 1
+          jobs:
+            $: 196
+            $$: 577
+            $$$: 191
+          label: Hospital End
+          maintenance: 1300
+          menu: Health
+          model: cf3fbc6c
+          name: Hospital End
+          pollution: 2
+          pollutionRadius: 3
+          power: 5
+          submenu: Health/Large
+          water: 17
+          waterPollution: 1
+          waterPollutionRadius: 4
+      Hopital 1_DN/PLOP_4x2_Hospital Center_dfc23284.SC4Lot:
+        1c2d4663-dfc23284:
+          bulldoze: 1725
+          categories: health
+          cost: 15550
+          description: This building was made by a Typing Monkey
+          flamability: 36
+          garbage: 1
+          jobs:
+            $: 213
+            $$: 627
+            $$$: 208
+          label: Hospital Center
+          maintenance: 1350
+          menu: Health
+          model: ef3df5b8
+          name: Hospital Center
+          pollution: 2
+          pollutionRadius: 3
+          power: 5
+          submenu: Health/Large
+          water: 19
+          waterPollution: 1
+          waterPollutionRadius: 4
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA \"take-it-or-leave-it\" project, this is a modular Parisian-inspired hospital with pieces indicated below. Complete with my less than adequate lotting skills and one dependency; Girafe's rowan trees (<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3244\" rel=\"external nofollow\">SC4D <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> Details - <abbr title=\"BATT Squad Certification\">BSC</abbr> - VIP girafe rowan trees (v1.0) (sc4devotion.com)</a>)\n</p>\n\n<p>\n\t- Center Piece (entrance hall) 4x2\n</p>\n\n<p>\n\t- Corner Piece 2x2\n</p>\n\n<p>\n\t- Mid Piece 2x2\n</p>\n\n<p>\n\t- T-Intersection Piece 2x2\n</p>\n\n<p>\n\t- End Piece 2x4\n</p>\n\n<p>\n\tArrange/re-lot as you wish.\n</p>\n\n<p>\n\t*DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Hopital 1_DN.zip
+    files:
+      - Hopital 1_DN/Hopital1CornerDN-0x5ad0e817_0x6f3e5668_0x30000.SC4Model
+      - Hopital 1_DN/Hopital1DN-0x5ad0e817_0xef3df5b8_0x30000.SC4Model
+      - Hopital 1_DN/Hopital1EndDN-0x5ad0e817_0xcf3fbc6c_0x30000.SC4Model
+      - Hopital 1_DN/Hopital1IntersectionDN-0x5ad0e817_0xaf3e635a_0x30000.SC4Model
+      - Hopital 1_DN/Hopital1MidDN-0x5ad0e817_0x2f40fd80_0x30000.SC4Model
+      - Hopital 1_DN/Hospital Center-0x6534284a-0x1c2d4663-0x3fc23280._LooseDesc
+      - Hopital 1_DN/Hospital Corner-0x6534284a-0x1c2d4663-0x3fc233f5._LooseDesc
+      - Hopital 1_DN/Hospital End-0x6534284a-0x1c2d4663-0x3fc23469._LooseDesc
+      - Hopital 1_DN/Hospital Intersection-0x6534284a-0x1c2d4663-0x7fc234e8._LooseDesc
+      - Hopital 1_DN/Hospital Middle-0x6534284a-0x1c2d4663-0x9fc2355a._LooseDesc
+      - Hopital 1_DN/PLOP_2x2_Hospital Corner_1fc233f9.SC4Lot
+      - Hopital 1_DN/PLOP_2x2_Hospital Intersection_8fc234eb.SC4Lot
+      - Hopital 1_DN/PLOP_2x2_Hospital Middle_9fc2355d.SC4Lot
+      - Hopital 1_DN/PLOP_2x4_Hospital End_afc2346e.SC4Lot
+      - Hopital 1_DN/PLOP_4x2_Hospital Center_dfc23284.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/623d2f1b9aa59_Baiefronte-Est-Mar.291111648176244.png.b0956d87c9cf147786c3da3aab8605c9.png
     lastModified: 2022-03-25T03:00:33.000Z
+    lots:
+      Hopital 1_DN/PLOP_2x2_Hospital Corner_1fc233f9.SC4Lot:
+        1fc233f9:
+          building: 1fc233f9
+          name: PLOP_2x2_Hospital Corner
+          props:
+            - 2a8a0000
+            - 634eae07
+            - a34ead9d
+          size: 2x2
+          textures:
+            - '26060000'
+      Hopital 1_DN/PLOP_2x2_Hospital Intersection_8fc234eb.SC4Lot:
+        8fc234eb:
+          building: 8fc234eb
+          name: PLOP_2x2_Hospital Intersection
+          props:
+            - 1dfb0000
+            - 2a8a0000
+            - a34eacce
+            - a34ead9d
+          size: 2x2
+          textures:
+            - '26060000'
+      Hopital 1_DN/PLOP_2x2_Hospital Middle_9fc2355d.SC4Lot:
+        9fc2355d:
+          building: 9fc2355d
+          name: PLOP_2x2_Hospital Middle
+          props:
+            - 2a8a0000
+            - a34eae23
+          size: 2x2
+          textures:
+            - '26060000'
+      Hopital 1_DN/PLOP_2x4_Hospital End_afc2346e.SC4Lot:
+        afc2346e:
+          building: afc2346e
+          name: PLOP_2x4_Hospital End
+          props:
+            - 2a8a0000
+            - a34eacba
+          size: 2x4
+          textures:
+            - '26060000'
+      Hopital 1_DN/PLOP_4x2_Hospital Center_dfc23284.SC4Lot:
+        dfc23284:
+          building: dfc23284
+          name: PLOP_4x2_Hospital Center
+          props:
+            - 1dfb0000
+            - 234eac4d
+            - 2a8a0000
+            - 634eae07
+            - a34eacce
+            - a34ead9d
+          size: 4x2
+          textures:
+            - 25f60000
+            - '26060000'
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
+    models:
+      Hopital 1_DN/Hopital1CornerDN-0x5ad0e817_0x6f3e5668_0x30000.SC4Model:
+        - 6f3e5668
+      Hopital 1_DN/Hopital1DN-0x5ad0e817_0xef3df5b8_0x30000.SC4Model:
+        - ef3df5b8
+      Hopital 1_DN/Hopital1EndDN-0x5ad0e817_0xcf3fbc6c_0x30000.SC4Model:
+        - cf3fbc6c
+      Hopital 1_DN/Hopital1IntersectionDN-0x5ad0e817_0xaf3e635a_0x30000.SC4Model:
+        - af3e635a
+      Hopital 1_DN/Hopital1MidDN-0x5ad0e817_0x2f40fd80_0x30000.SC4Model:
+        - 2f40fd80
     name: French Hospital
+    sha256: 5cad8c02fa5ed18c007a345731f7882d087f5edf5963f747156515531d83cee6
+    size: 2948738
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_03/623d30516fefb_Baiefronte-Est-Mar.291111648176244.thumb.png.a8504d4f5cbf4cf0b2e6a2ac2e9db41e.png
+    uncompressed: 3551561
     url: https://community.simtropolis.com/files/file/35022-french-hospital/
+    version: 1.0.0
   simtropolis/35046:
     assetId: simtropolis/35046-sm2-cell-repeater-tower
     authors:
@@ -19373,11 +19586,75 @@ assets:
     assetId: simtropolis/35301-haunted-mansion
     authors:
       - WannGLondon
+    buildings:
+      Haunted Mansion_DN/PLOP_2x2_Haunted Mansion Museum_DN_d0af7bf0.SC4Lot:
+        1c2d4663-d0af7bf0:
+          bulldoze: 180
+          categories: education
+          cost: 750
+          description: This building was made by a Typing Monkey
+          flamability: 35
+          jobs:
+            $: 8
+            $$: 20
+            $$$: 7
+          label: Haunted Mansion Museum_DN
+          maintenance: 450
+          menu: Education
+          model: d02e4699
+          name: Haunted Mansion Museum_DN
+          power: 2
+          submenu: Education/Libraries
+          water: 5
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAs October approaches, I quickly whipped up this <abbr title=\"Building Architect Tool\">BAT</abbr> in preparation for Halloween festivities. This <abbr title=\"Building Architect Tool\">BAT</abbr> is based on the Haunted Mansion at Disneyland, California. It is offered as a museum in-game.\n</p>\n\n<p>\n\tEnjoy and happy haunting.\n</p>\n\n<p>\n\tReleased on SC4Devotion <abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr> as well.\n</p>\n\n<p>\n\t*DarkNite version only\n</p>\n\n<p style=\"color:#ffffff;font-size:15px;text-align:center;\">\n\ta museum in-game.\n</p>\n\n<p style=\"color:#ffffff;font-size:15px;text-align:center;\">\n\t\_\n</p>\n\n<p style=\"color:#ffffff;font-size:15px;text-align:center;\">\n\tEnjoy and happy haunting.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Haunted Mansion_DN.zip
+    files:
+      - Haunted Mansion_DN/Haunted Mansion Museum_DN-0x6534284a-0x1c2d4663-0x30af7bea._LooseDesc
+      - Haunted Mansion_DN/HauntedMansionDN-0x5ad0e817_0xd02e4699_0x30000.SC4Model
+      - Haunted Mansion_DN/PLOP_2x2_Haunted Mansion Museum_DN_d0af7bf0.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/632b312d37989_HMDay.jpg.f5badcd0f291cfe14b647f3e50107d22.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/632b3132bcd10_HMNight.jpg.7aaabe2e2f2b79af7b7c27e5e4515e97.jpg
     lastModified: 2022-09-21T15:45:41.000Z
+    lots:
+      Haunted Mansion_DN/PLOP_2x2_Haunted Mansion Museum_DN_d0af7bf0.SC4Lot:
+        d0af7bf0:
+          building: d0af7bf0
+          name: PLOP_2x2_Haunted Mansion Museum_DN
+          props:
+            - '16670000'
+            - '29730000'
+            - '29780000'
+            - 297c0000
+            - '297e0000'
+            - 2a100000
+            - 2a110000
+            - 2a150000
+            - 2acf0000
+            - a000003a
+            - a0000051
+          size: 2x2
+          textures:
+            - 25ef0000
+            - 25f00000
+            - 25f40000
+            - 25fa0000
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
+    models:
+      Haunted Mansion_DN/HauntedMansionDN-0x5ad0e817_0xd02e4699_0x30000.SC4Model:
+        - d02e4699
     name: Haunted Mansion
+    sha256: 2c3ce669a2c3e39b05695451c6e0ed56ab7bbda488ce1398fdfe93b69836068f
+    size: 268143
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_09/632b31a4e48b1_HMDay.thumb.jpg.37275d5cc63f9f55ff44ed184c77044d.jpg
+    uncompressed: 321188
     url: https://community.simtropolis.com/files/file/35301-haunted-mansion/
+    version: 1.0.0
   simtropolis/35320:
     assetId: simtropolis/35320-breidablikk-skole-v2022
     authors:

@@ -6158,28 +6158,2896 @@ assets:
     authors:
       - WannGLondon
     category: 105-building-sets
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\tHappy New Year community! I have been sitting on these for a bit and finally got some time to upload. A pack of Mediterranean residential and commercial buildings based on those found on the French Riviera. In the DarkNite set, a large Mediterranean-inspired hotel is included as a CS$$$ plop - please feel free to delete the lot/desc file and lot to your heart's content (you know I stink at lotting).\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Euro &amp; Houston tilesets\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium zones\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- No dependencies\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*These have been tested, however please let me know if you find any issues\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c741c281_Centrale-Mar.211361641945407.png.2ed4c8a96cc8a9654e805452bf1b6f6b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c7e2f4c7_Centrale-Feb.101361641946118.png.d9feeac247be5b2d1e28bfb7673c4f94.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c808b2d6_Centrale-Mar.211361641945323.png.d29f15ec4d590f1d3dfbb3f7b868f662.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c82c4fca_Centrale-Mar.211361641945343.png.a10074215d6461198af7e089f216a0ac.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c8600328_Centrale-Mar.211361641945478.png.cca9735f7dd52be795e34f1732720c4b.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1c88b8459_Centrale-Mar.211361641945500.png.99c008cb1802ae426dbb119cc80a63d4.png
     lastModified: 2022-01-12T00:14:44.000Z
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
     name: Mediterranean Pack 2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_01/61de1d6f53f44_Centrale-Mar.211361641945407.thumb.png.0cb191b8bb856f26918dabff758df692.png
     url: https://community.simtropolis.com/files/file/34835-mediterranean-pack-2/
+    variants:
+      '191210':
+        buildings:
+          Medit Pack 3_DN/Medit Bldg 15_DN/Green/CS Medit Bldg 15 G_DN-0x6534284a-0x1c2d4663-0x5f34c022.SC4Desc:
+            1c2d4663-5f34c022:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: b14aac36
+              name: CS Medit Bldg 15 G_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_DN/Medit Bldg 15_DN/Green/Medit Bldg 15 G_DN-0x6534284a-0x1c2d4663-0xdf34bfd4.SC4Desc:
+            1c2d4663-df34bfd4:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: b14aac36
+              name: Medit Bldg 15 G_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_DN/Medit Bldg 15_DN/Orange/CS Medit Bldg 15 O_DN-0x6534284a-0x1c2d4663-0x7f34f355.SC4Desc:
+            1c2d4663-7f34f355:
+              bulldoze: 288
+              capacity:
+                cs$: 54
+                cs$$: 16
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: b14ade67
+              name: CS Medit Bldg 15 O_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 463
+          Medit Pack 3_DN/Medit Bldg 15_DN/Orange/Medit Bldg 15 O_DN-0x6534284a-0x1c2d4663-0x9f34f2f0.SC4Desc:
+            1c2d4663-9f34f2f0:
+              bulldoze: 288
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: b14ade67
+              name: Medit Bldg 15 O_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+          Medit Pack 3_DN/Medit Bldg 15_DN/Pink/CS Medit Bldg 15 P_DN-0x6534284a-0x1c2d4663-0x5f34a585.SC4Desc:
+            1c2d4663-5f34a585:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 714a914f
+              name: CS Medit Bldg 15 P_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_DN/Medit Bldg 15_DN/Pink/Medit Bldg 15 P_DN-0x6534284a-0x1c2d4663-0x5f34a537.SC4Desc:
+            1c2d4663-5f34a537:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 714a914f
+              name: Medit Bldg 15 P_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/CS Medit Bldg 15 Y_DN-0x6534284a-0x1c2d4663-0x7f349eb8.SC4Desc:
+            1c2d4663-7f349eb8:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 114a6123
+              name: CS Medit Bldg 15 Y_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/Medit Bldg 15 Y_DN-0x6534284a-0x1c2d4663-0xbf349e67.SC4Desc:
+            1c2d4663-bf349e67:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 114a6123
+              name: Medit Bldg 15 Y_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_DN/Medit Bldg 16_DN/CS Medit Bldg 16_DN-0x6534284a-0x1c2d4663-0xdf3b9dd8.SC4Desc:
+            1c2d4663-df3b9dd8:
+              bulldoze: 339
+              capacity:
+                cs$: 62
+                cs$$: 18
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: d1518864
+              name: CS Medit Bldg 16_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 18
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 531
+          Medit Pack 3_DN/Medit Bldg 16_DN/Medit Bldg 16_DN-0x6534284a-0x1c2d4663-0x1f3b9d76.SC4Desc:
+            1c2d4663-1f3b9d76:
+              bulldoze: 339
+              capacity:
+                r$: 51
+                r$$: 29
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: d1518864
+              name: Medit Bldg 16_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 735
+          Medit Pack 3_DN/Medit Bldg 17_DN/CS Medit Bldg 17_DN-0x6534284a-0x1c2d4663-0x5f3cf77f.SC4Desc:
+            1c2d4663-5f3cf77f:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 7152c0d0
+              name: CS Medit Bldg 17_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_DN/Medit Bldg 17_DN/Medit Bldg 17_DN-0x6534284a-0x1c2d4663-0x3f3cf738.SC4Desc:
+            1c2d4663-3f3cf738:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 7152c0d0
+              name: Medit Bldg 17_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_DN/Medit Bldg 18_DN/CS Medit Bldg 18_DN-0x6534284a-0x1c2d4663-0x3f3e25a9.SC4Desc:
+            1c2d4663-3f3e25a9:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: '31541014'
+              name: CS Medit Bldg 18_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_DN/Medit Bldg 18_DN/Medit Bldg 18_DN-0x6534284a-0x1c2d4663-0x1f3e2557.SC4Desc:
+            1c2d4663-1f3e2557:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '31541014'
+              name: Medit Bldg 18_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_DN/Medit Bldg 19_DN/CS Medit Bldg 19_DN-0x6534284a-0x1c2d4663-0x1f3e4e6c.SC4Desc:
+            1c2d4663-1f3e4e6c:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 515435b2
+              name: CS Medit Bldg 19_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_DN/Medit Bldg 19_DN/Medit Bldg 19_DN-0x6534284a-0x1c2d4663-0x9f3e4e04.SC4Desc:
+            1c2d4663-9f3e4e04:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 515435b2
+              name: Medit Bldg 19_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_DN/Medit Bldg 20_DN/CS Medit Bldg 20_DN-0x6534284a-0x1c2d4663-0x5f3f5988.SC4Desc:
+            1c2d4663-5f3f5988:
+              bulldoze: 443
+              capacity:
+                cs$: 84
+                cs$$: 23
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 31553fb9
+              name: CS Medit Bldg 20_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 24
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 720
+          Medit Pack 3_DN/Medit Bldg 20_DN/Medit Bldg 20_DN-0x6534284a-0x1c2d4663-0xbf3f58e9.SC4Desc:
+            1c2d4663-bf3f58e9:
+              bulldoze: 443
+              capacity:
+                r$: 68
+                r$$: 39
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 31553fb9
+              name: Medit Bldg 20_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 981
+          Medit Pack 3_DN/Medit Bldg 21_DN/CO Medit Bldg 21_DN-0x6534284a-0x1c2d4663-0xdf421141.SC4Desc:
+            1c2d4663-df421141:
+              bulldoze: 401
+              capacity:
+                co$$: 66
+              categories: co$$
+              flamability: 40
+              garbage: 4
+              model: f157f9a3
+              name: CO Medit Bldg 21_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro,Houston
+              water: 23
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 461
+          Medit Pack 3_DN/Medit Bldg 21_DN/Medit Bldg 21_DN-0x6534284a-0x1c2d4663-0x1f4210d6.SC4Desc:
+            1c2d4663-1f4210d6:
+              bulldoze: 401
+              capacity:
+                r$: 117
+                r$$: 66
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f157f9a3
+              name: Medit Bldg 21_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro,Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1688
+          Medit Pack 3_DN/Medit Bldg 22_DN/CS Medit Bldg 22_DN-0x6534284a-0x1c2d4663-0xdf47408b.SC4Desc:
+            1c2d4663-df47408b:
+              bulldoze: 478
+              capacity:
+                cs$: 225
+                cs$$: 59
+                cs$$$: 25
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 115d2905
+              name: CS Medit Bldg 22_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 7
+              tilesets: Euro
+              water: 62
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2187
+          Medit Pack 3_DN/Medit Bldg 22_DN/Medit Bldg 22_DN-0x6534284a-0x1c2d4663-0x3f474030.SC4Desc:
+            1c2d4663-3f474030:
+              bulldoze: 478
+              capacity:
+                r$: 182
+                r$$: 102
+                r$$$: 46
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 115d2905
+              name: Medit Bldg 22_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro,Houston
+              water: 11
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2779
+          Medit Pack 3_DN/Medit Bldg 23_DN/CO Medit Bldg 23_DN-0x6534284a-0x1c2d4663-0xdf523987.SC4Desc:
+            1c2d4663-df523987:
+              bulldoze: 456
+              capacity:
+                co$$: 297
+                co$$$: 209
+              categories: co$$$
+              flamability: 35
+              garbage: 4
+              model: 9167cf07
+              name: CO Medit Bldg 23_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 9
+              tilesets: Euro,Houston
+              water: 104
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2322
+          Medit Pack 3_DN/Medit Bldg 23_DN/CS Medit Bldg 23_DN-0x6534284a-0x1c2d4663-0x7f51e911.SC4Desc:
+            1c2d4663-7f51e911:
+              bulldoze: 456
+              capacity:
+                cs$: 665
+                cs$$: 168
+                cs$$$: 69
+              categories: cs$$$
+              flamability: 35
+              garbage: 5
+              model: 9167cf07
+              name: CS Medit Bldg 23_DN
+              pollution: 4
+              pollutionRadius: 6
+              power: 19
+              tilesets: Euro,Houston
+              water: 172
+              waterPollution: 2
+              waterPollutionRadius: 7
+              worth: 6463
+          Medit Pack 3_DN/Medit Flats H_DN/CS Medit Flats H_DN-0x6534284a-0x1c2d4663-0x5f222d2c.SC4Desc:
+            1c2d4663-5f222d2c:
+              bulldoze: 443
+              capacity:
+                cs$: 178
+                cs$$: 47
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: f106563a
+              name: CS Medit Flats H_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 4
+              tilesets: Houston
+              water: 46
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1527
+          Medit Pack 3_DN/Medit Flats H_DN/Medit Flats H_DN-0x6534284a-0x1c2d4663-0x7ef06b7b.SC4Desc:
+            1c2d4663-7ef06b7b:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f106563a
+              name: Medit Flats H_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+          Medit Pack 3_DN/Medit Flats I_DN/CS Medit Flats I_DN-0x6534284a-0x1c2d4663-0x7f222dbf.SC4Desc:
+            1c2d4663-7f222dbf:
+              bulldoze: 443
+              capacity:
+                cs$: 178
+                cs$$: 47
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: '71372705'
+              name: CS Medit Flats I_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 4
+              tilesets: Houston
+              water: 46
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1527
+          Medit Pack 3_DN/Medit Flats I_DN/Medit Flats I_DN-0x6534284a-0x1c2d4663-0x7f213da1.SC4Desc:
+            1c2d4663-7f213da1:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '71372705'
+              name: Medit Flats I_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+          Medit Pack 3_DN/Medit Flats J_DN/Medit Flats J_DN-0x6534284a-0x1c2d4663-0x1f225505.SC4Desc:
+            1c2d4663-1f225505:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 513840d1
+              name: Medit Flats J_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+          Medit Pack 3_DN/Medit Hotel_DN/PLOP_4x2_Medit Hotel_DN_af49bfef.SC4Lot:
+            1c2d4663-af49bfef:
+              bulldoze: 456
+              capacity:
+                cs$: 1182
+                cs$$: 298
+                cs$$$: 121
+              categories: landmarks,cs$$$
+              cost: 8864
+              description: This building was made by a Typing Monkey
+              flamability: 35
+              garbage: 10
+              label: Medit Hotel_DN
+              menu: Landmarks
+              model: 915fa54b
+              name: Medit Hotel_DN
+              pollution: 10
+              pollutionRadius: 6
+              power: 34
+              submenu: Commercial/CS$$$
+              water: 301
+              waterPollution: 5
+              waterPollutionRadius: 7
+              worth: 11489
+        features: []
+        filename: Medit Pack 2_DN.zip
+        files:
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Green/CS Medit Bldg 15 G_DN-0x6534284a-0x1c2d4663-0x5f34c022.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Green/CS$$4_1x1_CS Medit Bldg 15 G_DN_cf34c02e.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Green/Medit Bldg 15 G_DN-0x6534284a-0x1c2d4663-0xdf34bfd4.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Green/MeditBldg15GDN-0x5ad0e817_0xb14aac36_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Green/R$$5_1x1_Medit Bldg 15 G_DN_df34bfe4.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Orange/CS Medit Bldg 15 O_DN-0x6534284a-0x1c2d4663-0x7f34f355.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Orange/CS$$4_1x1_CS Medit Bldg 15 O_DN_0f34f382.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Orange/Medit Bldg 15 O_DN-0x6534284a-0x1c2d4663-0x9f34f2f0.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Orange/MeditBldg15ODN-0x5ad0e817_0xb14ade67_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Orange/R$$5_1x1_Medit Bldg 15 O_DN_2f34f300.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Pink/CS Medit Bldg 15 P_DN-0x6534284a-0x1c2d4663-0x5f34a585.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Pink/CS$$4_1x1_CS Medit Bldg 15 P_DN_3f34a58f.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Pink/Medit Bldg 15 P_DN-0x6534284a-0x1c2d4663-0x5f34a537.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Pink/MeditBldg15PDN-0x5ad0e817_0x714a914f_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Pink/R$$5_1x1_Medit Bldg 15 P_DN_5f34a540.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/CS Medit Bldg 15 Y_DN-0x6534284a-0x1c2d4663-0x7f349eb8.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/CS$$4_1x1_CS Medit Bldg 15 Y_DN_0f349ec6.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/Medit Bldg 15 Y_DN-0x6534284a-0x1c2d4663-0xbf349e67.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/MeditBldg15YDN-0x5ad0e817_0x114a6123_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/R$$5_1x1_Medit Bldg 15 Y_DN_3f349e75.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 16_DN/CS Medit Bldg 16_DN-0x6534284a-0x1c2d4663-0xdf3b9dd8.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 16_DN/CS$$4_1x1_CS Medit Bldg 16_DN_ef3b9de5.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 16_DN/Medit Bldg 16_DN-0x6534284a-0x1c2d4663-0x1f3b9d76.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 16_DN/MeditBldg16DN-0x5ad0e817_0xd1518864_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 16_DN/R$$5_1x1_Medit Bldg 16_DN_0f3b9d8a.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 17_DN/CS Medit Bldg 17_DN-0x6534284a-0x1c2d4663-0x5f3cf77f.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 17_DN/CS$$4_1x1_CS Medit Bldg 17_DN_0f3cf78c.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 17_DN/Medit Bldg 17_DN-0x6534284a-0x1c2d4663-0x3f3cf738.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 17_DN/MeditBldg17DN-0x5ad0e817_0x7152c0d0_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 17_DN/R$$5_1x1_Medit Bldg 17_DN_ef3cf744.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 18_DN/CS Medit Bldg 18_DN-0x6534284a-0x1c2d4663-0x3f3e25a9.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 18_DN/CS$$4_1x1_CS Medit Bldg 18_DN_1f3e25b8.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 18_DN/Medit Bldg 18_DN-0x6534284a-0x1c2d4663-0x1f3e2557.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 18_DN/MeditBldg18DN-0x5ad0e817_0x31541014_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 18_DN/R$$5_1x1_Medit Bldg 18_DN_7f3e2565.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 19_DN/CS Medit Bldg 19_DN-0x6534284a-0x1c2d4663-0x1f3e4e6c.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 19_DN/CS$$4_1x1_CS Medit Bldg 19_DN_1f3e4e7b.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 19_DN/Medit Bldg 19_DN-0x6534284a-0x1c2d4663-0x9f3e4e04.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 19_DN/MeditBldg19DN-0x5ad0e817_0x515435b2_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 19_DN/R$$5_1x1_Medit Bldg 19_DN_bf3e4e10.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 20_DN/CS Medit Bldg 20_DN-0x6534284a-0x1c2d4663-0x5f3f5988.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 20_DN/CS$$5_1x1_CS CRMedit Bldg 20_DN_ef3f59e5.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 20_DN/CS$$5_1x1_CS Medit Bldg 20_DN_2f3f5996.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 20_DN/Medit Bldg 20_DN-0x6534284a-0x1c2d4663-0xbf3f58e9.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 20_DN/MeditBldg20DN-0x5ad0e817_0x31553fb9_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 20_DN/R$$6_1x1_CRMedit Bldg 20_DN_af3f5934.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 20_DN/R$$6_1x1_Medit Bldg 20_DN_5f3f58f4.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 21_DN/CO Medit Bldg 21_DN-0x6534284a-0x1c2d4663-0xdf421141.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 21_DN/CO$$5_1x2_CO Medit Bldg 21_DN_7f42115d.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 21_DN/Medit Bldg 21_DN-0x6534284a-0x1c2d4663-0x1f4210d6.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 21_DN/MeditBldg21DN-0x5ad0e817_0xf157f9a3_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 21_DN/R$$5_1x2_Medit Bldg 21_DN_cf4210e4.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 22_DN/CS Medit Bldg 22_DN-0x6534284a-0x1c2d4663-0xdf47408b.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 22_DN/CS$$$4_1x2_CS Medit Bldg 22_DN_cf4740ad.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 22_DN/Medit Bldg 22_DN-0x6534284a-0x1c2d4663-0x3f474030.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 22_DN/MeditBldg22DN-0x5ad0e817_0x115d2905_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 22_DN/R$$$5_1x2_Medit Bldg 22_DN_af47403e.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CO Medit Bldg 23_DN-0x6534284a-0x1c2d4663-0xdf523987.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CO$$$6_2x2_CO Medit Bldg 23_DN_0f523a19.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CO$$$6_2x2_CO Medit Bldg 23_DN_af523995.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CS Medit Bldg 23_DN-0x6534284a-0x1c2d4663-0x7f51e911.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CS$$$6_2x2_CS Medit Bldg 23_DN_1f51e9c3.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 23_DN/CS$$$6_2x2_CS Medit Bldg 23_DN_5f51e926.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 23_DN/MeditBldg23DN-0x5ad0e817_0x9167cf07_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Flats H_DN/CS Medit Flats H_DN-0x6534284a-0x1c2d4663-0x5f222d2c.SC4Desc
+          - Medit Pack 3_DN/Medit Flats H_DN/CS$$3_1x2_CS Medit Flats H_DN_7f222d37.SC4Lot
+          - Medit Pack 3_DN/Medit Flats H_DN/Medit Flats H_DN-0x6534284a-0x1c2d4663-0x7ef06b7b.SC4Desc
+          - Medit Pack 3_DN/Medit Flats H_DN/MeditFlatsHDN-0x5ad0e817_0xf106563a_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Flats H_DN/R$$5_1x2_Medit Flats H_DN_bef06b89.SC4Lot
+          - Medit Pack 3_DN/Medit Flats I_DN/CS Medit Flats I_DN-0x6534284a-0x1c2d4663-0x7f222dbf.SC4Desc
+          - Medit Pack 3_DN/Medit Flats I_DN/CS$$3_1x2_CS Medit Flats I_DN_cf222dcc.SC4Lot
+          - Medit Pack 3_DN/Medit Flats I_DN/Medit Flats I_DN-0x6534284a-0x1c2d4663-0x7f213da1.SC4Desc
+          - Medit Pack 3_DN/Medit Flats I_DN/MeditFlatsIDN-0x5ad0e817_0x71372705_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Flats I_DN/R$$5_1x2_Medit Flats I_DN_df213dac.SC4Lot
+          - Medit Pack 3_DN/Medit Flats J_DN/Medit Flats J_DN-0x6534284a-0x1c2d4663-0x1f225505.SC4Desc
+          - Medit Pack 3_DN/Medit Flats J_DN/MeditFlatsJDN-0x5ad0e817_0x513840d1_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Flats J_DN/R$$5_1x2_Medit Flats J_DN_9f225511.SC4Lot
+          - Medit Pack 3_DN/Medit Hotel_DN/Medit Hotel_DN-0x6534284a-0x1c2d4663-0x9f49bfe8._LooseDesc
+          - Medit Pack 3_DN/Medit Hotel_DN/MeditHotelDN-0x5ad0e817_0x915fa54b_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Hotel_DN/PLOP_4x2_Medit Hotel_DN_af49bfef.SC4Lot
+        lots:
+          Medit Pack 3_DN/Medit Bldg 15_DN/Green/CS$$4_1x1_CS Medit Bldg 15 G_DN_cf34c02e.SC4Lot:
+            cf34c02e:
+              building: 5f34c022
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 G_DN
+              props:
+                - 1c550000
+                - 1c5c0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Green/R$$5_1x1_Medit Bldg 15 G_DN_df34bfe4.SC4Lot:
+            df34bfe4:
+              building: df34bfd4
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 G_DN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Orange/CS$$4_1x1_CS Medit Bldg 15 O_DN_0f34f382.SC4Lot:
+            0f34f382:
+              building: 7f34f355
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 O_DN
+              props:
+                - 1c530000
+                - 1c5e0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Orange/R$$5_1x1_Medit Bldg 15 O_DN_2f34f300.SC4Lot:
+            2f34f300:
+              building: 9f34f2f0
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 O_DN
+              props:
+                - 1dfb0000
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Pink/CS$$4_1x1_CS Medit Bldg 15 P_DN_3f34a58f.SC4Lot:
+            3f34a58f:
+              building: 5f34a585
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 P_DN
+              props:
+                - 1c570000
+                - 1c5b0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Pink/R$$5_1x1_Medit Bldg 15 P_DN_5f34a540.SC4Lot:
+            5f34a540:
+              building: 5f34a537
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 P_DN
+              props:
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/CS$$4_1x1_CS Medit Bldg 15 Y_DN_0f349ec6.SC4Lot:
+            0f349ec6:
+              building: 7f349eb8
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 Y_DN
+              props:
+                - 1d9d0000
+                - 29b10000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/R$$5_1x1_Medit Bldg 15 Y_DN_3f349e75.SC4Lot:
+            3f349e75:
+              building: bf349e67
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 Y_DN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 16_DN/CS$$4_1x1_CS Medit Bldg 16_DN_ef3b9de5.SC4Lot:
+            ef3b9de5:
+              building: df3b9dd8
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 16_DN
+              props:
+                - 1c660000
+                - 1ecb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 16_DN/R$$5_1x1_Medit Bldg 16_DN_0f3b9d8a.SC4Lot:
+            0f3b9d8a:
+              building: 1f3b9d76
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 16_DN
+              props:
+                - '1e120000'
+                - 1ed30000
+                - 2a8a0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 17_DN/CS$$4_1x1_CS Medit Bldg 17_DN_0f3cf78c.SC4Lot:
+            0f3cf78c:
+              building: 5f3cf77f
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 17_DN
+              props:
+                - 1c5b0000
+                - 1c5d0000
+                - 29b10000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 17_DN/R$$5_1x1_Medit Bldg 17_DN_ef3cf744.SC4Lot:
+            ef3cf744:
+              building: 3f3cf738
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 17_DN
+              props:
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 18_DN/CS$$4_1x1_CS Medit Bldg 18_DN_1f3e25b8.SC4Lot:
+            1f3e25b8:
+              building: 3f3e25a9
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 18_DN
+              props:
+                - 1c570000
+                - 1dfb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 18_DN/R$$5_1x1_Medit Bldg 18_DN_7f3e2565.SC4Lot:
+            7f3e2565:
+              building: 1f3e2557
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 18_DN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 19_DN/CS$$4_1x1_CS Medit Bldg 19_DN_1f3e4e7b.SC4Lot:
+            1f3e4e7b:
+              building: 1f3e4e6c
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 19_DN
+              props:
+                - 1d9d0000
+                - 1dfb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 19_DN/R$$5_1x1_Medit Bldg 19_DN_bf3e4e10.SC4Lot:
+            bf3e4e10:
+              building: 9f3e4e04
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 19_DN
+              props:
+                - 1d280000
+                - 1ed00000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 20_DN/CS$$5_1x1_CS CRMedit Bldg 20_DN_ef3f59e5.SC4Lot:
+            ef3f59e5:
+              building: 5f3f5988
+              density: medium,high
+              name: CS$$5_1x1_CS CRMedit Bldg 20_DN
+              props:
+                - 1c550000
+                - 1c6c0000
+                - 1d9e0000
+                - 1dfb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 20_DN/CS$$5_1x1_CS Medit Bldg 20_DN_2f3f5996.SC4Lot:
+            2f3f5996:
+              building: 5f3f5988
+              density: medium,high
+              name: CS$$5_1x1_CS Medit Bldg 20_DN
+              props:
+                - 1d9a0000
+                - 1d9d0000
+                - 1dfb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 20_DN/R$$6_1x1_CRMedit Bldg 20_DN_af3f5934.SC4Lot:
+            af3f5934:
+              building: bf3f58e9
+              density: medium,high
+              name: R$$6_1x1_CRMedit Bldg 20_DN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 1x1
+              stage: 6
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 20_DN/R$$6_1x1_Medit Bldg 20_DN_5f3f58f4.SC4Lot:
+            5f3f58f4:
+              building: bf3f58e9
+              density: medium,high
+              name: R$$6_1x1_Medit Bldg 20_DN
+              props:
+                - 1dfb0000
+                - 1ed40000
+              size: 1x1
+              stage: 6
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 21_DN/CO$$5_1x2_CO Medit Bldg 21_DN_7f42115d.SC4Lot:
+            7f42115d:
+              building: df421141
+              density: medium,high
+              name: CO$$5_1x2_CO Medit Bldg 21_DN
+              props:
+                - 1c6f0000
+                - 1dfb0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 25a32000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 21_DN/R$$5_1x2_Medit Bldg 21_DN_cf4210e4.SC4Lot:
+            cf4210e4:
+              building: 1f4210d6
+              density: medium,high
+              name: R$$5_1x2_Medit Bldg 21_DN
+              props:
+                - '1e120000'
+                - 2a8a0000
+                - 2acf0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253a2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 22_DN/CS$$$4_1x2_CS Medit Bldg 22_DN_cf4740ad.SC4Lot:
+            cf4740ad:
+              building: df47408b
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 22_DN
+              props:
+                - 1c570000
+                - 1c5b0000
+              size: 1x2
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 22_DN/R$$$5_1x2_Medit Bldg 22_DN_af47403e.SC4Lot:
+            af47403e:
+              building: 3f474030
+              density: medium,high
+              name: R$$$5_1x2_Medit Bldg 22_DN
+              props:
+                - '1e120000'
+                - 2a8a0000
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 23_DN/CO$$$6_2x2_CO Medit Bldg 23_DN_0f523a19.SC4Lot:
+            0f523a19:
+              building: df523987
+              density: medium,high
+              name: CO$$$6_2x2_CO Medit Bldg 23_DN
+              props:
+                - 1c5e0000
+                - 1da70000
+                - 1da90000
+                - 1dfb0000
+                - '1e010000'
+                - 1ecb0000
+                - 1ecd0000
+                - 1ed00000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25aa2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 23_DN/CO$$$6_2x2_CO Medit Bldg 23_DN_af523995.SC4Lot:
+            af523995:
+              building: df523987
+              density: medium,high
+              name: CO$$$6_2x2_CO Medit Bldg 23_DN
+              props:
+                - 1c520000
+                - 1c5b0000
+                - 1d9a0000
+                - 1da00000
+                - 1dfb0000
+                - 1ecb0000
+                - 1ecd0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25aa2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 23_DN/CS$$$6_2x2_CS Medit Bldg 23_DN_1f51e9c3.SC4Lot:
+            1f51e9c3:
+              building: 7f51e911
+              density: medium,high
+              name: CS$$$6_2x2_CS Medit Bldg 23_DN
+              props:
+                - 1c500000
+                - 1c570000
+                - 1d9a0000
+                - 1da40000
+                - 1dfb0000
+                - '1e120000'
+                - 1e9a0000
+                - 29b10000
+                - 2a8a0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25aa2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 23_DN/CS$$$6_2x2_CS Medit Bldg 23_DN_5f51e926.SC4Lot:
+            5f51e926:
+              building: 7f51e911
+              density: medium,high
+              name: CS$$$6_2x2_CS Medit Bldg 23_DN
+              props:
+                - 1da50000
+                - 1da90000
+                - 1dfb0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25aa2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Flats H_DN/CS$$3_1x2_CS Medit Flats H_DN_7f222d37.SC4Lot:
+            7f222d37:
+              building: 5f222d2c
+              density: medium,high
+              name: CS$$3_1x2_CS Medit Flats H_DN
+              props:
+                - 1c540000
+                - 1d8c0000
+                - 1ed00000
+              size: 1x2
+              stage: 3
+              textures:
+                - 25c52000
+                - '26060000'
+          Medit Pack 3_DN/Medit Flats H_DN/R$$5_1x2_Medit Flats H_DN_bef06b89.SC4Lot:
+            bef06b89:
+              building: 7ef06b7b
+              density: medium,high
+              name: R$$5_1x2_Medit Flats H_DN
+              props:
+                - '1e120000'
+                - 1ed40000
+                - 1f000000
+              size: 1x2
+              stage: 5
+              textures:
+                - 25f10000
+                - '26060000'
+          Medit Pack 3_DN/Medit Flats I_DN/CS$$3_1x2_CS Medit Flats I_DN_cf222dcc.SC4Lot:
+            cf222dcc:
+              building: 7f222dbf
+              density: medium,high
+              name: CS$$3_1x2_CS Medit Flats I_DN
+              props:
+                - 1c580000
+                - 1c5b0000
+                - 1ecb0000
+              size: 1x2
+              stage: 3
+              textures:
+                - 25c52000
+                - '26060000'
+          Medit Pack 3_DN/Medit Flats I_DN/R$$5_1x2_Medit Flats I_DN_df213dac.SC4Lot:
+            df213dac:
+              building: 7f213da1
+              density: medium,high
+              name: R$$5_1x2_Medit Flats I_DN
+              props:
+                - 1ed40000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253d2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Flats J_DN/R$$5_1x2_Medit Flats J_DN_9f225511.SC4Lot:
+            9f225511:
+              building: 1f225505
+              density: medium,high
+              name: R$$5_1x2_Medit Flats J_DN
+              props:
+                - 1ed40000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253d2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Hotel_DN/PLOP_4x2_Medit Hotel_DN_af49bfef.SC4Lot:
+            af49bfef:
+              building: af49bfef
+              name: PLOP_4x2_Medit Hotel_DN
+              props:
+                - 1d280000
+                - 1d9a0000
+                - 1da30000
+                - 1da70000
+                - 1daa0000
+                - 1dfb0000
+                - '1e120000'
+                - 29b10000
+                - 2a8a0000
+              size: 4x2
+              textures:
+                - '25e20000'
+                - 25f40000
+                - '26060000'
+        models:
+          Medit Pack 3_DN/Medit Bldg 15_DN/Green/MeditBldg15GDN-0x5ad0e817_0xb14aac36_0x30000.SC4Model:
+            - b14aac36
+          Medit Pack 3_DN/Medit Bldg 15_DN/Orange/MeditBldg15ODN-0x5ad0e817_0xb14ade67_0x30000.SC4Model:
+            - b14ade67
+          Medit Pack 3_DN/Medit Bldg 15_DN/Pink/MeditBldg15PDN-0x5ad0e817_0x714a914f_0x30000.SC4Model:
+            - 714a914f
+          Medit Pack 3_DN/Medit Bldg 15_DN/Yellow/MeditBldg15YDN-0x5ad0e817_0x114a6123_0x30000.SC4Model:
+            - 114a6123
+          Medit Pack 3_DN/Medit Bldg 16_DN/MeditBldg16DN-0x5ad0e817_0xd1518864_0x30000.SC4Model:
+            - d1518864
+          Medit Pack 3_DN/Medit Bldg 17_DN/MeditBldg17DN-0x5ad0e817_0x7152c0d0_0x30000.SC4Model:
+            - 7152c0d0
+          Medit Pack 3_DN/Medit Bldg 18_DN/MeditBldg18DN-0x5ad0e817_0x31541014_0x30000.SC4Model:
+            - '31541014'
+          Medit Pack 3_DN/Medit Bldg 19_DN/MeditBldg19DN-0x5ad0e817_0x515435b2_0x30000.SC4Model:
+            - 515435b2
+          Medit Pack 3_DN/Medit Bldg 20_DN/MeditBldg20DN-0x5ad0e817_0x31553fb9_0x30000.SC4Model:
+            - 31553fb9
+          Medit Pack 3_DN/Medit Bldg 21_DN/MeditBldg21DN-0x5ad0e817_0xf157f9a3_0x30000.SC4Model:
+            - f157f9a3
+          Medit Pack 3_DN/Medit Bldg 22_DN/MeditBldg22DN-0x5ad0e817_0x115d2905_0x30000.SC4Model:
+            - 115d2905
+          Medit Pack 3_DN/Medit Bldg 23_DN/MeditBldg23DN-0x5ad0e817_0x9167cf07_0x30000.SC4Model:
+            - 9167cf07
+          Medit Pack 3_DN/Medit Flats H_DN/MeditFlatsHDN-0x5ad0e817_0xf106563a_0x30000.SC4Model:
+            - f106563a
+          Medit Pack 3_DN/Medit Flats I_DN/MeditFlatsIDN-0x5ad0e817_0x71372705_0x30000.SC4Model:
+            - '71372705'
+          Medit Pack 3_DN/Medit Flats J_DN/MeditFlatsJDN-0x5ad0e817_0x513840d1_0x30000.SC4Model:
+            - 513840d1
+          Medit Pack 3_DN/Medit Hotel_DN/MeditHotelDN-0x5ad0e817_0x915fa54b_0x30000.SC4Model:
+            - 915fa54b
+        sha256: 63b1f38d6734412d790092755704ce19919e093c2177bc766d95f805c422078c
+        size: 5716900
+        uncompressed: 6946075
+      '191211':
+        buildings:
+          Medit Pack 3_MN/Medit Bldg 15_MN/Green/CS Medit Bldg 15 G_MN-0x6534284a-0x1c2d4663-0xbf34bf3f.SC4Desc:
+            1c2d4663-bf34bf3f:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: b14aac36
+              name: CS Medit Bldg 15 G_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_MN/Medit Bldg 15_MN/Green/Medit Bldg 15 G_MN-0x6534284a-0x1c2d4663-0x9f34befe.SC4Desc:
+            1c2d4663-9f34befe:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: b14aac36
+              name: Medit Bldg 15 G_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_MN/Medit Bldg 15_MN/Orange/CS Medit Bldg 15 O_MN-0x6534284a-0x1c2d4663-0x9f34f228.SC4Desc:
+            1c2d4663-9f34f228:
+              bulldoze: 288
+              capacity:
+                cs$: 54
+                cs$$: 16
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: b14ade67
+              name: CS Medit Bldg 15 O_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 463
+          Medit Pack 3_MN/Medit Bldg 15_MN/Orange/Medit Bldg 15 O_MN-0x6534284a-0x1c2d4663-0x5f34f1d8.SC4Desc:
+            1c2d4663-5f34f1d8:
+              bulldoze: 288
+              capacity:
+                r$: 44
+                r$$: 26
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: b14ade67
+              name: Medit Bldg 15 O_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 634
+          Medit Pack 3_MN/Medit Bldg 15_MN/Pink/CS Medit Bldg 15 P_MN-0x6534284a-0x1c2d4663-0x7f34a4c1.SC4Desc:
+            1c2d4663-7f34a4c1:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 714a914f
+              name: CS Medit Bldg 15 P_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_MN/Medit Bldg 15_MN/Pink/Medit Bldg 15 P_MN-0x6534284a-0x1c2d4663-0x7f34a46d.SC4Desc:
+            1c2d4663-7f34a46d:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 714a914f
+              name: Medit Bldg 15 P_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/CS Medit Bldg 15 Y_MN-0x6534284a-0x1c2d4663-0x9f349db8.SC4Desc:
+            1c2d4663-9f349db8:
+              bulldoze: 288
+              capacity:
+                cs$: 52
+                cs$$: 15
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 114a6123
+              name: CS Medit Bldg 15 Y_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 16
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 446
+          Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/Medit Bldg 15 Y_MN-0x6534284a-0x1c2d4663-0x1f349d62.SC4Desc:
+            1c2d4663-1f349d62:
+              bulldoze: 288
+              capacity:
+                r$: 42
+                r$$: 25
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 114a6123
+              name: Medit Bldg 15 Y_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 606
+          Medit Pack 3_MN/Medit Bldg 16_MN/CS Medit Bldg 16_MN-0x6534284a-0x1c2d4663-0xbf3b9cc9.SC4Desc:
+            1c2d4663-bf3b9cc9:
+              bulldoze: 339
+              capacity:
+                cs$: 62
+                cs$$: 18
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: '31514672'
+              name: CS Medit Bldg 16_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 18
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 531
+          Medit Pack 3_MN/Medit Bldg 16_MN/Medit Bldg 16_MN-0x6534284a-0x1c2d4663-0x9f3b9c55.SC4Desc:
+            1c2d4663-9f3b9c55:
+              bulldoze: 339
+              capacity:
+                r$: 51
+                r$$: 29
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '31514672'
+              name: Medit Bldg 16_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 735
+          Medit Pack 3_MN/Medit Bldg 17_MN/CS Medit Bldg 17_MN-0x6534284a-0x1c2d4663-0x1f3cf69a.SC4Desc:
+            1c2d4663-1f3cf69a:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 7152c0d0
+              name: CS Medit Bldg 17_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_MN/Medit Bldg 17_MN/Medit Bldg 17_MN-0x6534284a-0x1c2d4663-0x7f3cf644.SC4Desc:
+            1c2d4663-7f3cf644:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 7152c0d0
+              name: Medit Bldg 17_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_MN/Medit Bldg 18_MN/CS Medit Bldg 18_MN-0x6534284a-0x1c2d4663-0xbf3e24e3.SC4Desc:
+            1c2d4663-bf3e24e3:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: '31541014'
+              name: CS Medit Bldg 18_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_MN/Medit Bldg 18_MN/Medit Bldg 18_MN-0x6534284a-0x1c2d4663-0x1f3e249e.SC4Desc:
+            1c2d4663-1f3e249e:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '31541014'
+              name: Medit Bldg 18_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_MN/Medit Bldg 19_MN/CS Medit Bldg 19_MN-0x6534284a-0x1c2d4663-0x9f3e4d6e.SC4Desc:
+            1c2d4663-9f3e4d6e:
+              bulldoze: 360
+              capacity:
+                cs$: 67
+                cs$$: 19
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 515435b2
+              name: CS Medit Bldg 19_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 20
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 574
+          Medit Pack 3_MN/Medit Bldg 19_MN/Medit Bldg 19_MN-0x6534284a-0x1c2d4663-0x1f3e4ce4.SC4Desc:
+            1c2d4663-1f3e4ce4:
+              bulldoze: 360
+              capacity:
+                r$: 54
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 515435b2
+              name: Medit Bldg 19_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 779
+          Medit Pack 3_MN/Medit Bldg 20_MN/CS Medit Bldg 20_MN-0x6534284a-0x1c2d4663-0x9f3f57ab.SC4Desc:
+            1c2d4663-9f3f57ab:
+              bulldoze: 443
+              capacity:
+                cs$: 84
+                cs$$: 23
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: 31553fb9
+              name: CS Medit Bldg 20_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 24
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 720
+          Medit Pack 3_MN/Medit Bldg 20_MN/Medit Bldg 20_MN-0x6534284a-0x1c2d4663-0x5f3f56b9.SC4Desc:
+            1c2d4663-5f3f56b9:
+              bulldoze: 443
+              capacity:
+                r$: 68
+                r$$: 39
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 31553fb9
+              name: Medit Bldg 20_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 981
+          Medit Pack 3_MN/Medit Bldg 21_MN/CO Medit Bldg 21_MN-0x6534284a-0x1c2d4663-0xdf421049.SC4Desc:
+            1c2d4663-df421049:
+              bulldoze: 401
+              capacity:
+                co$$: 66
+              categories: co$$
+              flamability: 40
+              garbage: 4
+              model: f157f9a3
+              name: CO Medit Bldg 21_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro,Houston
+              water: 23
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 461
+          Medit Pack 3_MN/Medit Bldg 21_MN/Medit Bldg 21_MN-0x6534284a-0x1c2d4663-0x3f420fd2.SC4Desc:
+            1c2d4663-3f420fd2:
+              bulldoze: 401
+              capacity:
+                r$: 117
+                r$$: 66
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f157f9a3
+              name: Medit Bldg 21_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro,Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1688
+          Medit Pack 3_MN/Medit Bldg 22_MN/CS Medit Bldg 22_MN-0x6534284a-0x1c2d4663-0x5f473fa3.SC4Desc:
+            1c2d4663-5f473fa3:
+              bulldoze: 478
+              capacity:
+                cs$: 225
+                cs$$: 59
+                cs$$$: 25
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 115d2905
+              name: CS Medit Bldg 22_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 7
+              tilesets: Euro
+              water: 62
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2187
+          Medit Pack 3_MN/Medit Bldg 22_MN/Medit Bldg 22_MN-0x6534284a-0x1c2d4663-0x1f473f2f.SC4Desc:
+            1c2d4663-1f473f2f:
+              bulldoze: 478
+              capacity:
+                r$: 182
+                r$$: 102
+                r$$$: 46
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 115d2905
+              name: Medit Bldg 22_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro,Houston
+              water: 11
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2779
+          Medit Pack 3_MN/Medit Bldg 23_MN/CO Medit Bldg 23_MN-0x6534284a-0x1c2d4663-0x9f523834.SC4Desc:
+            1c2d4663-9f523834:
+              bulldoze: 456
+              capacity:
+                co$$: 297
+                co$$$: 209
+              categories: co$$$
+              flamability: 35
+              garbage: 4
+              model: 9167cf07
+              name: CO Medit Bldg 23_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 9
+              tilesets: Euro,Houston
+              water: 104
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2322
+          Medit Pack 3_MN/Medit Bldg 23_MN/CS Medit Bldg 23_MN-0x6534284a-0x1c2d4663-0x3f51e77e.SC4Desc:
+            1c2d4663-3f51e77e:
+              bulldoze: 456
+              capacity:
+                cs$: 665
+                cs$$: 168
+                cs$$$: 69
+              categories: cs$$$
+              flamability: 35
+              garbage: 5
+              model: 9167cf07
+              name: CS Medit Bldg 23_MN
+              pollution: 4
+              pollutionRadius: 6
+              power: 19
+              tilesets: Euro,Houston
+              water: 172
+              waterPollution: 2
+              waterPollutionRadius: 7
+              worth: 6463
+          Medit Pack 3_MN/Medit Flats H_MN/Medit Flats H_MN-0x6534284a-0x1c2d4663-0x5ef06aa6.SC4Desc:
+            1c2d4663-5ef06aa6:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: f106563a
+              name: Medit Flats H_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+          Medit Pack 3_MN/Medit Flats I_MN/Medit Flats I_MN-0x6534284a-0x1c2d4663-0x3f213c8f.SC4Desc:
+            1c2d4663-3f213c8f:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: '71372705'
+              name: Medit Flats I_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+          Medit Pack 3_MN/Medit Flats J_MN/Medit Flats J_MN-0x6534284a-0x1c2d4663-0x5f225498.SC4Desc:
+            1c2d4663-5f225498:
+              bulldoze: 443
+              capacity:
+                r$: 144
+                r$$: 81
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 513840d1
+              name: Medit Flats J_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Houston
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2077
+        features: []
+        filename: Medit Pack 2_MN.zip
+        files:
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Green/CS Medit Bldg 15 G_MN-0x6534284a-0x1c2d4663-0xbf34bf3f.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Green/CS$$4_1x1_CS Medit Bldg 15 G_MN_ef34bf4d.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Green/Medit Bldg 15 G_MN-0x6534284a-0x1c2d4663-0x9f34befe.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Green/MeditBldg15GMN-0x5ad0e817_0xb14aac36_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Green/R$$5_1x1_Medit Bldg 15 G_MN_3f34bf08.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Orange/CS Medit Bldg 15 O_MN-0x6534284a-0x1c2d4663-0x9f34f228.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Orange/CS$$4_1x1_CS Medit Bldg 15 O_MN_8f34f233.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Orange/Medit Bldg 15 O_MN-0x6534284a-0x1c2d4663-0x5f34f1d8.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Orange/MeditBldg15OMN-0x5ad0e817_0xb14ade67_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Orange/R$$5_1x1_Medit Bldg 15 O_MN_9f34f1e6.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Pink/CS Medit Bldg 15 P_MN-0x6534284a-0x1c2d4663-0x7f34a4c1.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Pink/CS$$4_1x1_CS Medit Bldg 15 P_MN_cf34a4d1.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Pink/Medit Bldg 15 P_MN-0x6534284a-0x1c2d4663-0x7f34a46d.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Pink/MeditBldg15PMN-0x5ad0e817_0x714a914f_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Pink/R$$5_1x1_Medit Bldg 15 P_MN_df34a478.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/CS Medit Bldg 15 Y_MN-0x6534284a-0x1c2d4663-0x9f349db8.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/CS$$4_1x1_CS Medit Bldg 15 Y_MN_9f349dc5.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/Medit Bldg 15 Y_MN-0x6534284a-0x1c2d4663-0x1f349d62.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/MeditBldg15YMN-0x5ad0e817_0x114a6123_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/R$$5_1x1_Medit Bldg 15 Y_MN_0f349d6e.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 16_MN/CS Medit Bldg 16_MN-0x6534284a-0x1c2d4663-0xbf3b9cc9.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 16_MN/CS$$4_1x1_CS Medit Bldg 16_MN_8f3b9cd8.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 16_MN/Medit Bldg 16_MN-0x6534284a-0x1c2d4663-0x9f3b9c55.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 16_MN/MeditBldg16MN-0x5ad0e817_0x31514672_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 16_MN/R$$5_1x1_Medit Bldg 16_MN_df3b9c75.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 17_MN/CS Medit Bldg 17_MN-0x6534284a-0x1c2d4663-0x1f3cf69a.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 17_MN/CS$$4_1x1_CS Medit Bldg 17_MN_3f3cf6a4.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 17_MN/Medit Bldg 17_MN-0x6534284a-0x1c2d4663-0x7f3cf644.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 17_MN/MeditBldg17MN-0x5ad0e817_0x7152c0d0_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 17_MN/R$$5_1x1_Medit Bldg 17_MN_8f3cf651.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 18_MN/CS Medit Bldg 18_MN-0x6534284a-0x1c2d4663-0xbf3e24e3.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 18_MN/CS$$4_1x1_CS Medit Bldg 18_MN_5f3e24f1.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 18_MN/Medit Bldg 18_MN-0x6534284a-0x1c2d4663-0x1f3e249e.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 18_MN/MeditBldg18MN-0x5ad0e817_0x31541014_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 18_MN/R$$5_1x1_Medit Bldg 18_MN_cf3e24a8.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 19_MN/CS Medit Bldg 19_MN-0x6534284a-0x1c2d4663-0x9f3e4d6e.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 19_MN/CS$$4_1x1_CS Medit Bldg 19_MN_df3e4d79.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 19_MN/Medit Bldg 19_MN-0x6534284a-0x1c2d4663-0x1f3e4ce4.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 19_MN/MeditBldg19MN-0x5ad0e817_0x515435b2_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 19_MN/R$$5_1x1_Medit Bldg 19_MN_0f3e4cf8.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 20_MN/CS Medit Bldg 20_MN-0x6534284a-0x1c2d4663-0x9f3f57ab.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 20_MN/CS$$5_1x1_CS CRMedit Bldg 20_MN_0f3f582b.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 20_MN/CS$$5_1x1_CS Medit Bldg 20_MN_1f3f57b7.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 20_MN/Medit Bldg 20_MN-0x6534284a-0x1c2d4663-0x5f3f56b9.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 20_MN/MeditBldg20MN-0x5ad0e817_0x31553fb9_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 20_MN/R$$6_1x1_CRMedit Bldg 20_MN_6f3f5715.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 20_MN/R$$6_1x1_Medit Bldg 20_MN_1f3f56c6.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 21_MN/CO Medit Bldg 21_MN-0x6534284a-0x1c2d4663-0xdf421049.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 21_MN/CO$$5_1x2_CO Medit Bldg 21_MN_9f421059.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 21_MN/Medit Bldg 21_MN-0x6534284a-0x1c2d4663-0x3f420fd2.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 21_MN/MeditBldg21MN-0x5ad0e817_0xf157f9a3_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 21_MN/R$$5_1x2_Medit Bldg 21_MN_9f420fe2.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 22_MN/CS Medit Bldg 22_MN-0x6534284a-0x1c2d4663-0x5f473fa3.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 22_MN/CS$$$4_1x2_CS Medit Bldg 22_MN_bf473fb2.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 22_MN/Medit Bldg 22_MN-0x6534284a-0x1c2d4663-0x1f473f2f.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 22_MN/MeditBldg22MN-0x5ad0e817_0x115d2905_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 22_MN/R$$$5_1x2_Medit Bldg 22_MN_df473f3d.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CO Medit Bldg 23_MN-0x6534284a-0x1c2d4663-0x9f523834.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CO$$$6_2x2_CO Medit Bldg 23_MN_4f523842.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CO$$$6_2x2_CO Medit Bldg 23_MN_af5238cd.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CS Medit Bldg 23_MN-0x6534284a-0x1c2d4663-0x3f51e77e.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CS$$$6_2x2_CS Medit Bldg 23_MN_bf51e817.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 23_MN/CS$$$6_2x2_CS Medit Bldg 23_MN_df51e78e.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 23_MN/MeditBldg23MN-0x5ad0e817_0x9167cf07_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Flats H_MN/Medit Flats H_MN-0x6534284a-0x1c2d4663-0x5ef06aa6.SC4Desc
+          - Medit Pack 3_MN/Medit Flats H_MN/MeditFlatsHMN-0x5ad0e817_0xf106563a_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Flats H_MN/R$$5_1x2_Medit Flats H_MN_3ef06ab3.SC4Lot
+          - Medit Pack 3_MN/Medit Flats I_MN/Medit Flats I_MN-0x6534284a-0x1c2d4663-0x3f213c8f.SC4Desc
+          - Medit Pack 3_MN/Medit Flats I_MN/MeditFlatsIMN-0x5ad0e817_0x71372705_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Flats I_MN/R$$5_1x2_Medit Flats I_MN_2f213c99.SC4Lot
+          - Medit Pack 3_MN/Medit Flats J_MN/Medit Flats J_MN-0x6534284a-0x1c2d4663-0x5f225498.SC4Desc
+          - Medit Pack 3_MN/Medit Flats J_MN/MeditFlatsJMN-0x5ad0e817_0x513840d1_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Flats J_MN/R$$5_1x2_Medit Flats J_MN_6f2254a2.SC4Lot
+        lots:
+          Medit Pack 3_MN/Medit Bldg 15_MN/Green/CS$$4_1x1_CS Medit Bldg 15 G_MN_ef34bf4d.SC4Lot:
+            ef34bf4d:
+              building: bf34bf3f
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 G_MN
+              props:
+                - 1c550000
+                - 1c5c0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Green/R$$5_1x1_Medit Bldg 15 G_MN_3f34bf08.SC4Lot:
+            3f34bf08:
+              building: 9f34befe
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 G_MN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Orange/CS$$4_1x1_CS Medit Bldg 15 O_MN_8f34f233.SC4Lot:
+            8f34f233:
+              building: 9f34f228
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 O_MN
+              props:
+                - 1c530000
+                - 1c5e0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Orange/R$$5_1x1_Medit Bldg 15 O_MN_9f34f1e6.SC4Lot:
+            9f34f1e6:
+              building: 5f34f1d8
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 O_MN
+              props:
+                - 1dfb0000
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Pink/CS$$4_1x1_CS Medit Bldg 15 P_MN_cf34a4d1.SC4Lot:
+            cf34a4d1:
+              building: 7f34a4c1
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 P_MN
+              props:
+                - 1c570000
+                - 1c5b0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Pink/R$$5_1x1_Medit Bldg 15 P_MN_df34a478.SC4Lot:
+            df34a478:
+              building: 7f34a46d
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 P_MN
+              props:
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/CS$$4_1x1_CS Medit Bldg 15 Y_MN_9f349dc5.SC4Lot:
+            9f349dc5:
+              building: 9f349db8
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 15 Y_MN
+              props:
+                - 1d9d0000
+                - 29b10000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/R$$5_1x1_Medit Bldg 15 Y_MN_0f349d6e.SC4Lot:
+            0f349d6e:
+              building: 1f349d62
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 15 Y_MN
+              props:
+                - 1ed30000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 16_MN/CS$$4_1x1_CS Medit Bldg 16_MN_8f3b9cd8.SC4Lot:
+            8f3b9cd8:
+              building: bf3b9cc9
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 16_MN
+              props:
+                - 1c660000
+                - 1ecb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 16_MN/R$$5_1x1_Medit Bldg 16_MN_df3b9c75.SC4Lot:
+            df3b9c75:
+              building: 9f3b9c55
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 16_MN
+              props:
+                - '1e120000'
+                - 1ed30000
+                - 2a8a0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 17_MN/CS$$4_1x1_CS Medit Bldg 17_MN_3f3cf6a4.SC4Lot:
+            3f3cf6a4:
+              building: 1f3cf69a
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 17_MN
+              props:
+                - 1c5b0000
+                - 1c5d0000
+                - 29b10000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 17_MN/R$$5_1x1_Medit Bldg 17_MN_8f3cf651.SC4Lot:
+            8f3cf651:
+              building: 7f3cf644
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 17_MN
+              props:
+                - 1ecd0000
+                - 1ed40000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 18_MN/CS$$4_1x1_CS Medit Bldg 18_MN_5f3e24f1.SC4Lot:
+            5f3e24f1:
+              building: bf3e24e3
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 18_MN
+              props:
+                - 1c570000
+                - 1dfb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 18_MN/R$$5_1x1_Medit Bldg 18_MN_cf3e24a8.SC4Lot:
+            cf3e24a8:
+              building: 1f3e249e
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 18_MN
+              props:
+                - 1ecb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 19_MN/CS$$4_1x1_CS Medit Bldg 19_MN_df3e4d79.SC4Lot:
+            df3e4d79:
+              building: 9f3e4d6e
+              density: medium,high
+              name: CS$$4_1x1_CS Medit Bldg 19_MN
+              props:
+                - 1d9d0000
+                - 1dfb0000
+              size: 1x1
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 19_MN/R$$5_1x1_Medit Bldg 19_MN_0f3e4cf8.SC4Lot:
+            0f3e4cf8:
+              building: 1f3e4ce4
+              density: medium,high
+              name: R$$5_1x1_Medit Bldg 19_MN
+              props:
+                - 1d280000
+                - 1ed00000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 20_MN/CS$$5_1x1_CS CRMedit Bldg 20_MN_0f3f582b.SC4Lot:
+            0f3f582b:
+              building: 9f3f57ab
+              density: medium,high
+              name: CS$$5_1x1_CS CRMedit Bldg 20_MN
+              props:
+                - 1c550000
+                - 1c6c0000
+                - 1d9e0000
+                - 1dfb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 20_MN/CS$$5_1x1_CS Medit Bldg 20_MN_1f3f57b7.SC4Lot:
+            1f3f57b7:
+              building: 9f3f57ab
+              density: medium,high
+              name: CS$$5_1x1_CS Medit Bldg 20_MN
+              props:
+                - 1d9a0000
+                - 1d9d0000
+                - 1dfb0000
+              size: 1x1
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 20_MN/R$$6_1x1_CRMedit Bldg 20_MN_6f3f5715.SC4Lot:
+            6f3f5715:
+              building: 5f3f56b9
+              density: medium,high
+              name: R$$6_1x1_CRMedit Bldg 20_MN
+              props:
+                - 1dfb0000
+                - 1ed30000
+              size: 1x1
+              stage: 6
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 20_MN/R$$6_1x1_Medit Bldg 20_MN_1f3f56c6.SC4Lot:
+            1f3f56c6:
+              building: 5f3f56b9
+              density: medium,high
+              name: R$$6_1x1_Medit Bldg 20_MN
+              props:
+                - 1dfb0000
+                - 1ed40000
+              size: 1x1
+              stage: 6
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 21_MN/CO$$5_1x2_CO Medit Bldg 21_MN_9f421059.SC4Lot:
+            9f421059:
+              building: df421049
+              density: medium,high
+              name: CO$$5_1x2_CO Medit Bldg 21_MN
+              props:
+                - 1c6f0000
+                - 1dfb0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 25a32000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 21_MN/R$$5_1x2_Medit Bldg 21_MN_9f420fe2.SC4Lot:
+            9f420fe2:
+              building: 3f420fd2
+              density: medium,high
+              name: R$$5_1x2_Medit Bldg 21_MN
+              props:
+                - '1e120000'
+                - 2a8a0000
+                - 2acf0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253a2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 22_MN/CS$$$4_1x2_CS Medit Bldg 22_MN_bf473fb2.SC4Lot:
+            bf473fb2:
+              building: 5f473fa3
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 22_MN
+              props:
+                - 1c570000
+                - 1c5b0000
+              size: 1x2
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 22_MN/R$$$5_1x2_Medit Bldg 22_MN_df473f3d.SC4Lot:
+            df473f3d:
+              building: 1f473f2f
+              density: medium,high
+              name: R$$$5_1x2_Medit Bldg 22_MN
+              props:
+                - '1e120000'
+                - 2a8a0000
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 23_MN/CO$$$6_2x2_CO Medit Bldg 23_MN_4f523842.SC4Lot:
+            4f523842:
+              building: 9f523834
+              density: medium,high
+              name: CO$$$6_2x2_CO Medit Bldg 23_MN
+              props:
+                - 1c680000
+                - 1d9a0000
+                - 1daa0000
+                - 1dfb0000
+              size: 2x2
+              stage: 6
+              textures:
+                - '25993000'
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 23_MN/CO$$$6_2x2_CO Medit Bldg 23_MN_af5238cd.SC4Lot:
+            af5238cd:
+              building: 9f523834
+              density: medium,high
+              name: CO$$$6_2x2_CO Medit Bldg 23_MN
+              props:
+                - 1c580000
+                - 1c5d0000
+                - 1da10000
+                - 1da40000
+                - 1dfb0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25aa2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 23_MN/CS$$$6_2x2_CS Medit Bldg 23_MN_bf51e817.SC4Lot:
+            bf51e817:
+              building: 3f51e77e
+              density: medium,high
+              name: CS$$$6_2x2_CS Medit Bldg 23_MN
+              props:
+                - 1c500000
+                - 1c540000
+                - 1d9c0000
+                - 1da50000
+                - 1dfb0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25ab2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 23_MN/CS$$$6_2x2_CS Medit Bldg 23_MN_df51e78e.SC4Lot:
+            df51e78e:
+              building: 3f51e77e
+              density: medium,high
+              name: CS$$$6_2x2_CS Medit Bldg 23_MN
+              props:
+                - 1c550000
+                - 1da10000
+                - 1da90000
+                - 1dfb0000
+              size: 2x2
+              stage: 6
+              textures:
+                - 25ab2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Flats H_MN/R$$5_1x2_Medit Flats H_MN_3ef06ab3.SC4Lot:
+            3ef06ab3:
+              building: 5ef06aa6
+              density: medium,high
+              name: R$$5_1x2_Medit Flats H_MN
+              props:
+                - '1e120000'
+                - 1ed40000
+                - 1f000000
+              size: 1x2
+              stage: 5
+              textures:
+                - 25f10000
+                - '26060000'
+          Medit Pack 3_MN/Medit Flats I_MN/R$$5_1x2_Medit Flats I_MN_2f213c99.SC4Lot:
+            2f213c99:
+              building: 3f213c8f
+              density: medium,high
+              name: R$$5_1x2_Medit Flats I_MN
+              props:
+                - 1ed40000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253d2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Flats J_MN/R$$5_1x2_Medit Flats J_MN_6f2254a2.SC4Lot:
+            6f2254a2:
+              building: 5f225498
+              density: medium,high
+              name: R$$5_1x2_Medit Flats J_MN
+              props:
+                - 1ed40000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253d2000
+                - '26060000'
+        models:
+          Medit Pack 3_MN/Medit Bldg 15_MN/Green/MeditBldg15GMN-0x5ad0e817_0xb14aac36_0x30000.SC4Model:
+            - b14aac36
+          Medit Pack 3_MN/Medit Bldg 15_MN/Orange/MeditBldg15OMN-0x5ad0e817_0xb14ade67_0x30000.SC4Model:
+            - b14ade67
+          Medit Pack 3_MN/Medit Bldg 15_MN/Pink/MeditBldg15PMN-0x5ad0e817_0x714a914f_0x30000.SC4Model:
+            - 714a914f
+          Medit Pack 3_MN/Medit Bldg 15_MN/Yellow/MeditBldg15YMN-0x5ad0e817_0x114a6123_0x30000.SC4Model:
+            - 114a6123
+          Medit Pack 3_MN/Medit Bldg 16_MN/MeditBldg16MN-0x5ad0e817_0x31514672_0x30000.SC4Model:
+            - '31514672'
+          Medit Pack 3_MN/Medit Bldg 17_MN/MeditBldg17MN-0x5ad0e817_0x7152c0d0_0x30000.SC4Model:
+            - 7152c0d0
+          Medit Pack 3_MN/Medit Bldg 18_MN/MeditBldg18MN-0x5ad0e817_0x31541014_0x30000.SC4Model:
+            - '31541014'
+          Medit Pack 3_MN/Medit Bldg 19_MN/MeditBldg19MN-0x5ad0e817_0x515435b2_0x30000.SC4Model:
+            - 515435b2
+          Medit Pack 3_MN/Medit Bldg 20_MN/MeditBldg20MN-0x5ad0e817_0x31553fb9_0x30000.SC4Model:
+            - 31553fb9
+          Medit Pack 3_MN/Medit Bldg 21_MN/MeditBldg21MN-0x5ad0e817_0xf157f9a3_0x30000.SC4Model:
+            - f157f9a3
+          Medit Pack 3_MN/Medit Bldg 22_MN/MeditBldg22MN-0x5ad0e817_0x115d2905_0x30000.SC4Model:
+            - 115d2905
+          Medit Pack 3_MN/Medit Bldg 23_MN/MeditBldg23MN-0x5ad0e817_0x9167cf07_0x30000.SC4Model:
+            - 9167cf07
+          Medit Pack 3_MN/Medit Flats H_MN/MeditFlatsHMN-0x5ad0e817_0xf106563a_0x30000.SC4Model:
+            - f106563a
+          Medit Pack 3_MN/Medit Flats I_MN/MeditFlatsIMN-0x5ad0e817_0x71372705_0x30000.SC4Model:
+            - '71372705'
+          Medit Pack 3_MN/Medit Flats J_MN/MeditFlatsJMN-0x5ad0e817_0x513840d1_0x30000.SC4Model:
+            - 513840d1
+        sha256: 9d96ab3cfbe47bf15f376425a32b4d87c24ca81a1647cbf8b1754143c593787a
+        size: 4672086
+        uncompressed: 5686786
+    version: 1.0.0
   simtropolis/34843:
     assetId: simtropolis/34843-paris-batiments-20-21
     authors:
       - WannGLondon
     category: 105-building-sets
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tTwo buildings inspired by those found along the quais of Paris. One includes a CS version as well. Enjoy!\n</p>\n\n<p>\n\t- Euro tileset\n</p>\n\n<p>\n\t- Medium zones\n</p>\n\n<p>\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p>\n\t- No dependencies\n</p>\n\n<p>\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n<p>\n\t*These have been tested, however please let me know if you find any issues\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61f5b4a94f8f9_Centrale-Dec.15141643492263.png.fb80406080fc1c58a179e985468af042.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_01/61f5b4abd1626_Centrale-Nov.4141643492243.png.a31b4ea09ec5fd75e9e2862e41608bc0.png
     lastModified: 2022-01-29T21:43:36.000Z
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
     name: Paris Batiments 20 & 21
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_01/61f5b507cbfcf_Centrale-Nov.4141643492243.thumb.png.ae5677dfc71cc4046e9833e86adff6dd.png
     url: https://community.simtropolis.com/files/file/34843-paris-batiments-20-21/
+    variants:
+      '191277':
+        buildings:
+          Paris Batiment 20_DN/Paris Batiment 20_DN-0x6534284a-0x1c2d4663-0x9f72ab44.SC4Desc:
+            1c2d4663-9f72ab44:
+              bulldoze: 370
+              capacity:
+                r$: 140
+                r$$: 78
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 6ef1712f
+              name: Paris Batiment 20_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2020
+        features: []
+        filename: Paris Batiment 20_DN.zip
+        files:
+          - Paris Batiment 20_DN/Paris Batiment 20_DN-0x6534284a-0x1c2d4663-0x9f72ab44.SC4Desc
+          - Paris Batiment 20_DN/ParisBatiment20DN-0x5ad0e817_0x6ef1712f_0x30000.SC4Model
+          - Paris Batiment 20_DN/R$$5_1x2_Paris Batiment 20_DN_0f72ab59.SC4Lot
+        lots:
+          Paris Batiment 20_DN/R$$5_1x2_Paris Batiment 20_DN_0f72ab59.SC4Lot:
+            0f72ab59:
+              building: 9f72ab44
+              density: medium,high
+              name: R$$5_1x2_Paris Batiment 20_DN
+              props:
+                - 2a8a0000
+                - 2acf0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 252f2000
+                - '26060000'
+        models:
+          Paris Batiment 20_DN/ParisBatiment20DN-0x5ad0e817_0x6ef1712f_0x30000.SC4Model:
+            - 6ef1712f
+        sha256: e9a3fbb0e0aa08bfdffb7c333c7d1a8f0ab47b542deef0a88506472b995b4639
+        size: 357309
+        uncompressed: 441702
+      '191278':
+        buildings:
+          Paris Batiment 20_MN/Paris Batiment 20_MN-0x6534284a-0x1c2d4663-0xdf72aa88.SC4Desc:
+            1c2d4663-df72aa88:
+              bulldoze: 370
+              capacity:
+                r$: 140
+                r$$: 78
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 6ef1712f
+              name: Paris Batiment 20_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 4
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2020
+        features: []
+        filename: Paris Batiment 20_MN.zip
+        files:
+          - Paris Batiment 20_MN/Paris Batiment 20_MN-0x6534284a-0x1c2d4663-0xdf72aa88.SC4Desc
+          - Paris Batiment 20_MN/ParisBatiment20MN-0x5ad0e817_0x6ef1712f_0x30000.SC4Model
+          - Paris Batiment 20_MN/R$$5_1x2_Paris Batiment 20_MN_2f72aabc.SC4Lot
+        lots:
+          Paris Batiment 20_MN/R$$5_1x2_Paris Batiment 20_MN_2f72aabc.SC4Lot:
+            2f72aabc:
+              building: df72aa88
+              density: medium,high
+              name: R$$5_1x2_Paris Batiment 20_MN
+              props:
+                - 2a8a0000
+                - 2acf0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 252f2000
+                - '26060000'
+        models:
+          Paris Batiment 20_MN/ParisBatiment20MN-0x5ad0e817_0x6ef1712f_0x30000.SC4Model:
+            - 6ef1712f
+        sha256: 449be83af804d07fbb7a35e801dfe72232d452e89fa854d12a988d8a8c3621b0
+        size: 350621
+        uncompressed: 433634
+      '191279':
+        buildings:
+          Paris Batiment 21_DN/CS Paris Batiment 21_DN-0x6534284a-0x1c2d4663-0x7f7ab10d.SC4Desc:
+            1c2d4663-7f7ab10d:
+              bulldoze: 424
+              capacity:
+                cs$: 199
+                cs$$: 52
+                cs$$$: 23
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 0ef974eb
+              name: CS Paris Batiment 21_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 55
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1934
+          Paris Batiment 21_DN/Paris Batiment 21_DN-0x6534284a-0x1c2d4663-0x7f7ab099.SC4Desc:
+            1c2d4663-7f7ab099:
+              bulldoze: 412
+              capacity:
+                r$: 161
+                r$$: 90
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 0ef974eb
+              name: Paris Batiment 21_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2323
+        features: []
+        filename: Paris Batiment 21_DN.zip
+        files:
+          - Paris Batiment 21_DN/CS Paris Batiment 21_DN-0x6534284a-0x1c2d4663-0x7f7ab10d.SC4Desc
+          - Paris Batiment 21_DN/CS$$$4_1x2_CS Paris Batiment 21_DN_bf7ab120.SC4Lot
+          - Paris Batiment 21_DN/Paris Batiment 21_DN-0x6534284a-0x1c2d4663-0x7f7ab099.SC4Desc
+          - Paris Batiment 21_DN/ParisBatiment21DN-0x5ad0e817_0xef974eb_0x30000.SC4Model
+          - Paris Batiment 21_DN/R$$5_1x2_Paris Batiment 21_DN_5f7ab0b6.SC4Lot
+        lots:
+          Paris Batiment 21_DN/CS$$$4_1x2_CS Paris Batiment 21_DN_bf7ab120.SC4Lot:
+            bf7ab120:
+              building: 7f7ab10d
+              density: medium,high
+              name: CS$$$4_1x2_CS Paris Batiment 21_DN
+              props:
+                - 1d9a0000
+              size: 1x2
+              stage: 4
+              textures:
+                - 25aa2000
+                - '26060000'
+          Paris Batiment 21_DN/R$$5_1x2_Paris Batiment 21_DN_5f7ab0b6.SC4Lot:
+            5f7ab0b6:
+              building: 7f7ab099
+              density: medium,high
+              name: R$$5_1x2_Paris Batiment 21_DN
+              props:
+                - 164b0000
+                - 1ed30000
+              size: 1x2
+              stage: 5
+              textures:
+                - '25352000'
+                - '26060000'
+        models:
+          Paris Batiment 21_DN/ParisBatiment21DN-0x5ad0e817_0xef974eb_0x30000.SC4Model:
+            - 0ef974eb
+        sha256: 2b5aa6bb3774812642649946b7aa2af2530865ac7428e5794589770714a14a80
+        size: 411265
+        uncompressed: 501646
+      '191280':
+        buildings:
+          Paris Batiment 21_MN/CS Paris Batiment 21_MN-0x6534284a-0x1c2d4663-0x1f7aaff6.SC4Desc:
+            1c2d4663-1f7aaff6:
+              bulldoze: 424
+              capacity:
+                cs$: 199
+                cs$$: 52
+                cs$$$: 23
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 0ef974eb
+              name: CS Paris Batiment 21_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 55
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1934
+          Paris Batiment 21_MN/Paris Batiment 21_MN-0x6534284a-0x1c2d4663-0x1f7aaf5b.SC4Desc:
+            1c2d4663-1f7aaf5b:
+              bulldoze: 412
+              capacity:
+                r$: 161
+                r$$: 90
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 0ef974eb
+              name: Paris Batiment 21_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 2
+              tilesets: Euro
+              water: 5
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 2323
+        features: []
+        filename: Paris Batiment 21_MN.zip
+        files:
+          - Paris Batiment 21_MN/CS Paris Batiment 21_MN-0x6534284a-0x1c2d4663-0x1f7aaff6.SC4Desc
+          - Paris Batiment 21_MN/CS$$$4_1x2_CS Paris Batiment 21_MN_bf7ab00e.SC4Lot
+          - Paris Batiment 21_MN/Paris Batiment 21_MN-0x6534284a-0x1c2d4663-0x1f7aaf5b.SC4Desc
+          - Paris Batiment 21_MN/ParisBatiment21MN-0x5ad0e817_0xef974eb_0x30000.SC4Model
+          - Paris Batiment 21_MN/R$$5_1x2_Paris Batiment 21_MN_4f7aaf74.SC4Lot
+        lots:
+          Paris Batiment 21_MN/CS$$$4_1x2_CS Paris Batiment 21_MN_bf7ab00e.SC4Lot:
+            bf7ab00e:
+              building: 1f7aaff6
+              density: medium,high
+              name: CS$$$4_1x2_CS Paris Batiment 21_MN
+              props:
+                - 1d9a0000
+              size: 1x2
+              stage: 4
+              textures:
+                - 25aa2000
+                - '26060000'
+          Paris Batiment 21_MN/R$$5_1x2_Paris Batiment 21_MN_4f7aaf74.SC4Lot:
+            4f7aaf74:
+              building: 1f7aaf5b
+              density: medium,high
+              name: R$$5_1x2_Paris Batiment 21_MN
+              props:
+                - 164b0000
+                - 1ed30000
+              size: 1x2
+              stage: 5
+              textures:
+                - '25352000'
+                - '26060000'
+        models:
+          Paris Batiment 21_MN/ParisBatiment21MN-0x5ad0e817_0xef974eb_0x30000.SC4Model:
+            - 0ef974eb
+        sha256: 4ba9d3142b096bb21f179866f16dc8206a288d267e0ab12429c048871123c205
+        size: 404931
+        uncompressed: 493292
+    version: 1.0.0
   simtropolis/34876:
     assetId: simtropolis/34876-mediterranean-pack-3
     authors:
       - WannGLondon
     category: 105-building-sets
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\tA bit of Marseille and Nice for you for the community. Also, for fun, I created a Marseille-inspired <abbr title=\"Building Architect Tool\">BAT</abbr> with a rooftop restaurant.\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Euro &amp; Houston tilesets\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Medium/High density\_zones\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- Nightlighted, either MaxisNite or DarkNite*\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t- No dependencies\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t*DarkNite version requires SimFox's DayNNite Mod\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/621bcda49cf73_Baiefronte-Est-Jan.5671645566709.png.937c5983f5cb8ca0c7cf01a9a17184c8.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/621bcda846f56_Centrale-Nov.12361645841899.png.171a8f010a580ecfa941f69672cd25f3.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/621bcdad69461_Centrale-Nov.91981644517457.png.f3ddc180a3c36d87b513fea6c7da100a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/621bcdb0641ea_Centrale-Oct.282361645841889.png.fbe1a9f42ae5b70860ee903e672751f9.png
     lastModified: 2022-02-27T19:17:29.000Z
+    meta:
+      timestamp: 2025-01-13T10:40:05.747Z
+      version: 1
     name: Mediterranean Pack 3
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_02/621bce42abd79_Baiefronte-Est-Jan.5671645566709.thumb.png.56da204b7b444eb248fcc842a401763a.png
     url: https://community.simtropolis.com/files/file/34876-mediterranean-pack-3/
+    variants:
+      '191813':
+        buildings:
+          Medit Pack 3_DN/Medit Bldg 24_DN/Medit Bldg 24_DN-0x6534284a-0x1c2d4663-0xdf7c3678.SC4Desc:
+            1c2d4663-df7c3678:
+              bulldoze: 401
+              capacity:
+                r$: 84
+                r$$: 48
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 4efafeb3
+              name: Medit Bldg 24_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro,Houston
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1212
+          Medit Pack 3_DN/Medit Bldg 25_DN/CS Medit Bldg 25_DN-0x6534284a-0x1c2d4663-0xbf864ec6.SC4Desc:
+            1c2d4663-bf864ec6:
+              bulldoze: 435
+              capacity:
+                cs$: 175
+                cs$$: 46
+                cs$$$: 20
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 4f0462aa
+              name: CS Medit Bldg 25_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro,Houston
+              water: 49
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1701
+          Medit Pack 3_DN/Medit Bldg 26_DN/CS Medit Bldg 26_DN-0x6534284a-0x1c2d4663-0x1f86c564.SC4Desc:
+            1c2d4663-1f86c564:
+              bulldoze: 435
+              capacity:
+                cs$: 175
+                cs$$: 46
+                cs$$$: 20
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 0f058c36
+              name: CS Medit Bldg 26_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro,Houston
+              water: 49
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1701
+          Medit Pack 3_DN/Medit Bldg 27_DN/Medit Bldg 27_DN-0x6534284a-0x1c2d4663-0xdf964bd0.SC4Desc:
+            1c2d4663-df964bd0:
+              bulldoze: 350
+              capacity:
+                r$: 83
+                r$$: 47
+                r$$$: 22
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 6f151251
+              name: Medit Bldg 27_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro,Houston
+              water: 7
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1267
+          Medit Pack 3_DN/Medit Bldg 28_DN/CS Medit Bldg 28_DN-0x6534284a-0x1c2d4663-0x9f9e8c66.SC4Desc:
+            1c2d4663-9f9e8c66:
+              bulldoze: 443
+              capacity:
+                cs$: 138
+                cs$$: 37
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: af1d4e9d
+              name: CS Medit Bldg 28_DN
+              pollution: 1
+              pollutionRadius: 5
+              power: 3
+              tilesets: Euro
+              water: 37
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1184
+        features: []
+        filename: Medit Pack 3_DN.zip
+        files:
+          - Medit Pack 3_DN/Medit Bldg 24_DN/Medit Bldg 24_DN-0x6534284a-0x1c2d4663-0xdf7c3678.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 24_DN/MeditBldg24DN-0x5ad0e817_0x4efafeb3_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 24_DN/R$$5_1x2_Medit Bldg 24_DN_af7c3686.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 25_DN/CS Medit Bldg 25_DN-0x6534284a-0x1c2d4663-0xbf864ec6.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 25_DN/CS$$$4_1x2_CS Medit Bldg 25_DN_8f864ed6.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 25_DN/MeditBldg25DN-0x5ad0e817_0x4f0462aa_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 26_DN/CS Medit Bldg 26_DN-0x6534284a-0x1c2d4663-0x1f86c564.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 26_DN/CS$$$4_1x2_CS Medit Bldg 26_DN_3f86c570.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 26_DN/MeditBldg26DN-0x5ad0e817_0xf058c36_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 27_DN/Medit Bldg 27_DN-0x6534284a-0x1c2d4663-0xdf964bd0.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 27_DN/MeditBldg27DN-0x5ad0e817_0x6f151251_0x30000.SC4Model
+          - Medit Pack 3_DN/Medit Bldg 27_DN/R$$$5_1x2_Medit Bldg 27_DN_ef964be9.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 28_DN/CS Medit Bldg 28_DN-0x6534284a-0x1c2d4663-0x9f9e8c66.SC4Desc
+          - Medit Pack 3_DN/Medit Bldg 28_DN/CS$$3_1x2_CS Medit Bldg 28_DN_df9e8c72.SC4Lot
+          - Medit Pack 3_DN/Medit Bldg 28_DN/MeditBldg28DN-0x5ad0e817_0xaf1d4e9d_0x30000.SC4Model
+        lots:
+          Medit Pack 3_DN/Medit Bldg 24_DN/R$$5_1x2_Medit Bldg 24_DN_af7c3686.SC4Lot:
+            af7c3686:
+              building: df7c3678
+              density: medium,high
+              name: R$$5_1x2_Medit Bldg 24_DN
+              props:
+                - '1e120000'
+                - 2a8a0000
+                - 2acf0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 252f2000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 25_DN/CS$$$4_1x2_CS Medit Bldg 25_DN_8f864ed6.SC4Lot:
+            8f864ed6:
+              building: bf864ec6
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 25_DN
+              props:
+                - 1d9a0000
+                - 1d9b0000
+                - 1da90000
+                - 1dfb0000
+                - aa836b49
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 26_DN/CS$$$4_1x2_CS Medit Bldg 26_DN_3f86c570.SC4Lot:
+            3f86c570:
+              building: 1f86c564
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 26_DN
+              props:
+                - 1d9c0000
+                - 1d9e0000
+                - 1da60000
+                - 1dfb0000
+              size: 1x2
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 27_DN/R$$$5_1x2_Medit Bldg 27_DN_ef964be9.SC4Lot:
+            ef964be9:
+              building: df964bd0
+              density: medium,high
+              name: R$$$5_1x2_Medit Bldg 27_DN
+              props:
+                - 1d280000
+                - 2ad30000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253b3000
+                - '26060000'
+          Medit Pack 3_DN/Medit Bldg 28_DN/CS$$3_1x2_CS Medit Bldg 28_DN_df9e8c72.SC4Lot:
+            df9e8c72:
+              building: 9f9e8c66
+              density: medium,high
+              name: CS$$3_1x2_CS Medit Bldg 28_DN
+              props:
+                - 1dfb0000
+                - 29b10000
+                - aa836b49
+              size: 1x2
+              stage: 3
+              textures:
+                - 25c52000
+                - '26060000'
+        models:
+          Medit Pack 3_DN/Medit Bldg 24_DN/MeditBldg24DN-0x5ad0e817_0x4efafeb3_0x30000.SC4Model:
+            - 4efafeb3
+          Medit Pack 3_DN/Medit Bldg 25_DN/MeditBldg25DN-0x5ad0e817_0x4f0462aa_0x30000.SC4Model:
+            - 4f0462aa
+          Medit Pack 3_DN/Medit Bldg 26_DN/MeditBldg26DN-0x5ad0e817_0xf058c36_0x30000.SC4Model:
+            - 0f058c36
+          Medit Pack 3_DN/Medit Bldg 27_DN/MeditBldg27DN-0x5ad0e817_0x6f151251_0x30000.SC4Model:
+            - 6f151251
+          Medit Pack 3_DN/Medit Bldg 28_DN/MeditBldg28DN-0x5ad0e817_0xaf1d4e9d_0x30000.SC4Model:
+            - af1d4e9d
+        sha256: 92125cafc7fbaa7e8dbebdbfdab6a4ee17dfa4054847ba511daef265106cacfd
+        size: 1850716
+        uncompressed: 2250563
+      '191814':
+        buildings:
+          Medit Pack 3_MN/Medit Bldg 24_MN/Medit Bldg 24_MN-0x6534284a-0x1c2d4663-0xbf7c35e6.SC4Desc:
+            1c2d4663-bf7c35e6:
+              bulldoze: 401
+              capacity:
+                r$: 84
+                r$$: 48
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: 4efafeb3
+              name: Medit Bldg 24_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro,Houston
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1212
+          Medit Pack 3_MN/Medit Bldg 25_MN/CS Medit Bldg 25_MN-0x6534284a-0x1c2d4663-0x1f864d49.SC4Desc:
+            1c2d4663-1f864d49:
+              bulldoze: 435
+              capacity:
+                cs$: 175
+                cs$$: 46
+                cs$$$: 20
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 4f0462aa
+              name: CS Medit Bldg 25_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro,Houston
+              water: 49
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1701
+          Medit Pack 3_MN/Medit Bldg 26_MN/CS Medit Bldg 26_MN-0x6534284a-0x1c2d4663-0x3f86c4b3.SC4Desc:
+            1c2d4663-3f86c4b3:
+              bulldoze: 435
+              capacity:
+                cs$: 175
+                cs$$: 46
+                cs$$$: 20
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 0f058c36
+              name: CS Medit Bldg 26_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro,Houston
+              water: 49
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1701
+          Medit Pack 3_MN/Medit Bldg 27_MN/Medit Bldg 27_MN-0x6534284a-0x1c2d4663-0x1f964ad7.SC4Desc:
+            1c2d4663-1f964ad7:
+              bulldoze: 350
+              capacity:
+                r$: 83
+                r$$: 47
+                r$$$: 22
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 6f151251
+              name: Medit Bldg 27_MN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro,Houston
+              water: 7
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1267
+          Medit Pack 3_MN/Medit Bldg 28_MN/CS Medit Bldg 28_MN-0x6534284a-0x1c2d4663-0x5f9e8bbb.SC4Desc:
+            1c2d4663-5f9e8bbb:
+              bulldoze: 443
+              capacity:
+                cs$: 138
+                cs$$: 37
+              categories: cs$$
+              flamability: 40
+              garbage: 4
+              model: af1d4e9d
+              name: CS Medit Bldg 28_MN
+              pollution: 1
+              pollutionRadius: 5
+              power: 3
+              tilesets: Euro
+              water: 37
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1184
+        features: []
+        filename: Medit Pack 3_MN.zip
+        files:
+          - Medit Pack 3_MN/Medit Bldg 24_MN/Medit Bldg 24_MN-0x6534284a-0x1c2d4663-0xbf7c35e6.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 24_MN/MeditBldg24MN-0x5ad0e817_0x4efafeb3_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 24_MN/R$$5_1x2_Medit Bldg 24_MN_5f7c35f7.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 25_MN/CS Medit Bldg 25_MN-0x6534284a-0x1c2d4663-0x1f864d49.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 25_MN/CS$$$4_1x2_CS Medit Bldg 25_MN_7f864d66.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 25_MN/MeditBldg25MN-0x5ad0e817_0x4f0462aa_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 26_MN/CS Medit Bldg 26_MN-0x6534284a-0x1c2d4663-0x3f86c4b3.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 26_MN/CS$$$4_1x2_CS Medit Bldg 26_MN_ef86c4c0.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 26_MN/MeditBldg26MN-0x5ad0e817_0xf058c36_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 27_MN/Medit Bldg 27_MN-0x6534284a-0x1c2d4663-0x1f964ad7.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 27_MN/MeditBldg27MN-0x5ad0e817_0x6f151251_0x30000.SC4Model
+          - Medit Pack 3_MN/Medit Bldg 27_MN/R$$$5_1x2_Medit Bldg 27_MN_3f964af5.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 28_MN/CS Medit Bldg 28_MN-0x6534284a-0x1c2d4663-0x5f9e8bbb.SC4Desc
+          - Medit Pack 3_MN/Medit Bldg 28_MN/CS$$3_1x2_CS Medit Bldg 28_MN_6f9e8bcf.SC4Lot
+          - Medit Pack 3_MN/Medit Bldg 28_MN/MeditBldg28MN-0x5ad0e817_0xaf1d4e9d_0x30000.SC4Model
+        lots:
+          Medit Pack 3_MN/Medit Bldg 24_MN/R$$5_1x2_Medit Bldg 24_MN_5f7c35f7.SC4Lot:
+            5f7c35f7:
+              building: bf7c35e6
+              density: medium,high
+              name: R$$5_1x2_Medit Bldg 24_MN
+              props:
+                - 164b0000
+                - '1e120000'
+                - 2a8a0000
+              size: 1x2
+              stage: 5
+              textures:
+                - 252f2000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 25_MN/CS$$$4_1x2_CS Medit Bldg 25_MN_7f864d66.SC4Lot:
+            7f864d66:
+              building: 1f864d49
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 25_MN
+              props:
+                - 1d9a0000
+                - 1d9b0000
+                - 1da90000
+                - 1dfb0000
+                - aa836b49
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 26_MN/CS$$$4_1x2_CS Medit Bldg 26_MN_ef86c4c0.SC4Lot:
+            ef86c4c0:
+              building: 3f86c4b3
+              density: medium,high
+              name: CS$$$4_1x2_CS Medit Bldg 26_MN
+              props:
+                - 1d9c0000
+                - 1d9e0000
+                - 1da60000
+                - 1dfb0000
+              size: 1x2
+              stage: 4
+              textures:
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 27_MN/R$$$5_1x2_Medit Bldg 27_MN_3f964af5.SC4Lot:
+            3f964af5:
+              building: 1f964ad7
+              density: medium,high
+              name: R$$$5_1x2_Medit Bldg 27_MN
+              props:
+                - 1d280000
+                - 2ad30000
+              size: 1x2
+              stage: 5
+              textures:
+                - 253b3000
+                - '26060000'
+          Medit Pack 3_MN/Medit Bldg 28_MN/CS$$3_1x2_CS Medit Bldg 28_MN_6f9e8bcf.SC4Lot:
+            6f9e8bcf:
+              building: 5f9e8bbb
+              density: medium,high
+              name: CS$$3_1x2_CS Medit Bldg 28_MN
+              props:
+                - 1dfb0000
+                - 29b10000
+              size: 1x2
+              stage: 3
+              textures:
+                - 25c52000
+                - '26060000'
+        models:
+          Medit Pack 3_MN/Medit Bldg 24_MN/MeditBldg24MN-0x5ad0e817_0x4efafeb3_0x30000.SC4Model:
+            - 4efafeb3
+          Medit Pack 3_MN/Medit Bldg 25_MN/MeditBldg25MN-0x5ad0e817_0x4f0462aa_0x30000.SC4Model:
+            - 4f0462aa
+          Medit Pack 3_MN/Medit Bldg 26_MN/MeditBldg26MN-0x5ad0e817_0xf058c36_0x30000.SC4Model:
+            - 0f058c36
+          Medit Pack 3_MN/Medit Bldg 27_MN/MeditBldg27MN-0x5ad0e817_0x6f151251_0x30000.SC4Model:
+            - 6f151251
+          Medit Pack 3_MN/Medit Bldg 28_MN/MeditBldg28MN-0x5ad0e817_0xaf1d4e9d_0x30000.SC4Model:
+            - af1d4e9d
+        sha256: 816b4952e532b4f556d22414f76b51c58c70ef740f19f734b40910ac3a1815dc
+        size: 1819663
+        uncompressed: 2214330
+    version: 1.0.0
   simtropolis/3492:
     assetId: simtropolis/3492-jenxpariscorner3
     authors:
