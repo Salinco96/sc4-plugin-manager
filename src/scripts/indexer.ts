@@ -128,6 +128,7 @@ runIndexer({
       cococity: true,
       jasoncw: 2020, // todo
       jestarr: true,
+      koonam: true,
       madhatter106: true,
       memo: true,
       "null-45": true,
