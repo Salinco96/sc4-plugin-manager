@@ -575,29 +575,621 @@ assets:
     assetId: simtropolis/15639-sim-gyon-bon-port
     authors:
       - jestarr
+    buildings:
+      SIM GYON BON - Port ver1.00/SIM GYON BON - Port_6d9ef4e8.SC4Lot:
+        ed5574bd-6d9ef4e8:
+          bulldoze: 150
+          capacity:
+            co$$: 200
+          categories: landmarks
+          cost: 3000
+          description: 船名を早口で５回言って下さい！！
+          flamability: 10
+          label: 貨客船「シムギョンボン号」
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 20
+          menu: Landmarks
+          model: 6d9ee6ad
+          name: SIM GYON BON - 04
+          power: 20
+          rating: 10
+          ratingRadius: 256
+          relief:
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          worth: 20480
+      SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x6534284a-0xed5574bd-0x4d9ef29b.SC4Desc:
+        ed5574bd-4d9ef29b:
+          bulldoze: 150
+          categories: landmarks
+          cost: 3000
+          description: 船名を早口で５回言って下さい！！
+          flamability: 10
+          label: 貨客船「シムギョンボン号」
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 20
+          menu: Landmarks
+          model: 6d9ee6ad
+          name: SIM GYON BON - 04
+          power: 20
+          rating: 10
+          ratingRadius: 256
     category: 109-waterfront
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear in the landmarks menu.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: sim_gyon_bon_port_ver01.zip
+    files:
+      - SIM GYON BON - Port ver1.00/SIM GYON BON - Port_6d9ef4e8.SC4Lot
+      - SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x5ad0e817_0x6d9ee6ad_0x30000.SC4Model
+      - SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x6534284a-0xed5574bd-0x4d9ef29b.SC4Desc
+      - SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x6534284a-0xed5574bd-0xad9ef24c.SC4Desc
+      - SIM GYON BON - Port ver1.00/Tugboat/Tugboat - SIM GYON BON-0x5ad0e817_0xad9ef153_0x30000.SC4Model
+      - SIM GYON BON - Port ver1.00/Tugboat/Tugboat - SIM GYON BON-0x6534284a-0xed5574bd-0x4d9ef277.SC4Desc
+      - SIM GYON BON - Port ver1.00/����.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0003/0ed0b95babcf994ef204f0c065b0aa54-sim_gyon_bon_port.jpg
     lastModified: 2006-04-13T16:34:24.000Z
+    lots:
+      SIM GYON BON - Port ver1.00/SIM GYON BON - Port_6d9ef4e8.SC4Lot:
+        6d9ef4e8:
+          building: 6d9ef4e8
+          name: SIM GYON BON - Port
+          props:
+            - 1d300000
+            - 1d430000
+            - 1d4a0000
+            - 1d4b0000
+            - 1deb1000
+            - 1dfb0000
+            - '1e120000'
+            - '1e980000'
+            - '1e990000'
+            - 1e9a0000
+            - 1e9b0000
+            - 1ed30000
+            - '28390000'
+            - '28450000'
+            - '28560000'
+            - '28810000'
+            - '28820000'
+            - 28af0000
+            - 28b20000
+            - '29210000'
+            - '294e0000'
+            - 29c20000
+            - 2a170000
+            - 2a420000
+            - 2a430000
+            - 2a440000
+            - 2a450000
+            - 2a470000
+            - 2a6d0000
+            - 2a8a0000
+            - 2ab50000
+            - 2ab60000
+            - 2ab70000
+            - 2b190000
+            - 4d9ef277
+            - 8c0749d0
+            - cc073f2d
+            - cc073f5c
+            - ed963fd5
+            - ed963ff3
+          size: 8x4
+          textures:
+            - 0ba02000
+            - 256d1000
+            - '256e1000'
+            - 256f1000
+            - '25711000'
+            - '25923000'
+            - '25933000'
+            - '25963000'
+            - '25973000'
+            - 25fb1000
+            - '262e3000'
+            - '26313000'
+            - '26353000'
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x5ad0e817_0x6d9ee6ad_0x30000.SC4Model:
+        - 6d9ee6ad
+      SIM GYON BON - Port ver1.00/Tugboat/Tugboat - SIM GYON BON-0x5ad0e817_0xad9ef153_0x30000.SC4Model:
+        - ad9ef153
     name: Sim Gyon Bon Port
+    props:
+      SIM GYON BON - Port ver1.00/SIM GYON BON/SIM GYON BON - 04-0x6534284a-0xed5574bd-0xad9ef24c.SC4Desc:
+        ed5574bd-ad9ef24c:
+          model: 6d9ee6ad
+          name: SIM GYON BON - 04
+      SIM GYON BON - Port ver1.00/Tugboat/Tugboat - SIM GYON BON-0x6534284a-0xed5574bd-0x4d9ef277.SC4Desc:
+        ed5574bd-4d9ef277:
+          model: ad9ef153
+          name: Tugboat - SIM GYON BON
+    sha256: 35e1b4826122df1eb699c682ad11d5435ae0a2c65a4b9a1393d55383f5d6c732
+    size: 746242
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-0ed0b95babcf994ef204f0c065b0aa54-sim_gyon_bon_port.jpg
+    uncompressed: 846400
     url: https://community.simtropolis.com/files/file/15639-sim-gyon-bon-port/
+    version: '1.0'
   simtropolis/15640:
     assetId: simtropolis/15640-seiken-ferry
     authors:
       - jestarr
+    buildings:
+      Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x6534284a-0xed5574bd-0x6d836060.SC4Desc:
+        ed5574bd-6d836060:
+          bulldoze: 50
+          categories: freight
+          cost: 500
+          description: 連絡船と地上を結び貨物列車を積み込みます。収容量：5000、維持費：§20
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: 連絡船可動橋
+          maintenance: 20
+          menu: Rail
+          model: 4e1d8664
+          name: movable bridge-a
+          power: 10
+          submenu: Rail/Freight
+      Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x6534284a-0xed5574bd-0xcd833c64.SC4Desc:
+        ed5574bd-cd833c64:
+          bulldoze: 100
+          categories: ferry
+          cost: 3000
+          description: 海峡連絡船と湾内連絡船の乗り場。旅客駅とバス停の機能も備えます。収容量：10000、維持費：§80
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: 海峡連絡船ターミナル
+          maintenance: 80
+          menu: WaterTransit
+          model: ae1c5eb7
+          name: hakkodamaru station
+          power: 20
+          submenu: WaterTransit/Seaports
+      Seikan Ferry Terminal Ver1/Seikan ferry movable bridge_0d836201.SC4Lot:
+        ed5574bd-0d836201:
+          bulldoze: 50
+          categories: freight
+          cost: 500
+          description: 連絡船と地上を結び貨物列車を積み込みます。収容量：5000、維持費：§20
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: 連絡船可動橋
+          maintenance: 20
+          menu: Rail
+          model: 4e1d8664
+          name: movable bridge-a
+          power: 10
+          submenu: Rail/Freight
+      Seikan Ferry Terminal Ver1/Seikan ferry terminal_0d833fad.SC4Lot:
+        ed5574bd-0d833fad:
+          bulldoze: 100
+          categories: ferry
+          cost: 3000
+          description: 海峡連絡船と湾内連絡船の乗り場。旅客駅とバス停の機能も備えます。収容量：10000、維持費：§80
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: 海峡連絡船ターミナル
+          maintenance: 80
+          menu: WaterTransit
+          model: ae1c5eb7
+          name: hakkodamaru station
+          power: 20
+          submenu: WaterTransit/Seaports
     category: 109-waterfront
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear under the seaports section of the transportation menu.\_ I don't remember for sure, but I think it replaces the default ferry.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: seikan_ferry_terminal_ver01.zip
+    files:
+      - Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x5ad0e817_0x4e1d8664_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x6534284a-0xed5574bd-0x6d836060.SC4Desc
+      - Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x6534284a-0xed5574bd-0x8d836044.SC4Desc
+      - Seikan Ferry Terminal Ver1/Bridges/Movable Bridge B/movable bridge-b-0x5ad0e817_0x8df4a2a6_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Bridges/Movable Bridge B/movable bridge-b-0x6534284a-0xed5574bd-0xcd83486d.SC4Desc
+      - Seikan Ferry Terminal Ver1/Ferry Ship Hakkoda Maru/ferry ship hakkodamaru-0x5ad0e817_0xdf4b7d2_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Ferry Ship Hakkoda Maru/ferry ship hakkodamaru-0x6534284a-0xed5574bd-0x6d834849.SC4Desc
+      - Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x5ad0e817_0xae1c5eb7_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x6534284a-0xed5574bd-0xcd833c64.SC4Desc
+      - Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x6534284a-0xed5574bd-0xcd8348a6.SC4Desc
+      - Seikan Ferry Terminal Ver1/Hakkoda Maru Terminal/hakkodamaru terminal-0x5ad0e817_0xce1c4fee_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Hakkoda Maru Terminal/hakkodamaru terminal-0x6534284a-0xed5574bd-0x6d8348e4.SC4Desc
+      - Seikan Ferry Terminal Ver1/Seikan ferry movable bridge_0d836201.SC4Lot
+      - Seikan Ferry Terminal Ver1/Seikan ferry terminal_0d833fad.SC4Lot
+      - Seikan Ferry Terminal Ver1/Tugboat Fukuura Maru/tugboat fukuuramaru-0x5ad0e817_0xce6d16c4_0x30000.SC4Model
+      - Seikan Ferry Terminal Ver1/Tugboat Fukuura Maru/tugboat fukuuramaru-0x6534284a-0xed5574bd-0x2d83bdbf.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/0016/8ee33334b5e3cda655642665c3f1741e-seiken_ferry.jpg
     lastModified: 2006-04-13T16:38:15.000Z
+    lots:
+      Seikan Ferry Terminal Ver1/Seikan ferry movable bridge_0d836201.SC4Lot:
+        0d836201:
+          building: 0d836201
+          name: Seikan ferry movable bridge
+          props:
+            - 1d300000
+            - 29c20000
+            - 2a430000
+            - 2a450000
+            - 2a470000
+            - 2d963fbd
+            - 8c0749d8
+            - ed963fd5
+          size: 4x2
+          textures:
+            - 256f1000
+            - '25701000'
+            - 25db0000
+            - 25fb1000
+            - 263d2000
+      Seikan Ferry Terminal Ver1/Seikan ferry terminal_0d833fad.SC4Lot:
+        0d833fad:
+          building: 0d833fad
+          name: Seikan ferry terminal
+          props:
+            - 1d090000
+            - 1d1f0000
+            - 1d2b0000
+            - 1d3f0000
+            - 1de50000
+            - 1dfc0000
+            - '1e120000'
+            - '1e280000'
+            - 1e2b0000
+            - 1e2f0000
+            - '1e300000'
+            - '1e490000'
+            - '1e560000'
+            - 1e5a0000
+            - '1e930000'
+            - 1e9a0000
+            - 1e9b0000
+            - 1e9c0000
+            - 1ecf0000
+            - 1ed60000
+            - 1f0b0000
+            - 1f3c0000
+            - 1f550000
+            - '28340000'
+            - '28360000'
+            - '28390000'
+            - '28410000'
+            - '28760000'
+            - 28a90000
+            - 28ac0000
+            - 28b10000
+            - 28b20000
+            - 28cf0000
+            - 28d20000
+            - 28d60000
+            - 28f20000
+            - 28f30000
+            - '29020000'
+            - '290e0000'
+            - '29130000'
+            - '29140000'
+            - 291c0000
+            - 291f0000
+            - '29210000'
+            - '29330000'
+            - 293b0000
+            - 29bf0000
+            - 29c20000
+            - 2a140000
+            - 2a160000
+            - 2a690000
+            - 2a8a0000
+            - 2a8c0000
+            - 2aa40000
+            - 2aa50000
+            - 2ab60000
+            - 2ab70000
+            - 2b190000
+            - 2b850000
+            - 2c520000
+            - 2c530000
+            - 2c540000
+            - 2d83bdbf
+            - 4c842410
+            - 6d834849
+            - 6d8348e4
+            - 8c0749d0
+            - 8d96400e
+            - ca3d9721
+            - cd83486d
+            - ed963ff3
+          size: 10x8
+          textures:
+            - 0ba02000
+            - '25923000'
+            - '25933000'
+            - '25953000'
+            - '25963000'
+            - 25db0000
+            - 25fb1000
+            - '26060000'
+            - '26203000'
+            - '262e3000'
+            - '26392000'
+            - 263a2000
+            - 263b2000
+            - 263c2000
+            - 263d2000
+            - '263e2000'
+            - 263f2000
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x5ad0e817_0x4e1d8664_0x30000.SC4Model:
+        - 4e1d8664
+      Seikan Ferry Terminal Ver1/Bridges/Movable Bridge B/movable bridge-b-0x5ad0e817_0x8df4a2a6_0x30000.SC4Model:
+        - 8df4a2a6
+      Seikan Ferry Terminal Ver1/Ferry Ship Hakkoda Maru/ferry ship hakkodamaru-0x5ad0e817_0xdf4b7d2_0x30000.SC4Model:
+        - 0df4b7d2
+      Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x5ad0e817_0xae1c5eb7_0x30000.SC4Model:
+        - ae1c5eb7
+      Seikan Ferry Terminal Ver1/Hakkoda Maru Terminal/hakkodamaru terminal-0x5ad0e817_0xce1c4fee_0x30000.SC4Model:
+        - ce1c4fee
+      Seikan Ferry Terminal Ver1/Tugboat Fukuura Maru/tugboat fukuuramaru-0x5ad0e817_0xce6d16c4_0x30000.SC4Model:
+        - ce6d16c4
     name: Seiken Ferry
+    props:
+      Seikan Ferry Terminal Ver1/Bridges/Movable Bridge A/movable bridge-a-0x6534284a-0xed5574bd-0x8d836044.SC4Desc:
+        ed5574bd-8d836044:
+          model: 4e1d8664
+          name: movable bridge-a
+      Seikan Ferry Terminal Ver1/Bridges/Movable Bridge B/movable bridge-b-0x6534284a-0xed5574bd-0xcd83486d.SC4Desc:
+        ed5574bd-cd83486d:
+          model: 8df4a2a6
+          name: movable bridge-b
+      Seikan Ferry Terminal Ver1/Ferry Ship Hakkoda Maru/ferry ship hakkodamaru-0x6534284a-0xed5574bd-0x6d834849.SC4Desc:
+        ed5574bd-6d834849:
+          model: 0df4b7d2
+          name: ferry ship hakkodamaru
+      Seikan Ferry Terminal Ver1/Hakkoda Maru Station/hakkodamaru station-0x6534284a-0xed5574bd-0xcd8348a6.SC4Desc:
+        ed5574bd-cd8348a6:
+          model: ae1c5eb7
+          name: hakkodamaru station
+      Seikan Ferry Terminal Ver1/Hakkoda Maru Terminal/hakkodamaru terminal-0x6534284a-0xed5574bd-0x6d8348e4.SC4Desc:
+        ed5574bd-6d8348e4:
+          model: ce1c4fee
+          name: hakkodamaru terminal
+      Seikan Ferry Terminal Ver1/Tugboat Fukuura Maru/tugboat fukuuramaru-0x6534284a-0xed5574bd-0x2d83bdbf.SC4Desc:
+        ed5574bd-2d83bdbf:
+          model: ce6d16c4
+          name: tugboat fukuuramaru
+    sha256: be284406f3fe4f9af8a6522b0f27afbc5bca855561fea256c59b2ce8de0e3ad6
+    size: 1934639
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-8ee33334b5e3cda655642665c3f1741e-seiken_ferry.jpg
+    uncompressed: 2236832
     url: https://community.simtropolis.com/files/file/15640-seiken-ferry/
+    version: '1.0'
   simtropolis/15642:
     assetId: simtropolis/15642-cargo-wharf
     authors:
       - jestarr
+    buildings:
+      cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x6534284a-0xedb44255-0x8dc529d6.SC4Desc:
+        edb44255-8dc529d6:
+          bulldoze: 50
+          categories: landmarks
+          cost: 1500
+          description: シム国海運界を支える貨物港。みししっぴ丸停泊中。
+          flamability: 10
+          label: ２号貨物埠頭
+          landmark: 10
+          landmarkRadius: 20
+          maintenance: 10
+          menu: Landmarks
+          model: adc5038f
+          name: cargo ship Mississippi maru
+          power: 10
+          rating: 5
+          ratingRadius: 256
+      cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x6534284a-0xedb44255-0x2dc528c2.SC4Desc:
+        edb44255-2dc528c2:
+          bulldoze: 50
+          categories: landmarks
+          cost: 1500
+          description: シム国海運界を支える貨物港。山城丸停泊中。
+          flamability: 10
+          label: １号貨物埠頭
+          landmark: 10
+          landmarkRadius: 20
+          maintenance: 10
+          menu: Landmarks
+          model: 2dc4fcfe
+          name: cargo ship Yamashiromaru
+          power: 10
+          rating: 5
+          ratingRadius: 256
+      cargo wharf set ver1.00/cargo_wharf_01/first cargo wharf_adc52ca5.SC4Lot:
+        edb44255-adc52ca5:
+          bulldoze: 50
+          categories: landmarks
+          cost: 1500
+          description: シム国海運界を支える貨物港。山城丸停泊中。
+          flamability: 10
+          label: １号貨物埠頭
+          landmark: 10
+          landmarkRadius: 20
+          maintenance: 10
+          menu: Landmarks
+          model: 2dc4fcfe
+          name: cargo ship Yamashiromaru
+          power: 10
+          rating: 5
+          ratingRadius: 256
+      cargo wharf set ver1.00/cargo_wharf_02/second cargo wharf_edc5390b.SC4Lot:
+        edb44255-edc5390b:
+          bulldoze: 50
+          categories: landmarks
+          cost: 1500
+          description: シム国海運界を支える貨物港。みししっぴ丸停泊中。
+          flamability: 10
+          label: ２号貨物埠頭
+          landmark: 10
+          landmarkRadius: 20
+          maintenance: 10
+          menu: Landmarks
+          model: adc5038f
+          name: cargo ship Mississippi maru
+          power: 10
+          rating: 5
+          ratingRadius: 256
     category: 109-waterfront
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear in the landmarks menu.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: cargo_wharf_set_ver01.zip
+    files:
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Dainitamon maru-0x5ad0e817_0xedc52240_0x30000.SC4Model
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Dainitamon maru-0x6534284a-0xedb44255-0xcdc527e0.SC4Desc
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Kyoshomaru-0x5ad0e817_0x6dc5249b_0x30000.SC4Model
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Kyoshomaru-0x6534284a-0xedb44255-0xcdc52829.SC4Desc
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x5ad0e817_0xadc5038f_0x30000.SC4Model
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x6534284a-0xedb44255-0x6dc52811.SC4Desc
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x6534284a-0xedb44255-0x8dc529d6.SC4Desc
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x5ad0e817_0x2dc4fcfe_0x30000.SC4Model
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x6534284a-0xedb44255-0x2dc528c2.SC4Desc
+      - cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x6534284a-0xedb44255-0x8dc52841.SC4Desc
+      - cargo wharf set ver1.00/cargo_wharf_01/first cargo wharf_adc52ca5.SC4Lot
+      - cargo wharf set ver1.00/cargo_wharf_02/second cargo wharf_edc5390b.SC4Lot
+      - cargo wharf set ver1.00/transit_shed/transit shed-0x5ad0e817_0xcdc526eb_0x30000.SC4Model
+      - cargo wharf set ver1.00/transit_shed/transit shed-0x6534284a-0xedb44255-0xcdc527fa.SC4Desc
+      - cargo wharf set ver1.00/����.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0007/3742332f532d07ce9fe4636bf3d753b8-cargo_wharf.jpg
     lastModified: 2006-04-13T16:43:31.000Z
+    lots:
+      cargo wharf set ver1.00/cargo_wharf_01/first cargo wharf_adc52ca5.SC4Lot:
+        adc52ca5:
+          building: adc52ca5
+          name: first cargo wharf
+          props:
+            - 1c410000
+            - 1d300000
+            - 1d430000
+            - 1d4a0000
+            - 1d4b0000
+            - 1d550000
+            - 1e9a0000
+            - 29c20000
+            - 2a420000
+            - 2a430000
+            - 2a440000
+            - 2a450000
+            - 2a470000
+            - 2a580000
+            - 2ab50000
+            - 2b190000
+            - 4d964002
+            - 6dc4bf67
+            - cdc527e0
+            - cdc527fa
+            - cdc52829
+          size: 5x14
+          textures:
+            - 256d1000
+            - '256e1000'
+            - 256f1000
+            - '25701000'
+            - '25711000'
+            - '25721000'
+            - 25fb1000
+      cargo wharf set ver1.00/cargo_wharf_02/second cargo wharf_edc5390b.SC4Lot:
+        edc5390b:
+          building: edc5390b
+          name: second cargo wharf
+          props:
+            - 1c410000
+            - 1d300000
+            - 1d430000
+            - 1d4a0000
+            - 1d4b0000
+            - 1d550000
+            - 1e9a0000
+            - 29c20000
+            - 2a420000
+            - 2a430000
+            - 2a440000
+            - 2a450000
+            - 2a470000
+            - 2a580000
+            - 2ab50000
+            - 2b190000
+            - 4d964002
+            - 6dc4bf67
+            - cdc527e0
+            - cdc527fa
+            - cdc52829
+          size: 5x14
+          textures:
+            - 256d1000
+            - '256e1000'
+            - 256f1000
+            - '25701000'
+            - '25711000'
+            - '25721000'
+            - 25fb1000
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      cargo wharf set ver1.00/cargo_ships/cargo ship Dainitamon maru-0x5ad0e817_0xedc52240_0x30000.SC4Model:
+        - edc52240
+      cargo wharf set ver1.00/cargo_ships/cargo ship Kyoshomaru-0x5ad0e817_0x6dc5249b_0x30000.SC4Model:
+        - 6dc5249b
+      cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x5ad0e817_0xadc5038f_0x30000.SC4Model:
+        - adc5038f
+      cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x5ad0e817_0x2dc4fcfe_0x30000.SC4Model:
+        - 2dc4fcfe
+      cargo wharf set ver1.00/transit_shed/transit shed-0x5ad0e817_0xcdc526eb_0x30000.SC4Model:
+        - cdc526eb
     name: Cargo Wharf
+    props:
+      cargo wharf set ver1.00/cargo_ships/cargo ship Dainitamon maru-0x6534284a-0xedb44255-0xcdc527e0.SC4Desc:
+        edb44255-cdc527e0:
+          model: edc52240
+          name: cargo ship Dainitamon maru
+      cargo wharf set ver1.00/cargo_ships/cargo ship Kyoshomaru-0x6534284a-0xedb44255-0xcdc52829.SC4Desc:
+        edb44255-cdc52829:
+          model: 6dc5249b
+          name: cargo ship Kyoshomaru
+      cargo wharf set ver1.00/cargo_ships/cargo ship Mississippi maru-0x6534284a-0xedb44255-0x6dc52811.SC4Desc:
+        edb44255-6dc52811:
+          model: adc5038f
+          name: cargo ship Mississippi maru
+      cargo wharf set ver1.00/cargo_ships/cargo ship Yamashiromaru-0x6534284a-0xedb44255-0x8dc52841.SC4Desc:
+        edb44255-8dc52841:
+          model: 2dc4fcfe
+          name: cargo ship Yamashiromaru
+      cargo wharf set ver1.00/transit_shed/transit shed-0x6534284a-0xedb44255-0xcdc527fa.SC4Desc:
+        edb44255-cdc527fa:
+          model: cdc526eb
+          name: transit shed
+    sha256: bd1499d828e843c1fda917a122a68d715e31fef270c39cbf05a6b3a662aecde8
+    size: 2151734
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-3742332f532d07ce9fe4636bf3d753b8-cargo_wharf.jpg
+    uncompressed: 2471692
     url: https://community.simtropolis.com/files/file/15642-cargo-wharf/
+    version: '1.0'
   simtropolis/15728:
     assetId: simtropolis/15728-the-8-great-view-of-danyang-korea
     authors:

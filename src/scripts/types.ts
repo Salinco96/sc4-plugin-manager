@@ -11,7 +11,7 @@ import type { ContentsData } from "@node/data/packages"
 
 export interface IndexerOptions {
   include: {
-    authors: { [authorId: string]: number }
+    authors: { [authorId: string]: boolean | number }
     entries: string[]
   }
   migrate?: {

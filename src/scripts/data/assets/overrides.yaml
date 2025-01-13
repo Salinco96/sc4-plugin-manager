@@ -1060,6 +1060,30 @@ simtropolis/15322-bsc-texture-pack-cycledogg-v01:
 simtropolis/15354-shopping-center-parking-pack-4-and-more:
   superseded: sc4evermore/131-walkingsnake-sc4jeeks-parking-textures-vol-01
 
+simtropolis/15639-sim-gyon-bon-port:
+  packageId: nacm/sim-gyon-bon-port
+  variantId: default
+
+simtropolis/15640-seiken-ferry:
+  packageId: nacm/seiken-ferry
+  variantId: default
+
+simtropolis/15641-hospital-ship-hikawamaru:
+  packageId: nacm/hospital-ship-hikawamaru
+  variantId: default
+
+simtropolis/15642-cargo-wharf:
+  packageId: nacm/cargo-wharf
+  variantId: default
+
+simtropolis/15643-cargo-ships:
+  packageId: nacm/cargo-ships
+  variantId: default
+
+simtropolis/15644-cargo-passenger-ship-hikawamaru:
+  packageId: nacm/cargo-passenger-ship-hikawamaru
+  variantId: default
+
 simtropolis/15758-industry-doubler:
   packageId: bones1/industry-doubler
   variantId: default
@@ -4658,12 +4682,26 @@ simtropolis/maxis-plugin-temple-of-grutz:
   packageId: maxis/temple-of-grutz
   variantId: default
 
-toutsimcities/1686-r6-props-pack-2010-vol-1: null
+toutsimcities/1686-r6-prop-pack-2010-vol-1:
+  packageId: r6/prop-pack-2010-vol01
+  variantId: default
 
 toutsimcities/1702-r6-prop-pack-2010-vol-2:
   packageId: r6/prop-pack-2010-vol02
   variantId: default
 
-toutsimcities/1780-namspopof-props-pack-vol-1: null
+toutsimcities/1713-manchou-pack-ville-01:
+  packageId: manchou/ville-vol01
+  variantId: default
 
-toutsimcities/1882-namspopof-props-pack-vol-2: null
+toutsimcities/1714-manchou-prop-pack-01:
+  packageId: manchou/prop-pack-vol01
+  variantId: default
+
+toutsimcities/1780-namspopof-props-pack-vol-1:
+  packageId: namspopof/prop-pack-vol01
+  variantId: default
+
+toutsimcities/1882-namspopof-props-pack-vol-2:
+  packageId: namspopof/prop-pack-vol02
+  variantId: default

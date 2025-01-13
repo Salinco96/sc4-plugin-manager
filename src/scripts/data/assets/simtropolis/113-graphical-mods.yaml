@@ -831,29 +831,500 @@ assets:
     assetId: simtropolis/15641-hospital-ship-hikawamaru
     authors:
       - jestarr
+    buildings:
+      Hospital ship Hikawamaru ver1.00/Hospital  ship  Hikawamaru_0d602906.SC4Lot:
+        ed5574bd-0d602906:
+          bulldoze: 100
+          categories: health
+          cost: 3000
+          description: いつでも・どこでも・18ノットで急行します！！維持費：1400§、収容数：5000
+          flamability: 10
+          garbage: 5
+          jobs:
+            $: 1
+            $$: 6
+            $$$: 1
+          label: 病院船「ひかわ丸」
+          maintenance: 1400
+          menu: Health
+          model: ed5574bd-0014
+          name: Hospital ship Hikawamaru
+          power: 10
+          relief:
+            r$: 20
+            r$$: 20
+            r$$$: 20
+          submenu: Health/Medium
+      Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x6534284a-0xed5574bd-0x8d609e74.SC4Desc:
+        ed5574bd-8d609e74:
+          bulldoze: 100
+          categories: health
+          cost: 3000
+          description: いつでも・どこでも・18ノットで急行します！！維持費：1400§、収容数：5000
+          flamability: 10
+          garbage: 5
+          jobs:
+            $: 1
+            $$: 6
+            $$$: 1
+          label: 病院船「ひかわ丸」
+          menu: Health
+          model: ed5574bd-0014
+          name: Hospital ship Hikawamaru
+          power: 10
+          relief:
+            r$: 20
+            r$$: 20
+            r$$$: 20
+          submenu: Health/Medium
     category: 113-graphical-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear in the civic menu under hospitals.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: hospital_ship_hikawamaru_ver01.zip
+    files:
+      - Hospital ship Hikawamaru ver1.00/Hospital  ship  Hikawamaru_0d602906.SC4Lot
+      - Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x5ad0e817_0xed5574bd_0x140000.SC4Model
+      - Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x6534284a-0xed5574bd-0x8d609e74.SC4Desc
+      - Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x6534284a-0xed5574bd-0xad60a4d8.SC4Desc
+      - Hospital ship Hikawamaru ver1.00/����.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/0024/d9e423b57391fa8b527d209acc88854c-hospital_ship.jpg
     lastModified: 2006-04-13T16:40:48.000Z
+    lots:
+      Hospital ship Hikawamaru ver1.00/Hospital  ship  Hikawamaru_0d602906.SC4Lot:
+        0d602906:
+          building: 0d602906
+          name: Hospital  ship  Hikawamaru
+          props:
+            - 1d430000
+            - 1ddc0000
+            - 1dfb0000
+            - 1dff0000
+            - '1e060000'
+            - '1e070000'
+            - 1e0b0000
+            - 1e2c0000
+            - '1e300000'
+            - 1e4d0000
+            - '1e960000'
+            - '1e970000'
+            - 1e9a0000
+            - 1e9b0000
+            - 1e9c0000
+            - 1f060000
+            - 1f070000
+            - '28470000'
+            - '28560000'
+            - '28570000'
+            - '28840000'
+            - '28860000'
+            - 28a20000
+            - 28a70000
+            - 28a90000
+            - 28ad0000
+            - 28b30000
+            - '29210000'
+            - '29900000'
+            - 29c20000
+            - 29df0000
+            - 2a180000
+            - 2a430000
+            - 2a450000
+            - 2a470000
+            - 2a700000
+            - 2a7ccda1
+            - 2a8c0000
+            - 2a94b0db
+            - 2aad0000
+            - 2b170000
+            - 2b190000
+            - 8c0749d0
+            - 8d96400e
+            - ed963fd5
+          size: 10x4
+          textures:
+            - '25923000'
+            - '25933000'
+            - '25953000'
+            - '25963000'
+            - 25f40000
+            - '262e3000'
+            - '26313000'
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x5ad0e817_0xed5574bd_0x140000.SC4Model:
+        - ed5574bd-0014
     name: Hospital Ship Hikawamaru
+    props:
+      Hospital ship Hikawamaru ver1.00/Hospital ship Hikawamaru-0x6534284a-0xed5574bd-0xad60a4d8.SC4Desc:
+        ed5574bd-ad60a4d8:
+          model: ed5574bd-0014
+          name: Hospital ship Hikawamaru
+    sha256: 55814fc7ac09b979bab3fbd36fc16992471950569239fa41a064bc8e3eb690ad
+    size: 636766
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-d9e423b57391fa8b527d209acc88854c-hospital_ship.jpg
+    uncompressed: 701231
     url: https://community.simtropolis.com/files/file/15641-hospital-ship-hikawamaru/
+    version: '1.0'
   simtropolis/15643:
     assetId: simtropolis/15643-cargo-ships
     authors:
       - jestarr
+    buildings:
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W -BOX-0x6534284a-0xedb44255-0x0dc558d7.SC4Desc:
+        edb44255-0dc558d7:
+          bulldoze: 10
+          categories: landmarks
+          cost: 100
+          description: 主に沿岸・内海航路用の小型貨物船
+          label: 貨物船「第二多聞丸」
+          maintenance: 2
+          menu: Landmarks
+          model: 0dc5559d
+          name: cargo ship Dainitamon maru - W -BOX
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W_0dc55dd8.SC4Lot:
+        edb44255-0dc55dd8:
+          bulldoze: 10
+          categories: landmarks
+          cost: 100
+          description: 主に沿岸・内海航路用の小型貨物船
+          label: 貨物船「第二多聞丸」
+          maintenance: 2
+          menu: Landmarks
+          model: 0dc5559d
+          name: cargo ship Dainitamon maru - W -BOX
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyosho maru - W_4dc55e94.SC4Lot:
+        edb44255-4dc55e94:
+          bulldoze: 10
+          categories: landmarks
+          cost: 100
+          description: 主に沿岸・内海航路用の小型貨物船
+          label: 貨物船「共勝丸」
+          maintenance: 2
+          menu: Landmarks
+          model: adc555ab
+          name: cargo ship Kyoshomaru - W -BOX
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W -BOX-0x6534284a-0xedb44255-0xedc55975.SC4Desc:
+        edb44255-edc55975:
+          bulldoze: 10
+          categories: landmarks
+          cost: 100
+          description: 主に沿岸・内海航路用の小型貨物船
+          label: 貨物船「共勝丸」
+          maintenance: 2
+          menu: Landmarks
+          model: adc555ab
+          name: cargo ship Kyoshomaru - W -BOX
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W -BOX-0x6534284a-0xedb44255-0x0dc55846.SC4Desc:
+        edb44255-0dc55846:
+          bulldoze: 10
+          categories: landmarks
+          cost: 200
+          description: 国際航路にも対応できる大型高速貨物船
+          label: 貨物船「みししっぴ丸」
+          maintenance: 2
+          menu: Landmarks
+          model: 6dc55584
+          name: cargo ship Mississippi maru - W -BOX
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W_0dc55cba.SC4Lot:
+        edb44255-0dc55cba:
+          bulldoze: 10
+          categories: landmarks
+          cost: 200
+          description: 国際航路にも対応できる大型高速貨物船
+          label: 貨物船「みししっぴ丸」
+          maintenance: 2
+          menu: Landmarks
+          model: 6dc55584
+          name: cargo ship Mississippi maru - W -BOX
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiro maru - W_0dc55ed6.SC4Lot:
+        edb44255-0dc55ed6:
+          bulldoze: 10
+          categories: landmarks
+          cost: 200
+          description: 国際航路にも対応できる大型高速貨物船
+          label: 貨物船「山城丸」
+          maintenance: 2
+          menu: Landmarks
+          model: cdc55574
+          name: cargo ship Yamashiromaru - W - BOX
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W - BOX-0x6534284a-0xedb44255-0x0dc55748.SC4Desc:
+        edb44255-0dc55748:
+          bulldoze: 10
+          categories: landmarks
+          cost: 200
+          description: 国際航路にも対応できる大型高速貨物船
+          label: 貨物船「山城丸」
+          maintenance: 2
+          menu: Landmarks
+          model: cdc55574
+          name: cargo ship Yamashiromaru - W - BOX
     category: 113-graphical-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear in the landmarks menu.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: cargo_ship_set_ver01.zip
+    files:
+      - cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W -BOX-0x5ad0e817_0xdc5559d_0x30000.SC4Model
+      - cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W -BOX-0x6534284a-0xedb44255-0x0dc558d7.SC4Desc
+      - cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W-0x5ad0e817_0x8dc54e80_0x30000.SC4Model
+      - cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W-0x6534284a-0xedb44255-0x2dc555f3.SC4Desc
+      - cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W_0dc55dd8.SC4Lot
+      - cargo ship set ver1.00/kyoshomaru/cargo ship Kyosho maru - W_4dc55e94.SC4Lot
+      - cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W -BOX-0x5ad0e817_0xadc555ab_0x30000.SC4Model
+      - cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W -BOX-0x6534284a-0xedb44255-0xedc55975.SC4Desc
+      - cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W-0x5ad0e817_0x4dc54f77_0x30000.SC4Model
+      - cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W-0x6534284a-0xedb44255-0x8dc55615.SC4Desc
+      - cargo ship set ver1.00/kyoshomaru/kyoshomaru_wake/kyoshomaru wake-0x5ad0e817_0xdc54235_0x30000.SC4Model
+      - cargo ship set ver1.00/kyoshomaru/kyoshomaru_wake/kyoshomaru wake-0x6534284a-0xedb44255-0x2dc55689.SC4Desc
+      - cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W -BOX-0x5ad0e817_0x6dc55584_0x30000.SC4Model
+      - cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W -BOX-0x6534284a-0xedb44255-0x0dc55846.SC4Desc
+      - cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W-0x5ad0e817_0x4dc552d8_0x30000.SC4Model
+      - cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W-0x6534284a-0xedb44255-0x6dc55634.SC4Desc
+      - cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W_0dc55cba.SC4Lot
+      - cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiro maru - W_0dc55ed6.SC4Lot
+      - cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W - BOX-0x5ad0e817_0xcdc55574_0x30000.SC4Model
+      - cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W - BOX-0x6534284a-0xedb44255-0x0dc55748.SC4Desc
+      - cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W-0x5ad0e817_0x6dc550ef_0x30000.SC4Model
+      - cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W-0x6534284a-0xedb44255-0x6dc55652.SC4Desc
+      - cargo ship set ver1.00/yamashiromaru/yamashiromaru_wake/yamashiromaru wake-0x5ad0e817_0xcdc54c57_0x30000.SC4Model
+      - cargo ship set ver1.00/yamashiromaru/yamashiromaru_wake/yamashiromaru wake-0x6534284a-0xedb44255-0x8dc556b9.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/0020/b843c04868d3bf0f3b4e5b238815817d-cargo_ships.jpg
     lastModified: 2006-04-13T16:45:53.000Z
+    lots:
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W_0dc55dd8.SC4Lot:
+        0dc55dd8:
+          building: 0dc55dd8
+          name: cargo ship Dainitamon maru - W
+          props:
+            - '28290000'
+            - 2dc555f3
+            - 2dc55689
+          size: 1x1
+          textures:
+            - 258c2000
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyosho maru - W_4dc55e94.SC4Lot:
+        4dc55e94:
+          building: 4dc55e94
+          name: cargo ship Kyosho maru - W
+          props:
+            - '28290000'
+            - 2dc55689
+            - 8dc55615
+          size: 1x1
+          textures:
+            - 258c2000
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W_0dc55cba.SC4Lot:
+        0dc55cba:
+          building: 0dc55cba
+          name: cargo ship Mississippi maru - W
+          props:
+            - 1deb1000
+            - '28290000'
+            - 6dc55634
+            - 8dc556b9
+          size: 1x1
+          textures:
+            - 258c2000
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiro maru - W_0dc55ed6.SC4Lot:
+        0dc55ed6:
+          building: 0dc55ed6
+          name: cargo ship Yamashiro maru - W
+          props:
+            - '28290000'
+            - 6dc55652
+            - 8dc556b9
+          size: 1x1
+          textures:
+            - 258c2000
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W -BOX-0x5ad0e817_0xdc5559d_0x30000.SC4Model:
+        - 0dc5559d
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W-0x5ad0e817_0x8dc54e80_0x30000.SC4Model:
+        - 8dc54e80
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W -BOX-0x5ad0e817_0xadc555ab_0x30000.SC4Model:
+        - adc555ab
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W-0x5ad0e817_0x4dc54f77_0x30000.SC4Model:
+        - 4dc54f77
+      cargo ship set ver1.00/kyoshomaru/kyoshomaru_wake/kyoshomaru wake-0x5ad0e817_0xdc54235_0x30000.SC4Model:
+        - 0dc54235
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W -BOX-0x5ad0e817_0x6dc55584_0x30000.SC4Model:
+        - 6dc55584
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W-0x5ad0e817_0x4dc552d8_0x30000.SC4Model:
+        - 4dc552d8
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W - BOX-0x5ad0e817_0xcdc55574_0x30000.SC4Model:
+        - cdc55574
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W-0x5ad0e817_0x6dc550ef_0x30000.SC4Model:
+        - 6dc550ef
+      cargo ship set ver1.00/yamashiromaru/yamashiromaru_wake/yamashiromaru wake-0x5ad0e817_0xcdc54c57_0x30000.SC4Model:
+        - cdc54c57
     name: Cargo Ships
+    props:
+      cargo ship set ver1.00/dainitamonmaru/cargo ship Dainitamon maru - W-0x6534284a-0xedb44255-0x2dc555f3.SC4Desc:
+        edb44255-2dc555f3:
+          model: 8dc54e80
+          name: cargo ship Dainitamon maru - W
+      cargo ship set ver1.00/kyoshomaru/cargo ship Kyoshomaru - W-0x6534284a-0xedb44255-0x8dc55615.SC4Desc:
+        edb44255-8dc55615:
+          model: 4dc54f77
+          name: cargo ship Kyoshomaru - W
+      cargo ship set ver1.00/kyoshomaru/kyoshomaru_wake/kyoshomaru wake-0x6534284a-0xedb44255-0x2dc55689.SC4Desc:
+        edb44255-2dc55689:
+          model: 0dc54235
+          name: kyoshomaru wake
+      cargo ship set ver1.00/mississippimaru/cargo ship Mississippi maru - W-0x6534284a-0xedb44255-0x6dc55634.SC4Desc:
+        edb44255-6dc55634:
+          model: 4dc552d8
+          name: cargo ship Mississippi maru - W
+      cargo ship set ver1.00/yamashiromaru/cargo ship Yamashiromaru - W-0x6534284a-0xedb44255-0x6dc55652.SC4Desc:
+        edb44255-6dc55652:
+          model: 6dc550ef
+          name: cargo ship Yamashiromaru - W
+      cargo ship set ver1.00/yamashiromaru/yamashiromaru_wake/yamashiromaru wake-0x6534284a-0xedb44255-0x8dc556b9.SC4Desc:
+        edb44255-8dc556b9:
+          model: cdc54c57
+          name: yamashiromaru wake
+    sha256: 998fc14cfaf42cfb98acadad21afd080c131a65d08ddbeb1b21a1f79ef72efea
+    size: 1302286
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-b843c04868d3bf0f3b4e5b238815817d-cargo_ships.jpg
+    uncompressed: 1519165
     url: https://community.simtropolis.com/files/file/15643-cargo-ships/
+    version: '1.0'
   simtropolis/15644:
     assetId: simtropolis/15644-cargo-passenger-ship-hikawamaru
     authors:
       - jestarr
+    buildings:
+      Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x6534284a-0xed5574bd-0x6d60e2c6.SC4Desc:
+        ed5574bd-6d60e2c6:
+          bulldoze: 100
+          categories: landmarks
+          cost: 5000
+          description: シム郵船所有の貨客船。古き良き時代の雰囲気をお楽しみ下さい。
+          flamability: 10
+          label: 貨客船「ひかわ丸」
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 20
+          menu: Landmarks
+          model: ed5574bd-0015
+          name: Cargo passenger ship Hikawamaru
+          power: 15
+          rating: 10
+          ratingRadius: 256
+      Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru_2d60ed42.SC4Lot:
+        ed5574bd-2d60ed42:
+          bulldoze: 100
+          categories: landmarks
+          cost: 5000
+          description: シム郵船所有の貨客船。古き良き時代の雰囲気をお楽しみ下さい。
+          flamability: 10
+          label: 貨客船「ひかわ丸」
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 20
+          menu: Landmarks
+          model: ed5574bd-0015
+          name: Cargo passenger ship Hikawamaru
+          power: 15
+          rating: 10
+          ratingRadius: 256
     category: 113-graphical-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p><font color=\"#ff0000\">NOTICE:\_ I did not make this.\_ Credit for the creation of this <abbr title=\"Building Architect Tool\">BAT</abbr> goes to National Aviation Club Member. Uploaded to STEX with permission from <abbr title=\"Simtropolis\">ST</abbr> Administrators.</font></p>\n<p>\_</p>\n<p>\nDue to popular demand, I've asked Dirk for permission to upload this file, so it can be enjoyed by everyone.</p>\n<p>\_</p>\n<p>\nThis will appear in the landmarks menu.</p>\n<p>\_</p>\n<p>\nHave fun!</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: cargo_passenger_ship-Hikawamaru_ver01.zip
+    files:
+      - Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x5ad0e817_0xed5574bd_0x150000.SC4Model
+      - Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x6534284a-0xed5574bd-0x2d60e464.SC4Desc
+      - Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x6534284a-0xed5574bd-0x6d60e2c6.SC4Desc
+      - Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru_2d60ed42.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/0011/5dfeeed52ff148d9610deebd865fcc98-cargo_passenger_ship.jpg
     lastModified: 2006-04-13T16:48:16.000Z
+    lots:
+      Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru_2d60ed42.SC4Lot:
+        2d60ed42:
+          building: 2d60ed42
+          name: Cargo passenger ship Hikawamaru
+          props:
+            - 1d430000
+            - 1d4a0000
+            - 1d4b0000
+            - 1dfb0000
+            - 1dff0000
+            - '1e060000'
+            - '1e070000'
+            - 1e0b0000
+            - 1e2a0000
+            - 1e2e0000
+            - '1e300000'
+            - '1e310000'
+            - 1e9a0000
+            - 1e9b0000
+            - 1e9c0000
+            - '28410000'
+            - '28470000'
+            - 284b0000
+            - 284f0000
+            - '28590000'
+            - '28600000'
+            - '28810000'
+            - '28840000'
+            - 28a70000
+            - 28a90000
+            - 28aa0000
+            - 28b30000
+            - '29210000'
+            - 29c20000
+            - 2a020000
+            - 2a430000
+            - 2a450000
+            - 2a470000
+            - 2a7ccda1
+            - 2a8c0000
+            - 2a94b0db
+            - 2aaf0000
+            - 2ab60000
+            - 2ab70000
+            - 2b190000
+            - 8c0749d0
+            - 8d96400e
+            - ac8423f6
+            - ed963fd5
+          size: 10x4
+          textures:
+            - '25923000'
+            - '25933000'
+            - '25953000'
+            - '25963000'
+            - '262e3000'
+            - '26313000'
+    meta:
+      timestamp: 2025-01-13T21:28:19.089Z
+      version: 1
+    models:
+      Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x5ad0e817_0xed5574bd_0x150000.SC4Model:
+        - ed5574bd-0015
     name: Cargo Passenger Ship Hikawamaru
+    props:
+      Cargo passenger ship Hikawamaru ver1.00/Cargo passenger ship Hikawamaru-0x6534284a-0xed5574bd-0x2d60e464.SC4Desc:
+        ed5574bd-2d60e464:
+          model: ed5574bd-0015
+          name: Cargo passenger ship Hikawamaru
+    sha256: e364750e38488d538a2ff351762e41e0440aceb6a5980ecfb76cb9a3f8cbe79b
+    size: 628141
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_04_2006/thumb-5dfeeed52ff148d9610deebd865fcc98-cargo_passenger_ship.jpg
+    uncompressed: 691817
     url: https://community.simtropolis.com/files/file/15644-cargo-passenger-ship-hikawamaru/
+    version: '1.0'
   simtropolis/15797:
     assetId: simtropolis/15797-ploppable-rainforest-trees
     authors:

@@ -1,10 +1,301 @@
 assets:
   toutsimcities/1686:
-    assetId: toutsimcities/1686-r6-props-pack-2010-vol-1
+    assetId: toutsimcities/1686-r6-prop-pack-2010-vol-1
     authors:
       - toutsimcities
     download: https://www.toutsimcities.com/downloads/start/1686
+    features: []
+    filename: R6_Prop_Pack_2010_Vol1_1686.zip
+    files:
+      - R6_Prop Pack 2010_Vol1.dat
+      - lisez-moi.htm
     lastModified: 2010-04-18T00:00:00.000Z
+    meta:
+      timestamp: 2025-01-13T21:10:23.235Z
+      version: 1
+    models:
+      R6_Prop Pack 2010_Vol1.dat:
+        - 1897b9a1
+        - 18ce0e17
+        - 18ce0e5e
+        - 18ce1b40
+        - 1961defe
+        - 1a023fbc
+        - 38cdd7fd
+        - 38cdeeb8
+        - 38cdf0bd
+        - 396176d1
+        - '39618195'
+        - 3a02400f
+        - 3a0255ed
+        - 3a027cd5
+        - 5897bf39
+        - 58ce1c68
+        - 58d06ea8
+        - 5961df65
+        - 7897b346
+        - 7897c05a
+        - 7897c542
+        - 78ce1c2b
+        - 79391bfc
+        - 79616fa1
+        - 7a024081
+        - 7a025517
+        - 7a025fea
+        - 7a026105
+        - 9897b8ba
+        - 9897bff8
+        - 98ce2492
+        - 98cf1ac8
+        - 98d06747
+        - 98d06e36
+        - '99617537'
+        - '99617767'
+        - 9a027ae6
+        - b84a8309
+        - b872f38a
+        - b8cdd5f6
+        - b8cdf14f
+        - b8ce1bca
+        - b8d0662e
+        - b8d066f3
+        - b9617081
+        - b9618154
+        - ba0254cb
+        - d897bac8
+        - d8cdd6a2
+        - d8cdd8be
+        - d8ce0ecb
+        - d8ce243f
+        - d8d06585
+        - d9616ea4
+        - da025596
+        - da027a70
+        - da027c85
+        - f8cdf025
+        - f8ce0dcf
+        - f8cf1b16
+        - f8d06513
+        - f8d0668a
+        - f9617010
+        - f96174d3
+        - f96177c8
+        - f96189af
+        - f96189f0
+        - fa0240cd
+        - fa02607d
+        - fa0261b5
+    props:
+      R6_Prop Pack 2010_Vol1.dat:
+        5706ee5e-18cb28ff:
+          name: R6_Camping_Tente_04
+        5706ee5e-18cb2959:
+          name: R6_Camping_Tente_01
+        5706ee5e-18cf2f26:
+          model: fa0240cd
+          name: R6_Voiture_Lupo_Diag_02
+        5706ee5e-18cf2fef:
+          model: 7a025517
+          name: R6_Voiture_Touareg_Ortho_02
+        5706ee5e-18cf305c:
+          model: 3a02400f
+          name: R6_Voiture_Lupo_Ortho_02
+        5706ee5e-18d1ec09:
+          model: da027c85
+          name: R6_Voiture_Clio_Diag_02
+        5706ee5e-18d1ecf4:
+          model: 3a027cd5
+          name: R6_Voiture_Clio_Diag_01
+        5706ee5e-18d46720:
+          model: 18ce0e5e
+          name: R6_Voiture_Logan_Diag_02
+        5706ee5e-38cb281a:
+          name: R6_Camping_Tente_02
+        5706ee5e-38cf2f66:
+          model: da025596
+          name: R6_Voiture_Touareg_Diag_02
+        5706ee5e-38d31c54:
+          model: f96189af
+          name: R6_Voiture_Police_308_Ortho
+        5706ee5e-38d31d17:
+          model: b9617081
+          name: R6_Fourgonnette_Pompiers_Kangoo_Diag
+        5706ee5e-38d31d6e:
+          model: '99617767'
+          name: R6_Camion_Pompier_GrandeEchelle_Ortho
+        5706ee5e-38d31da8:
+          model: 79616fa1
+          name: R6_Voiture_Deuch_Diag
+        5706ee5e-38d464ea:
+          model: f8d06513
+          name: R6_Fourgon_Transit_LaPoste_Diag
+        5706ee5e-38d465c4:
+          model: b8d0662e
+          name: R6_Fourgon_Transit_EDFGDF_Ortho
+        5706ee5e-38d46682:
+          model: 78ce1c2b
+          name: R6_Voiture_Picasso_Diag_02
+        5706ee5e-58cf2f85:
+          model: ba0254cb
+          name: R6_Voiture_Touareg_Ortho_01
+        5706ee5e-58d1ebeb:
+          model: f8cdf025
+          name: R6_Voiture_Megane_Ortho_02
+        5706ee5e-58d1ec9b:
+          model: b8cdd5f6
+          name: R6_Voiture_Laguna_Ortho_01
+        5706ee5e-58d1ecc6:
+          model: 9a027ae6
+          name: R6_Voiture_Clio_Ortho_02
+        5706ee5e-58d31cb1:
+          model: f9617010
+          name: R6_Fourgonnette_Pompiers_Kangoo_Ortho
+        5706ee5e-58d31d8d:
+          model: '99617537'
+          name: R6_Fourgon_Pompiers_VSAV_Diag
+        5706ee5e-58d31e23:
+          model: 1961defe
+          name: R6_Fourgonnette_LaPoste_Kangoo_Ortho
+        5706ee5e-58d4655f:
+          model: d8ce243f
+          name: R6_Fourgon_Transit_Ortho
+        5706ee5e-78d31c37:
+          model: f96189f0
+          name: R6_Voiture_Police_308_Diag
+        5706ee5e-78d31c72:
+          model: f96177c8
+          name: R6_Camion_Pompier_GrandeEchelle_Diag
+        5706ee5e-78d31dcb:
+          model: 5961df65
+          name: R6_Fourgonnette_LaPoste_Kangoo_Diag
+        5706ee5e-78d464ca:
+          model: f8d0668a
+          name: R6_Fourgon_Transit_EDFGDF_Diag
+        5706ee5e-78d466a0:
+          model: 58d06ea8
+          name: R6_Voiture_308_Diag_02
+        5706ee5e-78d466be:
+          model: 58ce1c68
+          name: R6_Voiture_Picasso_Diag_01
+        5706ee5e-78d4673b:
+          model: 18ce0e17
+          name: R6_Voiture_Logan_Ortho_02
+        5706ee5e-98cf381b:
+          model: 7a025fea
+          name: R6_Voiture_Golf_Diag_02
+        5706ee5e-98d1ec26:
+          model: da027a70
+          name: R6_Voiture_Clio_Ortho_01
+        5706ee5e-98d1ed4a:
+          model: 38cdd7fd
+          name: R6_Voiture_Laguna_Diag_02
+        5706ee5e-98d31c96:
+          model: f96174d3
+          name: R6_Fourgon_Pompiers_VSAV_Ortho
+        5706ee5e-98d31cee:
+          model: b9618154
+          name: R6_Fourgonnette_Police_Kangoo_Ortho
+        5706ee5e-98d46867:
+          model: 1897b9a1
+          name: R6_Caravane_Camping_03
+        5706ee5e-b8cb28d6:
+          model: 79391bfc
+          name: R6_Camping_Sanitaire
+        5706ee5e-b8cb2920:
+          name: R6_Camping_Tente_03
+        5706ee5e-b8cf3015:
+          model: 7a024081
+          name: R6_Voiture_Lupo_Diag_01
+        5706ee5e-b8cf3037:
+          model: 3a0255ed
+          name: R6_Voiture_Touareg_Diag_01
+        5706ee5e-b8cf309d:
+          model: 1a023fbc
+          name: R6_Voiture_Lupo_Ortho_01
+        5706ee5e-b8cf37d2:
+          model: fa02607d
+          name: R6_Voiture_Golf_Diag_01
+        5706ee5e-b8cf37fe:
+          model: 7a026105
+          name: R6_Voiture_Golf_Ortho_02
+        5706ee5e-b8d1ed2a:
+          model: 38cdeeb8
+          name: R6_Voiture_Megane_Ortho_01
+        5706ee5e-b8d31deb:
+          model: '39618195'
+          name: R6_Fourgonnette_Police_Kangoo_Diag
+        5706ee5e-b8d31e07:
+          model: 396176d1
+          name: R6_Camion_Pompier_FeuxForet_Diag
+        5706ee5e-b8d46542:
+          model: d8d06585
+          name: R6_Fourgon_Transit_LaPoste_Ortho
+        5706ee5e-b8d4663a:
+          model: 98cf1ac8
+          name: R6_Fourgonnette_EDFGDF_Kangoo_Ortho
+        5706ee5e-b8d46817:
+          model: d897bac8
+          name: R6_Caravane_Camping_04
+        5706ee5e-b8d4682f:
+          model: 9897b8ba
+          name: R6_Caravane_Camping_02
+        5706ee5e-d8d1ec5f:
+          model: d8cdd6a2
+          name: R6_Voiture_Laguna_Ortho_02
+        5706ee5e-d8d1ec7f:
+          model: b8cdf14f
+          name: R6_Voiture_Megane_Diag_01
+        5706ee5e-d8d31cd2:
+          model: d9616ea4
+          name: R6_Voiture_Deuch_Ortho
+        5706ee5e-d8d31d4c:
+          model: b84a8309
+          name: R6_Camion_Pompier_FeuxForet_Ortho
+        5706ee5e-d8d46506:
+          model: f8cf1b16
+          name: R6_Fourgonnette_EDFGDF_Kangoo_Diag
+        5706ee5e-d8d46525:
+          model: f8ce0dcf
+          name: R6_Voiture_Logan_Ortho_01
+        5706ee5e-d8d4658a:
+          model: d8ce0ecb
+          name: R6_Voiture_Logan_Diag_01
+        5706ee5e-d8d465a7:
+          model: b8d066f3
+          name: R6_Voiture_308_Ortho_01
+        5706ee5e-d8d465e1:
+          model: b8ce1bca
+          name: R6_Voiture_Picasso_Ortho_02
+        5706ee5e-d8d465ff:
+          model: 98d06e36
+          name: R6_Voiture_308_Diag_01
+        5706ee5e-d8d4661e:
+          model: 98d06747
+          name: R6_Voiture_308_Ortho_02
+        5706ee5e-f8cf37b0:
+          model: fa0261b5
+          name: R6_Voiture_Golf_Ortho_01
+        5706ee5e-f8d1ec42:
+          model: d8cdd8be
+          name: R6_Voiture_Laguna_Diag_01
+        5706ee5e-f8d1ed0d:
+          model: 38cdf0bd
+          name: R6_Voiture_Megane_Diag_02
+        5706ee5e-f8d31d31:
+          model: b872f38a
+          name: R6_Panneau_SDIS
+        5706ee5e-f8d46665:
+          model: 98ce2492
+          name: R6_Fourgon_Transit_Diag
+        5706ee5e-f8d46707:
+          model: 18ce1b40
+          name: R6_Voiture_Picasso_Ortho_01
+        5706ee5e-f8d4684f:
+          model: 7897b346
+          name: R6_Caravane_Camping_01
+    sha256: 729d1c955e7887cdc33a7a0dede00c1198c94404e4780d220e7eace1bf36d221
+    size: 494788
+    uncompressed: 1195863
     version: '1.0'
   toutsimcities/1702:
     assetId: toutsimcities/1702-r6-prop-pack-2010-vol-2
@@ -174,19 +465,2238 @@ assets:
     size: 461195
     uncompressed: 854945
     version: '1.0'
+  toutsimcities/1713:
+    assetId: toutsimcities/1713-manchou-pack-ville-01
+    buildings:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_R$$_01_v6-0x6534284a-0x19294531-0x79646586.SC4Desc:
+        19294531-79646586:
+          bulldoze: 298
+          capacity:
+            r$: 18
+            r$$: 11
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: '98e16755'
+          name: Manchou_R$$_01_v6
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 259
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_R$$_02_v6-0x6534284a-0x19294531-0xb96465f3.SC4Desc:
+        19294531-b96465f3:
+          bulldoze: 391
+          capacity:
+            r$: 14
+            r$$: 9
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: b8994c6c
+          name: Manchou_R$$_02_v6
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 202
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_R$$_03_v6-0x6534284a-0x19294531-0x197ed7d1.SC4Desc:
+        19294531-197ed7d1:
+          bulldoze: 370
+          capacity:
+            r$: 42
+            r$$: 24
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 1901692f
+          name: Manchou_R$$_03_v6
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 606
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_R$$_04_v6-0x6534284a-0x19294531-0x197d9076.SC4Desc:
+        19294531-197d9076:
+          bulldoze: 345
+          capacity:
+            r$: 71
+            r$$: 41
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: f8ffdcef
+          name: Manchou_R$$_04_v6
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 3
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1024
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/LOT PLOPPABLE/PLOP_2x1_Manchou_CS$$_0-4_1986bf2b.SC4Lot:
+        19294531-1986bf2b:
+          bulldoze: 131
+          capacity:
+            cs$: 7
+            cs$$: 14
+          categories: landmarks,cs$$
+          cost: 530
+          description: This building was made by a Typing Monkey
+          flamability: 40
+          garbage: 4
+          garbageRadius: 1
+          label: Manchou_CS$$_0-4
+          menu: Landmarks
+          model: b8912c9c
+          name: Manchou_CS$$_0-4
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          submenu: Commercial/CS$$
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 25
+    download: https://www.toutsimcities.com/downloads/start/1713
+    features: []
+    filename: Manchou_Pack_Ville_01_1713.zip
+    files:
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_Prop_R$$_01_v6-0x6534284a-0x19294531-0xb964664b.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_R$$_01_v6-0x5ad0e817_0x98e16755_0x30000.SC4Model
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_R$$_01_v6-0x6534284a-0x19294531-0x79646586.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_Prop_R$$_02_v6-0x6534284a-0x19294531-0xb9646672.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_R$$_02_v6-0x5ad0e817_0xb8994c6c_0x30000.SC4Model
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_R$$_02_v6-0x6534284a-0x19294531-0xb96465f3.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_Prop_R$$_03_v6-0x6534284a-0x19294531-0x197ed789.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_R$$_03_v6-0x5ad0e817_0x1901692f_0x30000.SC4Model
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_R$$_03_v6-0x6534284a-0x19294531-0x197ed7d1.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_Prop_R$$_04_v6-0x6534284a-0x19294531-0x797d90a3.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_R$$_04_v6-0x5ad0e817_0xf8ffdcef_0x30000.SC4Model
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_R$$_04_v6-0x6534284a-0x19294531-0x197d9076.SC4Desc
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/LOT GROWABLE/R$$4_2x1_Manchou_R$$_0-4_d986c141.SC4Lot
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/LOT PLOPPABLE/PLOP_2x1_Manchou_CS$$_0-4_1986bf2b.SC4Lot
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/Manchou_Blank-0x5ad0e817_0xb8912c9c_0x30000.SC4Model
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/01.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/02.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/03.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/04.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Image01.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Image02.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Lisez-moi.html
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/TSC.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre01.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre02.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre03.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre04.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre05.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre06.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/Titre07.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/bymanchou.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/emplacement.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/presentation.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep01.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep02.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep03.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep04.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep05.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep06.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep07.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Pack_Ville_01/sep08.jpg
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/modern-header.bmp
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/nsDialogs.dll
+    lastModified: 2010-06-07T00:00:00.000Z
+    lots:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/LOT GROWABLE/R$$4_2x1_Manchou_R$$_0-4_d986c141.SC4Lot:
+        d986c141:
+          building: d986c141
+          density: all
+          name: R$$4_2x1_Manchou_R$$_0-4
+          props:
+            - 197ed789
+            - 1982c8a3
+            - 1986746f
+            - 1986747d
+            - 5986aa29
+            - 797d90a3
+            - 7982c8b0
+            - 9986aa10
+            - b964664b
+            - b9646672
+            - b986745f
+            - d97d90bf
+            - d97d90df
+          size: 2x1
+          stage: 4
+          textures:
+            - 258d1000
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/LOT PLOPPABLE/PLOP_2x1_Manchou_CS$$_0-4_1986bf2b.SC4Lot:
+        1986bf2b:
+          building: 1986bf2b
+          name: PLOP_2x1_Manchou_CS$$_0-4
+          props:
+            - 197ed789
+            - 1982c8a3
+            - 1986746f
+            - 1986747d
+            - 5986aa29
+            - 797d90a3
+            - 7982c8b0
+            - 9986aa10
+            - b964664b
+            - b9646672
+            - b986745f
+            - d97d90bf
+            - d97d90df
+          size: 2x1
+          textures:
+            - 258d1000
+    meta:
+      timestamp: 2025-01-13T21:21:32.403Z
+      version: 1
+    models:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_R$$_01_v6-0x5ad0e817_0x98e16755_0x30000.SC4Model:
+        - '98e16755'
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_R$$_02_v6-0x5ad0e817_0xb8994c6c_0x30000.SC4Model:
+        - b8994c6c
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_R$$_03_v6-0x5ad0e817_0x1901692f_0x30000.SC4Model:
+        - 1901692f
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_R$$_04_v6-0x5ad0e817_0xf8ffdcef_0x30000.SC4Model:
+        - f8ffdcef
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .lot/Manchou_Blank-0x5ad0e817_0xb8912c9c_0x30000.SC4Model:
+        - b8912c9c
+    props:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_01/Manchou_Prop_R$$_01_v6-0x6534284a-0x19294531-0xb964664b.SC4Desc:
+        19294531-b964664b:
+          model: '98e16755'
+          name: Manchou_Prop_R$$_01_v6
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_02/Manchou_Prop_R$$_02_v6-0x6534284a-0x19294531-0xb9646672.SC4Desc:
+        19294531-b9646672:
+          model: b8994c6c
+          name: Manchou_Prop_R$$_02_v6
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_03/Manchou_Prop_R$$_03_v6-0x6534284a-0x19294531-0x197ed789.SC4Desc:
+        19294531-197ed789:
+          model: 1901692f
+          name: Manchou_Prop_R$$_03_v6
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Pack_Ville_01/Fichiers .dat/R$/Manchou_R$_04/Manchou_Prop_R$$_04_v6-0x6534284a-0x19294531-0x797d90a3.SC4Desc:
+        19294531-797d90a3:
+          model: f8ffdcef
+          name: Manchou_Prop_R$$_04_v6
+    sha256: 21b1e73afc5b189e128755003a2dc5968cffcd7ccc44de8437490925e612b0ab
+    size: 4577245
+    uncompressed: 4594334
+    version: '1.0'
+  toutsimcities/1714:
+    assetId: toutsimcities/1714-manchou-prop-pack-01
+    download: https://www.toutsimcities.com/downloads/start/1714
+    features: []
+    filename: Manchou_Prop_Pack_01_1714.zip
+    files:
+      - $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Prop_Pack_01/Manchou_Props_Pack_01.dat
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/Contenu.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/Installation.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/TSC.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/bymanchou.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/dependances.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/lisez-moi.html
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/presentation.jpg
+      - $DOCUMENTS/SimCity 4/TSC_Download/Manchou/Manchou_Prop_Pack_01/remerciements.jpg
+      - $PLUGINSDIR/System.dll
+      - $PLUGINSDIR/modern-header.bmp
+      - $PLUGINSDIR/modern-wizard.bmp
+      - $PLUGINSDIR/nsDialogs.dll
+    lastModified: 2010-06-07T00:00:00.000Z
+    meta:
+      timestamp: 2025-01-13T21:16:58.248Z
+      version: 1
+    models:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Prop_Pack_01/Manchou_Props_Pack_01.dat:
+        - 1900509c
+        - 590873a1
+        - 790033ae
+        - '79058755'
+        - 9905877e
+        - b908740a
+        - b9087464
+        - d9094db8
+        - f905870b
+        - f9096a07
+    props:
+      $DOCUMENTS/SimCity 4/Plugins/TSC/Manchou/Manchou_Prop_Pack_01/Manchou_Props_Pack_01.dat:
+        19294531-1982c8a3:
+          model: 9905877e
+          name: Manchou_Prop_Pack_01_Poteau+Antiderap_03
+        19294531-1986746f:
+          model: b908740a
+          name: Manchou_Prop_Pack_01_Rembarde_02
+        19294531-1986747d:
+          model: 590873a1
+          name: Manchou_Prop_Pack_01_Rembarde_03
+        19294531-5986aa29:
+          name: Manchou_Prop_Pack_01_Poubelles_02
+        19294531-7982c8b0:
+          model: f905870b
+          name: Manchou_Prop_Pack_01_Poteau+Antiderap_04
+        19294531-9986aa10:
+          name: Manchou_Prop_Pack_01_Poubelles_01
+        19294531-b982c895:
+          model: '79058755'
+          name: Manchou_Prop_Pack_01_Poteau+Antiderap_02
+        19294531-b986745f:
+          model: b9087464
+          name: Manchou_Prop_Pack_01_Rembarde_01
+        19294531-d97d90bf:
+          model: 790033ae
+          name: Manchou_Prop_Pack_01_Gens_01
+        19294531-d97d90df:
+          model: 1900509c
+          name: Manchou_Prop_Pack_01_PresentoireMC_01
+    sha256: 67bd58e5fbf2dcdaa800220325f089735a461f8794e428053e449f27b8b20051
+    size: 240577
+    uncompressed: 258245
+    version: '1.0'
   toutsimcities/1780:
     assetId: toutsimcities/1780-namspopof-props-pack-vol-1
     authors:
       - toutsimcities
     download: https://www.toutsimcities.com/downloads/start/1780
+    features: []
+    filename: Nams_PROPS_PACK_Vol_01_1780.zip
+    files:
+      - TSC/Namspopof/Nams PROPS PACK Vol 1.dat
     lastModified: 2010-10-14T00:00:00.000Z
+    meta:
+      timestamp: 2025-01-13T21:04:36.741Z
+      version: 1
+    models:
+      TSC/Namspopof/Nams PROPS PACK Vol 1.dat:
+        - 1878f018
+        - 1878f1f3
+        - 1879ffac
+        - 187a08f7
+        - 18c6c362
+        - 18c6c3c2
+        - 1991abc0
+        - 1991ba58
+        - 19991c57
+        - 19ad340a
+        - 3878f53d
+        - 38a01f76
+        - 38c6b281
+        - 38c6b45d
+        - 396a18f2
+        - 3992b831
+        - 39ad0d91
+        - 5879ac77
+        - 5879ad3c
+        - 58a0360a
+        - 58a05b54
+        - 58c6c460
+        - 58c6cf2b
+        - '59410128'
+        - 5992c29d
+        - 59ad020c
+        - 59ad1416
+        - 7879a99f
+        - 7879a9f4
+        - 7879fb82
+        - 7879fdc5
+        - 7879fee6
+        - 78a05a60
+        - 78c6b10f
+        - 78c6c77d
+        - 79991ffd
+        - 799e744e
+        - 799e8dea
+        - 79ad1150
+        - 9879b444
+        - 98c6c501
+        - 98c6c6fe
+        - 98c6cff2
+        - 9992b7b5
+        - 9992b959
+        - 9992b99d
+        - 99ad0ed8
+        - b878f188
+        - b879ae1a
+        - b8a05937
+        - b8c6bfa9
+        - b992bb62
+        - b992c3ae
+        - b9ad159c
+        - d878f5e9
+        - d87a01ec
+        - d8a056ce
+        - d992b2a1
+        - d992b677
+        - d992c1ca
+        - d999112d
+        - d99e7ec7
+        - d9ad1728
+        - f879adb7
+        - f879fe31
+        - f87a0304
+        - f8a05c97
+        - f8c6c00b
+        - f992b9f4
+        - f992baa5
+        - f99e6dfa
+        - f9ad0ba6
+    props:
+      TSC/Namspopof/Nams PROPS PACK Vol 1.dat:
+        79e18576-198b2e56:
+          model: 3878f53d
+          name: Nams_mur droit pierre lierre complet
+        79e18576-198be676:
+          model: b879ae1a
+          name: Nams_Mur_droit_crepis_ocre_rose demi diagonal
+        79e18576-1a071d36:
+          model: f8c6c00b
+          name: Nams_portail_pierre_03
+        79e18576-1a0721c8:
+          model: 18c6c362
+          name: Nams_portail_pierre_04
+        79e18576-1a072e5d:
+          model: 98c6c6fe
+          name: Nams_portail_enduit_01
+        79e18576-1a2a5711:
+          model: 39ad0d91
+          name: Nams_portail_bois_avec_mur_arrondi_03
+        79e18576-1a2a8246:
+          model: 19ad340a
+          name: Nams_portail_Luxe_01
+        79e18576-1a363e60:
+          model: 3992b831
+          name: nams_chaise_longue_bois_tissus
+        79e18576-1a363f48:
+          model: f992b9f4
+          name: nams_transat_pvc_blanc
+        79e18576-398c3c1b:
+          model: 7879fee6
+          name: Nams_Bambou_06
+        79e18576-3a165cc3:
+          model: 19991c57
+          name: Nams_Megane_sport_bleu
+        79e18576-3a165fbc:
+          model: 79991ffd
+          name: Nams_wolkswagen_Golf_5
+        79e18576-3a2e59ba:
+          model: 38a01f76
+          name: Nams_velo_VTT_01
+        79e18576-3a33967c:
+          model: '59410128'
+          name: Nams_Tracteur_01
+        79e18576-3a363e76:
+          model: 9992b7b5
+          name: nams_chaise_longue_tek
+        79e18576-3a363ef6:
+          model: f992baa5
+          name: nams_table_jardin_beige
+        79e18576-3a363f15:
+          model: b992bb62
+          name: nams_table_jardin_bois
+        79e18576-3a363f31:
+          model: d992b2a1
+          name: Nams_table_jardin_tek
+        79e18576-3a363f58:
+          model: 9992b959
+          name: nams_transat_pvc_blanc_15d
+        79e18576-3a363f6a:
+          model: 9992b99d
+          name: nams_transat_pvc_blanc_50d
+        79e18576-598b2a2b:
+          model: b878f188
+          name: Nams_mur droit pierre demi
+        79e18576-598c3c30:
+          model: d87a01ec
+          name: Nams_Bambou_08
+        79e18576-5a0721f1:
+          model: 98c6c501
+          name: Nams_portail_pierre_07
+        79e18576-5a072ea6:
+          model: 98c6cff2
+          name: Nams_poteau_enduit_01
+        79e18576-5a1bb81b:
+          model: 799e744e
+          name: Nams_moto_02
+        79e18576-5a2a5702:
+          model: f9ad0ba6
+          name: Nams_portail_bois_avec_mur_arrondi_02
+        79e18576-5a2a579c:
+          model: d9ad1728
+          name: Nams_portail_bois_avec_mur_arrondi_08
+        79e18576-5a363e94:
+          model: d992c1ca
+          name: nams_parrasol_01
+        79e18576-5a363ebd:
+          model: b992c3ae
+          name: Nams_portail_fer_bleu
+        79e18576-798b2a10:
+          model: 1878f018
+          name: Nams_mur droit pierre complet
+        79e18576-798b2b30:
+          model: 1878f1f3
+          name: Nams_mur droit pierre demi diagonal
+        79e18576-798b2e3e:
+          model: d878f5e9
+          name: Nams_mur droit pierre lierre complet diagonal
+        79e18576-798c3c27:
+          model: 1879ffac
+          name: Nams_Bambou_07
+        79e18576-798c3c39:
+          model: f87a0304
+          name: Nams_Bambou_09
+        79e18576-7a0721d9:
+          model: 18c6c3c2
+          name: Nams_portail_pierre_05
+        79e18576-7a0721e5:
+          model: 58c6c460
+          name: Nams_portail_pierre_06
+        79e18576-7a072e71:
+          model: 78c6c77d
+          name: Nams_portail_enduit_02
+        79e18576-7a072e82:
+          model: 58c6cf2b
+          name: Nams_portail_prolonge_enduit_02
+        79e18576-7a2a571f:
+          model: 99ad0ed8
+          name: Nams_portail_bois_avec_mur_arrondi_04
+        79e18576-7a2a5785:
+          model: 59ad1416
+          name: Nams_portail_bois_avec_mur_arrondi_06
+        79e18576-7a2e8262:
+          model: f8a05c97
+          name: Nams_props_homme_03
+        79e18576-7a363edb:
+          model: d992b677
+          name: nams_table_jardin_basse
+        79e18576-998be692:
+          model: 5879ac77
+          name: Nams_Mur_droit_crepis_ocre_rose.3ds
+        79e18576-9a0717f3:
+          model: 38c6b45d
+          name: Nams_Bambou 01
+        79e18576-9a07184e:
+          model: 78c6b10f
+          name: Nams_mur droit pierre portail
+        79e18576-9a07186d:
+          model: 38c6b281
+          name: Nams_portail_pierre_01
+        79e18576-9a071d17:
+          model: b8c6bfa9
+          name: Nams_portail_pierre_02
+        79e18576-9a2e767f:
+          model: 58a0360a
+          name: Nams_velo_02
+        79e18576-9a2e81e7:
+          model: d8a056ce
+          name: Nams_portail_bois_et_cloture_01
+        79e18576-9a2e820e:
+          model: b8a05937
+          name: Nams_props_femme_01
+        79e18576-9a2e824b:
+          model: 58a05b54
+          name: Nams_props_homme_02
+        79e18576-9a356909:
+          model: 1991ba58
+          name: Nams_Tracteur_04
+        79e18576-9a363ea8:
+          model: 5992c29d
+          name: nams_parrasol_02
+        79e18576-b98be233:
+          model: 7879a99f
+          name: Nams_mur droit pierre lierre demi
+        79e18576-b98be243:
+          model: 7879a9f4
+          name: Nams_mur droit pierre lierre demi diagonal
+        79e18576-b98be655:
+          model: f879adb7
+          name: Nams_Mur_droit_crepis_ocre_rose demi.3ds
+        79e18576-b98be689:
+          model: 5879ad3c
+          name: Nams_Mur_droit_crepis_ocre_rose diagonal.3ds
+        79e18576-b98becce:
+          model: 9879b444
+          name: Nams_arbre_01
+        79e18576-b98c33b4:
+          model: 7879fb82
+          name: Nams_Bambou_03
+        79e18576-ba165073:
+          model: d999112d
+          name: Nams_renault_scenic_jaune
+        79e18576-ba2a56f3:
+          model: 59ad020c
+          name: Nams_portail_bois_avec_mur_arrondi_01
+        79e18576-ba2a5778:
+          model: 79ad1150
+          name: Nams_portail_bois_avec_mur_arrondi_05
+        79e18576-d98c3c04:
+          model: 7879fdc5
+          name: Nams_Bambou_04
+        79e18576-d98c4c7e:
+          model: 187a08f7
+          name: Nams_arbre_02
+        79e18576-da1bada4:
+          model: f99e6dfa
+          name: Nams_moto_01
+        79e18576-da1bc439:
+          model: d99e7ec7
+          name: Nams_sportive_jaune
+        79e18576-da1bce96:
+          model: 799e8dea
+          name: Nams_Moto CBR
+        79e18576-da2a5791:
+          model: b9ad159c
+          name: Nams_portail_bois_avec_mur_arrondi_07
+        79e18576-da2e8234:
+          model: 78a05a60
+          name: Nams_props_homme_01
+        79e18576-da352d86:
+          model: 396a18f2
+          name: Nams_Tracteur_02
+        79e18576-da352dbd:
+          model: 1991abc0
+          name: Nams_Tracteur_03
+        79e18576-f98c3c0e:
+          model: f879fe31
+          name: Nams_Bambou_05
+    sha256: 0f828e82c0ecaea0c56cd6ac62a915bb71987a1d972e16970f72d41a695679a3
+    size: 823336
+    uncompressed: 1398550
     version: '1.0'
   toutsimcities/1882:
     assetId: toutsimcities/1882-namspopof-props-pack-vol-2
     authors:
       - toutsimcities
     download: https://www.toutsimcities.com/downloads/start/1882
+    features: []
+    filename: Nams_PROPS_PACK_Vol_2_1882.zip
+    files:
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Nams PROPS PACK Vol 2.dat
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_11.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_12.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_13.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_14.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_15.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/Props_render_16.jpg
+      - TSC/Namspopof/Nams PROPS PACK Vol 2/logo_nams_props_pack_vol_02.jpg
     lastModified: 2011-08-17T00:00:00.000Z
+    meta:
+      timestamp: 2025-01-13T21:04:36.741Z
+      version: 1
+    models:
+      TSC/Namspopof/Nams PROPS PACK Vol 2/Nams PROPS PACK Vol 2.dat:
+        - 1ace1456
+        - 1ace1b1d
+        - 1aceccb0
+        - 1acece30
+        - 1acf0a34
+        - 1acf0b2b
+        - 1af7e8b5
+        - 1af7e9bc
+        - 1b1e7c72
+        - 1b1f6b3c
+        - 1b1f75d7
+        - 1b1f8389
+        - 1b1fa99e
+        - 1b1fc492
+        - 1b2df003
+        - 1b2f07f3
+        - 1b4ed495
+        - 1b4ed6a7
+        - 1b5003d0
+        - 1b5006e7
+        - 1b500bd8
+        - 1b501c74
+        - 1b5040f4
+        - 1b51b80e
+        - 1b51ca80
+        - 1b51d325
+        - 1b51f2d0
+        - 1b52ea13
+        - 1b5318c4
+        - 1b531ce1
+        - 1b53224c
+        - 1b532284
+        - 1b5324e5
+        - 1b540f0d
+        - 1b5413fc
+        - 1b541416
+        - 1b7183e3
+        - 1b986bb9
+        - 1b988494
+        - 1b989536
+        - 1b989a3a
+        - 1b98c7bf
+        - 1b98eb46
+        - 1b98fed7
+        - 3a7da80b
+        - 3a7da881
+        - 3a7dadc6
+        - 3a7e7b25
+        - 3a7e84ac
+        - 3a7e950e
+        - 3aa68ebb
+        - 3ace1978
+        - 3ace19c1
+        - 3ace1ae7
+        - 3ace1bbf
+        - 3acecf24
+        - 3aced285
+        - 3acedf81
+        - 3acefa83
+        - 3b1eacaa
+        - 3b1f7314
+        - 3b1f83e7
+        - 3b1fac62
+        - 3b1fb516
+        - 3b1fc3f6
+        - 3b1fc5c2
+        - 3b2ded78
+        - 3b2df39d
+        - 3b2e00de
+        - 3b2e2108
+        - 3b4ed1bd
+        - 3b4ed221
+        - 3b4ed55e
+        - 3b4edee7
+        - 3b500599
+        - 3b500aa6
+        - 3b50354d
+        - 3b514dc2
+        - 3b519fd3
+        - 3b51e850
+        - 3b51e9ac
+        - 3b51f27a
+        - 3b52e475
+        - 3b5317de
+        - 3b532053
+        - 3b532109
+        - 3b532810
+        - 3b540f2e
+        - 3b717d56
+        - 3b718507
+        - 3b718540
+        - 3b97d07e
+        - 3b97d2ca
+        - 3b97deb1
+        - 3b98912d
+        - 3b989727
+        - 3b989f4c
+        - 3b98fcaa
+        - 3be8dc0a
+        - 3be934bf
+        - 5a7da7d9
+        - 5a7daa54
+        - 5a7e9192
+        - 5ace2489
+        - 5ace2d8a
+        - 5acefcb2
+        - 5af7e93a
+        - 5b1e83e6
+        - 5b1e8435
+        - 5b1f9351
+        - 5b1fadb7
+        - 5b1fb68f
+        - 5b1fbe28
+        - 5b1fc337
+        - 5b2e061d
+        - 5b2e0b4e
+        - 5b4edc59
+        - 5b4edde6
+        - 5b50033f
+        - 5b500853
+        - 5b50241d
+        - 5b504397
+        - 5b51ddfb
+        - 5b51f213
+        - 5b531814
+        - 5b531e36
+        - 5b531e58
+        - 5b540e97
+        - 5b5415ad
+        - 5b7183b8
+        - 5b97d533
+        - 5b989582
+        - 5b9895e0
+        - 5b98cd53
+        - 5b98d35d
+        - 7a7da4e7
+        - 7a7da93b
+        - 7a7dbb2a
+        - 7a7e898c
+        - 7a7e9952
+        - 7aa72d89
+        - 7aa74aa1
+        - 7ace1314
+        - 7ace25d4
+        - 7ace29fc
+        - 7ace2bf6
+        - 7af7f29e
+        - 7af834fc
+        - 7b1f6ee2
+        - 7b1fab22
+        - 7b1fb01b
+        - 7b1fbbfd
+        - 7b1fc4f4
+        - 7b2def24
+        - 7b2defdb
+        - 7b2e09ab
+        - 7b2e207c
+        - 7b2e22b0
+        - 7b4ed2c2
+        - 7b4ee0b9
+        - 7b4ef423
+        - 7b5001fa
+        - 7b501f57
+        - 7b503600
+        - 7b51a1a8
+        - 7b51bd64
+        - 7b51c786
+        - 7b51c910
+        - 7b51c9a1
+        - 7b51d37a
+        - 7b51e89f
+        - 7b531d87
+        - 7b532708
+        - 7b532f4d
+        - 7b540ec0
+        - 7b5413e3
+        - 7b7186ae
+        - 7b97cd14
+        - 7b97d505
+        - 7b9862c2
+        - 7b986595
+        - 7b986a45
+        - 7b988549
+        - 7b989289
+        - 7b9892f7
+        - 7b989314
+        - 7b989770
+        - 7b98c003
+        - 7b98c412
+        - 7be8d722
+        - 7be93363
+        - 9a7dcf26
+        - 9a7e83cb
+        - 9a7e955c
+        - 9ace12c1
+        - 9ace1c08
+        - 9ace25b0
+        - 9ace2bc4
+        - 9acecabc
+        - 9acef7a9
+        - 9acf0adf
+        - 9af7f5fc
+        - 9af82ca8
+        - 9af82d64
+        - 9af83304
+        - 9af83dc5
+        - 9b1f930f
+        - 9b1fa9d0
+        - 9b1fbfd4
+        - 9b2defb7
+        - 9b2df6cc
+        - 9b2e05e7
+        - 9b2e2470
+        - 9b4eea47
+        - 9b4eed7d
+        - 9b4ef111
+        - 9b5008ed
+        - 9b519e19
+        - 9b519ea4
+        - 9b51a334
+        - 9b51bc24
+        - 9b51e08f
+        - 9b51e6fd
+        - 9b51e758
+        - 9b51eb42
+        - 9b531d36
+        - 9b532e06
+        - 9b532e4f
+        - 9b54137e
+        - 9b5413cc
+        - 9b541538
+        - 9b5416ac
+        - 9b717c89
+        - 9b717efc
+        - 9b717f1d
+        - 9b71882c
+        - 9b97d054
+        - 9b97d4d8
+        - 9b989154
+        - 9b989189
+        - 9b9894f2
+        - 9b9895a0
+        - 9b98c8b0
+        - 9b98f805
+        - 9be8e00f
+        - 9be904f2
+        - 9be933b9
+        - ba7da66c
+        - ba7dac4e
+        - ba7e8d11
+        - ba7e968f
+        - baa72e13
+        - baa74cdc
+        - bace140f
+        - bace29ad
+        - bace2d5f
+        - baced06a
+        - bacef25d
+        - bacf0961
+        - bacf0c80
+        - baf82ce1
+        - bb1e8120
+        - bb1f83b9
+        - bb1fab05
+        - bb1fae4d
+        - bb1fb40d
+        - bb1fb623
+        - bb1fbc80
+        - bb2deeda
+        - bb4ed5e9
+        - bb4ee504
+        - bb4ef609
+        - bb5002f5
+        - bb500642
+        - bb500b87
+        - bb502e84
+        - bb50435d
+        - bb5151f8
+        - bb5152c5
+        - bb51a274
+        - bb51dcb1
+        - bb51ece7
+        - bb531856
+        - bb540e3f
+        - bb5414e0
+        - bb5415d5
+        - bb5416e0
+        - bb54170c
+        - bb541745
+        - bb71817e
+        - bb71891a
+        - bb97c86d
+        - bb97ce82
+        - bb97d019
+        - bb98889e
+        - bb989109
+        - bb98932c
+        - bb989560
+        - bb98d226
+        - bbe90244
+        - da7dab49
+        - da7dc78c
+        - da7e8a67
+        - daa74a14
+        - daa74bd6
+        - dace2a87
+        - dace2ab7
+        - daced122
+        - dacf12a5
+        - dacf146d
+        - daf8007a
+        - db1e8553
+        - db1e880c
+        - db1f82a7
+        - db1fbe81
+        - db1fbf30
+        - db2dee90
+        - db2e0124
+        - db4edf75
+        - db4eeb4d
+        - db4eee31
+        - db4eeeba
+        - db4ef28c
+        - db500a67
+        - db500bb5
+        - db502062
+        - db503676
+        - db503f99
+        - db514b67
+        - db514bd7
+        - db514f31
+        - db51a0ff
+        - db51b608
+        - db51c407
+        - db51cc3c
+        - db51d609
+        - db51ee62
+        - db51f190
+        - db51f33c
+        - db52dd52
+        - db52e9eb
+        - db531e8b
+        - db532082
+        - db5320f5
+        - db5413b4
+        - db717b61
+        - db7181a8
+        - db987326
+        - db9886b3
+        - db988784
+        - db989079
+        - db9890d4
+        - db9898b2
+        - db98ff36
+        - fa7da480
+        - fa7da5ef
+        - fa7e9bbd
+        - faa68c6f
+        - faa69289
+        - face24b6
+        - facedb40
+        - faf801ba
+        - faf82bf3
+        - fb1ead1f
+        - fb1f89fb
+        - fb1fc05e
+        - fb1fc13b
+        - fb1fc38d
+        - fb1fc713
+        - fb4edbb9
+        - fb4edcfc
+        - fb4ee5f7
+        - fb501577
+        - fb502df2
+        - fb504037
+        - fb50424b
+        - fb51537b
+        - fb51c942
+        - fb51d155
+        - fb51da60
+        - fb51e125
+        - fb51edc2
+        - fb52e7a0
+        - fb52e8a7
+        - fb52e9ae
+        - fb531d13
+        - fb531e0b
+        - fb540ee4
+        - fb717b28
+        - fb717c5c
+        - fb717da9
+        - fb71802a
+        - fb71804d
+        - fb7186d7
+        - fb97d89c
+        - fb986894
+        - fb987378
+        - fb9887f3
+        - fb98934a
+        - fb989383
+        - fb98ae1d
+    props:
+      TSC/Namspopof/Nams PROPS PACK Vol 2/Nams PROPS PACK Vol 2.dat:
+        79e18576-1bbdf33b:
+          model: bb2deeda
+          name: Nams_Banc_Public_02
+        79e18576-1bbdf467:
+          model: 7b2e09ab
+          name: Nams_Poubelle_Public_01
+        79e18576-1bbdf487:
+          model: 3b2ded78
+          name: Nams_props_femme_02
+        79e18576-1bbdf4b4:
+          model: 9b2e2470
+          name: Nams_props_homme_04
+        79e18576-1bbdf4e4:
+          model: 3b2e2108
+          name: Nams_props_poussette_02
+        79e18576-1bbe118d:
+          model: fa7da5ef
+          name: Nams_Barbecue_01
+        79e18576-1bbe126b:
+          model: 7a7da4e7
+          name: Nams_table_jardin_bois_03
+        79e18576-1bbef972:
+          model: 7a7e9952
+          name: Nams_props_homme_14
+        79e18576-1bc022ab:
+          model: baa74cdc
+          name: Nams_props_femme_04
+        79e18576-1bc0a8a6:
+          model: 9ace12c1
+          name: Nams_mur droit ciment demi 01
+        79e18576-1bc0a8c5:
+          model: 7ace1314
+          name: Nams_mur droit ciment demi diagonal 01
+        79e18576-1bc0a8d0:
+          model: 1ace1456
+          name: Nams_mur droit ciment demi diagonal 02
+        79e18576-1bc0c245:
+          model: 3ace19c1
+          name: Nams_mur droit crepis demi diagonal 02
+        79e18576-1bc0c31b:
+          model: 7ace25d4
+          name: Nams_mur droit pierre demi diagonal 05
+        79e18576-1bc19aea:
+          model: 5acefcb2
+          name: Nams_Jeux_enfants_02
+        79e18576-1bc1a91e:
+          model: bacf0961
+          name: Nams_Horodateur_01
+        79e18576-1bc1a95c:
+          model: bacf0c80
+          name: Nams_Horodateur_05
+        79e18576-1bc2f1f9:
+          model: 1af7e9bc
+          name: Nams_voiture_Police_03
+        79e18576-1bc35c18:
+          model: 9af82d64
+          name: Nams_Bornes_routes_FR_05
+        79e18576-1bc35c55:
+          model: db1e880c
+          name: Nams_Bornes_routes_FR_09
+        79e18576-1bc35d15:
+          model: 1b1e7c72
+          name: Nams_voiture_Autoroute_06
+        79e18576-1bc496df:
+          model: bb1fab05
+          name: Nams_Boite_PTT_01
+        79e18576-1bc49731:
+          model: 1b1fc492
+          name: Nams_Bornes_routes_FR_13
+        79e18576-1bc49770:
+          model: 1b1f8389
+          name: Nams_filet_voletball_01
+        79e18576-1bc4980c:
+          model: bb1fbc80
+          name: Nams_Panneau_pub_route_02
+        79e18576-1bc49882:
+          model: 3b1fac62
+          name: Nams_Petit_Panneau_pub_route_01
+        79e18576-1bc87706:
+          model: 3b989727
+          name: Nams_mur droit bois quart 01
+        79e18576-1bc8781d:
+          model: db989079
+          name: Nams_mur droit pierre quart 08
+        79e18576-1bc879ee:
+          model: fb98934a
+          name: Nams_mur droit pierre quart diagonal 09d
+        79e18576-1bc87bc0:
+          model: 9b98f805
+          name: Nams_voiture_Police_04
+        79e18576-1bce7ae9:
+          model: db500bb5
+          name: Nams_Banc_Public_15
+        79e18576-1bce7b02:
+          model: 5b50033f
+          name: Nams_chaise_longue_fer_02
+        79e18576-1bce7b0f:
+          model: bb5002f5
+          name: Nams_chaise_longue_fer_02b
+        79e18576-1bce7b9e:
+          model: 3b4ed1bd
+          name: Nams_props_femme_11
+        79e18576-1bce7bdd:
+          model: 5b4edde6
+          name: Nams_props_femme_16
+        79e18576-1bce7bec:
+          model: 7b4ee0b9
+          name: Nams_props_femme_17
+        79e18576-1bce7c33:
+          model: db4ef28c
+          name: Nams_props_femme_22
+        79e18576-1bce7c61:
+          model: db502062
+          name: Nams_props_femme_25
+        79e18576-1bce7cbb:
+          model: bb50435d
+          name: Nams_props_Groupe_02
+        79e18576-1bce7e26:
+          model: 1b4ed6a7
+          name: Nams_props_homme_34
+        79e18576-1bce7f3a:
+          model: 1b5006e7
+          name: Nams_voiture_Chevrolet4x4_01c
+        79e18576-1bcf32d8:
+          model: 5b51ddfb
+          name: Nams_Barrieres_routes_FR_10
+        79e18576-1bcf3308:
+          model: 7b51c910
+          name: Nams_chaise_longue_bois_04
+        79e18576-1bcf332e:
+          model: fb51d155
+          name: Nams_Distributeur_Boissons_01
+        79e18576-1bcf33bf:
+          model: db51f33c
+          name: Nams_Parrasol_10
+        79e18576-1bcf33f8:
+          model: 3b51e850
+          name: Nams_Portail_03b
+        79e18576-1bcf3440:
+          model: 1b51b80e
+          name: Nams_props_femme_31
+        79e18576-1bcf347e:
+          model: 7b51c786
+          name: Nams_props_Groupe_01d
+        79e18576-1bcf349f:
+          model: db51cc3c
+          name: Nams_props_Groupe_01f
+        79e18576-1bcf353f:
+          model: 3b519fd3
+          name: Nams_props_homme_45
+        79e18576-1bcf35b8:
+          model: bb51ece7
+          name: Nams_table_jardin_bois_11
+        79e18576-1bd02c86:
+          model: db52e9eb
+          name: Nams_mur droit bois quart diagonal 02
+        79e18576-1bd02ca5:
+          model: fb52e7a0
+          name: Nams_Pergola_04
+        79e18576-1bd06e8a:
+          model: 1b5318c4
+          name: Nams_Barriere_trottoir_FR_01d
+        79e18576-1bd06e9e:
+          model: 9b531d36
+          name: Nams_Barriere_trottoir_FR_02b
+        79e18576-1bd06eff:
+          model: 7b532708
+          name: Nams_Jeux_enfants_07
+        79e18576-1bd06f13:
+          model: 3b532810
+          name: Nams_Jeux_enfants_07b
+        79e18576-1bd14e0d:
+          model: bb540e3f
+          name: Nams_Barrieres_routes_FR_01
+        79e18576-1bd1573c:
+          model: 9b54137e
+          name: Nams_Plot_stationnement_06
+        79e18576-1bd1576a:
+          model: 1b5413fc
+          name: Nams_Plot_stationnement_06e
+        79e18576-1bd15789:
+          model: 1b541416
+          name: Nams_Plot_stationnement_06f
+        79e18576-3bbdf3bd:
+          model: db2e0124
+          name: Nams_Banc_Public_10
+        79e18576-3bbdf3ed:
+          model: 5b2e061d
+          name: Nams_Banc_Public_12
+        79e18576-3bbdf4f4:
+          model: 7b2e207c
+          name: Nams_props_poussette_03
+        79e18576-3bbe1faf:
+          model: 7a7dbb2a
+          name: Nams_props_homme_06
+        79e18576-3bbef916:
+          model: da7e8a67
+          name: Nams_props_homme_08
+        79e18576-3bbef965:
+          model: ba7e968f
+          name: Nams_props_homme_13
+        79e18576-3bc00759:
+          model: 7aa72d89
+          name: Nams_Abris_Bus_01
+        79e18576-3bc0a8bb:
+          model: bace140f
+          name: Nams_mur droit ciment demi 02
+        79e18576-3bc0c286:
+          model: 5ace2489
+          name: Nams_mur droit pierre demi 04
+        79e18576-3bc0c295:
+          model: 9ace25b0
+          name: Nams_mur droit pierre demi 05
+        79e18576-3bc0c2ed:
+          model: 1ace1b1d
+          name: Nams_mur droit pierre demi diagonal 02
+        79e18576-3bc0c2fd:
+          model: 9ace1c08
+          name: Nams_mur droit pierre demi diagonal 03
+        79e18576-3bc0c386:
+          model: 7ace29fc
+          name: Nams_mur droit pierre demi diagonal 06
+        79e18576-3bc0c395:
+          model: 7ace2bf6
+          name: Nams_mur droit pierre demi diagonal 08
+        79e18576-3bc187eb:
+          model: 3acedf81
+          name: Nams_props_homme_23
+        79e18576-3bc496ff:
+          model: 5b1fc337
+          name: Nams_Bornes_routes_FR_10
+        79e18576-3bc497c0:
+          model: 9b1f930f
+          name: Nams_niche_chien_01
+        79e18576-3bc4981d:
+          model: 5b1fbe28
+          name: Nams_Panneau_pub_route_03
+        79e18576-3bc49848:
+          model: 9b1fbfd4
+          name: Nams_Panneau_pub_route_06
+        79e18576-3bc498ac:
+          model: bb1fae4d
+          name: Nams_Petit_Panneau_pub_route_03
+        79e18576-3bc49962:
+          model: db1f82a7
+          name: Nams_table_jardin_fer_01
+        79e18576-3bc8761a:
+          model: db987326
+          name: Nams_Abris_Garage_01
+        79e18576-3bc87771:
+          model: 3b718540
+          name: Nams_mur droit crepis quart diagonal 01
+        79e18576-3bc877fc:
+          model: 3b97deb1
+          name: Nams_mur droit pierre quart 07
+        79e18576-3bc87865:
+          model: 9b717f1d
+          name: Nams_mur droit pierre quart diagonal 03
+        79e18576-3bc87a10:
+          model: 5b9895e0
+          name: Nams_mur droit pierre quart diagonal 10
+        79e18576-3bc87a1c:
+          model: 1b989536
+          name: Nams_mur droit pierre quart diagonal 10b
+        79e18576-3bc87a3e:
+          model: 5b989582
+          name: Nams_mur droit pierre quart diagonal 10d
+        79e18576-3bc87a71:
+          model: fb717b28
+          name: Nams_mur droit pierre demi 10
+        79e18576-3bc87a8f:
+          model: 3b989f4c
+          name: Nams_Pergola_01
+        79e18576-3bc87ae9:
+          model: 1b98fed7
+          name: Nams_Portail_01
+        79e18576-3bc87b07:
+          model: bb97ce82
+          name: Nams_props_femme_06
+        79e18576-3bc87b1a:
+          model: 3b97d2ca
+          name: Nams_props_homme_26
+        79e18576-3bc87b39:
+          model: 1b988494
+          name: Nams_voiture_Kangoo_01
+        79e18576-3bc87b77:
+          model: fb9887f3
+          name: Nams_voiture_Kangoo_03
+        79e18576-3bc87be0:
+          model: 1b98c7bf
+          name: Nams_voiture_Toyota_Yaris_01
+        79e18576-3bc87c09:
+          model: 5b98cd53
+          name: Nams_voiture_Toyota_Yaris_02
+        79e18576-3bce7b5a:
+          model: db4edf75
+          name: Nams_Props_Chien_02
+        79e18576-3bce7b78:
+          model: 9be8e00f
+          name: Nams_props_femme_08
+        79e18576-3bce7bb7:
+          model: bb4ed5e9
+          name: Nams_props_femme_13
+        79e18576-3bce7c52:
+          model: 7b501f57
+          name: Nams_props_femme_24
+        79e18576-3bce7ca8:
+          model: 1b5040f4
+          name: Nams_props_Groupe_01c
+        79e18576-3bce7cd0:
+          model: 5b504397
+          name: Nams_props_Groupe_02b
+        79e18576-3bce7cf4:
+          model: 7be93363
+          name: Nams_props_homme_28
+        79e18576-3bce7e9c:
+          model: 7b5001fa
+          name: Nams_table_jardin_fer_02
+        79e18576-3bce7eaf:
+          model: 1b5003d0
+          name: Nams_Trampolin_01
+        79e18576-3bcf32c3:
+          model: bb51dcb1
+          name: Nams_Barrieres_routes_FR_09
+        79e18576-3bcf3322:
+          model: 7b51c9a1
+          name: Nams_chaise_longue_bois_04c
+        79e18576-3bcf3343:
+          model: 3b51e9ac
+          name: Nams_niche_chien_05
+        79e18576-3bcf3380:
+          model: db51ee62
+          name: Nams_Parrasol_05
+        79e18576-3bcf33b3:
+          model: 1b51f2d0
+          name: Nams_Parrasol_09
+        79e18576-3bcf33cb:
+          model: 9b51e6fd
+          name: Nams_Portail_02
+        79e18576-3bcf33ec:
+          model: 7b51e89f
+          name: Nams_Portail_03
+        79e18576-3bcf3413:
+          model: db514f31
+          name: Nams_props_femme_28
+        79e18576-3bcf3425:
+          model: 9b519e19
+          name: Nams_props_femme_29
+        79e18576-3bcf34c3:
+          model: db514bd7
+          name: Nams_props_Groupe_02d
+        79e18576-3bcf3524:
+          model: bb5152c5
+          name: Nams_props_homme_43
+        79e18576-3bcf3587:
+          model: 7b51d37a
+          name: Nams_table_jardin_bois_08b
+        79e18576-3bd06e94:
+          model: 1b531ce1
+          name: Nams_Barriere_trottoir_FR_02
+        79e18576-3bd06eb5:
+          model: 7b531d87
+          name: Nams_Barriere_trottoir_FR_02d
+        79e18576-3bd06ed3:
+          model: 5b531e58
+          name: Nams_Barriere_trottoir_FR_03b
+        79e18576-3bd06f3c:
+          model: 9b532e06
+          name: Nams_Parrasol_11
+        79e18576-3bd06f62:
+          model: 7b532f4d
+          name: Nams_Parrasol_13
+        79e18576-3bd06f73:
+          model: 3b532053
+          name: Nams_Plot_stationnement_03
+        79e18576-3bd06fc1:
+          model: 1b53224c
+          name: Nams_Plot_stationnement_05
+        79e18576-3bd06fdf:
+          model: 1b5324e5
+          name: Nams_Portique_anti_caravanne_01
+        79e18576-3bd14e2a:
+          model: 7b540ec0
+          name: Nams_Barrieres_routes_FR_01c
+        79e18576-3bd157cf:
+          model: 9b5416ac
+          name: Nams_Plot_stationnement_09
+        79e18576-5bbdf3a2:
+          model: 9b2df6cc
+          name: Nams_Banc_Public_08
+        79e18576-5bbdf4c2:
+          model: 1b2f07f3
+          name: Nams_props_homme_05
+        79e18576-5bbef980:
+          model: fa7e9bbd
+          name: Nams_props_homme_15
+        79e18576-5bbef998:
+          model: da7dc78c
+          name: Nams_Tracteur_05
+        79e18576-5bbef9ac:
+          model: 9a7dcf26
+          name: Nams_Tracteur_06
+        79e18576-5bc0076a:
+          model: baa72e13
+          name: Nams_Abris_Bus_02
+        79e18576-5bc0c2b1:
+          model: bace29ad
+          name: Nams_mur droit pierre demi 06
+        79e18576-5bc18727:
+          model: 9acecabc
+          name: Nams_panneau_travaux_01
+        79e18576-5bc187f9:
+          model: bacef25d
+          name: Nams_props_homme_24
+        79e18576-5bc19b0e:
+          model: 9acef7a9
+          name: Nams_props_femme_05
+        79e18576-5bc1a931:
+          model: 1acf0a34
+          name: Nams_Horodateur_02
+        79e18576-5bc35c45:
+          model: db1e8553
+          name: Nams_Bornes_routes_FR_08
+        79e18576-5bc35c9c:
+          model: 7af7f29e
+          name: Nams_voiture_Autoroute_01
+        79e18576-5bc4930f:
+          model: fb1fc713
+          name: Nams_Abris_Bus_06
+        79e18576-5bc49699:
+          model: 3b1eacaa
+          name: Nams_Barrieres_routes_FR_07
+        79e18576-5bc496a8:
+          model: fb1ead1f
+          name: Nams_Barrieres_routes_FR_08
+        79e18576-5bc497f7:
+          model: 7b1fbbfd
+          name: Nams_Panneau_pub_route_01
+        79e18576-5bc4982a:
+          model: db1fbe81
+          name: Nams_Panneau_pub_route_04
+        79e18576-5bc49854:
+          model: fb1fc05e
+          name: Nams_Panneau_pub_route_07
+        79e18576-5bc49909:
+          model: 1b1f6b3c
+          name: Nams_table_jardin_bois_04
+        79e18576-5bc8765b:
+          model: bb97d019
+          name: Nams_chaise_longue_bois_02
+        79e18576-5bc876b4:
+          model: 7b98c003
+          name: Nams_Jeux_enfants_05
+        79e18576-5bc87877:
+          model: fb71804d
+          name: Nams_mur droit pierre quart diagonal 04
+        79e18576-5bc87971:
+          model: 3b98912d
+          name: Nams_mur droit pierre quart diagonal 08
+        79e18576-5bc87982:
+          model: db9890d4
+          name: Nams_mur droit pierre quart diagonal 08b
+        79e18576-5bc87b59:
+          model: 7b988549
+          name: Nams_voiture_Kangoo_02
+        79e18576-5bce7ad9:
+          model: bb500b87
+          name: Nams_Banc_Public_14
+        79e18576-5bce7af2:
+          model: 1b500bd8
+          name: Nams_Banc_Public_16
+        79e18576-5bce7b2c:
+          model: 3b500aa6
+          name: Nams_mur droit crepis quart diagonal 03
+        79e18576-5bce7b4e:
+          model: 3b4edee7
+          name: Nams_Props_Chien_01
+        79e18576-5bce7b83:
+          model: bbe90244
+          name: Nams_props_femme_09
+        79e18576-5bce7baa:
+          model: 3b4ed221
+          name: Nams_props_femme_12
+        79e18576-5bce7bc4:
+          model: 5b4edc59
+          name: Nams_props_femme_14
+        79e18576-5bce7c89:
+          model: db503f99
+          name: Nams_props_Groupe_01
+        79e18576-5bce7c97:
+          model: fb504037
+          name: Nams_props_Groupe_01b
+        79e18576-5bce7dfb:
+          model: 7b4ed2c2
+          name: Nams_props_homme_31
+        79e18576-5bce7ef0:
+          model: db4eeb4d
+          name: Nams_voiture_BMW760_02
+        79e18576-5bce7f01:
+          model: 9b4eea47
+          name: Nams_voiture_BMW760_02b
+        79e18576-5bce7f7f:
+          model: 9b5008ed
+          name: Nams_Voiture_InfinityFX35_01b
+        79e18576-5bcf32ee:
+          model: fb51e125
+          name: Nams_Barrieres_routes_FR_12
+        79e18576-5bcf3318:
+          model: fb51c942
+          name: Nams_chaise_longue_bois_04b
+        79e18576-5bcf3353:
+          model: fb51da60
+          name: Nams_panneau_Cinema_Gaumont_01
+        79e18576-5bcf33a5:
+          model: 3b51f27a
+          name: Nams_Parrasol_08
+        79e18576-5bcf344e:
+          model: 9b51bc24
+          name: Nams_props_femme_32
+        79e18576-5bcf35a5:
+          model: 9b51eb42
+          name: Nams_table_jardin_bois_10
+        79e18576-5bd02cb3:
+          model: fb52e8a7
+          name: Nams_Pergola_05
+        79e18576-5bd06e7f:
+          model: 5b531814
+          name: Nams_Barriere_trottoir_FR_01c
+        79e18576-5bd06eee:
+          model: db531e8b
+          name: Nams_Barriere_trottoir_FR_03d
+        79e18576-5bd06f8c:
+          model: db532082
+          name: Nams_Plot_stationnement_03b
+        79e18576-5bd06fcd:
+          model: 1b532284
+          name: Nams_Plot_stationnement_05b
+        79e18576-5bd14e32:
+          model: fb540ee4
+          name: Nams_Barrieres_routes_FR_01d
+        79e18576-5bd157a3:
+          model: 9b541538
+          name: Nams_Plot_stationnement_07b
+        79e18576-5bd157b4:
+          model: 5b5415ad
+          name: Nams_Plot_stationnement_08
+        79e18576-5bd15895:
+          model: bb541745
+          name: Nams_Plot_stationnement_12
+        79e18576-7bbdf326:
+          model: db2dee90
+          name: Nams_Banc_Public_01
+        79e18576-7bbdf349:
+          model: 7b2def24
+          name: Nams_Banc_Public_03
+        79e18576-7bbdf395:
+          model: 3b2df39d
+          name: Nams_Banc_Public_07
+        79e18576-7bbdf3e2:
+          model: 9b2e05e7
+          name: Nams_Banc_Public_11
+        79e18576-7bbdf504:
+          model: 7b2e22b0
+          name: Nams_props_poussette_04
+        79e18576-7bbe11a7:
+          model: ba7da66c
+          name: Nams_Barbecue_02
+        79e18576-7bbe11e7:
+          model: 3a7da881
+          name: Nams_Poubelle_03
+        79e18576-7bbe1218:
+          model: ba7dac4e
+          name: Nams_Poubelle_05
+        79e18576-7bbe1251:
+          model: fa7da480
+          name: Nams_table_jardin_bois_02
+        79e18576-7bbf66eb:
+          model: faa69289
+          name: Nams_Tracteur_10
+        79e18576-7bc0228b:
+          model: 7aa74aa1
+          name: Nams_Abris_Bus_04
+        79e18576-7bc18771:
+          model: 3acecf24
+          name: Nams_panneau_travaux_04
+        79e18576-7bc187a2:
+          model: daced122
+          name: Nams_props_homme_19
+        79e18576-7bc187bd:
+          model: 3aced285
+          name: Nams_props_homme_20
+        79e18576-7bc187de:
+          model: facedb40
+          name: Nams_props_homme_22
+        79e18576-7bc35c0a:
+          model: baf82ce1
+          name: Nams_Bornes_routes_FR_04
+        79e18576-7bc35c29:
+          model: 5b1e83e6
+          name: Nams_Bornes_routes_FR_06
+        79e18576-7bc35c75:
+          model: bb1e8120
+          name: Nams_panneau_travaux_05
+        79e18576-7bc35c8b:
+          model: daf8007a
+          name: Nams_props_homme_25
+        79e18576-7bc35cc4:
+          model: 9af83304
+          name: Nams_voiture_Autoroute_03
+        79e18576-7bc35d07:
+          model: 9af83dc5
+          name: Nams_voiture_Autoroute_05
+        79e18576-7bc497de:
+          model: 1b1fa99e
+          name: Nams_niche_chien_03
+        79e18576-7bc497e9:
+          model: 9b1fa9d0
+          name: Nams_niche_chien_04
+        79e18576-7bc49838:
+          model: db1fbf30
+          name: Nams_Panneau_pub_route_05
+        79e18576-7bc498c8:
+          model: bb1fb40d
+          name: Nams_Petit_Panneau_pub_route_05
+        79e18576-7bc877dc:
+          model: bb71817e
+          name: Nams_mur droit pierre quart 05
+        79e18576-7bc877ed:
+          model: 5b7183b8
+          name: Nams_mur droit pierre quart 06
+        79e18576-7bc87847:
+          model: 9b717c89
+          name: Nams_mur droit pierre quart diagonal 01
+        79e18576-7bc87854:
+          model: fb717da9
+          name: Nams_mur droit pierre quart diagonal 02
+        79e18576-7bc8789e:
+          model: 1b7183e3
+          name: Nams_mur droit pierre quart diagonal 06
+        79e18576-7bc879e0:
+          model: 7b989314
+          name: Nams_mur droit pierre quart diagonal 09c
+        79e18576-7bc879fe:
+          model: fb989383
+          name: Nams_mur droit pierre quart diagonal 09e
+        79e18576-7bc87a32:
+          model: bb989560
+          name: Nams_mur droit pierre quart diagonal 10c
+        79e18576-7bc87b69:
+          model: db9886b3
+          name: Nams_voiture_Kangoo_02b
+        79e18576-7bc87bae:
+          model: 7b97cd14
+          name: Nams_voiture_Mercedes_ClassS1_diag20d
+        79e18576-7bc87c27:
+          model: 5b98d35d
+          name: Nams_voiture_Toyota_Yaris_02c
+        79e18576-7bce7b1b:
+          model: db500a67
+          name: Nams_mur droit crepis quart 03
+        79e18576-7bce7bd1:
+          model: fb4edcfc
+          name: Nams_props_femme_15
+        79e18576-7bce7c12:
+          model: db4eeeba
+          name: Nams_props_femme_20
+        79e18576-7bce7c25:
+          model: 9b4ef111
+          name: Nams_props_femme_21
+        79e18576-7bce7c79:
+          model: 5b50241d
+          name: Nams_props_femme_26
+        79e18576-7bce7cff:
+          model: 9be933b9
+          name: Nams_props_homme_29
+        79e18576-7bce7e30:
+          model: fb4edbb9
+          name: Nams_props_homme_35
+        79e18576-7bce7e50:
+          model: bb502e84
+          name: Nams_props_homme_37
+        79e18576-7bce7e5f:
+          model: 3b50354d
+          name: Nams_props_homme_38
+        79e18576-7bce7e87:
+          model: fb50424b
+          name: Nams_props_homme_41
+        79e18576-7bcf336f:
+          model: fb51edc2
+          name: Nams_Parrasol_04
+        79e18576-7bcf3399:
+          model: 5b51f213
+          name: Nams_Parrasol_07
+        79e18576-7bcf33dc:
+          model: 9b51e758
+          name: Nams_Portail_02b
+        79e18576-7bcf3405:
+          model: 3b514dc2
+          name: Nams_props_femme_27
+        79e18576-7bcf3490:
+          model: 1b51ca80
+          name: Nams_props_Groupe_01e
+        79e18576-7bcf34ad:
+          model: db514b67
+          name: Nams_props_Groupe_02c
+        79e18576-7bcf34ff:
+          model: 9b51a334
+          name: Nams_props_Groupe_03d
+        79e18576-7bcf354d:
+          model: db51b608
+          name: Nams_props_homme_46
+        79e18576-7bd06e5f:
+          model: 3b5317de
+          name: Nams_Barriere_trottoir_FR_01
+        79e18576-7bd14e3e:
+          model: 1b540f0d
+          name: Nams_Barrieres_routes_FR_01e
+        79e18576-7bd14e48:
+          model: 3b540f2e
+          name: Nams_Barrieres_routes_FR_01f
+        79e18576-7bd1574e:
+          model: db5413b4
+          name: Nams_Plot_stationnement_06b
+        79e18576-7bd1575f:
+          model: 7b5413e3
+          name: Nams_Plot_stationnement_06d
+        79e18576-7bd157c3:
+          model: bb5415d5
+          name: Nams_Plot_stationnement_08b
+        79e18576-7bd157db:
+          model: bb5416e0
+          name: Nams_Plot_stationnement_10
+        79e18576-9bbdf37c:
+          model: 7b2defdb
+          name: Nams_Banc_Public_05
+        79e18576-9bbdf388:
+          model: 1b2df003
+          name: Nams_Banc_Public_06
+        79e18576-9bbe11c3:
+          model: 5a7da7d9
+          name: Nams_Poubelle_01
+        79e18576-9bbe11db:
+          model: 3a7da80b
+          name: Nams_Poubelle_02
+        79e18576-9bbe123b:
+          model: 5a7daa54
+          name: Nams_Poubelle_Public_02
+        79e18576-9bbef956:
+          model: 9a7e955c
+          name: Nams_props_homme_12
+        79e18576-9bbef9bb:
+          model: 3a7e7b25
+          name: Nams_Tracteur_07
+        79e18576-9bc0227d:
+          model: daa74a14
+          name: Nams_Abris_Bus_03
+        79e18576-9bc0c272:
+          model: 3ace1bbf
+          name: Nams_mur droit pierre demi 03
+        79e18576-9bc0c2df:
+          model: bace2d5f
+          name: Nams_mur droit pierre demi 09
+        79e18576-9bc0c33b:
+          model: dace2ab7
+          name: Nams_mur droit pierre demi diagonal 07
+        79e18576-9bc1874c:
+          model: 1aceccb0
+          name: Nams_panneau_travaux_02
+        79e18576-9bc1878e:
+          model: baced06a
+          name: Nams_props_homme_18
+        79e18576-9bc1a950:
+          model: 1acf0b2b
+          name: Nams_Horodateur_04
+        79e18576-9bc2f1ed:
+          model: 5af7e93a
+          name: Nams_voiture_Police_02
+        79e18576-9bc35bf2:
+          model: faf82bf3
+          name: Nams_Bornes_routes_FR_02
+        79e18576-9bc35c34:
+          model: 5b1e8435
+          name: Nams_Bornes_routes_FR_07
+        79e18576-9bc35cb5:
+          model: 9af7f5fc
+          name: Nams_voiture_Autoroute_02
+        79e18576-9bc49300:
+          model: 3b1fc5c2
+          name: Nams_Abris_Bus_05
+        79e18576-9bc496ef:
+          model: 7b1fab22
+          name: Nams_Boite_PTT_02
+        79e18576-9bc49715:
+          model: fb1fc38d
+          name: Nams_Bornes_routes_FR_11
+        79e18576-9bc4974c:
+          model: fb1f89fb
+          name: Nams_chaise_longue_bois_01
+        79e18576-9bc49860:
+          model: fb1fc13b
+          name: Nams_Panneau_pub_route_08
+        79e18576-9bc49899:
+          model: 5b1fadb7
+          name: Nams_Petit_Panneau_pub_route_02
+        79e18576-9bc498b8:
+          model: 7b1fb01b
+          name: Nams_Petit_Panneau_pub_route_04
+        79e18576-9bc498f9:
+          model: 5b1fb68f
+          name: Nams_Petit_Panneau_pub_route_08
+        79e18576-9bc4994e:
+          model: 1b1f75d7
+          name: Nams_table_jardin_bois_07
+        79e18576-9bc87678:
+          model: 3b97d07e
+          name: Nams_chaise_longue_bois_02c
+        79e18576-9bc876a0:
+          model: 5b97d533
+          name: Nams_chaise_longue_bois_03c
+        79e18576-9bc876f0:
+          model: fb97d89c
+          name: Nams_Lampadaires_01
+        79e18576-9bc87798:
+          model: fb717c5c
+          name: Nams_mur droit pierre quart 01
+        79e18576-9bc87829:
+          model: 7b989289
+          name: Nams_mur droit pierre quart 09
+        79e18576-9bc878af:
+          model: fb986894
+          name: Nams_mur droit pierre quart diagonal 07
+        79e18576-9bc878f4:
+          model: 7b986595
+          name: Nams_mur droit pierre quart diagonal 07c
+        79e18576-9bc87990:
+          model: bb989109
+          name: Nams_mur droit pierre quart diagonal 08c
+        79e18576-9bc8799f:
+          model: 9b989154
+          name: Nams_mur droit pierre quart diagonal 08d
+        79e18576-9bc879ae:
+          model: 9b989189
+          name: Nams_mur droit pierre quart diagonal 08e
+        79e18576-9bc879bf:
+          model: bb98932c
+          name: Nams_mur droit pierre quart diagonal 09
+        79e18576-9bc87a4a:
+          model: 9b9895a0
+          name: Nams_mur droit pierre quart diagonal 10e
+        79e18576-9bce7c06:
+          model: db4eee31
+          name: Nams_props_femme_19
+        79e18576-9bce7def:
+          model: 3be934bf
+          name: Nams_props_homme_30
+        79e18576-9bce7e0b:
+          model: 1b4ed495
+          name: Nams_props_homme_32
+        79e18576-9bce7e17:
+          model: 3b4ed55e
+          name: Nams_props_homme_33
+        79e18576-9bce7e42:
+          model: fb502df2
+          name: Nams_props_homme_36
+        79e18576-9bce7f2e:
+          model: bb500642
+          name: Nams_voiture_Chevrolet4x4_01b
+        79e18576-9bce7f6b:
+          model: 5b500853
+          name: Nams_Voiture_InfinityFX35_01
+        79e18576-9bcf3433:
+          model: 9b519ea4
+          name: Nams_props_femme_30
+        79e18576-9bcf34e2:
+          model: 7b51a1a8
+          name: Nams_props_Groupe_03b
+        79e18576-9bcf3571:
+          model: 1b51d325
+          name: Nams_table_jardin_bois_08
+        79e18576-9bd06ea8:
+          model: fb531d13
+          name: Nams_Barriere_trottoir_FR_02c
+        79e18576-9bd06ee2:
+          model: 5b531e36
+          name: Nams_Barriere_trottoir_FR_03c
+        79e18576-9bd06f98:
+          model: 3b532109
+          name: Nams_Plot_stationnement_04
+        79e18576-9bd06fb1:
+          model: db5320f5
+          name: Nams_Plot_stationnement_04b
+        79e18576-9bd15756:
+          model: 9b5413cc
+          name: Nams_Plot_stationnement_06c
+        79e18576-9bd15796:
+          model: bb5414e0
+          name: Nams_Plot_stationnement_07
+        79e18576-bbbdf354:
+          model: 9b2defb7
+          name: Nams_Banc_Public_04
+        79e18576-bbbe1226:
+          model: 3a7dadc6
+          name: Nams_Poubelle_06
+        79e18576-bbbef923:
+          model: ba7e8d11
+          name: Nams_props_homme_09
+        79e18576-bbbef9ce:
+          model: 9a7e83cb
+          name: Nams_Tracteur_08
+        79e18576-bbbef9e6:
+          model: 3a7e84ac
+          name: Nams_Tracteur_09
+        79e18576-bbbf66dd:
+          model: 3aa68ebb
+          name: Nams_props_homme_17
+        79e18576-bbc02299:
+          model: daa74bd6
+          name: Nams_props_femme_03
+        79e18576-bbc0c22f:
+          model: 3ace1978
+          name: Nams_mur droit crepis demi 02
+        79e18576-bbc0c2cf:
+          model: 9ace2bc4
+          name: Nams_mur droit pierre demi 08
+        79e18576-bbc0c30b:
+          model: face24b6
+          name: Nams_mur droit pierre demi diagonal 04
+        79e18576-bbc1a96a:
+          model: dacf12a5
+          name: Nams_Jeux_enfants_03
+        79e18576-bbc1a97e:
+          model: dacf146d
+          name: Nams_Jeux_enfants_04
+        79e18576-bbc35bd9:
+          model: faf801ba
+          name: Nams_Bornes_routes_FR_01
+        79e18576-bbc49722:
+          model: 3b1fc3f6
+          name: Nams_Bornes_routes_FR_12
+        79e18576-bbc4973c:
+          model: 7b1fc4f4
+          name: Nams_Bornes_routes_FR_14
+        79e18576-bbc49791:
+          model: bb1f83b9
+          name: Nams_filet_voletball_02
+        79e18576-bbc497d3:
+          model: 5b1f9351
+          name: Nams_niche_chien_02
+        79e18576-bbc498dc:
+          model: bb1fb623
+          name: Nams_Petit_Panneau_pub_route_06
+        79e18576-bbc498eb:
+          model: 3b1fb516
+          name: Nams_Petit_Panneau_pub_route_07
+        79e18576-bbc4992b:
+          model: 7b1f6ee2
+          name: Nams_table_jardin_bois_05
+        79e18576-bbc4993d:
+          model: 3b1f7314
+          name: Nams_table_jardin_bois_06
+        79e18576-bbc87686:
+          model: 9b97d4d8
+          name: Nams_chaise_longue_bois_03
+        79e18576-bbc87694:
+          model: 7b97d505
+          name: Nams_chaise_longue_bois_03b
+        79e18576-bbc876cb:
+          model: 7b98c412
+          name: Nams_Jeux_enfants_06
+        79e18576-bbc87782:
+          model: fb7186d7
+          name: Nams_mur droit crepis quart diagonal 02
+        79e18576-bbc877a8:
+          model: 3b717d56
+          name: Nams_mur droit pierre quart 02
+        79e18576-bbc877cc:
+          model: fb71802a
+          name: Nams_mur droit pierre quart 04
+        79e18576-bbc87836:
+          model: 9b9894f2
+          name: Nams_mur droit pierre quart 10
+        79e18576-bbc87884:
+          model: db7181a8
+          name: Nams_mur droit pierre quart diagonal 05
+        79e18576-bbc8794f:
+          model: 7b986a45
+          name: Nams_mur droit pierre quart diagonal 07d
+        79e18576-bbc87ab5:
+          model: 9b71882c
+          name: Nams_Plot_stationnement_01
+        79e18576-bbc87ac8:
+          model: bb71891a
+          name: Nams_Plot_stationnement_02
+        79e18576-bbc87afa:
+          model: db98ff36
+          name: Nams_Portail_01b
+        79e18576-bbc87b9c:
+          model: bb97c86d
+          name: Nams_voiture_Mercedes_ClassS1
+        79e18576-bbc87bfd:
+          model: 9b98c8b0
+          name: Nams_voiture_Toyota_Yaris_01b
+        79e18576-bbc87c34:
+          model: 1b98eb46
+          name: Nams_voiture_Toyota_Yaris_02d
+        79e18576-bbce7b3c:
+          model: bb4ef609
+          name: Nams_Pergola_03
+        79e18576-bbce7b67:
+          model: 3be8dc0a
+          name: Nams_props_femme_07
+        79e18576-bbce7b8f:
+          model: 9be904f2
+          name: Nams_props_femme_10
+        79e18576-bbce7bf9:
+          model: 9b4eed7d
+          name: Nams_props_femme_18
+        79e18576-bbce7c44:
+          model: 7b4ef423
+          name: Nams_props_femme_23
+        79e18576-bbce7f4b:
+          model: fb501577
+          name: Nams_Voiture_GolfMK5_01
+        79e18576-bbce7f5d:
+          model: 1b501c74
+          name: Nams_Voiture_GolfMK5_01b
+        79e18576-bbcf346b:
+          model: db51c407
+          name: Nams_props_femme_34
+        79e18576-bbcf34d4:
+          model: db51a0ff
+          name: Nams_props_Groupe_03
+        79e18576-bbcf34ef:
+          model: bb51a274
+          name: Nams_props_Groupe_03c
+        79e18576-bbcf3515:
+          model: bb5151f8
+          name: Nams_props_homme_42
+        79e18576-bbd02c91:
+          model: 1b52ea13
+          name: Nams_mur droit bois quart diagonal 02b
+        79e18576-bbd06ec8:
+          model: fb531e0b
+          name: Nams_Barriere_trottoir_FR_03
+        79e18576-bbd06f4c:
+          model: 9b532e4f
+          name: Nams_Parrasol_12
+        79e18576-bbd14e22:
+          model: 5b540e97
+          name: Nams_Barrieres_routes_FR_01b
+        79e18576-bbd157e9:
+          model: bb54170c
+          name: Nams_Plot_stationnement_11
+        79e18576-dbbdf3b0:
+          model: 3b2e00de
+          name: Nams_Banc_Public_09
+        79e18576-dbbdf4d7:
+          model: 5b2e0b4e
+          name: Nams_props_poussette_01
+        79e18576-dbbe1204:
+          model: da7dab49
+          name: Nams_Poubelle_04
+        79e18576-dbbef904:
+          model: 7a7e898c
+          name: Nams_props_homme_07
+        79e18576-dbbef931:
+          model: 5a7e9192
+          name: Nams_props_homme_10
+        79e18576-dbbef940:
+          model: 3a7e950e
+          name: Nams_props_homme_11
+        79e18576-dbbf66c9:
+          model: faa68c6f
+          name: Nams_props_homme_16
+        79e18576-dbc0c263:
+          model: 3ace1ae7
+          name: Nams_mur droit pierre demi 02
+        79e18576-dbc0c2bf:
+          model: dace2a87
+          name: Nams_mur droit pierre demi 07
+        79e18576-dbc0c3a3:
+          model: 5ace2d8a
+          name: Nams_mur droit pierre demi diagonal 09
+        79e18576-dbc1875b:
+          model: 1acece30
+          name: Nams_panneau_travaux_03
+        79e18576-dbc19acd:
+          model: 3acefa83
+          name: Nams_Jeux_enfants_01
+        79e18576-dbc1a941:
+          model: 9acf0adf
+          name: Nams_Horodateur_03
+        79e18576-dbc2f1dd:
+          model: 1af7e8b5
+          name: Nams_voiture_Police_01
+        79e18576-dbc35bfe:
+          model: 9af82ca8
+          name: Nams_Bornes_routes_FR_03
+        79e18576-dbc35ce4:
+          model: 7af834fc
+          name: Nams_voiture_Autoroute_04
+        79e18576-dbc497af:
+          model: 3b1f83e7
+          name: Nams_filet_voletball_03
+        79e18576-dbc87633:
+          model: fb987378
+          name: Nams_Abris_Garage_01b
+        79e18576-dbc87644:
+          model: db9898b2
+          name: Nams_Banc_Public_13
+        79e18576-dbc8766d:
+          model: 9b97d054
+          name: Nams_chaise_longue_bois_02b
+        79e18576-dbc8771e:
+          model: 7b989770
+          name: Nams_mur droit bois quart diagonal 01
+        79e18576-dbc87736:
+          model: 3b718507
+          name: Nams_mur droit crepis quart 01
+        79e18576-dbc87764:
+          model: 7b7186ae
+          name: Nams_mur droit crepis quart 02
+        79e18576-dbc877ba:
+          model: 9b717efc
+          name: Nams_mur droit pierre quart 03
+        79e18576-dbc878e4:
+          model: 7b9862c2
+          name: Nams_mur droit pierre quart diagonal 07b
+        79e18576-dbc8795f:
+          model: 1b986bb9
+          name: Nams_mur droit pierre quart diagonal 07e
+        79e18576-dbc879ce:
+          model: 7b9892f7
+          name: Nams_mur droit pierre quart diagonal 09b
+        79e18576-dbc87a59:
+          model: 1b989a3a
+          name: Nams_Parrasol_03
+        79e18576-dbc87a7f:
+          model: db717b61
+          name: Nams_mur droit pierre demi diagonal 10
+        79e18576-dbc87aa2:
+          model: fb98ae1d
+          name: Nams_Pergola_02
+        79e18576-dbc87b4c:
+          model: bb98889e
+          name: Nams_voiture_Kangoo_01b
+        79e18576-dbc87bd2:
+          model: 3b98fcaa
+          name: Nams_voiture_Police_04b
+        79e18576-dbc87c19:
+          model: bb98d226
+          name: Nams_voiture_Toyota_Yaris_02b
+        79e18576-dbce7ce7:
+          model: 7be8d722
+          name: Nams_props_homme_27
+        79e18576-dbce7e6e:
+          model: 7b503600
+          name: Nams_props_homme_39
+        79e18576-dbce7e7a:
+          model: db503676
+          name: Nams_props_homme_40
+        79e18576-dbce7ecd:
+          model: bb4ee504
+          name: Nams_voiture_BMW760_01
+        79e18576-dbce7ee0:
+          model: fb4ee5f7
+          name: Nams_voiture_BMW760_01b
+        79e18576-dbce7f1b:
+          model: 3b500599
+          name: Nams_voiture_Chevrolet4x4_01
+        79e18576-dbcf32e1:
+          model: 9b51e08f
+          name: Nams_Barrieres_routes_FR_11
+        79e18576-dbcf338f:
+          model: db51f190
+          name: Nams_Parrasol_06
+        79e18576-dbcf345e:
+          model: 7b51bd64
+          name: Nams_props_femme_33
+        79e18576-dbcf3530:
+          model: fb51537b
+          name: Nams_props_homme_44
+        79e18576-dbcf3595:
+          model: db51d609
+          name: Nams_table_jardin_bois_09
+        79e18576-dbd02c71:
+          model: fb52e9ae
+          name: Nams_mur droit bois quart 02
+        79e18576-dbd02e3c:
+          model: 3b52e475
+          name: Nams_Kiosque_journaux_01
+        79e18576-dbd02e5d:
+          model: db52dd52
+          name: Nams_Kiosque_journaux_01b
+        79e18576-dbd06e76:
+          model: bb531856
+          name: Nams_Barriere_trottoir_FR_01b
+    sha256: 2d412260436822b6850a1042940190ec651a48853095e5c273e169f2dac19fe5
+    size: 3804959
+    uncompressed: 6800827
     version: '1.0'
 
 meta:

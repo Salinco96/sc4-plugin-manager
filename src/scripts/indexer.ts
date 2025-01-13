@@ -17,6 +17,7 @@ import {
   groupBy,
   indexBy,
   isEqual,
+  isNumber,
   isString,
   keys,
   mapDefined,
@@ -122,18 +123,18 @@ const dbPackagesDir = path.join(dbDir, "packages")
 runIndexer({
   include: {
     authors: {
-      buggi: 2000,
-      "dead-end": 2000,
-      cococity: 2000,
+      buggi: true,
+      "dead-end": true,
+      cococity: true,
       jasoncw: 2020, // todo
-      jestarr: 2022, // todo
-      madhatter106: 2000,
-      memo: 2000,
-      "null-45": 2000,
-      simmaster07: 2000,
-      toroca: 2000,
-      toutsimcities: 2000,
-      wannglondon: 2000,
+      jestarr: true,
+      madhatter106: true,
+      memo: true,
+      "null-45": true,
+      simmaster07: true,
+      toroca: true,
+      true: true,
+      wannglondon: true,
     },
     entries: [
       "simtropolis/13318",
@@ -1027,8 +1028,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     if (entry.authors) {
       const year = entry.lastModified.getFullYear()
 
-      const authors = entry.authors.map(author => getAuthorId(author) ?? toID(author))
-      if (authors.some(id => options.include.authors[id] && options.include.authors[id] <= year)) {
+      function isIncludedAuthor(authorId: AuthorID): boolean {
+        const included = options.include.authors[authorId]
+        return isNumber(included) ? included <= year : included
+      }
+
+      const authors = entry.authors.map(author => getAuthorId(author) ?? toID(author)) as AuthorID[]
+      if (authors.some(isIncludedAuthor)) {
         return true
       }
     }
