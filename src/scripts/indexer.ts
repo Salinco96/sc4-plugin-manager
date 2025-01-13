@@ -1473,25 +1473,32 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     if (entryOverride?.collectionId && !variant) {
       const { collectionId } = entryOverride
 
-      console.debug(`Generating collection for ${variantAssetId} -> ${collectionId}`)
+      const collectionInfo = dbCollections[collectionId]
 
-      dbCollections[collectionId] = merge(dbCollections[collectionId], {
-        description: entry.description && htmlToMd(entry.description),
-        id: collectionId,
-        images: entry.images,
-        lastGenerated: new Date(),
-        lastModified: entry.lastModified,
-        name: entry.name ?? collectionId,
-        packages: sort(
-          unique(
-            mapDefined(values(entryOverride.paths ?? {}), pathOverride => pathOverride?.packageId),
+      if (!collectionInfo?.lastGenerated || collectionInfo.lastGenerated < entry.meta.timestamp) {
+        console.debug(`Generating collection for ${variantAssetId} -> ${collectionId}`)
+
+        dbCollections[collectionId] = merge(dbCollections[collectionId], {
+          description: entry.description && htmlToMd(entry.description),
+          id: collectionId,
+          images: entry.images,
+          lastGenerated: new Date(),
+          lastModified: entry.lastModified,
+          name: entry.name ?? collectionId,
+          packages: sort(
+            unique(
+              mapDefined(
+                values(entryOverride.paths ?? {}),
+                pathOverride => pathOverride?.packageId,
+              ),
+            ),
           ),
-        ),
-        thumbnail: entry.thumbnail,
-        url: entry.url,
-      })
+          thumbnail: entry.thumbnail,
+          url: entry.url,
+        })
 
-      dbCollections[collectionId].release ??= new Date()
+        dbCollections[collectionId].release ??= new Date()
+      }
 
       return false
     }

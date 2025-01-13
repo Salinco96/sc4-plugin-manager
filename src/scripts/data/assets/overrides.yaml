@@ -2848,7 +2848,7 @@ simtropolis/35617-emerson-apartments:
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
 
 simtropolis/35632-new-york-pack-1:
-  packageId: wannglondon/ny-pack
+  collectionId: wannglondon/ny-buildings
   paths:
     NY Bldg 1_DN:
       packageId: wannglondon/ny-building-1
@@ -3613,7 +3613,7 @@ simtropolis/36497-webb-chapel-park-pavilion:
       variantId: darknite
 
 simtropolis/36505-american-rowhomes-pack-1:
-  packageId: wannglondon/american-townhomes-pack
+  collectionId: wannglondon/american-townhomes
   paths:
     Townhomes 1*_DN:
       packageId: wannglondon/american-townhomes-1
@@ -3631,7 +3631,6 @@ simtropolis/36505-american-rowhomes-pack-1:
       packageId: wannglondon/american-townhomes-6
       variantId: darknite
     desktop.ini: null
-  variantId: darknite
 
 simtropolis/36507-delitz-designer-gallery:
   packageId: jasoncw/delitz-designer-gallery
