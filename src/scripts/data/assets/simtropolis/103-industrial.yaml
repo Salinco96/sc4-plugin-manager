@@ -8882,29 +8882,681 @@ assets:
     assetId: simtropolis/35593-the-anaheim-citrus-packing-shed
     authors:
       - jestarr
+    buildings:
+      jes_AnaheimCitrusPackingShed/Landmark Lot/jes_5x4_AnaheimCitrusPackingShed_51e16274.SC4Lot:
+        b221b91a-51e16274:
+          bulldoze: 202
+          capacity:
+            im: 155
+          categories: landmarks,i-ht
+          cost: 3082
+          description: Supplier of citrus fruit to grocers everywhere.
+          flamability: 70
+          garbage: 4
+          label: The Anaheim Citrus Packing Shed
+          menu: Landmarks
+          model: 71d95bdf
+          name: jes_AnaheimCitrusPackingShed31
+          pollution: 9
+          pollutionRadius: 9
+          power: 10
+          submenu: Industrial/Manufacture
+          water: 139
+          waterPollution: 6
+          waterPollutionRadius: 13
+          worth: 1182
+      jes_AnaheimCitrusPackingShed/Model Files/jes_AnaheimCitrusPackingShed31-0x6534284a-0xb221b91a-0x525a978a.SC4Desc:
+        b221b91a-525a978a:
+          bulldoze: 202
+          capacity:
+            im: 155
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 71d95bdf
+          name: jes_AnaheimCitrusPackingShed31
+          pollution: 9
+          pollutionRadius: 9
+          power: 10
+          water: 139
+          waterPollution: 6
+          waterPollutionRadius: 13
+          worth: 1182
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol03
+      - jestarr/mega-props-vol04
+      - jestarr/mega-props-vol05
+      - jestarr/mega-props-vol06
+      - jestarr/mega-props-vol09
+      - simgoober/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe Anaheim Citrus Packing Shed - Purveyors of citrus fruit to grocers everywhere.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information\n</p>\n\n<p>\n\tLot size:\_\_ 5 x 4 tiles<br>\n\tBuilding style(s):\_\_ Building: Industrial, Building: IM, Industry: Anchor<br>\n\tGrowth stage:\_ 2<br>\n\tOccupants:\_ 155 I-M<br>\n\tBulldoze cost:\_ $202<br>\n\tWorth:\_ $202<br>\n\tConstruction Time:\_ 20 days<br>\n\tMax. Fire Stage:\_ 3<br>\n\tPower consumption:\_ 10 MWh/month<br>\n\tWater consumption:\_ 139 Gallons/month<br>\n\tAir pollution:\_ 9 over 9 tiles<br>\n\tWater pollution:\_ 6 over 13 tiles<br>\n\tGarbage pollution:\_ 4 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tDependencies\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JBSimio Vol03<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - Misc Vol02 v3<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol01_v2<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol01<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol02<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol03<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol04<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol05<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol06<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol09<br>\n\tGrfe_Carpack_vol. 1 &amp; 2\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 01<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 02<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 03\n</p>\n\n<p>\n\tThe above files can be found in the legacy-bsc-common-dependencies-pack found here at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads</a>/.\n</p>\n\n<p>\n\tjes_AnaheimResources.dat [included]\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_AnaheimCitrusPackingShed.zip
+    files:
+      - jes_AnaheimCitrusPackingShed/Dependencies/jes_AnaheimResources.dat
+      - jes_AnaheimCitrusPackingShed/Documentation/Images/Anaheim_Day.png
+      - jes_AnaheimCitrusPackingShed/Documentation/Images/Anaheim_Nite.png
+      - jes_AnaheimCitrusPackingShed/Documentation/Images/footer1.jpg
+      - jes_AnaheimCitrusPackingShed/Documentation/Images/header1.png
+      - jes_AnaheimCitrusPackingShed/Documentation/Readme_AnaheimCitrusPackingShed.html
+      - jes_AnaheimCitrusPackingShed/Documentation/Styles/stylesheet.css
+      - jes_AnaheimCitrusPackingShed/Growable Lot/jes_I-m2_5x4_AnaheimCitrusPackingShed_b1e2b5d5.SC4Lot
+      - jes_AnaheimCitrusPackingShed/Landmark Lot/jes_5x4_AnaheimCitrusPackingShed_51e16274.SC4Lot
+      - jes_AnaheimCitrusPackingShed/Model Files/jes_AnaheimCitrusPackingShed31-0x5ad0e817_0x71d95bdf_0x30000.SC4Model
+      - jes_AnaheimCitrusPackingShed/Model Files/jes_AnaheimCitrusPackingShed31-0x6534284a-0xb221b91a-0x525a978a.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_08/Anaheim_Day.jpg.929dba472e04942c38f9a1afc2079564.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_08/Anaheim_Nite.jpg.9efb326e9492153f94ed5a7f8e450abd.jpg
     lastModified: 2023-08-12T01:02:24.000Z
+    lots:
+      jes_AnaheimCitrusPackingShed/Growable Lot/jes_I-m2_5x4_AnaheimCitrusPackingShed_b1e2b5d5.SC4Lot:
+        b1e2b5d5:
+          building: 525a978a
+          density: medium,high
+          name: jes_I-m2_5x4_AnaheimCitrusPackingShed
+          props:
+            - 10b9473c
+            - 11c0455a
+            - 13269d3d
+            - 14f4ebad
+            - '1920e457'
+            - 1e9a0000
+            - 1ece0000
+            - 29c20000
+            - 336d9dae
+            - 39d264ae
+            - 516736be
+            - 536d9d93
+            - 54f6342f
+            - 71d53688
+            - 71e0e4fd
+            - 8fcc53b7
+            - 8fcc5431
+            - 9164a187
+            - 92a81f9f
+            - '93e74466'
+            - 9d4e8bdb
+            - 9d4e8d22
+            - 9d4ebeb2
+            - b0a823f5
+            - b337b8c7
+            - b337b8c8
+            - b337b8c9
+            - b337b8ca
+            - bd4e905a
+            - bd4eafc5
+            - ce09d338
+            - d0499796
+            - dd4eb01e
+          size: 5x4
+          stage: 2
+          textures:
+            - 251c2000
+            - '26313000'
+            - fb274600
+            - fb284600
+            - fb294600
+            - fb745000
+            - fb864030
+            - fb864035
+            - fbd00000
+            - fbd10000
+            - fbd20000
+      jes_AnaheimCitrusPackingShed/Landmark Lot/jes_5x4_AnaheimCitrusPackingShed_51e16274.SC4Lot:
+        '51e16274':
+          building: '51e16274'
+          name: jes_5x4_AnaheimCitrusPackingShed
+          props:
+            - 10b9473c
+            - 11c0455a
+            - 123d2553
+            - 13269d3d
+            - 14f4ebad
+            - '1920e457'
+            - 1ece0000
+            - 29c20000
+            - 336d9dae
+            - 39d264ae
+            - 4de0402b
+            - 516736be
+            - 516736d0
+            - 536d9d93
+            - 54f6342f
+            - 5d4ea8b1
+            - 71d53688
+            - 71e0e4fd
+            - 7d4eaff2
+            - 8fcc53b7
+            - 8fcc5431
+            - 9164a187
+            - b0a823f5
+            - b337b8c7
+            - b337b8c8
+            - b337b8c9
+            - b337b8ca
+            - bd4e9107
+            - c35cff02
+            - ce09d338
+            - d0499796
+            - d2aaec45
+            - d3e74486
+          size: 5x4
+          textures:
+            - '26313000'
+            - 35ea4300
+            - 615f6000
+            - fb274600
+            - fb284600
+            - fb294600
+            - fb745000
+            - fb745300
+            - fb864030
+            - fb864035
+            - fbd00000
+            - fbd10000
+            - fbd20000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      jes_AnaheimCitrusPackingShed/Dependencies/jes_AnaheimResources.dat:
+        - f1d8fb94
+      jes_AnaheimCitrusPackingShed/Model Files/jes_AnaheimCitrusPackingShed31-0x5ad0e817_0x71d95bdf_0x30000.SC4Model:
+        - 71d95bdf
     name: The Anaheim Citrus Packing Shed
+    props:
+      jes_AnaheimCitrusPackingShed/Dependencies/jes_AnaheimResources.dat:
+        b221b91a-71e0e4fd:
+          model: f1d8fb94
+          name: jes_8x_Chainlink_Fence_corner01
+    sha256: bdc916daf40bd62ba45e399ce28ea38afd7a65e296bbeeaf42d3203c94cc1992
+    size: 1097040
+    textures:
+      jes_AnaheimCitrusPackingShed/Dependencies/jes_AnaheimResources.dat:
+        - fb274600
+        - fb284600
+        - fb294600
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_08/Anaheim_Day.thumb.jpg.a27d13364f26cb830b8368a6c89eb9cb.jpg
+    uncompressed: 1228765
     url: https://community.simtropolis.com/files/file/35593-the-anaheim-citrus-packing-shed/
+    version: 1.0.0
   simtropolis/35618:
     assetId: simtropolis/35618-gibson-marble-manufacturing
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/GibsonMarbleMfg/IM$$3_5x2_jes_Gibson_Bldg_48d71359.SC4Lot:
+        78d7125b-18d7131a:
+          bulldoze: 321
+          capacity:
+            im: 126
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 9859c5f5
+          name: Gibson Marble Mfg
+          pollution: 7
+          pollutionRadius: 9
+          power: 8
+          water: 113
+          waterPollution: 5
+          waterPollutionRadius: 13
+          worth: 961
+      BSC/jestarr/GibsonMarbleMfg/jes_5x2_Gibson_Bldg_e8d9c04c.SC4Lot:
+        78d7125b-e8d9c04c:
+          bulldoze: 321
+          capacity:
+            im: 126
+          categories: landmarks,i-ht
+          cost: 4898
+          description: Marble makers extraordinaire!
+          flamability: 70
+          garbage: 4
+          label: Gibson Marble Mfg
+          menu: Landmarks
+          model: 9859c5f5
+          name: jes_Gibson_Bldg
+          pollution: 7
+          pollutionRadius: 9
+          power: 8
+          submenu: Industrial/Manufacture
+          water: 113
+          waterPollution: 5
+          waterPollutionRadius: 13
+          worth: 961
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol03
+      - jestarr/mega-props-vol08
+      - simgoober/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tGibson Marble Manufacturing\n</p>\n\n<p>\n\tHere you have Gibson Marble Manufacturing; makers of the best glass marbles possible.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: 4 x 3 tiles<br>\n\tBuilding style(s): Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>\n\tGrowth stage: 3<br>\n\tOccupants: IM, 126<br>\n\tBulldoze cost: $321<br>\n\tWorth: $961<br>\n\tConstruction Time: 32 days<br>\n\tMax. Fire Stage: 3<br>\n\tPower consumption:\_\_ \_8 MWh/month<br>\n\tWater consumption: 113 Gallons/month<br>\n\tAir pollution: 7 over 9 tiles<br>\n\tWater pollution: 5 over 13 tiles<br>\n\tGarbage pollution: 4 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 \"Rush Hour\" or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the below files are installed in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Essentials<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props JES Vol01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props JES Vol02<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol03<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol08<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - Misc Vol01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol 01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 02<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 03\n</p>\n\n<p>\n\tThe above files can be found at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d</a>.\n</p>\n\n<p>\n\t\_\_\_ jes_GibsonTextures.dat - included\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_GibsonMarbleManufacturing.zip
+    files:
+      - BSC/jestarr/GibsonMarbleMfg/IM$$3_5x2_jes_Gibson_Bldg_48d71359.SC4Lot
+      - BSC/jestarr/GibsonMarbleMfg/jes_5x2_Gibson_Bldg_e8d9c04c.SC4Lot
+      - BSC/jestarr/GibsonMarbleMfg/jes_GibsonTextures.dat
+      - BSC/jestarr/GibsonMarbleMfg/jes_Gibson_Bldg-0x5ad0e817_0x9859c5f5_0x30000.SC4Model
+      - Documentation/Readme_GibsonMarbleMfg/Images/Gibson_Day.jpg
+      - Documentation/Readme_GibsonMarbleMfg/Images/Gibson_Nite.jpg
+      - Documentation/Readme_GibsonMarbleMfg/Images/footer1.jpg
+      - Documentation/Readme_GibsonMarbleMfg/Images/logo.png
+      - Documentation/Readme_GibsonMarbleMfg/Styles/stylesheet.css
+      - Documentation/Readme_GibsonMarbleMfg/readme_template.html
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/Gibson_Day.jpg.ea464816475b5f9f9d2997d54e95e2f2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/Gibson_Nite.jpg.6cbb7a8f285c5308b39dd5843be7341c.jpg
     lastModified: 2023-09-14T00:30:17.000Z
+    lots:
+      BSC/jestarr/GibsonMarbleMfg/IM$$3_5x2_jes_Gibson_Bldg_48d71359.SC4Lot:
+        48d71359:
+          building: 18d7131a
+          density: high
+          name: IM$$3_5x2_jes_Gibson_Bldg
+          props:
+            - 10b9473c
+            - 10f5415d
+            - 11a94d80
+            - 123d2553
+            - 1390523c
+            - 18fc3299
+            - 1d4d0000
+            - 296f0000
+            - 2e39466d
+            - 2fcad47e
+            - 508204ba
+            - '50820633'
+            - 516736be
+            - 516736d0
+            - 550d72cc
+            - 703c6faf
+            - 70dcef6c
+            - 9164a187
+            - 92a81f9f
+            - 92a82205
+            - b042ce33
+            - b337b8c7
+            - b337b8c8
+            - b337b8c9
+            - b337b8ca
+            - ce2ce06e
+            - d045d16c
+            - d0f54159
+            - d285df69
+            - f0f54163
+            - f10dde71
+          size: 5x2
+          stage: 3
+          textures:
+            - fb761000
+            - fb864030
+            - fb864035
+            - fbd00000
+            - fbd20000
+      BSC/jestarr/GibsonMarbleMfg/jes_5x2_Gibson_Bldg_e8d9c04c.SC4Lot:
+        e8d9c04c:
+          building: e8d9c04c
+          name: jes_5x2_Gibson_Bldg
+          props:
+            - 10b9473c
+            - 10f5415d
+            - 11a94d80
+            - 123d2553
+            - 1390523c
+            - 18fc3299
+            - 1d4d0000
+            - 296f0000
+            - 2e39466d
+            - 2fcad47e
+            - 508204ba
+            - '50820633'
+            - 516736be
+            - 516736d0
+            - 550d72cc
+            - 703c6faf
+            - 70dcef6c
+            - 9164a187
+            - 92a81f9f
+            - 92a82205
+            - b042ce33
+            - b337b8c7
+            - b337b8c8
+            - b337b8c9
+            - b337b8ca
+            - ce2ce06e
+            - d045d16c
+            - d0f54159
+            - d285df69
+            - f0f54163
+            - f10dde71
+          size: 5x2
+          textures:
+            - fb761000
+            - fb864030
+            - fb864035
+            - fbd00000
+            - fbd20000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/jestarr/GibsonMarbleMfg/jes_Gibson_Bldg-0x5ad0e817_0x9859c5f5_0x30000.SC4Model:
+        - 9859c5f5
     name: Gibson Marble Manufacturing
+    sha256: 539068a332a01cf890ac2d1da3848c2a01e5ea0444ad83d5cd56aca8f7ad7baf
+    size: 789104
+    textures:
+      BSC/jestarr/GibsonMarbleMfg/jes_GibsonTextures.dat:
+        - fb761000
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/Gibson_Day.thumb.jpg.92628802cee51386443f48fb263a703a.jpg
+    uncompressed: 928885
     url: https://community.simtropolis.com/files/file/35618-gibson-marble-manufacturing/
+    version: 1.0.0
   simtropolis/35620:
     assetId: simtropolis/35620-take-a-whizz-brewing-company
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/Take-A-Whizz Brewing Company/Growable/IM$$3_6x4_jes_Take-A-Whizz Brewing Company_b211b0f3.SC4Lot:
+        b221b91a-52839dce:
+          bulldoze: 629
+          capacity:
+            im: 707
+          categories: i-ht
+          flamability: 70
+          garbage: 5
+          model: b2025c11
+          name: jes_Take-A-Whizz Brewing Company
+          pollution: 35
+          pollutionRadius: 9
+          power: 36
+          water: 535
+          waterPollution: 23
+          waterPollutionRadius: 13
+          worth: 4539
+      BSC/jestarr/Take-A-Whizz Brewing Company/Ploppable/jes_6x4_plop_Take-A-Whizz Brewing Company_c2839c8f.SC4Lot:
+        b221b91a-c2839c8f:
+          bulldoze: 629
+          capacity:
+            im: 707
+          categories: landmarks,i-ht
+          cost: 9598
+          description: Makers of the finest beer to delight your sims palate.
+          flamability: 70
+          garbage: 5
+          label: Take-A-Whizz Brewing Company
+          menu: Landmarks
+          model: b2025c11
+          name: jes_Take-A-Whizz Brewing Company
+          pollution: 35
+          pollutionRadius: 9
+          power: 36
+          submenu: Industrial/Manufacture
+          water: 535
+          waterPollution: 23
+          waterPollutionRadius: 13
+          worth: 4539
+      CAM/Take-A-Whizz Brewing Company/IM$$6_6x4_jes_Take-A-Whizz Brewing Company_b2839de9.SC4Lot:
+        b221b91a-52839dce:
+          bulldoze: 629
+          capacity:
+            im: 707
+          categories: i-ht
+          flamability: 70
+          garbage: 5
+          model: b2025c11
+          name: jes_Take-A-Whizz Brewing Company
+          pollution: 35
+          pollutionRadius: 9
+          power: 36
+          water: 535
+          waterPollution: 23
+          waterPollutionRadius: 13
+          worth: 4539
     category: 103-industrial
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tUploaded the correct non-<abbr title=\"Colossus Addon Mod\">CAM</abbr> zip file. There's actually something in it this time.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Take-A-Whizz Brewing Company.zip
+    files:
+      - BSC/BSCProps/jes_Take-A-Whizz Brewing Company-0x5ad0e817_0xb2025c11_0x30000.SC4Model
+      - BSC/BSCProps/jes_WhizzResource.dat
+      - BSC/jestarr/Take-A-Whizz Brewing Company/Growable/IM$$3_6x4_jes_Take-A-Whizz Brewing Company_b211b0f3.SC4Lot
+      - BSC/jestarr/Take-A-Whizz Brewing Company/Ploppable/jes_6x4_plop_Take-A-Whizz Brewing Company_c2839c8f.SC4Lot
+      - CAM/Take-A-Whizz Brewing Company/IM$$6_6x4_jes_Take-A-Whizz Brewing Company_b2839de9.SC4Lot
+      - Documentation/Images/Whizz-Day.png
+      - Documentation/Images/Whizz-Nite.png
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/logo.png
+      - Documentation/Readme_Whizz.html
+      - Documentation/Styles/stylesheet.css
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/Whizz-Day.jpg.c2b3256b61d43e9de25a9ae0a5dd15e3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/Whizz-Nite.jpg.9e76f2f0f69ffd0cf5cbd7d7ce9835a6.jpg
     lastModified: 2023-10-18T01:42:06.000Z
+    lots:
+      BSC/jestarr/Take-A-Whizz Brewing Company/Growable/IM$$3_6x4_jes_Take-A-Whizz Brewing Company_b211b0f3.SC4Lot:
+        b211b0f3:
+          building: 52839dce
+          density: high
+          name: IM$$3_6x4_jes_Take-A-Whizz Brewing Company
+          props:
+            - 0e897d70
+            - 0f559525
+            - '10472031'
+            - 11c0455a
+            - 1ece0000
+            - 2fb08788
+            - 3284c356
+            - 3288ef66
+            - 336d9dae
+            - 39191bf1
+            - 505eb2df
+            - 516736be
+            - 536d9d93
+            - 53f966ad
+            - 5fb0b757
+            - 5fb0b895
+            - 5fb0b8a2
+            - 6f244a23
+            - 7047d4b8
+            - 705eb290
+            - 71c81dc8
+            - 71d53688
+            - 79191c36
+            - 8e8b0b75
+            - 8f0bbbb8
+            - 8fcc7807
+            - 905eb2b7
+            - 9a5a850d
+            - af14e41d
+            - afac789f
+            - b0a823f5
+            - b288ef77
+            - d048a1c7
+            - d05eb239
+            - d1d29194
+            - ef701548
+            - f04607bb
+            - f0473b81
+            - f1c01c42
+          size: 6x4
+          stage: 3
+          textures:
+            - 35ea4350
+            - fb722000
+            - fb722005
+            - fb722020
+            - fb745000
+            - fb764385
+            - fb764390
+            - fb864050
+            - fbd00000
+            - fbd10000
+            - fbd20000
+      BSC/jestarr/Take-A-Whizz Brewing Company/Ploppable/jes_6x4_plop_Take-A-Whizz Brewing Company_c2839c8f.SC4Lot:
+        c2839c8f:
+          building: c2839c8f
+          name: jes_6x4_plop_Take-A-Whizz Brewing Company
+          props:
+            - 0e897d70
+            - 0f559525
+            - '10472031'
+            - 11c0455a
+            - 2fb08788
+            - 3284c356
+            - 3288ef66
+            - 336d9dae
+            - 39191bc9
+            - 505eb2df
+            - 516736be
+            - 536d9d93
+            - 53f966ad
+            - 5fb0b757
+            - 5fb0b895
+            - 5fb0b8a2
+            - 6f244a23
+            - 7047d4b8
+            - 705eb290
+            - 71c81dc8
+            - 71d53688
+            - 79191c36
+            - 8e8b0b75
+            - 8f0bbbb8
+            - 8fcc7807
+            - 905eb2b7
+            - 9a5a850d
+            - af14e41d
+            - afac789f
+            - b0a823f5
+            - b288ef77
+            - d048a1c7
+            - d05eb239
+            - d1d29194
+            - ef701548
+            - f04607bb
+            - f0473b81
+            - f1c01c42
+          size: 6x4
+          textures:
+            - 35ea4350
+            - fb722000
+            - fb722005
+            - fb745000
+            - fb764380
+            - fb764390
+            - fb864050
+            - fbd00000
+            - fbd10000
+            - fbd20000
+      CAM/Take-A-Whizz Brewing Company/IM$$6_6x4_jes_Take-A-Whizz Brewing Company_b2839de9.SC4Lot:
+        b2839de9:
+          building: 52839dce
+          density: high
+          name: IM$$6_6x4_jes_Take-A-Whizz Brewing Company
+          props:
+            - 0e897d70
+            - 0f559525
+            - '10472031'
+            - 11c0455a
+            - 1ece0000
+            - 2fb08788
+            - 3284c356
+            - 3288ef66
+            - 336d9dae
+            - 39191bf1
+            - 505eb2df
+            - 516736be
+            - 536d9d93
+            - 53f966ad
+            - 5fb0b757
+            - 5fb0b895
+            - 5fb0b8a2
+            - 6f244a23
+            - 7047d4b8
+            - 705eb290
+            - 71c81dc8
+            - 71d53688
+            - 79191c36
+            - 8e8b0b75
+            - 8f0bbbb8
+            - 8fcc7807
+            - 905eb2b7
+            - 9a5a850d
+            - af14e41d
+            - afac789f
+            - b0a823f5
+            - b288ef77
+            - d048a1c7
+            - d05eb239
+            - d1d29194
+            - ef701548
+            - f04607bb
+            - f0473b81
+            - f1c01c42
+          requirements:
+            cam: true
+          size: 6x4
+          stage: 6
+          textures:
+            - 35ea4350
+            - fb722000
+            - fb722005
+            - fb722020
+            - fb745000
+            - fb764385
+            - fb764390
+            - fb864050
+            - fbd00000
+            - fbd10000
+            - fbd20000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/BSCProps/jes_Take-A-Whizz Brewing Company-0x5ad0e817_0xb2025c11_0x30000.SC4Model:
+        - b2025c11
+      BSC/BSCProps/jes_WhizzResource.dat:
+        - 9207ba88
+        - 9207bb38
+        - d2038db8
     name: Take-A-Whizz Brewing Company
+    props:
+      BSC/BSCProps/jes_WhizzResource.dat:
+        b221b91a-3284c356:
+          model: d2038db8
+          name: jes_RiverBirch
+        b221b91a-3288ef66:
+          model: 9207bb38
+          name: jes_DeliveryTruck_Empty
+        b221b91a-b288ef77:
+          model: 9207ba88
+          name: jes_DeliveryTruck_Loaded
+    sha256: 9ec4c498c93976d160c4d4ab8a118e228482196ee02700eeb1f953c97e1b83e6
+    size: 1607249
+    textures:
+      BSC/BSCProps/jes_WhizzResource.dat:
+        - fb722000
+        - fb722005
+        - fb72200a
+        - fb722010
+        - fb722015
+        - fb722020
+        - fb722025
+        - fb864050
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/Whizz-Day.thumb.jpg.59c1bbff820e0eca73e49e7433506d2e.jpg
+    uncompressed: 1862333
     url: https://community.simtropolis.com/files/file/35620-take-a-whizz-brewing-company/
+    version: 1.0.1
   simtropolis/35633:
     assetId: simtropolis/35633-1x1-dirty-industrials
     authors:
@@ -9276,38 +9928,932 @@ assets:
     assetId: simtropolis/35687-jes_russianpaperfactory
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/RussianPaperFactory/Growable/IM$$3_7x4_jes_RussianPaperFactory_82ad13f1.SC4Lot:
+        32ab1e4d-12ad13b7:
+          bulldoze: 545
+          capacity:
+            im: 902
+          categories: i-ht
+          flamability: 70
+          garbage: 6
+          model: 922bd63e
+          name: jes_RussianPaperFactory
+          pollution: 40
+          pollutionRadius: 9
+          power: 41
+          water: 604
+          waterPollution: 26
+          waterPollutionRadius: 13
+          worth: 5127
+      BSC/jestarr/RussianPaperFactory/Ploppable/jes_7x4_plop_RussianPaperFactory_82ad1620.SC4Lot:
+        32ab1e4d-82ad1620:
+          bulldoze: 545
+          capacity:
+            im: 902
+          categories: landmarks,i-ht
+          cost: 8316
+          description: This building was made by a Typing Monkey
+          flamability: 70
+          garbage: 6
+          label: jes_RussianPaperFactory
+          menu: Landmarks
+          model: 922bd63e
+          name: jes_RussianPaperFactory
+          pollution: 40
+          pollutionRadius: 9
+          power: 41
+          submenu: Industrial/Manufacture
+          water: 604
+          waterPollution: 26
+          waterPollutionRadius: 13
+          worth: 5127
+      CAM/jestarr/RussianPaperFactory/IM$$7_7x4_jes_RussianPaperFactory_72ad23a7.SC4Lot:
+        32ab1e4d-72ad237f:
+          bulldoze: 545
+          capacity:
+            im: 902
+          categories: i-ht
+          flamability: 70
+          garbage: 6
+          model: 922bd63e
+          name: jes_RussianPaperFactory
+          pollution: 40
+          pollutionRadius: 9
+          power: 41
+          water: 604
+          waterPollution: 26
+          waterPollutionRadius: 13
+          worth: 5127
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol03
+      - jestarr/mega-props-vol04
+      - jestarr/mega-props-vol06
+      - jestarr/mega-props-vol07
+      - jestarr/mega-props-vol09
+      - simgoober/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThe Russian Paper Factory\n</p>\n\n<p>\n\tMakers of high-grade paper for all your printing and packaging needs.<br>\n\tThis comes as a standard IM$$3 growable, an IM$$7 <abbr title=\"Colossus Addon Mod\">CAM</abbr> growable<br>\n\tand as a ploppable lot with jobs.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: \_\_ \_7 x 4 tiles<br>\n\tBuilding style(s): \_\_ \_Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing, BTE: <abbr title=\"Colossus Addon Mod\">CAM</abbr>-Stage7 - Manufacturing<br>\n\tGrowth stage: \_\_ \_3 &amp; 7<br>\n\tMenu position: \_\_ \_Landmark<br>\n\tOccupants: \_\_ \_853 - IM<br>\n\tBulldoze cost: \_\_ \_$545<br>\n\tBuilding Value: \_\_ \_$4,982<br>\n\tConstruction Time: \_\_ \_[Number] days<br>\n\tMax. Fire Stage: \_\_ \_4<br>\n\tPower consumption: \_\_ \_40 MWh/month<br>\n\tWater consumption: \_\_ \_587 Gallons/month<br>\n\tAir pollution: \_\_ \_39 over 9 tiles<br>\n\tWater pollution: \_\_ \_26 over 13 tiles<br>\n\tGarbage pollution: \_\_ \_6 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 \"Rush Hour\" or<br>\n\tSimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file in your plugins folder. The readme file and<br>\n\timages should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install, simply bulldoze the lot in your cities and delete the files<br>\n\tfrom the plugins folder afterward.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are<br>\n\tinstalled in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - Misc Vol02 v3<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol01<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol02<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol03<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol04<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol06<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol07<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol09<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol01_v2<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 02\n</p>\n\n<p>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/</a>.\n</p>\n\n<p>\n\t\_\_\_ • Colossus Addon Mod 2.1.0a Windows Installer v2 [only for the IM$$7 version]\n</p>\n\n<p>\n\tThe above file is available\_ at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem/</a>.\n</p>\n\n<p>\n\t\_\_\_ • jes_RussianFactoryResource.dat [included]\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: RussianPaperFactory.zip
+    files:
+      - BSC/BSCProps/jes_RussianFactoryResource.dat
+      - BSC/BSCProps/jes_RussianPaperFactory-0x5ad0e817_0x922bd63e_0x30000.SC4Model
+      - BSC/jestarr/RussianPaperFactory/Growable/IM$$3_7x4_jes_RussianPaperFactory_82ad13f1.SC4Lot
+      - BSC/jestarr/RussianPaperFactory/Ploppable/jes_7x4_plop_RussianPaperFactory_82ad1620.SC4Lot
+      - CAM/jestarr/RussianPaperFactory/IM$$7_7x4_jes_RussianPaperFactory_72ad23a7.SC4Lot
+      - Documentation/Images/RussianPaperFactory_Front_Day.png
+      - Documentation/Images/RussianPaperFactory_Front_Nite.png
+      - Documentation/Images/RussianPaperFactory_Rear_Day.png
+      - Documentation/Images/RussianPaperFactory_Rear_Nite.png
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/logo.png
+      - Documentation/Readme_RussianPaperFactory.html
+      - Documentation/Styles/stylesheet.css
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/RussianPaperFactory_Front.jpg.8854760a8a9eccfcf8a5bc48d44554b6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/RussianPaperFactory_Rear.jpg.f16ffdd77636c351dbe6507406d2dc05.jpg
     lastModified: 2023-10-18T01:31:07.000Z
+    lots:
+      BSC/jestarr/RussianPaperFactory/Growable/IM$$3_7x4_jes_RussianPaperFactory_82ad13f1.SC4Lot:
+        82ad13f1:
+          building: 12ad13b7
+          density: high
+          name: IM$$3_7x4_jes_RussianPaperFactory
+          props:
+            - 11c0455a
+            - 11c04f3f
+            - 123d2553
+            - 12b05746
+            - 18fc3299
+            - 1920db2b
+            - 1920dd8c
+            - '1920e457'
+            - 1920ec1b
+            - 1dfa0000
+            - 1ece0000
+            - 1ecf0000
+            - 1ed70000
+            - 1eda0000
+            - 296f0000
+            - 350e978c
+            - 39191bc9
+            - 39191bf1
+            - 39210a8e
+            - 508216a4
+            - 516736d0
+            - 52b0575f
+            - 54f98b12
+            - 5921010a
+            - 7082164a
+            - 71d53688
+            - 768e40ab
+            - 92a82205
+            - 92ab096a
+            - 9682432e
+            - ae09ccc7
+            - b2705ef5
+            - b6824369
+            - d285df69
+            - d50e9f39
+            - f0cedd16
+            - f1c01c42
+          size: 7x4
+          stage: 3
+          textures:
+            - 252b2000
+            - 35ea4300
+            - fb745000
+            - fb75410a
+            - fb754110
+            - fb75411a
+            - fb754120
+            - fb75412a
+            - fb754130
+            - fb764385
+            - fb764390
+            - fbd00000
+            - fbd10000
+            - fbd20000
+      BSC/jestarr/RussianPaperFactory/Ploppable/jes_7x4_plop_RussianPaperFactory_82ad1620.SC4Lot:
+        82ad1620:
+          building: 82ad1620
+          name: jes_7x4_plop_RussianPaperFactory
+          props:
+            - 11c0455a
+            - 11c04f3f
+            - 123d2553
+            - 12b05746
+            - 18fc3299
+            - 1920db2b
+            - 1920dd8c
+            - '1920e457'
+            - 1920ec1b
+            - 1dfa0000
+            - 1ece0000
+            - 1ecf0000
+            - 1ed70000
+            - 1eda0000
+            - 296f0000
+            - 350e978c
+            - 39191bc9
+            - 39191bf1
+            - 39210a8e
+            - 508216a4
+            - 516736d0
+            - 52b0575f
+            - 54f98b12
+            - 5921010a
+            - 7082164a
+            - 71d53688
+            - 768e40ab
+            - 9164a187
+            - 92a82205
+            - 92ab096a
+            - 9682432e
+            - ae09ccc7
+            - b2705ef5
+            - b6824369
+            - d285df69
+            - d50e9f39
+            - f0cedd16
+            - f1c01c42
+          size: 7x4
+          textures:
+            - 252b2000
+            - 35ea4300
+            - fb745000
+            - fb75410a
+            - fb754110
+            - fb75411a
+            - fb754120
+            - fb75412a
+            - fb754130
+            - fb764385
+            - fb764390
+            - fbd00000
+            - fbd10000
+            - fbd20000
+      CAM/jestarr/RussianPaperFactory/IM$$7_7x4_jes_RussianPaperFactory_72ad23a7.SC4Lot:
+        72ad23a7:
+          building: 12ad13b7
+          density: high
+          name: IM$$7_7x4_jes_RussianPaperFactory
+          props:
+            - 11c0455a
+            - 11c04f3f
+            - 123d2553
+            - 12b05746
+            - 18fc3299
+            - 1920db2b
+            - 1920dd8c
+            - '1920e457'
+            - 1920ec1b
+            - 1dfa0000
+            - 1ece0000
+            - 1ecf0000
+            - 1ed70000
+            - 1eda0000
+            - 296f0000
+            - 350e978c
+            - 39191bc9
+            - 39191bf1
+            - 39210a8e
+            - 508216a4
+            - 516736d0
+            - 52b0575f
+            - 54f98b12
+            - 5921010a
+            - 7082164a
+            - 71d53688
+            - 768e40ab
+            - 92a82205
+            - 92ab096a
+            - 9682432e
+            - ae09ccc7
+            - b2705ef5
+            - b6824369
+            - d285df69
+            - d50e9f39
+            - f0cedd16
+            - f1c01c42
+          requirements:
+            cam: true
+          size: 7x4
+          stage: 7
+          textures:
+            - 35ea4300
+            - fb745000
+            - fb75410a
+            - fb754110
+            - fb75411a
+            - fb754120
+            - fb75412a
+            - fb754130
+            - fb764385
+            - fb764390
+            - fbd00000
+            - fbd10000
+            - fbd20000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/BSCProps/jes_RussianFactoryResource.dat:
+        - 3229d635
+        - 922f2357
+        - d22f228d
+        - f22f23ef
+      BSC/BSCProps/jes_RussianPaperFactory-0x5ad0e817_0x922bd63e_0x30000.SC4Model:
+        - 922bd63e
     name: jes_RussianPaperFactory
+    props:
+      BSC/BSCProps/jes_RussianFactoryResource.dat:
+        32ab1e4d-12b05728:
+          model: f22f23ef
+          name: jes_48x_BoxesOnPallet_45D
+        32ab1e4d-12b05746:
+          model: 922f2357
+          name: jes_48x_BoxesOnPallet_22.5D
+        32ab1e4d-52b0575f:
+          model: d22f228d
+          name: jes_48x_BoxesOnPallet
+        b2a60f97-92ab096a:
+          model: 3229d635
+          name: jes_LoadingRamp
+    sha256: 252748ced460c7080d95ffdd9ddc7350394e4de466c3c8e7ca61a9b989b30cb2
+    size: 2241379
+    textures:
+      BSC/BSCProps/jes_RussianFactoryResource.dat:
+        - fb754100
+        - fb754105
+        - fb75410a
+        - fb754110
+        - fb754115
+        - fb75411a
+        - fb754120
+        - fb754125
+        - fb75412a
+        - fb754130
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/RussianPaperFactory_Front.thumb.jpg.55d00b60d15d9263a4fcac9612d51b21.jpg
+    uncompressed: 2567215
     url: https://community.simtropolis.com/files/file/35687-jes_russianpaperfactory/
+    version: 1.0.1
   simtropolis/35688:
     assetId: simtropolis/35688-englehardtshirtfactory
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/EnglehardtShirtFactory/IM$$3-Regular Version/IM$$3_16x3_jes_EnglehardtShirtFactory_f3f323d8.SC4Lot:
+        d2c27f89-f3f3229c:
+          bulldoze: 542
+          capacity:
+            im: 2029
+          categories: i-ht
+          flamability: 70
+          garbage: 10
+          model: 53ed4710
+          name: Englehardt Shirt Factory
+          pollution: 60
+          pollutionRadius: 9
+          power: 61
+          water: 907
+          waterPollution: 40
+          waterPollutionRadius: 13
+          worth: 7683
+      BSC/jestarr/EnglehardtShirtFactory/IM$$8-CAM Version/IM$$8_16x3_Englehardt Shirt Factory_44695a58.SC4Lot:
+        d2c27f89-94695a29:
+          bulldoze: 542
+          capacity:
+            im: 2029
+          categories: i-ht
+          flamability: 70
+          garbage: 10
+          model: 53ed4710
+          name: Englehardt Shirt Factory
+          pollution: 60
+          pollutionRadius: 9
+          power: 61
+          water: 907
+          waterPollution: 40
+          waterPollutionRadius: 13
+          worth: 7683
+      BSC/jestarr/EnglehardtShirtFactory/Ploppable Version/jes_16x3_EnglehardtShirtFactory_f3f036d2.SC4Lot:
+        d2c27f89-f3f036d2:
+          bulldoze: 100
+          capacity:
+            im: 2029
+          categories: landmarks,i-ht
+          cost: 100
+          description: If it has sleeves, Englehardt makes it..
+          flamability: 70
+          garbage: 10
+          label: Englehardt Shirt Factory
+          menu: Landmarks
+          model: 53ed4710
+          name: jes_EnglehardtShirtFactory_LM
+          pollution: 60
+          pollutionRadius: 9
+          power: 61
+          submenu: Industrial/Manufacture
+          water: 907
+          waterPollution: 40
+          waterPollutionRadius: 13
+          worth: 7683
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol04
+      - jestarr/mega-props-vol05
+      - simgoober/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tEnglehardt Shirt Factory\n</p>\n\n<p>\n\t<br>\n\tHere you have the Englehardt Shirt Factory - If it has sleeves, Englehardt<br>\n\tmakes it. This comes as an IM$$3 regular growable, an IM$$8 <abbr title=\"Colossus Addon Mod\">CAM</abbr> growable<br>\n\tand as a plop. All are BTE enabled for industrial manufacturing and clothing<br>\n\tand will contribute to those reward chains. The lot was designed to be on a<br>\n\tcanal or waterway and looks best that way, however it's not necessary. Canal<br>\n\tprops weren't added, so you can use the canal version of your choice, if you<br>\n\twish.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: 16 x 3 tiles<br>\n\tBuilding style(s): Building: Industrial, Building: IM, Industry: Anchor,<br>\n\tBTE: Ind - Manufacturing, BTE: IM - Clothing, BTE: <abbr title=\"Colossus Addon Mod\">CAM</abbr>-Stage8 - Manufacturing<br>\n\tGrowth stage: 3 &amp; 8<br>\n\tMenu position: Landmarks<br>\n\tOccupants: IM$$ - 2,029<br>\n\tBulldoze cost: $542<br>\n\tBuilding Value: $7,683<br>\n\tConstruction Time: 54 days<br>\n\tMax. Fire Stage: 4<br>\n\tPower consumption: 61 MWh/month<br>\n\tWater consumption: 907 Gallons/month<br>\n\tAir pollution: 60 over 9 tiles<br>\n\tWater pollution: 40 over 13 tiles<br>\n\tGarbage pollution: 10 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour”<br>\n\tor SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme<br>\n\tfile and images should be moved to a separate folder or deleted.\n</p>\n\n<p>\n\tTo uninstall the files, simply bulldoze every lot from this download in your<br>\n\tcities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are<br>\n\tinstalled in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol01<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol02<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol04<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol05<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - SG Vol01_v2<br>\n\t\_\_\_ <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures vol03_v3\n</p>\n\n<p>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/.</a>\n</p>\n\n<p>\n\t\_\_\_ Colossus Addon Mod 2.1.0a Windows Installer v2 [only for the IM$$8 version]\n</p>\n\n<p>\n\tThe above file is available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem/.</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_EnglehardtShirtFactory.zip
+    files:
+      - BSC/jestarr/EnglehardtShirtFactory/IM$$3-Regular Version/IM$$3_16x3_jes_EnglehardtShirtFactory_f3f323d8.SC4Lot
+      - BSC/jestarr/EnglehardtShirtFactory/IM$$8-CAM Version/IM$$8_16x3_Englehardt Shirt Factory_44695a58.SC4Lot
+      - BSC/jestarr/EnglehardtShirtFactory/Ploppable Version/jes_16x3_EnglehardtShirtFactory_f3f036d2.SC4Lot
+      - BSC/jestarr/EnglehardtShirtFactory/jes_EnglehardtShirtFactory-0x5ad0e817_0x53ed4710_0x3000.SC4Model
+      - Documentation/EnglehardtShirtFactory.html
+      - Documentation/Images/Englehardt_Day.jpg
+      - Documentation/Images/Englehardt_Nite.jpg
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/logo.png
+      - Documentation/Styles/stylesheet.css
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/Englehardt_Day.jpg.62be192825bcc70fdbb83319935b5c2f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/Englehardt_Nite.jpg.dace5c20f90e93a7cc02e31f407709e2.jpg
     lastModified: 2023-10-16T00:38:21.000Z
+    lots:
+      BSC/jestarr/EnglehardtShirtFactory/IM$$3-Regular Version/IM$$3_16x3_jes_EnglehardtShirtFactory_f3f323d8.SC4Lot:
+        f3f323d8:
+          building: f3f3229c
+          density: medium,high
+          name: IM$$3_16x3_jes_EnglehardtShirtFactory
+          props:
+            - 10f5415d
+            - 123d2553
+            - 13f0a524
+            - 1d4d0000
+            - '1e360000'
+            - '1e380000'
+            - '1e390000'
+            - 1e3a0000
+            - '1e940000'
+            - 1ecf0000
+            - '28340000'
+            - 283a0000
+            - 283c0000
+            - 296f0000
+            - 2fcc5449
+            - 300c7c9d
+            - 30a0577d
+            - 30a057be
+            - 50a05648
+            - 50a05751
+            - 53f1a6d5
+            - 53f1a6f2
+            - 70a05767
+            - 71d53688
+            - 89f00000
+            - 8fcc5431
+            - 900c7c04
+            - 90a0579e
+            - 90a05999
+            - 90f54168
+            - 90f5416c
+            - b0a0561c
+            - b0a057e2
+            - b0a823f5
+            - d00c7a3d
+            - d00c7c73
+            - d0a05739
+            - d0f54159
+            - d3e74486
+            - f0a0571e
+            - f0f54163
+          size: 16x3
+          stage: 3
+          textures:
+            - 258d1000
+            - 25c11000
+            - fb744045
+            - fb744050
+            - fb744055
+            - fb744060
+            - fb744070
+            - fb744075
+            - fb744080
+            - fb744085
+            - fb744095
+      BSC/jestarr/EnglehardtShirtFactory/IM$$8-CAM Version/IM$$8_16x3_Englehardt Shirt Factory_44695a58.SC4Lot:
+        44695a58:
+          building: f3f036d2
+          density: high
+          name: IM$$8_16x3_Englehardt Shirt Factory
+          props:
+            - 10f5415d
+            - 123d2553
+            - 13f0a524
+            - 1d4d0000
+            - '1e360000'
+            - '1e380000'
+            - '1e390000'
+            - 1e3a0000
+            - '1e940000'
+            - 1ecf0000
+            - '28340000'
+            - 283a0000
+            - 283c0000
+            - 296f0000
+            - 2fcc5449
+            - 300c7c9d
+            - 30a0577d
+            - 30a057be
+            - 50a05648
+            - 50a05751
+            - 53f1a6d5
+            - 53f1a6f2
+            - 70a05767
+            - 71d53688
+            - 89f00000
+            - 8fcc5431
+            - 900c7c04
+            - 90a0579e
+            - 90a05999
+            - 90f54168
+            - 90f5416c
+            - b0a0561c
+            - b0a057e2
+            - b0a823f5
+            - d00c7a3d
+            - d00c7c73
+            - d0a05739
+            - d0f54159
+            - d3e74486
+            - f0a0571e
+            - f0f54163
+          requirements:
+            cam: true
+          size: 16x3
+          stage: 8
+          textures:
+            - 258d1000
+            - 25c11000
+            - fb744045
+            - fb744050
+            - fb744055
+            - fb744060
+            - fb744070
+            - fb744075
+            - fb744080
+            - fb744085
+            - fb744095
+      BSC/jestarr/EnglehardtShirtFactory/Ploppable Version/jes_16x3_EnglehardtShirtFactory_f3f036d2.SC4Lot:
+        f3f036d2:
+          building: f3f036d2
+          name: jes_16x3_EnglehardtShirtFactory
+          props:
+            - 10f5415d
+            - 123d2553
+            - 13f0a524
+            - 1d4d0000
+            - '1e360000'
+            - '1e380000'
+            - '1e390000'
+            - 1e3a0000
+            - '1e940000'
+            - 1ecf0000
+            - '28340000'
+            - 283a0000
+            - 283c0000
+            - 296f0000
+            - 2fcc5449
+            - 300c7c9d
+            - 30a0577d
+            - 30a057be
+            - 50a05648
+            - 50a05751
+            - 53f1a6d5
+            - 53f1a6f2
+            - 70a05767
+            - 71d53688
+            - 89f00000
+            - 8fcc5431
+            - 900c7c04
+            - 90a0579e
+            - 90a05999
+            - 90f54168
+            - 90f5416c
+            - b0a0561c
+            - b0a057e2
+            - b0a823f5
+            - d00c7a3d
+            - d00c7c73
+            - d0a05739
+            - d0f54159
+            - d3e74486
+            - f0a0571e
+            - f0f54163
+          size: 16x3
+          textures:
+            - 258d1000
+            - 25c11000
+            - fb744045
+            - fb744050
+            - fb744055
+            - fb744060
+            - fb744070
+            - fb744075
+            - fb744080
+            - fb744085
+            - fb744095
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/jestarr/EnglehardtShirtFactory/jes_EnglehardtShirtFactory-0x5ad0e817_0x53ed4710_0x3000.SC4Model:
+        - 53ed4710
     name: EnglehardtShirtFactory
+    sha256: 28dcea6e0f48fec486d6ac9a79760b44f36ae9339f12e4fff352e0c2980eeeed
+    size: 2621036
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/Englehardt_Day.thumb.jpg.6f3132b13130f47e6ee3e775274ab102.jpg
+    uncompressed: 3249753
     url: https://community.simtropolis.com/files/file/35688-englehardtshirtfactory/
+    version: 1.0.0
   simtropolis/35704:
     assetId: simtropolis/35704-acmetirerecappers
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/ACMETireRecappers/Growable/IM$$2_3x4_jes_ACMETireRecappers_c2bfbb30.SC4Lot:
+        32ab1e4d-92bfbb1d:
+          bulldoze: 217
+          capacity:
+            im: 110
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 923e5afe
+          name: jes_ACMETireRecappers
+          pollution: 6
+          pollutionRadius: 9
+          power: 7
+          water: 99
+          waterPollution: 4
+          waterPollutionRadius: 13
+          worth: 839
+      BSC/jestarr/ACMETireRecappers/Ploppable/jes_3x4_plop_ACMETireRecappers_c2bf927a.SC4Lot:
+        32ab1e4d-c2bf927a:
+          bulldoze: 217
+          capacity:
+            im: 110
+          categories: landmarks,i-ht
+          cost: 3310
+          description: ACME Tire Recappers
+          flamability: 70
+          garbage: 4
+          label: jes_ACMETireRecappers
+          menu: Landmarks
+          model: 923e5afe
+          name: jes_ACMETireRecappers
+          pollution: 6
+          pollutionRadius: 9
+          power: 7
+          submenu: Industrial/Manufacture
+          water: 99
+          waterPollution: 4
+          waterPollutionRadius: 13
+          worth: 839
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tACME Tire — Recapping tires of all sizes. This comes as an IM$$2 growable and as a plop.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: 3 x 4 tiles<br>\n\tBuilding style(s): Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>\n\tGrowth stage: 2<br>\n\tMenu position: Landmarks<br>\n\tOccupants: 110 – IM<br>\n\tBulldoze cost: $217<br>\n\tBuilding Value: $839<br>\n\tConstruction Time: 21 days<br>\n\tMax. Fire Stage: 3<br>\n\tPower consumption: 7 MWh/month<br>\n\tWater consumption: 99 Gallons/month<br>\n\tAir pollution: 6 over 9 tiles<br>\n\tWater pollution: 4 over 13 tiles<br>\n\tGarbage pollution: 4 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ • BSCMegaProps - JES Vol01<br>\n\t\_\_\_ • BSCMegaProps - JES Vol02<br>\n\t\_\_\_ • BSCMegaProps - JES Vol05<br>\n\t\_\_\_ • BSCMegaProps - JES Vol06<br>\n\t\_\_\_ • BSCMegaProps - JES Vol09<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 02\n</p>\n\n<p>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/</a>.\n</p>\n\n<p>\n\t\_\_\_ • jes_ACMETireRecappersResource.dat [included]\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_ACMETireRecappers.zip
+    files:
+      - BSC/jestarr/ACMETireRecappers/Growable/IM$$2_3x4_jes_ACMETireRecappers_c2bfbb30.SC4Lot
+      - BSC/jestarr/ACMETireRecappers/Ploppable/jes_3x4_plop_ACMETireRecappers_c2bf927a.SC4Lot
+      - BSCProps/jes_ACMETireRecappers-0x5ad0e817_0x923e5afe_0x30000.SC4Model
+      - BSCProps/jes_ACMETireRecappersResource.dat
+      - Documentation/Images/ACMETire_Day.png
+      - Documentation/Images/ACMETire_Nite.png
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/logo.png
+      - Documentation/Readme_ACMETireRecappers.html
+      - Documentation/Styles/stylesheet.css
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/ACMETire_Day.jpg.8ea3df6922fd9eb4f438c55fd3508403.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/ACMETire_Nite.jpg.84b04e7e165e2b0b8becfa666b736850.jpg
     lastModified: 2023-10-26T17:13:33.000Z
+    lots:
+      BSC/jestarr/ACMETireRecappers/Growable/IM$$2_3x4_jes_ACMETireRecappers_c2bfbb30.SC4Lot:
+        c2bfbb30:
+          building: c2bf927a
+          density: high
+          name: IM$$2_3x4_jes_ACMETireRecappers
+          props:
+            - 123d2553
+            - 12bd628d
+            - 1920db2b
+            - 1920dd8c
+            - '1920e457'
+            - 29c20000
+            - 2fcc5449
+            - 39210a8e
+            - 54f98b12
+            - 5921010a
+            - 8fcc53b7
+            - 8fcc5431
+            - 8fcc7807
+            - afccbb08
+            - d2bfb071
+            - d3e74486
+            - f3c9d4a3
+          size: 3x4
+          stage: 2
+          textures:
+            - fb745000
+            - fb764385
+            - fb864030
+            - fb864035
+            - fbd10000
+      BSC/jestarr/ACMETireRecappers/Ploppable/jes_3x4_plop_ACMETireRecappers_c2bf927a.SC4Lot:
+        c2bf927a:
+          building: c2bf927a
+          name: jes_3x4_plop_ACMETireRecappers
+          props:
+            - 123d2553
+            - 12bd628d
+            - 1920db2b
+            - 1920dd8c
+            - '1920e457'
+            - 29c20000
+            - 2fcc5449
+            - 39210a8e
+            - 54f98b12
+            - 5921010a
+            - 8fcc53b7
+            - 8fcc5431
+            - 8fcc7807
+            - afccbb08
+            - d2bfb071
+            - d3e74486
+            - f3c9d4a3
+          size: 3x4
+          textures:
+            - fb745000
+            - fb764385
+            - fb864030
+            - fb864035
+            - fbd10000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSCProps/jes_ACMETireRecappers-0x5ad0e817_0x923e5afe_0x30000.SC4Model:
+        - 923e5afe
+      BSCProps/jes_ACMETireRecappersResource.dat:
+        - 123e7be6
+        - 723c2baf
+        - 723c2e1b
+        - 923c2c62
+        - d23c2f08
+        - d23e7ca5
+        - f23e7ae5
     name: ACMETireRecappers
+    props:
+      BSCProps/jes_ACMETireRecappersResource.dat:
+        32ab1e4d-12bd628d:
+          model: 723c2baf
+          name: jes_DeliveryTruck_TireLoad
+        32ab1e4d-52bfb080:
+          model: d23e7ca5
+          name: jes_DeliveryTruck_Empty_22.5R
+        32ab1e4d-72bfb093:
+          model: f23e7ae5
+          name: jes_DeliveryTruck_Empty_45D
+        32ab1e4d-92bd62a0:
+          model: d23c2f08
+          name: jes_DeliveryTruck_TireLoad_22.5DL
+        32ab1e4d-92bd62c5:
+          model: 923c2c62
+          name: jes_DeliveryTruck_TireLoad_45D
+        32ab1e4d-d2bd62b2:
+          model: 723c2e1b
+          name: jes_DeliveryTruck_TireLoad_22.5DR
+        32ab1e4d-d2bfb071:
+          model: 123e7be6
+          name: jes_DeliveryTruck_Empty_22.5L
+    sha256: a19528e9edccc0ebbd48d632215abf810210a413afade7565b1c05c5eed1d811
+    size: 2040645
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/ACMETire_Day.thumb.jpg.86a30d96a38158df9db9fbf6766539b9.jpg
+    uncompressed: 2243061
     url: https://community.simtropolis.com/files/file/35704-acmetirerecappers/
+    version: 1.0.0
   simtropolis/35768:
     assetId: simtropolis/35768-allied-printing
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/AlliedPrinting/Growable/IM$$2_3x3_jes_AlliedPrinting_62da6581.SC4Lot:
+        32ab1e4d-b2da656c:
+          bulldoze: 227
+          capacity:
+            im: 65
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: 525912b1
+          name: jes_AlliedPrinting
+          pollution: 3
+          pollutionRadius: 9
+          power: 4
+          water: 58
+          waterPollution: 2
+          waterPollutionRadius: 13
+          worth: 495
+      BSC/jestarr/AlliedPrinting/Ploppable/jes_3x3_plop_AlliedPrinting_326110b4.SC4Lot:
+        32ab1e4d-326110b4:
+          bulldoze: 227
+          capacity:
+            im: 65
+          categories: landmarks,i-ht
+          cost: 3464
+          description: Providing quality marketing materials from business cards and postcards, to stickers and labels, signage, packaging materials, and more.
+          flamability: 70
+          garbage: 4
+          label: jes_AlliedPrinting
+          menu: Landmarks
+          model: 525912b1
+          name: jes_AlliedPrinting
+          pollution: 3
+          pollutionRadius: 9
+          power: 4
+          submenu: Industrial/Manufacture
+          water: 58
+          waterPollution: 2
+          waterPollutionRadius: 13
+          worth: 495
     category: 103-industrial
+    dependencies:
+      - simtropolis/34163-agc-automobile-dlc
+      - simtropolis/35753-jes_resourcepack_vol27-v6
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol02
+      - jestarr/mega-props-vol05
+      - jestarr/mega-props-vol09
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAllied Printing\n</p>\n\n<p>\n\tProviding quality marketing materials from business cards and postcards, to stickers and labels, signage, packaging materials, and more. This comes as an IM$$2 growable and as a ploppable with jobs.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot Size: 3 x 3 tiles<br>\n\tBuilding Style(s): Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>\n\tGrowth Stage: 2<br>\n\tMenu Position: Landmarks<br>\n\tOccupants: IM – 65<br>\n\tBulldoze Cost: $227<br>\n\tBuilding Value: $495<br>\n\tConstruction Time: 22 days<br>\n\tMax. Fire Stage: 3<br>\n\tPower Consumption: 4 MWh/month<br>\n\tWater Consumption: 58 Gallons/month<br>\n\tAir Pollution: 3 over 9 tiles<br>\n\tWater Pollution: 2 over 13 tiles<br>\n\tGarbage Pollution: 4 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ •AGC Automobile DLC 6\n</p>\n\n<p>\n\t\_\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed183259517\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/34163-agc-automobile-dlc/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - Misc Vol02 v3<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol01<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol02<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol05<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol09<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol02<br>\n\t\_\_\_ •<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol03\n</p>\n\n<p>\n\tThe above file can be found at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack/\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/.</a>\n</p>\n\n<p>\n\t<br>\n\t\_\_\_ •jes_ResourcePack_Vol27\n</p>\n\n<p>\n\t\_\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed7702938448\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/35753-jes_resourcepack_vol27/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\t<br>\n\t\_\_\_ •R6_Prop Pack 2010_Vol2\n</p>\n\n<p>\n\tThe above file can be found at <a href=\"https://www.toutsimcities.com/downloads/view/1702\" rel=\"external nofollow\">https://www.toutsimcities.com/downloads/view/1702.</a>\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_AlliedPrinting.zip
+    files:
+      - BSC/jestarr/AlliedPrinting/Growable/IM$$2_3x3_jes_AlliedPrinting_62da6581.SC4Lot
+      - BSC/jestarr/AlliedPrinting/Ploppable/jes_3x3_plop_AlliedPrinting_326110b4.SC4Lot
+      - BSCProps/jes_AlliedPrinting-0x5ad0e817_0x525912b1_0x30000.SC4Model
+      - Documentation/Images/AlliedPrinting_Day.jpg
+      - Documentation/Images/AlliedPrinting_Nite.jpg
+      - Documentation/Images/footer1.jpg
+      - Documentation/Images/logo.png
+      - Documentation/Readme_AlliedPrinting.html
+      - Documentation/Styles/stylesheet.css
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_11/AlliedPrinting_Day.jpg.22defd6f24393f1d3d4ff9b85728eaa9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_11/AlliedPrinting_Nite.jpg.9c7edfa239095515acc7030c749409c2.jpg
     lastModified: 2023-11-16T02:02:14.000Z
+    lots:
+      BSC/jestarr/AlliedPrinting/Growable/IM$$2_3x3_jes_AlliedPrinting_62da6581.SC4Lot:
+        62da6581:
+          building: b2da656c
+          density: high
+          name: IM$$2_3x3_jes_AlliedPrinting
+          props:
+            - 11c0455a
+            - 11cbcfe8
+            - '12073343'
+            - '12073377'
+            - 1920ec1b
+            - 1e9a0000
+            - 29c20000
+            - 336d9dae
+            - 536d9d93
+            - 53f966ad
+            - 6f558d36
+            - 6fcc77a0
+            - 6fdb13ea
+            - 702bac4e
+            - 98eac2a5
+            - ae8c5d70
+            - b0a823f5
+            - b28bb0c7
+            - b2906288
+            - d207335b
+            - ef1174c9
+            - f1c01c42
+          size: 3x3
+          stage: 2
+          textures:
+            - fb23801a
+            - fb745000
+            - fb75412a
+            - fb754130
+            - fbd10000
+      BSC/jestarr/AlliedPrinting/Ploppable/jes_3x3_plop_AlliedPrinting_326110b4.SC4Lot:
+        326110b4:
+          building: 326110b4
+          name: jes_3x3_plop_AlliedPrinting
+          props:
+            - 11c0455a
+            - 11cbcfe8
+            - '12073343'
+            - '12073377'
+            - 1920ec1b
+            - 1e9a0000
+            - 29c20000
+            - 336d9dae
+            - 536d9d93
+            - 53f966ad
+            - 6f558d36
+            - 6fcc77a0
+            - 6fdb13ea
+            - 702bac4e
+            - 98eac2a5
+            - ae8c5d70
+            - b0a823f5
+            - b28bb0c7
+            - b2906288
+            - d207335b
+            - ef1174c9
+            - f1c01c42
+          size: 3x3
+          textures:
+            - fb23801a
+            - fb745000
+            - fb75412a
+            - fb754130
+            - fbd10000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSCProps/jes_AlliedPrinting-0x5ad0e817_0x525912b1_0x30000.SC4Model:
+        - 525912b1
     name: Allied Printing
+    sha256: ac23433964938218efa212b9978f661c8bd21c9731717169a61c0831ed11ca83
+    size: 782638
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_11/AlliedPrinting_Day.thumb.jpg.c810f663850a327ca869edbab3b698f9.jpg
+    uncompressed: 890670
     url: https://community.simtropolis.com/files/file/35768-allied-printing/
+    version: 1.0.0
   simtropolis/35792:
     assetId: simtropolis/35792-irm-expansions-and-addons-cam-edition
     authors:
@@ -9321,11 +10867,286 @@ assets:
     assetId: simtropolis/35892-delabarre-tap-and-die-hd
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/jes_Delabarre Tap and Die/Growable/IM$$3_3x5_jes_DelabarreTapandDie_HD_7294b6f5.SC4Lot:
+        32ab1e4d-530ec559:
+          bulldoze: 287
+          capacity:
+            im: 305
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: f28c4315
+          name: jes_DelabarreTapandDie_HD
+          pollution: 18
+          pollutionRadius: 9
+          power: 19
+          water: 274
+          waterPollution: 12
+          waterPollutionRadius: 13
+          worth: 2327
+      BSC/jestarr/jes_Delabarre Tap and Die/Ploppable/jes_3x5_plop_DelabarreTapandDie_HD_7294b588.SC4Lot:
+        32ab1e4d-7294b588:
+          bulldoze: 287
+          capacity:
+            im: 305
+          categories: landmarks,i-ht
+          cost: 4378
+          description: Makers of taps and dies in all sizes.
+          flamability: 70
+          garbage: 4
+          label: jes_DelabarreTapandDie
+          menu: Landmarks
+          model: f28c4315
+          name: jes_DelabarreTapandDie
+          pollution: 18
+          pollutionRadius: 9
+          power: 19
+          submenu: Industrial/Manufacture
+          water: 274
+          waterPollution: 12
+          waterPollutionRadius: 13
+          worth: 2327
+      CAM/jestarr/jes_Delabarre Tap and Die/IM$$5_3x5_jes_DelabarreTapandDie_HD_7294b863.SC4Lot:
+        32ab1e4d-d30e002d:
+          bulldoze: 287
+          capacity:
+            im: 305
+          categories: i-ht
+          flamability: 70
+          garbage: 4
+          model: f28c4315
+          name: jes_DelabarreTapandDie_HD
+          pollution: 18
+          pollutionRadius: 9
+          power: 19
+          water: 274
+          waterPollution: 12
+          waterPollutionRadius: 13
+          worth: 2327
     category: 103-industrial
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol01
+      - jestarr/mega-props-vol03
+      - jestarr/mega-props-vol04
+      - jestarr/mega-props-vol05
+      - jestarr/mega-props-vol08
+      - jestarr/mega-props-vol09
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tDelabarre Tap and Die HD\n</p>\n\n<p>\n\tMakers of taps and dies in all sizes. This comes as an IM$$3 growable, an IM$$5 <abbr title=\"Colossus Addon Mod\">CAM</abbr> growable and as a ploppable lot. All are BTE enabled for industrial reward chains.\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: \_\_ \_3 x 5 tiles<br>\n\tBuilding Style(s): \_\_ \_Building: Industrial, Building: IM, Industry: Anchor, BTE: Ind - Manufacturing<br>\n\tGrowth Stage: \_\_ \_3 and 5<br>\n\tMenu position: \_\_ \_Landmarks<br>\n\tOccupants: \_\_ \_305 - IM<br>\n\tBulldoze cost: \_\_ \_$287<br>\n\tBuilding Value: \_\_ \_$2,327<br>\n\tConstruction Time: \_\_ \_28 days<br>\n\tMax. Fire Stage: \_\_ \_4<br>\n\tPower consumption: \_\_ \_19 MWh/month<br>\n\tWater consumption: \_\_ \_274 Gallons/month<br>\n\tAir pollution: \_\_ \_18 over 9 tiles<br>\n\tWater pollution: \_\_ \_12 over 13 tiles<br>\n\tGarbage pollution: \_\_ \_4 over 0 tiles\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a seperate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol01<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol03<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol04<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol05<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol08<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - JES Vol09<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures vol02<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures vol03 v4<br>\n\t\_\_\_ • Grfe_Props_Pack_Carpack vol01-02-Original<br>\n\t\_\_\_ • Grfe_Props_Pack_Carpack vol01-02-Remastered<br>\n\t\_\_\_ • Grfe_Props_Pack_Carpack vol03 v2<br>\n\t\_\_\_ • Grfe_Props_Pack_Carpack vol04\n</p>\n\n<p>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack/</a>.\n</p>\n\n<p>\n\t\_\_\_ • jes_DelabarreTapandDieResource [included]\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_DelabarreTapandDie_HD.zip
+    files:
+      - BSC/BSCProps/jes_DelabarreTapandDieResource.dat
+      - BSC/BSCProps/jes_DelabarreTapandDie_HD-0x5ad0e817_0xf28c4315_0x30000.SC4Model
+      - BSC/jestarr/jes_Delabarre Tap and Die/Growable/IM$$3_3x5_jes_DelabarreTapandDie_HD_7294b6f5.SC4Lot
+      - BSC/jestarr/jes_Delabarre Tap and Die/Ploppable/jes_3x5_plop_DelabarreTapandDie_HD_7294b588.SC4Lot
+      - CAM/jestarr/jes_Delabarre Tap and Die/IM$$5_3x5_jes_DelabarreTapandDie_HD_7294b863.SC4Lot
+      - Documentation/Readme_DelabarreTapandDie.html
+      - Documentation/Styles/stylesheet.css
+      - Documentation/images/Delabarre_Day.jpg
+      - Documentation/images/Delabarre_Nite.jpg
+      - Documentation/images/footer1.jpg
+      - Documentation/images/logo.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/Delabarre_Day.jpg.65bef6cebf4547b22619ffbc9c0233ff.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/Delabarre_Nite.jpg.03d601dc810347f304840f651091ddb7.jpg
     lastModified: 2023-12-25T18:21:01.000Z
+    lots:
+      BSC/jestarr/jes_Delabarre Tap and Die/Growable/IM$$3_3x5_jes_DelabarreTapandDie_HD_7294b6f5.SC4Lot:
+        7294b6f5:
+          building: d30e002d
+          density: high
+          name: IM$$3_3x5_jes_DelabarreTapandDie_HD
+          props:
+            - 10b9473c
+            - 130df168
+            - 130df182
+            - 16e4c4a4
+            - 1d7d951f
+            - '1e990000'
+            - 1ed80000
+            - 1edb0000
+            - 28f10000
+            - 29c20000
+            - 2dcf9f54
+            - 2dd9608d
+            - 336d9dae
+            - '40193e41'
+            - 505eb2df
+            - 536d9d93
+            - 53f966ad
+            - 6038d2c4
+            - 705eb290
+            - 71d53688
+            - 730df173
+            - 75c83842
+            - 75ffa20c
+            - 7d577e77
+            - '80150832'
+            - 905eb2b7
+            - 9d4ebeb2
+            - b30d6f4e
+            - bd4eae43
+            - c02671e9
+            - cdda9c9a
+            - d05eb239
+            - d285df69
+            - dd4eb01e
+          size: 3x5
+          stage: 3
+          textures:
+            - f0b0630a
+            - fb745000
+            - fb745050
+            - fb864030
+            - fb864035
+            - fb864040
+            - fb864045
+            - fbd10000
+      BSC/jestarr/jes_Delabarre Tap and Die/Ploppable/jes_3x5_plop_DelabarreTapandDie_HD_7294b588.SC4Lot:
+        7294b588:
+          building: 7294b588
+          name: jes_3x5_plop_DelabarreTapandDie_HD
+          props:
+            - 10b9473c
+            - 130df168
+            - 130df182
+            - 16e4c4a4
+            - 1d7d951f
+            - '1e990000'
+            - 1ed80000
+            - 1edb0000
+            - 28f10000
+            - 29c20000
+            - 2dcf9f54
+            - 2dd9608d
+            - 336d9dae
+            - '40193e41'
+            - 505eb2df
+            - 536d9d93
+            - 53f966ad
+            - 6038d2c4
+            - 705eb290
+            - 71d53688
+            - 730df173
+            - 75c83842
+            - 75ffa20c
+            - 7d577e77
+            - '80150832'
+            - 905eb2b7
+            - 9d4ebeb2
+            - b30d6f4e
+            - bd4eae43
+            - c02671e9
+            - cdda9c9a
+            - d05eb239
+            - d285df69
+            - dd4eb01e
+          size: 3x5
+          textures:
+            - f0b0630a
+            - fb745000
+            - fb745050
+            - fb864030
+            - fb864035
+            - fb864040
+            - fb864045
+            - fbd10000
+      CAM/jestarr/jes_Delabarre Tap and Die/IM$$5_3x5_jes_DelabarreTapandDie_HD_7294b863.SC4Lot:
+        7294b863:
+          building: d30e002d
+          density: high
+          name: IM$$5_3x5_jes_DelabarreTapandDie_HD
+          props:
+            - 10b9473c
+            - 130df168
+            - 130df182
+            - 16e4c4a4
+            - 1d7d951f
+            - '1e990000'
+            - 1ed80000
+            - 1edb0000
+            - 28f10000
+            - 29c20000
+            - 2dcf9f54
+            - 2dd9608d
+            - 336d9dae
+            - '40193e41'
+            - 505eb2df
+            - 536d9d93
+            - 53f966ad
+            - 6038d2c4
+            - 705eb290
+            - 71d53688
+            - 730df173
+            - 75c83842
+            - 75ffa20c
+            - 7d577e77
+            - '80150832'
+            - 905eb2b7
+            - 9d4ebeb2
+            - b30d6f4e
+            - bd4eae43
+            - c02671e9
+            - cdda9c9a
+            - d05eb239
+            - d285df69
+            - dd4eb01e
+          requirements:
+            cam: true
+          size: 3x5
+          stage: 5
+          textures:
+            - f0b0630a
+            - fb745000
+            - fb745050
+            - fb864030
+            - fb864035
+            - fb864040
+            - fb864045
+            - fbd10000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/BSCProps/jes_DelabarreTapandDieResource.dat:
+        - 728cb978
+        - 728cbacf
+        - 928cb9f8
+        - 928cba54
+        - b28c3c03
+        - f28cb9b4
+      BSC/BSCProps/jes_DelabarreTapandDie_HD-0x5ad0e817_0xf28c4315_0x30000.SC4Model:
+        - f28c4315
     name: Delabarre Tap and Die HD
+    props:
+      BSC/BSCProps/jes_DelabarreTapandDieResource.dat:
+        32ab1e4d-b30d6f4e:
+          model: b28c3c03
+          name: jes_GreenDumpsterHD
+        b2ab26bd-130df168:
+          model: 928cb9f8
+          name: jes_16x_StraightChainlinkFence_HD
+        b2ab26bd-130df182:
+          model: 728cbacf
+          name: jes_48x_StraightChainlinkFence_HD
+        b2ab26bd-730df173:
+          model: 928cba54
+          name: jes_24x_StraightChainlinkFence_HD
+        b2ab26bd-b30df18f:
+          model: 728cb978
+          name: jes_8x_StraightChainlinkFence_HD
+        b2ab26bd-d30df158:
+          model: f28cb9b4
+          name: jes_12x_StraightChainlinkFence_HD
+    sha256: 27173ecbc3f5c0993d6267f4b604831f1c70b039560e8f80e72810c7260d7e74
+    size: 1742438
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/Delabarre_Day.thumb.jpg.375d559f94a20408a89c213767cf27c0.jpg
+    uncompressed: 2063095
     url: https://community.simtropolis.com/files/file/35892-delabarre-tap-and-die-hd/
+    version: 1.0.0
   simtropolis/35935:
     assetId: simtropolis/35935-pc-heavy-equipment-dealers-2
     authors:

@@ -4988,11 +4988,83 @@ assets:
     assetId: simtropolis/35808-aquifer-waterpump-building-hd
     authors:
       - jestarr
+    buildings:
+      BSC/jestarr/jes_WaterPumpBldg/jes_1x1_WaterPumpBldg_22ff078c.SC4Lot:
+        32ab1e4d-22ff078c:
+          bulldoze: 30
+          categories: waste
+          cost: 450
+          description: This building was made by a Typing Monkey
+          flamability: 40
+          label: jes_WaterPumpBldg
+          maintenance: 150
+          menu: Water
+          model: b27dd3ae
+          name: jes_WaterPumpBldg
+          power: 2
+          waterProduction: 7000
     category: 107-utilities
+    dependencies:
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - cycledogg/mega-props-vol01
+      - jestarr/mega-props-vol02
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tAquifer Waterpump Building HD\n</p>\n\n<p>\n\tBringing needed water to your thirsty sims. [It doesn't replace the default Waterpump Building.]\n</p>\n\n<p>\n\t<br>\n\tLot Details and Information:\n</p>\n\n<p>\n\tLot size: 1 x 1 tiles<br>\n\tBuilding style(s): Building: Utility, Building: Water<br>\n\tGrowth stage: N/A<br>\n\tMenu position: Utilities<br>\n\tOccupants: N/A<br>\n\tBulldoze cost: $30<br>\n\tPlop Cost: $450<br>\n\tConstruction Time: N/A<br>\n\tMax. Fire Stage: 2<br>\n\tPower consumption: 2 MWh/month<br>\n\tFlammability: 40<br>\n\tBudget Item Department: Water Department<br>\n\tBudget Item Cost: $150<br>\n\tWater Source: Aquifer<br>\n\tWater Produced: 7000 Gallons<br>\n\tHard Failure Type: Doesn't Explode\n</p>\n\n<p>\n\t<br>\n\tCompatibility:\n</p>\n\n<p>\n\tThis download is only compatible with SimCity 4 “Rush Hour” or SimCity 4 Deluxe.\n</p>\n\n<p>\n\t<br>\n\tInstallation:\n</p>\n\n<p>\n\tUnzip the downloaded file and place it in your plugins folder. The readme file and images should be moved to a separate folder or deleted.\n</p>\n\n<p>\n\tTo un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.\n</p>\n\n<p>\n\t<br>\n\tDependencies:\n</p>\n\n<p>\n\tTo ensure the proper functionality, make sure the files mentioned below are installed in your plugins folder.\n</p>\n\n<p>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - CP Vol01<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Mega Props - JES Vol02<br>\n\t\_\_\_ • <abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol02\n</p>\n\n<p>\n\tThe above files are available at <a href=\"https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" rel=\"external nofollow\">https://www.sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-<abbr title=\"Lot EXchange (SC4Devotion)\">LEX</abbr>-legacy-bsc-common-dependencies-pack.</a>\n</p>\n\n<p>\n\t\_\_\_ • jes_WaterpumpBldgPipeFence_HD.dat [included]\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: jes_WaterPumpBldg.zip
+    files:
+      - BSC/BSCProps/jes_WaterPumpBldg-0x5ad0e817_0xb27dd3ae_0x30000.SC4Model
+      - BSC/BSCProps/jes_WaterpumpBldgPipeFence_HD.dat
+      - BSC/jestarr/jes_WaterPumpBldg/jes_1x1_WaterPumpBldg_22ff078c.SC4Lot
+      - Documentation/Readme_jes_WaterPumpBldg.html
+      - Documentation/Styles/stylesheet.css
+      - Documentation/images/WaterPumpBldg_Day.jpg
+      - Documentation/images/WaterPumpBldg_Nite.jpg
+      - Documentation/images/footer1.jpg
+      - Documentation/images/logo.png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/WaterPumpBldg_Day.jpg.f30809d5fe69054b167c3802cb949ba9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/WaterPumpBldg_Nite.jpg.22787aad1a74bf88e5e8a1fd795cb588.jpg
     lastModified: 2023-12-14T15:32:57.000Z
+    lots:
+      BSC/jestarr/jes_WaterPumpBldg/jes_1x1_WaterPumpBldg_22ff078c.SC4Lot:
+        22ff078c:
+          building: 22ff078c
+          name: jes_1x1_WaterPumpBldg
+          props:
+            - 11c0455a
+            - 1ed80000
+            - 1edb0000
+            - 72ff2ae0
+            - b0a823f5
+            - b2ff2ac7
+            - f1c01c42
+          size: 1x1
+          textures:
+            - f2104000
+    meta:
+      timestamp: 2025-01-13T20:35:12.771Z
+      version: 1
+    models:
+      BSC/BSCProps/jes_WaterPumpBldg-0x5ad0e817_0xb27dd3ae_0x30000.SC4Model:
+        - b27dd3ae
+      BSC/BSCProps/jes_WaterpumpBldgPipeFence_HD.dat:
+        - 127dde9a
+        - 527ddf5e
     name: Aquifer Waterpump Building HD
+    props:
+      BSC/BSCProps/jes_WaterpumpBldgPipeFence_HD.dat:
+        32ab1e4d-72ff2ae0:
+          model: 127dde9a
+          name: jes_4x_PipeFence_HD
+        32ab1e4d-b2ff2ac7:
+          model: 527ddf5e
+          name: jes_16x_PipeFence_HD
+    sha256: d18b6d43e278e3fea1b8a59f73df2f0a2b1be2602a7e99812608f0a6d5fe36b8
+    size: 607279
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/WaterPumpBldg_Day.thumb.jpg.0129a76962b25f356e10e15a17252442.jpg
+    uncompressed: 727153
     url: https://community.simtropolis.com/files/file/35808-aquifer-waterpump-building-hd/
+    version: 1.0.0
   simtropolis/36098:
     assetId: simtropolis/36098-jes_substation2_hd
     authors:

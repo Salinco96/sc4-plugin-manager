@@ -126,12 +126,13 @@ runIndexer({
       "dead-end": 2000,
       cococity: 2000,
       jasoncw: 2020, // todo
-      jestarr: 2024, // todo
-      madhatter106: 2008, // todo
+      jestarr: 2022, // todo
+      madhatter106: 2000,
       memo: 2000,
       "null-45": 2000,
       simmaster07: 2000,
       toroca: 2000,
+      toutsimcities: 2000,
       wannglondon: 2000,
     },
     entries: [

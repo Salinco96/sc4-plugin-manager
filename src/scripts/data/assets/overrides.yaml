@@ -3396,6 +3396,10 @@ simtropolis/35582-wanng-random-pack-1:
   packageId: wannglondon/random-pack-1
   variantId: default
 
+simtropolis/35593-the-anaheim-citrus-packing-shed:
+  packageId: jestarr/anaheim-citrus-packing-shed
+  variantId: default
+
 simtropolis/35616-great-northern-hotel:
   packageId: jasoncw/great-northern-hotel
   variants:
@@ -3415,6 +3419,14 @@ simtropolis/35617-emerson-apartments:
     '197630':
       packageId: jasoncw/emerson-apartments
       variantId: darknite
+
+simtropolis/35618-gibson-marble-manufacturing:
+  packageId: jestarr/gibson-marble-manufacturing
+  variantId: default
+
+simtropolis/35620-take-a-whizz-brewing-company:
+  packageId: jestarr/take-a-whizz
+  variantId: default
 
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
 
@@ -3466,8 +3478,20 @@ simtropolis/35660-sfbt-street-tree-mod-revised:
   packageId: sfbt/street-tree-mod
   variantId: hugues-aroux
 
+simtropolis/35687-jes_russianpaperfactory:
+  packageId: jestarr/russian-paper-factory
+  variantId: default
+
+simtropolis/35688-englehardtshirtfactory:
+  packageId: jestarr/englehardt-shirt-factory
+  variantId: default
+
 simtropolis/35703-medium-wealth-commercial-shops-volume-2:
   packageId: madhatter106/medium-wealth-shops-vol02
+  variantId: default
+
+simtropolis/35704-acmetirerecappers:
+  packageId: jestarr/acme-tire-recappers
   variantId: default
 
 simtropolis/35717-midrise-office-pack-volume-10:
@@ -3517,8 +3541,16 @@ simtropolis/35721-elviras-halloween-emporium:
       packageId: jasoncw/elviras-halloween-emporium
       variantId: darknite
 
+simtropolis/35724-acme-pool-garden-supply:
+  packageId: jestarr/acme-pool-garden-supply
+  variantId: default
+
 simtropolis/35753-jes_resourcepack_vol27-v6:
   packageId: jestarr/resourcepack-vol27
+  variantId: default
+
+simtropolis/35756-penny-pincher-publications:
+  packageId: jestarr/penny-pincher-publications
   variantId: default
 
 simtropolis/35759-sc4-disable-cheats:
@@ -3540,6 +3572,10 @@ simtropolis/35762-paris-park-hyatt-vendome:
 
 simtropolis/35763-tenement-1:
   packageId: justforfun/tenement-01
+
+simtropolis/35768-allied-printing:
+  packageId: jestarr/allied-printing
+  variantId: default
 
 simtropolis/35782-sc4-city-date-sync:
   packageId: null-45/city-date-sync
@@ -3563,6 +3599,10 @@ simtropolis/35797-post-offices-pack-1-mail-van-automata:
       packageId: justforfun/post-offices-pack-1
       variantId: default
 
+simtropolis/35808-aquifer-waterpump-building-hd:
+  packageId: jestarr/aquifer-waterpump-building
+  variantId: hd
+
 simtropolis/35871-city-lottery-ordinance:
   packageId: null-45/city-lottery-ordinance
   variantId: default
@@ -3574,6 +3614,10 @@ simtropolis/35885-the-home-alone-house:
 simtropolis/35889-legalize-gambling-ordinance-upgrade:
   packageId: null-45/legalize-gambling-ordinance
   variantId: default
+
+simtropolis/35892-delabarre-tap-and-die-hd:
+  packageId: jestarr/delabarre-tap-and-die
+  variantId: hd
 
 simtropolis/35895-rasmussen-place:
   packageId: jasoncw/rasmussen-place
@@ -4296,7 +4340,7 @@ simtropolis/36561-konsum:
   variantId: default
 
 simtropolis/36563-gravelymfg_hd:
-  packageId: jestarr/gravely-mfg
+  packageId: jestarr/gravely-manufactoring
   variantId: hd
 
 simtropolis/36567-mid-century-modern-homes-pack:
@@ -4615,6 +4659,10 @@ simtropolis/maxis-plugin-temple-of-grutz:
   variantId: default
 
 toutsimcities/1686-r6-props-pack-2010-vol-1: null
+
+toutsimcities/1702-r6-prop-pack-2010-vol-2:
+  packageId: r6/prop-pack-2010-vol02
+  variantId: default
 
 toutsimcities/1780-namspopof-props-pack-vol-1: null
 

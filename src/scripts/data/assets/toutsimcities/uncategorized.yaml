@@ -6,6 +6,174 @@ assets:
     download: https://www.toutsimcities.com/downloads/start/1686
     lastModified: 2010-04-18T00:00:00.000Z
     version: '1.0'
+  toutsimcities/1702:
+    assetId: toutsimcities/1702-r6-prop-pack-2010-vol-2
+    download: https://www.toutsimcities.com/downloads/start/1702
+    features: []
+    filename: R6_Prop_Pack_2010_Vol2_1702.zip
+    files:
+      - R6_Prop Pack 2010_Vol2.dat
+      - lisez-moi.htm
+    lastModified: 2010-10-14T00:00:00.000Z
+    meta:
+      timestamp: 2025-01-13T21:00:18.505Z
+      version: 1
+    models:
+      R6_Prop Pack 2010_Vol2.dat:
+        - 184b7680
+        - 184b76f4
+        - 184b7ab4
+        - 18990bf0
+        - 384b457b
+        - 384b7956
+        - 389934b2
+        - '38994502'
+        - 38c229aa
+        - 38c22c1b
+        - 38c22c8f
+        - 38c24550
+        - 58c22969
+        - 58c22cf3
+        - '58e33530'
+        - 784b6b69
+        - 784b71b9
+        - 784b7bb6
+        - 7898ff7e
+        - 78991c21
+        - '78993656'
+        - '78e33591'
+        - '98993698'
+        - 9899448b
+        - b84b43c5
+        - b84b6b13
+        - b84b7231
+        - b899342d
+        - d84b7b5f
+        - d899253c
+        - d89943a0
+        - d8c25ebe
+        - d8e3339b
+        - f84b4648
+        - f899337d
+        - f8994443
+        - f89952c8
+        - f8e31106
+        - f8e31177
+        - f8e332f2
+    props:
+      R6_Prop Pack 2010_Vol2.dat:
+        5706ee5e-18eac396:
+          model: 784b71b9
+          name: R6_Camion_Livraison_Dimotrans_Ortho
+        5706ee5e-18eac3ef:
+          model: 384b7956
+          name: R6_Camion_Livraison_DHL_Ortho
+        5706ee5e-18eac467:
+          model: 184b7680
+          name: R6_Camion_Livraison_NorbertDentressangle_Ortho
+        5706ee5e-18ec600c:
+          name: R6_Camion_DDE_SaleuseVide_Diag
+        5706ee5e-18ec6049:
+          name: R6_Camion_DDE_SaleusePleine_Diag
+        5706ee5e-38eac22b:
+          model: f8e31177
+          name: R6_Nacelle_Telescopique_Diag
+        5706ee5e-38eac248:
+          model: f8e31106
+          name: R6_Nacelle_Telescopique_Ortho
+        5706ee5e-38eac269:
+          model: f84b4648
+          name: R6_Mecalac_Ortho
+        5706ee5e-38eac287:
+          model: d8e3339b
+          name: R6_Bobcat_Pelle_Diag
+        5706ee5e-38eac377:
+          model: 784b7bb6
+          name: R6_Camion_Livraison_Diag
+        5706ee5e-38ec5e91:
+          model: f8994443
+          name: R6_Fourgon_DDE_SigneFerme_Diag
+        5706ee5e-38ec5faa:
+          model: '98993698'
+          name: R6_Fourgonnette_DDE_Kangoo_Diag
+        5706ee5e-38ec606b:
+          name: R6_Camion_DDE_SaleusePleine_Ortho
+        5706ee5e-58eac3d0:
+          model: '58e33530'
+          name: R6_Bobcat_Fourche_Ortho
+        5706ee5e-58ec5f85:
+          model: 9899448b
+          name: R6_Fourgon_DDE_SigneFerme_Ortho
+        5706ee5e-78eac2e2:
+          model: b84b6b13
+          name: R6_Tracteur_Renault_Pelle_Ortho
+        5706ee5e-78eac3b2:
+          model: 784b6b69
+          name: R6_Tracteur_Renault_Pelle_Diag
+        5706ee5e-98eac2a5:
+          model: d84b7b5f
+          name: R6_Camion_Livraison_Ortho
+        5706ee5e-98eac304:
+          model: b84b43c5
+          name: R6_Mecalac_Diag
+        5706ee5e-98eac32f:
+          model: '78e33591'
+          name: R6_Bobcat_Fourche_Diag
+        5706ee5e-98ec5ecf:
+          model: d89943a0
+          name: R6_Fourgon_DDE_SigneOuvert_Diag
+        5706ee5e-b8eac1ff:
+          model: f8e332f2
+          name: R6_Bobcat_Pelle_Ortho
+        5706ee5e-b8eac34e:
+          model: 7898ff7e
+          name: R6_Nacelle_Telescopique_Travail
+        5706ee5e-b8eac44d:
+          model: 184b76f4
+          name: R6_Camion_Livraison_NorbertDentressangle_Diag
+        5706ee5e-b8eac920:
+          model: 18990bf0
+          name: R6_Tas_Gravier
+        5706ee5e-b8ec5e47:
+          model: 78991c21
+          name: R6_Bobcat_Fourche_Travail
+        5706ee5e-b8ec5e73:
+          name: R6_Camion_DDE_SaleuseVide_Ortho
+        5706ee5e-b8ec5ead:
+          model: f899337d
+          name: R6_Camion_DDE_Benne_Pleine_Ortho
+        5706ee5e-b8ec5ef9:
+          model: d899253c
+          name: R6_Camion_DDE_Benne_Vide_Ortho
+        5706ee5e-b8ec5fd0:
+          model: '78993656'
+          name: R6_Fourgonnette_DDE_Kangoo_Ortho
+        5706ee5e-b8ed769b:
+          name: R6_DDE_Stock_Sel_Hiver
+        5706ee5e-b8ed76bc:
+          name: R6_DDE_Stock_Sel_Ete
+        5706ee5e-d8eac2c8:
+          model: b84b7231
+          name: R6_Camion_Livraison_Dimotrans_Diag
+        5706ee5e-f8eac40b:
+          model: 384b457b
+          name: R6_Mecalac_Travail
+        5706ee5e-f8eac426:
+          model: 184b7ab4
+          name: R6_Camion_Livraison_DHL_Diag
+        5706ee5e-f8ec5f1e:
+          model: b899342d
+          name: R6_Camion_DDE_Benne_Pleine_Diag
+        5706ee5e-f8ec608c:
+          model: '38994502'
+          name: R6_Fourgon_DDE_SigneOuvert_Ortho
+        5706ee5e-f8ec60b4:
+          model: 389934b2
+          name: R6_Camion_DDE_Benne_Vide_Diag
+    sha256: 2bd6c493e4967fa7ca861122c7b191c5720633c526f85e52abcfa94675dcae63
+    size: 461195
+    uncompressed: 854945
+    version: '1.0'
   toutsimcities/1780:
     assetId: toutsimcities/1780-namspopof-props-pack-vol-1
     authors:
