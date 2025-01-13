@@ -41,6 +41,12 @@
     "success": "Your {{plugins}} folder was backed up as {{pluginsBackup}}.",
     "title": "$t(General:app)"
   },
+  "BuildingStyle": {
+    "2000": "Chicago",
+    "2001": "New York",
+    "2002": "Houston",
+    "2003": "Euro"
+  },
   "Check4GBPatchModal": {
     "confirmation": "Do you want to apply the $t(General:4gbpatch)?",
     "description": "The $t(General:4gbpatch) is a one-time patch that turns on the Large-Address-Aware flag in the 'SimCity 4.exe' executable, increasing its virtual memory (RAM) usage cap from 2GB to 4GB. This allows the game to make better use of modern hardware and is necessary to run resource-intensive mods, such as the $t(General:nam)'s improved pathfinding.\n\nA backup will be automatically created next to the original file.\n\nSystem Requirements: 8GB of RAM",

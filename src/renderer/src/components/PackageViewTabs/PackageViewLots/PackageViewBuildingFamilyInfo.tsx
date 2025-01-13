@@ -1,6 +1,13 @@
-import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
+import {
+  Agriculture as AgricultureIcon,
+  CorporateFare as CommercialIcon,
+  DoDisturb as IncompatibleIcon,
+  Factory as IndustrialIcon,
+  AccountBalance as PlopableIcon,
+  Apartment as ResidentialIcon,
+} from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
-import { keys, where } from "@salinco/nice-utils"
+import { keys, sum, where } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import type { BuildingInfo } from "@common/buildings"
@@ -46,8 +53,14 @@ export function PackageViewBuildingFamilyInfo({
   const fileInfo = buildingFamily && variantInfo.files?.find(where("path", filePath))
 
   const isMaxisFamily = useStore(
-    store => !!store.maxis?.buildingFamilies?.some(where("id", familyId)),
+    store => !!store.maxis?.buildingFamilies?.some(family => family.id === familyId),
   )
+
+  const maxisBuildings = useStore.shallow(store =>
+    store.maxis?.buildings?.filter(building => building.families?.includes(familyId)),
+  )
+
+  const buildings = [...(familyBuildings ?? []), ...(maxisBuildings ?? [])]
 
   const isMaxisOverride = isMaxisFamily && filePath !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
@@ -55,13 +68,36 @@ export function PackageViewBuildingFamilyInfo({
   const { t } = useTranslation("PackageViewLots")
 
   // Some data, such as tags, should be similar among buildings
-  const buildingInfo = familyBuildings?.at(0)
-  const tags = buildingInfo?.categories?.map(category => createTag(TagType.CATEGORY, category))
+  const building = buildings.at(0)
+  const tags = building?.categories?.map(category => createTag(TagType.CATEGORY, category))
 
   // Other data can be shown as min-max
   // Note that we expect only growables here so ploppable-only fields will not be computed
-  const power = familyBuildings?.map(building => building.power ?? 0)
-  const water = familyBuildings?.map(building => building.water ?? 0)
+  const power = buildings.map(building => building.power ?? 0)
+  const water = buildings.map(building => building.water ?? 0)
+
+  const isResidential =
+    !!building &&
+    building.cost === undefined &&
+    (!!building.capacity?.r$ || !!building.capacity?.r$$ || !!building.capacity?.r$$$)
+
+  const isCommercial =
+    !!building &&
+    building.cost === undefined &&
+    (!!building.capacity?.cs$ ||
+      !!building.capacity?.cs$$ ||
+      !!building.capacity?.cs$$$ ||
+      !!building.capacity?.co$$ ||
+      !!building.capacity?.co$$$)
+
+  const isIndustrial =
+    !!building &&
+    building.cost === undefined &&
+    (!!building.capacity?.id || !!building.capacity?.im || !!building.capacity?.iht)
+
+  const isAgriculture = !!building && building.cost === undefined && !!building.capacity?.ir
+
+  const isPlop = !!building && !isResidential && !isCommercial && !isIndustrial && !isAgriculture
 
   return (
     <FlexBox
@@ -73,6 +109,12 @@ export function PackageViewBuildingFamilyInfo({
       <FlexBox alignItems="center">
         <FlexBox direction="column" width="100%">
           <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+            {isResidential && <ResidentialIcon />}
+            {isCommercial && <CommercialIcon />}
+            {isIndustrial && <IndustrialIcon />}
+            {isAgriculture && <AgricultureIcon />}
+            {isPlop && <PlopableIcon />}
+
             <Text maxLines={1} variant="h6">
               {buildingFamily?.name ?? "Building family"}
             </Text>
@@ -117,10 +159,10 @@ export function PackageViewBuildingFamilyInfo({
 
       {!!familyBuildings?.length && (
         <FlexBox direction="column" gap={1}>
-          {buildingInfo?.capacity && (
+          {building?.capacity && (
             <Typography variant="body2">
               <b>{`${t("capacity")}: `}</b>
-              {keys(buildingInfo.capacity)
+              {keys(building.capacity)
                 .reverse()
                 .map(type => {
                   const count = familyBuildings.map(building => building.capacity?.[type] ?? 0)
@@ -130,14 +172,14 @@ export function PackageViewBuildingFamilyInfo({
             </Typography>
           )}
 
-          {power && (
+          {!!sum(power) && (
             <Typography variant="body2">
               <b>{`${t("power")}: `}</b>
               {formatRange(Math.min(...power), Math.max(...power))}
             </Typography>
           )}
 
-          {water && (
+          {!!sum(water) && (
             <Typography variant="body2">
               <b>{`${t("water")}: `}</b>
               {formatRange(Math.min(...water), Math.max(...water))}

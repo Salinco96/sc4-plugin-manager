@@ -13,12 +13,13 @@ import {
 
 import { type BuildingID, type BuildingInfo, BuildingStyle } from "@common/buildings"
 import { CategoryID } from "@common/categories"
-import type { GroupID, TypeID } from "@common/dbpf"
+import { type GroupID, type TypeID, parseTGI } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import { Menu, type MenuID, Submenu } from "@common/submenus"
 import { split } from "@common/utils/string"
 
+import { bitMask } from "@common/utils/types"
 import {
   BudgetItemDepartment,
   DemandID,
@@ -78,6 +79,12 @@ export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
   const familyIds = getArray(exemplar, ExemplarPropertyID.PropFamily)
   if (familyIds?.length) {
     data.families = familyIds.map(familyId => toHex(familyId, 8) as FamilyID)
+  }
+
+  const parentCohortId = parseTGI(exemplar.data.parentCohortId)[2]
+  if (parentCohortId) {
+    data.families ??= []
+    data.families.push(toHex(bitMask(parentCohortId - 0x10000000, 0xffffffff), 8) as FamilyID)
   }
 
   const worth = get(exemplar, ExemplarPropertyID.BuildingValue)

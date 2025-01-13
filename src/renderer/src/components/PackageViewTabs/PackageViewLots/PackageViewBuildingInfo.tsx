@@ -1,4 +1,11 @@
-import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
+import {
+  Agriculture as AgricultureIcon,
+  CorporateFare as CommercialIcon,
+  DoDisturb as IncompatibleIcon,
+  Factory as IndustrialIcon,
+  AccountBalance as PlopableIcon,
+  Apartment as ResidentialIcon,
+} from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
 import { toHex, where } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
@@ -61,6 +68,26 @@ export function PackageViewBuildingInfo({
         ? [building.menu]
         : undefined
 
+  const isResidential =
+    building.cost === undefined &&
+    (!!building.capacity?.r$ || !!building.capacity?.r$$ || !!building.capacity?.r$$$)
+
+  const isCommercial =
+    building.cost === undefined &&
+    (!!building.capacity?.cs$ ||
+      !!building.capacity?.cs$$ ||
+      !!building.capacity?.cs$$$ ||
+      !!building.capacity?.co$$ ||
+      !!building.capacity?.co$$$)
+
+  const isIndustrial =
+    building.cost === undefined &&
+    (!!building.capacity?.id || !!building.capacity?.im || !!building.capacity?.iht)
+
+  const isAgriculture = building.cost === undefined && !!building.capacity?.ir
+
+  const isPlop = !isResidential && !isCommercial && !isIndustrial && !isAgriculture
+
   return (
     <FlexBox
       color={isDisabled ? "rgba(0, 0, 0, 0.6)" : undefined}
@@ -76,6 +103,11 @@ export function PackageViewBuildingInfo({
 
         <FlexBox direction="column" width="100%">
           <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+            {isResidential && <ResidentialIcon />}
+            {isCommercial && <CommercialIcon />}
+            {isIndustrial && <IndustrialIcon />}
+            {isAgriculture && <AgricultureIcon />}
+            {isPlop && <PlopableIcon />}
             <Text maxLines={1} variant="h6">
               {building.label ?? building.name ?? "Building"}
             </Text>
@@ -140,7 +172,14 @@ export function PackageViewBuildingInfo({
         {!!building.tilesets?.length && (
           <Typography variant="body2">
             <b>{`${t("tilesets")}: `}</b>
-            {building.tilesets.map(tileset => `0x${toHex(tileset)}`).join(", ")}
+            {building.tilesets
+              .map(tileset =>
+                t(toHex(tileset), {
+                  defaultValue: `0x${toHex(tileset)}`,
+                  ns: "BuildingStyle",
+                }),
+              )
+              .join(", ")}
           </Typography>
         )}
 
