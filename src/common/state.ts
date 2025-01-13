@@ -1,5 +1,6 @@
 import type { Authors } from "./authors"
 import type { Categories } from "./categories"
+import type { Collections } from "./collections"
 import type { ExemplarProperties } from "./exemplars"
 import type { OptionInfo } from "./options"
 import type { PackageID } from "./packages"
@@ -12,6 +13,7 @@ import type { ContentsInfo } from "./variants"
 export interface ApplicationState {
   authors: Authors
   categories: Categories
+  collections?: Collections
   downloads: { [downloadKey in string]?: TaskInfo }
   exemplarProperties: ExemplarProperties
   externals: { [path: string]: ContentsInfo }
@@ -43,6 +45,7 @@ export function getInitialState(): ApplicationState {
   return {
     authors: {},
     categories: {},
+    collections: undefined,
     downloads: {},
     exemplarProperties: {},
     externals: {},

@@ -1,6 +1,6 @@
 import type { Namespace, TFunction } from "i18next"
 
-import type { AuthorID, Authors } from "@common/authors"
+import { type AuthorID, type Authors, getAuthorName } from "@common/authors"
 import { type Categories, type CategoryID, getCategoryLabel } from "@common/categories"
 import { VariantState } from "@common/types"
 import { getStateLabel } from "@common/variants"
@@ -29,10 +29,6 @@ export type TagValue<T extends TagType> = {
   [TagType.CATEGORY]: CategoryID
   [TagType.STATE]: VariantState
 }[T]
-
-export function getAuthorName(authorId: AuthorID, authors: Authors): string {
-  return authors[authorId]?.name ?? authorId
-}
 
 export function deserializeTag<T extends TagType>(tag: SerializedTag<T>): TagInfo<T> {
   const [type, value] = tag.split(":", 2)

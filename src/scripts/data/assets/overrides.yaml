@@ -736,13 +736,17 @@ sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack:
 sc4evermore/32-cycledogg-tree-controllers:
   packageId: cycledogg/tree-controllers
 
+sc4evermore/331-kel9509-census-repository-facility:
+  packageId: ripplejet/census-repository-building
+  variantId: kel9509
+
 sc4evermore/36-lk33-seasonalflorapatch:
   packageId: lowkee33/seasonal-flora-patch
   variantId: default
 
 sc4evermore/39-bsc-census-repository-building-by-ripplejet:
   packageId: ripplejet/census-repository-building
-  variantId: default,more-demand-info
+  variantId: default
 
 sc4evermore/4-sc4d-lex-legacy-jmyers-homes-pack:
   packageId: jmyers2043/homes-pack
@@ -2784,14 +2788,14 @@ simtropolis/35527-victorian-row-shops-diagonal:
       variantId: default
 
 simtropolis/35555-paris-batiments-32-33:
-  packageId: wannglondon/paris-batiments-32-33
+  packageId: wannglondon/paris-batiment-32
   variants:
     '197281':
       packageId: wannglondon/paris-batiment-32
-      variantId: default
+      variantId: darknite
     '197282':
       packageId: wannglondon/paris-batiment-33
-      variantId: default
+      variantId: darknite
 
 simtropolis/35561-agc-viking-dlc:
   packageId: agc/viking-dlc
@@ -2799,23 +2803,23 @@ simtropolis/35561-agc-viking-dlc:
 
 simtropolis/35563-paris-batiment-34:
   packageId: wannglondon/paris-batiment-34
-  variantId: default
+  variantId: darknite
 
 simtropolis/35566-medit-bldg-50:
   packageId: wannglondon/mediterranean-building-50
-  variantId: default
+  variantId: darknite
 
 simtropolis/35568-london-flats-5:
   packageId: wannglondon/london-flats-5
-  variantId: default
+  variantId: darknite
 
 simtropolis/35571-london-flats-3:
   packageId: wannglondon/london-flats-3
-  variantId: default
+  variantId: darknite
 
 simtropolis/35575-grand-arch:
   packageId: wannglondon/grand-arch
-  variantId: default
+  variantId: darknite
 
 simtropolis/35582-wanng-random-pack-1:
   packageId: wannglondon/random-pack-1
@@ -3074,9 +3078,7 @@ simtropolis/35961-bsc-batprops_hd-jes-vol10:
 simtropolis/35978-sc4-more-demand-info:
   packageId: null-45/more-demand-info
   paths:
-    Census Repository v3.5 Patch:
-      packageId: ripplejet/census-repository-building
-      variantId: more-demand-info
+    Census Repository v3.5 Patch: null
   variantId: default
 
 simtropolis/36006-bsc-batprops_hd-jes-vol11:
@@ -3870,6 +3872,16 @@ simtropolis/36629-xenon-center:
 simtropolis/36632-data-view-extensions-dll:
   packageId: null-45/data-view-extensions-dll
   variantId: default
+
+simtropolis/36660-altman-miller-machine-shop:
+  packageId: jestarr/altman-miller-machine-shop
+  variants:
+    '205234':
+      packageId: jestarr/altman-miller-machine-shop
+      variantId: hd
+    '205235':
+      packageId: jestarr/altman-miller-machine-shop
+      variantId: sd
 
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31

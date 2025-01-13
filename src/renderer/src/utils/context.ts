@@ -1,5 +1,7 @@
 import { type Context, createContext as _createContext } from "react"
-import { type StateCreator, type StoreApi, type UseBoundStore, create } from "zustand"
+import type { StateCreator, StoreApi, UseBoundStore } from "zustand"
+import { shallow } from "zustand/shallow"
+import { createWithEqualityFn, useStoreWithEqualityFn } from "zustand/traditional"
 
 import type { Store } from "./store"
 
@@ -39,8 +41,8 @@ export function createContext<T>(name: string, defaultValue: T): Context<T> {
 export function getStore(
   initialState: Omit<Store, "actions">,
   createStore: (initialState: Omit<Store, "actions">) => StateCreator<Store>,
-): UseBoundStore<StoreApi<Store>> {
-  const store = create(createStore(initialState))
+): UseBoundStore<StoreApi<Store>> & { shallow: <T>(selector: (store: Store) => T) => T } {
+  const store = createWithEqualityFn(createStore(initialState))
 
   const hmr = import.meta.hot
   if (hmr) {
@@ -60,5 +62,7 @@ export function getStore(
     })
   }
 
-  return store
+  return Object.assign(store, {
+    shallow: <T>(selector: (store: Store) => T) => useStoreWithEqualityFn(store, selector, shallow),
+  })
 }

@@ -8,7 +8,7 @@ import type { PackageID } from "@common/packages"
 import { FlexBox } from "@components/FlexBox"
 import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
-import { Page, useHistory, useLocation } from "@utils/navigation"
+import { Page, useLocation, useNavigation } from "@utils/navigation"
 import { type MatchResult, getMatchingContents, isHexSearch } from "@utils/search"
 import { usePackageFilters, useStore } from "@utils/store"
 
@@ -19,10 +19,10 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
   const { page } = useLocation()
   const { search } = usePackageFilters()
 
+  const { fromPackageId } = useNavigation()
+
   const externalPlugins = useStore(store => store.externals)
   const maxisExemplars = useStore(store => store.maxis)
-
-  const history = useHistory()
 
   const matchingMaxisContents = useMemo(() => {
     if (maxisExemplars && isHexSearch(search) && page === Page.Packages) {
@@ -42,15 +42,15 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
   }, [externalPlugins, page, search])
 
   const initialIndex = useMemo(() => {
-    if (history.previous?.page === Page.PackageView) {
-      const index = packageIds.indexOf(history.previous.data.packageId)
+    if (fromPackageId) {
+      const index = packageIds.indexOf(fromPackageId)
       if (index >= 0) {
         return index
       }
     }
 
     return 0
-  }, [history, packageIds])
+  }, [fromPackageId, packageIds])
 
   if (!packageIds.length && !matchingMaxisContents?.length && isEmpty(matchingPluginContents)) {
     return <EmptyPackageList />

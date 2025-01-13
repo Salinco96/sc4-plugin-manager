@@ -63,6 +63,19 @@
     "success": "All unused variants have been removed!",
     "title": "Remove unused packages"
   },
+  "CollectionActions": {
+    "disable": {
+      "description": "Disable all packages",
+      "label": "Disable all"
+    },
+    "enable": {
+      "description": "Enable all packages",
+      "label": "Enable all"
+    }
+  },
+  "CollectionView": {
+    "missing": "Collection {{collectionID}} does not exist"
+  },
   "CreateProfileModal": {
     "actions": {
       "cancel": {

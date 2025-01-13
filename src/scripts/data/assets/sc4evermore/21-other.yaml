@@ -4,7 +4,7 @@ assets:
     authors:
       - Reddonquixote
     category: 21-other
-    downloads: 674
+    downloads: 686
     lastModified: 2024-10-06T10:24:21.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Dark Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_HD_PropPack_Banner_Day.jpg
@@ -14,15 +14,457 @@ assets:
     authors:
       - Reddonquixote
     category: 21-other
-    downloads: 613
+    downloads: 616
     lastModified: 2024-10-06T10:25:01.000Z
     name: SC4D LEX Legacy - Reddonquixote Compilation (Maxis Night)
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/RDQ_Rialto_Towers_Night_Banner.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/206-sc4d-lex-legacy-reddonquixote-compilation-maxis-night
+  sc4evermore/331:
+    assetId: sc4evermore/331-kel9509-census-repository-facility
+    authors:
+      - RippleJet
+    buildings:
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_HIGH/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot:
+        3224a93f-6471f58b:
+          bulldoze: 9000
+          categories: rewards
+          cost: 15000
+          flamability: 38
+          garbage: 47
+          jobs:
+            $: 10
+            $$: 70
+            $$$: 5
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 400
+          menu: Rewards
+          model: 5465811a
+          name: Census Repository Facility V3
+          pollution: 3
+          pollutionRadius: 3
+          power: 84
+          rating: 10
+          ratingRadius: 256
+          relief:
+            co$$: 10000
+            co$$$: 10000
+            id: 10000
+            iht: 10000
+            im: 10000
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          submenu: Landmarks/Government,Rewards
+          water: 84
+          waterPollution: 3
+          waterPollutionRadius: 4
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_LOW/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot:
+        3224a93f-6471f58b:
+          bulldoze: 9000
+          categories: rewards
+          cost: 15000
+          flamability: 38
+          garbage: 47
+          jobs:
+            $: 10
+            $$: 70
+            $$$: 5
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 400
+          menu: Rewards
+          model: 5465811a
+          name: Census Repository Facility V3
+          pollution: 3
+          pollutionRadius: 3
+          power: 84
+          rating: 10
+          ratingRadius: 256
+          relief:
+            co$$: 10000
+            co$$$: 10000
+            id: 10000
+            iht: 10000
+            im: 10000
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          submenu: Landmarks/Government,Rewards
+          water: 84
+          waterPollution: 3
+          waterPollutionRadius: 4
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_MEDIUM/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot:
+        3224a93f-6471f58b:
+          bulldoze: 9000
+          categories: rewards
+          cost: 15000
+          flamability: 38
+          garbage: 47
+          jobs:
+            $: 10
+            $$: 70
+            $$$: 5
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 400
+          menu: Rewards
+          model: 5465811a
+          name: Census Repository Facility V3
+          pollution: 3
+          pollutionRadius: 3
+          power: 84
+          rating: 10
+          ratingRadius: 256
+          relief:
+            co$$: 10000
+            co$$$: 10000
+            id: 10000
+            iht: 10000
+            im: 10000
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          submenu: Landmarks/Government,Rewards
+          water: 84
+          waterPollution: 3
+          waterPollutionRadius: 4
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_Z_CLASSIC/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot:
+        3224a93f-6471f58b:
+          bulldoze: 9000
+          categories: rewards
+          cost: 15000
+          flamability: 38
+          garbage: 47
+          jobs:
+            $: 10
+            $$: 70
+            $$$: 5
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 400
+          menu: Rewards
+          model: 5465811a
+          name: Census Repository Facility V3
+          pollution: 3
+          pollutionRadius: 3
+          power: 84
+          rating: 10
+          ratingRadius: 256
+          relief:
+            co$$: 10000
+            co$$$: 10000
+            id: 10000
+            iht: 10000
+            im: 10000
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          submenu: Landmarks/Government,Rewards
+          water: 84
+          waterPollution: 3
+          waterPollutionRadius: 4
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/=Census Repository Facility_ZP_ULTRA/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot:
+        3224a93f-6471f58b:
+          bulldoze: 9000
+          categories: rewards
+          cost: 15000
+          flamability: 38
+          garbage: 47
+          jobs:
+            $: 10
+            $$: 70
+            $$$: 5
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 400
+          menu: Rewards
+          model: 5465811a
+          name: Census Repository Facility V3
+          pollution: 3
+          pollutionRadius: 3
+          power: 84
+          rating: 10
+          ratingRadius: 256
+          relief:
+            co$$: 10000
+            co$$$: 10000
+            id: 10000
+            iht: 10000
+            im: 10000
+            r$: 10000
+            r$$: 10000
+            r$$$: 10000
+          submenu: Landmarks/Government,Rewards
+          water: 84
+          waterPollution: 3
+          waterPollutionRadius: 4
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/-Census_Repository_Query_v4.0-Expanded_Size/Census_Repository_Query_and_Essentials_v4.0-Expanded_Size.dat:
+        cd5164da-0dd41d65:
+          bulldoze: 100
+          categories: rewards
+          cost: 15000
+          flamability: 45
+          garbage: 23
+          garbageRadius: 2
+          jobs:
+            $: 170
+            $$: 105
+            $$$: 45
+          landmark: 20
+          landmarkRadius: 5
+          maintenance: 250
+          menu: Rewards
+          model: 6dd414f2
+          name: CensusRepository
+          pollution: 3
+          pollutionRadius: 3
+          power: 125
+          rating: 8
+          ratingRadius: 256
+          relief:
+            co$$: 100000
+            co$$$: 100000
+            r$: 2500
+            r$$: 2500
+            r$$$: 2500
+          submenu: Landmarks/Government
+          water: 150
+          waterPollution: 2
+          waterPollutionRadius: 2
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/=Census_Repository_Query_v4.0-Regular_Size/Census_Repository_Query_and_Essentials_v4.0-Regular_Size.dat:
+        cd5164da-0dd41d65:
+          bulldoze: 100
+          categories: rewards
+          cost: 15000
+          flamability: 45
+          garbage: 23
+          garbageRadius: 2
+          jobs:
+            $: 170
+            $$: 105
+            $$$: 45
+          landmark: 20
+          landmarkRadius: 5
+          maintenance: 250
+          menu: Rewards
+          model: 6dd414f2
+          name: CensusRepository
+          pollution: 3
+          pollutionRadius: 3
+          power: 125
+          rating: 8
+          ratingRadius: 256
+          relief:
+            co$$: 100000
+            co$$$: 100000
+            r$: 2500
+            r$$: 2500
+            r$$$: 2500
+          submenu: Landmarks/Government
+          water: 150
+          waterPollution: 2
+          waterPollutionRadius: 2
+      Kel9509/Census Repository v4.0#/!Census Repository Vault/RW_2x2_Census Repository Vault.SC4Lot:
+        3224a93f-645e467b:
+          bulldoze: 1500
+          categories: rewards
+          cost: 2000
+          flamability: 38
+          garbage: 5
+          jobs:
+            $$: 5
+          maintenance: 50
+          menu: Rewards
+          model: d17c864e
+          name: Census Repository Vault
+          pollution: 1
+          pollutionRadius: 3
+          power: 8
+          relief:
+            ir: 30000
+          submenu: Landmarks/Government
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 4
+    category: 21-other
+    dependencies:
+      - simtropolis/35790-sc4-cleanitol
+      - simtropolis/35978-sc4-more-demand-info
+      - sc4evermore/18
+      - sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
+      - sc4evermore/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem
+      - bsc/essentials
+    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p style=\"text-align: center;\"><span style=\"font-size: 36px;\"><strong>Kel9509 - Census Repository Facility</strong></span></p>\r\n<p style=\"text-align: left;\">After 16 years from the release of RippleJet's Census Repository Facility v3.5 (since October 26, 2008), the Census Repository has been upgraded to take advantage of modern DLL functionality now available for Simcity4. There are also numerous fixes, one of them critical and some others identified by RippleJet himself subsequent to the release of version 3.5, which are now incorporated into the Census Repository query along with some other new features. This readme has been revised to reflect the new fixes and features.</p>\r\n<h3>INSTALLATION:</h3>\r\n<p>This package utilizes a Java-based installer (similar to the one used with the Network Addon Mod), and can also be opened and installed manually using 7-Zip or Keka.</p>\r\n<p>To install it, you'll either need the Java Runtime Environment to run the installer--<a href=\"https://adoptium.net/temurin/releases\">Adoptium's open-source edition is recommended</a>--or a zip tool capable of opening the installer to allow manual installation. For Windows/Linux, use\_<a href=\"https://www.7-zip.org\">7-zip</a>, and for macOS, use\_<a href=\"https://www.keka.io/en/\">Keka</a>.</p>\r\n<p>Once into the installer, after agreeing to the terms for the package, click to the Files tab to select which files you wish to install (making no changes here will install everything). To expand options, click the small \"+\" next to the name of the section.</p>\r\n<p>Then, click to the Location tab to set up an installation location (this should be the root of your My DocumentsSimCity 4Plugins folder).\_After this, click over to the Install tab, and click \"Start installation\" to begin the installation procedure. When installation is complete, the tab pop up a message indicating it, after which you are safe to close the installer.</p>\r\n<p>To avoid conflicts, please,\_<span style=\"color: #ba372a;\">it is highly recommended to use any of the third party cleanitol tools and remove any previous versions from your plugins.</span><br>Optionally in the\_~<em>Documents\_</em>folder in the main ZIP you can find a\_collective/master\_and separately\_all the individual cleanitol files\_and by using either the newer\_<a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" target=\"_blank\" rel=\"noopener\">nos.17's SC4 Cleanitol</a>\_or the older\_<a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"noopener\">BSC Cleanitol</a>\_tool you can search and remove old and outdated versions of these files.</p>\r\n<p>Bear in mind that this Collection contains Prop packs only available with this upload. Those prop packs can be used and referenced by other contents may not part of this collection as dependencies. If a 3rd party upload references one of the prop packs available in this Collection, you don't need to install everything, you can select and install only the referenced prop pack. All prop packs (and the lot packs as well) have individual cleanitol files (besides the Cleanitol_Census_Repository_Facility_v4.0.txt) and they have Prop Catalogue index images as a help for lotters.</p>\r\n<h3>DLL DEPENDENCIES:</h3>\r\n<p>In order for the contents of this package to display correctly by taking advantage of the new DLL Mods requires the complete installation of the following dependencies (the below listed dependencies are covering a full install):</p>\r\n<ul>\r\n<li><a title=\"memo.submenus.dll\" href=\"https://community.simtropolis.com/files/file/35978-sc4-more-demand-info/\"><strong>SC4 More Demand Info DLL</strong></a> - You need it to get the mod working.\r\n<p><span style=\"color: #e03e2d;\">Compatible only with the digital version (1.1.641) of SimCity 4 (Microsoft Windows and Linux only).</span></p>\r\n</li>\r\n</ul>\r\n<h3>DEPENDENCIES:</h3>\r\n<p>The following files are required in order for the contents of this package to appear correctly and they work correctly (i.e., no \"brown boxes\" or missing textures) (Bear in mind that the original readmes are also available in the<em> ~Documents/Boston BigDig_Readmes</em>\_folder, but they have\_<strong>not\_</strong>been updated):</p>\r\n<ul>\r\n<li><a href=\"https://sc4evermore.com/index.php/downloads/download/22-dependencies/3-sc4d-lex-legacy-bsc-common-dependencies-pack\" target=\"_blank\" rel=\"noopener\">SC4D LEX Legacy - BSC Common Dependencies Pack<span style=\"color: #cc0000; font-weight: bold;\"> v9</span></a>\_(and above)<br>The below listed dependencies are all can be found in the hereby linked dependency pack compilation.</li>\r\n<ul>\r\n<li>BSC Essentials v2024b</li>\r\n<li>BSC MEGA Props MISC Vol03</li>\r\n</ul>\r\n<li><a href=\"/index.php/downloads/download/26-gameplay-mods/51-colossus-addon-mod-version-2-1-0-windows-by-invisichem\">Colossus Addon Mod's I-R Fix (or a full CAM installation)</a> or <a href=\"https://github.com/memo33/submenus-dll/releases/download/1.1.0/CAM_2.1.0_Stand_Permanent.memo-exemplar-patch.zip\">CAM 2.1.0 Stand Permanent memo exemplar patch, by memo</a></li>\r\n</ul>\r\n<h3><strong>CREDITS:</strong></h3>\r\n<p>The following members contributed models, textures, and modding support to this collection:</p>\r\n<ul>\r\n<li>RalphaelNinja</li>\r\n<li>RippleJet</li>\r\n<li>Callagrafx</li>\r\n<li>Colyn</li>\r\n<li>Kel9509</li>\r\n<li>Null 45</li>\r\n<li>CorinaMarie</li>\r\n<li>Cyclone Boom</li>\r\n</ul>\r\n<p>This package has been made possible by the Project ZIP efforts of Tyberius06.</p>\r\n<h5 class=\"leftheading\">Special Thanks</h5>\r\n<p>Webmaster &amp; administration staff at SC4 Devotion &amp; Simtropolis (STEX)</p>\r\n<p>And possibly others who may not have been mentioned. If your name has been forgotten or you're not on the list, then drop us a line, as it has been difficult to keep track of anyone/everyone that may of helped somewhere along the lines.</p>\r\n<p>And to the community itself, we would also like to thank you for your support, making mods such as this possible too. We're still at it after\_<strong>20 years</strong>\_thanks to you!</p>\r\n<p>And last but not least, a thanks for the Maxis individuals too, for the [paid] work that they did. ;-)</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Census Repository Facility Day.jpg\" data-lightbox=\"lightbox331\" data-alt=\"lightboxCensus Repository Facility Day.jpg|Census Repository Facility Night.jpg|Census Repository Query Expanded.jpg|Census Repository Query Normal\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Facility Day.jpg\" alt=\"Census Repository Facility Day\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Census Repository Facility Night.jpg\" data-lightbox=\"lightbox331\" data-alt=\"lightboxCensus Repository Facility Day.jpg|Census Repository Facility Night.jpg|Census Repository Query Expanded.jpg|Census Repository Query Normal\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Facility Night.jpg\" alt=\"Census Repository Facility Night2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Census Repository Query Expanded.jpg\" data-lightbox=\"lightbox331\" data-alt=\"lightboxCensus Repository Facility Day.jpg|Census Repository Facility Night.jpg|Census Repository Query Expanded.jpg|Census Repository Query Normal\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Query Expanded.jpg\" alt=\"Census Repository Query Expanded3\" ></a> </span>\r\n        </div> \r\n</body>"
+    downloads: 19
+    features: []
+    filename: Kel9509 - Census Repository Facility v4.0.zip
+    files:
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_HIGH/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_LOW/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_MEDIUM/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_Z_CLASSIC/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/=Census Repository Facility_ZP_ULTRA/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot
+      - Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/Census Repository Facility Network_SEE README!.txt
+      - Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/-Census_Repository_Query_v4.0-Expanded_Size/Census_Repository_Query_and_Essentials_v4.0-Expanded_Size.dat
+      - Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/=Census_Repository_Query_v4.0-Regular_Size/Census_Repository_Query_and_Essentials_v4.0-Regular_Size.dat
+      - Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/Census Repository Query_SEE README!.txt
+      - Kel9509/Census Repository v4.0#/!Census Repository Vault/RW_2x2_Census Repository Vault.SC4Lot
+      - ~Documents/Census Repository v4.0/Readme_Census_Repository_Facility_v4.0.html
+      - ~Documents/Census Repository v4.0/images/Census Repository Facility Day.jpg
+      - ~Documents/Census Repository v4.0/images/Census Repository Facility Night.jpg
+      - ~Documents/Census Repository v4.0/images/Census Repository Query Expanded.jpg
+      - ~Documents/Census Repository v4.0/images/Census Repository Query Normal.jpg
+      - ~Documents/Census Repository v4.0/images/footer.gif
+      - ~Documents/Census Repository v4.0/images/header.gif
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_Census_Repository_Facility_v4.0.txt
+    images:
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Facility Day.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Facility Night.jpg
+      - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Query Expanded.jpg
+    lastModified: 2025-01-12T01:43:35.000Z
+    lots:
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_HIGH/RW_3x1_Census Repository Facility_ZP_HIGH.SC4Lot:
+        6471f58b:
+          building: 6471f58b
+          name: RW_3x1_Census Repository Facility_ZP_HIGH
+          props:
+            - 1689d23a
+            - 1689d35d
+            - a000007f
+          size: 3x1
+          textures:
+            - 258f2000
+            - '26372000'
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_LOW/RW_3x1_Census Repository Facility_ZP_LOW.SC4Lot:
+        6471f58b:
+          building: 6471f58b
+          name: RW_3x1_Census Repository Facility_ZP_LOW
+          props:
+            - 1689d23a
+            - 1689d35d
+            - a000007f
+          size: 3x1
+          textures:
+            - 258f2000
+            - '26372000'
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_ZP_MEDIUM/RW_3x1_Census Repository Facility_ZP_MEDIUM.SC4Lot:
+        6471f58b:
+          building: 6471f58b
+          name: RW_3x1_Census Repository Facility_ZP_MEDIUM
+          props:
+            - 1689d23a
+            - 1689d35d
+            - a000007f
+          size: 3x1
+          textures:
+            - 258f2000
+            - '26372000'
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/-Census Repository Facility_Z_CLASSIC/RW_3x1_Census Repository Facility_Z_CLASSIC.SC4Lot:
+        6471f58b:
+          building: 6471f58b
+          name: RW_3x1_Census Repository Facility_Z_CLASSIC
+          props:
+            - 1689d23a
+            - 1689d35d
+            - a000007f
+          size: 3x1
+          textures:
+            - 258f2000
+            - '26372000'
+      Kel9509/Census Repository v4.0#/!Census Repository Facility Network___CHOOSE ONE - SEE README!/=Census Repository Facility_ZP_ULTRA/RW_3x1_Census Repository Facility_ZP_ULTRA.SC4Lot:
+        6471f58b:
+          building: 6471f58b
+          name: RW_3x1_Census Repository Facility_ZP_ULTRA
+          props:
+            - 1689d23a
+            - 1689d35d
+            - a000007f
+          size: 3x1
+          textures:
+            - 258f2000
+            - '26372000'
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/-Census_Repository_Query_v4.0-Expanded_Size/Census_Repository_Query_and_Essentials_v4.0-Expanded_Size.dat:
+        0dd41d65:
+          building: 0dd41d65
+          name: CensusRepository
+          props:
+            - 2a590000
+            - 2aa40000
+            - 2aa70000
+            - 2aa90000
+            - 2aaa0000
+            - 2aab0000
+            - 2aac0000
+            - 2aad0000
+            - 2aae0000
+            - 2ae80000
+            - 8956a699
+          size: 1x1
+          textures:
+            - 258d1000
+            - '258e3000'
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/=Census_Repository_Query_v4.0-Regular_Size/Census_Repository_Query_and_Essentials_v4.0-Regular_Size.dat:
+        0dd41d65:
+          building: 0dd41d65
+          name: CensusRepository
+          props:
+            - 2a590000
+            - 2aa40000
+            - 2aa70000
+            - 2aa90000
+            - 2aaa0000
+            - 2aab0000
+            - 2aac0000
+            - 2aad0000
+            - 2aae0000
+            - 2ae80000
+            - 8956a699
+          size: 1x1
+          textures:
+            - 258d1000
+            - '258e3000'
+      Kel9509/Census Repository v4.0#/!Census Repository Vault/RW_2x2_Census Repository Vault.SC4Lot:
+        645e467b:
+          building: 645e467b
+          name: RW_2x2_Census Repository Vault
+          props:
+            - 1dfe0000
+            - a000005f
+            - a0000069
+          size: 2x2
+          textures:
+            - 258f2000
+    meta:
+      timestamp: 2025-01-13T08:58:29.083Z
+      version: 1
+    name: Kel9509 - Census Repository Facility
+    props:
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/-Census_Repository_Query_v4.0-Expanded_Size/Census_Repository_Query_and_Essentials_v4.0-Expanded_Size.dat:
+        3224a93f-1689d23a:
+          name: RJ - Census Repository Phone Booth
+        3224a93f-1689d35d:
+          name: RJ - Census Repository Phone Booth Rear
+        c977c536-8956a699:
+          name: Gnome_CensusRepository
+      Kel9509/Census Repository v4.0#/!Census Repository Query___CHOOSE ONE - SEE README!/=Census_Repository_Query_v4.0-Regular_Size/Census_Repository_Query_and_Essentials_v4.0-Regular_Size.dat:
+        3224a93f-1689d23a:
+          name: RJ - Census Repository Phone Booth
+        3224a93f-1689d35d:
+          name: RJ - Census Repository Phone Booth Rear
+        c977c536-8956a699:
+          name: Gnome_CensusRepository
+    repository: https://github.com/memo33/submenus-dll
+    sha256: 1464b9c58c73e7dba2f2491d34e4e46b9dece2c05f87e1f855c5bf14749cac1d
+    size: 982054
+    thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Census Repository Facility Day.jpg
+    uncompressed: 1124465
+    url: https://www.sc4evermore.com/index.php/downloads/download/21-other/331-kel9509-census-repository-facility
+    version: '4.0'
   sc4evermore/38:
     assetId: sc4evermore/38-immortality-killer-by-ripplejet
     category: 21-other
-    downloads: 490
+    downloads: 491
     lastModified: 2023-07-25T10:32:54.000Z
     name: Immortality Killer by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/38-immortality-killer-by-ripplejet
@@ -297,9 +739,10 @@ assets:
     categories:
       - rewards
     category: 21-other
-    dependencies: []
-    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
-    downloads: 1227
+    dependencies:
+      - sc4evermore/331-kel9509-census-repository-facility
+    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>BSC Census Repository Building by RippleJet.</p>\r\n<p style=\"text-align: center;\"><span style=\"font-size: 24px;\"><strong><span style=\"color: #ba372a;\">LEGACY SUPPORT: This Version is considered Legacy as it no longer receives support. It is recommended to use <a style=\"color: #ba372a;\" href=\"/index.php/downloads/download/21-other/331-kel9509-census-repository-facility\">Kel9509 - Census Repository Facility</a> as it is the updated version using the Mod DLLs. Because of the Mod DLLs this version remains available for users using versions of SC4 other than the Digital Windows version (1.1.641) but they will not be able to receive support if problems occur.</span><br></strong></span></p>\r\n<p style=\"text-align: center;\">\_</p>\r\n<p>\_</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
+    downloads: 1231
     features: []
     file: BSC RJ Census Repository Facility v3.5_1831.zip
     files:
@@ -318,7 +761,7 @@ assets:
       - _Documents/BSC_Readmes/RippleJet/images/footer.gif
       - _Documents/BSC_Readmes/RippleJet/images/header.gif
     images: []
-    lastModified: 2023-07-20T10:48:28.000Z
+    lastModified: 2025-01-12T20:53:14.000Z
     lots:
       BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat:
         0dd41d65:
@@ -424,7 +867,7 @@ assets:
             - 258f2000
             - '26372000'
     meta:
-      timestamp: 2025-01-09T16:18:23.576Z
+      timestamp: 2025-01-13T08:58:29.083Z
       version: 1
     models:
       BSC/Ripplejet/Census Repository/RJ - Census_Repository_Model_and_Query_3.1.dat:
@@ -454,10 +897,10 @@ assets:
   sc4evermore/50:
     assetId: sc4evermore/50-camelot-counter-by-ripplejet
     category: 21-other
-    downloads: 485
+    downloads: 487
     lastModified: 2023-07-25T12:09:39.000Z
     name: CAMeLot Counter by RippleJet
     url: https://www.sc4evermore.com/index.php/downloads/download/21-other/50-camelot-counter-by-ripplejet
 
 meta:
-  timestamp: 2025-01-10T09:30:55.357Z
+  timestamp: 2025-01-13T08:58:29.083Z

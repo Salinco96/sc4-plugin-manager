@@ -1,6 +1,14 @@
+import type { CollectionID } from "@common/collections"
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { input, select } from "@inquirer/prompts"
+
+export async function promptAuthorName(hint?: string): Promise<string> {
+  return await input({
+    default: hint,
+    message: "Author name:",
+  })
+}
 
 export async function promptCategoryLabel(): Promise<string> {
   return await input({
@@ -8,11 +16,20 @@ export async function promptCategoryLabel(): Promise<string> {
   })
 }
 
-export async function promptAuthorName(hint?: string): Promise<string> {
-  return await input({
+export async function promptCollectionId(hint: string): Promise<CollectionID> {
+  const collectionId = await input({
     default: hint,
-    message: "Author name:",
+    message: "Collection ID:",
+    validate: value => {
+      if (!/^[a-z0-9-]+[/][a-z0-9-]+$/.test(value)) {
+        return "Invalid collection ID"
+      }
+
+      return true
+    },
   })
+
+  return collectionId as CollectionID
 }
 
 export async function promptPackageId(hint: PackageID): Promise<PackageID> {

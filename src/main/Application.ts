@@ -28,6 +28,7 @@ import type { AssetInfo, Assets } from "@common/assets"
 import type { AuthorID, Authors } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
+import type { Collections } from "@common/collections"
 import {
   DBPFDataType,
   type DBPFEntry,
@@ -68,11 +69,13 @@ import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
 import type { ToolID, Tools } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
+import { split } from "@common/utils/string"
 import type { ContentsInfo, FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
 import { loadAuthors } from "@node/data/authors"
 import { loadBuildingInfo } from "@node/data/buildings"
+import { loadCollections } from "@node/data/collections"
 import { CLEANITOL_EXTENSIONS, DOC_EXTENSIONS, SC4_EXTENSIONS, matchFiles } from "@node/data/files"
 import { loadLotInfo } from "@node/data/lots"
 import { type PackageData, writePackageInfo } from "@node/data/packages"
@@ -112,7 +115,6 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
-import { split } from "@common/utils/string"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -153,6 +155,7 @@ interface Loaded {
   assets: Assets
   authors: Authors
   categories: Categories
+  collections: Collections
   exemplarProperties: Record<string, ExemplarPropertyInfo>
   externals: { [path: string]: ContentsInfo }
   features: Features
@@ -1009,6 +1012,7 @@ export class Application {
     const {
       authors,
       categories,
+      collections,
       exemplarProperties,
       externals,
       features,
@@ -1024,6 +1028,7 @@ export class Application {
     return {
       authors,
       categories,
+      collections,
       downloads: {},
       exemplarProperties,
       externals,
@@ -1896,6 +1901,9 @@ export class Application {
 
         context.setStep("Indexing external plugins...")
 
+        const collections = await loadCollections(context, this.getDatabasePath())
+        this.sendStateUpdate({ collections })
+
         const templates = await loadProfileTemplates(context, this.getDatabasePath())
         this.sendStateUpdate({ templates })
 
@@ -1915,6 +1923,7 @@ export class Application {
           assets,
           authors,
           categories,
+          collections,
           exemplarProperties,
           externals,
           features,

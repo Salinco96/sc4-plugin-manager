@@ -9,7 +9,7 @@ import { Tabs } from "@components/Tabs"
 import { View } from "@components/View"
 import { useStore } from "@utils/store"
 
-function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
+function PackageView({ id: packageId }: { id: PackageID }): JSX.Element {
   const isLoading = useStore(store => !store.packages)
   const exists = useStore(store => !!store.packages?.[packageId])
 

@@ -1,5 +1,4 @@
-import { getEnabledLots, isTogglableLot } from "@common/lots"
-import { type OptionID, type OptionInfo, OptionType } from "@common/options"
+import type { OptionInfo } from "@common/options"
 import { type PackageID, checkCondition } from "@common/packages"
 import { useCurrentVariant } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
@@ -39,24 +38,6 @@ export function usePackageOptions(packageId: PackageID): OptionInfo[] {
           settings,
         ),
       ) ?? []
-
-  const togglableLots = variantInfo.lots?.filter(isTogglableLot)
-
-  if (togglableLots?.length) {
-    options.push({
-      choices: togglableLots.map(lot => ({
-        condition: lot.requirements,
-        label: lot.name ?? lot.id,
-        value: lot.id,
-      })),
-      default: getEnabledLots(togglableLots),
-      display: "checkbox",
-      id: "lots" as OptionID,
-      multi: true,
-      section: "Lots", // TODO: i18n?
-      type: OptionType.NUMBER,
-    })
-  }
 
   return options
 }

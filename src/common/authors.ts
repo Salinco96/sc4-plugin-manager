@@ -25,3 +25,6 @@ export interface AuthorInfo {
 export type Authors = {
   [authorId in AuthorID]?: AuthorInfo
 }
+export function getAuthorName(authorId: AuthorID, authors: Authors): string {
+  return authors[authorId]?.name ?? authorId
+}

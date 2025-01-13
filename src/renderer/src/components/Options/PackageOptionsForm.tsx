@@ -8,6 +8,7 @@ import {
   useStoreActions,
 } from "@utils/store"
 
+import { isEmpty } from "@salinco/nice-utils"
 import { OptionsForm } from "./OptionsForm"
 import { usePackageOptions } from "./usePackageOptions"
 
@@ -21,10 +22,9 @@ export default function PackageOptionsForm({ packageId }: { packageId: PackageID
   const features = useFeatures()
   const settings = useSettings()
 
-  const values = {
-    ...profileInfo?.packages[packageId]?.options,
-    ...profileInfo?.options,
-  }
+  const packageValues = profileInfo?.packages[packageId]?.options ?? {}
+  const profileValues = profileInfo?.options ?? {}
+  const values = { ...profileValues, ...packageValues }
 
   return (
     <OptionsForm
@@ -51,6 +51,7 @@ export default function PackageOptionsForm({ packageId }: { packageId: PackageID
         actions.resetPackageOptions(packageId)
       }}
       options={options}
+      resetDisabled={isEmpty(packageValues)}
       values={values}
     />
   )

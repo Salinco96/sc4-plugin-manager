@@ -3,12 +3,15 @@ import { useMemo } from "react"
 import { create } from "zustand"
 
 import type { AuthorID } from "@common/authors"
+import type { CollectionID } from "@common/collections"
 import type { PackageID } from "@common/packages"
 import type { ToolID } from "@common/tools"
 
 export enum Page {
   Authors = "Authors",
   AuthorView = "AuthorView",
+  Collections = "Collections",
+  CollectionView = "CollectionView",
   Packages = "Packages",
   PackageView = "PackageView",
   Profile = "Profile",
@@ -19,13 +22,15 @@ export enum Page {
 
 export type PageData<T extends Page> = {
   Authors: EmptyRecord
-  AuthorView: { authorId: AuthorID }
+  AuthorView: { id: AuthorID }
+  Collections: EmptyRecord
+  CollectionView: { id: CollectionID }
   Packages: EmptyRecord
-  PackageView: { packageId: PackageID }
+  PackageView: { id: PackageID }
   Profile: EmptyRecord
   Settings: EmptyRecord
   Tools: EmptyRecord
-  ToolView: { toolId: ToolID }
+  ToolView: { id: ToolID }
 }[T]
 
 export type Location<T extends Page = Page> = {
@@ -111,16 +116,38 @@ export const useLocation = (() => useHistory(history => history.current)) as <
 >() => Location<T>
 
 export interface Navigation {
+  fromAuthorId?: AuthorID
+  fromCollectionId?: CollectionID
+  fromPackageId?: PackageID
+  fromToolId?: ToolID
+  openAuthorView(authorId: AuthorID): void
+  openCollectionView(collectionId: CollectionID): void
   openPackageView(packageId: PackageID): void
+  openToolView(toolId: ToolID): void
 }
 
 export function useNavigation(): Navigation {
   const history = useHistory()
 
   return useMemo<Navigation>(() => {
+    const { previous } = history
+
     return {
-      openPackageView(packageId: PackageID) {
-        history.push({ page: Page.PackageView, data: { packageId } })
+      fromAuthorId: previous?.page === Page.AuthorView ? previous.data.id : undefined,
+      fromCollectionId: previous?.page === Page.CollectionView ? previous.data.id : undefined,
+      fromPackageId: previous?.page === Page.PackageView ? previous.data.id : undefined,
+      fromToolId: previous?.page === Page.ToolView ? previous.data.id : undefined,
+      openAuthorView(id: AuthorID) {
+        history.push({ page: Page.AuthorView, data: { id } })
+      },
+      openCollectionView(id: CollectionID) {
+        history.push({ page: Page.CollectionView, data: { id } })
+      },
+      openPackageView(id: PackageID) {
+        history.push({ page: Page.PackageView, data: { id } })
+      },
+      openToolView(id: ToolID) {
+        history.push({ page: Page.ToolView, data: { id } })
       },
     }
   }, [history])

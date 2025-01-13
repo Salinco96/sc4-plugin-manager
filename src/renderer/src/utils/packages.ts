@@ -21,12 +21,14 @@ import {
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
+import type { CollectionID, CollectionInfo } from "@common/collections"
 import type { ToolID, ToolInfo } from "@common/tools"
 import { hasMatchingContents, isHexSearch } from "./search"
 import {
   type PackageFilters,
   type PackageUi,
   type Store,
+  getCollectionInfo,
   getCurrentProfile,
   getPackageInfo,
   getToolInfo,
@@ -42,6 +44,22 @@ function getPackageStatus(
   profileInfo?: ProfileInfo,
 ): PackageStatus | undefined {
   return profileInfo && packageInfo.status[profileInfo.id]
+}
+
+export function useCollectionInfo(collectionId: CollectionID): CollectionInfo {
+  return useStore(
+    useCallback(
+      store => {
+        const toolInfo = getCollectionInfo(store, collectionId)
+        if (!toolInfo) {
+          throw Error(`Unknown collection '${collectionId}'`)
+        }
+
+        return toolInfo
+      },
+      [collectionId],
+    ),
+  )
 }
 
 export function getCurrentVariant(store: Store, packageId: PackageID): VariantInfo {

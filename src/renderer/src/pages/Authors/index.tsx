@@ -1,7 +1,7 @@
 import { keys, sortBy } from "@salinco/nice-utils"
 
+import { getAuthorName } from "@common/authors"
 import { AuthorList } from "@components/AuthorList"
-import { getAuthorName } from "@components/Tags/utils" // TODO
 import { useAuthors } from "@utils/store"
 
 function Authors(): JSX.Element {

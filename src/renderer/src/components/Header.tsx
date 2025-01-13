@@ -5,8 +5,12 @@ import { Link } from "@mui/material"
 import { type Location, useHistory } from "@utils/navigation"
 import { Text } from "./Text"
 import { Thumbnail } from "./Thumbnail"
-import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
 import { ImageViewer } from "./Viewer/ImageViewer"
+
+export type HeaderProps<T> = T & {
+  isListItem?: boolean
+  setActive?: (active: boolean) => void
+}
 
 export function Header({
   actions,
@@ -23,15 +27,13 @@ export function Header({
   thumbnailSize,
   title,
   tools,
-}: {
+}: HeaderProps<{
   actions?: ReactNode
   description?: string
   images?: string[]
-  isListItem?: boolean
   isLoading?: boolean
   loadingLabel?: string
   location?: Location
-  setActive?: (active: boolean) => void
   subtitle: string
   summary?: string
   tags?: ReactNode
@@ -41,8 +43,8 @@ export function Header({
   /** Defaults to "large" */
   thumbnailSize?: "large" | "small"
   title: string
-  tools?: ToolBeltAction[]
-}): JSX.Element {
+  tools?: ReactNode
+}>): JSX.Element {
   const history = useHistory()
 
   const [focus, setFocus] = useState(false)
@@ -130,7 +132,7 @@ export function Header({
                 subtitleElement
               )}
 
-              {tools && <ToolBelt actions={tools} />}
+              {tools}
             </FlexBox>
 
             {tags}

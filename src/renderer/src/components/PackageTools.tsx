@@ -18,8 +18,6 @@ import { FlexBox } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options/PackageOptionsDialog"
 import { useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
-
-import { isTogglableLot } from "@common/lots"
 import { ToolButton } from "./ToolButton"
 
 export function PackageTools({
@@ -39,7 +37,7 @@ export function PackageTools({
 
   const { t } = useTranslation("ToolBelt")
 
-  const hasOptions = !!variantInfo.options?.length || variantInfo.lots?.some(isTogglableLot)
+  const hasOptions = !!variantInfo.options?.length
 
   return (
     <FlexBox alignItems="center" gap={0.5} mx={0.5}>

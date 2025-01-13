@@ -11,7 +11,6 @@ import {
 } from "./options"
 import type { ProfileInfo } from "./profiles"
 import type { Settings } from "./settings"
-import type { ToolInfo } from "./tools"
 import type { Feature, Features, PackageInfo, PackageStatus } from "./types"
 import type { FileInfo } from "./variants"
 import { Issue, type VariantInfo, type VariantIssue } from "./variants"
@@ -249,7 +248,7 @@ export function isMissing(variantInfo: VariantInfo, packageStatus?: PackageStatu
   return isIncluded(variantInfo, packageStatus) && !isInstalled(variantInfo)
 }
 
-export function isNew(variantInfo: ToolInfo | VariantInfo): boolean {
+export function isNew(variantInfo: { release?: Date }): boolean {
   const now = new Date()
   now.setDate(now.getDate() - 15)
   return !!variantInfo.release && variantInfo.release > now

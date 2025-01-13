@@ -1,23 +1,20 @@
+import { useMemo } from "react"
+import { useTranslation } from "react-i18next"
+
 import type { ToolID } from "@common/tools"
+import { type Action, ActionButton } from "@components/ActionButton"
+import { Header, type HeaderProps } from "@components/Header"
+import { ToolBelt, type ToolBeltAction } from "@components/ToolBelt"
 import { Page } from "@utils/navigation"
 import { useToolInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
-import { useMemo } from "react"
-import { useTranslation } from "react-i18next"
-import { type Action, ActionButton } from "./ActionButton"
-import { Header } from "./Header"
-import { ToolTags } from "./Tags/ToolTags"
-import type { ToolBeltAction } from "./ToolBelt"
+import { ToolTags } from "./ToolTags"
 
 export function ToolHeader({
   isListItem,
   setActive,
   toolId,
-}: {
-  isListItem?: boolean
-  setActive?: (active: boolean) => void
-  toolId: ToolID
-}): JSX.Element {
+}: HeaderProps<{ toolId: ToolID }>): JSX.Element {
   const actions = useStoreActions()
   const toolInfo = useToolInfo(toolId)
 
@@ -111,14 +108,14 @@ export function ToolHeader({
       description={toolInfo.description}
       images={toolInfo.images}
       isListItem={isListItem}
-      location={{ data: { toolId }, page: Page.ToolView }}
+      location={{ data: { id: toolId }, page: Page.ToolView }}
       setActive={setActive}
       subtitle={toolId}
       summary={toolInfo.summary}
       tags={<ToolTags toolId={toolId} />}
       thumbnail={toolInfo.thumbnail}
       title={`${toolInfo.name} (${toolInfo.version})`}
-      tools={toolbeltActions}
+      tools={<ToolBelt actions={toolbeltActions} />}
     />
   )
 }

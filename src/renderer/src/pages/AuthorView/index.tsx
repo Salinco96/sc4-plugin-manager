@@ -38,7 +38,7 @@ const tabs: TabInfo<{ authorId: AuthorID }>[] = [
   },
 ]
 
-function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
+function AuthorView({ id: authorId }: { id: AuthorID }): JSX.Element {
   const isLoading = useStore(store => !store.authors)
   const exists = useStore(store => !!store.authors?.[authorId])
 

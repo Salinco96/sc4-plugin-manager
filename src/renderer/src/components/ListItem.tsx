@@ -1,5 +1,6 @@
 import { Card, CardContent, Divider } from "@mui/material"
 import { type ComponentType, type ReactNode, useState } from "react"
+import type { HeaderProps } from "./Header"
 
 export function ListItem<T>({
   children,
@@ -9,11 +10,7 @@ export function ListItem<T>({
 }: T & {
   children?: ReactNode
   header: ComponentType<
-    Omit<T, "children" | "header" | "isDisabled"> & {
-      isDisabled?: boolean
-      isListItem?: boolean
-      setActive?: (active: boolean) => void
-    }
+    HeaderProps<Omit<T, "children" | "header" | "isDisabled"> & { isDisabled?: boolean }>
   >
   isDisabled?: boolean
 }): JSX.Element {

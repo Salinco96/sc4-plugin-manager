@@ -44,7 +44,7 @@ export const PackageListItem = memo(function PackageListItem({
                     color="inherit"
                     onClick={() => {
                       actions.setActiveTab(Page.PackageView, tab, element)
-                      history.push({ page: Page.PackageView, data: { packageId } })
+                      history.push({ page: Page.PackageView, data: { id: packageId } })
                     }}
                     sx={{
                       cursor: "pointer",

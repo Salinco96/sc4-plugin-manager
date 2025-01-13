@@ -7,6 +7,8 @@ export const PageComponents: {
 } = {
   Authors: lazy(() => import("./Authors")),
   AuthorView: lazy(() => import("./AuthorView")),
+  Collections: lazy(() => import("./Collections")),
+  CollectionView: lazy(() => import("./CollectionView")),
   Packages: lazy(() => import("./Packages")),
   PackageView: lazy(() => import("./PackageView")),
   Profile: lazy(() => import("./Profile")),

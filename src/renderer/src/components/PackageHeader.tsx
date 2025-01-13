@@ -3,6 +3,7 @@ import { PackageActions } from "@components/PackageActions"
 import { Page, useLocation } from "@utils/navigation"
 import { useCurrentVariant, usePackageInfo } from "@utils/packages"
 import { Header } from "./Header"
+import { PackageTools } from "./PackageTools"
 import { PackageTags } from "./Tags/PackageTags"
 
 export function PackageHeader({
@@ -24,14 +25,14 @@ export function PackageHeader({
       description={variantInfo.description}
       images={variantInfo.images}
       isListItem={isListItem}
-      location={{ data: { packageId }, page: Page.PackageView }}
+      location={{ data: { id: packageId }, page: Page.PackageView }}
       setActive={setActive}
       subtitle={`${packageId}#${variantInfo.id}`}
       summary={variantInfo.summary}
       thumbnail={variantInfo.thumbnail}
       title={`${packageInfo.name} (${variantInfo.version})`}
       tags={<PackageTags packageId={packageId} />}
-      // tools={<PackageTools packageId={packageId} />}
+      tools={<PackageTools packageId={packageId} />}
     />
   )
 }

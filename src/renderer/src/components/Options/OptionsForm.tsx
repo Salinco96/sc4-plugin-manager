@@ -14,12 +14,14 @@ import {
 
 import type { OptionInfo, OptionValue, Options, Requirements } from "@common/options"
 
+import { isEmpty } from "@salinco/nice-utils"
 import { OptionsFormSection } from "./OptionsFormSection"
 import { NOSECTION, getSections } from "./utils"
 
 export function OptionsForm({
   onReset,
   options,
+  resetDisabled,
   ...props
 }: {
   checkCondition: (conditions: Requirements | undefined) => boolean
@@ -27,6 +29,7 @@ export function OptionsForm({
   onChange: (option: OptionInfo, value: OptionValue) => void
   onReset?: () => void
   options: OptionInfo[]
+  resetDisabled?: boolean
   values: Options
 }): JSX.Element {
   const sections = useMemo(() => getSections(options), [options])
@@ -66,7 +69,7 @@ export function OptionsForm({
         <ButtonGroup>
           <Button
             color="error"
-            disabled={!Object.keys(props.values).length}
+            disabled={resetDisabled || isEmpty(props.values)}
             onClick={onReset}
             title="Reset all options to their default value"
             variant="outlined"

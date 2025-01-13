@@ -8,14 +8,21 @@ import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch, ExemplarPropertyInfo } from "@common/exemplars"
 import type { ModalData, ModalID } from "@common/modals"
 import type { OptionID, OptionValue } from "@common/options"
-import { type PackageID, getPackageStatus, isIncluded } from "@common/packages"
+import {
+  type PackageID,
+  getPackageStatus,
+  isEnabled,
+  isIncluded,
+  isIncompatible,
+} from "@common/packages"
 import type { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import type { Settings } from "@common/settings"
 import { type ApplicationState, type ApplicationStateUpdate, getInitialState } from "@common/state"
+import type { ToolID, ToolInfo } from "@common/tools"
 import type { Features, PackageInfo, VariantState } from "@common/types"
 import type { VariantID } from "@common/variants"
 
-import type { ToolID, ToolInfo } from "@common/tools"
+import type { CollectionID, CollectionInfo } from "@common/collections"
 import { getStore } from "./context"
 import type { Page } from "./navigation"
 import { computePackageList } from "./packages"
@@ -50,7 +57,9 @@ export interface StoreActions {
   closeSnackbar(type: SnackbarType): void
   createProfile(name: string, templateProfileId?: ProfileID): Promise<void>
   createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void>
+  disableCollection(collectionId: CollectionID): Promise<boolean>
   disablePackage(packageId: PackageID): Promise<boolean>
+  enableCollection(collectionId: CollectionID): Promise<boolean>
   enablePackage(packageId: PackageID): Promise<boolean>
   getPackageLogs(
     packageId: PackageID,
@@ -215,6 +224,42 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       createVariant(packageId, name, templateVariantId) {
         return window.api.createVariant(packageId, name, templateVariantId)
       },
+      async disableCollection(collectionId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
+          return false
+        }
+
+        const collectionInfo = getCollectionInfo(store, collectionId)
+        if (!collectionInfo) {
+          return false
+        }
+
+        const update: ProfileUpdate = {}
+
+        for (const packageId of collectionInfo.packages) {
+          const packageInfo = getPackageInfo(store, packageId)
+          const packageStatus = packageInfo && getPackageStatus(packageInfo, profileInfo)
+          const variantInfo = packageStatus && packageInfo.variants[packageStatus.variantId]
+          if (variantInfo && isEnabled(variantInfo, packageStatus)) {
+            update.packages ??= {}
+            update.packages[packageId] = { enabled: false }
+          }
+        }
+
+        if (!update.packages) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileInfo.id, update)
+        } catch (error) {
+          console.error(`Failed to disable ${collectionId}`, error)
+          this.showErrorToast(`Failed to disable ${collectionId}`)
+          return false
+        }
+      },
       async disablePackage(packageId) {
         const store = get()
         const profileInfo = getCurrentProfile(store)
@@ -231,6 +276,46 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         } catch (error) {
           console.error(`Failed to disable ${packageId}`, error)
           this.showErrorToast(`Failed to disable ${packageId}`)
+          return false
+        }
+      },
+      async enableCollection(collectionId) {
+        const store = get()
+        const profileInfo = getCurrentProfile(store)
+        if (!profileInfo) {
+          return false
+        }
+
+        const collectionInfo = getCollectionInfo(store, collectionId)
+        if (!collectionInfo) {
+          return false
+        }
+
+        const update: ProfileUpdate = {}
+
+        for (const packageId of collectionInfo.packages) {
+          const packageInfo = getPackageInfo(store, packageId)
+          const packageStatus = packageInfo && getPackageStatus(packageInfo, profileInfo)
+          const variantInfo = packageStatus && packageInfo.variants[packageStatus.variantId]
+          if (
+            variantInfo &&
+            !isEnabled(variantInfo, packageStatus) &&
+            !isIncompatible(variantInfo, packageStatus)
+          ) {
+            update.packages ??= {}
+            update.packages[packageId] = { enabled: true, variant: variantInfo.id }
+          }
+        }
+
+        if (!update.packages) {
+          return false
+        }
+
+        try {
+          return await window.api.updateProfile(profileInfo.id, update)
+        } catch (error) {
+          console.error(`Failed to enable ${collectionId}`, error)
+          this.showErrorToast(`Failed to enable ${collectionId}`)
           return false
         }
       },
@@ -564,6 +649,13 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
 
 function getAuthors(store: Store): Authors {
   return store.authors
+}
+
+export function getCollectionInfo(
+  store: Store,
+  collectionId: CollectionID,
+): CollectionInfo | undefined {
+  return store.collections?.[collectionId]
 }
 
 export function getCurrentProfile(store: Store): ProfileInfo | undefined {

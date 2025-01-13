@@ -1,12 +1,12 @@
-import type { AuthorID } from "@common/authors"
-import type { PackageID } from "@common/packages"
 import { Link, Typography } from "@mui/material"
 import { values } from "@salinco/nice-utils"
-import { Page, useHistory } from "@utils/navigation"
-import { useAuthors, useStore } from "@utils/store"
-import { useCallback, useMemo } from "react"
+import { useMemo } from "react"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+
+import type { PackageID } from "@common/packages"
+import { useNavigation } from "@utils/navigation"
+import { useAuthors, useStore } from "@utils/store"
 
 export interface MarkdownViewProps {
   md: string
@@ -16,7 +16,7 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
   const authors = useAuthors()
   const packages = useStore(store => store.packages)
 
-  const history = useHistory()
+  const { openAuthorView, openPackageView } = useNavigation()
 
   const urlMapping = useMemo(() => {
     return values(packages ?? {}).reduce(
@@ -32,20 +32,6 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
       {} as { [url in string]?: PackageID },
     )
   }, [packages])
-
-  const openAuthorView = useCallback(
-    (authorId: AuthorID) => {
-      history.push({ page: Page.AuthorView, data: { authorId } })
-    },
-    [history],
-  )
-
-  const openPackageView = useCallback(
-    (packageId: PackageID) => {
-      history.push({ page: Page.PackageView, data: { packageId } })
-    },
-    [history],
-  )
 
   return (
     <Markdown

@@ -20,7 +20,7 @@ import { type TabInfo, tabs } from "@utils/tabs"
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()
-  const count = useStore(store => tab.badgeCount?.(store) ?? 0)
+  const badge = useStore.shallow(store => tab.badge?.(store))
   const history = useHistory()
 
   const setActiveTab = useCallback(
@@ -39,7 +39,9 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
     <ListItemButton onClick={() => setActiveTab(tab)} selected={isActive}>
       <ListItemIcon sx={{ minWidth: 0, marginRight: 2 }}>{tab.icon}</ListItemIcon>
       <ListItemText primary={tab.label} />
-      <Badge badgeContent={count} color={tab.badgeColor} max={9999} sx={{ marginRight: 1 }} />
+      {badge && (
+        <Badge badgeContent={badge.label} color={badge.color} max={9999} sx={{ marginRight: 1 }} />
+      )}
     </ListItemButton>
   )
 

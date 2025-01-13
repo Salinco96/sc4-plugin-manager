@@ -1,30 +1,22 @@
 import { Box, Link, Typography } from "@mui/material"
 import { values } from "@salinco/nice-utils"
-import { useCallback } from "react"
 import { useTranslation } from "react-i18next"
 
-import type { AuthorID } from "@common/authors"
+import { getAuthorName } from "@common/authors"
 import type { ToolID } from "@common/tools"
 import { MarkdownView } from "@components/MarkdownView"
-import { getAuthorName } from "@components/Tags/utils" // TODO: Move
 import { Text } from "@components/Text"
-import { Page, useHistory } from "@utils/navigation"
+import { useNavigation } from "@utils/navigation"
 import { useToolInfo } from "@utils/packages"
 import { useAuthors } from "@utils/store"
 
 export function ToolViewSummary({ toolId }: { toolId: ToolID }): JSX.Element {
   const authors = useAuthors()
-  const history = useHistory()
   const toolInfo = useToolInfo(toolId)
 
-  const { t } = useTranslation("PackageViewSummary")
+  const { openAuthorView } = useNavigation()
 
-  const openAuthorView = useCallback(
-    (authorId: AuthorID) => {
-      history.push({ page: Page.AuthorView, data: { authorId } })
-    },
-    [history],
-  )
+  const { t } = useTranslation("PackageViewSummary")
 
   return (
     <Box>

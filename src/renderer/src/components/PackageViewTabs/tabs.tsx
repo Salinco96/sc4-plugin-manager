@@ -1,10 +1,8 @@
-import { get, size, unionBy, unique, uniqueBy, values } from "@salinco/nice-utils"
-import { lazy } from "react"
-
-import { isTogglableLot } from "@common/lots"
 import { type PackageID, isLocal, isPatched } from "@common/packages"
 import { VariantState } from "@common/types"
 import { TagType, createTag } from "@components/Tags/utils"
+import { get, size, unionBy, unique, uniqueBy, values } from "@salinco/nice-utils"
+import { lazy } from "react"
 
 import type { TabInfo } from "@components/Tabs"
 import { getCurrentVariant, getDependentPackages } from "@utils/packages"
@@ -161,7 +159,7 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
     condition({ packageId }, store) {
       const variantInfo = getCurrentVariant(store, packageId)
 
-      return !!variantInfo.options?.length || !!variantInfo.lots?.some(isTogglableLot)
+      return !!variantInfo.options?.length
     },
     label(t) {
       return t("options")

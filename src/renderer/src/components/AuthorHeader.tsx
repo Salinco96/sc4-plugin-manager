@@ -1,10 +1,10 @@
 import type { AuthorID } from "@common/authors"
+import { getAuthorName } from "@common/authors"
 import { Page } from "@utils/navigation"
 import { useAuthors, useStoreActions } from "@utils/store"
 import { useMemo } from "react"
 import { Header } from "./Header"
-import { getAuthorName } from "./Tags/utils"
-import type { ToolBeltAction } from "./ToolBelt"
+import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
 
 export function AuthorHeader({
   isListItem,
@@ -37,13 +37,13 @@ export function AuthorHeader({
   return (
     <Header
       isListItem={isListItem}
-      location={{ data: { authorId }, page: Page.AuthorView }}
+      location={{ data: { id: authorId }, page: Page.AuthorView }}
       setActive={setActive}
       subtitle={authorId}
       thumbnail={authorInfo?.thumbnail ?? getDefaultThumbnail(authorId)}
       thumbnailSize="small"
       title={getAuthorName(authorId, authors)}
-      tools={toolbeltActions}
+      tools={<ToolBelt actions={toolbeltActions} />}
     />
   )
 }

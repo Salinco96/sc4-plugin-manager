@@ -1,10 +1,11 @@
+import { getAuthorName } from "@common/authors"
 import { Box, Chip, Tooltip } from "@mui/material"
 import { difference } from "@salinco/nice-utils"
 import { useAuthors } from "@utils/store"
 import { type ComponentType, useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Tag } from "./Tag"
-import { type TagInfo, TagType, getAuthorName, serializeTag } from "./utils"
+import { type TagInfo, TagType, serializeTag } from "./utils"
 
 export function Tags({
   component: TagComponent = Tag,

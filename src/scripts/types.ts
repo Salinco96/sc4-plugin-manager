@@ -3,6 +3,7 @@ import type { HTMLElement } from "node-html-parser"
 
 import type { AssetID } from "@common/assets"
 import type { CategoryID } from "@common/categories"
+import type { CollectionID } from "@common/collections"
 import type { PackageID } from "@common/packages"
 import type { Feature } from "@common/types"
 import type { MaybeArray } from "@common/utils/types"
@@ -125,6 +126,7 @@ export interface IndexerVariantOverride extends IndexerPathOverride {
 }
 
 export interface IndexerOverride extends IndexerVariantOverride {
+  collectionId?: CollectionID
   superseded?: AssetID
   variants?: {
     [variant in string]?: IndexerVariantOverride | null

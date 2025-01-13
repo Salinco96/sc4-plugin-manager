@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-import { forEach, isEnum, mapValues, parseHex, size } from "@salinco/nice-utils"
+import { forEach, isEnum, mapDefined, mapValues, parseHex, size } from "@salinco/nice-utils"
 
 import type { Categories } from "@common/categories"
 import {
@@ -20,6 +20,7 @@ import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 
 import type { Assets } from "@common/assets"
 import type { ToolID, Tools } from "@common/tools"
+import { type OptionData, loadOptionInfo } from "@node/data/options"
 import { type ToolData, loadToolInfo } from "@node/data/tools"
 import { analyzeSC4Files } from "@node/dbpf/analyze"
 import type { TaskContext } from "@node/tasks"
@@ -147,13 +148,13 @@ export async function loadProfileOptions(
   basePath: string,
 ): Promise<OptionInfo[]> {
   try {
-    const config = await loadConfig<{ options: OptionInfo[] }>(basePath, FILENAMES.dbProfileOptions)
+    const config = await loadConfig<{ options: OptionData[] }>(basePath, FILENAMES.dbProfileOptions)
 
     if (!config) {
       throw Error(`Missing config ${FILENAMES.dbProfileOptions}`)
     }
 
-    const options = config.data.options
+    const options = mapDefined(config.data.options, loadOptionInfo)
 
     context.debug(`Loaded ${options.length} profile options`)
     return options

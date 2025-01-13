@@ -24,6 +24,7 @@ import {
   mapValues,
   merge,
   parseHex,
+  sort,
   union,
   unique,
   values,
@@ -72,6 +73,7 @@ import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
 import { loadAuthors, writeAuthors } from "@node/data/authors"
+import { loadCollections, writeCollections } from "@node/data/collections"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "../node/dbpf/analyze"
@@ -79,6 +81,7 @@ import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
 import {
   promptAuthorName,
   promptCategoryLabel,
+  promptCollectionId,
   promptPackageId,
   promptUrl,
   promptVariantId,
@@ -98,7 +101,7 @@ import type {
   IndexerSourceID,
   IndexerVariantEntry,
 } from "./types"
-import { getEnvRequired, readHTML, toID, wait } from "./utils"
+import { getEnvRequired, htmlToMd, readHTML, toID, wait } from "./utils"
 
 config({ path: ".env.local" })
 
@@ -205,6 +208,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   // Step 1a - Load database
   const assets = await loadAssetsFromDB()
   const dbAuthors = await loadAuthors(context, dbDir)
+  const dbCollections = await loadCollections(context, dbDir)
   const categories = await loadCategories()
   const exemplarProperties = await loadExemplarProperties()
   const overrides = await loadOverrides()
@@ -764,6 +768,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     )
   }
 
+  // Step 7f - Write collections
+  await writeCollections(context, dbDir, dbCollections)
+
   /**
    * STEP 8 - Show all errors encountered during this run
    */
@@ -1086,12 +1093,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     resolvingEntries.add(assetId)
 
     if (override === undefined) {
-      const answer = await select<"include" | "exclude" | "skip" | "redirect">({
+      const answer = await select<"include" | "exclude" | "skip" | "redirect" | "collection">({
         choices: [
           { name: "Yes", value: "include" },
           { name: "No", value: "exclude" },
           { name: "Skip this time only", value: "skip" },
           { name: "Redirect to another asset ID", value: "redirect" },
+          { name: "Include as collection", value: "collection" },
         ],
         default: "include",
         message: `Include ${assetId}?`,
@@ -1142,6 +1150,13 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
           override = overrides[entryId] ??= {}
           override.superseded = getAssetID(getEntryId(superseded))
+          break
+        }
+
+        // Include as collection
+        case "collection": {
+          override = overrides[entryId] ??= {}
+          override.collectionId = await promptCollectionId(getDefaultPackageId(entry, entryId))
           break
         }
       }
@@ -1452,6 +1467,32 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     let basePackageId = variantOverride?.packageId ?? entryOverride?.packageId
 
     if (entryOverride === null || variantOverride === null || !entry.meta?.timestamp) {
+      return false
+    }
+
+    if (entryOverride?.collectionId && !variant) {
+      const { collectionId } = entryOverride
+
+      console.debug(`Generating collection for ${variantAssetId} -> ${collectionId}`)
+
+      dbCollections[collectionId] = merge(dbCollections[collectionId], {
+        description: entry.description && htmlToMd(entry.description),
+        id: collectionId,
+        images: entry.images,
+        lastGenerated: new Date(),
+        lastModified: entry.lastModified,
+        name: entry.name ?? collectionId,
+        packages: sort(
+          unique(
+            mapDefined(values(entryOverride.paths ?? {}), pathOverride => pathOverride?.packageId),
+          ),
+        ),
+        thumbnail: entry.thumbnail,
+        url: entry.url,
+      })
+
+      dbCollections[collectionId].release ??= new Date()
+
       return false
     }
 

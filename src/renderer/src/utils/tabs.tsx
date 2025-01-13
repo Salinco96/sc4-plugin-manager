@@ -3,6 +3,7 @@ import {
   WidgetsOutlined as AllPackagesIcon,
   Person as AuthorsIcon,
   AccountBalance as CivicsIcon,
+  Collections as CollectionsIcon,
   CorporateFare as CommercialIcon,
   ViewInAr as DependenciesIcon,
   Bolt as EnergyIcon,
@@ -29,8 +30,7 @@ import { filterVariant, getCurrentVariant } from "@utils/packages"
 import { type PackageFilters, type Store, getCurrentProfile } from "@utils/store"
 
 export interface TabInfo {
-  badgeColor?: "error" | "info"
-  badgeCount?: (store: Store) => number | undefined
+  badge?: (store: Store) => { color?: "error" | "info"; label: number | "new" } | undefined
   collapse?: boolean
   group?: string
   icon?: JSX.Element
@@ -83,8 +83,16 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
-    badgeCount(store) {
-      return store.tools && Object.values(store.tools).filter(tool => !tool?.disabled).length
+    badge(store) {
+      const tools = store.tools && values(store.tools).filter(tool => !tool?.disabled)
+
+      if (tools?.some(tool => tool.new)) {
+        return { color: "info", label: "new" }
+      }
+
+      if (tools?.length) {
+        return { label: tools.length }
+      }
     },
     icon: <ToolsIcon />,
     id: "tools",
@@ -92,8 +100,8 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Tools, data: {} },
   },
   {
-    badgeCount(store) {
-      return size(store.authors)
+    badge(store) {
+      return { label: size(store.authors) }
     },
     icon: <AuthorsIcon />,
     id: "authors",
@@ -101,8 +109,12 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Authors, data: {} },
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     group: "Packages",
     icon: <AllPackagesIcon />,
@@ -119,8 +131,12 @@ export const tabs: TabInfo[] = [
     },
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -139,8 +155,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Textures, props",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -159,8 +179,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Gameplay mods, bugfixes, DLLs",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -179,8 +203,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Residential lots",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -199,8 +227,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Commercial lots",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -219,8 +251,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Industrial lots",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -239,8 +275,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Agricultural lots",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -259,8 +299,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Civic buildings, rewards",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -279,8 +323,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Landmarks",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -299,8 +347,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Parks",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -319,8 +371,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Energy, water, waste",
   },
   {
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { label: count }
+      }
     },
     collapse: true,
     group: "Packages",
@@ -339,9 +395,30 @@ export const tabs: TabInfo[] = [
     tooltip: "Transportation infrastructure",
   },
   {
-    badgeColor: "info",
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const collections = store.collections && values(store.collections)
+
+      if (collections?.some(collection => collection.new)) {
+        return { color: "info", label: "new" }
+      }
+
+      if (collections?.length) {
+        return { label: collections.length }
+      }
+    },
+    group: "Packages",
+    icon: <CollectionsIcon />,
+    id: "collections",
+    label: "Collections",
+    location: { page: Page.Collections, data: {} },
+  },
+  {
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { color: "info", label: count }
+      }
     },
     group: "Packages",
     icon: <NewIcon />,
@@ -359,9 +436,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Newly-released packages",
   },
   {
-    badgeColor: "error",
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { color: "error", label: count }
+      }
     },
     group: "Packages",
     icon: <ProblemsIcon />,
@@ -379,9 +459,12 @@ export const tabs: TabInfo[] = [
     tooltip: "Packages with issues",
   },
   {
-    badgeColor: "error",
-    badgeCount(store) {
-      return countPackages(store, this.packageFilters)
+    badge(store) {
+      const count = countPackages(store, this.packageFilters)
+
+      if (count) {
+        return { color: "error", label: count }
+      }
     },
     group: "Packages",
     icon: <UpdatesIcon />,

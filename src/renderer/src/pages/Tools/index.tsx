@@ -1,8 +1,8 @@
 import { sortBy, values } from "@salinco/nice-utils"
 
 import { Loader } from "@components/Loader"
-import { ToolList } from "@components/ToolList"
 import { useStore } from "@utils/store"
+import { ToolList } from "../../components/Tools/ToolList"
 
 function Tools(): JSX.Element {
   const tools = useStore(store => store.tools)
