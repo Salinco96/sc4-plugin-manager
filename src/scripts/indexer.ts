@@ -127,12 +127,12 @@ runIndexer({
       cococity: 2000,
       jasoncw: 2020, // todo
       jestarr: 2024, // todo
-      madhatter106: 2012, // todo
+      madhatter106: 2008, // todo
       memo: 2000,
       "null-45": 2000,
       simmaster07: 2000,
       toroca: 2000,
-      wannglondon: 2020, // todo
+      wannglondon: 2000,
     },
     entries: [
       "simtropolis/13318",

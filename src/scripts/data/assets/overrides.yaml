@@ -1131,8 +1131,16 @@ simtropolis/19536-rlm-fence-props-revision-2:
 simtropolis/19577-peg-cdk3-sp-container-ship-fleet:
   packageId: pegasus/cdk3-sp-container-ship-fleet
 
+simtropolis/19757-andys-gun-works:
+  packageId: madhatter106/andys-gun-works
+  variantId: default
+
 simtropolis/19786-peg-cdk3-sp-rail-fleet:
   packageId: pegasus/cdk3-sp-rail-fleet
+  variantId: default
+
+simtropolis/19818-new-age-and-occult-pack-volume-1:
+  packageId: madhatter106/new-age-and-occult-pack-vol01
   variantId: default
 
 simtropolis/19880-peg-cdk3-super-pak:
@@ -1166,8 +1174,16 @@ simtropolis/20564-ndex-glenni-mega-props-vol02:
   packageId: glenni/mega-props-vol02
   variantId: default
 
+simtropolis/20798-new-age-and-occult-pack-volume-2:
+  packageId: madhatter106/new-age-and-occult-pack-vol02
+  variantId: default
+
 simtropolis/20895-peg-mtp-mayor-menu-logging-scenes:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
+
+simtropolis/20901-low-wealth-commercial-shops-volume-1:
+  packageId: madhatter106/low-wealth-shops-vol01
+  variantId: default
 
 simtropolis/20915-peg-mtp-mayor-mode-flora-mod:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
@@ -1175,11 +1191,19 @@ simtropolis/20915-peg-mtp-mayor-mode-flora-mod:
 simtropolis/20916-peg-mtp-mayor-mode-forest-scenes:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
 
+simtropolis/20924-low-wealth-commercial-shops-volume-2:
+  packageId: madhatter106/low-wealth-shops-vol02
+  variantId: default
+
 simtropolis/20930-peg-mtp-mayor-menu-scrub-brush-mod:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
 
 simtropolis/20966-peg-mtp-super-pack:
   packageId: pegasus/mtp-super-pack
+  variantId: default
+
+simtropolis/21054-low-wealth-commercial-shops-volume-3:
+  packageId: madhatter106/low-wealth-shops-vol03
   variantId: default
 
 simtropolis/21060-gnleugim-essentials:
@@ -1193,6 +1217,10 @@ simtropolis/21062-furniture-shop:
 
 simtropolis/21118-simcity-4-extra-cheats-plugin:
   packageId: buggi/extra-cheats
+  variantId: default
+
+simtropolis/21201-captain-sids-bait-and-tackle:
+  packageId: madhatter106/captain-sids-bait-and-tackle
   variantId: default
 
 simtropolis/21286-plugin-landmark-props:
@@ -1326,11 +1354,31 @@ simtropolis/21770-lbt-mega-prop-pack-vol01:
 simtropolis/21771-lbt-mega-textures-vol01-v3:
   packageId: lbt/mega-textures-vol01
 
+simtropolis/21794-coffee-shops-and-greasy-spoons:
+  packageId: madhatter106/coffee-shops-and-greasy-spoons
+  variantId: default
+
+simtropolis/21840-eds-diner:
+  packageId: madhatter106/eds-diner
+  variantId: default
+
+simtropolis/21867-surf-shacks:
+  packageId: madhatter106/surf-shacks
+  variantId: default
+
+simtropolis/21964-low-wealth-commercial-shops-volume-4:
+  packageId: madhatter106/low-wealth-shops-vol04
+  variantId: default
+
 simtropolis/22324-zeeland-the-netherlands-11-cottages-pack:
   packageId: marcoheutink/zeeland-cottages-pack
 
 simtropolis/22325-ncd-railyard-texture-mega-pack-vol01-v3:
   superseded: sc4evermore/246-ncd-railyard-texture-mega-pack-vol01-v3
+
+simtropolis/22376-arthouse-theatre-pack:
+  packageId: madhatter106/arthouse-theatre-pack
+  variantId: default
 
 simtropolis/22379-village-pack-9-new-houses-from-zeeland-the-netherlands:
   packageId: marcoheutink/zeeland-houses-pack
@@ -1342,8 +1390,16 @@ simtropolis/22400-maxis-prop-names-and-query-fix:
 simtropolis/22527-hh-modular-parking-gray-version-2:
   packageId: hoo47/modular-parking
 
+simtropolis/22611-grindhouse-theatre-pack:
+  packageId: madhatter106/grindhouse-theatre-pack
+  variantId: default
+
 simtropolis/22701-peg-ppond-terrain-props-pack-1:
   superseded: simtropolis/27712-the-peg-terrain-kit-7-n-1
+
+simtropolis/22743-naughty-nimby-pack-volume-1:
+  packageId: madhatter106/naughty-nimby-pack-vol01
+  variantId: default
 
 simtropolis/22771-ih-missing-jobs-fix-update:
   packageId: heinbloed4711/ih-missing-jobs-fix
@@ -1351,8 +1407,16 @@ simtropolis/22771-ih-missing-jobs-fix-update:
 
 simtropolis/22787-fsh-file-thumbnails-for-windows-xp-vista-7-and-8: null
 
+simtropolis/22797-naughty-nimby-pack-volume-2:
+  packageId: madhatter106/naughty-nimby-pack-vol02
+  variantId: default
+
 simtropolis/22823-paeng-textures-vol104:
   packageId: paeng/textures
+  variantId: default
+
+simtropolis/22848-naughty-nimby-pack-volume-3:
+  packageId: madhatter106/naughty-nimby-pack-vol03
   variantId: default
 
 simtropolis/22887-batch-png-to-fsh-tool: null
@@ -1370,10 +1434,18 @@ simtropolis/23089-simfox-day-and-nite-modd:
 simtropolis/23092-delecto-pearl-sunshine:
   packageId: delecto/pearl-sunshine
 
+simtropolis/23756-laundromats-and-drycleaners:
+  packageId: madhatter106/laundromats-and-drycleaners
+  variantId: default
+
 simtropolis/23820-multi-fsh-tool: null
 
 simtropolis/24509-spot-simpeg-plop-orientation-tool:
   packageId: rebalynnts/spot
+  variantId: default
+
+simtropolis/24645-maxies-mini-mart:
+  packageId: madhatter106/maxies-mini-mart
   variantId: default
 
 simtropolis/24859-bikes:
@@ -1382,6 +1454,18 @@ simtropolis/24859-bikes:
 
 simtropolis/25057-ancient-stone-walls-corrected:
   packageId: itsmo/ancient-stone-walls
+
+simtropolis/25137-liquor-stores:
+  packageId: madhatter106/liquor-stores
+  variantId: default
+
+simtropolis/25348-church-of-simtology-headquarters:
+  packageId: madhatter106/simtology-headquarters
+  variantId: default
+
+simtropolis/25415-simtology-celebrity-center:
+  packageId: madhatter106/simtology-celebrity-center
+  variantId: default
 
 simtropolis/25433-pamu-bikes-inc:
   packageId: murimk/bike-lots
@@ -1491,6 +1575,14 @@ simtropolis/26806-vip-rural-pack-v2:
 simtropolis/26808-vip-girafe-vnaoned-carpack-vol01-vol02-v2:
   superseded: sc4evermore/3-sc4d-lex-legacy-bsc-common-dependencies-pack
 
+simtropolis/26810-small-office-pack:
+  packageId: madhatter106/small-office-pack
+  variantId: default
+
+simtropolis/26811-midrise-office-pack-volume-1:
+  packageId: madhatter106/midrise-office-pack-vol01
+  variantId: default
+
 simtropolis/26837-wmp-rural-docklands-base-set:
   packageId: wmp/rural-docklands-base-set
 
@@ -1529,6 +1621,10 @@ simtropolis/27008-vip-orange-fagus:
 
 simtropolis/27064-discontinued-vip-rural-pack-expansion01-discontinued-see-below:
   superseded: simtropolis/26806-vip-rural-pack-v2
+
+simtropolis/27105-midrise-office-pack-volume-2:
+  packageId: madhatter106/midrise-office-pack-vol02
+  variantId: default
 
 simtropolis/27200-light-replacement-mod-lrm-v40-mega-pack:
   packageId: mandelsoft/light-replacement-mod
