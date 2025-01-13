@@ -19499,11 +19499,68 @@ assets:
     assetId: simtropolis/35575-grand-arch
     authors:
       - WannGLondon
+    buildings:
+      Grand Arch_DN/PLOP_3x1_Grand Arch_DN_923580a0.SC4Lot:
+        1c2d4663-923580a0:
+          bulldoze: 900
+          categories: education
+          cost: 1600
+          description: This building was made by a Typing Monkey
+          flamability: 35
+          garbage: 1
+          jobs:
+            $: 12
+            $$: 39
+            $$$: 15
+          label: Grand Arch_DN
+          maintenance: 1550
+          menu: Education
+          model: 11b446d8
+          name: Grand Arch_DN
+          pollution: 2
+          pollutionRadius: 3
+          power: 4
+          submenu: Education/Libraries
+          water: 13
+          waterPollution: 1
+          waterPollutionRadius: 4
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA fantasy grand arch to place in your city. Functions as a museum in-game.\n</p>\n\n<p>\n\t- 3x1 lot size\n</p>\n\n<p>\n\t- Darknite only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Grand Arch_DN.zip
+    files:
+      - Grand Arch_DN/Grand Arch_DN-0x6534284a-0x1c2d4663-0x92358094._LooseDesc
+      - Grand Arch_DN/GrandArchDN-0x5ad0e817_0x11b446d8_0x30000.SC4Model
+      - Grand Arch_DN/PLOP_3x1_Grand Arch_DN_923580a0.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64bc3c1a0f17a_ArchDay.jpg.55f76142dd57aa589ce66bfe44bb4a21.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64bc3c1f0e98c_ArchNight.jpg.8091617f5cfec0f3afbc4a18c9c26cff.jpg
     lastModified: 2023-07-22T20:30:35.000Z
+    lots:
+      Grand Arch_DN/PLOP_3x1_Grand Arch_DN_923580a0.SC4Lot:
+        923580a0:
+          building: 923580a0
+          name: PLOP_3x1_Grand Arch_DN
+          props:
+            - 1dfb0000
+            - aa836b49
+          size: 3x1
+          textures:
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      Grand Arch_DN/GrandArchDN-0x5ad0e817_0x11b446d8_0x30000.SC4Model:
+        - 11b446d8
     name: Grand Arch
+    sha256: ae6534af3f0982e1eaa2dadb89c85e8c7fe37978976c41c528af0944ccbff662
+    size: 594244
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64bc3c6ba9b1d_ArchDay.thumb.jpg.f1afc8611afe4bfb02224c1f5e4ca9ed.jpg
+    uncompressed: 721772
     url: https://community.simtropolis.com/files/file/35575-grand-arch/
+    version: 1.0.0
   simtropolis/3562:
     assetId: simtropolis/3562-church-of-st-gabriel
     authors:

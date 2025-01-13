@@ -129,7 +129,7 @@ runIndexer({
       "null-45": 2000,
       simmaster07: 2000,
       toroca: 2000,
-      wannglondon: 2024, // todo
+      wannglondon: 2023, // todo
     },
     entries: [
       "simtropolis/13318",

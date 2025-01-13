@@ -2783,8 +2783,42 @@ simtropolis/35527-victorian-row-shops-diagonal:
       packageId: justforfun/victorian-row-shops-diagonal
       variantId: default
 
+simtropolis/35555-paris-batiments-32-33:
+  packageId: wannglondon/paris-batiments-32-33
+  variants:
+    '197281':
+      packageId: wannglondon/paris-batiment-32
+      variantId: default
+    '197282':
+      packageId: wannglondon/paris-batiment-33
+      variantId: default
+
 simtropolis/35561-agc-viking-dlc:
   packageId: agc/viking-dlc
+  variantId: default
+
+simtropolis/35563-paris-batiment-34:
+  packageId: wannglondon/paris-batiment-34
+  variantId: default
+
+simtropolis/35566-medit-bldg-50:
+  packageId: wannglondon/mediterranean-building-50
+  variantId: default
+
+simtropolis/35568-london-flats-5:
+  packageId: wannglondon/london-flats-5
+  variantId: default
+
+simtropolis/35571-london-flats-3:
+  packageId: wannglondon/london-flats-3
+  variantId: default
+
+simtropolis/35575-grand-arch:
+  packageId: wannglondon/grand-arch
+  variantId: default
+
+simtropolis/35582-wanng-random-pack-1:
+  packageId: wannglondon/random-pack-1
   variantId: default
 
 simtropolis/35616-great-northern-hotel:
@@ -2809,12 +2843,49 @@ simtropolis/35617-emerson-apartments:
 
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
 
+simtropolis/35632-new-york-pack-1:
+  packageId: wannglondon/ny-pack
+  paths:
+    NY Bldg 1_DN:
+      packageId: wannglondon/ny-building-1
+      variantId: darknite
+    NY Bldg 2_DN:
+      packageId: wannglondon/ny-building-2
+      variantId: darknite
+    NY Bldg 4_DN:
+      packageId: wannglondon/ny-building-4
+      variantId: darknite
+    NY Bldg 6_DN:
+      packageId: wannglondon/ny-building-6
+      variantId: darknite
+    NY Bldg 7_DN:
+      packageId: wannglondon/ny-building-7
+      variantId: darknite
+    NY Buidling 9_DN:
+      packageId: wannglondon/ny-building-9
+      variantId: darknite
+    NY Building 3_DN:
+      packageId: wannglondon/ny-building-3
+      variantId: darknite
+    NY Building 8_DN:
+      packageId: wannglondon/ny-building-8
+      variantId: darknite
+    Townhomes 3_DN:
+      packageId: wannglondon/american-townhomes-3
+      variantId: darknite
+    desktop.ini: null
+  variantId: darknite
+
 simtropolis/35633-1x1-dirty-industrials:
   packageId: jestarr/1x1-dirty-industrials
   variantId: default
 
 simtropolis/35635-ulisse-wolf-five-nights-at-freddys:
   packageId: ulisse-wolf/five-nights-at-freddys
+
+simtropolis/35650-ny-building-10:
+  packageId: wannglondon/ny-building-10
+  variantId: darknite
 
 simtropolis/35660-sfbt-street-tree-mod-revised:
   packageId: sfbt/street-tree-mod
@@ -2883,6 +2954,15 @@ simtropolis/35761-sc4-auto-save:
   packageId: null-45/auto-save
   variantId: default
 
+simtropolis/35762-paris-park-hyatt-vendome:
+  packageId: wannglondon/paris-park-hyatt-vendome
+  paths:
+    ParisPHVendomeDN-*.SC4Model:
+      variantId: darknite
+    ParisPHVendomeMN-*.SC4Model:
+      variantId: default
+  variantId: default,darknite
+
 simtropolis/35763-tenement-1:
   packageId: justforfun/tenement-01
 
@@ -2910,6 +2990,10 @@ simtropolis/35797-post-offices-pack-1-mail-van-automata:
 
 simtropolis/35871-city-lottery-ordinance:
   packageId: null-45/city-lottery-ordinance
+  variantId: default
+
+simtropolis/35885-the-home-alone-house:
+  packageId: wannglondon/home-alone-house
   variantId: default
 
 simtropolis/35889-legalize-gambling-ordinance-upgrade:
@@ -3391,7 +3475,7 @@ simtropolis/36383-effthegrids-fa3-181-east-gun-hill-rd:
 simtropolis/36384-sc4-auto-run-cheats-dll-plugin: null
 
 simtropolis/36385-san-francisco-buildings-1:
-  packageId: wannglondon/san-francisco-buildings-1
+  packageId: wannglondon/sf-buildings-1
   variantId: darknite
 
 simtropolis/36389-fa3-928-s-broadway-growify:
@@ -3527,7 +3611,24 @@ simtropolis/36497-webb-chapel-park-pavilion:
       variantId: darknite
 
 simtropolis/36505-american-rowhomes-pack-1:
-  packageId: wannglondon/american-rowhomes-pack-1
+  packageId: wannglondon/american-townhomes-pack
+  paths:
+    Townhomes 1*_DN:
+      packageId: wannglondon/american-townhomes-1
+      variantId: darknite
+    Townhomes 2*_DN:
+      packageId: wannglondon/american-townhomes-2
+      variantId: darknite
+    Townhomes 4*_DN:
+      packageId: wannglondon/american-townhomes-4
+      variantId: darknite
+    Townhomes 5*_DN:
+      packageId: wannglondon/american-townhomes-5
+      variantId: darknite
+    Townhomes 6*_DN:
+      packageId: wannglondon/american-townhomes-6
+      variantId: darknite
+    desktop.ini: null
   variantId: darknite
 
 simtropolis/36507-delitz-designer-gallery:
@@ -3545,7 +3646,7 @@ simtropolis/36521-allied-pickle-works-hd:
   variantId: hd
 
 simtropolis/36523-american-rowhome-8:
-  packageId: wannglondon/american-rowhome-8
+  packageId: wannglondon/american-townhomes-8
   variantId: darknite
 
 simtropolis/36524-miu-miu:

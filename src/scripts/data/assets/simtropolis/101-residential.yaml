@@ -21708,46 +21708,780 @@ assets:
     authors:
       - WannGLondon
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tTwo Parisian-inspired BATs found in the 16th arrondissement.\n</p>\n\n<p>\n\t- Euro Tileset\n</p>\n\n<p>\n\t- Medium &amp; High Density, 1x2 lots\n</p>\n\n<p>\n\t- Residential &amp; Commercial offerings\n</p>\n\n<p>\n\t- Darknite versions only\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_06/32.jpg.c7cdb74570b5dc5e195d1e9c5de2709d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_06/33.jpg.b172eccd0818494eb4b1af464a98c7e2.jpg
     lastModified: 2023-06-23T02:28:18.000Z
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
     name: Paris Batiments 32 & 33
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_06/32.thumb.jpg.8fa22d447d2b772eeb83a0bb6e854b7d.jpg
     url: https://community.simtropolis.com/files/file/35555-paris-batiments-32-33/
+    variants:
+      '197281':
+        buildings:
+          Paris Batiment 32_DN/CO$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0x5214da90.SC4Desc:
+            1c2d4663-5214da90:
+              bulldoze: 424
+              capacity:
+                co$$: 87
+                co$$$: 62
+              categories: co$$$
+              flamability: 35
+              garbage: 4
+              model: 91939e3e
+              name: CO$$$ Paris Batiment 32_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro
+              water: 41
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 680
+          Paris Batiment 32_DN/CS$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0xb2159510.SC4Desc:
+            1c2d4663-b2159510:
+              bulldoze: 424
+              capacity:
+                cs$: 193
+                cs$$: 50
+                cs$$$: 22
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: 91939e3e
+              name: CS$$$ Paris Batiment 32_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 54
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1875
+          Paris Batiment 32_DN/Mirror/CO$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x3214e42c.SC4Desc:
+            1c2d4663-3214e42c:
+              bulldoze: 424
+              capacity:
+                co$$: 87
+                co$$$: 62
+              categories: co$$$
+              flamability: 35
+              garbage: 4
+              model: b193ade8
+              name: CO$$$ Paris Batiment 32 Mirror_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 3
+              tilesets: Euro
+              water: 41
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 680
+          Paris Batiment 32_DN/Mirror/CS$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x521595d4.SC4Desc:
+            1c2d4663-521595d4:
+              bulldoze: 424
+              capacity:
+                cs$: 193
+                cs$$: 50
+                cs$$$: 22
+              categories: cs$$$
+              flamability: 35
+              garbage: 4
+              model: b193ade8
+              name: CS$$$ Paris Batiment 32 Mirror_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 54
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 1875
+          Paris Batiment 32_DN/Mirror/R$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x9214e36c.SC4Desc:
+            1c2d4663-9214e36c:
+              bulldoze: 424
+              capacity:
+                r$: 156
+                r$$: 87
+                r$$$: 40
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: b193ade8
+              name: R$$$ Paris Batiment 32 Mirror_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro
+              water: 10
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2382
+          Paris Batiment 32_DN/R$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0x3214d9b7.SC4Desc:
+            1c2d4663-3214d9b7:
+              bulldoze: 424
+              capacity:
+                r$: 156
+                r$$: 87
+                r$$$: 40
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: 91939e3e
+              name: R$$$ Paris Batiment 32_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 5
+              tilesets: Euro
+              water: 10
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2382
+        features: []
+        filename: Paris Batiment 32_DN.zip
+        files:
+          - Paris Batiment 32_DN/CO$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0x5214da90.SC4Desc
+          - Paris Batiment 32_DN/CO$$$6_1x2_CO$$$ Paris Batiment 32_DN_9214da9d.SC4Lot
+          - Paris Batiment 32_DN/CS$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0xb2159510.SC4Desc
+          - Paris Batiment 32_DN/CS$$$5_1x2_CS$$$ Paris Batiment 32_DN_6215951a.SC4Lot
+          - Paris Batiment 32_DN/Mirror/CO$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x3214e42c.SC4Desc
+          - Paris Batiment 32_DN/Mirror/CO$$$6_1x2_CO$$$ Paris Batiment 32 Mirror_DN_6214e438.SC4Lot
+          - Paris Batiment 32_DN/Mirror/CS$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x521595d4.SC4Desc
+          - Paris Batiment 32_DN/Mirror/CS$$$5_1x2_CS$$$ Paris Batiment 32 Mirror_DN_721595de.SC4Lot
+          - Paris Batiment 32_DN/Mirror/ParisBatiment32MirrorDN-0x5ad0e817_0xb193ade8_0x30000.SC4Model
+          - Paris Batiment 32_DN/Mirror/R$$$ Paris Batiment 32 Mirror_DN-0x6534284a-0x1c2d4663-0x9214e36c.SC4Desc
+          - Paris Batiment 32_DN/Mirror/R$$$6_1x2_R$$$ Paris Batiment 32 Mirror_DN_5214e378.SC4Lot
+          - Paris Batiment 32_DN/ParisBatiment32DN-0x5ad0e817_0x91939e3e_0x30000.SC4Model
+          - Paris Batiment 32_DN/R$$$ Paris Batiment 32_DN-0x6534284a-0x1c2d4663-0x3214d9b7.SC4Desc
+          - Paris Batiment 32_DN/R$$$6_1x2_R$$$ Paris Batiment 32_DN_5214d9cd.SC4Lot
+        lots:
+          Paris Batiment 32_DN/CO$$$6_1x2_CO$$$ Paris Batiment 32_DN_9214da9d.SC4Lot:
+            9214da9d:
+              building: 5214da90
+              density: medium,high
+              name: CO$$$6_1x2_CO$$$ Paris Batiment 32_DN
+              props:
+                - 1dfb0000
+                - 2a8a0000
+                - a000000a
+                - a000000b
+                - a0000028
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 6
+              textures:
+                - '26060000'
+          Paris Batiment 32_DN/CS$$$5_1x2_CS$$$ Paris Batiment 32_DN_6215951a.SC4Lot:
+            6215951a:
+              building: b2159510
+              density: medium,high
+              name: CS$$$5_1x2_CS$$$ Paris Batiment 32_DN
+              props:
+                - 1dfb0000
+                - 1f010000
+                - 2a8a0000
+                - a0000006
+                - a000000a
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Paris Batiment 32_DN/Mirror/CO$$$6_1x2_CO$$$ Paris Batiment 32 Mirror_DN_6214e438.SC4Lot:
+            '6214e438':
+              building: 3214e42c
+              density: medium,high
+              name: CO$$$6_1x2_CO$$$ Paris Batiment 32 Mirror_DN
+              props:
+                - 1dfb0000
+                - 2a8a0000
+                - a000000a
+                - a000000b
+                - a0000026
+                - a0000028
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 6
+              textures:
+                - '26060000'
+          Paris Batiment 32_DN/Mirror/CS$$$5_1x2_CS$$$ Paris Batiment 32 Mirror_DN_721595de.SC4Lot:
+            721595de:
+              building: 521595d4
+              density: medium,high
+              name: CS$$$5_1x2_CS$$$ Paris Batiment 32 Mirror_DN
+              props:
+                - 1dfb0000
+                - 2a8a0000
+                - a000000a
+                - a000000b
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 5
+              textures:
+                - '26060000'
+          Paris Batiment 32_DN/Mirror/R$$$6_1x2_R$$$ Paris Batiment 32 Mirror_DN_5214e378.SC4Lot:
+            '5214e378':
+              building: 9214e36c
+              density: medium,high
+              name: R$$$6_1x2_R$$$ Paris Batiment 32 Mirror_DN
+              props:
+                - 1dfb0000
+                - 2a8a0000
+                - a000000a
+                - a000000b
+                - a0000027
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 6
+              textures:
+                - '26060000'
+          Paris Batiment 32_DN/R$$$6_1x2_R$$$ Paris Batiment 32_DN_5214d9cd.SC4Lot:
+            5214d9cd:
+              building: 3214d9b7
+              density: medium,high
+              name: R$$$6_1x2_R$$$ Paris Batiment 32_DN
+              props:
+                - 1dfb0000
+                - 2a8a0000
+                - a0000006
+                - a000000a
+                - a0000050
+                - aa836b49
+              size: 1x2
+              stage: 6
+              textures:
+                - '26060000'
+        models:
+          Paris Batiment 32_DN/Mirror/ParisBatiment32MirrorDN-0x5ad0e817_0xb193ade8_0x30000.SC4Model:
+            - b193ade8
+          Paris Batiment 32_DN/ParisBatiment32DN-0x5ad0e817_0x91939e3e_0x30000.SC4Model:
+            - 91939e3e
+        sha256: d8fc7132df5552f1c1e268744076f6aed4d98166180c999b6375b3ea21ef85d2
+        size: 826683
+        uncompressed: 1027782
+      '197282':
+        buildings:
+          Paris Batiment 33_DN/33A/Paris Batiment 33A_DN-0x6534284a-0x1c2d4663-0xd2162ccb.SC4Desc:
+            1c2d4663-d2162ccb:
+              bulldoze: 456
+              capacity:
+                r$: 174
+                r$$: 97
+                r$$$: 44
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: d194f737
+              name: Paris Batiment 33A_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 10
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2656
+          Paris Batiment 33_DN/Paris Batiment 33_DN-0x6534284a-0x1c2d4663-0x1215f610.SC4Desc:
+            1c2d4663-1215f610:
+              bulldoze: 456
+              capacity:
+                r$: 182
+                r$$: 102
+                r$$$: 46
+              categories: r$$$
+              flamability: 35
+              garbage: 4
+              model: b194bff1
+              name: Paris Batiment 33_DN
+              pollution: 1
+              pollutionRadius: 6
+              power: 6
+              tilesets: Euro
+              water: 11
+              waterPollution: 1
+              waterPollutionRadius: 7
+              worth: 2779
+        features: []
+        filename: Paris Batiment 33_DN.zip
+        files:
+          - Paris Batiment 33_DN/33A/Paris Batiment 33A_DN-0x6534284a-0x1c2d4663-0xd2162ccb.SC4Desc
+          - Paris Batiment 33_DN/33A/ParisBatiment33ADN-0x5ad0e817_0xd194f737_0x30000.SC4Model
+          - Paris Batiment 33_DN/33A/R$$$5_1x2_Paris Batiment 33A_DN_a2162cd9.SC4Lot
+          - Paris Batiment 33_DN/Paris Batiment 33_DN-0x6534284a-0x1c2d4663-0x1215f610.SC4Desc
+          - Paris Batiment 33_DN/ParisBatiment33DN-0x5ad0e817_0xb194bff1_0x30000.SC4Model
+          - Paris Batiment 33_DN/R$$$5_1x2_Paris Batiment 33_DN_3215f63c.SC4Lot
+        lots:
+          Paris Batiment 33_DN/33A/R$$$5_1x2_Paris Batiment 33A_DN_a2162cd9.SC4Lot:
+            a2162cd9:
+              building: d2162ccb
+              density: medium,high
+              name: R$$$5_1x2_Paris Batiment 33A_DN
+              props:
+                - 2a8a0000
+                - a000004f
+                - a0000050
+              size: 1x2
+              stage: 5
+              textures:
+                - '25223000'
+                - '26060000'
+          Paris Batiment 33_DN/R$$$5_1x2_Paris Batiment 33_DN_3215f63c.SC4Lot:
+            3215f63c:
+              building: 1215f610
+              density: medium,high
+              name: R$$$5_1x2_Paris Batiment 33_DN
+              props:
+                - 2a8a0000
+                - a0000050
+              size: 1x2
+              stage: 5
+              textures:
+                - '25223000'
+                - '26060000'
+        models:
+          Paris Batiment 33_DN/33A/ParisBatiment33ADN-0x5ad0e817_0xd194f737_0x30000.SC4Model:
+            - d194f737
+          Paris Batiment 33_DN/ParisBatiment33DN-0x5ad0e817_0xb194bff1_0x30000.SC4Model:
+            - b194bff1
+        sha256: 8869719d96d1927d70878a4ff2a268c22a185de7a5df121f91d7bd350fe143d1
+        size: 868809
+        uncompressed: 1056237
+    version: 1.0.0
   simtropolis/35563:
     assetId: simtropolis/35563-paris-batiment-34
     authors:
       - WannGLondon
+    buildings:
+      Paris Batiment 34_DN/Paris Batiment 34_DN-0x6534284a-0x1c2d4663-0x921b8a31.SC4Desc:
+        1c2d4663-921b8a31:
+          bulldoze: 456
+          capacity:
+            r$: 120
+            r$$: 67
+            r$$$: 31
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: b19a54a5
+          name: Paris Batiment 34_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Euro
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1832
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA Parisian-inspired <abbr title=\"Building Architect Tool\">BAT</abbr>\_found in the 16th arrondissement.\n</p>\n\n<p>\n\t- Euro Tileset\n</p>\n\n<p>\n\t- Medium &amp; High Density, 1x2 lot\n</p>\n\n<p>\n\t- Stage 5 R$$$\n</p>\n\n<p>\n\t- Darknite versions only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Paris Batiment 34_DN.zip
+    files:
+      - Paris Batiment 34_DN/Paris Batiment 34_DN-0x6534284a-0x1c2d4663-0x921b8a31.SC4Desc
+      - Paris Batiment 34_DN/ParisBatiment34DN-0x5ad0e817_0xb19a54a5_0x30000.SC4Model
+      - Paris Batiment 34_DN/R$$$5_1x2_Paris Batiment 34_DN_d21b8a3b.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/Day.jpg.d639b8876c983f1cac9711a59669315f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/Day-Back.jpg.1355e85bcb7678a4096a88149519d159.jpg
     lastModified: 2023-07-05T16:42:18.000Z
+    lots:
+      Paris Batiment 34_DN/R$$$5_1x2_Paris Batiment 34_DN_d21b8a3b.SC4Lot:
+        d21b8a3b:
+          building: 921b8a31
+          density: medium,high
+          name: R$$$5_1x2_Paris Batiment 34_DN
+          props:
+            - 2a8a0000
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251f2000
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      Paris Batiment 34_DN/ParisBatiment34DN-0x5ad0e817_0xb19a54a5_0x30000.SC4Model:
+        - b19a54a5
     name: Paris Batiment 34
+    sha256: 4e5a37f1ee55a528890851721596399c9e15bfefe5d21f9f12c429785d686d46
+    size: 368800
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/Day.thumb.jpg.2c73a83dbdfb5f753bb93359028868c2.jpg
+    uncompressed: 450554
     url: https://community.simtropolis.com/files/file/35563-paris-batiment-34/
+    version: 1.0.0
   simtropolis/35566:
     assetId: simtropolis/35566-medit-bldg-50
     authors:
       - WannGLondon
+    buildings:
+      Medit Bldg 50_DN/Medit Bldg 50_DN-0x6534284a-0x1c2d4663-0x31fa3cc8.SC4Desc:
+        1c2d4663-31fa3cc8:
+          bulldoze: 339
+          capacity:
+            r$: 577
+            r$$: 320
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: '517904e8'
+          name: Medit Bldg 50_DN
+          pollution: 2
+          pollutionRadius: 5
+          power: 5
+          tilesets: Houston
+          water: 13
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 8326
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tSeaside flats found up and down the French Riviera.\n</p>\n\n<p>\n\t- 2x5 Medium/High Density\n</p>\n\n<p>\n\t- Medium-Wealth Residential\n</p>\n\n<p>\n\t- Houston Tileset\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Medit Bldg 50_DN.zip
+    files:
+      - Medit Bldg 50_DN/Medit Bldg 50_DN-0x6534284a-0x1c2d4663-0x31fa3cc8.SC4Desc
+      - Medit Bldg 50_DN/MeditBldg50DN-0x5ad0e817_0x517904e8_0x30000.SC4Model
+      - Medit Bldg 50_DN/R$$5_2x5_Medit Bldg 50_DN_d1fa3cdd.SC4Lot
+      - Medit Bldg 50_DN/desktop.ini
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/Flats.jpg.f609fdac36d8d17add588423df2cca0e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/Flats2.jpg.ea5f6b51f4db0549677ef747d604799d.jpg
     lastModified: 2023-07-14T19:01:48.000Z
+    lots:
+      Medit Bldg 50_DN/R$$5_2x5_Medit Bldg 50_DN_d1fa3cdd.SC4Lot:
+        d1fa3cdd:
+          building: 31fa3cc8
+          density: medium,high
+          name: R$$5_2x5_Medit Bldg 50_DN
+          props:
+            - 1d280000
+            - 1dfb0000
+            - 1ed30000
+            - 1f0b0000
+            - a000004f
+            - a0000050
+            - a0000051
+            - aa836b49
+          size: 2x5
+          stage: 5
+          textures:
+            - '25283000'
+            - 25aa2000
+            - 25f40000
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      Medit Bldg 50_DN/MeditBldg50DN-0x5ad0e817_0x517904e8_0x30000.SC4Model:
+        - '517904e8'
     name: Medit Bldg 50
+    sha256: f23947830034fcd60e71707e1a43e8d8524d3905c8a70547c6cb591f0e7f1f9a
+    size: 795046
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/Flats.thumb.jpg.adf1446b31a8f5071fe09d0ee3f7dedb.jpg
+    uncompressed: 955693
     url: https://community.simtropolis.com/files/file/35566-medit-bldg-50/
+    version: 1.0.0
   simtropolis/35568:
     assetId: simtropolis/35568-london-flats-5
     authors:
       - WannGLondon
+    buildings:
+      London Flats 5_DN/5A/London Flats 5A_DN-0x6534284a-0x1c2d4663-0xd23a8fbf.SC4Desc:
+        1c2d4663-d23a8fbf:
+          bulldoze: 307
+          capacity:
+            r$: 96
+            r$$: 55
+            r$$$: 26
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 51b95aaf
+          name: London Flats 5A_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 3
+          tilesets: Euro
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1465
+      London Flats 5_DN/5B/London Flats 5B_DN-0x6534284a-0x1c2d4663-0x923a9866.SC4Desc:
+        1c2d4663-923a9866:
+          bulldoze: 307
+          capacity:
+            r$: 96
+            r$$: 55
+            r$$$: 26
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: b1b96058
+          name: London Flats 5B_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 3
+          tilesets: Euro
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1465
+      London Flats 5_DN/London Flats 5_DN-0x6534284a-0x1c2d4663-0xb239d4cd.SC4Desc:
+        1c2d4663-b239d4cd:
+          bulldoze: 307
+          capacity:
+            r$: 96
+            r$$: 55
+            r$$$: 26
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 11b89f9e
+          name: London Flats 5_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 3
+          tilesets: Euro
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1465
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThree variations of London rowhomes found in Kensington.\n</p>\n\n<p>\n\t- Stage 5 high-wealth residential\n</p>\n\n<p>\n\t- Euro Tileset, 1x2 lots\n</p>\n\n<p>\n\t- DarkNite only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: London Flats 5_DN.zip
+    files:
+      - London Flats 5_DN/5A/London Flats 5A_DN-0x6534284a-0x1c2d4663-0xd23a8fbf.SC4Desc
+      - London Flats 5_DN/5A/LondonFlats5ADN-0x5ad0e817_0x51b95aaf_0x30000.SC4Model
+      - London Flats 5_DN/5A/R$$$5_1x2_London Flats 5A_DN_123a8fca.SC4Lot
+      - London Flats 5_DN/5B/London Flats 5B_DN-0x6534284a-0x1c2d4663-0x923a9866.SC4Desc
+      - London Flats 5_DN/5B/LondonFlats5BDN-0x5ad0e817_0xb1b96058_0x30000.SC4Model
+      - London Flats 5_DN/5B/R$$$5_1x2_London Flats 5B_DN_123a9872.SC4Lot
+      - London Flats 5_DN/London Flats 5_DN-0x6534284a-0x1c2d4663-0xb239d4cd.SC4Desc
+      - London Flats 5_DN/LondonFlats5DN-0x5ad0e817_0x11b89f9e_0x30000.SC4Model
+      - London Flats 5_DN/R$$$5_1x2_London Flats 5_DN_b239d4d8.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64b58f5e43630_BackDay.jpg.37529963545e976665c4ecb165cb9c3a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64b58f5fe7cd4_DayFront.jpg.4ba9918a8ac1a10401dc0534c8753979.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64b58f60e7055_NightFront.jpg.697c0863eea9ab69b63245e368344996.jpg
     lastModified: 2023-07-17T18:59:52.000Z
+    lots:
+      London Flats 5_DN/5A/R$$$5_1x2_London Flats 5A_DN_123a8fca.SC4Lot:
+        123a8fca:
+          building: d23a8fbf
+          density: high
+          name: R$$$5_1x2_London Flats 5A_DN
+          props:
+            - 2a8a0000
+            - a000004f
+            - a0000050
+          size: 1x2
+          stage: 5
+          textures:
+            - '25283000'
+            - '26060000'
+      London Flats 5_DN/5B/R$$$5_1x2_London Flats 5B_DN_123a9872.SC4Lot:
+        123a9872:
+          building: 923a9866
+          density: high
+          name: R$$$5_1x2_London Flats 5B_DN
+          props:
+            - 2a8a0000
+            - a000004f
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251f2000
+            - '26060000'
+      London Flats 5_DN/R$$$5_1x2_London Flats 5_DN_b239d4d8.SC4Lot:
+        b239d4d8:
+          building: b239d4cd
+          density: high
+          name: R$$$5_1x2_London Flats 5_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 5
+          textures:
+            - '25223000'
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      London Flats 5_DN/5A/LondonFlats5ADN-0x5ad0e817_0x51b95aaf_0x30000.SC4Model:
+        - 51b95aaf
+      London Flats 5_DN/5B/LondonFlats5BDN-0x5ad0e817_0xb1b96058_0x30000.SC4Model:
+        - b1b96058
+      London Flats 5_DN/LondonFlats5DN-0x5ad0e817_0x11b89f9e_0x30000.SC4Model:
+        - 11b89f9e
     name: London Flats 5
+    sha256: 809276f7b001fbfccfc47fe96c13a54947a4ca38dce754636ac53da4d4ba4478
+    size: 944046
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64b58fa85c9fb_DayFront.thumb.jpg.8c5f7380009e23dfc8e1afc25e67eb19.jpg
+    uncompressed: 1142464
     url: https://community.simtropolis.com/files/file/35568-london-flats-5/
+    version: 1.0.0
   simtropolis/35571:
     assetId: simtropolis/35571-london-flats-3
     authors:
       - WannGLondon
+    buildings:
+      London Flats 3_DN/3A/London Flats 3A_DN-0x6534284a-0x1c2d4663-0x523d6167.SC4Desc:
+        1c2d4663-523d6167:
+          bulldoze: 318
+          capacity:
+            r$: 101
+            r$$: 57
+            r$$$: 27
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 91bc2873
+          name: London Flats 3A_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Euro
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1542
+      London Flats 3_DN/3B/London Flats 3B_DN-0x6534284a-0x1c2d4663-0xd23d61d1.SC4Desc:
+        1c2d4663-d23d61d1:
+          bulldoze: 318
+          capacity:
+            r$: 101
+            r$$: 57
+            r$$$: 27
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: f1bc2c72
+          name: London Flats 3B_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Euro
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1542
+      London Flats 3_DN/London Flats 3_DN-0x6534284a-0x1c2d4663-0x923c54fd.SC4Desc:
+        1c2d4663-923c54fd:
+          bulldoze: 307
+          capacity:
+            r$: 96
+            r$$: 55
+            r$$$: 26
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: d1bb1fcc
+          name: London Flats 3_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 3
+          tilesets: Euro
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1465
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThree variations of London rowhomes found in Notting Hill.\n</p>\n\n<p>\n\t- Stage 5 high-wealth residential\n</p>\n\n<p>\n\t- Euro Tileset, 1x2 lots\n</p>\n\n<p>\n\t- DarkNite only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: London Flats 3_DN.zip
+    files:
+      - London Flats 3_DN/3A/London Flats 3A_DN-0x6534284a-0x1c2d4663-0x523d6167.SC4Desc
+      - London Flats 3_DN/3A/LondonFlats3ADN-0x5ad0e817_0x91bc2873_0x30000.SC4Model
+      - London Flats 3_DN/3A/R$$$5_1x2_London Flats 3A_DN_223d6173.SC4Lot
+      - London Flats 3_DN/3B/London Flats 3B_DN-0x6534284a-0x1c2d4663-0xd23d61d1.SC4Desc
+      - London Flats 3_DN/3B/LondonFlats3BDN-0x5ad0e817_0xf1bc2c72_0x30000.SC4Model
+      - London Flats 3_DN/3B/R$$$5_1x2_London Flats 3B_DN_223d61dd.SC4Lot
+      - London Flats 3_DN/London Flats 3_DN-0x6534284a-0x1c2d4663-0x923c54fd.SC4Desc
+      - London Flats 3_DN/LondonFlats3DN-0x5ad0e817_0xd1bb1fcc_0x30000.SC4Model
+      - London Flats 3_DN/R$$$5_1x2_London Flats 3_DN_823c5514.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64b8574b317fc_FrontDay.jpg.e90d7a4c15145c8920925e30c466592a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64b8574fb72a2_SideDay.jpg.7da3eb45de62b390841655fd0176959d.jpg
     lastModified: 2023-07-19T21:36:49.000Z
+    lots:
+      London Flats 3_DN/3A/R$$$5_1x2_London Flats 3A_DN_223d6173.SC4Lot:
+        223d6173:
+          building: 523d6167
+          density: medium,high
+          name: R$$$5_1x2_London Flats 3A_DN
+          props:
+            - a000004f
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 252f2000
+            - '26060000'
+      London Flats 3_DN/3B/R$$$5_1x2_London Flats 3B_DN_223d61dd.SC4Lot:
+        223d61dd:
+          building: d23d61d1
+          density: medium,high
+          name: R$$$5_1x2_London Flats 3B_DN
+          props:
+            - 2a8a0000
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 252d3000
+            - '26060000'
+      London Flats 3_DN/R$$$5_1x2_London Flats 3_DN_823c5514.SC4Lot:
+        823c5514:
+          building: 923c54fd
+          density: medium,high
+          name: R$$$5_1x2_London Flats 3_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 5
+          textures:
+            - '251e2000'
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      London Flats 3_DN/3A/LondonFlats3ADN-0x5ad0e817_0x91bc2873_0x30000.SC4Model:
+        - 91bc2873
+      London Flats 3_DN/3B/LondonFlats3BDN-0x5ad0e817_0xf1bc2c72_0x30000.SC4Model:
+        - f1bc2c72
+      London Flats 3_DN/LondonFlats3DN-0x5ad0e817_0xd1bb1fcc_0x30000.SC4Model:
+        - d1bb1fcc
     name: London Flats 3
+    sha256: 88b81bf70c1515407963b4865699e5618337025e5ff7096774645d6436eae024
+    size: 958366
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64b85770bfa83_FrontDay.thumb.jpg.c0485dd06f47dab992b8a0361620337a.jpg
+    uncompressed: 1171801
     url: https://community.simtropolis.com/files/file/35571-london-flats-3/
+    version: 1.0.0
   simtropolis/35578:
     assetId: simtropolis/35578-dave-house-by-oddfromsweden
     authors:
@@ -21909,20 +22643,796 @@ assets:
     assetId: simtropolis/35632-new-york-pack-1
     authors:
       - WannGLondon
+    buildings:
+      NY Pack 01/NY Bldg 1_DN/CS$$ NY Bldg 1A_DN-0x6534284a-0x1c2d4663-0x50c2b8b9.SC4Desc:
+        1c2d4663-50c2b8b9:
+          bulldoze: 401
+          capacity:
+            cs$: 163
+            cs$$: 43
+          categories: cs$$
+          flamability: 40
+          garbage: 4
+          model: d04175ed
+          name: CS$$ NY Bldg 1A_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 4
+          tilesets: NY
+          water: 43
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1398
+      NY Pack 01/NY Bldg 1_DN/CS$$ NY Bldg 1_DN-0x6534284a-0x1c2d4663-0xd0c2b810.SC4Desc:
+        1c2d4663-d0c2b810:
+          bulldoze: 401
+          capacity:
+            cs$: 163
+            cs$$: 43
+          categories: cs$$
+          flamability: 40
+          garbage: 4
+          model: '904088e5'
+          name: CS$$ NY Bldg 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 4
+          tilesets: NY
+          water: 43
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1398
+      NY Pack 01/NY Bldg 1_DN/NY Building 1A_DN-0x6534284a-0x1c2d4663-0xb0c2acae.SC4Desc:
+        1c2d4663-b0c2acae:
+          bulldoze: 401
+          capacity:
+            r$: 132
+            r$$: 74
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: d04175ed
+          name: NY Building 1A_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1904
+      NY Pack 01/NY Bldg 1_DN/NY Building 1_DN-0x6534284a-0x1c2d4663-0x50c1be24.SC4Desc:
+        1c2d4663-50c1be24:
+          bulldoze: 401
+          capacity:
+            r$: 132
+            r$$: 74
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: '904088e5'
+          name: NY Building 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1904
+      NY Pack 01/NY Bldg 2_DN/Mirror/NY Bldg 2A_DN-0x6534284a-0x1c2d4663-0x10d2c270.SC4Desc:
+        1c2d4663-10d2c270:
+          bulldoze: 371
+          capacity:
+            r$: 114
+            r$$: 64
+            r$$$: 30
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 50518b46
+          name: NY Bldg 2A_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Euro
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1740
+      NY Pack 01/NY Bldg 2_DN/NY Bldg 2_DN-0x6534284a-0x1c2d4663-0x50d2c1f4.SC4Desc:
+        1c2d4663-50d2c1f4:
+          bulldoze: 371
+          capacity:
+            r$: 114
+            r$$: 64
+            r$$$: 30
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: '70518870'
+          name: NY Bldg 2_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Euro
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1740
+      NY Pack 01/NY Bldg 4_DN/CS$$$ NY Building 4_DN-0x6534284a-0x1c2d4663-0xd0d59c7e.SC4Desc:
+        1c2d4663-d0d59c7e:
+          bulldoze: 670
+          capacity:
+            cs$: 338
+            cs$$: 87
+            cs$$$: 37
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: 505462b9
+          name: CS$$$ NY Building 4_DN
+          pollution: 2
+          pollutionRadius: 6
+          power: 10
+          tilesets: NY
+          water: 90
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 3285
+      NY Pack 01/NY Bldg 6_DN/CS$$$ NY Bldg 6_DN-0x6534284a-0x1c2d4663-0x50e94be9.SC4Desc:
+        1c2d4663-50e94be9:
+          bulldoze: 382
+          capacity:
+            cs$: 146
+            cs$$: 39
+            cs$$$: 17
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: f068146b
+          name: CS$$$ NY Bldg 6_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 5
+          tilesets: NY,Chicago
+          water: 42
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1419
+      NY Pack 01/NY Bldg 6_DN/Mirror/CS$$$ NY Bldg 6 Mirror_DN-0x6534284a-0x1c2d4663-0xd0e964db.SC4Desc:
+        1c2d4663-d0e964db:
+          bulldoze: 403
+          capacity:
+            cs$: 157
+            cs$$: 42
+            cs$$$: 18
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: b0682fa8
+          name: CS$$$ NY Bldg 6 Mirror_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 5
+          tilesets: NY,Chicago
+          water: 45
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1526
+      NY Pack 01/NY Bldg 7_DN/CS$$$ NY Bldg 7_DN-0x6534284a-0x1c2d4663-0x10ea9a9c.SC4Desc:
+        1c2d4663-10ea9a9c:
+          bulldoze: 670
+          capacity:
+            cs$: 374
+            cs$$: 96
+            cs$$$: 40
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: b0696374
+          name: CS$$$ NY Bldg 7_DN
+          pollution: 2
+          pollutionRadius: 6
+          power: 11
+          tilesets: NY,Chicago
+          water: 99
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 3635
+      NY Pack 01/NY Bldg 7_DN/Mirror/CS$$$ NY Bldg 7 Mirror_DN-0x6534284a-0x1c2d4663-0xb0ead233.SC4Desc:
+        1c2d4663-b0ead233:
+          bulldoze: 670
+          capacity:
+            cs$: 374
+            cs$$: 96
+            cs$$$: 40
+          categories: cs$$$
+          flamability: 35
+          garbage: 4
+          model: 30699c29
+          name: CS$$$ NY Bldg 7 Mirror_DN
+          pollution: 2
+          pollutionRadius: 6
+          power: 11
+          tilesets: NY,Chicago
+          water: 99
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 3635
+      NY Pack 01/NY Buidling 9_DN/NY Building 9_DN-0x6534284a-0x1c2d4663-0x1291d71c.SC4Desc:
+        1c2d4663-1291d71c:
+          bulldoze: 1032
+          capacity:
+            r$: 2441
+            r$$: 1349
+          categories: r$$
+          flamability: 40
+          garbage: 5
+          model: 52109bba
+          name: NY Building 9_DN
+          pollution: 11
+          pollutionRadius: 5
+          power: 19
+          tilesets: NY
+          water: 50
+          waterPollution: 5
+          waterPollutionRadius: 6
+          worth: 35223
+      NY Pack 01/NY Building 3_DN/CO$$ NY Bldg 3_DN-0x6534284a-0x1c2d4663-0x10d420dd.SC4Desc:
+        1c2d4663-10d420dd:
+          bulldoze: 701
+          capacity:
+            co$$: 187
+          categories: co$$
+          flamability: 40
+          garbage: 4
+          model: 1052ea65
+          name: CO$$ NY Bldg 3_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 4
+          tilesets: NY
+          water: 47
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 1307
+      NY Pack 01/NY Building 8_DN/NY Building 8_DN-0x6534284a-0x1c2d4663-0xd28b3244.SC4Desc:
+        1c2d4663-d28b3244:
+          bulldoze: 755
+          capacity:
+            r$: 894
+            r$$: 495
+            r$$$: 218
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 1209fc21
+          name: NY Building 8_DN
+          pollution: 3
+          pollutionRadius: 6
+          power: 28
+          tilesets: NY
+          water: 39
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 13651
+      NY Pack 01/Townhomes 3_DN/Townhomes 3_DN-0x6534284a-0x1c2d4663-0x514a9856.SC4Desc:
+        1c2d4663-514a9856:
+          bulldoze: 350
+          capacity:
+            r$: 119
+            r$$: 67
+            r$$$: 31
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: 30c962e2
+          name: Townhomes 3_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Chicago
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1817
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tApologies on getting these out so late - I have been working on some of these for some time. These were modeled as an attempt to fill in the gaps of some NYC-based content. I will be adding to this set as well. Mirror-versions of all corner lots, residential and commercial alike.\n</p>\n\n<p>\n\t*DarkNite versions only\n</p>\n\n<p>\n\tEnjoy!\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: NY Pack 01.zip
+    files:
+      - NY Pack 01/NY Bldg 1_DN/CS$$ NY Bldg 1A_DN-0x6534284a-0x1c2d4663-0x50c2b8b9.SC4Desc
+      - NY Pack 01/NY Bldg 1_DN/CS$$ NY Bldg 1_DN-0x6534284a-0x1c2d4663-0xd0c2b810.SC4Desc
+      - NY Pack 01/NY Bldg 1_DN/CS$$5_1x2_CS$$ NY Bldg 1A_DN_d0c2b8c6.SC4Lot
+      - NY Pack 01/NY Bldg 1_DN/CS$$5_1x2_CS$$ NY Bldg 1_DN_d0c2b822.SC4Lot
+      - NY Pack 01/NY Bldg 1_DN/NY Building 1A_DN-0x6534284a-0x1c2d4663-0xb0c2acae.SC4Desc
+      - NY Pack 01/NY Bldg 1_DN/NY Building 1_DN-0x6534284a-0x1c2d4663-0x50c1be24.SC4Desc
+      - NY Pack 01/NY Bldg 1_DN/NYBldg1DN-0x5ad0e817_0x904088e5_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 1_DN/NYBuilding1ADN-0x5ad0e817_0xd04175ed_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 1_DN/R$$7_1x2_NY Building 1A_DN_80c2acbb.SC4Lot
+      - NY Pack 01/NY Bldg 1_DN/R$$7_1x2_NY Building 1_DN_20c1be39.SC4Lot
+      - NY Pack 01/NY Bldg 1_DN/desktop.ini
+      - NY Pack 01/NY Bldg 2_DN/Mirror/NY Bldg 2A_DN-0x6534284a-0x1c2d4663-0x10d2c270.SC4Desc
+      - NY Pack 01/NY Bldg 2_DN/Mirror/NYBldg2ADN-0x5ad0e817_0x50518b46_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 2_DN/Mirror/R$$$6_1x2_NY Bldg 2A_DN_a0d2c280.SC4Lot
+      - NY Pack 01/NY Bldg 2_DN/Mirror/desktop.ini
+      - NY Pack 01/NY Bldg 2_DN/NY Bldg 2_DN-0x6534284a-0x1c2d4663-0x50d2c1f4.SC4Desc
+      - NY Pack 01/NY Bldg 2_DN/NYBldg2DN-0x5ad0e817_0x70518870_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 2_DN/R$$$6_1x2_NY Bldg 2_DN_c0d2c201.SC4Lot
+      - NY Pack 01/NY Bldg 2_DN/desktop.ini
+      - NY Pack 01/NY Bldg 4_DN/CS$$$ NY Building 4_DN-0x6534284a-0x1c2d4663-0xd0d59c7e.SC4Desc
+      - NY Pack 01/NY Bldg 4_DN/CS$$$5_1x2_CS$$$ NY Building 4_DN_00d59c8d.SC4Lot
+      - NY Pack 01/NY Bldg 4_DN/NYBldg4DN-0x5ad0e817_0x505462b9_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 4_DN/desktop.ini
+      - NY Pack 01/NY Bldg 6_DN/CS$$$ NY Bldg 6_DN-0x6534284a-0x1c2d4663-0x50e94be9.SC4Desc
+      - NY Pack 01/NY Bldg 6_DN/CS$$$4_1x2_CS$$$ NY Bldg 6_DN_b0e94bf4.SC4Lot
+      - NY Pack 01/NY Bldg 6_DN/Mirror/CS$$$ NY Bldg 6 Mirror_DN-0x6534284a-0x1c2d4663-0xd0e964db.SC4Desc
+      - NY Pack 01/NY Bldg 6_DN/Mirror/CS$$$4_1x2_CS$$$ NY Bldg 6 Mirror_DN_e0e964e9.SC4Lot
+      - NY Pack 01/NY Bldg 6_DN/Mirror/NYBldg6MirrorDN-0x5ad0e817_0xb0682fa8_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 6_DN/NYBldg6DN-0x5ad0e817_0xf068146b_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 7_DN/CS$$$ NY Bldg 7_DN-0x6534284a-0x1c2d4663-0x10ea9a9c.SC4Desc
+      - NY Pack 01/NY Bldg 7_DN/CS$$$7_1x2_CS$$$ NY Bldg 7_DN_30ea9aab.SC4Lot
+      - NY Pack 01/NY Bldg 7_DN/Mirror/CS$$$ NY Bldg 7 Mirror_DN-0x6534284a-0x1c2d4663-0xb0ead233.SC4Desc
+      - NY Pack 01/NY Bldg 7_DN/Mirror/CS$$$7_1x2_CS$$$ NY Bldg 7 Mirror_DN_d0ead240.SC4Lot
+      - NY Pack 01/NY Bldg 7_DN/Mirror/NYBldg7MirrorDN-0x5ad0e817_0x30699c29_0x30000.SC4Model
+      - NY Pack 01/NY Bldg 7_DN/NYBldg7DN-0x5ad0e817_0xb0696374_0x30000.SC4Model
+      - NY Pack 01/NY Buidling 9_DN/NY Building 9_DN-0x6534284a-0x1c2d4663-0x1291d71c.SC4Desc
+      - NY Pack 01/NY Buidling 9_DN/NYBldg9DN-0x5ad0e817_0x52109bba_0x30000.SC4Model
+      - NY Pack 01/NY Buidling 9_DN/R$$8_4x2_NY Building 9_DN_c291d729.SC4Lot
+      - NY Pack 01/NY Building 3_DN/CO$$ NY Bldg 3_DN-0x6534284a-0x1c2d4663-0x10d420dd.SC4Desc
+      - NY Pack 01/NY Building 3_DN/CO$$6_1x2_CO$$ NY Bldg 3_DN_10d420ef.SC4Lot
+      - NY Pack 01/NY Building 3_DN/NYBldg3DN-0x5ad0e817_0x1052ea65_0x30000.SC4Model
+      - NY Pack 01/NY Building 3_DN/desktop.ini
+      - NY Pack 01/NY Building 8_DN/NY Building 8_DN-0x6534284a-0x1c2d4663-0xd28b3244.SC4Desc
+      - NY Pack 01/NY Building 8_DN/NYBldg8DN-0x5ad0e817_0x1209fc21_0x30000.SC4Model
+      - NY Pack 01/NY Building 8_DN/R$$$7_2x2_NY Building 8_DN_828b3255.SC4Lot
+      - NY Pack 01/Townhomes 3_DN/R$$$5_1x2_Townhomes 3_DN_514a9868.SC4Lot
+      - NY Pack 01/Townhomes 3_DN/Townhomes 3_DN-0x6534284a-0x1c2d4663-0x514a9856.SC4Desc
+      - NY Pack 01/Townhomes 3_DN/Townhomes3DN-0x5ad0e817_0x30c962e2_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/9.jpg.9d05880f917d262c6b20cd1464348a07.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/8.jpg.16b9269eb53b5b241febc29b53975d8d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/650cd2d8e84c3_Townhomes3.jpg.f196794505d30b26d87c46125700b23b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/6.jpg.d533e8a331464378d66ffb7aa8bd7042.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/1.jpg.fba18eb19c25051ac4e3779cb51d257c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/2.jpg.eea76e7eff7bfd7a251b1919928f9539.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/7.jpg.1deaaa68ccdb6ee1f15a7ad172213b5a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/3and4.jpg.e1c85ff7a916e5301a9282520e1dc193.jpg
     lastModified: 2023-09-21T23:35:59.000Z
+    lots:
+      NY Pack 01/NY Bldg 1_DN/CS$$5_1x2_CS$$ NY Bldg 1A_DN_d0c2b8c6.SC4Lot:
+        d0c2b8c6:
+          building: 50c2b8b9
+          density: medium,high
+          name: CS$$5_1x2_CS$$ NY Bldg 1A_DN
+          props:
+            - 1c5b0000
+            - 1c600000
+            - 1d280000
+            - 1da90000
+            - 1dfb0000
+            - 1ed30000
+            - 29b10000
+            - aa836b49
+          size: 1x2
+          stage: 5
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 1_DN/CS$$5_1x2_CS$$ NY Bldg 1_DN_d0c2b822.SC4Lot:
+        d0c2b822:
+          building: d0c2b810
+          density: medium,high
+          name: CS$$5_1x2_CS$$ NY Bldg 1_DN
+          props:
+            - 1c570000
+            - 1d280000
+            - 1d990000
+            - 1d9e0000
+            - 1dfb0000
+            - 29b10000
+            - aa836b49
+          size: 1x2
+          stage: 5
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 1_DN/R$$7_1x2_NY Building 1A_DN_80c2acbb.SC4Lot:
+        80c2acbb:
+          building: b0c2acae
+          density: medium,high
+          name: R$$7_1x2_NY Building 1A_DN
+          props:
+            - 1c530000
+            - 1c600000
+            - 1d990000
+            - 1da10000
+            - 1dfb0000
+            - 2a8a0000
+            - a0000078
+            - aa836b49
+          size: 1x2
+          stage: 7
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 1_DN/R$$7_1x2_NY Building 1_DN_20c1be39.SC4Lot:
+        20c1be39:
+          building: 50c1be24
+          density: medium,high
+          name: R$$7_1x2_NY Building 1_DN
+          props:
+            - 1c550000
+            - 1c570000
+            - 1c5b0000
+            - 1da90000
+            - 1dfb0000
+            - aa836b49
+          size: 1x2
+          stage: 7
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 2_DN/Mirror/R$$$6_1x2_NY Bldg 2A_DN_a0d2c280.SC4Lot:
+        a0d2c280:
+          building: 10d2c270
+          density: medium,high
+          name: R$$$6_1x2_NY Bldg 2A_DN
+          props:
+            - 1dfb0000
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 2_DN/R$$$6_1x2_NY Bldg 2_DN_c0d2c201.SC4Lot:
+        c0d2c201:
+          building: 50d2c1f4
+          density: medium,high
+          name: R$$$6_1x2_NY Bldg 2_DN
+          props:
+            - 1dfb0000
+            - 29b10000
+            - 2a8a0000
+            - a000003f
+            - a0000051
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 4_DN/CS$$$5_1x2_CS$$$ NY Building 4_DN_00d59c8d.SC4Lot:
+        00d59c8d:
+          building: d0d59c7e
+          density: medium,high
+          name: CS$$$5_1x2_CS$$$ NY Building 4_DN
+          props:
+            - a0000028
+            - a000003f
+            - aa836b49
+          size: 1x2
+          stage: 5
+          textures:
+            - '25993000'
+            - '26060000'
+      NY Pack 01/NY Bldg 6_DN/CS$$$4_1x2_CS$$$ NY Bldg 6_DN_b0e94bf4.SC4Lot:
+        b0e94bf4:
+          building: 50e94be9
+          density: medium,high
+          name: CS$$$4_1x2_CS$$$ NY Bldg 6_DN
+          props:
+            - 1dfb0000
+            - 2a8a0000
+            - a0000028
+            - a0000039
+            - a000003a
+            - a0000078
+            - aa836b49
+          size: 1x2
+          stage: 4
+          textures:
+            - '25993000'
+            - '26060000'
+      NY Pack 01/NY Bldg 6_DN/Mirror/CS$$$4_1x2_CS$$$ NY Bldg 6 Mirror_DN_e0e964e9.SC4Lot:
+        e0e964e9:
+          building: d0e964db
+          density: medium,high
+          name: CS$$$4_1x2_CS$$$ NY Bldg 6 Mirror_DN
+          props:
+            - 1dfb0000
+            - 2a8a0000
+            - a000004f
+            - a0000050
+            - aa836b49
+          size: 1x2
+          stage: 4
+          textures:
+            - '25993000'
+            - '26060000'
+      NY Pack 01/NY Bldg 7_DN/CS$$$7_1x2_CS$$$ NY Bldg 7_DN_30ea9aab.SC4Lot:
+        30ea9aab:
+          building: 10ea9a9c
+          density: medium,high
+          name: CS$$$7_1x2_CS$$$ NY Bldg 7_DN
+          props:
+            - 1dfb0000
+            - a000004f
+            - a000005f
+            - aa836b49
+          size: 1x2
+          stage: 7
+          textures:
+            - '26060000'
+      NY Pack 01/NY Bldg 7_DN/Mirror/CS$$$7_1x2_CS$$$ NY Bldg 7 Mirror_DN_d0ead240.SC4Lot:
+        d0ead240:
+          building: b0ead233
+          density: medium,high
+          name: CS$$$7_1x2_CS$$$ NY Bldg 7 Mirror_DN
+          props:
+            - 1dfb0000
+            - a0000028
+            - a0000039
+            - aa836b49
+          size: 1x2
+          stage: 7
+          textures:
+            - '26060000'
+      NY Pack 01/NY Buidling 9_DN/R$$8_4x2_NY Building 9_DN_c291d729.SC4Lot:
+        c291d729:
+          building: 1291d71c
+          density: high
+          name: R$$8_4x2_NY Building 9_DN
+          props:
+            - '16670000'
+            - 29b10000
+            - 2a8a0000
+            - a0000050
+          size: 4x2
+          stage: 8
+          textures:
+            - 251f2000
+            - '26060000'
+      NY Pack 01/NY Building 3_DN/CO$$6_1x2_CO$$ NY Bldg 3_DN_10d420ef.SC4Lot:
+        10d420ef:
+          building: 10d420dd
+          density: medium,high
+          name: CO$$6_1x2_CO$$ NY Bldg 3_DN
+          props:
+            - a0000028
+            - a000005a
+            - aa836b49
+          size: 1x2
+          stage: 6
+          textures:
+            - 25a92000
+            - '26060000'
+      NY Pack 01/NY Building 8_DN/R$$$7_2x2_NY Building 8_DN_828b3255.SC4Lot:
+        828b3255:
+          building: d28b3244
+          density: medium,high
+          name: R$$$7_2x2_NY Building 8_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 2x2
+          stage: 7
+          textures:
+            - '26060000'
+      NY Pack 01/Townhomes 3_DN/R$$$5_1x2_Townhomes 3_DN_514a9868.SC4Lot:
+        514a9868:
+          building: 514a9856
+          density: medium,high
+          name: R$$$5_1x2_Townhomes 3_DN
+          props:
+            - 2a8a0000
+            - a000003a
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251f2000
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      NY Pack 01/NY Bldg 1_DN/NYBldg1DN-0x5ad0e817_0x904088e5_0x30000.SC4Model:
+        - '904088e5'
+      NY Pack 01/NY Bldg 1_DN/NYBuilding1ADN-0x5ad0e817_0xd04175ed_0x30000.SC4Model:
+        - d04175ed
+      NY Pack 01/NY Bldg 2_DN/Mirror/NYBldg2ADN-0x5ad0e817_0x50518b46_0x30000.SC4Model:
+        - 50518b46
+      NY Pack 01/NY Bldg 2_DN/NYBldg2DN-0x5ad0e817_0x70518870_0x30000.SC4Model:
+        - '70518870'
+      NY Pack 01/NY Bldg 4_DN/NYBldg4DN-0x5ad0e817_0x505462b9_0x30000.SC4Model:
+        - 505462b9
+      NY Pack 01/NY Bldg 6_DN/Mirror/NYBldg6MirrorDN-0x5ad0e817_0xb0682fa8_0x30000.SC4Model:
+        - b0682fa8
+      NY Pack 01/NY Bldg 6_DN/NYBldg6DN-0x5ad0e817_0xf068146b_0x30000.SC4Model:
+        - f068146b
+      NY Pack 01/NY Bldg 7_DN/Mirror/NYBldg7MirrorDN-0x5ad0e817_0x30699c29_0x30000.SC4Model:
+        - 30699c29
+      NY Pack 01/NY Bldg 7_DN/NYBldg7DN-0x5ad0e817_0xb0696374_0x30000.SC4Model:
+        - b0696374
+      NY Pack 01/NY Buidling 9_DN/NYBldg9DN-0x5ad0e817_0x52109bba_0x30000.SC4Model:
+        - 52109bba
+      NY Pack 01/NY Building 3_DN/NYBldg3DN-0x5ad0e817_0x1052ea65_0x30000.SC4Model:
+        - 1052ea65
+      NY Pack 01/NY Building 8_DN/NYBldg8DN-0x5ad0e817_0x1209fc21_0x30000.SC4Model:
+        - 1209fc21
+      NY Pack 01/Townhomes 3_DN/Townhomes3DN-0x5ad0e817_0x30c962e2_0x30000.SC4Model:
+        - 30c962e2
     name: New York Pack 1
+    sha256: 36b6d67e8c2c300045d315db52b5a8fa79f8db9f3cfcb67218d72f7a004185c2
+    size: 7291098
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/9.thumb.jpg.23ef8b3d9bd8cf1860aa6a144781b375.jpg
+    uncompressed: 8714486
     url: https://community.simtropolis.com/files/file/35632-new-york-pack-1/
+    version: 1.0.0
   simtropolis/35650:
     assetId: simtropolis/35650-ny-building-10
     authors:
       - WannGLondon
+    buildings:
+      NY Building 10_DN/10A/NY Building 10A_DN-0x6534284a-0x1c2d4663-0xd2a2b7d4.SC4Desc:
+        1c2d4663-d2a2b7d4:
+          bulldoze: 340
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: b2217d8f
+          name: NY Building 10A_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1644
+      NY Building 10_DN/10B/NY Building 10B_DN-0x6534284a-0x1c2d4663-0x72a2b81d.SC4Desc:
+        1c2d4663-72a2b81d:
+          bulldoze: 340
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: '72218060'
+          name: NY Building 10B_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1644
+      NY Building 10_DN/10C/NY Building 10C_DN-0x6534284a-0x1c2d4663-0xb2a2b868.SC4Desc:
+        1c2d4663-b2a2b868:
+          bulldoze: 340
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: 5221824c
+          name: NY Building 10C_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1644
+      NY Building 10_DN/NY Building 10_DN-0x6534284a-0x1c2d4663-0xd2a2b77b.SC4Desc:
+        1c2d4663-d2a2b77b:
+          bulldoze: 340
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: d2217825
+          name: NY Building 10_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: NY
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1644
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA pack of low-wealth apartments inspired by those found in the East Village of Manhattan, New York.\n</p>\n\n<p>\n\t- Stage 6, R$\n</p>\n\n<p>\n\t- NY Tileset\n</p>\n\n<p>\n\t- Medium, High Density\n</p>\n\n<p>\n\t- DarkNite only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: NY Building 10_DN.zip
+    files:
+      - NY Building 10_DN/10A/NY Building 10A_DN-0x6534284a-0x1c2d4663-0xd2a2b7d4.SC4Desc
+      - NY Building 10_DN/10A/NYBldg10ADN-0x5ad0e817_0xb2217d8f_0x30000.SC4Model
+      - NY Building 10_DN/10A/R$6_1x2_NY Building 10A_DN_92a2b7e0.SC4Lot
+      - NY Building 10_DN/10B/NY Building 10B_DN-0x6534284a-0x1c2d4663-0x72a2b81d.SC4Desc
+      - NY Building 10_DN/10B/NYBldg10BDN-0x5ad0e817_0x72218060_0x30000.SC4Model
+      - NY Building 10_DN/10B/R$6_1x2_NY Building 10B_DN_52a2b828.SC4Lot
+      - NY Building 10_DN/10C/NY Building 10C_DN-0x6534284a-0x1c2d4663-0xb2a2b868.SC4Desc
+      - NY Building 10_DN/10C/NYBldg10CDN-0x5ad0e817_0x5221824c_0x30000.SC4Model
+      - NY Building 10_DN/10C/R$6_1x2_NY Building 10C_DN_62a2b873.SC4Lot
+      - NY Building 10_DN/NY Building 10_DN-0x6534284a-0x1c2d4663-0xd2a2b77b.SC4Desc
+      - NY Building 10_DN/NYBldg10DN-0x5ad0e817_0xd2217825_0x30000.SC4Model
+      - NY Building 10_DN/R$6_1x2_NY Building 10_DN_22a2b788.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_10/NY10.jpg.4a684ddd207f87cd93e6ebf82714e312.jpg
     lastModified: 2023-10-04T18:54:13.000Z
+    lots:
+      NY Building 10_DN/10A/R$6_1x2_NY Building 10A_DN_92a2b7e0.SC4Lot:
+        92a2b7e0:
+          building: d2a2b7d4
+          density: medium,high
+          name: R$6_1x2_NY Building 10A_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+      NY Building 10_DN/10B/R$6_1x2_NY Building 10B_DN_52a2b828.SC4Lot:
+        52a2b828:
+          building: 72a2b81d
+          density: medium,high
+          name: R$6_1x2_NY Building 10B_DN
+          props:
+            - a000004f
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+      NY Building 10_DN/10C/R$6_1x2_NY Building 10C_DN_62a2b873.SC4Lot:
+        62a2b873:
+          building: b2a2b868
+          density: medium,high
+          name: R$6_1x2_NY Building 10C_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+      NY Building 10_DN/R$6_1x2_NY Building 10_DN_22a2b788.SC4Lot:
+        22a2b788:
+          building: d2a2b77b
+          density: medium,high
+          name: R$6_1x2_NY Building 10_DN
+          props:
+            - 2a8a0000
+            - a0000050
+          size: 1x2
+          stage: 6
+          textures:
+            - '26060000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      NY Building 10_DN/10A/NYBldg10ADN-0x5ad0e817_0xb2217d8f_0x30000.SC4Model:
+        - b2217d8f
+      NY Building 10_DN/10B/NYBldg10BDN-0x5ad0e817_0x72218060_0x30000.SC4Model:
+        - '72218060'
+      NY Building 10_DN/10C/NYBldg10CDN-0x5ad0e817_0x5221824c_0x30000.SC4Model:
+        - 5221824c
+      NY Building 10_DN/NYBldg10DN-0x5ad0e817_0xd2217825_0x30000.SC4Model:
+        - d2217825
     name: NY Building 10
+    sha256: c985c93c21a0a412383abc15e9e7a3ff789fee67e8bc97fc19aa7297b0357672
+    size: 1470433
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_10/NY10.thumb.jpg.c05457e27c39e312bff488431249d339.jpg
+    uncompressed: 1803471
     url: https://community.simtropolis.com/files/file/35650-ny-building-10/
+    version: 1.0.0
   simtropolis/3572:
     assetId: simtropolis/3572-large-fancy-house
     authors:
@@ -22037,11 +23547,78 @@ assets:
     assetId: simtropolis/35885-the-home-alone-house
     authors:
       - WannGLondon
+    buildings:
+      American Home 2_DN/American Home 2_DN-0x6534284a-0x1c2d4663-0x130cd79b.SC4Desc:
+        1c2d4663-130cd79b:
+          bulldoze: 254
+          capacity:
+            r$: 105
+            r$$: 59
+            r$$$: 28
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: b28ba26c
+          name: American Home 2_DN
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Chicago
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1603
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHappy holidays, Community!\n</p>\n\n<p>\n\tWhipped this famous house up, inspired by the Christmas classic, <em>Home Alone</em> (1 &amp; 2). Certain liberties were taken and as usual my lotting is sub-par, so please feel free to re-lot to your desired aesthetic.\n</p>\n\n<p>\n\t- R$$$ Low, Medium, High density zones\n</p>\n\n<p>\n\t- Chicago tileset\n</p>\n\n<p>\n\t- No dependencies\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: American Home 2_DN.zip
+    files:
+      - American Home 2_DN/American Home 2_DN-0x6534284a-0x1c2d4663-0x130cd79b.SC4Desc
+      - American Home 2_DN/AmericanHome2DN-0x5ad0e817_0xb28ba26c_0x30000.SC4Model
+      - American Home 2_DN/R$$$4_3x3_American Home 2_DN_e30cd7ad.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/65888febdc9b5_HouseDay.jpg.c2fefdf899aaa751a60f09e6082b4f7c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/65888fedae87e_HouseNight.jpg.2bac75e22ffe5417453a623dda10f4f3.jpg
     lastModified: 2023-12-24T20:11:46.000Z
+    lots:
+      American Home 2_DN/R$$$4_3x3_American Home 2_DN_e30cd7ad.SC4Lot:
+        e30cd7ad:
+          building: 130cd79b
+          density: all
+          name: R$$$4_3x3_American Home 2_DN
+          props:
+            - 1dfb0000
+            - 1f0b0000
+            - a0000014
+            - a0000017
+            - a0000039
+            - a000003a
+            - a000004f
+            - a0000050
+            - a0000051
+          size: 3x3
+          stage: 4
+          textures:
+            - '25252000'
+            - 252a2000
+            - 252d3000
+            - '25963000'
+            - 25f40000
+            - '26241000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      American Home 2_DN/AmericanHome2DN-0x5ad0e817_0xb28ba26c_0x30000.SC4Model:
+        - b28ba26c
     name: The Home Alone House
+    sha256: 45c925fa45e9ea00e40735742ca2108c51d56ff1f8d17588cfc9050f7231ce12
+    size: 339698
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/65889080e9b57_HouseDay.thumb.jpg.ecd1cd6543b531002f7e4ace2b7a4594.jpg
+    uncompressed: 428653
     url: https://community.simtropolis.com/files/file/35885-the-home-alone-house/
+    version: 1.0.0
   simtropolis/35895:
     assetId: simtropolis/35895-rasmussen-place
     authors:

@@ -32173,11 +32173,417 @@ assets:
     assetId: simtropolis/35582-wanng-random-pack-1
     authors:
       - WannGLondon
+    buildings:
+      Random Pack 1/HD_Medit Home 2_DN/PLOP_2x2_Maison Plume_5225c44e.SC4Lot:
+        1c2d4663-5225c44e:
+          bulldoze: 243
+          description: This building was made by a Typing Monkey
+          flamability: 10
+          label: Maison Plume
+          maintenance: 79
+          menu: Parks
+          model: b1a48cf8
+          name: Maison Plume
+          pollution: 1
+          power: 2
+          water: 7
+      Random Pack 1/HD_Ploppable Pool_DN/PLOP_1x1_HD Ploppable Pool_DN_d2260722.SC4Lot:
+        1c2d4663-d2260722:
+          bulldoze: 45
+          cost: 90
+          description: This building was made by a Typing Monkey
+          flamability: 10
+          label: HD Ploppable Pool_DN
+          maintenance: 63
+          menu: Parks
+          model: 91a4d2e5
+          name: HD Ploppable Pool_DN
+          pollution: 4294967295
+          pollutionRadius: 2
+          power: 1
+          relief:
+            r$: 750
+            r$$: 750
+            r$$$: 750
+          water: 1
+          waterPollution: 1
+          waterPollutionRadius: 1
+      Random Pack 1/Medit Home 1A_DN/2- Medit Home 1A_DN-0x6534284a-0x1c2d4663-0xd2032542.SC4Desc:
+        1c2d4663-d2032542:
+          bulldoze: 241
+          capacity:
+            r$: 33
+            r$$: 19
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 5180e93f
+          name: 2- Medit Home 1A_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Random Pack 1/Medit Home 1A_DN/Medit Home 1A_DN-0x6534284a-0x1c2d4663-0xd2021d8a.SC4Desc:
+        1c2d4663-d2021d8a:
+          bulldoze: 241
+          capacity:
+            r$: 33
+            r$$: 19
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 5180e93f
+          name: Medit Home 1A_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Random Pack 1/Medit Home 1_DN/2-Medit Home 1_DN-0x6534284a-0x1c2d4663-0x71ffbc71.SC4Desc:
+        1c2d4663-71ffbc71:
+          bulldoze: 241
+          capacity:
+            r$: 33
+            r$$: 19
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 717e864b
+          name: 2-Medit Home 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Random Pack 1/Medit Home 1_DN/3-Medit Home 1_DN-0x6534284a-0x1c2d4663-0x11ffbdc7.SC4Desc:
+        1c2d4663-11ffbdc7:
+          bulldoze: 241
+          capacity:
+            r$: 33
+            r$$: 19
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 717e864b
+          name: 3-Medit Home 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Random Pack 1/Medit Home 1_DN/Medit Home 1_DN-0x6534284a-0x1c2d4663-0x71ffba89.SC4Desc:
+        1c2d4663-71ffba89:
+          bulldoze: 241
+          capacity:
+            r$: 33
+            r$$: 19
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 717e864b
+          name: Medit Home 1_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 476
+      Random Pack 1/Medit Home 3_DN/Medit Home 3_DN-0x6534284a-0x1c2d4663-0xd228aebc.SC4Desc:
+        1c2d4663-d228aebc:
+          bulldoze: 128
+          capacity:
+            r$: 19
+            r$$: 12
+          categories: r$$
+          flamability: 40
+          garbage: 4
+          model: 71a7799b
+          name: Medit Home 3_DN
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro,Houston
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 274
+      Random Pack 1/Medit Home 4_DN/PLOP_2x2_Medit Home 4_DN_624a19b0.SC4Lot:
+        1c2d4663-624a19b0:
+          bulldoze: 296
+          description: This building was made by a Typing Monkey
+          flamability: 10
+          label: Medit Home 4_DN
+          maintenance: 84
+          menu: Parks
+          model: b1c8646c
+          name: Medit Home 4_DN
+          pollution: 1
+          power: 3
+          water: 9
+      Random Pack 1/Plage Setup/PLOP_1x1_Plage Setup_a2490927.SC4Lot:
+        1c2d4663-a2490927:
+          bulldoze: 61
+          description: This building was made by a Typing Monkey
+          flamability: 10
+          label: Plage Setup
+          maintenance: 61
+          menu: Parks
+          model: 31c7d514
+          name: Plage Setup
+          power: 1
+      Random Pack 1/Retaining Wall_DN/PLOP_1x1_Retaining Wall_523193e4.SC4Lot:
+        1c2d4663-523193e4:
+          bulldoze: 15
+          categories: power
+          cost: 90
+          description: This building was made by a Typing Monkey
+          label: Retaining Wall
+          maintenance: 1
+          menu: Power
+          model: 91b05f9a
+          name: Retaining Wall
+          power: 1
+          submenu: Power/Misc
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA take-it-or-leave-it random pack of ploppable and growable models (&amp; lots) designed for my Mediterranean metropolis that I thought I would share. This pack includes some HD models and silly little lots and is far from perfect. I also threw in a common house found in my beautiful hometown of Los Angeles, California.\n</p>\n\n<p>\n\t- Many of these models are found under the Parks menu\n</p>\n\n<p>\n\t- Retaining Walls are found in the Power menu\n</p>\n\n<p>\n\t- Images\_do not display every item in the pack\n</p>\n\n<p>\n\tEnjoy!\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Random Pack 1.zip
+    files:
+      - Random Pack 1/HD_Medit Home 2_DN/HDMeditHome2DN-0x5ad0e817_0xb1a48cf8_0x30000.SC4Model
+      - Random Pack 1/HD_Medit Home 2_DN/Maison Plume-0x6534284a-0x1c2d4663-0x9225c44a._LooseDesc
+      - Random Pack 1/HD_Medit Home 2_DN/PLOP_2x2_Maison Plume_5225c44e.SC4Lot
+      - Random Pack 1/HD_Ploppable Pool_DN/HD Ploppable Pool_DN-0x6534284a-0x1c2d4663-0x3226071e._LooseDesc
+      - Random Pack 1/HD_Ploppable Pool_DN/HDPoolDN-0x5ad0e817_0x91a4d2e5_0x30000.SC4Model
+      - Random Pack 1/HD_Ploppable Pool_DN/PLOP_1x1_HD Ploppable Pool_DN_d2260722.SC4Lot
+      - Random Pack 1/Medit Home 1A_DN/2- Medit Home 1A_DN-0x6534284a-0x1c2d4663-0xd2032542.SC4Desc
+      - Random Pack 1/Medit Home 1A_DN/Medit Home 1A_DN-0x6534284a-0x1c2d4663-0xd2021d8a.SC4Desc
+      - Random Pack 1/Medit Home 1A_DN/MeditHome1ADN-0x5ad0e817_0x5180e93f_0x30000.SC4Model
+      - Random Pack 1/Medit Home 1A_DN/R$$5_1x2_2- Medit Home 1A_DN_32032554.SC4Lot
+      - Random Pack 1/Medit Home 1A_DN/R$$5_1x2_Medit Home 1A_DN_a2021d9c.SC4Lot
+      - Random Pack 1/Medit Home 1_DN/2-Medit Home 1_DN-0x6534284a-0x1c2d4663-0x71ffbc71.SC4Desc
+      - Random Pack 1/Medit Home 1_DN/3-Medit Home 1_DN-0x6534284a-0x1c2d4663-0x11ffbdc7.SC4Desc
+      - Random Pack 1/Medit Home 1_DN/Medit Home 1_DN-0x6534284a-0x1c2d4663-0x71ffba89.SC4Desc
+      - Random Pack 1/Medit Home 1_DN/MeditHome1DN-0x5ad0e817_0x717e864b_0x30000.SC4Model
+      - Random Pack 1/Medit Home 1_DN/R$$5_1x2_2-Medit Home 1_DN_21ffbc82.SC4Lot
+      - Random Pack 1/Medit Home 1_DN/R$$5_1x2_3-Medit Home 1_DN_e1ffbdd8.SC4Lot
+      - Random Pack 1/Medit Home 1_DN/R$$5_1x2_Medit Home 1_DN_91ffba94.SC4Lot
+      - Random Pack 1/Medit Home 3_DN/Medit Home 3_DN-0x6534284a-0x1c2d4663-0xd228aebc.SC4Desc
+      - Random Pack 1/Medit Home 3_DN/MeditHome3DN-0x5ad0e817_0x71a7799b_0x30000.SC4Model
+      - Random Pack 1/Medit Home 3_DN/R$$5_1x2_Medit Home 3_DN_9228aecd.SC4Lot
+      - Random Pack 1/Medit Home 4_DN/Medit Home 4_DN-0x6534284a-0x1c2d4663-0x124a19ac._LooseDesc
+      - Random Pack 1/Medit Home 4_DN/MeditHome4DN-0x5ad0e817_0xb1c8646c_0x30000.SC4Model
+      - Random Pack 1/Medit Home 4_DN/PLOP_2x2_Medit Home 4_DN_624a19b0.SC4Lot
+      - Random Pack 1/Plage Setup/PLOP_1x1_Plage Setup_a2490927.SC4Lot
+      - Random Pack 1/Plage Setup/Plage Setup-0x6534284a-0x1c2d4663-0x52490923._LooseDesc
+      - Random Pack 1/Plage Setup/Plage Setup-0x6534284a-0x1c2d4663-0x72490906.SC4Desc
+      - Random Pack 1/Plage Setup/PlageSetup-0x5ad0e817_0x31c7d514_0x30000.SC4Model
+      - Random Pack 1/Retaining Wall_DN/PLOP_1x1_Retaining Wall_523193e4.SC4Lot
+      - Random Pack 1/Retaining Wall_DN/Retaining Wall-0x6534284a-0x1c2d4663-0x723193df._LooseDesc
+      - Random Pack 1/Retaining Wall_DN/RetainingWallDN-0x5ad0e817_0x91b05f9a_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555d85aeaa_Barre-Back.jpg.d99691f3a074819d082a1105f17cd41e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555da4a524_Barre-Front.jpg.11c697ea227203fd8152bcc86bc932b1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555dbbfffb_LALady.jpg.3e9882a717ce732593ec66a2baaaf520.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555dcecc64_PlageSetup.jpg.0433e56917064521b69527141463f53b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555df1da5d_Plume-Back.jpg.b2495e4b8d4a39131143faa5787f627f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555e05c39d_Plume-Night.jpg.dfeff456bd4220a07071bd92994169fe.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555e1d1620_Wall-Day.jpg.1d135fbf00bc620395330f778b4cbf82.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_07/64c555e33f9ae_Wall-Night.jpg.37fa5faf21a455ee9ad3a2d552af09ce.jpg
     lastModified: 2023-07-29T18:14:36.000Z
+    lots:
+      Random Pack 1/HD_Medit Home 2_DN/PLOP_2x2_Maison Plume_5225c44e.SC4Lot:
+        5225c44e:
+          building: 5225c44e
+          name: PLOP_2x2_Maison Plume
+          props:
+            - a0000050
+            - a0000051
+          size: 2x2
+          textures:
+            - '25213000'
+            - '25983000'
+            - 25d60000
+            - 25f40000
+      Random Pack 1/HD_Ploppable Pool_DN/PLOP_1x1_HD Ploppable Pool_DN_d2260722.SC4Lot:
+        d2260722:
+          building: d2260722
+          name: PLOP_1x1_HD Ploppable Pool_DN
+          size: 1x1
+      Random Pack 1/Medit Home 1A_DN/R$$5_1x2_2- Medit Home 1A_DN_32032554.SC4Lot:
+        '32032554':
+          building: d2032542
+          density: low
+          name: R$$5_1x2_2- Medit Home 1A_DN
+          props:
+            - 1de50000
+            - 1f0b0000
+            - a0000015
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 252f2000
+            - '25303000'
+            - 25f40000
+      Random Pack 1/Medit Home 1A_DN/R$$5_1x2_Medit Home 1A_DN_a2021d9c.SC4Lot:
+        a2021d9c:
+          building: d2021d8a
+          density: low
+          name: R$$5_1x2_Medit Home 1A_DN
+          props:
+            - 1de50000
+            - 1f0b0000
+            - a000003a
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251b2000
+            - 251f2000
+            - 25f40000
+      Random Pack 1/Medit Home 1_DN/R$$5_1x2_2-Medit Home 1_DN_21ffbc82.SC4Lot:
+        21ffbc82:
+          building: 71ffbc71
+          density: low
+          name: R$$5_1x2_2-Medit Home 1_DN
+          props:
+            - 1f0b0000
+            - a000003f
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251b2000
+            - '251e2000'
+            - 25f40000
+      Random Pack 1/Medit Home 1_DN/R$$5_1x2_3-Medit Home 1_DN_e1ffbdd8.SC4Lot:
+        e1ffbdd8:
+          building: 11ffbdc7
+          density: low
+          name: R$$5_1x2_3-Medit Home 1_DN
+          props:
+            - 1de50000
+            - 1f0b0000
+            - a0000015
+            - a000003a
+            - a0000050
+          size: 1x2
+          stage: 5
+          textures:
+            - 252a2000
+            - 253d2000
+            - 25f40000
+      Random Pack 1/Medit Home 1_DN/R$$5_1x2_Medit Home 1_DN_91ffba94.SC4Lot:
+        91ffba94:
+          building: 71ffba89
+          density: low
+          name: R$$5_1x2_Medit Home 1_DN
+          props:
+            - 1de50000
+            - 1f0b0000
+            - a000004f
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - '25252000'
+            - 252f2000
+            - 25f40000
+      Random Pack 1/Medit Home 3_DN/R$$5_1x2_Medit Home 3_DN_9228aecd.SC4Lot:
+        9228aecd:
+          building: d228aebc
+          density: low
+          name: R$$5_1x2_Medit Home 3_DN
+          props:
+            - 1f0b0000
+            - a000000d
+            - a0000050
+            - a0000051
+          size: 1x2
+          stage: 5
+          textures:
+            - 251f2000
+            - 253a2000
+            - 25f40000
+      Random Pack 1/Medit Home 4_DN/PLOP_2x2_Medit Home 4_DN_624a19b0.SC4Lot:
+        624a19b0:
+          building: 624a19b0
+          name: PLOP_2x2_Medit Home 4_DN
+          props:
+            - a0000050
+            - a0000051
+          size: 2x2
+          textures:
+            - '25213000'
+            - '25983000'
+            - 25f40000
+      Random Pack 1/Plage Setup/PLOP_1x1_Plage Setup_a2490927.SC4Lot:
+        a2490927:
+          building: a2490927
+          name: PLOP_1x1_Plage Setup
+          props:
+            - '72490906'
+            - aa836b49
+          size: 1x1
+      Random Pack 1/Retaining Wall_DN/PLOP_1x1_Retaining Wall_523193e4.SC4Lot:
+        '523193e4':
+          building: '523193e4'
+          name: PLOP_1x1_Retaining Wall
+          size: 1x1
+          textures:
+            - '26190000'
+    meta:
+      timestamp: 2025-01-10T15:01:09.994Z
+      version: 1
+    models:
+      Random Pack 1/HD_Medit Home 2_DN/HDMeditHome2DN-0x5ad0e817_0xb1a48cf8_0x30000.SC4Model:
+        - b1a48cf8
+      Random Pack 1/HD_Ploppable Pool_DN/HDPoolDN-0x5ad0e817_0x91a4d2e5_0x30000.SC4Model:
+        - 91a4d2e5
+      Random Pack 1/Medit Home 1A_DN/MeditHome1ADN-0x5ad0e817_0x5180e93f_0x30000.SC4Model:
+        - 5180e93f
+      Random Pack 1/Medit Home 1_DN/MeditHome1DN-0x5ad0e817_0x717e864b_0x30000.SC4Model:
+        - 717e864b
+      Random Pack 1/Medit Home 3_DN/MeditHome3DN-0x5ad0e817_0x71a7799b_0x30000.SC4Model:
+        - 71a7799b
+      Random Pack 1/Medit Home 4_DN/MeditHome4DN-0x5ad0e817_0xb1c8646c_0x30000.SC4Model:
+        - b1c8646c
+      Random Pack 1/Plage Setup/PlageSetup-0x5ad0e817_0x31c7d514_0x30000.SC4Model:
+        - 31c7d514
+      Random Pack 1/Retaining Wall_DN/RetainingWallDN-0x5ad0e817_0x91b05f9a_0x30000.SC4Model:
+        - 91b05f9a
     name: WannG Random Pack 1
+    props:
+      Random Pack 1/Plage Setup/Plage Setup-0x6534284a-0x1c2d4663-0x72490906.SC4Desc:
+        1c2d4663-72490906:
+          model: 31c7d514
+          name: Plage Setup
+    sha256: d08580a0ccb16e1c2a1f30689709fa4a99733cd89bb90254a8c0242541fc754b
+    size: 4278412
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_07/64c55709e4338_Plume-Back.thumb.jpg.280a02731a950619bc6e05b63093f8f3.jpg
+    uncompressed: 5146733
     url: https://community.simtropolis.com/files/file/35582-wanng-random-pack-1/
+    version: 1.0.0
   simtropolis/356:
     assetId: simtropolis/356-the-day-baghdad-fell
     authors:
