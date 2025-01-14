@@ -2778,17 +2778,56 @@ assets:
     dependencies: []
     description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>Contains the popular Parking Lot texture dependency by WalkingSnake (previously sc4jeeks).\_ From the author:</p>\r\n<p>These textures were previously known under my old name, <strong>Sc4jeeks</strong>. By the help of BSC they have been updated to remedy the texture conflict reported on them.</p>\r\n<p>These textures are also known as <strong>WalkingSnake Textures</strong>.\_ If you have used the old Sc4jeeks version, be sure to run Cleanitol with the enclosed file to remove the following outdatedfiles:</p>\r\n<ul>\r\n<li>plottextures0.dat</li>\r\n<li>plottextures2.dat</li>\r\n<li>plottextures3.dat</li>\r\n<li>plottextures4.dat</li>\r\n<li>plottextures5.dat</li>\r\n<li>plottextures7.dat</li>\r\n<li>plottextures9.dat</li>\r\n<li>sc4jeeks_textures.dat</li>\r\n</ul> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/WS Textures.jpg\" data-lightbox=\"lightbox131\" data-alt=\"lightboxWS Textures\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/WS Textures.jpg\" alt=\"WS Textures\" ></a> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n            <span class=\"jd_screenshot\"> </span>\r\n        </div> \r\n</body>"
     downloads: 1048
+    features: []
     file: WalkingSnake_Textures_Vol01.zip
+    filename: WalkingSnake_Textures_Vol01.zip
     files:
-      - _Documents/WS Textures.jpg
-      - _Documents/Cleanitol_WalkingSnake_Textures_Vol_01.txt
       - WalkingSnake/Textures/WalkingSnake Textures Vol 01.dat
+      - _Documents/Cleanitol_WalkingSnake_Textures_Vol_01.txt
+      - _Documents/WS Textures.jpg
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/WS Textures.jpg
     lastModified: 2025-01-07T16:48:03.000Z
+    meta:
+      timestamp: 2025-01-14T10:11:05.427Z
+      version: 1
     name: WalkingSnake (Sc4jeeks) Parking Textures Vol 01
     sha256: a57de0da99ccf0c778e468c753de7b19499113191f8f21850cb91f39293997b3
     size: 246277
+    textures:
+      WalkingSnake/Textures/WalkingSnake Textures Vol 01.dat:
+        - ff094000
+        - ff094010
+        - ff094020
+        - ff094030
+        - ff094040
+        - ff094050
+        - ff094060
+        - ff094070
+        - ff094080
+        - ff094090
+        - ff0940a0
+        - ff0940b0
+        - ff0940c0
+        - ff0940d0
+        - ff0940e0
+        - ff0940f0
+        - ff094100
+        - ff094110
+        - ff094120
+        - ff094130
+        - ff094140
+        - ff094150
+        - ff094160
+        - ff094170
+        - ff094180
+        - ff094190
+        - ff0941a0
+        - ff0941b0
+        - ff0941c0
+        - ff0941d0
+        - ff0941e0
+        - ff0941f0
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/WS Textures.jpg
     timestamp: 2024-08-09T11:48:57.739Z
     uncompressed: 383969

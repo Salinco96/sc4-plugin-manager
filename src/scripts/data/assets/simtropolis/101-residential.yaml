@@ -22583,11 +22583,273 @@ assets:
     assetId: simtropolis/35435-palazzo-currucci
     authors:
       - davide1983it
+    buildings:
+      Davide1983it - Palazzo Currucci P3-V1.SC4Desc:
+        70b5c3f4-d0d9a7d9:
+          bulldoze: 252
+          capacity:
+            r$: 78
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 70d17d8e
+          name: Davide1983it - Palazzo Currucci P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1066
+      Davide1983it - Palazzo Currucci P3-V2.SC4Desc:
+        70b5c3f4-30d9b0fc:
+          bulldoze: 252
+          capacity:
+            r$: 78
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: f0d1b8b0
+          name: Davide1983it - Palazzo Currucci P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1065
+      Davide1983it - Palazzo Currucci P5-V1.SC4Desc:
+        70b5c3f4-50d9a896:
+          bulldoze: 334
+          capacity:
+            r$: 106
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: d0d187e3
+          name: Davide1983it - Palazzo Currucci P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1441
+      Davide1983it - Palazzo Currucci P5-V2.SC4Desc:
+        70b5c3f4-90d9b023:
+          bulldoze: 334
+          capacity:
+            r$: 106
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: 50d1a93e
+          name: Davide1983it - Palazzo Currucci P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1441
+      Davide1983it - Palazzo Currucci P8-V1.SC4Desc:
+        70b5c3f4-b0d9adef:
+          bulldoze: 456
+          capacity:
+            r$: 150
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: b0d18fb0
+          name: Davide1983it - Palazzo Currucci P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 2033
+      Davide1983it - Palazzo Currucci P8-V2.SC4Desc:
+        70b5c3f4-10d9afc3:
+          bulldoze: 456
+          capacity:
+            r$: 147
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: d0d19f6a
+          name: Davide1983it - Palazzo Currucci P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 2002
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tPalazzo Currucci\n</p>\n\n<p>\n\tIs a residential building $\n</p>\n\n<p>\n\tlot 1x1\_\n</p>\n\n<p>\n\t2 color's version\n</p>\n\n<p>\n\t3 different height: 3-5-8 floors\n</p>\n\n<p>\n\tit's made to be a <abbr title=\"Wall-to-Wall\">w2w</abbr> building\n</p>\n\n<p>\n\tInside folder you will find a prop version of these building\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: palazzo currucci.rar
+    files:
+      - Davide1983it - Palazzo Currucci P3-V1.SC4Desc
+      - Davide1983it - Palazzo Currucci P3-V1.SC4Lot
+      - Davide1983it - Palazzo Currucci P3-V1.SC4Model
+      - Davide1983it - Palazzo Currucci P3-V1P.SC4Desc
+      - Davide1983it - Palazzo Currucci P3-V2.SC4Desc
+      - Davide1983it - Palazzo Currucci P3-V2.SC4Lot
+      - Davide1983it - Palazzo Currucci P3-V2.SC4Model
+      - Davide1983it - Palazzo Currucci P3-V2P.SC4Desc
+      - Davide1983it - Palazzo Currucci P5-V1.SC4Desc
+      - Davide1983it - Palazzo Currucci P5-V1.SC4Lot
+      - Davide1983it - Palazzo Currucci P5-V1.SC4Model
+      - Davide1983it - Palazzo Currucci P5-V1P.SC4Desc
+      - Davide1983it - Palazzo Currucci P5-V2.SC4Desc
+      - Davide1983it - Palazzo Currucci P5-V2.SC4Lot
+      - Davide1983it - Palazzo Currucci P5-V2.SC4Model
+      - Davide1983it - Palazzo Currucci P5-V2P.SC4Desc
+      - Davide1983it - Palazzo Currucci P8-V1.SC4Desc
+      - Davide1983it - Palazzo Currucci P8-V1.SC4Lot
+      - Davide1983it - Palazzo Currucci P8-V1.SC4Model
+      - Davide1983it - Palazzo Currucci P8-V1P.SC4Desc
+      - Davide1983it - Palazzo Currucci P8-V2.SC4Desc
+      - Davide1983it - Palazzo Currucci P8-V2.SC4Lot
+      - Davide1983it - Palazzo Currucci P8-V2.SC4Model
+      - Davide1983it - Palazzo Currucci P8-V2P.SC4Desc
+      - palazzo currucci (1).png
+      - palazzo currucci (2).png
+      - palazzo currucci (3).png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_01/63ced46451e6d_palazzocurrucci(1).png.9822828096b7f4906cb5bbe2f89a7be1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_01/63ced48c16e83_palazzocurrucci(2).png.b178f73e3fa9db793171d00e2ddf49b6.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_01/63ced4e486690_palazzocurrucci(3).png.4eccc24b6d827329589ca38266742929.png
     lastModified: 2023-01-23T18:42:52.000Z
+    lots:
+      Davide1983it - Palazzo Currucci P3-V1.SC4Lot:
+        90d9c822:
+          building: d0d9a7d9
+          density: medium,high
+          name: Davide1983it - Palazzo Currucci P3-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 6
+          textures:
+            - 1da44600
+            - f85d415a
+      Davide1983it - Palazzo Currucci P3-V2.SC4Lot:
+        70d9c050:
+          building: 30d9b0fc
+          density: medium,high
+          name: Davide1983it - Palazzo Currucci P3-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 6
+          textures:
+            - 1da44600
+            - f85d415a
+      Davide1983it - Palazzo Currucci P5-V1.SC4Lot:
+        f0d9c061:
+          building: 50d9a896
+          density: high
+          name: Davide1983it - Palazzo Currucci P5-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - 1da44600
+            - f85d415a
+      Davide1983it - Palazzo Currucci P5-V2.SC4Lot:
+        30d9c071:
+          building: 90d9b023
+          density: high
+          name: Davide1983it - Palazzo Currucci P5-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - 1da44600
+      Davide1983it - Palazzo Currucci P8-V1.SC4Lot:
+        b0d9c0c6:
+          building: b0d9adef
+          density: high
+          name: Davide1983it - Palazzo Currucci P8-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - 1da44600
+            - f85d415a
+      Davide1983it - Palazzo Currucci P8-V2.SC4Lot:
+        90d9c0d1:
+          building: 10d9afc3
+          density: high
+          name: Davide1983it - Palazzo Currucci P8-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - 1da44600
+            - f85d415a
+    meta:
+      timestamp: 2025-01-14T09:54:51.146Z
+      version: 1
+    models:
+      Davide1983it - Palazzo Currucci P3-V1.SC4Model:
+        - 70d17d8e
+      Davide1983it - Palazzo Currucci P3-V2.SC4Model:
+        - f0d1b8b0
+      Davide1983it - Palazzo Currucci P5-V1.SC4Model:
+        - d0d187e3
+      Davide1983it - Palazzo Currucci P5-V2.SC4Model:
+        - 50d1a93e
+      Davide1983it - Palazzo Currucci P8-V1.SC4Model:
+        - b0d18fb0
+      Davide1983it - Palazzo Currucci P8-V2.SC4Model:
+        - d0d19f6a
     name: Palazzo Currucci
+    props:
+      Davide1983it - Palazzo Currucci P3-V1P.SC4Desc:
+        70b5c3f4-d0d9b1e7:
+          model: 70d17d8e
+          name: Davide1983it - Palazzo Currucci P3-V1P
+      Davide1983it - Palazzo Currucci P3-V2P.SC4Desc:
+        70b5c3f4-90d9b9d8:
+          model: f0d1b8b0
+          name: Davide1983it - Palazzo Currucci P3-V2P
+      Davide1983it - Palazzo Currucci P5-V1P.SC4Desc:
+        70b5c3f4-90d9b235:
+          model: d0d187e3
+          name: Davide1983it - Palazzo Currucci P5-V1P
+      Davide1983it - Palazzo Currucci P5-V2P.SC4Desc:
+        70b5c3f4-b0d9b8f7:
+          model: 50d1a93e
+          name: Davide1983it - Palazzo Currucci P5-V2P
+      Davide1983it - Palazzo Currucci P8-V1P.SC4Desc:
+        70b5c3f4-70d9b2d3:
+          model: b0d18fb0
+          name: Davide1983it - Palazzo Currucci P8-V1P
+      Davide1983it - Palazzo Currucci P8-V2P.SC4Desc:
+        70b5c3f4-90d9b5f8:
+          model: d0d19f6a
+          name: Davide1983it - Palazzo Currucci P8-V2P
+    sha256: 552781b141374b4cf96ab510015cf26e26017677589290d4b42a8ce6a76ca826
+    size: 7805132
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_01/63ced52b3f12f_palazzocurrucci(3).thumb.png.f586dac4baa18e63660c1dd7c7368230.png
+    uncompressed: 8188132
     url: https://community.simtropolis.com/files/file/35435-palazzo-currucci/
+    version: 1.0.0
   simtropolis/35440:
     assetId: simtropolis/35440-esa-krakan
     authors:
@@ -22601,11 +22863,1481 @@ assets:
     assetId: simtropolis/35492-residential-building-1x1
     authors:
       - davide1983it
+    buildings:
+      set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Desc:
+        70b5c3f4-b0f4029f:
+          bulldoze: 253
+          capacity:
+            r$: 75
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 91cef2a5
+          name: Davide1983it - Palazzo Arnini P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1024
+      set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Desc:
+        70b5c3f4-70f40316:
+          bulldoze: 253
+          capacity:
+            r$: 75
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: f24812b0
+          name: Davide1983it - Palazzo Arnini P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1024
+      set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Desc:
+        70b5c3f4-d0f402c0:
+          bulldoze: 334
+          capacity:
+            r$: 102
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: 9247fe53
+          name: Davide1983it - Palazzo Arnini P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1383
+      set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Desc:
+        70b5c3f4-70f40322:
+          bulldoze: 334
+          capacity:
+            r$: 102
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: d24817ed
+          name: Davide1983it - Palazzo Arnini P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1383
+      set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Desc:
+        70b5c3f4-f0f402b4:
+          bulldoze: 457
+          capacity:
+            r$: 141
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: 31f7cad6
+          name: Davide1983it - Palazzo Arnini P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1922
+      set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Desc:
+        70b5c3f4-d0f40329:
+          bulldoze: 457
+          capacity:
+            r$: 141
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: f2481ecc
+          name: Davide1983it - Palazzo Arnini P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1922
+      set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Desc:
+        70b5c3f4-d0d9a7d9:
+          bulldoze: 252
+          capacity:
+            r$: 78
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 70d17d8e
+          name: Davide1983it - Palazzo Currucci P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1066
+      set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Desc:
+        70b5c3f4-30d9b0fc:
+          bulldoze: 252
+          capacity:
+            r$: 78
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: f0d1b8b0
+          name: Davide1983it - Palazzo Currucci P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1065
+      set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Desc:
+        70b5c3f4-50d9a896:
+          bulldoze: 334
+          capacity:
+            r$: 106
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: d0d187e3
+          name: Davide1983it - Palazzo Currucci P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1441
+      set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Desc:
+        70b5c3f4-90d9b023:
+          bulldoze: 334
+          capacity:
+            r$: 106
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: 50d1a93e
+          name: Davide1983it - Palazzo Currucci P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1441
+      set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Desc:
+        70b5c3f4-b0d9adef:
+          bulldoze: 456
+          capacity:
+            r$: 150
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: b0d18fb0
+          name: Davide1983it - Palazzo Currucci P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 2033
+      set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Desc:
+        70b5c3f4-10d9afc3:
+          bulldoze: 456
+          capacity:
+            r$: 147
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: d0d19f6a
+          name: Davide1983it - Palazzo Currucci P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 2002
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Desc:
+        70b5c3f4-f0e13390:
+          bulldoze: 245
+          capacity:
+            r$: 74
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: 50d8f9f7
+          name: Davide1983it - Palazzo Ergonne P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1012
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Desc:
+        70b5c3f4-f0e24730:
+          bulldoze: 246
+          capacity:
+            r$: 75
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: b0d99935
+          name: Davide1983it - Palazzo Ergonne P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1025
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Desc:
+        70b5c3f4-50e13399:
+          bulldoze: 327
+          capacity:
+            r$: 102
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: b0d90e6c
+          name: Davide1983it - Palazzo Ergonne P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1380
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Desc:
+        70b5c3f4-f0e4c571:
+          bulldoze: 327
+          capacity:
+            r$: 103
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: b0d9a333
+          name: Davide1983it - Palazzo Ergonne P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1396
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Desc:
+        70b5c3f4-d0e133b5:
+          bulldoze: 450
+          capacity:
+            r$: 142
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: 30d93c52
+          name: Davide1983it - Palazzo Ergonne P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1931
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Desc:
+        70b5c3f4-f0e4c5c7:
+          bulldoze: 450
+          capacity:
+            r$: 144
+          categories: r$
+          flamability: 45
+          garbage: 9
+          model: 30d9b856
+          name: Davide1983it - Palazzo Ergonne P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 7
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1953
+      set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Desc:
+        70b5c3f4-910e8425:
+          bulldoze: 250
+          capacity:
+            r$: 68
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: f1069831
+          name: Davide1983it - Palazzo Gernia P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 919
+      set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Desc:
+        70b5c3f4-910e771b:
+          bulldoze: 250
+          capacity:
+            r$: 68
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: 110078a2
+          name: Davide1983it - Palazzo Gernia P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 919
+      set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Desc:
+        70b5c3f4-110a8a24:
+          bulldoze: 331
+          capacity:
+            r$: 92
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 90fff3c0
+          name: Davide1983it - Palazzo Gernia P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1244
+      set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Desc:
+        70b5c3f4-f10a8c08:
+          bulldoze: 331
+          capacity:
+            r$: 92
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 3101c5b0
+          name: Davide1983it - Palazzo Gernia P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1244
+      set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Desc:
+        70b5c3f4-b10a8a97:
+          bulldoze: 454
+          capacity:
+            r$: 128
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: 31014b12
+          name: Davide1983it - Palazzo Gernia P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1732
+      set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Desc:
+        70b5c3f4-510a8c11:
+          bulldoze: 454
+          capacity:
+            r$: 128
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: f1029c9b
+          name: Davide1983it - Palazzo Gernia P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1732
+      set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Desc:
+        70b5c3f4-f124faab:
+          bulldoze: 251
+          capacity:
+            r$: 67
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: f0fe77d6
+          name: Davide1983it - Palazzo Iregna P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 911
+      set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Desc:
+        70b5c3f4-9124faa0:
+          bulldoze: 251
+          capacity:
+            r$: 67
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: d0b8d695
+          name: Davide1983it - Palazzo Iregna P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 911
+      set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Desc:
+        70b5c3f4-5124feff:
+          bulldoze: 333
+          capacity:
+            r$: 91
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 517fefea
+          name: Davide1983it - Palazzo Iregna P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1232
+      set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Desc:
+        70b5c3f4-b124facb:
+          bulldoze: 333
+          capacity:
+            r$: 91
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: 50e0d01f
+          name: Davide1983it - Palazzo Iregna P5-V2
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1232
+      set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Desc:
+        70b5c3f4-b124ff1a:
+          bulldoze: 455
+          capacity:
+            r$: 126
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: f0fe997e
+          name: Davide1983it - Palazzo Iregna P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1714
+      set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Desc:
+        70b5c3f4-3124fb00:
+          bulldoze: 455
+          capacity:
+            r$: 126
+          categories: r$
+          flamability: 45
+          garbage: 8
+          model: 50e1b46b
+          name: Davide1983it - Palazzo Iregna P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1714
+      set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Desc:
+        70b5c3f4-31280760:
+          bulldoze: 253
+          capacity:
+            r$: 65
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: 511d7cda
+          name: Davide1983it - Palazzo Merlini P3-V1
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 886
+      set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Desc:
+        70b5c3f4-91280903:
+          bulldoze: 254
+          capacity:
+            r$: 65
+          categories: r$
+          flamability: 45
+          garbage: 4
+          model: 31201cde
+          name: Davide1983it - Palazzo Merlini P3-V2
+          pollution: 2
+          pollutionRadius: 5
+          power: 1
+          water: 4
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 887
+      set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Desc:
+        70b5c3f4-31280768:
+          bulldoze: 335
+          capacity:
+            r$: 88
+          categories: r$
+          flamability: 45
+          garbage: 5
+          model: '511e4980'
+          name: Davide1983it - Palazzo Merlini P5-V1
+          pollution: 3
+          pollutionRadius: 5
+          power: 1
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1194
+      set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Desc:
+        70b5c3f4-712807bc:
+          bulldoze: 458
+          capacity:
+            r$: 122
+          categories: r$
+          flamability: 45
+          garbage: 7
+          model: 511fbde5
+          name: Davide1983it - Palazzo Merlini P5-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1659
+      set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Desc:
+        70b5c3f4-b1280771:
+          bulldoze: 457
+          capacity:
+            r$: 122
+          categories: r$
+          flamability: 45
+          garbage: 7
+          model: 111e523a
+          name: Davide1983it - Palazzo Merlini P8-V1
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1657
+      set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Desc:
+        70b5c3f4-112807ac:
+          bulldoze: 458
+          capacity:
+            r$: 122
+          categories: r$
+          flamability: 45
+          garbage: 7
+          model: 911fb53f
+          name: Davide1983it - Palazzo Merlini P8-V2
+          pollution: 4
+          pollutionRadius: 5
+          power: 1
+          water: 6
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1659
     category: 101-residential
+    dependencies:
+      - simtropolis/34972-davide-prop-v1
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThis is a residential wall to wall set building 1x1\n</p>\n\n<p>\n\t<br>\n\tPalazzo Arnini<br>\n\tPalazzo Ergonne<br>\n\tPalazzo Gernia<br>\n\tPalazzo Iregna<br>\n\tPalazzo Merlini<br>\n\tPalazzo Currucci\n</p>\n\n<p>\n\tThey are residential $\n</p>\n\n<p>\n\tEach building have 2 color version,\_<br>\n\tEach Model have 3-5-8 floor\n</p>\n\n<p>\n\tEach building have a prop version\n</p>\n\n<p>\n\tProp Depedencies\n</p>\n\n<p>\n\t<a href=\"https://community.simtropolis.com/files/file/34972-davide-prop-v1/\" rel=\"\">https://community.simtropolis.com/files/file/34972-davide-prop-v1/</a>\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: set 1x1.rar
+    files:
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Arnini P8-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Currucci P8-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Ergonne P8-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Gernia P8-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Iregna P8-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P3-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P5-V2P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V1P.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Desc
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Lot
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Model
+      - set 1x1/Davide1983it - Palazzo Merlini P8-V2P.SC4Desc
+      - set 1x1/set 1x1 (1).png
+      - set 1x1/set 1x1 (2).png
+      - set 1x1/set 1x1 (3).png
+      - set 1x1/set 1x1 (4).png
+      - set 1x1/set 1x1 (5).png
+      - set 1x1/set 1x1 (6).png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287c6a52629_set1x1(1).png.817e866f38442ca6cd88e8071541f561.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287c80b6685_set1x1(2).png.3234f79f398b6deaff88ea7be3807597.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287c9a70d73_set1x1(3).png.cedbd6781cb9df2c93c7aba343e326a8.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287cb12c842_set1x1(4).png.ff364331a228eed7938cc43617d0e95c.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287cd61d578_set1x1(5).png.e2da0d797f1c197d1c2475ffb2386fc3.png
+      - https://www.simtropolis.com/objects/screens/monthly_2023_04/64287d2139eee_set1x1(6).png.9b27e6ff7c46c97e138bcdf15cba4074.png
     lastModified: 2023-04-01T18:56:35.000Z
+    lots:
+      set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Lot:
+        10f42c03:
+          building: b0f4029f
+          density: medium,high
+          name: Davide1983it - Palazzo Arnini P3-V1
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Lot:
+        30f42c3f:
+          building: 70f40316
+          density: medium,high
+          name: Davide1983it - Palazzo Arnini P3-V2
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Lot:
+        50f430dc:
+          building: d0f402c0
+          density: high
+          name: Davide1983it - Palazzo Arnini P5-V1
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Lot:
+        d0f430ff:
+          building: 70f40322
+          density: high
+          name: Davide1983it - Palazzo Arnini P5-V2
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Lot:
+        b0f4333e:
+          building: f0f402b4
+          density: high
+          name: Davide1983it - Palazzo Arnini P8-V1
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Lot:
+        30f43350:
+          building: d0f40329
+          density: high
+          name: Davide1983it - Palazzo Arnini P8-V2
+          props:
+            - cf2c9f30
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Lot:
+        110e70f6:
+          building: d0d9a7d9
+          density: medium,high
+          name: Davide1983it - Palazzo Currucci P3-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Lot:
+        b0f56513:
+          building: 30d9b0fc
+          density: medium,high
+          name: Davide1983it - Palazzo Currucci P3-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Lot:
+        f0e6f60d:
+          building: 50d9a896
+          density: high
+          name: Davide1983it - Palazzo Currucci P5-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Lot:
+        10e6fa81:
+          building: 90d9b023
+          density: high
+          name: Davide1983it - Palazzo Currucci P5-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Lot:
+        510f9ab3:
+          building: b0d9adef
+          density: high
+          name: Davide1983it - Palazzo Currucci P8-V1
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Lot:
+        b10f9ad2:
+          building: 10d9afc3
+          density: high
+          name: Davide1983it - Palazzo Currucci P8-V2
+          props:
+            - 0f28ab3d
+            - ef25efda
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Lot:
+        f0e6eecb:
+          building: f0e13390
+          density: medium,high
+          name: Davide1983it - Palazzo Ergonne P3-V1
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Lot:
+        b0e6fab6:
+          building: f0e24730
+          density: medium,high
+          name: Davide1983it - Palazzo Ergonne P3-V2
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Lot:
+        b0e6ef35:
+          building: '50e13399'
+          density: high
+          name: Davide1983it - Palazzo Ergonne P5-V1
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Lot:
+        90e6efd9:
+          building: f0e4c571
+          density: high
+          name: Davide1983it - Palazzo Ergonne P5-V2
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Lot:
+        f0e6eea8:
+          building: d0e133b5
+          density: high
+          name: Davide1983it - Palazzo Ergonne P8-V1
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Lot:
+        10e6fae7:
+          building: f0e4c5c7
+          density: high
+          name: Davide1983it - Palazzo Ergonne P8-V2
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - 2d5d0000
+            - f168f000
+            - f85d415a
+      set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Lot:
+        510e91ee:
+          building: '910e8425'
+          density: medium,high
+          name: Davide1983it - Palazzo Gernia P3-V1
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Lot:
+        111269fc:
+          building: 910e771b
+          density: medium,high
+          name: Davide1983it - Palazzo Gernia P3-V2
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Lot:
+        f1126a0f:
+          building: 110a8a24
+          density: medium,high
+          name: Davide1983it - Palazzo Gernia P5-V1
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Lot:
+        51126a29:
+          building: f10a8c08
+          density: medium,high
+          name: Davide1983it - Palazzo Gernia P5-V2
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Lot:
+        d1126b4e:
+          building: b10a8a97
+          density: high
+          name: Davide1983it - Palazzo Gernia P8-V1
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Lot:
+        11126b97:
+          building: 510a8c11
+          density: high
+          name: Davide1983it - Palazzo Gernia P8-V2
+          props:
+            - 0f2b0e8b
+            - 2f2fc7be
+            - 6f25f6dd
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Lot:
+        d124fe31:
+          building: f124faab
+          density: medium,high
+          name: Davide1983it - Palazzo Iregna P3-V1
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Lot:
+        d1250030:
+          building: 9124faa0
+          density: medium,high
+          name: Davide1983it - Palazzo Iregna P3-V2
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Lot:
+        7125004b:
+          building: 5124feff
+          density: medium,high
+          name: Davide1983it - Palazzo Iregna P5-V1
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Lot:
+        b125005d:
+          building: b124facb
+          density: medium,high
+          name: Davide1983it - Palazzo Iregna P5-V2
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Lot:
+        b12500eb:
+          building: b124ff1a
+          density: high
+          name: Davide1983it - Palazzo Iregna P8-V1
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Lot:
+        '312502e9':
+          building: 3124fb00
+          density: high
+          name: Davide1983it - Palazzo Iregna P8-V2
+          props:
+            - 0f28ab3d
+            - 2f2fc7ce
+            - cf2b06b6
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Lot:
+        d128d5aa:
+          building: '31280760'
+          density: medium,high
+          name: Davide1983it - Palazzo Merlini P3-V1
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Lot:
+        1128d6f2:
+          building: '91280903'
+          density: medium,high
+          name: Davide1983it - Palazzo Merlini P3-V2
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Lot:
+        b128d801:
+          building: '31280768'
+          density: medium,high
+          name: Davide1983it - Palazzo Merlini P5-V1
+          size: 1x1
+          stage: 6
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Lot:
+        1128da16:
+          building: 712807bc
+          density: high
+          name: Davide1983it - Palazzo Merlini P5-V2
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Lot:
+        1128dad8:
+          building: b1280771
+          density: high
+          name: Davide1983it - Palazzo Merlini P8-V1
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+      set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Lot:
+        1128db0b:
+          building: 112807ac
+          density: high
+          name: Davide1983it - Palazzo Merlini P8-V2
+          size: 1x1
+          stage: 7
+          textures:
+            - '26060000'
+            - f85d41da
+            - f85d4350
+    meta:
+      timestamp: 2025-01-14T09:54:51.146Z
+      version: 1
+    models:
+      set 1x1/Davide1983it - Palazzo Arnini P3-V1.SC4Model:
+        - 91cef2a5
+      set 1x1/Davide1983it - Palazzo Arnini P3-V2.SC4Model:
+        - f24812b0
+      set 1x1/Davide1983it - Palazzo Arnini P5-V1.SC4Model:
+        - 9247fe53
+      set 1x1/Davide1983it - Palazzo Arnini P5-V2.SC4Model:
+        - d24817ed
+      set 1x1/Davide1983it - Palazzo Arnini P8-V1.SC4Model:
+        - 31f7cad6
+      set 1x1/Davide1983it - Palazzo Arnini P8-V2.SC4Model:
+        - f2481ecc
+      set 1x1/Davide1983it - Palazzo Currucci P3-V1.SC4Model:
+        - 70d17d8e
+      set 1x1/Davide1983it - Palazzo Currucci P3-V2.SC4Model:
+        - f0d1b8b0
+      set 1x1/Davide1983it - Palazzo Currucci P5-V1.SC4Model:
+        - d0d187e3
+      set 1x1/Davide1983it - Palazzo Currucci P5-V2.SC4Model:
+        - 50d1a93e
+      set 1x1/Davide1983it - Palazzo Currucci P8-V1.SC4Model:
+        - b0d18fb0
+      set 1x1/Davide1983it - Palazzo Currucci P8-V2.SC4Model:
+        - d0d19f6a
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V1.SC4Model:
+        - 50d8f9f7
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V2.SC4Model:
+        - b0d99935
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V1.SC4Model:
+        - b0d90e6c
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V2.SC4Model:
+        - b0d9a333
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V1.SC4Model:
+        - 30d93c52
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V2.SC4Model:
+        - 30d9b856
+      set 1x1/Davide1983it - Palazzo Gernia P3-V1.SC4Model:
+        - f1069831
+      set 1x1/Davide1983it - Palazzo Gernia P3-V2.SC4Model:
+        - 110078a2
+      set 1x1/Davide1983it - Palazzo Gernia P5-V1.SC4Model:
+        - 90fff3c0
+      set 1x1/Davide1983it - Palazzo Gernia P5-V2.SC4Model:
+        - 3101c5b0
+      set 1x1/Davide1983it - Palazzo Gernia P8-V1.SC4Model:
+        - 31014b12
+      set 1x1/Davide1983it - Palazzo Gernia P8-V2.SC4Model:
+        - f1029c9b
+      set 1x1/Davide1983it - Palazzo Iregna P3-V1.SC4Model:
+        - f0fe77d6
+      set 1x1/Davide1983it - Palazzo Iregna P3-V2.SC4Model:
+        - d0b8d695
+      set 1x1/Davide1983it - Palazzo Iregna P5-V1.SC4Model:
+        - 517fefea
+      set 1x1/Davide1983it - Palazzo Iregna P5-V2.SC4Model:
+        - 50e0d01f
+      set 1x1/Davide1983it - Palazzo Iregna P8-V1.SC4Model:
+        - f0fe997e
+      set 1x1/Davide1983it - Palazzo Iregna P8-V2.SC4Model:
+        - 50e1b46b
+      set 1x1/Davide1983it - Palazzo Merlini P3-V1.SC4Model:
+        - 511d7cda
+      set 1x1/Davide1983it - Palazzo Merlini P3-V2.SC4Model:
+        - 31201cde
+      set 1x1/Davide1983it - Palazzo Merlini P5-V1.SC4Model:
+        - '511e4980'
+      set 1x1/Davide1983it - Palazzo Merlini P5-V2.SC4Model:
+        - 511fbde5
+      set 1x1/Davide1983it - Palazzo Merlini P8-V1.SC4Model:
+        - 111e523a
+      set 1x1/Davide1983it - Palazzo Merlini P8-V2.SC4Model:
+        - 911fb53f
     name: Residential Building 1x1
+    props:
+      set 1x1/Davide1983it - Palazzo Arnini P3-V1P.SC4Desc:
+        70b5c3f4-d0f4033f:
+          model: 91cef2a5
+          name: Davide1983it - Palazzo Arnini P3-V1P
+      set 1x1/Davide1983it - Palazzo Arnini P3-V2P.SC4Desc:
+        70b5c3f4-d0f40396:
+          model: f24812b0
+          name: Davide1983it - Palazzo Arnini P3-V2P
+      set 1x1/Davide1983it - Palazzo Arnini P5-V1P.SC4Desc:
+        70b5c3f4-f0f40356:
+          model: 9247fe53
+          name: Davide1983it - Palazzo Arnini P5-V1P
+      set 1x1/Davide1983it - Palazzo Arnini P5-V2P.SC4Desc:
+        70b5c3f4-b0f403a5:
+          model: d24817ed
+          name: Davide1983it - Palazzo Arnini P5-V2P
+      set 1x1/Davide1983it - Palazzo Arnini P8-V1P.SC4Desc:
+        70b5c3f4-70f40366:
+          model: 31f7cad6
+          name: Davide1983it - Palazzo Arnini P8-V1P
+      set 1x1/Davide1983it - Palazzo Arnini P8-V2P.SC4Desc:
+        70b5c3f4-70f403b9:
+          model: f2481ecc
+          name: Davide1983it - Palazzo Arnini P8-V2P
+      set 1x1/Davide1983it - Palazzo Currucci P3-V1P.SC4Desc:
+        70b5c3f4-d0d9b1e7:
+          model: 70d17d8e
+          name: Davide1983it - Palazzo Currucci P3-V1P
+      set 1x1/Davide1983it - Palazzo Currucci P3-V2P.SC4Desc:
+        70b5c3f4-90d9b9d8:
+          model: f0d1b8b0
+          name: Davide1983it - Palazzo Currucci P3-V2P
+      set 1x1/Davide1983it - Palazzo Currucci P5-V1P.SC4Desc:
+        70b5c3f4-90d9b235:
+          model: d0d187e3
+          name: Davide1983it - Palazzo Currucci P5-V1P
+      set 1x1/Davide1983it - Palazzo Currucci P5-V2P.SC4Desc:
+        70b5c3f4-b0d9b8f7:
+          model: 50d1a93e
+          name: Davide1983it - Palazzo Currucci P5-V2P
+      set 1x1/Davide1983it - Palazzo Currucci P8-V1P.SC4Desc:
+        70b5c3f4-70d9b2d3:
+          model: b0d18fb0
+          name: Davide1983it - Palazzo Currucci P8-V1P
+      set 1x1/Davide1983it - Palazzo Currucci P8-V2P.SC4Desc:
+        70b5c3f4-90d9b5f8:
+          model: d0d19f6a
+          name: Davide1983it - Palazzo Currucci P8-V2P
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V1P.SC4Desc:
+        70b5c3f4-50e133e3:
+          model: 50d8f9f7
+          name: Davide1983it - Palazzo Ergonne P3-V1P
+      set 1x1/Davide1983it - Palazzo Ergonne P3-V2P.SC4Desc:
+        70b5c3f4-70e24844:
+          model: b0d99935
+          name: Davide1983it - Palazzo Ergonne P3-V2P
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V1P.SC4Desc:
+        70b5c3f4-d0e13415:
+          model: b0d90e6c
+          name: Davide1983it - Palazzo Ergonne P5-V1P
+      set 1x1/Davide1983it - Palazzo Ergonne P5-V2P.SC4Desc:
+        70b5c3f4-70e4c876:
+          model: b0d9a333
+          name: Davide1983it - Palazzo Ergonne P5-V2P
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V1P.SC4Desc:
+        70b5c3f4-d0e13471:
+          model: 30d93c52
+          name: Davide1983it - Palazzo Ergonne P8-V1P
+      set 1x1/Davide1983it - Palazzo Ergonne P8-V2P.SC4Desc:
+        70b5c3f4-30e4c889:
+          model: 30d9b856
+          name: Davide1983it - Palazzo Ergonne P8-V2P
+      set 1x1/Davide1983it - Palazzo Gernia P3-V1P.SC4Desc:
+        70b5c3f4-f10e8441:
+          model: f1069831
+          name: Davide1983it - Palazzo Gernia P3-V1P
+      set 1x1/Davide1983it - Palazzo Gernia P3-V2P.SC4Desc:
+        70b5c3f4-710a906d:
+          model: 110078a2
+          name: Davide1983it - Palazzo Gernia P3-V2P
+      set 1x1/Davide1983it - Palazzo Gernia P5-V1P.SC4Desc:
+        70b5c3f4-110a8f95:
+          model: 90fff3c0
+          name: Davide1983it - Palazzo Gernia P5-V1P
+      set 1x1/Davide1983it - Palazzo Gernia P5-V2P.SC4Desc:
+        70b5c3f4-f10a97e7:
+          model: 3101c5b0
+          name: Davide1983it - Palazzo Gernia P5-V2P
+      set 1x1/Davide1983it - Palazzo Gernia P8-V1P.SC4Desc:
+        70b5c3f4-b10a8ff3:
+          model: 31014b12
+          name: Davide1983it - Palazzo Gernia P8-V1P
+      set 1x1/Davide1983it - Palazzo Gernia P8-V2P.SC4Desc:
+        70b5c3f4-f10a9812:
+          model: f1029c9b
+          name: Davide1983it - Palazzo Gernia P8-V2P
+      set 1x1/Davide1983it - Palazzo Iregna P3-V1P.SC4Desc:
+        70b5c3f4-5125615a:
+          model: f0fe77d6
+          name: Davide1983it - Palazzo Iregna P3-V1P
+      set 1x1/Davide1983it - Palazzo Iregna P3-V2P.SC4Desc:
+        70b5c3f4-3125636b:
+          model: d0b8d695
+          name: Davide1983it - Palazzo Iregna P3-V2P
+      set 1x1/Davide1983it - Palazzo Iregna P5-V1P.SC4Desc:
+        70b5c3f4-f12561b1:
+          model: 517fefea
+          name: Davide1983it - Palazzo Iregna P5-V1P
+      set 1x1/Davide1983it - Palazzo Iregna P5-V2P.SC4Desc:
+        70b5c3f4-b1256391:
+          model: 50e0d01f
+          name: Davide1983it - Palazzo Iregna P5-V2P
+      set 1x1/Davide1983it - Palazzo Iregna P8-V1P.SC4Desc:
+        70b5c3f4-71256617:
+          model: f0fe997e
+          name: Davide1983it - Palazzo Iregna P8-V1P
+      set 1x1/Davide1983it - Palazzo Iregna P8-V2P.SC4Desc:
+        70b5c3f4-112564e0:
+          model: 50e1b46b
+          name: Davide1983it - Palazzo Iregna P8-V2P
+      set 1x1/Davide1983it - Palazzo Merlini P3-V1P.SC4Desc:
+        70b5c3f4-d12807f1:
+          model: 511d7cda
+          name: Davide1983it - Palazzo Merlini P3-V1P
+      set 1x1/Davide1983it - Palazzo Merlini P3-V2P.SC4Desc:
+        70b5c3f4-71280916:
+          model: 31201cde
+          name: Davide1983it - Palazzo Merlini P3-V2P
+      set 1x1/Davide1983it - Palazzo Merlini P5-V1P.SC4Desc:
+        70b5c3f4-31280814:
+          model: '511e4980'
+          name: Davide1983it - Palazzo Merlini P5-V1P
+      set 1x1/Davide1983it - Palazzo Merlini P5-V2P.SC4Desc:
+        70b5c3f4-b1280873:
+          model: 511fbde5
+          name: Davide1983it - Palazzo Merlini P5-V2P
+      set 1x1/Davide1983it - Palazzo Merlini P8-V1P.SC4Desc:
+        70b5c3f4-71280865:
+          model: 111e523a
+          name: Davide1983it - Palazzo Merlini P8-V1P
+      set 1x1/Davide1983it - Palazzo Merlini P8-V2P.SC4Desc:
+        70b5c3f4-3128093f:
+          model: 911fb53f
+          name: Davide1983it - Palazzo Merlini P8-V2P
+    sha256: ea95f6fd6b9e8dbb43cd5f29e68ef051254a96039234d26f7fb8e55b3d499283
+    size: 23641035
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_04/64287e5b1b344_set1x1(1).thumb.png.f276673bab2c1af2a4e34ec7c2b943bb.png
+    uncompressed: 25951608
     url: https://community.simtropolis.com/files/file/35492-residential-building-1x1/
+    version: 1.0.0
   simtropolis/35495:
     assetId: simtropolis/35495-cunningham-mansions
     authors:

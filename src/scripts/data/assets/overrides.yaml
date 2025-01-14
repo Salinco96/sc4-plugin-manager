@@ -162,7 +162,8 @@ sc4evermore/13-sfbt-essentials:
   variantId: default
 
 sc4evermore/131-walkingsnake-sc4jeeks-parking-textures-vol-01:
-  packageId: walkingsnake/parking-textures-vol01
+  packageId: sc4jeeks/textures-vol01
+  variantId: default
 
 sc4evermore/132-bsc-cp-mmp-for-cp-mega-prop-packs:
   packageId: cycledogg/mega-props-mmps
@@ -2773,6 +2774,10 @@ simtropolis/34427-london-flats-1:
       packageId: wannglondon/london-flats-1
       variantId: default
 
+simtropolis/34550-20-huskies-building-hd:
+  packageId: davide1983it/20-huskies-building
+  variantId: default
+
 simtropolis/34608-mediterranean-flats-2:
   packageId: wannglondon/mediterranean-flats-2
   variants:
@@ -3378,12 +3383,20 @@ simtropolis/35415-hotel-utica:
       packageId: jasoncw/hotel-utica
       variantId: darknite
 
+simtropolis/35435-palazzo-currucci:
+  packageId: davide1983it/palazzo-currucci
+  variantId: default
+
 simtropolis/35438-esa-stores:
   packageId: oidaas/esa-stores
   variantId: default
 
 simtropolis/35470-pre-2000-car-props-pack:
   packageId: art128/pre-2000-car-props
+  variantId: default
+
+simtropolis/35492-residential-building-1x1:
+  packageId: davide1983it/1x1-residential-building-set-1
   variantId: default
 
 simtropolis/35519-ow-roundabout-set:
@@ -3408,6 +3421,10 @@ simtropolis/35527-victorian-row-shops-diagonal:
     '197075':
       packageId: justforfun/victorian-row-shops-diagonal
       variantId: default
+
+simtropolis/35540-tarasco-building:
+  packageId: davide1983it/tarasco-building
+  variantId: default
 
 simtropolis/35555-paris-batiments-32-33:
   packageId: wannglondon/paris-building-32
@@ -3443,8 +3460,16 @@ simtropolis/35575-grand-arch:
   packageId: wannglondon/grand-arch
   variantId: darknite
 
+simtropolis/35577-niroco-building:
+  packageId: davide1983it/niroco-building
+  variantId: default
+
 simtropolis/35582-wanng-random-pack-1:
   packageId: wannglondon/random-pack-1
+  variantId: default
+
+simtropolis/35587-caltea-building:
+  packageId: davide1983it/caltea-building
   variantId: default
 
 simtropolis/35593-the-anaheim-citrus-packing-shed:
@@ -3630,6 +3655,10 @@ simtropolis/35768-allied-printing:
 
 simtropolis/35782-sc4-city-date-sync:
   packageId: null-45/city-date-sync
+  variantId: default
+
+simtropolis/35783-supermarket-prix:
+  packageId: davide1983it/supermarket-prix
   variantId: default
 
 simtropolis/35790-sc4-cleanitol: null
@@ -3908,7 +3937,7 @@ simtropolis/36208-hadmore-paint-company:
       variantId: hd
 
 simtropolis/36212-1x1-residential-building-set:
-  packageId: davide1983it/1x1-residential-building-set
+  packageId: davide1983it/1x1-residential-building-set-2
   variantId: default
 
 simtropolis/36213-medit-bldg-59:
