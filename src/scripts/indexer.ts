@@ -139,9 +139,13 @@ runIndexer({
       wannglondon: true,
     },
     entries: [
+      "simtropolis/4513",
       "simtropolis/13318",
       "simtropolis/15758",
+      "simtropolis/18042",
+      "simtropolis/18831",
       "simtropolis/21339",
+      "simtropolis/21771",
       "simtropolis/22771",
       "simtropolis/22823",
       "simtropolis/23089",

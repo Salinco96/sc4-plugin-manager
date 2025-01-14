@@ -912,10 +912,68 @@ assets:
     authors:
       - Pegasus
     category: 33-plex-custom-lots-mods
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>The <abbr title=\"Pegasus\">PEG</abbr> Old West Prop Pack contains a variety of useful props with an Old West flavor that can be used by developers. For the player, it contains no usable or ploppable material but is required as a Dependency for many other lots, including Fort Pegasus. Lots requiring this product should list it as a dependency in their descriptions and readme files.\_</p>\n<p><strong style=\"color:rgb(255,0,0);line-height:22px;\">**This file currently contains an .exe installer suitable for windows users. \_These files are in the process of being updated with zip files\_and this message will be removed once the update is complete.</strong></p>\n<p style=\"font-family:Roboto, sans-serif;line-height:22px;\"><strong style=\"line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: PEG_OldWestPack_205_SU.zip
+    files:
+      - PEG_OldWestPack_205.dat
+      - product_image.jpg
+      - readme_010.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/0023/ce89326ada04fd4c3224bf12df6f947d-product_image.jpg
     lastModified: 2004-10-23T07:53:27.000Z
+    meta:
+      timestamp: 2025-01-14T09:45:44.876Z
+      version: 1
+    models:
+      PEG_OldWestPack_205.dat:
+        - 2dcf3e23
+        - 2dcf7dc2
+        - 4d2d325b-0024
+        - 4dd324d1
+        - 6dcf3b63
+        - 8dc24934
+        - cdd075ed
+        - cdd31319
+        - edd31431
     name: PEG Old West Prop Pack 205
+    props:
+      PEG_OldWestPack_205.dat:
+        4d2d325b-0d34ea75:
+          model: 4d2d325b-0024
+          name: peg_SageBrush_PROP
+        4d2d325b-0dd0761a:
+          model: cdd075ed
+          name: peg_tee-pee_PROP
+        4d2d325b-2dcf7de0:
+          model: 2dcf7dc2
+          name: peg_cavalry_PROP
+        4d2d325b-2dd315d7:
+          model: cdd31319
+          name: peg_horse-brn_PROP
+        4d2d325b-6dc259be:
+          model: 8dc24934
+          name: peg_chuckwagon_PROP
+        4d2d325b-8dc2df74:
+          model: 2dcf3e23
+          name: peg_settler-wagon_PROP
+        4d2d325b-adc2dfc3:
+          model: 6dcf3b63
+          name: peg_stagecoach_PROP
+        4d2d325b-cdd3159f:
+          model: edd31431
+          name: peg_cow-brn_PROP
+        4d2d325b-cdd3258d:
+          model: 4dd324d1
+          name: peg_horse-drk_PROP
+    sha256: f24f63f5854417ea834ce61770b57e073f9db1a87b9556a035cf51bf5dea23c2
+    size: 203738
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2004/thumb-ce89326ada04fd4c3224bf12df6f947d-product_image.jpg
+    uncompressed: 210262
     url: https://community.simtropolis.com/files/file/4513-peg-old-west-prop-pack-205/
+    version: '1.0'
   simtropolis/4515:
     assetId: simtropolis/4515-peg-seasonal-woods-v206b
     authors:
@@ -1011,4 +1069,4 @@ assets:
     version: '1.0'
 
 meta:
-  timestamp: 2025-01-13T08:58:29.083Z
+  timestamp: 2025-01-14T08:38:42.212Z

@@ -25326,11 +25326,71 @@ assets:
     assetId: simtropolis/36088-mansion-lorca
     authors:
       - davide1983it
+    buildings:
+      Davide1983it - Mansion Lorca.SC4Desc:
+        70b5c3f4-f29fb63d:
+          bulldoze: 190
+          capacity:
+            r$: 266
+            r$$: 148
+            r$$$: 66
+          categories: r$$$
+          flamability: 35
+          garbage: 10
+          model: 528dc83c
+          name: Davide1983it - Mansion Lorca1
+          pollution: 2
+          pollutionRadius: 6
+          power: 9
+          water: 40
+          waterPollution: 2
+          waterPollutionRadius: 7
+          worth: 4066
     category: 101-residential
+    dependencies:
+      - simtropolis/34688-outdoor-set-v3
+      - simtropolis/34720-agc-environment-dlc
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA splendid Spanish-style residence surrounded by a vast garden featuring a swimming pool<br>\n\t<br>\n\tDepedencies\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed8416415360\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/34688-outdoor-set-v3/?do=embed\" style=\"height:322px;max-width:502px;\"></iframe>\n\n<p>\n\t\_\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed7241157087\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/34720-agc-environment-dlc/?do=embed\" style=\"height:363px;max-width:502px;\"></iframe>\n\n<p>\n\t<br>\n\t<br>\n\tLot 3x4 R$$$\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: mansion lorca.rar
+    files:
+      - Davide1983it - Mansion Lorca 3x4.SC4Lot
+      - Davide1983it - Mansion Lorca.SC4Desc
+      - Davide1983it - Mansion Lorca.SC4Model
+      - Mansion Lorca (1).png
+      - Mansion Lorca (2).png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bd570c2614a_MansionLorca(1).png.c1f9126ede9869ed8e17331a6d2490f0.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bd57250e2c9_MansionLorca(2).png.97069892e1a05d4f79aca9152e2d34fe.png
     lastModified: 2024-02-02T21:02:36.000Z
+    lots:
+      Davide1983it - Mansion Lorca 3x4.SC4Lot:
+        329fb981:
+          building: f29fb63d
+          density: medium,high
+          name: Davide1983it - Mansion Lorca 3x4
+          props:
+            - 2dee2f3e
+            - 4e09ae07
+            - aed3804d
+            - cf2189c0
+          size: 3x4
+          stage: 4
+          textures:
+            - '25273000'
+    meta:
+      timestamp: 2025-01-14T08:38:42.212Z
+      version: 1
+    models:
+      Davide1983it - Mansion Lorca.SC4Model:
+        - 528dc83c
     name: Mansion Lorca
+    sha256: c843fee1d1ac5ff04cafcf75803c58535068e8a6731ad2444ac81b64dca79253
+    size: 5067252
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/65bd58690faff_MansionLorca(1).thumb.png.048da669713fc015e3de91f80ca9561c.png
+    uncompressed: 5190263
     url: https://community.simtropolis.com/files/file/36088-mansion-lorca/
+    version: 1.0.0
   simtropolis/36090:
     assetId: simtropolis/36090-tenement-03-diagonal
     authors:
@@ -25367,11 +25427,65 @@ assets:
     assetId: simtropolis/36093-kukurydze-tower
     authors:
       - davide1983it
+    buildings:
+      Davide1983it - Kukurydze Tower.SC4Desc:
+        70b5c3f4-f2cb34a0:
+          bulldoze: 985
+          capacity:
+            r$: 2189
+          categories: r$
+          flamability: 45
+          garbage: 131
+          model: 12e8f891
+          name: Davide1983it - Kukurydze Tower
+          pollution: 66
+          pollutionRadius: 5
+          power: 10
+          water: 103
+          waterPollution: 22
+          waterPollutionRadius: 5
+          worth: 29742
     category: 101-residential
+    dependencies:
+      - simtropolis/34720-agc-environment-dlc
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tKukurydze Tower, is a residential prefabricated \_block tower\_in comunist style.\n</p>\n\n<p>\n\tIt's have 20 stories and each floor 7 flat\n</p>\n\n<p>\n\tThe real\_Kukurydze Tower is situated in Katowice Poland\n</p>\n\n<p>\n\t\_\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed5629586644\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/34720-agc-environment-dlc/?do=embed\" style=\"height:322px;max-width:502px;\"></iframe>\n\n<p>\n\t<br>\n\t<br>\n\tLot 3x3 R$\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Kukurydze Tower.rar
+    files:
+      - Davide1983it - Kukurydze Tower.SC4Desc
+      - Davide1983it - Kukurydze Tower.SC4Lot
+      - Davide1983it - Kukurydze Tower.SC4Model
+      - Kukurydze Tower. (1).png
+      - Kukurydze Tower. (2).png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bf0bc96efe3_KukurydzeTower.(2).png.3fc1b23b5e4986c4b25c5da5d890634a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2024_02/65bf0bf2d8135_KukurydzeTower.(1).png.25e1bd1ef083f23360c2377e9bbb5c7d.png
     lastModified: 2024-02-04T04:02:49.000Z
+    lots:
+      Davide1983it - Kukurydze Tower.SC4Lot:
+        52cb3b42:
+          building: f2cb34a0
+          density: high
+          name: Davide1983it - Kukurydze Tower
+          size: 3x3
+          stage: 8
+          textures:
+            - cd504710
+            - f85d41b0
+            - f85d41e0
+    meta:
+      timestamp: 2025-01-14T08:38:42.212Z
+      version: 1
+    models:
+      Davide1983it - Kukurydze Tower.SC4Model:
+        - 12e8f891
     name: Kukurydze Tower
+    sha256: 5005f2a06466b070d3b9a7d3c5e7202a3adb53aef6874d751412e9fcb47c9704
+    size: 4967741
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_02/65bf0c67cb96d_KukurydzeTower.(2).thumb.png.9579843b669739144ae324a9941d2580.png
+    uncompressed: 5749653
     url: https://community.simtropolis.com/files/file/36093-kukurydze-tower/
+    version: 1.0.0
   simtropolis/36159:
     assetId: simtropolis/36159-eblt-gnl-eha-apartment-with-view
     authors:
@@ -31064,4 +31178,4 @@ assets:
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
 meta:
-  timestamp: 2025-01-13T08:58:29.083Z
+  timestamp: 2025-01-14T08:38:42.212Z

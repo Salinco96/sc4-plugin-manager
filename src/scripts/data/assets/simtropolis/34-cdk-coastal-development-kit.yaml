@@ -508,10 +508,163 @@ assets:
     authors:
       - Pegasus
     category: 34-cdk-coastal-development-kit
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\_</p>\n<p>\n</p>\n<p align=\"justify\">This is the primary dependency file for the re-styled <span style=\"font-weight:bold;\"><abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr></span> (Old Wooden Waterfront) and will be required for all new <abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront\">OWW</abbr> lots.</p>\n<p align=\"justify\">The new <span style=\"font-weight:bold;\"><abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr></span> has been completely overhauled to match the new <span style=\"font-weight:bold;color:rgb(0,0,153);\"><abbr title=\"Coastal Development Kit\">CDK</abbr> Marina</span> style of lots. These lots can be used to expand and add variety to your <abbr title=\"Coastal Development Kit\">CDK</abbr> Marina complexes... or used on their own to create attractive seawall boardwalks along your coastlines. Like the Marina lots, the <abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr> lots are 3 tiles deep... and also have the upper dock/boardwalk and the rear parking areas that align in a modular fashion. In fact, the only differences between the two styles is that Marina lots have the lower floating docks... and higher recreational properties.</p>\n<p align=\"justify\">As the new <abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront\">OWW</abbr> lots are 3 tiles deep, they will not directly replace the older <abbr title=\"Old Wooden Waterfront\">OWW</abbr> style lots which were only 2 tiles deep. Players can choose to use both old &amp; new versions... or uninstall the older version after replacing the older lots in their cities.</p>\n<div style=\"font-family:Roboto, sans-serif;line-height:22px;\">For help creating the perfect terrain for <abbr title=\"Coastal Development Kit\">CDK</abbr> lots,\_we strongly recommend reading\_<strong>The Official <abbr title=\"Coastal Development Kit\">CDK</abbr> Tutorial.</strong>\n</div>\n<div style=\"font-family:Roboto, sans-serif;line-height:22px;\">\_</div>\n<div style=\"font-family:Roboto, sans-serif;line-height:22px;\"><strong style=\"line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</div>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: PEG-OWW2_ResourcePack_111.zip
+    files:
+      - PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE.dat
+      - PEGPROD/CDK3/OWW2/product_image.jpg
+      - PEGPROD/CDK3/OWW2/readme_206.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/0007/342507e204e8ff0dc0aa183ae5c73707-product_image.jpg
     lastModified: 2007-10-22T08:12:39.000Z
+    meta:
+      timestamp: 2025-01-14T09:45:44.876Z
+      version: 1
+    models:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE.dat:
+        - 141554d4
+        - 141626ec
+        - 14168a15
+        - '14169330'
+        - 1417cf94
+        - 141b306c
+        - 34190cd5
+        - 7414c859
+        - '94122852'
+        - b418abca
+        - d4152bac
+        - d4167cac
+        - d417b1f3
+        - d41908ba
+        - f414d74d
+        - f4160d05
+        - f416e646
+        - f418f277
     name: PEG OWW2 Resource Pack 1
+    props:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE.dat:
+        c977c536-073d469f:
+          family: a0001422
+          name: AR2x2x3_sit-lean-forward-idle_peg9-18
+        c977c536-073d46a0:
+          family: a0001422
+          name: AR2x2x3_sit-backwardchair-idle_peg9-18
+        c977c536-073d46a1:
+          family: a0001422
+          name: AR2x2x3_sit-cross-leg-arm-idle_peg9-18
+        c977c536-073d46a2:
+          family: a0001422
+          name: AR2x2x3_sit-idle_peg9-18
+        c977c536-073d489d:
+          family: a0001496
+          name: Amill4x2x4_exploritorium_29C2_R80_5-17
+        c977c536-073d489e:
+          family: a0001496
+          name: Amill4x4x4_small_1E9A_R85_8-20
+        c977c536-073d489f:
+          family: a0001496
+          name: Amill4x7x4_small-medium_1E9B_R80_11-15
+        c977c536-073d48a0:
+          family: a0001496
+          name: Amill5x7x4_medium_1E99_R80_16-120
+        c977c536-073d48a1:
+          family: a0001496
+          name: Aper2x2x4_male-drk01-wait_R90_23-4
+        c977c536-073d48a2:
+          family: a0001496
+          name: Aper2x2x4_male-med03-wait_R75_22-8
+        c977c536-073d48a3:
+          family: a0001497
+          name: A4x9x4_tail-gaiters_1E9C_R80_14-22
+        c977c536-073d48a4:
+          family: a0001497
+          name: R4x8x2_$$speedboatontrailer1_1D0B_R80_8-14
+        c977c536-073d48a5:
+          family: a0001497
+          name: R4x8x3_$$Rowboat_AE00_R80_11-19
+        c977c536-073d48a6:
+          family: a0001497
+          name: Street2x6x2_$$SUV_1D4D_R80_17-3
+        f38748f8-1418aec5:
+          family: a0001499
+          model: f414d74d
+          name: CDK-OWW_1x1_Corner_UD_w NFFD_stairs2
+        f38748f8-14194398:
+          family: a000149a
+          model: 14168a15
+          name: CDKM_1x-UD_w NFFD_stairs
+        f38748f8-34191978:
+          family: a0001498
+          model: d4152bac
+          name: CDK-OWW_1x1_Corner_Snack1
+        f38748f8-34194369:
+          family: a000149a
+          model: '14169330'
+          name: CDKM_1x-UD_w NFFD_ramp
+        f38748f8-341dd5d1:
+          model: 141b306c
+          name: PEG_barricade
+        f38748f8-541a80ee:
+          family: a000149b
+          model: 1417cf94
+          name: CDKM_1x_UD_Quad1
+        f38748f8-74191923:
+          family: a0001498
+          model: f4160d05
+          name: CDK-OWW_1x1_Corner_Snack3
+        f38748f8-74192297:
+          family: a000149a
+          model: d4167cac
+          name: CDKM_1x-UD_w NFFD
+        f38748f8-741a811b:
+          family: a000149b
+          model: d417b1f3
+          name: CDKM_1x_UD_Quad2
+        f38748f8-9416ca3c:
+          family: a0001499
+          model: 141626ec
+          name: CDK-OWW_1x1_Corner_UD_w NFFD
+        f38748f8-941a9070:
+          family: a000149b
+          model: f416e646
+          name: CDKM_1x_UD_RestRooms
+        f38748f8-94247f89:
+          model: b421e752
+          name: OWW2_pierset_1x
+        f38748f8-b418af0b:
+          family: a0001499
+          model: 7414c859
+          name: CDK-OWW_1x1_Corner_UD_w NFFD_stairs
+        f38748f8-b41b4f0c:
+          family: a000149c
+          model: b418abca
+          name: CDKM_3x3_UD_OuterCorner
+        f38748f8-d41ba2d3:
+          family: a000149c
+          model: f418f277
+          name: CDKM_3x3_UD_OuterCorner_round
+        f38748f8-d41baa8a:
+          model: d41908ba
+          name: PLP_InnerCorner
+        f38748f8-d41bb006:
+          model: 34190cd5
+          name: PLP_Short-Stub_4
+        f38748f8-f4191952:
+          family: a0001498
+          model: 141554d4
+          name: CDK-OWW_1x1_Corner_Snack2
+    sha256: 1e7522bec4ae8d28e42cceb34e7bfae031a9c8fb1e84c23ae2fef07dd0977c10
+    size: 1179485
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
+    textures:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE.dat:
+        - 1da44a55
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_10_2007/thumb-342507e204e8ff0dc0aa183ae5c73707-product_image.jpg
+    uncompressed: 1453862
     url: https://community.simtropolis.com/files/file/18831-peg-oww2-resource-pack-1/
+    version: '1.0'
   simtropolis/18832:
     assetId: simtropolis/18832-peg-oww2-1x-plaza
     authors:
@@ -1772,4 +1925,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4527-peg-cdk-leveler-v205/
 
 meta:
-  timestamp: 2025-01-13T08:58:29.083Z
+  timestamp: 2025-01-14T08:38:42.212Z

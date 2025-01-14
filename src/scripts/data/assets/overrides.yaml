@@ -1116,8 +1116,16 @@ simtropolis/17559-modular-amusement-park-pack-modern-rides:
 simtropolis/17560-modular-amusement-park-pack-roller-coasters:
   packageId: aldara6166/mapp-roller-coasters
 
+simtropolis/18042-hk-base-overlay-texture-vol1:
+  packageId: hk/textures-vol01
+  variantId: default
+
 simtropolis/18753-transportation-map-modd-for-color-blind:
   packageId: bannanapeppers/colorblind-transportation-map
+  variantId: default
+
+simtropolis/18831-peg-oww2-resource-pack-1:
+  packageId: pegasus/oww2-resource-pack-1
   variantId: default
 
 simtropolis/19096-ndex-glenni-mega-props-vol01:
@@ -1377,6 +1385,7 @@ simtropolis/21770-lbt-mega-prop-pack-vol01:
 
 simtropolis/21771-lbt-mega-textures-vol01-v3:
   packageId: lbt/mega-textures-vol01
+  variantId: default
 
 simtropolis/21794-coffee-shops-and-greasy-spoons:
   packageId: madhatter106/coffee-shops-and-greasy-spoons
@@ -2788,6 +2797,10 @@ simtropolis/34608-mediterranean-flats-2:
           variantId: default
       variantId: default
 
+simtropolis/34688-outdoor-set-v3:
+  packageId: davide1983it/outdoor-set-v3
+  variantId: default
+
 simtropolis/34715-mediterranean-pack-1:
   packageId: wannglondon/mediterranean-pack-1
   variants:
@@ -3121,7 +3134,21 @@ simtropolis/34876-mediterranean-pack-3:
       variantId: default
 
 simtropolis/34972-davide-prop-v1:
-  packageId: davide1983it/props-vol01
+  packageId: davide1983it/prop-pack-vol01
+  paths:
+    Davide1983it - Fuji Restaurant*:
+      packageId: davide1983it/japanese-restaurants
+      variantId: default
+    Davide1983it - Fuku Ramen*:
+      packageId: davide1983it/japanese-restaurants
+      variantId: default
+    Davide1983it - Playground*.SC4Lot:
+      packageId: davide1983it/playgrounds
+      variantId: default
+    Davide1983it - Restaurant Nara Okonomiyaki*:
+      packageId: davide1983it/japanese-restaurants
+      variantId: default
+  variantId: default
 
 simtropolis/35017-london-building-1:
   packageId: wannglondon/london-building-1
@@ -3765,8 +3792,16 @@ simtropolis/36087-ny-building-12:
   packageId: wannglondon/ny-building-12
   variantId: darknite
 
+simtropolis/36088-mansion-lorca:
+  packageId: davide1983it/mansion-lorca
+  variantId: default
+
 simtropolis/36091-sc4-graphics-options:
   packageId: null-45/graphics-options
+  variantId: default
+
+simtropolis/36093-kukurydze-tower:
+  packageId: davide1983it/kukurydze-tower
   variantId: default
 
 simtropolis/36094-bsc-batprops_hd-jes-vol13:
@@ -3872,6 +3907,10 @@ simtropolis/36208-hadmore-paint-company:
       packageId: jestarr/hadmore-paint-company
       variantId: hd
 
+simtropolis/36212-1x1-residential-building-set:
+  packageId: davide1983it/1x1-residential-building-set
+  variantId: default
+
 simtropolis/36213-medit-bldg-59:
   packageId: wannglondon/mediterranean-building-59
   variantId: darknite
@@ -3948,6 +3987,7 @@ simtropolis/36254-tiki-tims:
 
 simtropolis/36255-10-villas-low-wealth:
   packageId: davide1983it/low-wealth-villas
+  variantId: default
 
 simtropolis/36257-discord-rich-presence-dll-for-simcity-4: null
 
@@ -4030,6 +4070,10 @@ simtropolis/36329-fa2-and-fa3-mid-rises:
     '201910':
       packageId: giraffemountain/fa2-mid-rises
       variantId: default
+
+simtropolis/36331-milcoln-tower:
+  packageId: davide1983it/milcoln-tower
+  variantId: default
 
 simtropolis/36341-sc4ltextt-sc4-ltext-translator: null
 
@@ -4379,6 +4423,10 @@ simtropolis/36568-hisingen-apartments:
   packageId: dead-end/hisingen-apartments
   variantId: default
 
+simtropolis/36569-harold-building:
+  packageId: davide1983it/harold-building
+  variantId: default
+
 simtropolis/36570-apartments-2:
   packageId: wannglondon/apartments-2
   variantId: darknite
@@ -4511,6 +4559,10 @@ simtropolis/36629-xenon-center:
       packageId: jasoncw/xenon-center
       variantId: default,darknite
 
+simtropolis/36631-bbva-building:
+  packageId: davide1983it/bbva-building
+  variantId: default
+
 simtropolis/36632-data-view-extensions-dll:
   packageId: null-45/data-view-extensions-dll
   variantId: default
@@ -4540,6 +4592,10 @@ simtropolis/4240-baltimore-sweel-front-town-homes:
 
 simtropolis/4241-brownstone-apartments:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
+
+simtropolis/4513-peg-old-west-prop-pack-205:
+  packageId: pegasus/old-west-prop-pack
+  variantId: default
 
 simtropolis/4515-peg-seasonal-woods-v206b:
   packageId: pegasus/seasonal-woods
