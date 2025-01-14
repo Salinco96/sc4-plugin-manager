@@ -1,5 +1,5 @@
 import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 
 import { ExemplarPropertyHelperText } from "./ExemplarPropertyHelperText"
 import { ExemplarPropertyInputGroup } from "./ExemplarPropertyInputGroup"
@@ -24,7 +24,7 @@ export function ExemplarPropertySingle({
   value,
 }: ExemplarPropertySingleProps): JSX.Element {
   return (
-    <FlexBox direction="column" marginBottom={2} marginTop={2}>
+    <FlexCol my={2}>
       {
         <ExemplarPropertyInputGroup<[number] | [string] | [boolean]>
           canRemove={false}
@@ -52,6 +52,6 @@ export function ExemplarPropertySingle({
         property={property}
         readonly={readonly}
       />
-    </FlexBox>
+    </FlexCol>
   )
 }

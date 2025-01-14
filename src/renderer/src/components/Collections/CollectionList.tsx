@@ -1,5 +1,5 @@
 import type { CollectionID } from "@common/collections"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 import { List } from "@components/List"
 import { useNavigation } from "@utils/navigation"
 
@@ -9,12 +9,12 @@ export function CollectionList({ collectionIds }: { collectionIds: CollectionID[
   const { fromCollectionId } = useNavigation()
 
   return (
-    <FlexBox direction="column" height="100%">
+    <FlexCol fullHeight>
       <List
         items={collectionIds}
         initialItem={fromCollectionId}
         renderItem={collectionId => <CollectionListItem collectionId={collectionId} />}
       />
-    </FlexBox>
+    </FlexCol>
   )
 }

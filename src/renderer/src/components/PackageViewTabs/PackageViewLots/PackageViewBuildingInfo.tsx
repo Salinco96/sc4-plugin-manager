@@ -17,7 +17,7 @@ import type { PackageID } from "@common/packages"
 import { getMenuLabel } from "@common/submenus"
 import { VariantState } from "@common/types"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
@@ -89,20 +89,19 @@ export function PackageViewBuildingInfo({
   const isPlop = !isResidential && !isCommercial && !isIndustrial && !isAgriculture
 
   return (
-    <FlexBox
+    <FlexCol
       color={isDisabled ? "rgba(0, 0, 0, 0.6)" : undefined}
       id={`building-${building.id}`}
-      direction="column"
       gap={2}
       sx={{ opacity: isDisabled ? 0.6 : undefined }}
     >
-      <FlexBox alignItems="center">
+      <FlexRow centered>
         {!!building.images?.length && (
           <ImageViewerThumbnail images={building.images} mr={2} mt={1} size={84} />
         )}
 
-        <FlexBox direction="column" width="100%">
-          <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+        <FlexCol fullWidth>
+          <FlexRow centered flex={1} gap={1}>
             {isResidential && <ResidentialIcon />}
             {isCommercial && <CommercialIcon />}
             {isIndustrial && <IndustrialIcon />}
@@ -119,7 +118,7 @@ export function PackageViewBuildingInfo({
               />
             )}
             {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
-          </FlexBox>
+          </FlexRow>
 
           <ExemplarRef
             file={building.file}
@@ -129,16 +128,16 @@ export function PackageViewBuildingInfo({
           />
 
           {!!tags?.length && (
-            <FlexBox direction="row" gap={1} mt={1}>
+            <FlexRow gap={1} mt={1}>
               {tags.map(tag => (
                 <Tag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
-            </FlexBox>
+            </FlexRow>
           )}
-        </FlexBox>
+        </FlexCol>
 
         {isTogglable && !isMaxisBuilding && (
-          <FlexBox alignSelf="start">
+          <FlexRow alignSelf="start">
             <Checkbox
               icon={isCompatible ? undefined : <IncompatibleIcon />}
               checked={isEnabled}
@@ -151,9 +150,9 @@ export function PackageViewBuildingInfo({
               }}
               title={isEnabled ? t("excludeLot") : t("includeLot")}
             />
-          </FlexBox>
+          </FlexRow>
         )}
-      </FlexBox>
+      </FlexRow>
 
       {building.description && (
         <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
@@ -161,7 +160,7 @@ export function PackageViewBuildingInfo({
         </Typography>
       )}
 
-      <FlexBox direction="column" gap={1}>
+      <FlexCol gap={1}>
         {!!menus?.length && (
           <Typography variant="body2">
             <b>{`${t("menu")}: `}</b>
@@ -328,7 +327,7 @@ export function PackageViewBuildingInfo({
             {formatNumber(building.flamability)}
           </Typography>
         )}
-      </FlexBox>
-    </FlexBox>
+      </FlexCol>
+    </FlexCol>
   )
 }

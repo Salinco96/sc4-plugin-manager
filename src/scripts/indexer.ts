@@ -124,6 +124,7 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
+      davide1983it: 2024, // todo
       "dead-end": true,
       cococity: true,
       jasoncw: 2020, // todo

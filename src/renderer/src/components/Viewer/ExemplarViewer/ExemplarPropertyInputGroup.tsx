@@ -5,7 +5,7 @@ import ColorPicker from "@uiw/react-color-sketch"
 import { useEffect, useMemo, useState } from "react"
 
 import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 
 import { ExemplarPropertyInput } from "./ExemplarPropertyInput"
 import { type PropertyErrors, useExemplarPropertyInfo } from "./utils"
@@ -124,7 +124,7 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
     <>
       {values.map((item, index, rows) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: no other key available
-        <FlexBox key={index} alignItems="center" gap={1} width="100%">
+        <FlexRow centered fullWidth key={index} gap={1}>
           <ExemplarPropertyInput
             error={isString(errors) || !!errors?.at(index)}
             index={index}
@@ -147,8 +147,9 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
             setExpanded={setExpanded}
             value={item}
           />
+
           {showRightMargin && (
-            <ButtonGroup component={FlexBox} width={29}>
+            <ButtonGroup component={FlexRow} width={29}>
               {canRemove && index === 0 && (
                 <IconButton onClick={onRemove} size="small" title="Remove value">
                   <RemoveIcon fontSize="inherit" />
@@ -156,8 +157,9 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
               )}
             </ButtonGroup>
           )}
-        </FlexBox>
+        </FlexRow>
       ))}
+
       {colorProps && (
         <Modal open={colorPickerOpen} onClose={() => setColorPickerOpen(false)}>
           <Box
@@ -182,6 +184,7 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
                 height={20}
               />
             </Box>
+
             <ColorPicker
               color={colorProps.color}
               disableAlpha={!colorProps.alpha}

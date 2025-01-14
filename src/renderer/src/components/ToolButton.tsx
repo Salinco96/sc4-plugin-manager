@@ -1,14 +1,12 @@
-import { IconButton } from "@mui/material"
+import { Box, type BoxProps, IconButton } from "@mui/material"
 import type { ComponentType } from "react"
-
-import { FlexBox, type FlexBoxProps } from "./FlexBox"
 
 export interface ToolButtonProps {
   description: string
   disabled?: boolean
   icon: ComponentType<{ fontSize: "inherit" }>
   onClick?: () => void
-  size?: FlexBoxProps["fontSize"]
+  size?: BoxProps["fontSize"]
 }
 
 export function ToolButton({
@@ -20,9 +18,9 @@ export function ToolButton({
 }: ToolButtonProps): JSX.Element {
   if (!onClick) {
     return (
-      <FlexBox color="inherit" fontSize={size ?? "1.125rem"} title={description}>
+      <Box color="inherit" fontSize={size ?? "1.125rem"} title={description}>
         <IconComponent fontSize="inherit" />
-      </FlexBox>
+      </Box>
     )
   }
 

@@ -1,15 +1,14 @@
 import { ErrorOutline as ErrorIcon, Description as ReadmeIcon } from "@mui/icons-material"
+import { Alert, MenuItem, Select, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
+import { FlexBox, FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
 import { useCurrentVariant } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
-
-import { FlexBox } from "@components/FlexBox"
-import { Alert, MenuItem, Select, Typography } from "@mui/material"
 
 export default function PackageViewReadme({
   packageId,
@@ -22,7 +21,7 @@ export default function PackageViewReadme({
   const [filePath, setFilePath] = useState(filePaths.at(0))
 
   return (
-    <FlexBox height="100%" direction="column">
+    <FlexCol fullHeight>
       {filePaths.length > 1 && (
         <Alert
           action={
@@ -52,11 +51,11 @@ export default function PackageViewReadme({
         </Alert>
       )}
       {filePath && (
-        <FlexBox direction="column" flex={1} overflow="hidden">
+        <FlexCol flex={1} overflow="hidden">
           <ReadmeView filePath={filePath} packageId={packageId} variantId={variantId} />
-        </FlexBox>
+        </FlexCol>
       )}
-    </FlexBox>
+    </FlexCol>
   )
 }
 
@@ -83,16 +82,7 @@ function ReadmeView({
 
   if (error) {
     return (
-      <FlexBox
-        alignItems="center"
-        color="red"
-        direction="column"
-        fontSize={40}
-        height="100%"
-        justifyContent="center"
-        padding={10}
-        width="100%"
-      >
+      <FlexBox centered color="red" fontSize={40} fullHeight fullWidth p={10}>
         <ErrorIcon fontSize="inherit" />
         <Typography variant="subtitle1">Failed to open file</Typography>
         <code

@@ -4,7 +4,7 @@ import { fill, isArray, isString, splice } from "@salinco/nice-utils"
 import { useState } from "react"
 
 import type { ExemplarProperty, ExemplarPropertyValue } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 
 import { CurveEditor } from "./CurveEditor"
 import { ExemplarPropertyHelperText } from "./ExemplarPropertyHelperText"
@@ -61,7 +61,7 @@ export function ExemplarPropertyArray({
   }
 
   return (
-    <FlexBox direction="column" marginBottom={2} marginTop={2}>
+    <FlexCol my={2}>
       {fill(visibleGroupCount, groupIndex => (
         <ExemplarPropertyInputGroup<number[]>
           canRemove={canRemove && (!!info?.repeat || groupIndex >= minLength)}
@@ -97,8 +97,9 @@ export function ExemplarPropertyArray({
           value={value.slice(groupIndex * groupSize, groupIndex * groupSize + groupSize)}
         />
       ))}
-      <FlexBox>
-        <FlexBox alignItems="start" flex={1}>
+
+      <FlexRow>
+        <FlexRow alignItems="start" flex={1}>
           <ExemplarPropertyHelperText
             error={error}
             onChange={onChange}
@@ -106,15 +107,17 @@ export function ExemplarPropertyArray({
             property={property}
             readonly={readonly}
           />
-        </FlexBox>
+        </FlexRow>
+
         {canAdd && isExpanded && (
-          <FlexBox alignItems="center" height={40} marginBottom={2}>
+          <FlexRow centered height={40} mb={2}>
             <IconButton onClick={addGroup} size="small" title="Add value">
               <AddIcon fontSize="inherit" />
             </IconButton>
-          </FlexBox>
+          </FlexRow>
         )}
-      </FlexBox>
+      </FlexRow>
+
       {showCurveEditor && (
         <CurveEditor
           onChange={onChange}
@@ -124,6 +127,6 @@ export function ExemplarPropertyArray({
           value={value}
         />
       )}
-    </FlexBox>
+    </FlexCol>
   )
 }

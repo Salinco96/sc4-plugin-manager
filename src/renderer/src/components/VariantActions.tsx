@@ -19,7 +19,7 @@ import { getWarningMessage } from "@common/warnings"
 import { usePackageStatus, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
-import { FlexBox } from "./FlexBox"
+import { FlexRow } from "./FlexBox"
 
 interface PackageAction {
   color?: "error" | "info" | "success" | "warning"
@@ -144,8 +144,9 @@ export function VariantActions({
             </Button>
           </span>
         </Tooltip>
+
         {hasMore && (
-          <FlexBox ml={-3.5} sx={{ backgroundColor: "white" }} zIndex={1}>
+          <FlexRow bgcolor="white" ml={-3.5} zIndex={1}>
             <Divider color={disabled ? "lightgray" : "white"} orientation="vertical" />
             <Button
               aria-label={t("more", { ns: "General" })}
@@ -185,7 +186,7 @@ export function VariantActions({
                 </Tooltip>
               ))}
             </Menu>
-          </FlexBox>
+          </FlexRow>
         )}
       </Box>
     </Box>

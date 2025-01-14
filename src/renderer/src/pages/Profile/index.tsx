@@ -4,14 +4,14 @@ import { size } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import { Feature } from "@common/types"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { ProfileOptionsForm } from "@components/Options/ProfileOptionsForm"
 import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { ProfileNameInputField } from "./ProfileNameInputField"
 import { ProfileSettingFeatureSwitchField } from "./ProfileSettingSwitchField"
 
-function Profile(): JSX.Element {
+function Profile(): JSX.Element | null {
   const profileCount = useStore(store => size(store.profiles ?? {}))
   const profileInfo = useCurrentProfile()
   const actions = useStoreActions()
@@ -19,12 +19,12 @@ function Profile(): JSX.Element {
   const { t } = useTranslation("Profile")
 
   if (!profileInfo) {
-    return <FlexBox />
+    return null
   }
 
   return (
-    <FlexBox direction="column" height="100%" gap={2} p={2}>
-      <FlexBox direction="row" gap={2}>
+    <FlexCol fullHeight gap={2} p={2}>
+      <FlexRow gap={2}>
         <ProfileNameInputField profileInfo={profileInfo} sx={{ flex: 2 }} />
         <TextField
           InputProps={{
@@ -44,7 +44,8 @@ function Profile(): JSX.Element {
           value={profileInfo.id}
           variant="standard"
         />
-      </FlexBox>
+      </FlexRow>
+
       <FormControl component="fieldset">
         <FormGroup>
           <ProfileSettingFeatureSwitchField
@@ -52,11 +53,13 @@ function Profile(): JSX.Element {
             label={t("externals.darknite")}
             profileInfo={profileInfo}
           />
+
           <ProfileSettingFeatureSwitchField
             feature={Feature.CAM}
             label={t("externals.cam")}
             profileInfo={profileInfo}
           />
+
           <ProfileSettingFeatureSwitchField
             feature={Feature.NAM}
             label={t("externals.nam")}
@@ -64,7 +67,9 @@ function Profile(): JSX.Element {
           />
         </FormGroup>
       </FormControl>
+
       <ProfileOptionsForm />
+
       <Button
         color="error"
         disabled={profileCount === 1}
@@ -73,7 +78,7 @@ function Profile(): JSX.Element {
       >
         {t("actions.remove.label")}
       </Button>
-    </FlexBox>
+    </FlexCol>
   )
 }
 

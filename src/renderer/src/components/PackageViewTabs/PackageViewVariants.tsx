@@ -1,7 +1,7 @@
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { CreateVariantModal } from "@components/CreateVariantModal"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { PackageTools } from "@components/PackageTools"
 import { VariantTags } from "@components/Tags/VariantTags"
@@ -27,7 +27,7 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
       {collect(packageInfo.variants, (variantInfo, variantId) => (
         <Card elevation={1} key={variantId} sx={{ display: "flex" }}>
-          <CardContent sx={{ flexGrow: 1, overflow: "hidden" /* TODO: Overflowing tags */ }}>
+          <CardContent sx={{ flexGrow: 1, overflow: "hidden" }}>
             {!!variantInfo.images?.length && (
               <ImageViewer
                 images={variantInfo.images}
@@ -35,7 +35,8 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
                 open={openImages === variantId}
               />
             )}
-            <FlexBox direction="row">
+
+            <FlexRow>
               {variantInfo.thumbnail && (
                 <Thumbnail
                   disabled={!variantInfo.images?.length}
@@ -46,20 +47,23 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
                   src={variantInfo.thumbnail}
                 />
               )}
-              <FlexBox direction="column">
+
+              <FlexCol>
                 <Text maxLines={1} variant="h6">
                   {variantInfo.name ?? variantInfo.id} (v{variantInfo.version})
                 </Text>
-                <FlexBox alignItems="center">
+
+                <FlexRow centered>
                   <Text maxLines={1} variant="body2">
                     {packageId}#{variantId}
                   </Text>
                   <PackageTools packageId={packageId} variantId={variantId} />
-                </FlexBox>
+                </FlexRow>
 
                 <VariantTags packageId={packageId} variantId={variantId} />
-              </FlexBox>
-            </FlexBox>
+              </FlexCol>
+            </FlexRow>
+
             {variantInfo.description && (
               <Text
                 maxLines={2}
@@ -70,13 +74,16 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
                 {variantInfo.description}
               </Text>
             )}
+
             <PackageBanners packageId={packageId} variantId={variantId} />
           </CardContent>
+
           <CardActions sx={{ padding: 2 }}>
             <VariantActions packageId={packageId} variantId={variantId} />
           </CardActions>
         </Card>
       ))}
+
       <Button
         color="primary"
         onClick={() => setOpenCreateModal(true)}
@@ -86,6 +93,7 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
       >
         {t("actions.create.label")}
       </Button>
+
       <CreateVariantModal
         onClose={() => setOpenCreateModal(false)}
         open={openCreateModal}

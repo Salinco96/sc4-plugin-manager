@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import type { DBPFFile, TGI } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import type { FileInfo } from "@common/variants"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { ToolButton } from "@components/ToolButton"
 
 import { PackageEntry } from "./PackageEntry"
@@ -55,8 +55,8 @@ export function PackageEntries({
         const expanded = !!expandedCategories[category]
 
         return (
-          <FlexBox direction="column" key={category}>
-            <FlexBox sx={{ alignItems: "center", gap: 0.5 }}>
+          <FlexCol key={category}>
+            <FlexRow centered gap={0.5}>
               {expandable && (
                 <ToolButton
                   description={t(expanded ? "hideContents" : "showContents")}
@@ -70,11 +70,14 @@ export function PackageEntries({
                   size={12}
                 />
               )}
+
               <Typography variant="caption">
                 {getDBPFEntryCategoryLabel(t, category, entries.length)}
               </Typography>
-              <FlexBox sx={{ borderTop: "1px dotted currentColor", flex: 1, marginLeft: 0.5 }} />
-            </FlexBox>
+
+              <FlexRow borderTop="1px dotted currentColor" flex={1} ml={0.5} />
+            </FlexRow>
+
             {expanded && (
               <List disablePadding>
                 {entries.map(entry => (
@@ -90,7 +93,7 @@ export function PackageEntries({
                 ))}
               </List>
             )}
-          </FlexBox>
+          </FlexCol>
         )
       })}
     </List>

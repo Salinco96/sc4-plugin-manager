@@ -4,7 +4,7 @@ import { useMemo, useState } from "react"
 
 import type { TGI } from "@common/dbpf"
 import { type ExemplarData, type ExemplarProperty, getExemplarType } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { useStore } from "@utils/store"
 import { getDefaultValue } from "./utils"
 
@@ -109,10 +109,10 @@ export function ExemplarPropertySearch({
       renderOption={(optionProps, option) => (
         <Box component="li" {...optionProps} style={{ paddingLeft: 14 }} key={option.value}>
           <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
-            <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
+            <FlexRow marginRight={isSearching ? 1 : undefined} minWidth={160}>
               <span style={{ flex: 1 }}>0x{toHex(option.value, 8).toUpperCase()}</span>
               <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-            </FlexBox>
+            </FlexRow>
           </InputAdornment>
           {option.label}
         </Box>

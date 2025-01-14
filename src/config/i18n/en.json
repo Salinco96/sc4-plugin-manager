@@ -10,6 +10,10 @@
       "selectProfile": {
         "label": "Select profile"
       },
+      "sessionKey": {
+        "description": "Copy Session ID",
+        "success": "Copied to clipboard"
+      },
       "signIn": {
         "description": "Simtropolis has a daily limit of 20 downloads for anonymous users. Sign it to bypass the limit.",
         "label": "Sign In"

@@ -7,7 +7,7 @@ import {
   type ExemplarPropertyChoiceInfo,
   ExemplarValueType,
 } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
 import { ExpandButton } from "./ExpandButton"
@@ -183,23 +183,23 @@ export function ExemplarPropertySelect({
                 {inputProps.InputProps.startAdornment}
                 {(itemLabel || isHex || (!isSearching && value !== null)) && (
                   <InputAdornment position="start" sx={{ marginLeft: 1, marginRight: 0 }}>
-                    <FlexBox gap={1}>
+                    <FlexRow gap={1}>
                       {itemLabel && (
-                        <FlexBox minWidth={160}>
+                        <FlexRow minWidth={160}>
                           <span style={{ flex: 1 }}>{itemLabel}</span>
                           <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-                        </FlexBox>
+                        </FlexRow>
                       )}
                       {isHex && isSearching && "0x"}
                       {!isSearching && value !== null && (
-                        <FlexBox minWidth={160}>
+                        <FlexRow minWidth={160}>
                           <span style={{ flex: 1 }}>
                             {isHex ? `0x${toHex(value, getHexSize(type)).toUpperCase()}` : value}
                           </span>
                           <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-                        </FlexBox>
+                        </FlexRow>
                       )}
-                    </FlexBox>
+                    </FlexRow>
                   </InputAdornment>
                 )}
               </>
@@ -240,12 +240,12 @@ export function ExemplarPropertySelect({
       renderOption={(optionProps, option) => (
         <Box component="li" {...optionProps} style={{ paddingLeft: 14 }} key={option.value}>
           <InputAdornment position="start" sx={{ marginLeft: 0, marginRight: 0 }}>
-            <FlexBox marginRight={isSearching ? 1 : undefined} minWidth={160}>
+            <FlexRow marginRight={isSearching ? 1 : undefined} minWidth={160}>
               <span style={{ flex: 1 }}>
                 {isHex ? `0x${toHex(option.value, getHexSize(type)).toUpperCase()}` : option.value}
               </span>
               <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-            </FlexBox>
+            </FlexRow>
           </InputAdornment>
           {option.label}
         </Box>

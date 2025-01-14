@@ -1,9 +1,9 @@
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
-import { Box, Button, Divider, Menu, MenuItem, Tooltip } from "@mui/material"
+import { Button, Divider, Menu, MenuItem, Tooltip } from "@mui/material"
 import { useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { FlexBox } from "./FlexBox"
+import { FlexCol, FlexRow } from "./FlexBox"
 
 export interface Action {
   action: () => void
@@ -38,8 +38,8 @@ export function ActionButton({
   const disabled = !!mainAction.disabled || !!isLoading
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: 160 }}>
-      <Box sx={{ display: "flex" }}>
+    <FlexCol gap={2} width={160}>
+      <FlexRow>
         <Tooltip placement="left" title={mainAction.description}>
           <span>
             <Button
@@ -56,7 +56,7 @@ export function ActionButton({
         </Tooltip>
 
         {hasMore && (
-          <FlexBox ml={-3.5} sx={{ backgroundColor: "white" }} zIndex={1}>
+          <FlexRow bgcolor="white" ml={-3.5} zIndex={1}>
             <Divider color={disabled ? "lightgray" : "white"} orientation="vertical" />
 
             <Button
@@ -98,9 +98,9 @@ export function ActionButton({
                 </Tooltip>
               ))}
             </Menu>
-          </FlexBox>
+          </FlexRow>
         )}
-      </Box>
-    </Box>
+      </FlexRow>
+    </FlexCol>
   )
 }

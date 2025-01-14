@@ -7,7 +7,7 @@ import type { FamilyID, FamilyInfo } from "@common/families"
 import { type PackageID, checkFile } from "@common/packages"
 import type { PropID, PropInfo } from "@common/props"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { Thumbnail } from "@components/Thumbnail"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
@@ -127,19 +127,19 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
             <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
               <CardContent sx={{ width: "100%" }}>
                 {familyId && (
-                  <FlexBox direction="column" id={`propFamily-${familyId}`}>
+                  <FlexCol id={`propFamily-${familyId}`}>
                     <Text maxLines={1} variant="h6">
                       {family?.name ?? "Prop family"}
                     </Text>
 
                     <ExemplarRef file={family?.file} id={familyId} />
-                  </FlexBox>
+                  </FlexCol>
                 )}
 
                 {familyId && props.length === 0 && (
                   <>
                     <Divider sx={{ marginY: 2 }} />
-                    <Text maxLines={1} sx={{ fontStyle: "italic" }} variant="body2">
+                    <Text maxLines={1} fontStyle="italic" variant="body2">
                       This package does not include any props in this family.
                     </Text>
                   </>
@@ -149,8 +149,8 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
                   return (
                     <Fragment key={prop.id}>
                       {(familyId || index > 0) && <Divider sx={{ marginY: 2 }} />}
-                      <FlexBox id={`prop-${prop.id}`} direction="column" gap={2}>
-                        <FlexBox alignItems="center">
+                      <FlexCol id={`prop-${prop.id}`} gap={2}>
+                        <FlexRow centered>
                           {!!prop.images?.length && (
                             <>
                               <ImageViewer
@@ -168,12 +168,12 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
                             </>
                           )}
 
-                          <FlexBox direction="column" width="100%">
-                            <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+                          <FlexCol fullWidth>
+                            <FlexRow centered flex={1} gap={1}>
                               <Text maxLines={1} variant="h6">
                                 {prop.name ?? "Prop"}
                               </Text>
-                            </FlexBox>
+                            </FlexRow>
 
                             <ExemplarRef
                               file={prop.file}
@@ -181,9 +181,9 @@ export default function PackageViewProps({ packageId }: { packageId: PackageID }
                               id={prop.id}
                               type={TypeID.EXEMPLAR}
                             />
-                          </FlexBox>
-                        </FlexBox>
-                      </FlexBox>
+                          </FlexCol>
+                        </FlexRow>
+                      </FlexCol>
                     </Fragment>
                   )
                 })}

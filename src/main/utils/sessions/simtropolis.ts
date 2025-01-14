@@ -1,5 +1,5 @@
 import { collect, compact } from "@salinco/nice-utils"
-import type { Cookie, Session } from "electron/main"
+import { net, type Cookie, type Session } from "electron/main"
 
 import { getCookieHeader } from "@node/fetch"
 import { isDev } from "@utils/env"
@@ -21,10 +21,13 @@ const SIMTROPOLIS_AUTH_URLS = [
 
 export type SimtropolisSession = {
   deviceKey?: string // only present with "Remember Me"
+  displayName?: string
   loginKey?: string // only present with "Remember Me"
   sessionId?: string // missing when entering the app after "Remember Me"
   userId: string
 }
+
+const DISPLAY_NAME_REGEX = /id="elUserLink"[^>]*>\s*([^<\s][^<]*?)\s*</i
 
 const Cookies: {
   [key in keyof SimtropolisSession]: string
@@ -35,9 +38,7 @@ const Cookies: {
   userId: "ips4_member_id",
 }
 
-export async function getSimtropolisSession(
-  browserSession: Session,
-): Promise<SimtropolisSession | null> {
+async function readSimtropolisSession(browserSession: Session): Promise<SimtropolisSession | null> {
   const cookies = await browserSession.cookies.get({ domain: SIMTROPOLIS_DOMAIN })
 
   const deviceKey = cookies.find(cookie => cookie.name === Cookies.deviceKey)?.value
@@ -45,15 +46,26 @@ export async function getSimtropolisSession(
   const sessionId = cookies.find(cookie => cookie.name === Cookies.sessionId)?.value
   const userId = cookies.find(cookie => cookie.name === Cookies.userId)?.value
 
-  if (userId) {
-    const simtropolisSession: SimtropolisSession = { deviceKey, loginKey, sessionId, userId }
+  return userId ? { deviceKey, loginKey, sessionId, userId } : null
+}
+
+export async function getSimtropolisSession(
+  browserSession: Session,
+): Promise<SimtropolisSession | null> {
+  const persistedSession = await readSimtropolisSession(browserSession)
+
+  if (persistedSession) {
     // Make a test request to ensure session is valid
-    const headers = getSimtropolisSessionHeaders(simtropolisSession)
-    const response = await fetch(SIMTROPOLIS_ORIGIN, { headers })
+    const headers = getSimtropolisSessionHeaders(persistedSession)
+    const response = await net.fetch(SIMTROPOLIS_ORIGIN, { headers })
     const html = await response.text()
+
+    // Read the session again because some cookies (usually sessionId) may have changed
+    const updatedSession = await readSimtropolisSession(browserSession)
     // TODO: Check something more stable
-    if (!html.includes("Sign In")) {
-      return simtropolisSession
+    if (updatedSession && !html.includes("Sign In")) {
+      updatedSession.displayName = html.match(DISPLAY_NAME_REGEX)?.[1]
+      return updatedSession
     }
   }
 

@@ -9,11 +9,12 @@ import {
   LiveHelpOutlined as SupportIcon,
   Language as WebIcon,
 } from "@mui/icons-material"
-import type { ComponentType } from "react"
-
+import type { BoxProps } from "@mui/material"
 import type { ParseKeys } from "i18next"
+import type { ComponentType } from "react"
 import { useTranslation } from "react-i18next"
-import { FlexBox, type FlexBoxProps } from "./FlexBox"
+
+import { FlexRow } from "./FlexBox"
 import { ToolButton } from "./ToolButton"
 
 const ICONS = {
@@ -41,14 +42,14 @@ export interface ToolBeltAction {
 
 export interface ToolBeltProps {
   actions: ToolBeltAction[]
-  size?: FlexBoxProps["fontSize"]
+  size?: BoxProps["fontSize"]
 }
 
 export function ToolBelt({ actions, size }: ToolBeltProps): JSX.Element {
   const { t } = useTranslation("ToolBelt")
 
   return (
-    <FlexBox alignItems="center" gap={0.5} mx={0.5}>
+    <FlexRow centered gap={0.5} mx={0.5}>
       {actions.map(({ action, description, icon, id }) => (
         <ToolButton
           key={id}
@@ -58,6 +59,6 @@ export function ToolBelt({ actions, size }: ToolBeltProps): JSX.Element {
           size={size}
         />
       ))}
-    </FlexBox>
+    </FlexRow>
   )
 }

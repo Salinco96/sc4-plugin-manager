@@ -2,7 +2,7 @@ import { Switch } from "@mui/material"
 
 import type { ProfileInfo } from "@common/profiles"
 import type { Feature } from "@common/types"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { useStoreActions } from "@utils/store"
 
@@ -20,7 +20,7 @@ export function ProfileSettingFeatureSwitchField({
   const actions = useStoreActions()
 
   return (
-    <FlexBox alignItems="center" gap={2} minHeight={40}>
+    <FlexRow centered gap={2} minHeight={40}>
       <Text maxLines={3} sx={{ flex: 1 }}>
         {label}
       </Text>
@@ -41,6 +41,6 @@ export function ProfileSettingFeatureSwitchField({
           }
         }}
       />
-    </FlexBox>
+    </FlexRow>
   )
 }

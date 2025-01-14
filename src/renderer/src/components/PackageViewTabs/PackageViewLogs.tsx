@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 import type { PackageID } from "@common/packages"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { Alert, AlertTitle, Button } from "@mui/material"
 import { useCurrentVariant } from "@utils/packages"
@@ -29,17 +29,17 @@ export default function PackageViewLogs({
 
   if (logs === null) {
     return (
-      <FlexBox height="100%" direction="column">
+      <FlexCol fullHeight>
         <Alert icon={false} severity="warning">
           <AlertTitle>{t("noLogs.title")}</AlertTitle>
           {t("noLogs.description")}
         </Alert>
-      </FlexBox>
+      </FlexCol>
     )
   }
 
   return (
-    <FlexBox height="100%" direction="column">
+    <FlexCol fullHeight>
       <Alert
         action={
           <Button
@@ -61,6 +61,6 @@ export default function PackageViewLogs({
         {t("banner.description", { size: logs.size })}
       </Alert>
       <pre style={{ flex: 1 }}>{logs.text}</pre>
-    </FlexBox>
+    </FlexCol>
   )
 }

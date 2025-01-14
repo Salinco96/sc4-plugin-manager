@@ -12,7 +12,7 @@ import { type DBPFFile, type TGI, isDBPF } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import { VariantState, isOverride } from "@common/types"
 import type { FileInfo } from "@common/variants"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
@@ -62,9 +62,9 @@ export function PackageFile({
       }}
       variant="outlined"
     >
-      <FlexBox alignItems="center">
+      <FlexRow centered>
         <Typography color="inherit" flex={1} textTransform="unset" variant="button">
-          <FlexBox alignItems="center" gap={0.5}>
+          <FlexRow centered gap={0.5}>
             {file.path.replaceAll(/[\\/]/g, " / ")}
             {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
             {isOverride(file) && (
@@ -74,9 +74,10 @@ export function PackageFile({
                 tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
               />
             )}
-          </FlexBox>
+          </FlexRow>
         </Typography>
-        <FlexBox alignItems="center" gap={0.5} mx={0.5}>
+
+        <FlexRow centered gap={0.5} mx={0.5}>
           {isDBPF(file.path) && (
             <ToolButton
               description={t(expanded ? "hideContents" : "showContents")}
@@ -90,6 +91,7 @@ export function PackageFile({
               }}
             />
           )}
+
           <ToolButton
             description={t("openFileLocation")}
             icon={OpenLocationIcon}
@@ -97,8 +99,9 @@ export function PackageFile({
               await actions.openPackageFile(packageId, variantInfo.id, parentPath)
             }}
           />
-        </FlexBox>
-      </FlexBox>
+        </FlexRow>
+      </FlexRow>
+
       {fileData && expanded && (
         <PackageEntries
           file={file}

@@ -5,7 +5,7 @@ import type { TFunction } from "i18next"
 import { type ComponentType, Suspense } from "react"
 import { useTranslation } from "react-i18next"
 
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { useLocation } from "@utils/navigation"
 import { type Store, useStore, useStoreActions } from "@utils/store"
@@ -55,17 +55,17 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
 
   return (
     <TabContext value={currentTab.id}>
-      <FlexBox direction="column" height="100%">
+      <FlexCol fullHeight>
         <Box borderBottom={1} borderColor="divider">
           <TabList onChange={(_event, value) => actions.setActiveTab(location.page, value)}>
             {filteredTabs.map(({ id, label, labelTag }) => (
               <Tab
                 key={`${pageId}:${id}`}
                 label={
-                  <FlexBox alignItems="center" gap={1}>
+                  <FlexRow centered gap={1}>
                     {label}
                     {labelTag && <Tag dense tag={labelTag} />}
-                  </FlexBox>
+                  </FlexRow>
                 }
                 value={id}
               />
@@ -73,7 +73,7 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
           </TabList>
         </Box>
 
-        <FlexBox flex="1 1 0" overflow="auto" width="100%">
+        <FlexRow flex="1 1 0" fullWidth overflow="auto">
           {filteredTabs.map(({ component: Component, fullsize, id }) => (
             <TabPanel
               key={`${pageId}:${id}`}
@@ -85,8 +85,8 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
               </Suspense>
             </TabPanel>
           ))}
-        </FlexBox>
-      </FlexBox>
+        </FlexRow>
+      </FlexCol>
     </TabContext>
   )
 }

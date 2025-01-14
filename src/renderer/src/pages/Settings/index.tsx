@@ -6,7 +6,7 @@ import {
 import { Button, FormGroup, Link, Paper, Tooltip, Typography, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { useSettings, useStoreActions } from "@utils/store"
 
@@ -18,14 +18,14 @@ function Settings(): JSX.Element {
   const { t } = useTranslation("Settings")
 
   return (
-    <FlexBox direction="column" height="100%" gap={2} p={2}>
+    <FlexCol fullHeight gap={2} p={2}>
       <Paper
         component="fieldset"
         elevation={0}
         sx={{ border: `1px solid ${theme.palette.divider}` }}
       >
         <FormGroup>
-          <FlexBox alignItems="center" height={38} gap={2}>
+          <FlexRow centered gap={2} height={38}>
             <Typography sx={{ flex: 1 }}>{t("install.path.label")}</Typography>
             {settings?.install?.path ? (
               <Tooltip arrow placement="left" title={t("install.path.actions.explorer")}>
@@ -41,9 +41,9 @@ function Settings(): JSX.Element {
             ) : (
               t("install.path.emptyValue")
             )}
-          </FlexBox>
+          </FlexRow>
 
-          <FlexBox alignItems="center" height={38} gap={2}>
+          <FlexRow centered gap={2} height={38}>
             <Typography sx={{ flex: 1 }}>{t("install.version.label")}</Typography>
             {settings?.install?.version ? (
               <Tooltip arrow placement="left" title={t("install.version.actions.explorer")}>
@@ -59,12 +59,12 @@ function Settings(): JSX.Element {
             ) : (
               t("install.version.emptyValue")
             )}
-          </FlexBox>
+          </FlexRow>
 
-          <FlexBox alignItems="center" height={38} gap={1}>
+          <FlexRow centered gap={1} height={38}>
             <Typography sx={{ flex: 1 }}>{t("install.patched.label")}</Typography>
             {settings?.install?.patched ? (
-              <FlexBox
+              <FlexRow
                 alignItems="center"
                 sx={{
                   "& span": {
@@ -81,10 +81,10 @@ function Settings(): JSX.Element {
               >
                 <AppliedIcon color="success" />
                 <span>{t("install.patched.applied")}</span>
-              </FlexBox>
+              </FlexRow>
             ) : (
-              <FlexBox
-                alignItems="center"
+              <FlexRow
+                centered
                 onClick={() => actions.check4GBPatch()}
                 sx={{
                   cursor: "pointer",
@@ -102,14 +102,14 @@ function Settings(): JSX.Element {
               >
                 <NotAppliedIcon color="error" />
                 <span>{t("install.patched.apply")}</span>
-              </FlexBox>
+              </FlexRow>
             )}
-          </FlexBox>
+          </FlexRow>
 
-          <FlexBox alignItems="center" height={38} gap={1}>
+          <FlexRow centered gap={1} height={38}>
             <Typography sx={{ flex: 1 }}>{t("install.voodoo.label")}</Typography>
             {settings?.install?.voodoo ? (
-              <FlexBox
+              <FlexRow
                 alignItems="center"
                 sx={{
                   "& span": {
@@ -126,10 +126,10 @@ function Settings(): JSX.Element {
               >
                 <AppliedIcon color="success" />
                 <span>{t("install.voodoo.applied")}</span>
-              </FlexBox>
+              </FlexRow>
             ) : (
-              <FlexBox
-                alignItems="center"
+              <FlexRow
+                centered
                 onClick={() => actions.checkDgVoodoo()}
                 sx={{
                   cursor: "pointer",
@@ -147,16 +147,16 @@ function Settings(): JSX.Element {
               >
                 <NotAppliedIcon color="error" />
                 <span>{t("install.voodoo.apply")}</span>
-              </FlexBox>
+              </FlexRow>
             )}
-          </FlexBox>
+          </FlexRow>
 
-          <FlexBox alignItems="center" height={38} gap={1}>
+          <FlexRow centered gap={1} height={38}>
             <Typography sx={{ flex: 1 }}>{t("version.label")}</Typography>
             {settings?.version ?? t("version.emptyValue")}
             {settings?.version && !settings?.update && (
-              <FlexBox
-                alignItems="center"
+              <FlexRow
+                centered
                 sx={{
                   "& span": {
                     overflow: "hidden",
@@ -172,11 +172,12 @@ function Settings(): JSX.Element {
               >
                 <AppliedIcon color="success" />
                 <span>{t("version.updated")}</span>
-              </FlexBox>
+              </FlexRow>
             )}
+
             {settings?.version && !!settings.update && (
-              <FlexBox
-                alignItems="center"
+              <FlexRow
+                centered
                 sx={{
                   "& a": {
                     overflow: "hidden",
@@ -194,11 +195,12 @@ function Settings(): JSX.Element {
                 <Link href={settings.update.url} target="_blank" rel="noreferrer">
                   {t("version.updateAvailable", { version: settings.update.version })}
                 </Link>
-              </FlexBox>
+              </FlexRow>
             )}
-          </FlexBox>
+          </FlexRow>
         </FormGroup>
       </Paper>
+
       <Button
         color="error"
         onClick={() => actions.clearUnusedPackages()}
@@ -207,7 +209,7 @@ function Settings(): JSX.Element {
       >
         {t("actions.clearUnusedPackages.label")}
       </Button>
-    </FlexBox>
+    </FlexCol>
   )
 }
 

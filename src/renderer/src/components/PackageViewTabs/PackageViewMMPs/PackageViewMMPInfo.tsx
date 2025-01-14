@@ -6,7 +6,7 @@ import type { FloraInfo } from "@common/mmps"
 import { type PackageID, checkFile } from "@common/packages"
 import { VariantState } from "@common/types"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
@@ -109,7 +109,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
         }}
       >
         <CardContent sx={{ width: "100%" }}>
-          <FlexBox alignItems="center">
+          <FlexRow centered>
             <ImageViewerThumbnail
               images={images}
               mr={2}
@@ -117,43 +117,43 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
               size={mmp.images?.length ? 84 : iconSize}
             />
 
-            <FlexBox direction="column" width="100%">
-              <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+            <FlexCol fullWidth>
+              <FlexRow centered flex={1} gap={1}>
                 <Text maxLines={1} variant="h6">
                   {mmp.label ?? mmp.name ?? "MMP"}
                 </Text>
                 {isPatched && (
                   <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />
                 )}
-              </FlexBox>
+              </FlexRow>
 
               <ExemplarRef file={mmp.file} group={mmp.group} id={mmp.id} type={TypeID.EXEMPLAR} />
-            </FlexBox>
-          </FlexBox>
+            </FlexCol>
+          </FlexRow>
 
-          <FlexBox direction="column" gap={1}>
+          <FlexCol gap={1}>
             {mmp.description && (
               <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
                 {mmp.description}
               </Typography>
             )}
-          </FlexBox>
+          </FlexCol>
 
           {mmp.stages?.map(stage => (
             <Fragment key={stage.id}>
               <Divider sx={{ marginY: 2 }} />
 
-              <FlexBox direction="column" id={`mmp-${stage.id}`} width="100%">
+              <FlexCol fullWidth id={`mmp-${stage.id}`}>
                 {stage.name && (
-                  <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+                  <FlexRow centered flex={1} gap={1}>
                     <Text maxLines={1} variant="h6">
                       {stage.name ?? "MMP"}
                     </Text>
-                  </FlexBox>
+                  </FlexRow>
                 )}
 
                 <ExemplarRef file={mmp.file} id={stage.id} />
-              </FlexBox>
+              </FlexCol>
             </Fragment>
           ))}
         </CardContent>

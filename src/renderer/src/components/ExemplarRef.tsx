@@ -2,7 +2,7 @@ import { Typography } from "@mui/material"
 import { isString } from "@salinco/nice-utils"
 
 import type { GroupID, InstanceID, TypeID } from "@common/dbpf"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 
 export interface ExemplarRefProps {
   file?: string
@@ -16,7 +16,7 @@ export function ExemplarRef({ file, group, id, type }: ExemplarRefProps): JSX.El
   const idMax = isString(id) ? id : id[1]
 
   return (
-    <FlexBox>
+    <FlexRow>
       {file && (
         <>
           <Typography title={file} variant="body2">
@@ -109,6 +109,6 @@ export function ExemplarRef({ file, group, id, type }: ExemplarRefProps): JSX.El
           </Typography>
         </>
       )}
-    </FlexBox>
+    </FlexRow>
   )
 }

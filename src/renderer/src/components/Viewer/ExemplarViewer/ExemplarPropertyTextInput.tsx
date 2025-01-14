@@ -3,7 +3,7 @@ import { isNumber, toHex } from "@salinco/nice-utils"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import { ExemplarDisplayType, type ExemplarProperty, ExemplarValueType } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 
 import { CopyButton } from "./CopyButton"
 import { ExpandButton } from "./ExpandButton"
@@ -122,15 +122,15 @@ export function ExemplarPropertyTextInput({
         ref,
         startAdornment: (!!itemLabel || isHex) && (
           <InputAdornment position="start">
-            <FlexBox gap={1}>
+            <FlexRow gap={1}>
               {itemLabel && (
-                <FlexBox minWidth={160}>
+                <FlexRow minWidth={160}>
                   <span style={{ flex: 1 }}>{itemLabel}</span>
                   <span style={{ paddingLeft: 8, paddingRight: 8 }}>|</span>
-                </FlexBox>
+                </FlexRow>
               )}
               {isHex && (color ? "#" : "0x")}
-            </FlexBox>
+            </FlexRow>
           </InputAdornment>
         ),
         sx: {

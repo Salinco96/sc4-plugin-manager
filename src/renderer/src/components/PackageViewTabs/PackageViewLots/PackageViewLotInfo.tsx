@@ -11,7 +11,7 @@ import { getRequirementText } from "@common/options"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
@@ -89,18 +89,17 @@ export function PackageViewLotInfo({
   const images = lot.images?.length ? lot.images : lotPicture ? [lotPicture] : undefined
 
   return (
-    <FlexBox
+    <FlexCol
       color={isDisabled ? "rgba(0, 0, 0, 0.6)" : undefined}
       id={`lot-${lot.id}`}
-      direction="column"
       gap={2}
       sx={{ opacity: isDisabled ? 0.6 : undefined }}
     >
-      <FlexBox alignItems="center">
+      <FlexRow centered>
         {images && <ImageViewerThumbnail images={images} mr={2} mt={1} size={84} />}
 
-        <FlexBox direction="column" width="100%">
-          <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+        <FlexCol fullWidth>
+          <FlexRow centered flex={1} gap={1}>
             <Text maxLines={1} variant="h6">
               {lot.name ?? "Lot"}
             </Text>
@@ -112,7 +111,7 @@ export function PackageViewLotInfo({
               />
             )}
             {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
-          </FlexBox>
+          </FlexRow>
 
           <ExemplarRef
             file={lot.file}
@@ -120,10 +119,10 @@ export function PackageViewLotInfo({
             id={lot.id}
             type={TypeID.EXEMPLAR}
           />
-        </FlexBox>
+        </FlexCol>
 
         {isTogglable && !isToggleHidden && (
-          <FlexBox alignSelf="start">
+          <FlexRow alignSelf="start">
             <Checkbox
               icon={isCompatible ? undefined : <IncompatibleIcon />}
               checked={isEnabled}
@@ -136,11 +135,11 @@ export function PackageViewLotInfo({
               }}
               title={isEnabled ? t("excludeLot") : t("includeLot")}
             />
-          </FlexBox>
+          </FlexRow>
         )}
-      </FlexBox>
+      </FlexRow>
 
-      <FlexBox direction="column" gap={1}>
+      <FlexCol gap={1}>
         {!!lot.density?.length && (
           <Typography variant="body2">
             <b>{`${t("density")}: `}</b>
@@ -176,7 +175,7 @@ export function PackageViewLotInfo({
             </ul>
           </>
         )}
-      </FlexBox>
-    </FlexBox>
+      </FlexCol>
+    </FlexCol>
   )
 }

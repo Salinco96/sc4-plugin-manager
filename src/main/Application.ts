@@ -1040,7 +1040,13 @@ export class Application {
       profiles,
       profileOptions,
       settings,
-      simtropolis: this.simtropolisSession ? { userId: this.simtropolisSession.userId } : null,
+      simtropolis: this.simtropolisSession?.sessionId
+        ? {
+            displayName: this.simtropolisSession.displayName,
+            sessionId: isDev() ? this.simtropolisSession.sessionId : undefined,
+            userId: this.simtropolisSession.userId,
+          }
+        : null,
       templates,
       tools,
     }
@@ -1174,10 +1180,16 @@ export class Application {
 
     // Initialize Simtropolis session
     getSimtropolisSession(this.browserSession).then(session => {
-      if (session) {
+      if (session?.sessionId) {
         console.info("Logged in to Simtropolis")
         this.simtropolisSession = session
-        this.sendStateUpdate({ simtropolis: { userId: session.userId } })
+        this.sendStateUpdate({
+          simtropolis: {
+            displayName: session.displayName,
+            sessionId: isDev() ? session.sessionId : undefined,
+            userId: session.userId,
+          },
+        })
       } else {
         this.sendStateUpdate({ simtropolis: null })
       }
@@ -2696,10 +2708,15 @@ export class Application {
   public async simtropolisLogin(): Promise<void> {
     this.sendStateUpdate({ simtropolis: undefined })
     const session = await simtropolisLogin(this.browserSession)
-    if (session) {
+    if (session?.sessionId) {
       console.info("Logged in to Simtropolis")
       this.simtropolisSession = session
-      this.sendStateUpdate({ simtropolis: { userId: session.userId } })
+      this.sendStateUpdate({
+        simtropolis: {
+          sessionId: session.sessionId,
+          userId: session.userId,
+        },
+      })
     } else {
       this.sendStateUpdate({ simtropolis: null })
     }

@@ -22,6 +22,7 @@ import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 import { spacing } from "@utils/styles"
 
 import { CreateProfileModal } from "./CreateProfileModal"
+import { UserInfo } from "./UserInfo"
 
 const newProfileId = "@new"
 
@@ -188,13 +189,15 @@ export function AppBar(): JSX.Element {
 
         {simtropolis && (
           <>
-            <Tooltip title={t("userId.description")}>
-              <Typography variant="body1" color="inherit" noWrap sx={{ marginRight: 2 }}>
-                {t("userId.label")}: {simtropolis.userId}
-              </Typography>
-            </Tooltip>
+            <UserInfo session={simtropolis} />
+
             <Tooltip title={t("actions.signOut.description")}>
-              <Button color="inherit" onClick={actions.simtropolisLogout} variant="outlined">
+              <Button
+                color="inherit"
+                onClick={actions.simtropolisLogout}
+                sx={{ ml: 2 }}
+                variant="outlined"
+              >
                 {t("actions.signOut.label")}
               </Button>
             </Tooltip>

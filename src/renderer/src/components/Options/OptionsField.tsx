@@ -14,7 +14,7 @@ import {
 import { isArray } from "@salinco/nice-utils"
 
 import { type OptionInfo, OptionType, type OptionValue, type Requirements } from "@common/options"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
 
 export function OptionsField({
@@ -35,7 +35,7 @@ export function OptionsField({
   if (option.type === OptionType.BOOLEAN) {
     if (option.display === "switch") {
       return (
-        <FlexBox alignItems="center" title={option.description}>
+        <FlexRow centered title={option.description}>
           {option.label && (
             <Text maxLines={3} sx={{ flex: 1, mr: 1 }}>
               {option.label}
@@ -53,18 +53,18 @@ export function OptionsField({
               }
             }}
           />
-        </FlexBox>
+        </FlexRow>
       )
     }
 
     return (
-      <FlexBox alignItems="center" title={option.description}>
+      <FlexRow centered title={option.description}>
         <Checkbox
           checked={value === true}
           color="primary"
           disabled={disabled}
           name={option.id}
-          onChange={(event, checked) => {
+          onChange={(_event, checked) => {
             if (checked !== value) {
               onChange(checked)
             }
@@ -76,7 +76,7 @@ export function OptionsField({
             {option.label}
           </Text>
         )}
-      </FlexBox>
+      </FlexRow>
     )
   }
 

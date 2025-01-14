@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 import type { AuthorID } from "@common/authors"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 import { List } from "@components/List"
 import { useNavigation } from "@utils/navigation"
 
@@ -13,13 +13,13 @@ export function AuthorList({ authorIds }: { authorIds: AuthorID[] }): JSX.Elemen
   const { t } = useTranslation("AuthorList")
 
   return (
-    <FlexBox direction="column" height="100%">
+    <FlexCol fullHeight>
       <List
         emptyMessage={t("emptyList")}
         items={authorIds}
         initialItem={fromAuthorId}
         renderItem={authorId => <AuthorListItem authorId={authorId} />}
       />
-    </FlexBox>
+    </FlexCol>
   )
 }

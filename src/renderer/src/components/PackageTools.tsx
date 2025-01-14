@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options/PackageOptionsDialog"
 import { useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
@@ -40,7 +40,7 @@ export function PackageTools({
   const hasOptions = !!variantInfo.options?.length
 
   return (
-    <FlexBox alignItems="center" gap={0.5} mx={0.5}>
+    <FlexRow centered gap={0.5} mx={0.5}>
       <PackageOptionsDialog
         onClose={() => setOpenOptions(false)}
         open={openOptions}
@@ -102,6 +102,6 @@ export function PackageTools({
           onClick={() => actions.openPackageFile(packageId, variantInfo.id, readmePaths[0])}
         />
       )}
-    </FlexBox>
+    </FlexRow>
   )
 }

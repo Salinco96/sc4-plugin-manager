@@ -14,7 +14,7 @@ import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
 import type { ExemplarData, ExemplarDataPatch, ExemplarPropertyValue } from "@common/exemplars"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
 
@@ -160,14 +160,14 @@ export function ExemplarViewer({
 
   return (
     <Viewer background="light" open={open} onClose={onClose}>
-      <FlexBox direction="column" height="100%" width="100%">
-        <FlexBox alignItems="center" height={60} paddingX={8}>
+      <FlexCol fullHeight fullWidth>
+        <FlexRow centered height={60} paddingX={8}>
           <Typography variant="h6">{id}</Typography>
-        </FlexBox>
-        <FlexBox direction="column" flex={1} overflow="auto">
+        </FlexRow>
+        <FlexCol flex={1} overflow="auto">
           <Virtuoso
             data={fields}
-            itemContent={(index, field) => (
+            itemContent={(_index, field) => (
               <Box paddingLeft={8} paddingRight={6} width="100%">
                 <ExemplarProperty {...field} />
               </Box>
@@ -175,8 +175,8 @@ export function ExemplarViewer({
             ref={listRef}
             style={{ scrollbarGutter: "stable" }}
           />
-        </FlexBox>
-        <FlexBox direction="column" paddingX={8} paddingY={2} gap={2}>
+        </FlexCol>
+        <FlexCol gap={2} px={8} py={2}>
           <ExemplarPropertySearch
             data={data}
             id={id}
@@ -201,8 +201,9 @@ export function ExemplarViewer({
             }}
             readonly={readonly}
           />
-          <FlexBox>
-            <FlexBox alignItems="center" flex={1}>
+
+          <FlexRow centered>
+            <FlexRow centered flex={1}>
               {isPatched && (
                 <FormControl>
                   <FormControlLabel
@@ -213,7 +214,8 @@ export function ExemplarViewer({
                   />
                 </FormControl>
               )}
-            </FlexBox>
+            </FlexRow>
+
             {!readonly && (
               <ButtonGroup>
                 <Button
@@ -244,9 +246,9 @@ export function ExemplarViewer({
                 )}
               </ButtonGroup>
             )}
-          </FlexBox>
-        </FlexBox>
-      </FlexBox>
+          </FlexRow>
+        </FlexCol>
+      </FlexCol>
     </Viewer>
   )
 }

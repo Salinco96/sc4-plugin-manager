@@ -25,7 +25,7 @@ export interface ApplicationState {
   profiles: Profiles | undefined
   profileOptions: OptionInfo[]
   settings: Settings | undefined
-  simtropolis: { userId: string } | null | undefined
+  simtropolis: { displayName?: string; sessionId?: string; userId: string } | null | undefined
   templates: Profiles | undefined
   tools: Tools | undefined
 }

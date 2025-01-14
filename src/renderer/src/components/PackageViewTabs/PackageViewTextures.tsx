@@ -5,7 +5,7 @@ import { useEffect, useMemo } from "react"
 import { GroupID, TypeID, getTextureIdRange } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
 import { Page } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
@@ -86,14 +86,14 @@ export default function PackageViewTextures({ packageId }: { packageId: PackageI
           <ListItem key={texture.id} sx={{ padding: 0 }}>
             <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
               <CardContent sx={{ width: "100%" }}>
-                <FlexBox id={`texture-${texture.id}`} direction="column" gap={2}>
-                  <FlexBox alignItems="center">
-                    <FlexBox direction="column" width="100%">
-                      <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+                <FlexCol id={`texture-${texture.id}`} gap={2}>
+                  <FlexRow centered>
+                    <FlexCol fullWidth>
+                      <FlexRow centered flex={1} gap={1}>
                         <Text maxLines={1} variant="h6">
                           Texture
                         </Text>
-                      </FlexBox>
+                      </FlexRow>
 
                       <ExemplarRef
                         file={texture.file}
@@ -101,9 +101,9 @@ export default function PackageViewTextures({ packageId }: { packageId: PackageI
                         id={getTextureIdRange(texture.id)}
                         type={TypeID.FSH}
                       />
-                    </FlexBox>
-                  </FlexBox>
-                </FlexBox>
+                    </FlexCol>
+                  </FlexRow>
+                </FlexCol>
               </CardContent>
             </Card>
           </ListItem>

@@ -5,7 +5,7 @@ import { collect, isEmpty, mapValues } from "@salinco/nice-utils"
 import { Virtuoso } from "react-virtuoso"
 
 import type { PackageID } from "@common/packages"
-import { FlexBox } from "@components/FlexBox"
+import { FlexRow } from "@components/FlexBox"
 import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { Page, useLocation, useNavigation } from "@utils/navigation"
@@ -83,7 +83,7 @@ function SearchResults({
   return (
     <>
       {!!matchingMaxisContents?.length && (
-        <FlexBox pt={2} px={2} width="100%">
+        <FlexRow fullWidth pt={2} px={2}>
           <ListItem header={Header} subtitle="SimCity_1.dat" title="SimCity 4 (base game)">
             <Typography variant="body2">
               <b>Match results:</b>
@@ -96,11 +96,11 @@ function SearchResults({
               ))}
             </ul>
           </ListItem>
-        </FlexBox>
+        </FlexRow>
       )}
 
       {collect(matchingPluginContents, (contents, pluginPath) => (
-        <FlexBox pt={2} px={2} width="100%">
+        <FlexRow fullWidth pt={2} px={2}>
           <ListItem
             header={Header}
             subtitle={pluginPath}
@@ -117,7 +117,7 @@ function SearchResults({
               ))}
             </ul>
           </ListItem>
-        </FlexBox>
+        </FlexRow>
       ))}
     </>
   )

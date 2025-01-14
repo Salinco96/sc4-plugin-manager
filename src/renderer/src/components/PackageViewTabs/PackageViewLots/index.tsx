@@ -16,7 +16,7 @@ import {
 
 import type { BuildingID, BuildingInfo } from "@common/buildings"
 import type { FamilyID, FamilyInfo } from "@common/families"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 
 import { Page } from "@utils/navigation"
 import { PackageViewLotGroup } from "./PackageViewLotGroup"
@@ -226,7 +226,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
   }, [features, maxis, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
-    <FlexBox height="100%" direction="column">
+    <FlexCol fullHeight>
       {isDependency && groupedLots.some(group => group.lots.some(isTogglableLot)) && (
         <Alert icon={<DependencyIcon fontSize="inherit" />} severity="warning">
           <AlertTitle>SC4Lot files are not included</AlertTitle>
@@ -234,6 +234,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
           enable this package explicitly.
         </Alert>
       )}
+
       <List sx={{ display: "flex", flexDirection: "column", gap: 2, overflow: "auto", padding: 2 }}>
         {groupedLots.map(group => (
           <PackageViewLotGroup
@@ -245,6 +246,6 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
           />
         ))}
       </List>
-    </FlexBox>
+    </FlexCol>
   )
 }

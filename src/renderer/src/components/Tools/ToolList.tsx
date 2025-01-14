@@ -1,5 +1,5 @@
 import type { ToolID } from "@common/tools"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 import { List } from "@components/List"
 import { useNavigation } from "@utils/navigation"
 
@@ -9,12 +9,12 @@ export function ToolList({ toolIds }: { toolIds: ToolID[] }): JSX.Element {
   const { fromToolId } = useNavigation()
 
   return (
-    <FlexBox direction="column" height="100%">
+    <FlexCol fullHeight>
       <List
         items={toolIds}
         initialItem={fromToolId}
         renderItem={toolId => <ToolListItem toolId={toolId} />}
       />
-    </FlexBox>
+    </FlexCol>
   )
 }

@@ -1,6 +1,6 @@
 import { type ReactNode, useEffect, useState } from "react"
 
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Link } from "@mui/material"
 import { type Location, useHistory } from "@utils/navigation"
 import { Text } from "./Text"
@@ -71,9 +71,9 @@ export function Header({
   )
 
   return (
-    <FlexBox alignItems="center" px={isListItem ? 0 : 2}>
-      <FlexBox direction="column" flex="1 1 0" pr={1} sx={{ overflow: "hidden" }}>
-        <FlexBox direction="row">
+    <FlexRow centered px={isListItem ? 0 : 2}>
+      <FlexCol flex="1 1 0" overflow="hidden" pr={1}>
+        <FlexRow>
           {!!images?.length && (
             <ImageViewer images={images} onClose={() => setOpenImages(false)} open={openImages} />
           )}
@@ -90,7 +90,7 @@ export function Header({
             />
           )}
 
-          <FlexBox direction="column" flex="1 1 0" sx={{ overflow: "hidden" }}>
+          <FlexCol flex="1 1 0" overflow="hidden">
             {isListItem && location ? (
               <Link
                 color="inherit"
@@ -114,7 +114,7 @@ export function Header({
               titleElement
             )}
 
-            <FlexBox alignItems="center">
+            <FlexRow centered>
               {isListItem && location ? (
                 <Link
                   color="inherit"
@@ -133,11 +133,11 @@ export function Header({
               )}
 
               {tools}
-            </FlexBox>
+            </FlexRow>
 
             {tags}
-          </FlexBox>
-        </FlexBox>
+          </FlexCol>
+        </FlexRow>
 
         {isListItem && (summary ?? description) && (
           <Text
@@ -149,9 +149,9 @@ export function Header({
             {summary ?? description}
           </Text>
         )}
-      </FlexBox>
+      </FlexCol>
 
       {actions}
-    </FlexBox>
+    </FlexRow>
   )
 }

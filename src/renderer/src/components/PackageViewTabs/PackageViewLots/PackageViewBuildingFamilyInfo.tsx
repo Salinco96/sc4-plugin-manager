@@ -16,7 +16,7 @@ import type { FamilyID, FamilyInfo } from "@common/families"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
 import { ExemplarRef } from "@components/ExemplarRef"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
@@ -100,15 +100,14 @@ export function PackageViewBuildingFamilyInfo({
   const isPlop = !!building && !isResidential && !isCommercial && !isIndustrial && !isAgriculture
 
   return (
-    <FlexBox
+    <FlexCol
       color={isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined}
       id={`buildingFamily-${familyId}`}
-      direction="column"
       gap={2}
     >
-      <FlexBox alignItems="center">
-        <FlexBox direction="column" width="100%">
-          <FlexBox alignItems="center" gap={1} sx={{ flex: 1 }}>
+      <FlexRow centered>
+        <FlexCol fullWidth>
+          <FlexRow centered flex={1} gap={1}>
             {isResidential && <ResidentialIcon />}
             {isCommercial && <CommercialIcon />}
             {isIndustrial && <IndustrialIcon />}
@@ -126,21 +125,21 @@ export function PackageViewBuildingFamilyInfo({
               />
             )}
             {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
-          </FlexBox>
+          </FlexRow>
 
           <ExemplarRef file={filePath} id={familyId} />
 
           {!!tags?.length && (
-            <FlexBox direction="row" gap={1} mt={1}>
+            <FlexRow gap={1} mt={1}>
               {tags.map(tag => (
                 <Tag key={serializeTag(tag.type, tag.value)} tag={tag} />
               ))}
-            </FlexBox>
+            </FlexRow>
           )}
-        </FlexBox>
+        </FlexCol>
 
         {isTogglable && !!fileInfo && (
-          <FlexBox alignSelf="start">
+          <FlexRow alignSelf="start">
             <Checkbox
               icon={isCompatible ? undefined : <IncompatibleIcon />}
               checked={isEnabled}
@@ -153,12 +152,12 @@ export function PackageViewBuildingFamilyInfo({
               }}
               title={isEnabled ? t("excludeLot") : t("includeLot")}
             />
-          </FlexBox>
+          </FlexRow>
         )}
-      </FlexBox>
+      </FlexRow>
 
       {!!familyBuildings?.length && (
-        <FlexBox direction="column" gap={1}>
+        <FlexCol gap={1}>
           {building?.capacity && (
             <Typography variant="body2">
               <b>{`${t("capacity")}: `}</b>
@@ -185,8 +184,8 @@ export function PackageViewBuildingFamilyInfo({
               {formatRange(Math.min(...water), Math.max(...water))}
             </Typography>
           )}
-        </FlexBox>
+        </FlexCol>
       )}
-    </FlexBox>
+    </FlexCol>
   )
 }

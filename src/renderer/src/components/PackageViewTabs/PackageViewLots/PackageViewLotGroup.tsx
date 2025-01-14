@@ -6,7 +6,7 @@ import type { BuildingInfo } from "@common/buildings"
 import type { FamilyID, FamilyInfo } from "@common/families"
 import { type LotInfo, isCompatibleLot, isTogglableLot } from "@common/lots"
 import type { PackageID } from "@common/packages"
-import { FlexBox } from "@components/FlexBox"
+import { FlexCol } from "@components/FlexBox"
 import { useCurrentVariant, usePackageStatus } from "@utils/packages"
 import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
 
@@ -60,7 +60,7 @@ export function PackageViewLotGroup({
     <ListItem sx={{ padding: 0 }}>
       <Card elevation={1} sx={{ display: "flex", width: "100%" }}>
         <CardContent sx={{ width: "100%" }}>
-          <FlexBox direction="column" gap={2}>
+          <FlexCol gap={2}>
             {building && (
               <PackageViewBuildingInfo
                 building={building}
@@ -98,7 +98,7 @@ export function PackageViewLotGroup({
                 }}
               />
             )}
-          </FlexBox>
+          </FlexCol>
 
           {lots.map((lot, index) => (
             <Fragment key={lot.id}>
