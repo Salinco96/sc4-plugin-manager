@@ -920,6 +920,7 @@ simtropolis/11518-rls-mobile-homes:
 
 simtropolis/11617-ndex-texture-set-volume-1:
   packageId: ndex/textures-vol01
+  variantId: default
 
 simtropolis/11925-rls-homes-the-highgrove:
   superseded: sc4evermore/274-sc4d-lex-legacy-bsc-simgoober-residentials
@@ -2345,6 +2346,10 @@ simtropolis/32047-broken-sc4macinjector: null
 
 simtropolis/32048-broken-buggis-extra-cheats-for-mac: null
 
+simtropolis/32066-superpaths-pathway-textures:
+  packageId: kingofsimcity/superpaths-pathway-textures
+  variantId: default
+
 simtropolis/32109-sm2-dry-stone-walls:
   packageId: simmer2/dry-stone-walls
   variantId: default
@@ -2778,6 +2783,9 @@ simtropolis/34550-20-huskies-building-hd:
   packageId: davide1983it/20-huskies-building
   variantId: default
 
+simtropolis/34584-playground-set:
+  superseded: simtropolis/34972-davide-prop-v1
+
 simtropolis/34608-mediterranean-flats-2:
   packageId: wannglondon/mediterranean-flats-2
   variants:
@@ -2996,6 +3004,10 @@ simtropolis/34777-esa-rail-prop-pack:
 simtropolis/34787-pc-mega-props-3:
   packageId: pclark06/mega-props-vol03
 
+simtropolis/34828-atlantia-insurance-building:
+  packageId: davide1983it/atlantia-insurance-building
+  variantId: default
+
 simtropolis/34835-mediterranean-pack-2:
   collectionId: wannglondon/mediterranean-buildings
   variants:
@@ -3148,11 +3160,19 @@ simtropolis/34972-davide-prop-v1:
       packageId: davide1983it/japanese-restaurants
       variantId: default
     Davide1983it - Playground*.SC4Lot:
-      packageId: davide1983it/playgrounds
+      packageId: davide1983it/playground
       variantId: default
     Davide1983it - Restaurant Nara Okonomiyaki*:
       packageId: davide1983it/japanese-restaurants
       variantId: default
+  variantId: default
+
+simtropolis/35010-palazzo-maresio:
+  packageId: davide1983it/palazzo-maresio
+  variantId: default
+
+simtropolis/35016-villa-almansa:
+  packageId: davide1983it/villa-almansa
   variantId: default
 
 simtropolis/35017-london-building-1:
@@ -3164,6 +3184,10 @@ simtropolis/35017-london-building-1:
     '192572':
       packageId: wannglondon/london-building-1
       variantId: default
+
+simtropolis/35018-palazzo-sagesta:
+  packageId: davide1983it/palazzo-sagesta
+  variantId: default
 
 simtropolis/35022-french-hospital:
   packageId: wannglondon/french-hospital
@@ -3179,6 +3203,22 @@ simtropolis/35025-esa-rail-props-2:
 simtropolis/35026-esa-gantries-vol-1:
   packageId: oidaas/esa-gantries-vol01
 
+simtropolis/35027-villa-teulada:
+  packageId: davide1983it/villa-teulada
+  variantId: default
+
+simtropolis/35028-villa-cubelles:
+  packageId: davide1983it/villa-cubelles
+  variantId: default
+
+simtropolis/35029-villa-denia:
+  packageId: davide1983it/villa-denia
+  variantId: default
+
+simtropolis/35030-villa-javea:
+  packageId: davide1983it/villa-javea
+  variantId: default
+
 simtropolis/35031-pc-mgb-convenience-stores-global-expansion:
   packageId: pclark06/mgb-convenience-stores
   variantId: default
@@ -3186,7 +3226,19 @@ simtropolis/35031-pc-mgb-convenience-stores-global-expansion:
 simtropolis/35036-hybrid-railway-hrw-subway-converter:
   superseded: sc4evermore/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
 
+simtropolis/35039-villa-oropesa:
+  packageId: davide1983it/villa-oropesa
+  variantId: default
+
 simtropolis/35053-fshwrite-for-bat4max: null
+
+simtropolis/35057-palazzo-residential-building-set-1:
+  packageId: davide1983it/residential-building-set-1
+  variantId: default
+
+simtropolis/35169-duplex-house-set-1:
+  packageId: davide1983it/duplex-house-set-1
+  variantId: default
 
 simtropolis/35173-norfair-corporation:
   packageId: jasoncw/norfair-corporation
@@ -3197,6 +3249,10 @@ simtropolis/35173-norfair-corporation:
     '194101':
       packageId: jasoncw/norfair-corporation
       variantId: darknite
+
+simtropolis/35187-social-housing-set-1:
+  packageId: davide1983it/social-housing-set-1
+  variantId: default
 
 simtropolis/3519-copacabana-beach:
   variants:
@@ -3226,6 +3282,18 @@ simtropolis/35207-continental-bank-and-trust:
     '194439':
       packageId: jasoncw/continental-bank-and-trust
       variantId: default,darknite
+
+simtropolis/35211-palazzo-derio:
+  packageId: davide1983it/palazzo-derio
+  variantId: default
+
+simtropolis/35212-torre-teala:
+  packageId: davide1983it/torre-teala
+  variantId: default
+
+simtropolis/35229-parea-building:
+  packageId: davide1983it/parea-building
+  variantId: default
 
 simtropolis/35245-apple-store-pack:
   packageId: jasoncw/apple-store-pack
@@ -3257,11 +3325,19 @@ simtropolis/35286-beacon-apartments:
       packageId: jasoncw/beacon-apartments
       variantId: darknite
 
+simtropolis/35299-maraldi-building:
+  packageId: davide1983it/maraldi-building
+  variantId: default
+
 simtropolis/35301-haunted-mansion:
   packageId: wannglondon/haunted-mansion
   variantId: darknite
 
 simtropolis/35341-jenx-dulles-and-jfk-airport-patch-and-transit-route-mod: null
+
+simtropolis/35345-zasco-building:
+  packageId: davide1983it/zasco-building
+  variantId: default
 
 simtropolis/35353-pegasus-cdk3-collection: null
 

@@ -124,7 +124,7 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
-      davide1983it: 2023, // todo
+      davide1983it: 2022, // todo
       "dead-end": true,
       cococity: true,
       jasoncw: 2020, // todo
@@ -141,6 +141,7 @@ runIndexer({
     entries: [
       "sc4evermore/131",
       "simtropolis/4513",
+      "simtropolis/11617",
       "simtropolis/13318",
       "simtropolis/15758",
       "simtropolis/18042",
@@ -154,6 +155,7 @@ runIndexer({
       "simtropolis/27712",
       "simtropolis/29749",
       "simtropolis/30836",
+      "simtropolis/32066",
       "simtropolis/33889",
       "simtropolis/35470",
     ],

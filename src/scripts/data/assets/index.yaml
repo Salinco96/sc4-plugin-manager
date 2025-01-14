@@ -898,7 +898,7 @@ buildingFamilies:
     - maxis/base
   f0000002:
     - maxis/base
-    - davide1983it/playgrounds
+    - davide1983it/playground
   f0004100:
     - maxis/base
   fa64ed55:
@@ -2856,6 +2856,16 @@ buildings:
     - csx/mega-props-vol06
   0e13a349:
     - csx/mega-props-vol01
+  0f39596d:
+    - davide1983it/palazzo-maresio
+  0f443a0e:
+    - davide1983it/villa-almansa
+  0f5ba00f:
+    - davide1983it/residential-building-set-1
+  0f5ba14d:
+    - davide1983it/residential-building-set-1
+  0f61beba:
+    - davide1983it/residential-building-set-1
   0f755d8a:
     - historic-harbor/lots
   0f756f97:
@@ -2864,8 +2874,16 @@ buildings:
     - historic-harbor/lots
   0f77e369:
     - historic-harbor/lots
+  0f78035e:
+    - davide1983it/duplex-house-set-1
+  0f7dbab9:
+    - davide1983it/social-housing-set-1
   0f7fe0c7:
     - historic-harbor/lots
+  0f82c77d:
+    - davide1983it/social-housing-set-1
+  0f861d4c:
+    - davide1983it/social-housing-set-1
   '10010000':
     - maxis/base
     - toroca/functional-landmarks
@@ -3419,11 +3437,19 @@ buildings:
   2df537a0:
     - csx/mega-props-vol06
   2e1b2045:
-    - davide1983it/playgrounds
+    - davide1983it/playground
   2e8fd7d9:
     - bsc/misc-props-vol01
   2ee0c2a9:
     - jasoncw/denton-corporation
+  2f395979:
+    - davide1983it/palazzo-maresio
+  2f395b57:
+    - davide1983it/palazzo-sagesta
+  2f45696f:
+    - davide1983it/villa-teulada
+  2f51c453:
+    - davide1983it/residential-building-set-1
   3031d7d4:
     - historic-harbor/lots
   30398a99:
@@ -3438,6 +3464,8 @@ buildings:
     - historic-harbor/lots
   3077becf:
     - historic-harbor/lots
+  307d3943:
+    - davide1983it/zasco-building
   3082a2ba:
     - historic-harbor/lots
   3094962c:
@@ -3993,6 +4021,18 @@ buildings:
     - csx/mega-props-vol01
   4ebf8524:
     - csx/mega-props-vol05
+  4edfb616:
+    - davide1983it/atlantia-insurance-building
+  4f1d5045:
+    - davide1983it/villa-denia
+  4f395b62:
+    - davide1983it/palazzo-sagesta
+  4f6121bf:
+    - davide1983it/residential-building-set-1
+  4f788a2f:
+    - davide1983it/duplex-house-set-1
+  4f78ae50:
+    - davide1983it/duplex-house-set-1
   4f7ef18b:
     - historic-harbor/lots
   4f9c0d66:
@@ -4557,8 +4597,20 @@ buildings:
     - bsc/misc-props-vol01
   6eb00002:
     - gascooker/mega-props-vol01
+  6f3959ae:
+    - davide1983it/palazzo-maresio
   6f4bffa5:
     - csx/mega-props-vol05
+  6f51c46b:
+    - davide1983it/residential-building-set-1
+  6f5ba280:
+    - davide1983it/residential-building-set-1
+  6f7e6ab3:
+    - davide1983it/social-housing-set-1
+  6f8316f1:
+    - davide1983it/social-housing-set-1
+  6f87f5c2:
+    - davide1983it/social-housing-set-1
   706db573:
     - jasoncw/hotel-utica
   706fbd92:
@@ -5069,12 +5121,18 @@ buildings:
     - gascooker/mega-props-vol01
   8ecbaf1b:
     - gascooker/mega-props-vol01
+  8f395949:
+    - davide1983it/palazzo-maresio
+  8f5c3a6f:
+    - davide1983it/residential-building-set-1
   8f65cd97:
     - jasoncw/dreieck-park
   8f77c3a9:
     - historic-harbor/lots
   8f7fe1b3:
     - historic-harbor/lots
+  8f87e4a2:
+    - davide1983it/social-housing-set-1
   8fc234eb:
     - wannglondon/french-hospital
   '90644677':
@@ -5559,16 +5617,32 @@ buildings:
     - davide1983it/japanese-restaurants
   adf537f6:
     - csx/mega-props-vol06
+  ae7cbf50:
+    - davide1983it/villa-oropesa
+  af456cce:
+    - davide1983it/palazzo-sagesta
   af49bfef:
     - wannglondon/mediterranean-hotel
+  af503c02:
+    - davide1983it/residential-building-set-1
   af76a013:
     - historic-harbor/lots
   af77e43b:
     - historic-harbor/lots
   af77e550:
     - historic-harbor/lots
+  af78c85f:
+    - davide1983it/duplex-house-set-1
+  af82c514:
+    - davide1983it/social-housing-set-1
+  af82c6fe:
+    - davide1983it/social-housing-set-1
+  af82c70b:
+    - davide1983it/social-housing-set-1
   afc2346e:
     - wannglondon/french-hospital
+  afdbca52:
+    - davide1983it/parea-building
   b047f102:
     - buddybud/jeronij-concrete-wall-addon-stairs
   b0721a14:
@@ -6018,14 +6092,34 @@ buildings:
     - davide1983it/japanese-restaurants
   ce13a3c9:
     - csx/mega-props-vol01
+  ce80aeb1:
+    - davide1983it/villa-cubelles
   ce8fd8d7:
     - bsc/misc-props-vol01
   ceb00154:
     - gascooker/mega-props-vol01
   ceb139ee:
     - gascooker/mega-props-vol01
+  cf395b4c:
+    - davide1983it/palazzo-sagesta
+  cf3969d7:
+    - davide1983it/palazzo-maresio
+  cf5baea5:
+    - davide1983it/residential-building-set-1
   cf77c863:
     - historic-harbor/lots
+  cf780369:
+    - davide1983it/duplex-house-set-1
+  cf785de2:
+    - davide1983it/duplex-house-set-1
+  cf7dbaaf:
+    - davide1983it/social-housing-set-1
+  cf82c71b:
+    - davide1983it/social-housing-set-1
+  cf888495:
+    - davide1983it/palazzo-derio
+  cf906b2e:
+    - davide1983it/torre-teala
   cfbf7787:
     - jasoncw/shields-youth-center
   d0109010:
@@ -6036,6 +6130,8 @@ buildings:
     - historic-harbor/lots
   d0276032:
     - historic-harbor/lots
+  d032d287:
+    - davide1983it/maraldi-building
   d04dae96:
     - jasoncw/small-train-station
   d058a6f4:
@@ -6612,8 +6708,16 @@ buildings:
     - gascooker/mega-props-vol01
   eee859e4:
     - 11241036/modular-plaza-system
+  ef34f28a:
+    - davide1983it/villa-javea
+  ef395b6f:
+    - davide1983it/palazzo-sagesta
+  ef6121d9:
+    - davide1983it/residential-building-set-1
   ef77e4ca:
     - historic-harbor/lots
+  ef7e6aaa:
+    - davide1983it/social-housing-set-1
   ef7f3d32:
     - jasoncw/metropolitan-exchange-plaza
   f05f8545:
@@ -7161,6 +7265,8 @@ lots:
     - wannglondon/mediterranean-building-5
   0ea6c6e0:
     - wannglondon/mediterranean-building-6
+  0eb71ef6:
+    - davide1983it/villa-cubelles
   0ecb9265:
     - wannglondon/mediterranean-building-11
   0f349d6e:
@@ -7183,8 +7289,16 @@ lots:
     - pclark06/mgb-convenience-stores
   0f4254eb:
     - pclark06/mgb-convenience-stores
+  0f51d765:
+    - davide1983it/residential-building-set-1
   0f523a19:
     - wannglondon/mediterranean-building-23
+  0f612836:
+    - davide1983it/residential-building-set-1
+  0f612888:
+    - davide1983it/residential-building-set-1
+  0f71dcaa:
+    - davide1983it/duplex-house-set-1
   0f72ab59:
     - wannglondon/paris-building-20
   0f755d8a:
@@ -7195,8 +7309,16 @@ lots:
     - historic-harbor/lots
   0f77e369:
     - historic-harbor/lots
+  0f78b0ad:
+    - davide1983it/duplex-house-set-1
   0f7fe0c7:
     - historic-harbor/lots
+  0f82ee58:
+    - davide1983it/social-housing-set-1
+  0f82fd04:
+    - davide1983it/social-housing-set-1
+  0f888d44:
+    - davide1983it/palazzo-derio
   0f9bf691:
     - madhatter106/midrise-office-pack-vol09
   0f9bf745:
@@ -7809,13 +7931,15 @@ lots:
   2e131e00:
     - wannglondon/london-flats-1
   2e1b2045:
-    - davide1983it/playgrounds
+    - davide1983it/playground
   2e891faa:
     - maxis/shorty-burger
   2ea6c65b:
     - wannglondon/mediterranean-building-6
   2ea6c775:
     - wannglondon/mediterranean-building-6
+  2eb72021:
+    - davide1983it/villa-cubelles
   2ee0c2a9:
     - jasoncw/denton-corporation
   2f213c99:
@@ -7830,12 +7954,22 @@ lots:
     - wannglondon/mediterranean-building-20
   2f3fb269:
     - pclark06/mgb-convenience-stores
+  2f404ba7:
+    - davide1983it/palazzo-sagesta
   2f4e4f5e:
     - pclark06/mgb-convenience-stores
   2f52316a:
     - pclark06/mgb-convenience-stores
+  2f5c5017:
+    - davide1983it/residential-building-set-1
   2f72aabc:
     - wannglondon/paris-building-20
+  2f82ed8b:
+    - davide1983it/social-housing-set-1
+  2f83010e:
+    - davide1983it/social-housing-set-1
+  2f861e43:
+    - davide1983it/social-housing-set-1
   2f9bf0a6:
     - madhatter106/midrise-office-pack-vol09
   2f9bf663:
@@ -9101,6 +9235,8 @@ lots:
     - wannglondon/mediterranean-building-11
   4ec9ac52:
     - wannglondon/mediterranean-building-11
+  4f1d5589:
+    - davide1983it/villa-denia
   4f3fb2be:
     - pclark06/mgb-convenience-stores
   4f41294f:
@@ -9111,10 +9247,18 @@ lots:
     - pclark06/mgb-convenience-stores
   4f523842:
     - wannglondon/mediterranean-building-23
+  4f5ba600:
+    - davide1983it/residential-building-set-1
+  4f5bd42f:
+    - davide1983it/residential-building-set-1
   4f7aaf74:
     - wannglondon/paris-building-21
   4f7ef18b:
     - historic-harbor/lots
+  4f82fcb0:
+    - davide1983it/social-housing-set-1
+  4f83024e:
+    - davide1983it/social-housing-set-1
   4f9bfc8e:
     - madhatter106/midrise-office-pack-vol09
   5047df1e:
@@ -12043,10 +12187,16 @@ lots:
     - wannglondon/mediterranean-building-2
   6ea78c7d:
     - wannglondon/mediterranean-building-7
+  6edfb72d:
+    - davide1983it/atlantia-insurance-building
   6eec4974:
     - wannglondon/mediterranean-flats-g
   6f2254a2:
     - wannglondon/mediterranean-flats-j
+  6f34f4d0:
+    - davide1983it/villa-javea
+  6f392ddf:
+    - davide1983it/villa-oropesa
   6f3f5715:
     - wannglondon/mediterranean-building-20
   6f479d1d:
@@ -12055,6 +12205,14 @@ lots:
     - pclark06/mgb-convenience-stores
   6f53d97b:
     - pclark06/mgb-convenience-stores
+  6f5c5005:
+    - davide1983it/residential-building-set-1
+  6f78b316:
+    - davide1983it/duplex-house-set-1
+  6f82fc6b:
+    - davide1983it/social-housing-set-1
+  6f831d36:
+    - davide1983it/social-housing-set-1
   6f9bf23f:
     - madhatter106/midrise-office-pack-vol09
   6f9bf93c:
@@ -12644,18 +12802,30 @@ lots:
     - wannglondon/mediterranean-building-1
   8ecb8f7d:
     - wannglondon/mediterranean-building-7
+  8f2ca263:
+    - davide1983it/villa-almansa
   8f34f233:
     - wannglondon/mediterranean-building-15
+  8f39b22c:
+    - davide1983it/residential-building-set-1
+  8f39c1d8:
+    - davide1983it/palazzo-maresio
   8f3b9cd8:
     - wannglondon/mediterranean-building-16
   8f3cf651:
     - wannglondon/mediterranean-building-17
   8f3d3d56:
     - pclark06/mgb-convenience-stores
+  8f404ae1:
+    - davide1983it/palazzo-sagesta
   8f4128ea:
     - pclark06/mgb-convenience-stores
   8f450d5e:
     - pclark06/mgb-convenience-stores
+  8f4566b5:
+    - davide1983it/villa-teulada
+  8f456da9:
+    - davide1983it/palazzo-sagesta
   8f48dac1:
     - pclark06/mgb-convenience-stores
   8f4cfcbd:
@@ -12668,8 +12838,14 @@ lots:
     - jasoncw/dreieck-park
   8f77c3a9:
     - historic-harbor/lots
+  8f7804f9:
+    - davide1983it/duplex-house-set-1
+  8f78173d:
+    - davide1983it/duplex-house-set-1
   8f7fe1b3:
     - historic-harbor/lots
+  8f82ff63:
+    - davide1983it/social-housing-set-1
   8f864ed6:
     - wannglondon/mediterranean-building-25
   8f9bf208:
@@ -13252,6 +13428,8 @@ lots:
   '90001390':
     - maxis/base
     - pegasus/spam
+  9032dc28:
+    - davide1983it/maraldi-building
   '90644677':
     - jasoncw/medium-sized-train-station
   906d1d2a:
@@ -13795,6 +13973,8 @@ lots:
     - wannglondon/mediterranean-building-13
   af2b9865:
     - wannglondon/mediterranean-building-14
+  af2ca37f:
+    - davide1983it/villa-almansa
   af3d3dc9:
     - pclark06/mgb-convenience-stores
   af3f5934:
@@ -13819,14 +13999,22 @@ lots:
     - wannglondon/mediterranean-building-23
   af523995:
     - wannglondon/mediterranean-building-23
+  af5c4927:
+    - davide1983it/residential-building-set-1
   af76a013:
     - historic-harbor/lots
   af77e43b:
     - historic-harbor/lots
   af77e550:
     - historic-harbor/lots
+  af787d1d:
+    - davide1983it/duplex-house-set-1
   af7c3686:
     - wannglondon/mediterranean-building-24
+  af82fe09:
+    - davide1983it/social-housing-set-1
+  af87e61a:
+    - davide1983it/social-housing-set-1
   af9beffd:
     - madhatter106/midrise-office-pack-vol09
   afc2346e:
@@ -13843,6 +14031,8 @@ lots:
     - historic-harbor/lots
   b077c07f:
     - historic-harbor/lots
+  b07d3fac:
+    - davide1983it/zasco-building
   b080daa2:
     - historic-harbor/lots
   b094ebb8:
@@ -14379,6 +14569,8 @@ lots:
     - madhatter106/midrise-office-pack-vol09
   ce861316:
     - madhatter106/midrise-office-pack-vol09
+  ce9ef089:
+    - davide1983it/villa-oropesa
   cea1e6b4:
     - maxis/luckys-hang-ten
   cecb90e7:
@@ -14391,8 +14583,16 @@ lots:
     - wannglondon/mediterranean-building-15
   cf34c02e:
     - wannglondon/mediterranean-building-15
+  cf39c204:
+    - davide1983it/palazzo-maresio
+  cf39c256:
+    - davide1983it/palazzo-maresio
   cf3e24a8:
     - wannglondon/mediterranean-building-18
+  cf404b53:
+    - davide1983it/palazzo-sagesta
+  cf404bd9:
+    - davide1983it/palazzo-sagesta
   cf4210e4:
     - wannglondon/mediterranean-building-21
   cf4254bf:
@@ -14407,6 +14607,8 @@ lots:
     - pclark06/mgb-convenience-stores
   cf50eea4:
     - pclark06/mgb-convenience-stores
+  cf51d750:
+    - davide1983it/residential-building-set-1
   cf523caf:
     - pclark06/mgb-convenience-stores
   cf523d9a:
@@ -15120,6 +15322,10 @@ lots:
     - 11241036/modular-plaza-system
   ef34bf4d:
     - wannglondon/mediterranean-building-15
+  ef39c1ed:
+    - davide1983it/palazzo-maresio
+  ef39c22d:
+    - davide1983it/palazzo-maresio
   ef3b9de5:
     - wannglondon/mediterranean-building-16
   ef3bcf5b:
@@ -15158,12 +15364,18 @@ lots:
     - pclark06/mgb-convenience-stores
   ef523d68:
     - pclark06/mgb-convenience-stores
+  ef5c4900:
+    - davide1983it/residential-building-set-1
   ef77e4ca:
     - historic-harbor/lots
   ef7f3d32:
     - jasoncw/metropolitan-exchange-plaza
+  ef82ff30:
+    - davide1983it/social-housing-set-1
   ef86c4c0:
     - wannglondon/mediterranean-building-26
+  ef9073ff:
+    - davide1983it/torre-teala
   ef964be9:
     - wannglondon/mediterranean-building-27
   ef9bee7d:
@@ -15182,6 +15394,8 @@ lots:
     - madhatter106/midrise-office-pack-vol09
   ef9bfece:
     - madhatter106/midrise-office-pack-vol09
+  efdbcc25:
+    - davide1983it/parea-building
   f0bf0dab:
     - jeronij/ship-pack
   f0c045df:
@@ -26616,6 +26830,10 @@ models:
     - agc/automobile-dlc
   0f2641c9:
     - agc/automobile-dlc
+  0f31a4ce:
+    - davide1983it/palazzo-maresio
+  0f31bd3d:
+    - davide1983it/palazzo-maresio
   0f353780:
     - pclark06/mgb-convenience-stores
   0f368471:
@@ -26632,6 +26850,8 @@ models:
     - pclark06/mgb-convenience-stores
   0f49064b:
     - pclark06/mgb-convenience-stores
+  0f49aae3:
+    - davide1983it/residential-building-set-1
   0f4b72fb:
     - agc/environment-dlc
   0f4b8d48:
@@ -26714,6 +26934,8 @@ models:
     - agc/automobile-dlc
   0f9ceb4f:
     - agc/automobile-dlc
+  0fa0a30d:
+    - davide1983it/social-housing-set-1
   0fa27560:
     - agc/automobile-dlc
   0fa27e57:
@@ -26754,6 +26976,8 @@ models:
     - wannglondon/hotel-particuliers
   0fec4077:
     - agc/environment-dlc
+  0fef8d9e:
+    - davide1983it/residential-building-set-1
   0ff25698:
     - agc/automobile-dlc
   0ff256b0:
@@ -26821,6 +27045,8 @@ models:
     - agc/automobile-dlc
   '10168534':
     - agc/automobile-dlc
+  101792b8:
+    - davide1983it/villa-teulada
   10228e59-0016:
     - mickebear/mega-props-vol01
   10228e59-0035:
@@ -26897,6 +27123,8 @@ models:
     - agc/automobile-dlc
   10703eb9:
     - girafe/carpack
+  10703ee4:
+    - davide1983it/maraldi-building
   10703f42:
     - girafe/carpack
   10711a1f:
@@ -26922,6 +27150,8 @@ models:
     - agc/automobile-dlc
   108e7f2d:
     - agc/automobile-dlc
+  10903a7a:
+    - davide1983it/residential-building-set-1
   1093b565:
     - agc/automobile-dlc
   1097778a:
@@ -36907,6 +37137,8 @@ models:
     - davide1983it/prop-pack-vol01
   2efd2a77:
     - agc/environment-dlc
+  2efdc6a9:
+    - davide1983it/villa-denia
   2eff1b9c:
     - agc/automobile-dlc
   2effa45e:
@@ -36949,6 +37181,10 @@ models:
     - agc/automobile-dlc
   2f28e969:
     - agc/environment-dlc
+  2f31f4a0:
+    - davide1983it/palazzo-sagesta
+  2f322936:
+    - davide1983it/palazzo-sagesta
   2f3d10b5:
     - pclark06/mgb-convenience-stores
   2f3e8bda:
@@ -36959,6 +37195,8 @@ models:
     - pclark06/mgb-convenience-stores
   2f4bdacf:
     - pclark06/mgb-convenience-stores
+  2f501ec4:
+    - davide1983it/social-housing-set-1
   2f75a4bf:
     - davide1983it/prop-pack-vol01
   2f7ed5b9:
@@ -37025,6 +37263,8 @@ models:
     - agc/automobile-dlc
   2fed7c4c:
     - agc/automobile-dlc
+  2fefcd3e:
+    - davide1983it/residential-building-set-1
   30092ad1:
     - davide1983it/outdoor-set-v3
     - davide1983it/prop-pack-vol01
@@ -43317,14 +43557,26 @@ models:
     - pclark06/mgb-convenience-stores
   4f4a2fbf:
     - pclark06/mgb-convenience-stores
+  4f4a4ebb:
+    - davide1983it/residential-building-set-1
+  4f5028b5:
+    - davide1983it/social-housing-set-1
   4f573010:
     - agc/automobile-dlc
+  4f7015ec:
+    - davide1983it/duplex-house-set-1
+  4f702897:
+    - davide1983it/duplex-house-set-1
+  4f70a958:
+    - davide1983it/duplex-house-set-1
   4f730d53:
     - agc/environment-dlc
   4f744ee0:
     - agc/automobile-dlc
   4f746d99:
     - agc/automobile-dlc
+  4f8859bc:
+    - davide1983it/torre-teala
   4f8b14be:
     - girafe/flora-pack
   4f9155a6:
@@ -43343,6 +43595,8 @@ models:
     - agc/automobile-dlc
   4f9ccd38:
     - agc/automobile-dlc
+  4fa088eb:
+    - davide1983it/social-housing-set-1
   4fad0e34:
     - agc/automobile-dlc
   4fae5c7d:
@@ -49717,6 +49971,10 @@ models:
     - davide1983it/prop-pack-vol01
   6f261353:
     - agc/automobile-dlc
+  6f2804aa:
+    - davide1983it/social-housing-set-1
+  6f3178b1:
+    - davide1983it/palazzo-maresio
   6f353c1c:
     - pclark06/mgb-convenience-stores
   6f3684ad:
@@ -49735,6 +49993,10 @@ models:
     - pclark06/mgb-convenience-stores
   6f40eaec:
     - pclark06/mgb-convenience-stores
+  6f49903a:
+    - davide1983it/residential-building-set-1
+  6f49bad0:
+    - davide1983it/residential-building-set-1
   6f4a3003:
     - pclark06/mgb-convenience-stores
   6f4caa0d:
@@ -49745,6 +50007,8 @@ models:
     - agc/automobile-dlc
   6f5759c1:
     - agc/automobile-dlc
+  6f706f4f:
+    - davide1983it/duplex-house-set-1
   6f73d153:
     - agc/automobile-dlc
   6f73d769:
@@ -49779,6 +50043,8 @@ models:
     - agc/environment-dlc
   6f96910a:
     - agc/environment-dlc
+  6fa07f06:
+    - davide1983it/social-housing-set-1
   6fa7aff4:
     - agc/automobile-dlc
   6fa7b79a:
@@ -49803,6 +50069,8 @@ models:
     - agc/automobile-dlc
   6fc74633:
     - wannglondon/paris-building-4
+  6fc8e7a5:
+    - davide1983it/social-housing-set-1
   6fc9d2d8:
     - agc/automobile-dlc
   6fccc907:
@@ -49815,6 +50083,8 @@ models:
     - wannglondon/paris-building-7
   6fd14352-0011:
     - bsc/snm-props-vol01
+  6fd3903e:
+    - davide1983it/parea-building
   6fd5a725-0025:
     - bsc/misc-props-vol01
   6fd5a725-0026:
@@ -55500,6 +55770,8 @@ models:
     - pclark06/mgb-convenience-stores
   8f40eb7c:
     - pclark06/mgb-convenience-stores
+  8f49b095:
+    - davide1983it/residential-building-set-1
   8f4cab85:
     - agc/automobile-dlc
   8f51c623:
@@ -55546,6 +55818,8 @@ models:
     - agc/automobile-dlc
   8fa7a9f1:
     - agc/automobile-dlc
+  8fa8e877:
+    - davide1983it/zasco-building
   8faf990b:
     - wannglondon/old-mediterranean-pack
   8fb10068:
@@ -55566,6 +55840,8 @@ models:
     - wannglondon/mediterranean-flats-b
   8fc3955d:
     - davide1983it/prop-pack-vol01
+  8fc86435:
+    - davide1983it/social-housing-set-1
   8fc9bff0:
     - agc/automobile-dlc
   8fc9d2f2:
@@ -56065,6 +56341,8 @@ models:
     - simgoober/models-w2w-commercials
   9105f318:
     - csx/mega-props-vol05
+  91092fa1:
+    - davide1983it/villa-oropesa
   910b1e82:
     - simgoober/mega-props-vol01
   910b1fb9:
@@ -56079,6 +56357,8 @@ models:
     - ripptide/mega-props-vol04
   910f5204:
     - ripptide/mega-props-vol04
+  910fb753:
+    - davide1983it/villa-cubelles
   9112f426:
     - mickebear/mega-props-vol01
   '91131185':
@@ -61459,6 +61739,8 @@ models:
     - agc/automobile-dlc
   aefcc619:
     - davide1983it/prop-pack-vol01
+  aefd991d:
+    - davide1983it/villa-almansa
   af0d0b0f:
     - agc/automobile-dlc
   af0d0b2c:
@@ -61497,10 +61779,18 @@ models:
     - pclark06/mgb-convenience-stores
   af40ea1e:
     - pclark06/mgb-convenience-stores
+  af484c56:
+    - davide1983it/residential-building-set-1
+  af498443:
+    - davide1983it/residential-building-set-1
   af4c3fd9:
     - agc/automobile-dlc
   af681db6-81c8:
     - robdragon/props-vol01
+  af6feb86:
+    - davide1983it/duplex-house-set-1
+  af70c228:
+    - davide1983it/duplex-house-set-1
   af75a3d4:
     - davide1983it/prop-pack-vol01
   af7971eb:
@@ -61517,6 +61807,8 @@ models:
     - agc/environment-dlc
   af9aa2a6:
     - agc/environment-dlc
+  afa0809c:
+    - davide1983it/social-housing-set-1
   afa2757f:
     - agc/automobile-dlc
   afa27e74:
@@ -61733,6 +62025,10 @@ models:
   b0818705:
     - davide1983it/outdoor-set-v3
     - davide1983it/prop-pack-vol01
+  b09048d6:
+    - davide1983it/residential-building-set-1
+  b0917dbc:
+    - davide1983it/palazzo-derio
   b09c9d75-31a3:
     - robdragon/props-vol01
   b0a079f2:
@@ -72894,10 +73190,14 @@ models:
     - davide1983it/prop-pack-vol01
   cf1e0946:
     - davide1983it/prop-pack-vol01
+  cf220646:
+    - davide1983it/atlantia-insurance-building
   cf23fb4d:
     - agc/automobile-dlc
   cf261587:
     - agc/automobile-dlc
+  cf273137:
+    - davide1983it/social-housing-set-1
   cf2bdcf8-001d:
     - jmyers2043/mega-props-agriculture-vol01
   cf2bdcf8-001e:
@@ -72938,6 +73238,14 @@ models:
     - jmyers2043/mega-props-agriculture-vol01
   cf2bdcf8-0061:
     - jmyers2043/mega-props-agriculture-vol01
+  cf31822d:
+    - davide1983it/palazzo-maresio
+  cf319213:
+    - davide1983it/palazzo-maresio
+  cf31eb27:
+    - davide1983it/palazzo-sagesta
+  cf32031d:
+    - davide1983it/palazzo-sagesta
   cf392e61:
     - pclark06/mgb-convenience-stores
   cf3a7398:
@@ -72962,6 +73270,8 @@ models:
     - agc/automobile-dlc
   cf575ec1:
     - agc/automobile-dlc
+  cf71201f:
+    - davide1983it/social-housing-set-1
   cf74499b:
     - agc/automobile-dlc
   cf7460df:
@@ -73061,6 +73371,8 @@ models:
     - agc/automobile-dlc
   d016723d:
     - jasoncw/beacon-apartments
+  d017b25e:
+    - davide1983it/villa-javea
   d01b338a:
     - agc/automobile-dlc
   d0250548:
@@ -79165,6 +79477,10 @@ models:
     - davide1983it/prop-pack-vol01
   ef23ee50:
     - agc/automobile-dlc
+  ef27fa52:
+    - davide1983it/social-housing-set-1
+  ef31fa59:
+    - davide1983it/palazzo-sagesta
   ef3538ce:
     - pclark06/mgb-convenience-stores
   ef388d5c-0022:
@@ -79179,6 +79495,8 @@ models:
     - wannglondon/french-hospital
   ef40ebcb:
     - pclark06/mgb-convenience-stores
+  ef50327c:
+    - davide1983it/social-housing-set-1
   ef51a315:
     - agc/environment-dlc
   ef57302b:
@@ -79254,6 +79572,8 @@ models:
     - jasoncw/hotel-utica
   efeec02d:
     - wannglondon/paris-building-15
+  eff083c5:
+    - davide1983it/residential-building-set-1
   eff25b20:
     - agc/automobile-dlc
   eff2bc7f:
@@ -166563,6 +166883,130 @@ textures:
     - cycledogg/textures-vol01
   ddfb8000:
     - cycledogg/textures-vol01
+  e9014000:
+    - ndex/textures-vol01
+  e9015000:
+    - ndex/textures-vol01
+  e9016000:
+    - ndex/textures-vol01
+  e9017000:
+    - ndex/textures-vol01
+  e9018000:
+    - ndex/textures-vol01
+  e9019000:
+    - ndex/textures-vol01
+  e901a000:
+    - ndex/textures-vol01
+  e901b000:
+    - ndex/textures-vol01
+  e901c000:
+    - ndex/textures-vol01
+  e901d000:
+    - ndex/textures-vol01
+  e901e000:
+    - ndex/textures-vol01
+  e901f000:
+    - ndex/textures-vol01
+  e9024000:
+    - ndex/textures-vol01
+  e9025000:
+    - ndex/textures-vol01
+  e9026000:
+    - ndex/textures-vol01
+  e9029000:
+    - ndex/textures-vol01
+  e902a000:
+    - ndex/textures-vol01
+  e902b000:
+    - ndex/textures-vol01
+  e902c000:
+    - ndex/textures-vol01
+  e902d000:
+    - ndex/textures-vol01
+  e902e000:
+    - ndex/textures-vol01
+  e902f000:
+    - ndex/textures-vol01
+  e9034000:
+    - ndex/textures-vol01
+  e9035000:
+    - ndex/textures-vol01
+  e9036000:
+    - ndex/textures-vol01
+  e9037000:
+    - ndex/textures-vol01
+  e9038000:
+    - ndex/textures-vol01
+  e9039000:
+    - ndex/textures-vol01
+  e903a000:
+    - ndex/textures-vol01
+  e903b000:
+    - ndex/textures-vol01
+  e903c000:
+    - ndex/textures-vol01
+  e903d000:
+    - ndex/textures-vol01
+  e903e000:
+    - ndex/textures-vol01
+  e903f000:
+    - ndex/textures-vol01
+  e9044000:
+    - ndex/textures-vol01
+  e9045000:
+    - ndex/textures-vol01
+  e9046000:
+    - ndex/textures-vol01
+  e9047000:
+    - ndex/textures-vol01
+  e9048000:
+    - ndex/textures-vol01
+  e9049000:
+    - ndex/textures-vol01
+  e904a000:
+    - ndex/textures-vol01
+  e904b000:
+    - ndex/textures-vol01
+  e904c000:
+    - ndex/textures-vol01
+  e904d000:
+    - ndex/textures-vol01
+  e904e000:
+    - ndex/textures-vol01
+  e904f000:
+    - ndex/textures-vol01
+  e9054000:
+    - ndex/textures-vol01
+  e9055000:
+    - ndex/textures-vol01
+  e9056000:
+    - ndex/textures-vol01
+  e9057000:
+    - ndex/textures-vol01
+  e9058000:
+    - ndex/textures-vol01
+  e9059000:
+    - ndex/textures-vol01
+  e905a000:
+    - ndex/textures-vol01
+  e905b000:
+    - ndex/textures-vol01
+  e905c000:
+    - ndex/textures-vol01
+  e905d000:
+    - ndex/textures-vol01
+  e905e000:
+    - ndex/textures-vol01
+  e905f000:
+    - ndex/textures-vol01
+  e9064000:
+    - ndex/textures-vol01
+  e9065000:
+    - ndex/textures-vol01
+  e9066000:
+    - ndex/textures-vol01
+  e9067000:
+    - ndex/textures-vol01
   f0b06000:
     - bsc/textures-vol02
   f0b06005:
@@ -178881,6 +179325,678 @@ textures:
     - rretail/mega-props-vol01
   f8a080a5:
     - rretail/mega-props-vol01
+  f8a09000:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09005:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0900a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09010:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09015:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0901a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09020:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09025:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0902a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09030:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09035:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0903a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09040:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09045:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0904a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09050:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09055:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0905a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09060:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09065:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0906a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09070:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09075:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0907a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09080:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09085:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0908a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09090:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09095:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0909a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a090fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09100:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09105:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0910a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09110:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09115:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0911a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09120:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09125:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0912a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09130:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09135:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0913a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09140:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09145:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0914a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09150:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09155:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0915a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09160:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09165:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0916a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09170:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09175:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0917a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09180:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09185:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0918a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09190:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09195:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0919a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a091fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09200:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09205:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0920a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09210:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09215:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0921a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09220:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09225:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0922a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09230:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09235:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0923a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09240:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09245:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0924a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09250:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09255:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0925a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09260:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09265:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0926a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09270:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09275:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0927a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09280:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09285:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0928a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09290:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09295:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0929a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a092fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09300:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09305:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0930a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09310:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09315:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0931a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09320:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09325:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0932a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09330:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09335:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0933a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09340:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09345:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0934a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09350:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09355:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0935a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09360:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09365:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0936a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09370:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09375:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0937a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09380:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09385:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0938a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09390:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09395:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0939a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a093fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09400:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09405:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0940a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09410:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09415:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0941a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09420:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09425:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0942a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09430:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09435:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0943a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09440:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09445:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0944a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09450:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09455:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0945a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09460:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09465:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0946a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09470:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09475:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0947a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09480:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09485:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0948a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09490:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09495:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0949a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a094fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09500:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09505:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0950a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09510:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09515:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0951a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09520:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09525:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0952a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09530:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09535:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0953a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09540:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09545:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0954a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09550:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09555:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0955a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09560:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09565:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0956a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09570:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09575:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0957a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09580:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09585:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0958a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09590:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09595:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0959a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a095fa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09600:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09605:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0960a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09610:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09615:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0961a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09620:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09625:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0962a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09630:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09635:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0963a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09640:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09645:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0964a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09650:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09655:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0965a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09660:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09665:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0966a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09670:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09675:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0967a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09680:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09685:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0968a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09690:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a09695:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a0969a:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096a0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096a5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096aa:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096b0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096b5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096ba:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096c0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096c5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096ca:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096d0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096d5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096da:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096e0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096e5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096ea:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096f0:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096f5:
+    - kingofsimcity/superpaths-pathway-textures
+  f8a096fa:
+    - kingofsimcity/superpaths-pathway-textures
   f8d84375:
     - bsc/textures-vol03
   f8d8437a:
