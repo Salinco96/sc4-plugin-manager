@@ -37,7 +37,7 @@ export function PackageEntries({
   }, [fileData])
 
   const [expandedCategories, setExpandedCategories] = useState(() => {
-    return mapValues(categorizedEntries, (entries, category) => {
+    return mapValues(categorizedEntries, (_entries, category) => {
       return !expandable || category === DBPFEntryCategory.EXEMPLARS
     })
   })
