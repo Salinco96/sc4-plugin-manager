@@ -79,7 +79,7 @@ export function serializeTag<T extends TagType>(type: T, value: TagValue<T>): Se
 export const STATE_TAGS: {
   [state in VariantState]: TagColor | undefined
 } = {
-  [VariantState.DEFAULT]: undefined,
+  [VariantState.DEFAULT]: "info",
   [VariantState.ENABLED]: "success",
   [VariantState.DEPENDENCY]: "success",
   [VariantState.DEPRECATED]: "warning",

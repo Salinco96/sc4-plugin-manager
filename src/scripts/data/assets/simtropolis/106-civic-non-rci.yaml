@@ -18243,11 +18243,194 @@ assets:
     assetId: simtropolis/34134-capitol-state-building
     authors:
       - davide1983it
+    buildings:
+      capitol state building/Davide1983it - Capitol State Building (No Garden).SC4Lot:
+        cbd483bc-0d3551eb:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Capitol State Building
+          flamability: 10
+          garbage: 15
+          label: Capitol State Building
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: cbd483bc-00e8
+          name: Davide1983it - Capitol State Building
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      capitol state building/Davide1983it - Capitol State Building.SC4Desc:
+        cbd483bc-cd3405ed:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Capitol State Building
+          flamability: 10
+          garbage: 15
+          label: Capitol State Building
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: cbd483bc-00e8
+          name: Davide1983it - Capitol State Building
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      capitol state building/Davide1983it - Capitol State Building.SC4Lot:
+        cbd483bc-8d34117b:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Capitol State Building
+          flamability: 10
+          garbage: 15
+          label: Capitol State Building
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: cbd483bc-00e8
+          name: Davide1983it - Capitol State Building
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/19261-peg-oww2-resource-pack-2
+      - simtropolis/20966-peg-mtp-super-pack
+      - cycledogg/mega-props-vol01
+      - dolphin66/mega-props-vol01
+      - simgoober/mega-props-vol01
+      - swi21/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tCapitol State Building\n</p>\n\n<p>\n\tI hope that someone may help me to write here the dependecies used\_\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\tCost 110.000\n</p>\n\n<p>\n\t\_\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - CP Vol01.dat</span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a><br>\n\t<abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - Misc Vol01.dat<br>\n\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=426\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=426</a></span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - D66 Vol01.dat</span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=396\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=396</a><br>\n\t<abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - SG Vol 01.dat<br>\n\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a></span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - swi21 Vol01.dat<br>\n\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=403\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=403</a></span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\">Del_People.dat<br>\n\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3448\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3448</a></span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\">Nams PROPS PACK Vol 2.dat<br>\n\t<a href=\"https://www.toutsimcities.com/downloads/start/1882\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.toutsimcities.com/downloads/start/1882</a></span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"Pegasus\">PEG</abbr>-OWW2_RESOURCE2.dat</span></span>\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed4784145019\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/19261-peg-oww2-resource-pack-2/?do=embed\" style=\"background-color:#fcfcfc;border:1px solid rgba(0,0,0,.1);color:#353535;font-size:14px;\"></iframe>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<span><span style=\"font-size:20px;\">PEG_MTP_SUPER_RESOURCE_PACK.dat</span></span>\n</p>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\_\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed4278464738\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/?do=embed\" style=\"background-color:#fcfcfc;border:1px solid rgba(0,0,0,.1);color:#353535;font-size:14px;\"></iframe>\n\n<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\_\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: capitol state building.rar
+    files:
+      - capitol state building/Davide1983it - Capitol State Building (No Garden).SC4Lot
+      - capitol state building/Davide1983it - Capitol State Building.SC4Desc
+      - capitol state building/Davide1983it - Capitol State Building.SC4Lot
+      - capitol state building/Davide1983it - Capitol State Building.SC4Model
+      - capitol state building/Thumbs.db
+      - capitol state building/capitol state building (1).jpg
+      - capitol state building/capitol state building (2).jpg
+      - capitol state building/capitol state building (no garden) (1).jpg
+      - capitol state building/capitol state building (no garden) (2).jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/60293f7253753_capitolstatebuilding(nogarden)(2).jpg.e2337d667ce4d54c064b0645c247e999.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/60293f76b4073_capitolstatebuilding(nogarden)(1).jpg.886b148a7c02cac2a961c41db363d8b1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/60293f82cac9a_capitolstatebuilding(2).jpg.f51840aa5cb068b539bc8327389f106b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_02/60293f89d370b_capitolstatebuilding(1).jpg.ebfd1ef8c6d6f7f73de5e2b7af00f91f.jpg
     lastModified: 2021-02-14T15:20:25.000Z
+    lots:
+      capitol state building/Davide1983it - Capitol State Building (No Garden).SC4Lot:
+        0d3551eb:
+          building: 0d3551eb
+          name: Davide1983it - Capitol State Building (No Garden)
+          props:
+            - 1337b3d6
+            - 1337b3d7
+            - 1337b481
+            - 2a9f0000
+            - 2ab70000
+            - 2af60000
+            - 5337b3f7
+            - 9337b3b2
+            - 9337b3b3
+            - af8e0ed7
+            - f337b392
+            - f337b393
+            - f337b394
+            - f337b429
+            - f337b42a
+            - f337b44a
+            - f337b44b
+          size: 8x6
+          textures:
+            - 1da44600
+            - 252b3000
+      capitol state building/Davide1983it - Capitol State Building.SC4Lot:
+        8d34117b:
+          building: 8d34117b
+          name: Davide1983it - Capitol State Building
+          props:
+            - '00580000'
+            - 073d48b4
+            - 0e9d3879
+            - 0eb5b000
+            - 0f8e0ec0
+            - 1079f3db
+            - 1079f48f
+            - 107a5879
+            - 1337b3d6
+            - 1337b3d7
+            - 1337b481
+            - '1e180000'
+            - 2a7ccda1
+            - 2a9b0000
+            - 2a9c0000
+            - 2a9f0000
+            - 2aa20000
+            - 3079f4c7
+            - 4e2e6001
+            - 4eb5aff1
+            - 4f78e359
+            - 5079f424
+            - 5079f4ae
+            - 507a581d
+            - 5337b3f7
+            - 6f93773a
+            - 9337b3b2
+            - 9337b3b3
+            - 9bbe123b
+            - 9fd8ab5f
+            - ae9003ee
+            - b079f3f1
+            - dfd96786
+            - f079f450
+            - f079f470
+            - f337b392
+            - f337b393
+            - f337b394
+            - f337b429
+            - f337b42a
+            - f337b44a
+            - f337b44b
+            - ffd94f40
+            - ffd952fd
+          size: 10x10
+          textures:
+            - 1da44600
+            - 252b3000
+            - 25db0000
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      capitol state building/Davide1983it - Capitol State Building.SC4Model:
+        - cbd483bc-00e8
     name: Capitol State Building
+    sha256: 40a3aff3fbafa54999dd41182420d5b4a0c31554bbefcd7b59e3912de0d6b3dc
+    size: 4400599
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_02/60293fbc5baa3_capitolstatebuilding(nogarden)(2).thumb.jpg.500556c5c79757a7b1ef906a3d2b3759.jpg
+    uncompressed: 4733818
     url: https://community.simtropolis.com/files/file/34134-capitol-state-building/
+    version: 1.0.0
   simtropolis/34142:
     assetId: simtropolis/34142-old-orlando-city-hall
     authors:
@@ -18704,11 +18887,203 @@ assets:
     assetId: simtropolis/34564-capitol-state-building-in-hd
     authors:
       - davide1983it
+    buildings:
+      capitol building/Davide1983it - Capitol State Building HD (No Garden).SC4Lot:
+        cbd483bc-adec2d41:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Insert ploppable description here.
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: 6fdfa654
+          name: Davide1983it - Capitol Building Hd 1
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      capitol building/Davide1983it - Capitol State Building HD.SC4Desc:
+        cbd483bc-0dec2542:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Insert ploppable description here.
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: 6fdfa654
+          name: Davide1983it - Capitol Building Hd 1
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      capitol building/Davide1983it - Capitol State Building HD.SC4Lot:
+        cbd483bc-adec2cc9:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Insert ploppable description here.
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: 6fdfa654
+          name: Davide1983it - Capitol Building Hd 1
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/19261-peg-oww2-resource-pack-2
+      - simtropolis/20966-peg-mtp-super-pack
+      - cycledogg/mega-props-vol01
+      - dolphin66/mega-props-vol01
+      - simgoober/mega-props-vol01
+      - swi21/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<div style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t<div>\n\t\tCapitol Building in HD\n\t</div>\n\n\t<div>\n\t\ttwo version: with and without garden<br>\n\t\t@Simmer2 help me with texture\n\t</div>\n\n\t<div>\n\t\t\_\n\t</div>\n\n\t<div>\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - CP Vol01.dat</span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a><br>\n\t\t\t<abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - Misc Vol01.dat<br>\n\t\t\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=426\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=426</a></span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - D66 Vol01.dat</span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=396\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=396</a><br>\n\t\t\t<abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - SG Vol 01.dat<br>\n\t\t\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=746</a></span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"BATT Squad Certification\">BSC</abbr><span>\_</span>MEGA Props - swi21 Vol01.dat<br>\n\t\t\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=403\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=403</a></span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\">Del_People.dat<br>\n\t\t\t<a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3448\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3448</a></span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\">Nams PROPS PACK Vol 2.dat<br>\n\t\t\t<a href=\"https://www.toutsimcities.com/downloads/start/1882\" rel=\"external nofollow\" style=\"background-color:transparent;color:#1f5e8d;\">https://www.toutsimcities.com/downloads/start/1882</a></span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\"><abbr style=\"border-bottom:none;\" title=\"Pegasus\">PEG</abbr>-OWW2_RESOURCE2.dat</span></span>\n\t\t</p>\n\t\t<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed4784145019\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/19261-peg-oww2-resource-pack-2/?do=embed\" style=\"background-color:#fcfcfc;border:1px solid rgba(0,0,0,.1);color:#353535;font-size:14px;\"></iframe>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t<span><span style=\"font-size:20px;\">PEG_MTP_SUPER_RESOURCE_PACK.dat</span></span>\n\t\t</p>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t\_\n\t\t</p>\n\t\t<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed4278464738\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/?do=embed\" style=\"background-color:#fcfcfc;border:1px solid rgba(0,0,0,.1);color:#353535;font-size:14px;\"></iframe>\n\n\t\t<p style=\"background-color:#ffffff;color:#353535;font-size:14px;\">\n\t\t\t\_\n\t\t</p>\n\t</div>\n\n\t<p>\n\t\t\_\n\t</p>\n</div>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: capitol building.rar
+    files:
+      - capitol building/Davide1983it - Capitol State Building HD (No Garden).SC4Lot
+      - capitol building/Davide1983it - Capitol State Building HD.SC4Desc
+      - capitol building/Davide1983it - Capitol State Building HD.SC4Lot
+      - capitol building/Davide1983it - Capitol State Building HD.SC4Model
+      - capitol building/Thumbs.db
+      - capitol building/capitol building (1).jpg
+      - capitol building/capitol building (2).jpg
+      - capitol building/capitol building (3).jpg
+      - capitol building/capitol building (4).jpg
+      - capitol building/capitol building (5).jpg
+      - capitol building/capitol building (6).jpg
+      - capitol building/capitol building (7).jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2ae8ce54_capitolbuilding(1).jpg.7c7ef7bedc50b71e7327ec29e95adbba.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2b6bb866_capitolbuilding(2).jpg.30016bb1876fb0c368758dde9d884a8d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2bfed081_capitolbuilding(3).jpg.b821fadcec8633af18352d54e96ca47f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2cba4d9e_capitolbuilding(4).jpg.59bfa449b876d6e78bd4a8f81f361001.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2d930e02_capitolbuilding(5).jpg.8cc8c07ddeb7e1dbe313031a45f54b29.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2e1ce49e_capitolbuilding(6).jpg.e2862c94e6da09f33e877d3014633618.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f2ecbefa2_capitolbuilding(7).jpg.16cb9f13dc14564a198b7d515905f43e.jpg
     lastModified: 2021-07-04T17:43:21.000Z
+    lots:
+      capitol building/Davide1983it - Capitol State Building HD (No Garden).SC4Lot:
+        adec2d41:
+          building: adec2d41
+          name: Davide1983it - Capitol State Building HD 1 (No Garden)
+          props:
+            - 0f6e6eb5
+            - 1337b3d6
+            - 1337b3d7
+            - 1337b481
+            - 2a9f0000
+            - 2ab70000
+            - 2af60000
+            - 2f6e6eb1
+            - 4f6e6eba
+            - 5337b3f7
+            - 9337b3b2
+            - 9337b3b3
+            - af8e0ed7
+            - f337b392
+            - f337b393
+            - f337b394
+            - f337b429
+            - f337b42a
+            - f337b44a
+            - f337b44b
+          size: 8x6
+          textures:
+            - 1da44600
+            - 252b3000
+      capitol building/Davide1983it - Capitol State Building HD.SC4Lot:
+        adec2cc9:
+          building: adec2cc9
+          name: Davide1983it - Capitol State Building HD !
+          props:
+            - '00580000'
+            - 073d48b4
+            - 0e9d3879
+            - 0f8e0ec0
+            - 1079f3db
+            - 1079f48f
+            - 107a5879
+            - 1337b3d6
+            - 1337b3d7
+            - 1337b481
+            - '1e180000'
+            - 2a7ccda1
+            - 2a9b0000
+            - 2a9c0000
+            - 2a9f0000
+            - 2aa20000
+            - 2ab60000
+            - 2ab70000
+            - 3079f4c7
+            - 4e2e6001
+            - 4f78e359
+            - 5079f424
+            - 5079f4ae
+            - 507a581d
+            - 5337b3f7
+            - 6f93773a
+            - 9337b3b2
+            - 9337b3b3
+            - 9bbe123b
+            - 9fd8ab5f
+            - ae9003ee
+            - b079f3f1
+            - dfd96786
+            - f079f450
+            - f079f470
+            - f337b392
+            - f337b393
+            - f337b394
+            - f337b429
+            - f337b42a
+            - f337b44a
+            - f337b44b
+            - ffd94f40
+            - ffd952fd
+          size: 10x10
+          textures:
+            - 1da44600
+            - 252b3000
+            - 25db0000
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      capitol building/Davide1983it - Capitol State Building HD.SC4Model:
+        - 6fdfa654
     name: Capitol State Building in HD
+    sha256: f77725ee82c974a55418f9bcc810602461fb11d5f042766612c42797b6bae661
+    size: 6631348
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_07/60e1f33313a38_capitolbuilding(1).thumb.jpg.21896a169daf90be6f26b5ba872a17b5.jpg
+    uncompressed: 7494230
     url: https://community.simtropolis.com/files/file/34564-capitol-state-building-in-hd/
+    version: 1.0.0
   simtropolis/34568:
     assetId: simtropolis/34568-community-hall
     authors:
@@ -27547,4 +27922,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2025-01-14T08:38:42.212Z
+  timestamp: 2025-01-15T09:18:59.383Z

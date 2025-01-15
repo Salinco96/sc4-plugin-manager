@@ -232,6 +232,14 @@ sc4evermore/174-sc4d-lex-legacy-somy-dependencies-pack:
 
 sc4evermore/18: null
 
+sc4evermore/186-vip-delecto-ploppable-people:
+  packageId: delecto/people-props
+  paths:
+    Del_PeopleMMP.dat:
+      packageId: delecto/people-mmps
+      variantId: default
+  variantId: default
+
 sc4evermore/188-vip-vnaoned-props-pack-vol01:
   packageId: vnaoned/vip-props-vol01
 
@@ -739,7 +747,7 @@ sc4evermore/32-cycledogg-tree-controllers:
 
 sc4evermore/331-kel9509-census-repository-facility:
   packageId: ripplejet/census-repository-building
-  variantId: kel9509
+  variantId: default
 
 sc4evermore/36-lk33-seasonalflorapatch:
   packageId: lowkee33/seasonal-flora-patch
@@ -747,7 +755,7 @@ sc4evermore/36-lk33-seasonalflorapatch:
 
 sc4evermore/39-bsc-census-repository-building-by-ripplejet:
   packageId: ripplejet/census-repository-building
-  variantId: default
+  variantId: legacy
 
 sc4evermore/4-sc4d-lex-legacy-jmyers-homes-pack:
   packageId: jmyers2043/homes-pack
@@ -1141,6 +1149,10 @@ simtropolis/19158-vanwingerden-plaza-c:
       packageId: jasoncw/vanwingerden-plaza-c
       variantId: default
 
+simtropolis/19261-peg-oww2-resource-pack-2:
+  packageId: pegasus/oww2-resource-pack-2
+  variantId: default
+
 simtropolis/19328-perry-station:
   packageId: jasoncw/perry-station
   variants:
@@ -1384,6 +1396,7 @@ simtropolis/21661-peg-ppond-kit:
 
 simtropolis/21770-lbt-mega-prop-pack-vol01:
   packageId: lbt/mega-props-vol01
+  variantId: default
 
 simtropolis/21771-lbt-mega-textures-vol01-v3:
   packageId: lbt/mega-textures-vol01
@@ -1674,6 +1687,14 @@ simtropolis/27274-augustenborg-houses:
       variantId: darknite
     '100325':
       variantId: default
+
+simtropolis/27291-ms-parking-lots-road-set-and-car-props:
+  packageId: moto-kloss/parking-lots
+  paths:
+    MS 60s-70s Car props:
+      packageId: moto-kloss/car-props
+      variantId: default
+  variantId: default
 
 simtropolis/27295-wmp-monorail-system-unfinished-by-docrorlach:
   packageId: wmp/monorail-system-unfinished-by-docrorlach
@@ -2439,12 +2460,15 @@ simtropolis/32979-sm2-essentials-v4:
 
 simtropolis/32980-sm2-mega-prop-pack-vol1:
   packageId: simmer2/mega-props-vol01
+  variantId: default
 
 simtropolis/32981-sm2-mega-prop-pack-vol2:
   packageId: simmer2/mega-props-vol02
+  variantId: default
 
 simtropolis/32982-sm2-mega-prop-pack-vol3:
   packageId: simmer2/mega-props-vol03
+  variantId: default
 
 simtropolis/33068-cloqlo-parking-textures:
   packageId: cloqlo/parking-textures
@@ -2562,8 +2586,44 @@ simtropolis/34027-coris-no-kickout-lower-wealth-mod:
   packageId: corinamarie/no-kickout-lower-wealth
   variantId: default
 
+simtropolis/34033-imperial-tower:
+  packageId: davide1983it/imperial-tower
+  variantId: default
+
+simtropolis/34070-1250-building:
+  packageId: davide1983it/1250-building
+  variantId: default
+
+simtropolis/34071-small-park-4-way:
+  packageId: davide1983it/small-park
+  variantId: default
+
+simtropolis/34076-condominio-betulla:
+  packageId: davide1983it/condominio-betulla
+  variantId: sd
+
+simtropolis/34079-villa-nashville:
+  packageId: davide1983it/villa-nashville
+  variantId: default
+
+simtropolis/34081-villa-tucson:
+  packageId: davide1983it/villa-tucson
+  variantId: v1
+
 simtropolis/34082-old-mediterranean-pack:
   packageId: wannglondon/old-mediterranean-pack
+  variantId: default
+
+simtropolis/34083-villa-hartford:
+  packageId: davide1983it/villa-hartford
+  variantId: default
+
+simtropolis/34086-condominio-guccini:
+  packageId: davide1983it/condominio-guccini
+  variantId: sd
+
+simtropolis/34087-villa-cleveland:
+  packageId: davide1983it/villa-cleveland
   variantId: default
 
 simtropolis/34088-mediterranean-flats:
@@ -2575,6 +2635,42 @@ simtropolis/34088-mediterranean-flats:
     '185026':
       packageId: wannglondon/mediterranean-flats
       variantId: default
+
+simtropolis/34089-villa-boston:
+  packageId: davide1983it/villa-boston
+  variantId: default
+
+simtropolis/34092-villa-topeka:
+  packageId: davide1983it/villa-topeka
+  variantId: v1
+
+simtropolis/34096-villa-austin:
+  packageId: davide1983it/villa-austin
+  variantId: sd
+
+simtropolis/34108-villa-chattanooga:
+  packageId: davide1983it/villa-chattanooga
+  variantId: sd
+
+simtropolis/34109-villa-huntsville:
+  packageId: davide1983it/villa-huntsville
+  variantId: sd
+
+simtropolis/34110-villa-memphis:
+  packageId: davide1983it/villa-memphis
+  variantId: default
+
+simtropolis/34111-villa-omaha:
+  packageId: davide1983it/villa-omaha
+  variantId: default
+
+simtropolis/34112-villa-biloxi:
+  packageId: davide1983it/villa-biloxi
+  variantId: sd
+
+simtropolis/34113-villa-jackson:
+  packageId: davide1983it/villa-jackson
+  variantId: default
 
 simtropolis/34117-mediterranean-flats-corner-a:
   packageId: wannglondon/mediterranean-flats-a
@@ -2595,6 +2691,30 @@ simtropolis/34119-mediterranean-flats-corner-b:
     '185183':
       packageId: wannglondon/mediterranean-flats-b
       variantId: default
+
+simtropolis/34132-villa-tupelo:
+  packageId: davide1983it/villa-tupelo
+  variantId: sd
+
+simtropolis/34133-villa-lexington:
+  packageId: davide1983it/villa-lexington
+  variantId: default
+
+simtropolis/34134-capitol-state-building:
+  packageId: davide1983it/capitol-state-building
+  variantId: sd
+
+simtropolis/34136-villa-providence:
+  packageId: davide1983it/villa-providence
+  variantId: sd
+
+simtropolis/34138-villa-buffalo:
+  packageId: davide1983it/villa-buffalo
+  variantId: sd
+
+simtropolis/34147-villa-tallahassee:
+  packageId: davide1983it/villa-tallahassee
+  variantId: default
 
 simtropolis/34150-wanng-paris-pack-1-r:
   collectionId: wannglondon/paris-buildings
@@ -2632,9 +2752,33 @@ simtropolis/34150-wanng-paris-pack-1-r:
           variantId: default
       variantId: default
 
+simtropolis/34152-rvcamper-stopover:
+  packageId: davide1983it/rv-stopover
+  variantId: default
+
+simtropolis/34155-villa-richmond:
+  packageId: davide1983it/villa-richmond
+  variantId: sd
+
+simtropolis/34156-villa-cincinnati:
+  packageId: davide1983it/villa-cincinnati
+  variantId: v1
+
+simtropolis/34157-villa-lincoln:
+  packageId: davide1983it/villa-lincoln
+  variantId: sd
+
+simtropolis/34160-villa-phoenix:
+  packageId: davide1983it/villa-phoenix
+  variantId: sd
+
 simtropolis/34163-agc-automobile-dlc:
   packageId: agc/automobile-dlc
   variantId: default
+
+simtropolis/34167-villa-helena:
+  packageId: davide1983it/villa-helena
+  variantId: sd
 
 simtropolis/34169-wanng-paris-pack-2-r:
   collectionId: wannglondon/paris-buildings
@@ -2670,6 +2814,10 @@ simtropolis/34172-paris-batiment-9-left-corner:
       packageId: wannglondon/paris-building-9
       variantId: default
 
+simtropolis/34174-villa-bloomington:
+  packageId: davide1983it/villa-bloomington
+  variantId: sd
+
 simtropolis/34175-paris-batiment-10-right-corner:
   packageId: wannglondon/paris-building-10
   variants:
@@ -2680,8 +2828,28 @@ simtropolis/34175-paris-batiment-10-right-corner:
       packageId: wannglondon/paris-building-10
       variantId: default
 
+simtropolis/34180-villa-waco:
+  packageId: davide1983it/villa-waco
+  variantId: default
+
+simtropolis/34185-villa-fargo:
+  packageId: davide1983it/villa-fargo
+  variantId: sd
+
+simtropolis/34188-villa-liverpool-row-house:
+  packageId: davide1983it/villa-liverpool
+  variantId: default
+
 simtropolis/34196-kk-wind-farm-maintenance-facility:
   packageId: kloudkicker/wind-farm-maintenance-facility
+
+simtropolis/34212-belvedere:
+  packageId: davide1983it/belvedere
+  variantId: default
+
+simtropolis/34213-villa-bakersfield:
+  packageId: davide1983it/villa-bakersfield
+  variantId: sd
 
 simtropolis/34214-wanng-paris-pack-3-r:
   collectionId: wannglondon/paris-buildings
@@ -2713,6 +2881,58 @@ simtropolis/34214-wanng-paris-pack-3-r:
           variantId: default
       variantId: default
 
+simtropolis/34231-condominio-tubico-v2:
+  packageId: davide1983it/condominio-tubico
+  variantId: default
+
+simtropolis/34232-condominio-bellavista-2:
+  packageId: davide1983it/condominio-bellavista
+  variantId: default
+
+simtropolis/34233-condominio-burrini-v2:
+  packageId: davide1983it/condominio-burrini
+  variantId: sd
+
+simtropolis/34234-condominio-aristide-v2:
+  packageId: davide1983it/condominio-aristide
+  variantId: sd
+
+simtropolis/34235-condominio-bramante-v2:
+  packageId: davide1983it/condominio-bramante
+  variantId: default
+
+simtropolis/34236-condominio-colombo-v2:
+  packageId: davide1983it/condominio-colombo
+  variantId: sd
+
+simtropolis/34237-condominio-euripide:
+  packageId: davide1983it/condominio-euripide
+  variantId: sd
+
+simtropolis/34238-torre-237:
+  packageId: davide1983it/torre-237
+  variantId: default
+
+simtropolis/34241-condominio-atlantia-v2:
+  packageId: davide1983it/condominio-atlantia
+  variantId: default
+
+simtropolis/34256-condominio-vergano-v2:
+  packageId: davide1983it/condominio-vergano
+  variantId: default
+
+simtropolis/34257-villa-topeka-v2:
+  packageId: davide1983it/villa-topeka
+  variantId: v2
+
+simtropolis/34258-villa-tucson-v2:
+  packageId: davide1983it/villa-tucson
+  variantId: v2
+
+simtropolis/34259-villa-akron:
+  packageId: davide1983it/villa-akron
+  variantId: sd
+
 simtropolis/34268-wanng-hotel-particulier-pack:
   packageId: wannglondon/hotel-particuliers
   variants:
@@ -2723,8 +2943,44 @@ simtropolis/34268-wanng-hotel-particulier-pack:
       packageId: wannglondon/hotel-particuliers
       variantId: default
 
+simtropolis/34269-villa-glendale:
+  packageId: davide1983it/villa-glendale
+  variantId: sd
+
+simtropolis/34271-villa-pomona:
+  packageId: davide1983it/villa-pomona
+  variantId: sd
+
 simtropolis/34273-kk-transformer-lots-small:
   packageId: kloudkicker/small-transformers
+
+simtropolis/34276-villa-cincinnati-v2:
+  packageId: davide1983it/villa-cincinnati
+  variantId: v2
+
+simtropolis/34277-villa-orange:
+  packageId: davide1983it/villa-orange
+  variantId: sd
+
+simtropolis/34278-villa-pasadena:
+  packageId: davide1983it/villa-pasadena
+  variantId: sd
+
+simtropolis/34280-villa-torrance:
+  packageId: davide1983it/villa-torrance
+  variantId: sd
+
+simtropolis/34281-villa-peoria:
+  packageId: davide1983it/villa-peoria
+  variantId: default
+
+simtropolis/34288-villa-azusa:
+  packageId: davide1983it/villa-azusa
+  variantId: sd
+
+simtropolis/34293-kloudkicker-building:
+  packageId: davide1983it/kloudkicker-building
+  variantId: sd
 
 simtropolis/34297-paris-batiment-15:
   packageId: wannglondon/paris-building-15
@@ -2735,6 +2991,18 @@ simtropolis/34297-paris-batiment-15:
     '186441':
       packageId: wannglondon/paris-building-15
       variantId: default
+
+simtropolis/34305-villa-irvine:
+  packageId: davide1983it/villa-irvine
+  variantId: sd
+
+simtropolis/34308-villa-savannah:
+  packageId: davide1983it/villa-savannah
+  variantId: sd
+
+simtropolis/34309-villa-burbank%C2%A0:
+  packageId: davide1983it/villa-burbank
+  variantId: sd
 
 simtropolis/34316-sm2-mega-prop-pack-vol5:
   packageId: simmer2/mega-props-vol05
@@ -2755,8 +3023,64 @@ simtropolis/34318-paris-batiments-16-18:
       packageId: wannglondon/paris-building-18
       variantId: default
 
+simtropolis/34324-villa-ontario:
+  packageId: davide1983it/villa-ontario
+  variantId: sd
+
+simtropolis/34329-20-huskies-building:
+  packageId: davide1983it/20-huskies-building
+  variantId: sd
+
+simtropolis/34336-villa-bellflower:
+  packageId: davide1983it/villa-bellflower
+  variantId: sd
+
 simtropolis/34338-medium-wealth-commercial-shops-volume-1:
   packageId: madhatter106/medium-wealth-shops-vol01
+  variantId: default
+
+simtropolis/34347-villa-harrisburg:
+  packageId: davide1983it/villa-harrisburg
+  variantId: sd
+
+simtropolis/34360-villa-rolla:
+  packageId: davide1983it/villa-rolla
+  variantId: sd
+
+simtropolis/34379-villa-boise:
+  packageId: davide1983it/villa-boise
+  variantId: sd
+
+simtropolis/34384-villa-elkhart:
+  packageId: davide1983it/villa-elkhart
+  variantId: sd
+
+simtropolis/34385-villa-fullerton:
+  packageId: davide1983it/villa-fullerton
+  variantId: sd
+
+simtropolis/34386-villa-hamilton:
+  packageId: davide1983it/villa-hamilton
+  variantId: sd
+
+simtropolis/34387-villa-sacramento:
+  packageId: davide1983it/villa-sacramento
+  variantId: sd
+
+simtropolis/34388-palazzo-simmer:
+  packageId: davide1983it/palazzo-simmer
+  variantId: sd
+
+simtropolis/34398-captcity-tower:
+  packageId: davide1983it/captcity-tower
+  variantId: sd
+
+simtropolis/34402-condominio-zamosc:
+  packageId: davide1983it/condominio-zamosc
+  variantId: sd
+
+simtropolis/34407-barroco-hispano-building:
+  packageId: davide1983it/barroco-hispano-building
   variantId: default
 
 simtropolis/34416-retro-tower-1:
@@ -2769,6 +3093,10 @@ simtropolis/34416-retro-tower-1:
       packageId: wannglondon/retro-tower-1
       variantId: default
 
+simtropolis/34422-whh-20:
+  packageId: davide1983it/whh-20
+  variantId: sd
+
 simtropolis/34427-london-flats-1:
   packageId: wannglondon/london-flats-1
   variants:
@@ -2779,12 +3107,275 @@ simtropolis/34427-london-flats-1:
       packageId: wannglondon/london-flats-1
       variantId: default
 
+simtropolis/34428-condominio-pecs:
+  packageId: davide1983it/condominio-pecs
+  variantId: sd
+
+simtropolis/34431-bat-model-night-maps-vol1: null
+
+simtropolis/34434-m10:
+  packageId: davide1983it/m10
+  variantId: sd
+
+simtropolis/34435-villa-pack-r:
+  packageId: davide1983it/r$-villa-pack-1
+  variantId: default
+
+simtropolis/34436-reg-building:
+  packageId: davide1983it/reg-building
+  variantId: sd
+
+simtropolis/34444-mittelganghaus:
+  packageId: davide1983it/mittelganghaus
+  variantId: default
+
+simtropolis/34461-whhgt:
+  packageId: davide1983it/whhgt
+  variantId: sd
+
+simtropolis/34476-villa-corine-marie:
+  packageId: davide1983it/villa-corine-marie
+  variantId: sd
+
+simtropolis/34479-villa-lucario-boricua:
+  packageId: davide1983it/villa-lucario-boricua
+  variantId: sd
+
+simtropolis/34488-villa-corndoge:
+  packageId: davide1983it/villa-corndoge
+  variantId: sd
+
+simtropolis/34494-villa-elgin:
+  packageId: davide1983it/villa-elgin
+  variantId: sd
+
+simtropolis/34517-villa-frantic:
+  packageId: davide1983it/villa-frantic
+  variantId: sd
+
+simtropolis/34525-flann-building:
+  superseded: simtropolis/34680-flann-building-2-hd
+
+simtropolis/34537-set-villa-hd-1:
+  collectionId: davide1983it/villas
+  paths:
+    Davide1983it - Villa Akron*:
+      packageId: davide1983it/villa-akron
+      variantId: hd
+    Davide1983it - Villa Austin*:
+      packageId: davide1983it/villa-austin
+      variantId: hd
+    Davide1983it - Villa Azusa*:
+      packageId: davide1983it/villa-azusa
+      variantId: hd
+    Davide1983it - Villa Bakersfield*:
+      packageId: davide1983it/villa-bakersfield
+      variantId: hd
+    Davide1983it - Villa Bellflower*:
+      packageId: davide1983it/villa-bellflower
+      variantId: hd
+    Davide1983it - Villa Biloxi*:
+      packageId: davide1983it/villa-biloxi
+      variantId: hd
+    Davide1983it - Villa Bloomington*:
+      packageId: davide1983it/villa-bloomington
+      variantId: hd
+    Davide1983it - Villa Boise*:
+      packageId: davide1983it/villa-boise
+      variantId: hd
+    Davide1983it - Villa Buffalo*:
+      packageId: davide1983it/villa-buffalo
+      variantId: hd
+    Davide1983it - Villa Burbank*:
+      packageId: davide1983it/villa-burbank
+      variantId: hd
+    Davide1983it - Villa Chattanooga*:
+      packageId: davide1983it/villa-chattanooga
+      variantId: hd
+    Davide1983it - Villa Cincinnati*:
+      packageId: davide1983it/villa-cincinnati
+      variantId: hd
+    Davide1983it - Villa Corine Marie*:
+      packageId: davide1983it/villa-corine-marie
+      variantId: hd
+    Davide1983it - Villa Corndoge*:
+      packageId: davide1983it/villa-corndoge
+      variantId: hd
+    Davide1983it - Villa Dayton*:
+      packageId: davide1983it/villa-dayton
+      variantId: hd
+    Davide1983it - Villa Elgin*:
+      packageId: davide1983it/villa-elgin
+      variantId: hd
+    Davide1983it - Villa Elkhart*:
+      packageId: davide1983it/villa-elkhart
+      variantId: hd
+    Davide1983it - Villa Fargo*:
+      packageId: davide1983it/villa-fargo
+      variantId: hd
+    Davide1983it - Villa Fort Lauderdale*:
+      packageId: davide1983it/villa-lauderdale
+      variantId: hd
+    Davide1983it - Villa Frantic*:
+      packageId: davide1983it/villa-frantic
+      variantId: hd
+    Davide1983it - Villa Fullerton*:
+      packageId: davide1983it/villa-fullerton
+      variantId: hd
+    Davide1983it - Villa Gary*:
+      packageId: davide1983it/villa-gary
+      variantId: hd
+    Davide1983it - Villa Glendale*:
+      packageId: davide1983it/villa-glendale
+      variantId: hd
+    Davide1983it - Villa Hamilton*:
+      packageId: davide1983it/villa-hamilton
+      variantId: hd
+    Davide1983it - Villa Harrisburg*:
+      packageId: davide1983it/villa-harrisburg
+      variantId: hd
+    Davide1983it - Villa Helena*:
+      packageId: davide1983it/villa-helena
+      variantId: hd
+    Davide1983it - Villa Huntsville*:
+      packageId: davide1983it/villa-huntsville
+      variantId: hd
+    Davide1983it - Villa Irvine*:
+      packageId: davide1983it/villa-irvine
+      variantId: hd
+    Davide1983it - Villa Lincoln*:
+      packageId: davide1983it/villa-lincoln
+      variantId: hd
+    Davide1983it - Villa Lucario Boricua*:
+      packageId: davide1983it/villa-lucario-boricua
+      variantId: hd
+    Davide1983it - Villa Ontario*:
+      packageId: davide1983it/villa-ontario
+      variantId: hd
+    Davide1983it - Villa Orange*:
+      packageId: davide1983it/villa-orange
+      variantId: hd
+    Davide1983it - Villa Pasadena*:
+      packageId: davide1983it/villa-pasadena
+      variantId: hd
+    Davide1983it - Villa Phoenix*:
+      packageId: davide1983it/villa-phoenix
+      variantId: hd
+    Davide1983it - Villa Pomona*:
+      packageId: davide1983it/villa-pomona
+      variantId: hd
+    Davide1983it - Villa Providence*:
+      packageId: davide1983it/villa-providence
+      variantId: hd
+    Davide1983it - Villa Richmond*:
+      packageId: davide1983it/villa-richmond
+      variantId: hd
+    Davide1983it - Villa Rolla*:
+      packageId: davide1983it/villa-rolla
+      variantId: hd
+    Davide1983it - Villa Sacramento*:
+      packageId: davide1983it/villa-sacramento
+      variantId: hd
+    Davide1983it - Villa Savannah*:
+      packageId: davide1983it/villa-savannah
+      variantId: hd
+    Davide1983it - Villa Topeka*:
+      packageId: davide1983it/villa-topeka
+      variantId: hd
+    Davide1983it - Villa Torrance*:
+      packageId: davide1983it/villa-torrance
+      variantId: hd
+    Davide1983it - Villa Tupelo*:
+      packageId: davide1983it/villa-tupelo
+      variantId: hd
+    Davide1983it - Villa Wooster*:
+      packageId: davide1983it/villa-wooster
+      variantId: hd
+
+simtropolis/34538-palazzo-simmer-hd:
+  packageId: davide1983it/palazzo-simmer
+  variantId: hd
+
+simtropolis/34540-trabant-set:
+  superseded: simtropolis/34972-davide-prop-v1
+
 simtropolis/34550-20-huskies-building-hd:
   packageId: davide1983it/20-huskies-building
-  variantId: default
+  variantId: hd
+
+simtropolis/34551-captcity-hd-tower:
+  packageId: davide1983it/captcity-tower
+  variantId: hd
+
+simtropolis/34558-kloudkicker-building-hd:
+  packageId: davide1983it/kloudkicker-building
+  variantId: hd
+
+simtropolis/34564-capitol-state-building-in-hd:
+  packageId: davide1983it/capitol-state-building
+  variantId: hd
+
+simtropolis/34565-japanese-restaurant-hd:
+  superseded: simtropolis/34972-davide-prop-v1
+
+simtropolis/34566-reg-building-hd:
+  packageId: davide1983it/reg-building
+  variantId: hd
+
+simtropolis/34567-condominio-set:
+  collectionId: davide1983it/condominios
+  paths:
+    Davide1983it - Condominio Aristide*:
+      packageId: davide1983it/condominio-aristide
+      variantId: hd
+    Davide1983it - Condominio Betulla*:
+      packageId: davide1983it/condominio-betulla
+      variantId: hd
+    Davide1983it - Condominio Burrini*:
+      packageId: davide1983it/condominio-burrini
+      variantId: hd
+    Davide1983it - Condominio Colombo*:
+      packageId: davide1983it/condominio-colombo
+      variantId: hd
+    Davide1983it - Condominio Euripide*:
+      packageId: davide1983it/condominio-euripide
+      variantId: hd
+    Davide1983it - Condominio Guccini*:
+      packageId: davide1983it/condominio-guccini
+      variantId: hd
+
+simtropolis/34571-tatra-603-wartburg-353:
+  superseded: simtropolis/34972-davide-prop-v1
 
 simtropolis/34584-playground-set:
   superseded: simtropolis/34972-davide-prop-v1
+
+simtropolis/34586-outdoor-set-v1:
+  packageId: davide1983it/playgrounds
+  variantId: default
+
+simtropolis/34594-set-block-hd:
+  collectionId: davide1983it/condominios
+  paths:
+    Davide1983it - Condominio Pecs*:
+      packageId: davide1983it/condominio-pecs
+      variantId: hd
+    Davide1983it - Condominio Zamosc*:
+      packageId: davide1983it/condominio-zamosc
+      variantId: hd
+    Davide1983it - M10*:
+      packageId: davide1983it/m10
+      variantId: hd
+    Davide1983it - WHH-20*:
+      packageId: davide1983it/whh-20
+      variantId: hd
+    Davide1983it - WHHGT*:
+      packageId: davide1983it/whhgt
+      variantId: hd
+
+simtropolis/34598-villa-asimpika:
+  packageId: davide1983it/villa-asimpika
+  variantId: default
 
 simtropolis/34608-mediterranean-flats-2:
   packageId: wannglondon/mediterranean-flats-2
@@ -2810,8 +3401,58 @@ simtropolis/34608-mediterranean-flats-2:
           variantId: default
       variantId: default
 
+simtropolis/34610-space-1999-the-eagle:
+  packageId: davide1983it/space-1999-eagle
+  variantId: default
+
+simtropolis/34612-outdoor-set-v2:
+  superseded: simtropolis/34972-davide-prop-v1
+
+simtropolis/34618-villa-raymond-7-cn:
+  packageId: davide1983it/villa-raymond
+  variantId: default
+
+simtropolis/34619-edvarz-building:
+  packageId: davide1983it/edvarz-building
+  variantId: default
+
+simtropolis/34634-flann-building-sd:
+  packageId: davide1983it/flann-building
+  variantId: sd
+
+simtropolis/34636-villa-krasner:
+  packageId: davide1983it/villa-krasner
+  variantId: default
+
+simtropolis/34680-flann-building-2-hd:
+  packageId: davide1983it/flann-building
+  variantId: hd
+
+simtropolis/34685-shell-building:
+  packageId: davide1983it/shell-building
+  variantId: default
+
 simtropolis/34688-outdoor-set-v3:
-  packageId: davide1983it/outdoor-set-v3
+  superseded: simtropolis/34972-davide-prop-v1
+
+simtropolis/34694-first-plaza-tower:
+  packageId: davide1983it/first-plaza-tower
+  variantId: default
+
+simtropolis/34698-villa-levante:
+  packageId: davide1983it/villa-levante
+  variantId: default
+
+simtropolis/34699-villa-rott:
+  packageId: davide1983it/villa-rott
+  variantId: default
+
+simtropolis/34709-villa-tamarit:
+  packageId: davide1983it/villa-tamarit
+  variantId: default
+
+simtropolis/34710-villa-creixell:
+  packageId: davide1983it/villa-creixell
   variantId: default
 
 simtropolis/34715-mediterranean-pack-1:
@@ -2968,6 +3609,13 @@ simtropolis/34733-farrands-department-store:
       packageId: jasoncw/farrands-department-store
       variantId: darknite
 
+simtropolis/34737-djohaal-building:
+  packageId: davide1983it/djohaal-building
+  variantId: default
+
+simtropolis/34744-set-patio-pool:
+  superseded: simtropolis/34972-davide-prop-v1
+
 simtropolis/34747-rr-mega-prop-pack-vol-3:
   packageId: rretail/mega-props-vol03
   variantId: default
@@ -2981,6 +3629,10 @@ simtropolis/34761-db-franklin-co:
     '190657':
       packageId: jasoncw/db-franklin-co
       variantId: darknite
+
+simtropolis/34762-villa-calafell:
+  packageId: davide1983it/villa-calafell
+  variantId: default
 
 simtropolis/34770-mediterranean-buildings-13-14:
   packageId: wannglondon/mediterranean-buildings-13-14
@@ -3151,20 +3803,20 @@ simtropolis/34876-mediterranean-pack-3:
       variantId: default
 
 simtropolis/34972-davide-prop-v1:
-  packageId: davide1983it/prop-pack-vol01
+  packageId: davide1983it/props-vol01
   paths:
     Davide1983it - Fuji Restaurant*:
       packageId: davide1983it/japanese-restaurants
-      variantId: default
+      variantId: hd
     Davide1983it - Fuku Ramen*:
       packageId: davide1983it/japanese-restaurants
-      variantId: default
+      variantId: hd
     Davide1983it - Playground*.SC4Lot:
-      packageId: davide1983it/playground
+      packageId: davide1983it/playgrounds
       variantId: default
     Davide1983it - Restaurant Nara Okonomiyaki*:
       packageId: davide1983it/japanese-restaurants
-      variantId: default
+      variantId: hd
   variantId: default
 
 simtropolis/35010-palazzo-maresio:
@@ -4071,8 +4723,7 @@ simtropolis/36244-startup-performance-optimization-dll-for-simcity-4:
   variantId: default
 
 simtropolis/36245-census-repository-building-dll-upgrade-patch:
-  packageId: ripplejet/census-repository-building
-  variantId: kel9509
+  superseded: sc4evermore/331-kel9509-census-repository-facility
 
 simtropolis/36248-central-co-op-creamery:
   packageId: jestarr/central-coop-creamery
@@ -4091,7 +4742,7 @@ simtropolis/36254-tiki-tims:
   variantId: darknite
 
 simtropolis/36255-10-villas-low-wealth:
-  packageId: davide1983it/low-wealth-villas
+  packageId: davide1983it/r$-villa-pack-2
   variantId: default
 
 simtropolis/36257-discord-rich-presence-dll-for-simcity-4: null

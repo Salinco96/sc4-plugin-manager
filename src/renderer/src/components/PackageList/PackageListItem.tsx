@@ -3,6 +3,7 @@ import { memo, useMemo } from "react"
 
 import type { PackageID } from "@common/packages"
 import { ListItem } from "@components/ListItem"
+import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { PackageHeader } from "@components/PackageHeader"
 import { Page, useHistory, useLocation } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
@@ -30,7 +31,12 @@ export const PackageListItem = memo(function PackageListItem({
   }, [page, search, variantInfo])
 
   return (
-    <ListItem header={PackageHeader} isDisabled={isDisabled} packageId={packageId}>
+    <ListItem
+      banners={<PackageBanners packageId={packageId} />}
+      header={PackageHeader}
+      isDisabled={isDisabled}
+      packageId={packageId}
+    >
       {!!matchingContents?.length && (
         <>
           <Typography variant="body2">

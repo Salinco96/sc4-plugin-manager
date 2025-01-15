@@ -16,26 +16,10 @@ export function Thumbnail({
   src,
   ...props
 }: ThumbnailProps): JSX.Element {
-  if (disabled || !onClick) {
-    return (
-      <Box
-        sx={{
-          backgroundImage: `url("${src}")`,
-          backgroundPosition: "50%",
-          backgroundSize: "cover",
-          borderRadius: round ? "100%" : undefined,
-          flex: "0 0 auto",
-          height: size,
-          width: size,
-        }}
-        {...props}
-      />
-    )
-  }
-
   return (
-    <Box flex="0 0 auto" {...props}>
+    <Box flex={0} {...props}>
       <Button
+        disabled={disabled || !onClick}
         onClick={onClick}
         sx={{
           borderRadius: 0,
@@ -45,23 +29,27 @@ export function Thumbnail({
             opacity: 0,
           },
           "&:hover .hover": {
-            opacity: 0.15,
+            opacity: disabled || !onClick ? undefined : 0.2,
           },
         }}
+        title="Click to open" // todo
       >
         <Box
           sx={{
+            backgroundColor: "#eee",
             backgroundImage: `url("${src}")`,
             backgroundPosition: "50%",
             backgroundSize: "cover",
+            borderRadius: round ? "100%" : undefined,
             height: size,
+            overflow: "hidden",
             width: size,
           }}
         >
           <Box
             className="hover"
             sx={{
-              backgroundColor: "black",
+              backgroundColor: "#000",
               height: size,
               width: size,
               transition(theme) {

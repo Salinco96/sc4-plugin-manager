@@ -407,10 +407,15 @@
         "replacePackage": {
           "description": "Replace this package with {{packageName}}",
           "label": "Replace"
+        },
+        "replaceVariant": {
+          "description": "Set variant to {{variantName}}",
+          "label": "Replace"
         }
       },
       "message": "This package is no longer maintained or recommended.",
-      "messageSuperseded": "This package has been superseded by <a>{{packageName}}</a>.",
+      "supersededByPackage": "This package has been superseded by <a>{{packageName}}</a>.",
+      "supersededByVariant": "This variant has been superseded by <b>{{variantName}}</b>.",
       "title": "Legacy"
     },
     "experimental": {

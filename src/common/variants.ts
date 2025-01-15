@@ -1,4 +1,4 @@
-import type { ID } from "@salinco/nice-utils"
+import { type ID, values } from "@salinco/nice-utils"
 import type { Namespace, TFunction } from "i18next"
 
 import type { AssetID } from "./assets"
@@ -11,9 +11,10 @@ import type { FamilyInfo } from "./families"
 import type { LotInfo } from "./lots"
 import type { FloraInfo } from "./mmps"
 import type { OptionID, OptionInfo, OptionValue, Requirements } from "./options"
-import type { PackageID } from "./packages"
+import { type PackageID, isIncompatible } from "./packages"
+import type { ProfileInfo } from "./profiles"
 import type { PropInfo } from "./props"
-import type { Feature, PackageWarning, VariantState } from "./types"
+import type { Feature, PackageInfo, PackageWarning, VariantState } from "./types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
@@ -51,8 +52,9 @@ export interface BaseVariantInfo extends ContentsInfo {
   authors: AuthorID[]
   categories: CategoryID[]
   credits?: { id?: AuthorID; text?: string }[]
+  default?: boolean
   dependencies?: DependencyInfo[]
-  deprecated?: boolean | PackageID
+  deprecated?: boolean | PackageID | VariantID
   description?: string
   disabled?: boolean
   experimental?: boolean
@@ -128,4 +130,21 @@ export function getStateLabel(
   state: VariantState | "default" | "selected",
 ): string {
   return t(state, { ns: "VariantState" })
+}
+export function getDefaultVariant(
+  packageInfo: Readonly<PackageInfo>,
+  profileInfo: Readonly<ProfileInfo> | undefined,
+): VariantInfo {
+  const packageStatus = profileInfo && packageInfo.status[profileInfo.id]
+
+  const allVariants = values(packageInfo.variants)
+  const compatibleVariants = allVariants.filter(variant => !isIncompatible(variant, packageStatus))
+  const selectableVariants = compatibleVariants.length ? compatibleVariants : allVariants
+
+  return (
+    selectableVariants.find(variant => variant.default) ??
+    selectableVariants.find(variant => variant.id === "default" && !variant.deprecated) ??
+    selectableVariants.find(variant => !variant.deprecated) ??
+    selectableVariants[0]
+  )
 }

@@ -1,6 +1,6 @@
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Box, Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
-import { keys } from "@salinco/nice-utils"
+import { values } from "@salinco/nice-utils"
 import { useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -19,6 +19,7 @@ import {
 import type { VariantID } from "@common/variants"
 import { getWarningMessage } from "@common/warnings"
 import {
+  getOrderedVariants,
   useCurrentVariant,
   useFilteredVariants,
   usePackageInfo,
@@ -58,22 +59,21 @@ export function PackageActions({
 
   const filteredVariantIds = useFilteredVariants(packageId)
 
-  const variantIds = useMemo(() => {
-    const variantIds = keys(packageInfo.variants)
+  const variants = useMemo(() => {
+    const variants = getOrderedVariants(packageInfo)
 
     if (filtered) {
-      return variantIds.filter(id => id === variantId || filteredVariantIds.includes(id))
+      return variants.filter(
+        variant => variant.id === variantId || filteredVariantIds.includes(variant.id),
+      )
     }
 
-    return variantIds
+    return variants
   }, [filtered, filteredVariantIds, packageInfo, variantId])
 
-  const selectableVariantIds = useMemo(() => {
-    return variantIds.filter(id => {
-      const variantInfo = packageInfo.variants[id]
-      return variantInfo && !isInvalid(variantInfo, packageStatus)
-    })
-  }, [packageInfo, packageStatus, variantIds])
+  const selectableVariants = useMemo(() => {
+    return variants.filter(variant => !isInvalid(variant, packageStatus))
+  }, [packageStatus, variants])
 
   const packageActions = useMemo(() => {
     const packageActions: PackageAction[] = []
@@ -253,8 +253,8 @@ export function PackageActions({
         !packageInfo.variants["default" as VariantID]) && (
         <Select
           disabled={
-            selectableVariantIds.length === 0 ||
-            (selectableVariantIds.length === 1 && variantId === selectableVariantIds[0])
+            selectableVariants.length === 0 ||
+            (selectableVariants.length === 1 && variantId === selectableVariants[0].id)
           }
           fullWidth
           onClose={() => setMenuOpen(false)}
@@ -268,9 +268,16 @@ export function PackageActions({
           value={variantId}
           variant="outlined"
         >
-          {variantIds.map(id => (
-            <MenuItem key={id} value={id} disabled={!selectableVariantIds.includes(id)}>
-              {packageInfo.variants[id]?.name ?? id}
+          {variants.map(variant => (
+            <MenuItem
+              key={variant.id}
+              value={variant.id}
+              disabled={!selectableVariants.includes(variant)}
+            >
+              {variant.name ?? variant.id}
+              {!!variant.deprecated &&
+                values(packageInfo.variants).some(variant => !variant.deprecated) &&
+                " (Legacy)"}
             </MenuItem>
           ))}
         </Select>

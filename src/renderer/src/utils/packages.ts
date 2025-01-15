@@ -1,4 +1,4 @@
-import { mapValues, values } from "@salinco/nice-utils"
+import { mapValues, sortBy, values } from "@salinco/nice-utils"
 import { useCallback, useMemo } from "react"
 
 import { CategoryID, isCategory } from "@common/categories"
@@ -6,7 +6,6 @@ import {
   type PackageID,
   isError,
   isExperimental,
-  isIncluded,
   isIncompatible,
   isOutdated,
 } from "@common/packages"
@@ -23,6 +22,7 @@ import type { VariantID, VariantInfo } from "@common/variants"
 
 import type { CollectionID, CollectionInfo } from "@common/collections"
 import type { ToolID, ToolInfo } from "@common/tools"
+import { prioritize } from "@common/utils/arrays"
 import { hasMatchingContents, isHexSearch } from "./search"
 import {
   type PackageFilters,
@@ -228,12 +228,29 @@ export function filterVariant(
   }
 
   if (filters.state) {
-    if (filters.state === VariantState.ENABLED && filters.dependencies) {
-      if (!isIncluded(variantInfo, packageStatus)) {
-        return false
-      }
-    } else if (!getState(filters.state, packageInfo, variantInfo, profileInfo)) {
-      return false
+    switch (filters.state) {
+      case VariantState.DISABLED:
+        if (packageStatus?.enabled) {
+          return false
+        }
+
+        break
+      case VariantState.ENABLED:
+        if (filters.dependencies ? !packageStatus?.included : !packageStatus?.enabled) {
+          return false
+        }
+
+        break
+      case VariantState.INCLUDED:
+        if (!packageStatus?.included) {
+          return false
+        }
+
+        break
+      default:
+        if (!getState(filters.state, packageInfo, variantInfo, profileInfo)) {
+          return false
+        }
     }
   }
 
@@ -360,4 +377,11 @@ export function computePackageList(
     filteredPackages,
     packageUi,
   }
+}
+
+export function getOrderedVariants(packageInfo: PackageInfo): VariantInfo[] {
+  return prioritize(
+    sortBy(values(packageInfo.variants), variant => variant.name ?? variant.id),
+    variant => !variant.deprecated,
+  )
 }

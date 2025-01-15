@@ -1,6 +1,6 @@
-import { Box } from "@mui/material"
 import Carousel from "react-material-ui-carousel"
 
+import { FlexBox } from "@components/FlexBox"
 import { Viewer } from "./Viewer"
 
 export interface ImageViewerProps {
@@ -28,26 +28,16 @@ export function ImageViewer({ images, open, onClose }: ImageViewerProps): JSX.El
         }}
       >
         {images.map((image, index) => (
-          <Box
-            key={image}
-            sx={{
-              alignItems: "center",
-              display: "flex",
-              height: "100%",
-              justifyContent: "center",
-              overflow: "auto",
-              width: "100%",
-            }}
-          >
-            <Box
-              sx={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            >
-              <img alt={`${index + 1} / ${images.length}`} src={image} />
-            </Box>
-          </Box>
+          <FlexBox centered fullHeight fullWidth key={image} overflow="auto">
+            <FlexBox centered fullHeight fullWidth>
+              <img
+                alt={`${index + 1} / ${images.length}`}
+                src={image}
+                style={{ objectFit: "contain", maxWidth: "100%", maxHeight: "100%" }}
+                title={`${index + 1} / ${images.length}`}
+              />
+            </FlexBox>
+          </FlexBox>
         ))}
       </Carousel>
     </Viewer>

@@ -5,6 +5,7 @@ import { input, select } from "@inquirer/prompts"
 import {
   $init,
   ID,
+  add,
   containsAny,
   difference,
   filterValues,
@@ -27,6 +28,7 @@ import {
   parseHex,
   sort,
   union,
+  unionBy,
   unique,
   values,
 } from "@salinco/nice-utils"
@@ -124,7 +126,7 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
-      davide1983it: 2022, // todo
+      davide1983it: 2021, // todo
       "dead-end": true,
       cococity: true,
       jasoncw: 2020, // todo
@@ -140,6 +142,7 @@ runIndexer({
     },
     entries: [
       "sc4evermore/131",
+      "sc4evermore/186",
       "simtropolis/4513",
       "simtropolis/11617",
       "simtropolis/13318",
@@ -147,6 +150,7 @@ runIndexer({
       "simtropolis/18042",
       "simtropolis/18831",
       "simtropolis/21339",
+      "simtropolis/21770",
       "simtropolis/21771",
       "simtropolis/22771",
       "simtropolis/22823",
@@ -156,6 +160,9 @@ runIndexer({
       "simtropolis/29749",
       "simtropolis/30836",
       "simtropolis/32066",
+      "simtropolis/32980",
+      "simtropolis/32981",
+      "simtropolis/32982",
       "simtropolis/33889",
       "simtropolis/35470",
     ],
@@ -766,7 +773,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   // Step 7e - Write package changes
   console.debug("Writing packages...")
-  const modifiedAuthors = new Set(keys(generatingPackages).map(getOwnerId))
+  const modifiedAuthors = new Set(keys(packages).map(getOwnerId))
   for (const authorId of modifiedAuthors) {
     await writeConfig<{ [packageId in PackageID]?: PackageData }>(
       dbPackagesDir,
@@ -785,7 +792,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   /**
    * STEP 8 - Show all errors encountered during this run
    */
-  if (warnings.size) {
+  const showWarnings = true
+  if (warnings.size && showWarnings) {
     const n = 100
     console.warn("".padEnd(n, "*"))
     console.warn(`* ${"WARNINGS".padStart((n + 8 - 4) / 2, " ").padEnd(n - 4, " ")} *`)
@@ -814,12 +822,22 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   async function checkPackage(packageInfo: PackageInfo): Promise<void> {
     await forEachAsync(packageInfo.variants, async variantInfo => {
-      await checkVariant(variantInfo, packageInfo.id)
+      if (await checkVariant(variantInfo, packageInfo)) {
+        generatingPackages[packageInfo.id] = add(
+          generatingPackages[packageInfo.id] ?? [],
+          variantInfo.id,
+        )
+      }
     })
   }
 
-  async function checkVariant(variantInfo: VariantInfo, packageId: PackageID): Promise<void> {
-    const prefix = `In variant ${packageId}#${variantInfo.id}`
+  async function checkVariant(
+    variantInfo: VariantInfo,
+    packageInfo: PackageInfo,
+  ): Promise<boolean> {
+    const prefix = `In variant ${packageInfo.id}#${variantInfo.id}`
+
+    let changed = false
 
     if (variantInfo.assets) {
       for (const asset of variantInfo.assets) {
@@ -862,7 +880,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       }
     }
 
-    const packageIds = [packageId, baseGameId]
+    const packageIds = [packageInfo.id, baseGameId]
 
     if (variantInfo.dependencies) {
       for (const dependency of variantInfo.dependencies) {
@@ -879,8 +897,20 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     if (isString(variantInfo.deprecated)) {
-      if (!packages[variantInfo.deprecated]) {
-        errors.add(`${prefix} - Package ${variantInfo.deprecated} does not exist`)
+      if (variantInfo.deprecated.includes("/")) {
+        if (variantInfo.deprecated === packageInfo.id) {
+          errors.add(`${prefix} - Deprecated redirects to itself`)
+          variantInfo.deprecated = undefined
+          changed = true
+        } else if (!packages[variantInfo.deprecated as PackageID]) {
+          errors.add(`${prefix} - Package ${variantInfo.deprecated} does not exist`)
+        }
+      } else if (variantInfo.deprecated === variantInfo.id) {
+        errors.add(`${prefix} - Deprecated redirects to itself`)
+        variantInfo.deprecated = undefined
+        changed = true
+      } else if (!packageInfo.variants[variantInfo.deprecated as VariantID]) {
+        errors.add(`${prefix} - Variant ${variantInfo.deprecated} does not exist`)
       }
     }
 
@@ -921,6 +951,16 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             errors.add(
               `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} is not listed as dependency: ${ids.join(", ")}`,
             )
+
+            if (ids.length === 1) {
+              variantInfo.dependencies = unionBy(
+                variantInfo.dependencies ?? [],
+                [{ id: ids[0], transitive: true }],
+                dependency => dependency.id,
+              )
+
+              changed = true
+            }
           }
         }
       }
@@ -931,13 +971,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (lot.building) {
           const ids = index.buildings[lot.building] ?? index.buildingFamilies[lot.building]
           if (!ids) {
-            warnings.add(
-              `${prefix}, lot ${lot.name} (${lot.id}) - Building ${lot.building} does not exist`,
-            )
+            warnings.add(`${prefix} - Building ${lot.building} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
-              `${prefix}, lot ${lot.name} (${lot.id}) - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
+              `${prefix} - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
             )
+
+            if (ids.length === 1) {
+              variantInfo.dependencies = unionBy(
+                variantInfo.dependencies ?? [],
+                [{ id: ids[0], transitive: true }],
+                dependency => dependency.id,
+              )
+
+              changed = true
+            }
           }
         }
 
@@ -945,11 +993,27 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           for (const id of lot.props) {
             const ids = index.props[id] ?? index.propFamilies[id]
             if (!ids) {
-              warnings.add(`${prefix}, lot ${lot.name} (${lot.id}) - Prop ${id} does not exist`)
+              warnings.add(`${prefix} - Prop ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
-              errors.add(
-                `${prefix}, lot ${lot.name} (${lot.id}) - Prop ${id} is not listed as dependency: ${ids.join(", ")}`,
-              )
+              errors.add(`${prefix} - Prop ${id} is not listed as dependency: ${ids.join(", ")}`)
+
+              if (ids.length === 1) {
+                variantInfo.dependencies = unionBy(
+                  variantInfo.dependencies ?? [],
+                  [{ id: ids[0], transitive: true }],
+                  dependency => dependency.id,
+                )
+
+                changed = true
+              }
+            }
+          }
+        }
+
+        if (lot.replace) {
+          for (const id of lot.replace) {
+            if (!index.lots[id]) {
+              errors.add(`${prefix} - Lot ${id} does not exist`)
             }
           }
         }
@@ -958,11 +1022,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           for (const id of lot.textures) {
             const ids = index.textures[id]
             if (!ids) {
-              warnings.add(`${prefix}, lot ${lot.name} (${lot.id}) - Texture ${id} does not exist`)
+              warnings.add(`${prefix} - Texture ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
-              errors.add(
-                `${prefix}, lot ${lot.name} (${lot.id}) - Texture ${id} is not listed as dependency: ${ids.join(", ")}`,
-              )
+              errors.add(`${prefix} - Texture ${id} is not listed as dependency: ${ids.join(", ")}`)
+
+              if (ids.length === 1) {
+                variantInfo.dependencies = unionBy(
+                  variantInfo.dependencies ?? [],
+                  [{ id: ids[0], transitive: true }],
+                  dependency => dependency.id,
+                )
+
+                changed = true
+              }
             }
           }
         }
@@ -974,13 +1046,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (mmp.model) {
           const ids = index.models[mmp.model]
           if (!ids) {
-            warnings.add(
-              `${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} does not exist`,
-            )
+            warnings.add(`${prefix} - Model ${mmp.model} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
-              `${prefix}, mmp ${mmp.name} (${mmp.id}) - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
+              `${prefix} - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
             )
+
+            if (ids.length === 1) {
+              variantInfo.dependencies = unionBy(
+                variantInfo.dependencies ?? [],
+                [{ id: ids[0], transitive: true }],
+                dependency => dependency.id,
+              )
+
+              changed = true
+            }
           }
         }
 
@@ -989,13 +1069,21 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             if (stage.model) {
               const ids = index.models[stage.model]
               if (!ids) {
-                warnings.add(
-                  `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} does not exist`,
-                )
+                warnings.add(`${prefix} - Model ${stage.model} does not exist`)
               } else if (!containsAny(ids, packageIds)) {
                 errors.add(
-                  `${prefix}, mmp ${stage.name} (${stage.id}) - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
+                  `${prefix} - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
                 )
+
+                if (ids.length === 1) {
+                  variantInfo.dependencies = unionBy(
+                    variantInfo.dependencies ?? [],
+                    [{ id: ids[0], transitive: true }],
+                    dependency => dependency.id,
+                  )
+
+                  changed = true
+                }
               }
             }
           }
@@ -1008,17 +1096,27 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         if (prop.model) {
           const ids = index.models[prop.model]
           if (!ids) {
-            warnings.add(
-              `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} does not exist`,
-            )
+            warnings.add(`${prefix} - Model ${prop.model} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
             errors.add(
-              `${prefix}, prop ${prop.name} (${prop.id}) - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,
+              `${prefix} - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,
             )
+
+            if (ids.length === 1) {
+              variantInfo.dependencies = unionBy(
+                variantInfo.dependencies ?? [],
+                [{ id: ids[0], transitive: true }],
+                dependency => dependency.id,
+              )
+
+              changed = true
+            }
           }
         }
       }
     }
+
+    return changed
   }
 
   function includeEntry(entry: IndexerEntry, entryId: EntryID): boolean {
@@ -1516,7 +1614,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
         dbCollections[collectionId].release ??= new Date()
       }
 
-      return false
+      if (!variantOverride?.paths) {
+        return false
+      }
     }
 
     if (!variantEntry?.files) {
@@ -1549,12 +1649,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       version: entry.version,
     })
 
-    if (basePackageId === undefined) {
+    if (!basePackageId && !entryOverride?.collectionId) {
       basePackageId = await getPackageId(entry, entryId)
       variantOverride.packageId = basePackageId
     }
 
-    if (!variantOverride.variantId) {
+    if (basePackageId && !variantOverride.variantId) {
       console.debug(`Generating package for ${variantAssetId} -> ${basePackageId}`)
       // Try to infer DarkNite variants from filename
       const defaultVariantId = getDefaultVariantId(variantEntry)
@@ -1562,13 +1662,16 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
       variantOverride.variantId = overrideVariantId
     }
 
-    const baseVariantIds = parseStringArray(variantOverride.variantId) as VariantID[]
+    const baseVariantIds = parseStringArray(variantOverride.variantId ?? [])
 
     const outputs = new Set<string>()
-    for (const baseVariantId of baseVariantIds) {
-      if (baseVariantId !== "*" && !outputs.has(`${basePackageId}#${baseVariantId}`)) {
-        await registerVariant(basePackageId, baseVariantId)
-        outputs.add(`${basePackageId}#${baseVariantId}`)
+
+    if (basePackageId) {
+      for (const baseVariantId of baseVariantIds) {
+        if (baseVariantId !== "*" && !outputs.has(`${basePackageId}#${baseVariantId}`)) {
+          await registerVariant(basePackageId, baseVariantId as VariantID)
+          outputs.add(`${basePackageId}#${baseVariantId}`)
+        }
       }
     }
 
@@ -1578,10 +1681,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           const pathPackageId = pathOverride.packageId ?? basePackageId
           const pathVariantIds = parseStringArray(pathOverride?.variantId ?? baseVariantIds)
 
-          for (const pathVariantId of pathVariantIds) {
-            if (pathVariantId !== "*" && !outputs.has(`${pathPackageId}#${pathVariantId}`)) {
-              await registerVariant(pathPackageId, pathVariantId as VariantID)
-              outputs.add(`${pathPackageId}#${pathVariantId}`)
+          if (pathPackageId) {
+            for (const pathVariantId of pathVariantIds) {
+              if (pathVariantId !== "*" && !outputs.has(`${pathPackageId}#${pathVariantId}`)) {
+                await registerVariant(pathPackageId, pathVariantId as VariantID)
+                outputs.add(`${pathPackageId}#${pathVariantId}`)
+              }
             }
           }
         }

@@ -313,16 +313,19 @@ export function generateVariantInfo(
   const [major, minor, patch] = matchGroups(mainEntry.version, /(\d+)(?:[.](\d+)(?:[.](\d+))?)?/)
   const version = `${major}.${minor ?? 0}.${patch ?? 0}`
 
-  // todo
-  if (variantInfo.version !== version && variantInfo.version === "0.0.0") {
-    variantInfo.release = new Date()
-    variantInfo.version = version
-    if (mainEntry.description) {
-      variantInfo.description = htmlToMd(mainEntry.description)
-    }
-  }
+  const isNewRelease = variantInfo.version === "0.0.0"
+  const isNewVersion = variantInfo.version !== version
 
   variantInfo.lastGenerated = new Date()
+  variantInfo.version = version
+
+  if (isNewRelease) {
+    variantInfo.release = new Date()
+  }
+
+  if (mainEntry.description && isNewVersion) {
+    variantInfo.description = htmlToMd(mainEntry.description)
+  }
 
   // Fields derived from main entry only
   variantInfo.deprecated ??= mainEntry.category?.includes("obsolete")

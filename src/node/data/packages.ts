@@ -338,6 +338,11 @@ export interface VariantData extends ContentsData {
   credits?: Array<AuthorID | string | { [authorId in AuthorID]: string }>
 
   /**
+   * Whether this is the variant selected by default (by default it is `default` - otherwise the first compatible one in ID alphabetical order)
+   */
+  default?: boolean
+
+  /**
    * List of required dependencies
    *
    * - These packages **must not** contain `features` (use {@link requirements} instead)
@@ -349,7 +354,7 @@ export interface VariantData extends ContentsData {
   /**
    * Whether this package or variant is deprecated or was superseded by a better alternative
    */
-  deprecated?: boolean | PackageID
+  deprecated?: boolean | PackageID | VariantID
 
   /**
    * Full description in Markdown format
@@ -654,6 +659,7 @@ export function loadVariantInfo(
     authors: mergedAuthors,
     categories: mergedCategories,
     credits,
+    default: variantData.default,
     dependencies,
     deprecated: variantData.deprecated ?? packageData.deprecated,
     description: variantData.description ?? packageData.description,
@@ -832,6 +838,7 @@ export function writePackageInfo(
             ),
             categories: difference(variant.categories, base.categories ?? []),
             credits: variant.credits?.filter(credit => !base.credits?.some(equalsDeep(credit))),
+            default: variant.default,
             dependencies: variant.dependencies?.filter(
               dependency => !base.dependencies?.some(equalsDeep(dependency)),
             ),
@@ -1005,9 +1012,10 @@ function writeVariantInfo(info: Partial<VariantInfo>, categories: Categories): V
   return {
     ...writeContentsInfo(info, categories),
     assets: info.assets?.length ? info.assets?.map(writeVariantAssetInfo) : undefined,
-    authors: info.authors?.length ? sort(info.authors) : undefined,
+    authors: info.authors?.length ? sort(info.authors).join(",") : undefined,
     categories: info.categories?.length ? writeCategories(info.categories, categories) : undefined,
     credits: info.credits?.length ? writeCredits(info.credits) : undefined,
+    default: info.default || undefined,
     dependencies: info.dependencies?.length
       ? sortBy(info.dependencies, get("id")).map(writeDependencyInfo)
       : undefined,

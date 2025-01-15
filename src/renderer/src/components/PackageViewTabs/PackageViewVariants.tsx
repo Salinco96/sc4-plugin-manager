@@ -10,8 +10,7 @@ import { Thumbnail } from "@components/Thumbnail"
 import { VariantActions } from "@components/VariantActions"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { Button, Card, CardActions, CardContent, List } from "@mui/material"
-import { collect } from "@salinco/nice-utils"
-import { usePackageInfo } from "@utils/packages"
+import { getOrderedVariants, usePackageInfo } from "@utils/packages"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -25,61 +24,61 @@ export default function PackageViewVariants({ packageId }: { packageId: PackageI
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>
-      {collect(packageInfo.variants, (variantInfo, variantId) => (
-        <Card elevation={1} key={variantId} sx={{ display: "flex" }}>
+      {getOrderedVariants(packageInfo).map(variant => (
+        <Card elevation={1} key={variant.id} sx={{ display: "flex" }}>
           <CardContent sx={{ flexGrow: 1, overflow: "hidden" }}>
-            {!!variantInfo.images?.length && (
+            {!!variant.images?.length && (
               <ImageViewer
-                images={variantInfo.images}
+                images={variant.images}
                 onClose={() => setOpenImages(undefined)}
-                open={openImages === variantId}
+                open={openImages === variant.id}
               />
             )}
 
             <FlexRow>
-              {variantInfo.thumbnail && (
+              {variant.thumbnail && (
                 <Thumbnail
-                  disabled={!variantInfo.images?.length}
+                  disabled={!variant.images?.length}
                   mr={2}
                   mt={1}
                   size={84}
-                  onClick={() => setOpenImages(variantId)}
-                  src={variantInfo.thumbnail}
+                  onClick={() => setOpenImages(variant.id)}
+                  src={variant.thumbnail}
                 />
               )}
 
               <FlexCol>
                 <Text maxLines={1} variant="h6">
-                  {variantInfo.name ?? variantInfo.id} (v{variantInfo.version})
+                  {variant.name ?? variant.id} ({variant.version})
                 </Text>
 
                 <FlexRow centered>
                   <Text maxLines={1} variant="body2">
-                    {packageId}#{variantId}
+                    {packageId}#{variant.id}
                   </Text>
-                  <PackageTools packageId={packageId} variantId={variantId} />
+                  <PackageTools packageId={packageId} variantId={variant.id} />
                 </FlexRow>
 
-                <VariantTags packageId={packageId} variantId={variantId} />
+                <VariantTags packageId={packageId} variantId={variant.id} />
               </FlexCol>
             </FlexRow>
 
-            {variantInfo.description && (
+            {variant.description && (
               <Text
                 maxLines={2}
                 sx={{ height: 40, marginTop: 2 }}
-                title={variantInfo.description}
+                title={variant.description}
                 variant="body2"
               >
-                {variantInfo.description}
+                {variant.description}
               </Text>
             )}
 
-            <PackageBanners packageId={packageId} variantId={variantId} />
+            <PackageBanners packageId={packageId} variantId={variant.id} />
           </CardContent>
 
           <CardActions sx={{ padding: 2 }}>
-            <VariantActions packageId={packageId} variantId={variantId} />
+            <VariantActions packageId={packageId} variantId={variant.id} />
           </CardActions>
         </Card>
       ))}

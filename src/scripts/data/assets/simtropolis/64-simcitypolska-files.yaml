@@ -1011,11 +1011,2707 @@ assets:
     assetId: simtropolis/27291-ms-parking-lots-road-set-and-car-props
     authors:
       - moto.kloss
+    buildings:
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_Motokloss_P_ModsProps.dat:
+        3be57ef2-1c43287a:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x6 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Ave
+          power: 61
+        3be57ef2-3c42af5b:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_OW
+          power: 61
+        3be57ef2-5c42e870:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: Rd 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Rd
+          power: 61
+        3be57ef2-5c42f920:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-5c4315c7:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x6 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x6
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x6
+          power: 61
+        3be57ef2-5c432221:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Rd
+          power: 61
+        3be57ef2-5c4327fe:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_OW
+          power: 61
+        3be57ef2-5c440f75:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x2_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_Rd
+          power: 61
+        3be57ef2-7c431016:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Ave_a
+          power: 61
+        3be57ef2-7c43fc55:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Ave
+          power: 61
+        3be57ef2-9c43fb5e:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_OW
+          power: 61
+        3be57ef2-9c43fbf3:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Rd
+          power: 61
+        3be57ef2-9c440e9a:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-fbe950a7:
+          bulldoze: 5
+          categories: transport
+          cost: 5
+          description: Ow roads parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS 2x4 Parking Lot 1
+          maintenance: 1
+          menu: MiscTransit
+          model: fad46a72
+          name: MSPdst4x2
+          power: 5
+        3be57ef2-fc41c74b:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x4 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x4
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x4_a
+          power: 61
+        3be57ef2-fc440f26:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x2_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_Ave
+          power: 61
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_No_Trees.dat:
+        3be57ef2-1c4425e6:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x2_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_Rd
+          power: 61
+        3be57ef2-1c442988:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-3c4304a8:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-5c42f2a8:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_OW
+          power: 61
+        3be57ef2-5c4310f8:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Ave_a
+          power: 61
+        3be57ef2-bc43f45e:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x6 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Ave
+          power: 61
+        3be57ef2-bc44039c:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_OW
+          power: 61
+        3be57ef2-bc4428a5:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-dc42eb01:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: Rd 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Rd
+          power: 61
+        3be57ef2-dc44067a:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Ave
+          power: 61
+        3be57ef2-dc440a1b:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Rd
+          power: 61
+        3be57ef2-fc41d952:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x4 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x4
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x4_a
+          power: 61
+        3be57ef2-fc431bae:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x6 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x6
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x6
+          power: 61
+        3be57ef2-fc432404:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Rd
+          power: 61
+        3be57ef2-fc43f271:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_OW
+          power: 61
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_SL_Trees.dat:
+        3be57ef2-1c4432b8:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-1c443304:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_OW
+          power: 61
+        3be57ef2-3c4431eb:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Rd
+          power: 61
+        3be57ef2-3c4435ce:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_OW
+          power: 61
+        3be57ef2-3c4436ed:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Rd
+          power: 61
+        3be57ef2-5c442ee9:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Ave_a
+          power: 61
+        3be57ef2-5c443776:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x6 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Ave
+          power: 61
+        3be57ef2-7c442e13:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Ave
+          power: 61
+        3be57ef2-7c443bef:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x6 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x6
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x6
+          power: 61
+        3be57ef2-9c442d38:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-9c442f30:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-9c443101:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-9c443b33:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x4 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x4
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x4_a
+          power: 61
+        3be57ef2-dc443129:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x2_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_Rd
+          power: 61
+        3be57ef2-dc4431c0:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_OW
+          power: 61
+        3be57ef2-dc44336c:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: Rd 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Rd
+          power: 61
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_Trees.dat:
+        3be57ef2-5c42f28c:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_OW
+          power: 61
+        3be57ef2-5c430494:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-5c4304c3:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x4 mixed parking places.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Mix
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_1x4_OW_Mix
+          power: 61
+        3be57ef2-5c431114:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x4 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Ave_a
+          power: 61
+        3be57ef2-5c431b83:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x6 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x6
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x6
+          power: 61
+        3be57ef2-5c43239f:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Rd
+          power: 61
+        3be57ef2-9c41d965:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 2x4 parking lot.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_2x4
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_2x4_a
+          power: 61
+        3be57ef2-9c43f241:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x6 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_OW
+          power: 61
+        3be57ef2-9c44065c:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Ave
+          power: 61
+        3be57ef2-9c4425c1:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x2_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_Rd
+          power: 61
+        3be57ef2-9c442890:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-9c44297b:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x2 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_P_1x2_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x2_OW
+          power: 61
+        3be57ef2-dc43f44d:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: OW 1x6 - one side of the avenue.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x6_P_OW_Ave
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x6_Ave
+          power: 61
+        3be57ef2-dc44036b:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 OW.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_OW
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_OW
+          power: 61
+        3be57ef2-dc4409e3:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: 1x3 Rd.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x3_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x3_Rd
+          power: 61
+        3be57ef2-fc42eb65:
+          bulldoze: 1
+          categories: transport
+          cost: 1
+          description: Rd 1x4.
+          flamability: 10
+          jobs:
+            $: 95
+            $$: 5
+          label: MS_1x4_P_Rd
+          menu: MiscTransit
+          model: dd74e1ec
+          name: MS_Parking_1x4_Rd
+          power: 61
     category: 64-simcitypolska-files
+    dependencies:
+      - cycledogg/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\tA small addition to the <abbr title=\"SimCity 4\">SC4</abbr> parking lots theme - set of the functional car parks to plop on roads and one-way roads. <strong>47 </strong><strong>pieces</strong> in total - in different sizes, with different types of parking spaces (parallel, diagonal, mixed), with various types of trees (no trees, Maxis trees, semi-seasonal trees) and lots of different vehicles.</p>\n<p>\tThis set comes together with a prop pack of my simple car models from the 60s and 70s - <strong>MS_Motokloss_60s-70s_CarProps</strong>. About 60 old European vehicles in several variants (parallel, diagonal and “less diagonal” <img alt=\"https://www.simtropolis.com/forum/public/style_emoticons/default/2.gif\" src=\"https://www.simtropolis.com/forum/public/style_emoticons/default/2.gif\" > ).</p>\n<p>\tMore info. in “read me” files - please check them.</p>\n<p>\t<strong>DEPENDENCIES:</strong></p>\n<p>\t- <strong><abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01</strong> - for the semi seasonal trees. It is required ONLY if you want to use the version with these trees.<br><a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180\" rel=\"external nofollow\">http://sc4devotion.c...php?lotGET=1180</a></p>\n<p>\t- MS Motokloss 60s-70s Car Props - <strong>INCLUDED</strong> in this download.</p>\n<p>\t<span style=\"color:#a52a2a;\"><u><strong>IMPORTANT</strong> </u>- some people can't see the parallel asphalt parking spaces due to the \"conflict\" with some different plugin*. If you are one of them, please<strong> rename the folder \"Motokloss\" to \"zzzMotokloss\"</strong> to set it at the end of the loading queue. It should solve the problem. Many thanks to yigit007, who discovered this solution (see comments below).</span></p>\n<p>\t<span style=\"color:#a52a2a;\">*It doesn't happen every time. I tested these parking lots in different plugin configs and never had any troubles, same with other users.</span></p>\n<p>\t_____<br><span style=\"font-size:12px;\">Notice, the pics below were taken with the loaded <abbr title=\"Network Addon Mod\">NAM</abbr> Euro-road texture. If you do not use <abbr title=\"Network Addon Mod\">NAM</abbr> or this texture, you will see the standard US yellow lines (in case of the two-way road pieces).</span></p>\n<p>\t\_</p>\n<hr><p>\t<span style=\"font-size:12px;\"><span style=\"color:rgb(0,0,205);\">Mod Edit:</span> Fixed unparsed BBCode.</span></p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: MS_ParkingAndCarProps.zip
+    files:
+      - MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/MS_Motokloss_60s-70s_CarProps.dat
+      - MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/ReadMe/EN_ReadMe.txt
+      - MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/ReadMe/PL_Informacje.txt
+      - MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/ReadMe/Pic.jpg
+      - MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/Thumbs.db
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_Motokloss_P_ModsProps.dat
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_No_Trees.dat
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_SL_Trees.dat
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_Trees.dat
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/ReadMe/EN_ReadMe.txt
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/ReadMe/PL_Informacje.txt
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/ReadMe/Pic.jpg
+      - MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/Thumbs.db
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/14d6ac2988b5ca0a120d6bad5de803d5-msparking.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/fc23ec5ad556d41fd5b1de7b4e212d41-msparking--2-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/560eefc2ce309c8852329a84bef9b23a-msparking--3-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/2fa6b1aba1d96672b3f5300c9f4ab3aa-msparking--4-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/4e21bc6e97688ed3595e2618d8874d39-msparking--5-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/29e60bf68370bc066736182354e32d23-msparking--8-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/ef93f29c93c1ceba3a8b40c520ebd80c-msparking--7-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/522ed0ba4eea47c2cc4bb8af2ac1e5a9-msparking--6-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/d40a970c34d2fa5f031f1f0163beae9f-msparking--9-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/2849e2575dd9f33a9f677b17b93ed59d-msparking--10-.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_07_2012/64162da088a81210f6a704217b943930-msdcarprops.jpg
     lastModified: 2012-02-19T16:07:20.000Z
+    lots:
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_No_Trees.dat:
+        1c4425e6:
+          building: 1c4425e6
+          name: MS_1x2_Rd_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26372000'
+        1c442988:
+          building: 1c442988
+          name: MS_1x2_Ave_No_Trees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        3c4304a8:
+          building: 3c4304a8
+          name: MS_1x4_OW_Mix_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - 5193bb04
+            - 5bfd13a4
+            - 5bfd13b5
+            - 7bfd13ae
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c42f2a8:
+          building: 5c42f2a8
+          name: MS_1x4_OW_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c4310f8:
+          building: 5c4310f8
+          name: MS_1x4_OW_Ave_No_Trees_a
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        bc43f45e:
+          building: bc43f45e
+          name: MS_1x6_OW_Ave_No_Trees_a
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+        bc44039c:
+          building: bc44039c
+          name: MS_1x3_OW_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        bc4428a5:
+          building: bc4428a5
+          name: MS_1x2_OW_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        dc42eb01:
+          building: dc42eb01
+          name: MS_1x4_Rd_No_Trees_a
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26372000'
+        dc44067a:
+          building: dc44067a
+          name: MS_1x3_OW_Ave_No_Trees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2cb00000
+            - 5193bb01
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        dc440a1b:
+          building: dc440a1b
+          name: MS_1x3_Rd_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26372000'
+        fc41d952:
+          building: fc41d952
+          name: MS_2x4_Parking_No_Trees_a
+          props:
+            - 2cb00000
+            - 5193bb00
+            - 5193bb01
+            - dc41b84b
+            - fbebe746
+          size: 2x4
+          textures:
+            - 258f2000
+            - '26382000'
+        fc431bae:
+          building: fc431bae
+          name: MS_2x6_Parking_No_Trees
+          props:
+            - 2cb00000
+            - 3c3ecfc8
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 2x6
+          textures:
+            - 258f2000
+            - '26382000'
+        fc432404:
+          building: fc432404
+          name: MS_1x6_Rd_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26372000'
+        fc43f271:
+          building: fc43f271
+          name: MS_1x6_OW_No_Trees
+          props:
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_SL_Trees.dat:
+        1c4432b8:
+          building: 1c4432b8
+          name: MS_1x4_OW_Mix_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - 5193bb04
+            - 5bfd13a4
+            - 5bfd13b5
+            - 7bfd13ae
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        1c443304:
+          building: 1c443304
+          name: MS_1x4_OW_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        3c4431eb:
+          building: 3c4431eb
+          name: MS_1x3_Rd_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26372000'
+        3c4435ce:
+          building: 3c4435ce
+          name: MS_1x6_OW_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+        3c4436ed:
+          building: 3c4436ed
+          name: MS_1x6_Rd_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26372000'
+        5c442ee9:
+          building: 5c442ee9
+          name: MS_1x4_OW_Ave_SeasTrees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c443776:
+          building: 5c443776
+          name: MS_1x6_OW_Ave_SemiTrees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+        7c442e13:
+          building: 7c442e13
+          name: MS_1x3_OW_Ave_SemiTrees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        7c443bef:
+          building: 7c443bef
+          name: MS_2x6_Parking_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 3c3ecfc8
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 2x6
+          textures:
+            - 258f2000
+            - '26382000'
+        9c442d38:
+          building: 9c442d38
+          name: MS_1x2_Ave_SemiTrees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        9c442f30:
+          building: 9c442f30
+          name: MS_1x4_OW_Mix_Ave_SemiTrees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - 5193bb04
+            - 5bfd13a4
+            - 5bfd13b5
+            - 7bfd13ae
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        9c443101:
+          building: 9c443101
+          name: MS_1x2_OW_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        9c443b33:
+          building: 9c443b33
+          name: MS_2x4_Parking_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb00
+            - 5193bb01
+            - dc41b84b
+            - fbebe746
+          size: 2x4
+          textures:
+            - 258f2000
+            - '26382000'
+        dc443129:
+          building: dc443129
+          name: MS_1x2_Rd_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26372000'
+        dc4431c0:
+          building: dc4431c0
+          name: MS_1x3_OW_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        dc44336c:
+          building: dc44336c
+          name: MS_1x4_Rd_SemiTrees
+          props:
+            - 2a8a0000
+            - 2cb00000
+            - 500064ed
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26372000'
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_P_Trees.dat:
+        5c42f28c:
+          building: 5c42f28c
+          name: MS_1x4_OW_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c430494:
+          building: 5c430494
+          name: MS_1x4_OW_Mix_Ave_Trees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - 5193bb04
+            - 5bfd13a4
+            - 5bfd13b5
+            - 7bfd13ae
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c4304c3:
+          building: 5c4304c3
+          name: MS_1x4_OW_Mix_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - 5193bb04
+            - 5bfd13a4
+            - 5bfd13b5
+            - 7bfd13ae
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c431114:
+          building: 5c431114
+          name: MS_1x4_OW_Ave_Trees_a
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26382000'
+        5c431b83:
+          building: 5c431b83
+          name: MS_2x6_Parking_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 3c3ecfc8
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 2x6
+          textures:
+            - 258f2000
+            - '26382000'
+        5c43239f:
+          building: 5c43239f
+          name: MS_1x6_Rd_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26372000'
+        9c41d965:
+          building: 9c41d965
+          name: MS_2x4_Parking_Trees_a
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb00
+            - 5193bb01
+            - dc41b84b
+            - fbebe746
+          size: 2x4
+          textures:
+            - 258f2000
+            - '26382000'
+        9c43f241:
+          building: 9c43f241
+          name: MS_1x6_OW_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+        9c44065c:
+          building: 9c44065c
+          name: MS_1x3_OW_Ave_Trees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        9c4425c1:
+          building: 9c4425c1
+          name: MS_1x2_Rd_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26372000'
+        9c442890:
+          building: 9c442890
+          name: MS_1x2_OW_Trees_a
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+            - dc41b84b
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        9c44297b:
+          building: 9c44297b
+          name: MS_1x2_Ave_Trees
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dbebeff0
+          size: 1x2
+          textures:
+            - 258f2000
+            - '26382000'
+        dc43f44d:
+          building: dc43f44d
+          name: MS_1x6_OW_Ave_Trees_a
+          props:
+            - '1e040000'
+            - '29320000'
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - fbebec00
+          size: 1x6
+          textures:
+            - 258f2000
+            - '26382000'
+        dc44036b:
+          building: dc44036b
+          name: MS_1x3_OW_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26382000'
+        dc4409e3:
+          building: dc4409e3
+          name: MS_1x3_Rd_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebefe2
+          size: 1x3
+          textures:
+            - 258f2000
+            - '26372000'
+        fc42eb65:
+          building: fc42eb65
+          name: MS_1x4_Rd_Trees
+          props:
+            - 2a8a0000
+            - 2b1a0000
+            - 2cb00000
+            - 5193bb01
+            - 5193bb02
+            - dc41b84b
+            - fbebe746
+          size: 1x4
+          textures:
+            - 258f2000
+            - '26372000'
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/MS_Motokloss_60s-70s_CarProps.dat:
+        - 1bfa92d4
+        - 1cd41941
+        - 1d4d36b4
+        - 1d4d3f23
+        - 1d4d4312
+        - 1d4d4602
+        - 1d4d471a
+        - 1d4d477d
+        - 1d4d485a
+        - 1d4d49e4
+        - 1d4d4db9
+        - 1d4d4e77
+        - 1d4d4f72
+        - 3d4d2850
+        - 3d4d3022
+        - 3d4d32f7
+        - 3d4d33aa
+        - 3d4d3718
+        - 3d4d3769
+        - 3d4d37b0
+        - 3d4d3a0d
+        - 3d4d3a64
+        - 3d4d41ba
+        - 3d4d4d1e
+        - 3d4d4e29
+        - 3d4d52b3
+        - 3d4d5309
+        - 5b24c11a
+        - 5bfd2edd
+        - 5bfd315a
+        - 5d4d3130
+        - 5d4d3604
+        - 5d4d3bc1
+        - 5d4d4039
+        - 5d4d40a7
+        - 5d4d40e0
+        - 5d4d4135
+        - 5d4d4404
+        - 5d4d47f3
+        - 5d4d4f29
+        - 5d4d5135
+        - 5d4d54af
+        - 5d4d5503
+        - 7b249a44
+        - 7bf92d7c
+        - 7d4d35ab
+        - 7d4d3b2e
+        - 7d4d435f
+        - 7d4d43b5
+        - 7d4d4649
+        - 7d4d492e
+        - 7d4d4d67
+        - 9afd0420
+        - 9afd4c27
+        - 9d4d30e0
+        - 9d4d3360
+        - 9d4d3405
+        - 9d4d3461
+        - 9d4d34c8
+        - 9d4d37fa
+        - 9d4d3b79
+        - 9d4d3c2f
+        - 9d4d3de8
+        - 9d4d3e3c
+        - 9d4d3e8c
+        - 9d4d4488
+        - 9d4d5360
+        - bafd697b
+        - bb247b11
+        - bbf94028
+        - bd4d2ed6
+        - bd4d2f61
+        - bd4d3d90
+        - bd4d3ede
+        - bd4d45bc
+        - bd4d4feb
+        - bd4d50e8
+        - bd4d554e
+        - dd4d2e37
+        - dd4d351a
+        - dd4d365e
+        - dd4d3840
+        - dd4d3cda
+        - dd4d3d2a
+        - dd4d4072
+        - dd4d468d
+        - dd4d48dc
+        - dd4d4cd2
+        - dd4d5096
+        - fd4d2fb8
+        - fd4d308f
+        - fd4d417a
+        - fd4d4207
+        - fd4d4445
+        - fd4d4574
+        - fd4d46d1
+        - fd4d497e
+        - fd4d4ebb
+        - fd4d53b3
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_Motokloss_P_ModsProps.dat:
+        - 3b24d29b
+        - 5b24dca0
+        - 5bf91ea1
+        - bbf91e5e
+        - db24d758
+        - db24db68
+        - dd74e1ec
+        - fad46a72
+        - fbf91c8d
     name: MS Parking Lots (Road Set) and Car Props
+    props:
+      MS_ParkingAndCarProps/Motokloss/MS 60s-70s Car Props/MS_Motokloss_60s-70s_CarProps.dat:
+        02119206-b67e7ae6:
+          family: 5193bb03
+          model: 7cab064f
+          name: MS_PF_126p_rrack_v3
+        068c369f-798456df:
+          family: 5193bb03
+          model: 1caae93d
+          name: MS_Nysa_M521_v3
+        06a116fc-7216653d:
+          family: 5193bb01
+          model: 9d4d3b79
+          name: MS_PF_125p_Kombi_v20
+        06d8da70-6de3e4c6:
+          family: 5193bb01
+          model: 1d4d471a
+          name: MS_R12
+        0898c86d-4ab7b11d:
+          family: 5193bb03
+          model: 9caad923
+          name: MS_FSO_Wawa_203_v3
+        08f5b421-c9ac6b37:
+          family: 5193bb03
+          model: dc1f5f41
+          name: MS_GAZ_24_Wolga_v3
+        0d9da339-3f1a2094:
+          family: 5193bb01
+          model: fd4d53b3
+          name: MS_Z1100p_green_v2
+        0daefcea-6ec18708:
+          family: 5193bb01
+          model: dd4d3cda
+          name: MS_PF_125p_MR75_blue
+        0ff62872-8a0aff0b:
+          family: 5193bb01
+          model: 3d4d3718
+          name: MS_Peugeot_504
+        126e0530-a9264447:
+          family: 5193bb01
+          model: fd4d497e
+          name: MS_Simca_1301
+        129e1a64-deffed29:
+          family: 5193bb00
+          model: bb247b11
+          name: MS_CarsGroup_2x4_4bus
+        1416563c-989fdab0:
+          family: 5193bb03
+          model: bcaacc13
+          name: MS_Trabant_601_Uni_v3
+        156897fe-f175cc23:
+          family: 5193bb01
+          model: fd4d4445
+          name: MS_PF_132pGLS_orange
+        172d709e-852767ec:
+          family: 5193bb01
+          model: 9d4d3e3c
+          name: MS_PF_125p_MR75_green
+        174bb610-fc6e6d6f:
+          family: 5193bb01
+          model: 3d4d3022
+          name: MS_Fiat_600D
+        19aff2ba-d739c7c9:
+          family: 5193bb02
+          model: 1cd41941
+          name: MS_empty_place
+        1b751fc5-680219af:
+          family: 5193bb01
+          model: 5d4d47f3
+          name: MS_R12_v2
+        1c28271f-c9a4ce9e:
+          family: 5193bb03
+          model: 5caae348
+          name: MS_Zuk_A07M_2_v3
+        1c998432-2fd0a925:
+          family: 5193bb01
+          model: dd4d48dc
+          name: MS_R16
+        1e5b3bd1-f70a0211:
+          family: 5193bb00
+          model: 9afd4c27
+          name: MS_CarsGroup_2x4_1
+        21388e4c-8b1d56d9:
+          family: 5193bb03
+          model: 9caae57c
+          name: MS_Zuk_A03M_v3
+        22205926-add7aaaf:
+          family: 5193bb03
+          model: 9cab1cd6
+          name: MS_R15_v3
+        226d03e0-65180dcf:
+          family: 5193bb01
+          model: 9d4d3360
+          name: MS_FSO_Syrena_105_v2
+        24db5443-0a264c8a:
+          family: 5193bb01
+          model: 7d4d3b2e
+          name: MS_PF_125p_Kombi
+        28edc122-f6841713:
+          family: 5193bb03
+          model: 1cd3eabe
+          name: MS_PF_125p_beige_v3
+        29b6467e-3c44b60c:
+          family: 5193bb01
+          model: 3d4d2850
+          name: MS_BMW_E12_brown
+        2bd5288b-52ce7d4e:
+          family: 5193bb04
+          model: 5bfd315a
+          name: MS_DiagCarsRow_4x_5bus
+        2fdeec16-79798a1f:
+          family: 5193bb02
+          model: dd4d365e
+          name: MS_Nysa_F521
+        30ea5a8a-722a08ae:
+          family: 5193bb01
+          model: 1d4d49e4
+          name: MS_Simca_1301_v2
+        31586459-b6a8d593:
+          family: 5193bb01
+          model: 1d4d4602
+          name: MS_R6TL
+        31788cbc-1bb458cf:
+          family: 5193bb01
+          model: 9d4d3405
+          name: MS_GAZ_24_Wolga
+        3216a300-721487d4:
+          family: 5193bb01
+          model: 7d4d35ab
+          name: MS_NSU_TT
+        34fc669d-931906e5:
+          family: 5193bb01
+          model: 9d4d3461
+          name: MS_MB_W115
+        35da4f27-deb6af3c:
+          family: 5193bb01
+          model: 3d4d5309
+          name: MS_Z1100p_black_v2
+        36299c60-4438d5a5:
+          family: 5193bb03
+          model: dcaaf83a
+          name: MS_Peugeot_504_v3
+        38c9d110-5435d120:
+          family: 5193bb03
+          model: 3cab3a00
+          name: MS_NSU_TT_v3
+        391a6a3a-c0dc4b12:
+          family: 5193bb03
+          model: 1cab31e2
+          name: MS_Skoda_1000MB_green_v3
+        3b472b1d-689d81cf:
+          family: 5193bb03
+          model: fcfb7f99
+          name: MS_R12_Gordini_v3
+        3be57ef2-1c3ecfb4:
+          model: bafd697b
+          name: MS_CarsGroup_2x4_3
+        3be57ef2-1c3ecfbe:
+          model: 9afd0420
+          name: MSCarsGroup2x4_2
+        3be57ef2-1c404776:
+          model: 9d4d34c8
+          name: MS_Moskvitch_412IE
+        3be57ef2-1c405067:
+          model: dd4d4072
+          name: MS_PF_126p_red
+        3be57ef2-1c4059d2:
+          model: 7d4d492e
+          name: MS_R16_v2
+        3be57ef2-1c405ff6:
+          model: dd4d5096
+          name: MS_VW_411_Variant
+        3be57ef2-1c405ffb:
+          model: dd4d4cd2
+          name: MS_Skoda_100_blue
+        3be57ef2-1c406013:
+          model: 5d4d4f29
+          name: MS_Tarpan_233
+        3be57ef2-1c406262:
+          model: 9d4d5360
+          name: MS_Z1100p_green
+        3be57ef2-1c40639c:
+          model: bd4d554e
+          name: MS_Zuk_A07M_2
+        3be57ef2-3c3ecfaf:
+          model: bb247b11
+          name: MS_CarsGroup_2x4_4bus
+        3be57ef2-3c3ecfc8:
+          model: 5b24c11a
+          name: MS_CarsGroup_2x6
+        3be57ef2-3c403f9e:
+          model: 9d4d30e0
+          name: MS_Fiat_850
+        3be57ef2-3c403fbc:
+          model: fd4d308f
+          name: MS_Fiat_600D_v2
+        3be57ef2-3c4046cd:
+          model: 3d4d33aa
+          name: MS_FSO_Wawa_203
+        3be57ef2-3c4046e0:
+          model: 3d4d37b0
+          name: MS_PF_125p_Akropolis_v2
+        3be57ef2-3c40476d:
+          model: dd4d351a
+          name: MS_Niewiadow_N126
+        3be57ef2-3c404783:
+          model: 9d4d3360
+          name: MS_FSO_Syrena_105_v2
+        3be57ef2-3c404a80:
+          model: 9d4d3b79
+          name: MS_PF_125p_Kombi_v20
+        3be57ef2-3c404d90:
+          model: 3d4d32f7
+          name: MS_FSO_Syrena_105
+        3be57ef2-3c404db6:
+          model: dd4d3d2a
+          name: MS_PF_125p_MR75_blue_v2
+        3be57ef2-3c406266:
+          model: fd4d53b3
+          name: MS_Z1100p_green_v2
+        3be57ef2-5bfd2380:
+          model: 7bf92d7c
+          name: MS_DiagCarsRow_4x_1
+        3be57ef2-5bfd3615:
+          model: bbf94028
+          name: MS_DiagCarsRow_4x_2
+        3be57ef2-5c012a24:
+          model: 5bfd2edd
+          name: MS_DiagCarsRow_4x_4
+        3be57ef2-5c403f9a:
+          model: 5d4d3130
+          name: MS_Fiat_850_v2
+        3be57ef2-5c403fa3:
+          model: bd4d2ed6
+          name: MS_car_cover
+        3be57ef2-5c403fb4:
+          model: dd4d2e37
+          name: MS_BMW_E12_green
+        3be57ef2-5c4046da:
+          model: 3d4d3769
+          name: MS_PF_125p_Akropolis
+        3be57ef2-5c404771:
+          model: 9d4d37fa
+          name: MS_PF_125p_beige
+        3be57ef2-5c40477f:
+          model: 9d4d3405
+          name: MS_GAZ_24_Wolga
+        3be57ef2-5c4052e6:
+          model: 5d4d4404
+          name: MS_PF_132pGLS_beige_v2
+        3be57ef2-5c4059e7:
+          model: 1d4d485a
+          name: MS_R15
+        3be57ef2-5c405fff:
+          model: bd4d50e8
+          name: MS_VW_411_Variant_v2
+        3be57ef2-5c40601b:
+          model: 3d4d4d1e
+          name: MS_Skoda_100_green
+        3be57ef2-5c40602a:
+          model: 1d4d4db9
+          name: MS_Skoda_100_rrack
+        3be57ef2-7c012a31:
+          model: 5bfd315a
+          name: MS_DiagCarsRow_4x_5bus
+        3be57ef2-7c4046ea:
+          model: 7d4d35ab
+          name: MS_NSU_TT
+        3be57ef2-7c40477a:
+          model: 9d4d3461
+          name: MS_MB_W115
+        3be57ef2-7c404a7b:
+          model: 7d4d3b2e
+          name: MS_PF_125p_Kombi
+        3be57ef2-7c404a84:
+          model: 9d4d3c2f
+          name: MS_PF_125p_MR73_v2
+        3be57ef2-7c404d8b:
+          model: 1d4d3f23
+          name: MS_PF_125p_yellow_v2
+        3be57ef2-7c404d9a:
+          model: 9d4d3e3c
+          name: MS_PF_125p_MR75_green
+        3be57ef2-7c404d9f:
+          model: 9d4d3e8c
+          name: MS_PF_125p_MR75_green_v2
+        3be57ef2-7c404da7:
+          model: bd4d3d90
+          name: MS_PF_125p_MR75_brown
+        3be57ef2-7c404db2:
+          model: dd4d3cda
+          name: MS_PF_125p_MR75_blue
+        3be57ef2-7c4052f4:
+          model: 9d4d4488
+          name: MS_PF_132pGLS_orange_v2
+        3be57ef2-7c4059cc:
+          model: bd4d45bc
+          name: MS_R4L_v2
+        3be57ef2-7c4059d7:
+          model: 7d4d4649
+          name: MS_R6TL_v2
+        3be57ef2-7c4059e1:
+          model: 1d4d49e4
+          name: MS_Simca_1301_v2
+        3be57ef2-7c406398:
+          model: 5d4d5503
+          name: MS_Zuk_A07M
+        3be57ef2-9c403684:
+          model: 3d4d2850
+          name: MS_BMW_E12_brown
+        3be57ef2-9c403f92:
+          model: 3d4d3022
+          name: MS_Fiat_600D
+        3be57ef2-9c4046c4:
+          model: 1d4d36b4
+          name: MS_Nysa_M521
+        3be57ef2-9c4046d2:
+          model: 3d4d3718
+          name: MS_Peugeot_504
+        3be57ef2-9c404763:
+          model: dd4d3840
+          name: MS_PF_125p_beige_v2
+        3be57ef2-9c404899:
+          model: 3d4d3a64
+          name: MS_PF_125p_blue_v2
+        3be57ef2-9c40489e:
+          model: 3d4d3a0d
+          name: MS_PF_125p_blue
+        3be57ef2-9c404a76:
+          model: 5d4d3bc1
+          name: MS_PF_125p_MR73
+        3be57ef2-9c404d96:
+          model: 9d4d3de8
+          name: MS_PF_125p_MR75_brown_v2
+        3be57ef2-9c405050:
+          model: 3d4d41ba
+          name: MS_PF_127p
+        3be57ef2-9c4052e1:
+          model: 1d4d4312
+          name: MS_PF_128p_S
+        3be57ef2-9c4059b1:
+          model: fd4d497e
+          name: MS_Simca_1301
+        3be57ef2-9c4059c7:
+          model: dd4d468d
+          name: MS_R10_Major
+        3be57ef2-9c4059ef:
+          model: 1d4d471a
+          name: MS_R12
+        3be57ef2-9c405ff2:
+          model: fd4d4ebb
+          name: MS_Skoda_1000MB_white
+        3be57ef2-9c40600a:
+          model: 7d4d4d67
+          name: MS_Skoda_100_green_v2
+        3be57ef2-9c406017:
+          model: 3d4d4e29
+          name: MS_Skoda_1000MB_green
+        3be57ef2-9c406020:
+          model: 1d4d4f72
+          name: MS_Trabant_601_Uni
+        3be57ef2-9c406025:
+          model: 1d4d4e77
+          name: MS_Skoda_1000MB_green_v2
+        3be57ef2-9c40625a:
+          model: 3d4d52b3
+          name: MS_Z1100p_black
+        3be57ef2-9c40625e:
+          model: 3d4d5309
+          name: MS_Z1100p_black_v2
+        3be57ef2-9c406394:
+          model: 5d4d54af
+          name: MS_Zuk_A03M
+        3be57ef2-bbfe92a2:
+          model: 1bfa92d4
+          name: MS_DiagCarsRow_4x_3
+        3be57ef2-bc3ecfc4:
+          model: 7b249a44
+          name: MS_CarsGroup_2x4_5agr
+        3be57ef2-bc403fab:
+          model: bd4d2f61
+          name: MS_Cit_Ami_Super
+        3be57ef2-bc404768:
+          model: dd4d365e
+          name: MS_Nysa_F521
+        3be57ef2-bc405059:
+          model: 5d4d40a7
+          name: MS_PF_126p_red_v2
+        3be57ef2-bc40505d:
+          model: 5d4d40e0
+          name: MS_PF_126p_rrack
+        3be57ef2-bc405077:
+          model: fd4d4207
+          name: MS_PF_127p_v2
+        3be57ef2-bc4052ef:
+          model: 7d4d43b5
+          name: MS_PF_132pGLS_beige
+        3be57ef2-bc4052f9:
+          model: fd4d4445
+          name: MS_PF_132pGLS_orange
+        3be57ef2-bc4059b6:
+          model: fd4d46d1
+          name: MS_R10_Major_v2
+        3be57ef2-bc4059dc:
+          model: 5d4d47f3
+          name: MS_R12_v2
+        3be57ef2-bc406003:
+          model: bd4d4feb
+          name: MS_Trabant_601_Uni_v2
+        3be57ef2-dc3c7faf:
+          model: 1cd41941
+          name: MS_empty_place
+        3be57ef2-dc403fb8:
+          model: fd4d2fb8
+          name: MS_Fiat_130
+        3be57ef2-dc4046e5:
+          model: 5d4d3604
+          name: MS_NSU_TT_v2
+        3be57ef2-dc404dac:
+          model: bd4d3ede
+          name: MS_PF_125p_yellow
+        3be57ef2-dc405062:
+          model: 5d4d4135
+          name: MS_PF_126p_rrack_v2
+        3be57ef2-dc405073:
+          model: fd4d417a
+          name: MS_PF_126p_yellow
+        3be57ef2-dc4059be:
+          model: dd4d48dc
+          name: MS_R16
+        3be57ef2-dc40600e:
+          model: 5d4d5135
+          name: MS_Wartburg_353
+        3be57ef2-fc3ecfb9:
+          model: 9afd4c27
+          name: MS_CarsGroup_2x4_1
+        3be57ef2-fc405055:
+          model: 5d4d4039
+          name: MS_PF_126p_blue
+        3be57ef2-fc4052eb:
+          model: 7d4d435f
+          name: MS_PF_128p_S_v2
+        3be57ef2-fc4059ba:
+          model: fd4d4574
+          name: MS_R4L
+        3be57ef2-fc4059eb:
+          model: 1d4d477d
+          name: MS_R12_Gordini
+        3be57ef2-fc4059f3:
+          model: 1d4d4602
+          name: MS_R6TL
+        3da0bc63-6d4f14ae:
+          family: 5193bb01
+          model: 3d4d52b3
+          name: MS_Z1100p_black
+        41596c04-738ea68d:
+          family: 5193bb00
+          model: 7b249a44
+          name: MS_CarsGroup_2x4_5agr
+        4272524a-77076e5d:
+          family: 5193bb03
+          model: 1caad73b
+          name: MS_R6TL_v3
+        456e6fef-40bbed93:
+          family: 5193bb01
+          model: dd4d2e37
+          name: MS_BMW_E12_green
+        45bb82de-50580f6e:
+          family: 5193bb03
+          model: 7caae753
+          name: MS_Nysa_F521_v3
+        4603daa2-ba2c2b89:
+          family: 5193bb03
+          model: 9c1f58a4
+          name: MS_R4L_v3
+        4778989c-4af452cd:
+          family: 5193bb03
+          model: 7cab02d7
+          name: MS_PF_126p_red_v3
+        47cfa140-5d7563a0:
+          family: 5193bb01
+          model: fd4d2fb8
+          name: MS_Fiat_130
+        4ca88c19-bf970535:
+          family: 5193bb01
+          model: 1cd41941
+          name: MS_empty_place
+        4d7ad785-edf1dc69:
+          family: 5193bb02
+          model: 5d4d4f29
+          name: MS_Tarpan_233
+        506a0e2d-08f83003:
+          family: 5193bb01
+          model: dd4d4072
+          name: MS_PF_126p_red
+        5132bff9-07288005:
+          family: 5193bb04
+          model: 1bfa92d4
+          name: MS_DiagCarsRow_4x_3
+        5351a82a-1e0348bf:
+          family: 5193bb03
+          model: 7cab222e
+          name: MS_car_cover_v3
+        53c51fc5-a5b78823:
+          family: 5193bb01
+          model: 9d4d3e8c
+          name: MS_PF_125p_MR75_green_v2
+        567adee2-edd43f52:
+          family: 5193bb01
+          model: dd4d468d
+          name: MS_R10_Major
+        58e86260-234c3b26:
+          family: 5193bb03
+          model: 5cab34fb
+          name: MS_Skoda_1000MB_white_v3
+        58f73d8d-549b6296:
+          family: 5193bb01
+          model: 7d4d4649
+          name: MS_R6TL_v2
+        59214c56-aacddce7:
+          family: 5193bb01
+          model: 1d4d4312
+          name: MS_PF_128p_S
+        5afff96d-996eba94:
+          family: 5193bb01
+          model: bd4d2ed6
+          name: MS_car_cover
+        5b29c903-46e47529:
+          family: 5193bb01
+          model: fd4d4574
+          name: MS_R4L
+        5e238480-5496f38c:
+          family: 5193bb01
+          model: 5d4d3604
+          name: MS_NSU_TT_v2
+        5fea0c10-7912a2fc:
+          family: 5193bb03
+          model: 3cab47f1
+          name: MS_BMW_E12_green_v3
+        61190d7b-b9c6e91c:
+          family: 5193bb01
+          model: 1d4d4e77
+          name: MS_Skoda_1000MB_green_v2
+        61810e3b-54b6ccc2:
+          family: 5193bb01
+          model: 9d4d5360
+          name: MS_Z1100p_green
+        64adffa9-af69e98d:
+          family: 5193bb01
+          model: bd4d45bc
+          name: MS_R4L_v2
+        6592c7e2-0f86e47f:
+          family: 5193bb01
+          model: bd4d50e8
+          name: MS_VW_411_Variant_v2
+        6b7b355b-d854752f:
+          family: 5193bb01
+          model: fd4d4207
+          name: MS_PF_127p_v2
+        6ceb34a6-d015908e:
+          family: 5193bb01
+          model: 7d4d492e
+          name: MS_R16_v2
+        6d321863-5164617b:
+          family: 5193bb03
+          model: fcaadea9
+          name: MS_Zuk_A07M_v3
+        6f051aad-8e2299d7:
+          family: 5193bb01
+          model: bd4d4feb
+          name: MS_Trabant_601_Uni_v2
+        72b98339-db39822b:
+          family: 5193bb03
+          model: 5cab0e29
+          name: MS_Wartburg_353_v3
+        75c8c57e-6748ceb9:
+          family: 5193bb03
+          model: dcab3012
+          name: MS_Skoda_100_green_v3
+        7609d4bb-b465756b:
+          family: 5193bb03
+          model: 3cd3acd5
+          name: MS_PF_125p_MR73_v3
+        77d1fc12-c0345d13:
+          family: 5193bb03
+          model: bcaaf618
+          name: MS_MB_W115_v3
+        78af7e30-b5792054:
+          family: 5193bb03
+          model: 3cab1001
+          name: MS_Simca_1301_v3
+        7aa92e51-1acdee06:
+          family: 5193bb03
+          model: 1cab11f4
+          name: MS_Fiat_600D_v3
+        7b6591eb-d932c180:
+          family: 5193bb03
+          model: 7caad50f
+          name: MS_Fiat_850_v3
+        7cf1be5b-bf9146a8:
+          family: 5193bb00
+          model: bafd697b
+          name: MS_CarsGroup_2x4_3
+        7d0a9752-8bc2d675:
+          family: 5193bb01
+          model: fd4d4ebb
+          name: MS_Skoda_1000MB_white
+        80ce0acc-a7da26e5:
+          family: 5193bb02
+          model: 5d4d54af
+          name: MS_Zuk_A03M
+        8138e7b2-4c80e202:
+          family: 5193bb04
+          model: bbf94028
+          name: MS_DiagCarsRow_4x_2
+        8236430d-b30844cd:
+          family: 5193bb03
+          model: fcab41a9
+          name: MS_PF_125p_Akropolis_v3
+        825a862f-6c60f49e:
+          family: 5193bb03
+          model: dc1f51fb
+          name: MS_PF_128p_S_v3
+        825c4b2c-d6d3aad2:
+          family: 5193bb02
+          model: dd4d351a
+          name: MS_Niewiadow_N126
+        866e562e-45c16710:
+          family: 5193bb01
+          model: 1d4d485a
+          name: MS_R15
+        86cd7780-1944d7d4:
+          family: 5193bb01
+          model: 9d4d3c2f
+          name: MS_PF_125p_MR73_v2
+        88654bde-ef98ee3b:
+          family: 5193bb01
+          model: dd4d5096
+          name: MS_VW_411_Variant
+        8b07acb5-a712cc9b:
+          family: 5193bb01
+          model: 7d4d43b5
+          name: MS_PF_132pGLS_beige
+        8bcaecb0-b3bba9cd:
+          family: 5193bb03
+          model: bcab2dfa
+          name: MS_Skoda_100_blue_v3
+        8c0f5e53-80fff335:
+          family: 5193bb01
+          model: 3d4d32f7
+          name: MS_FSO_Syrena_105
+        9043c687-a7d38e5e:
+          family: 5193bb01
+          model: 5d4d4135
+          name: MS_PF_126p_rrack_v2
+        90ebb292-93e6a889:
+          family: 5193bb01
+          model: 3d4d3a0d
+          name: MS_PF_125p_blue
+        90f19da8-4c3e5390:
+          family: 5193bb03
+          model: 5cab0c13
+          name: MS_R16_v3
+        91c63d8c-4f65a496:
+          family: 5193bb01
+          model: 5d4d40a7
+          name: MS_PF_126p_red_v2
+        91f9e723-30a7de75:
+          family: 5193bb03
+          model: dc1f5b0c
+          name: MS_Cit_Ami_Super_v3
+        92a75ac0-93b32438:
+          family: 5193bb01
+          model: 5d4d40e0
+          name: MS_PF_126p_rrack
+        955d0597-38f05c75:
+          family: 5193bb01
+          model: 3d4d4e29
+          name: MS_Skoda_1000MB_green
+        96923ddb-e040a22d:
+          family: 5193bb01
+          model: bd4d3d90
+          name: MS_PF_125p_MR75_brown
+        984fb7ee-4f864d32:
+          family: 5193bb00
+          model: 9afd0420
+          name: MSCarsGroup2x4_2
+        98dc5cac-dfb09b06:
+          family: 5193bb01
+          model: 3d4d33aa
+          name: MS_FSO_Wawa_203
+        9befcf0a-6dcc50dc:
+          family: 5193bb01
+          model: dd4d4cd2
+          name: MS_Skoda_100_blue
+        9e31ad5e-0dc34a6f:
+          family: 5193bb01
+          model: fd4d46d1
+          name: MS_R10_Major_v2
+        9e71365a-9aab08a6:
+          family: 5193bb03
+          model: 7cab240c
+          name: MS_R10_Major_v3
+        a0a18f9b-c2994b8b:
+          family: 5193bb01
+          model: 5d4d3130
+          name: MS_Fiat_850_v2
+        a29353d1-db3970be:
+          family: 5193bb01
+          model: 5d4d5135
+          name: MS_Wartburg_353
+        a3d159ae-530ed6d3:
+          family: 5193bb01
+          model: 3d4d4d1e
+          name: MS_Skoda_100_green
+        a53f769c-dc50ae85:
+          family: 5193bb01
+          model: 3d4d37b0
+          name: MS_PF_125p_Akropolis_v2
+        a6b0463e-23375e66:
+          family: 5193bb02
+          model: 1d4d36b4
+          name: MS_Nysa_M521
+        a6b605ee-22276b98:
+          family: 5193bb03
+          model: 7cab276f
+          name: MS_Z1100p_green_v3
+        a6eec39d-1e4828c0:
+          family: 5193bb01
+          model: bd4d3ede
+          name: MS_PF_125p_yellow
+        a8270b65-643e89e2:
+          family: 5193bb03
+          model: bcab13f3
+          name: MS_Moskvitch_412IE_v3
+        aa95bb2d-634dd078:
+          family: 5193bb03
+          model: 1cab203e
+          name: MS_R12_v3
+        ab17781c-af94b488:
+          family: 5193bb01
+          model: fd4d308f
+          name: MS_Fiat_600D_v2
+        ab6900da-e4890909:
+          family: 5193bb02
+          model: bd4d554e
+          name: MS_Zuk_A07M_2
+        adfe9bd0-0eeaab95:
+          family: 5193bb01
+          model: dd4d3840
+          name: MS_PF_125p_beige_v2
+        ae1e7789-dd2db9f4:
+          family: 5193bb04
+          model: 5bfd2edd
+          name: MS_DiagCarsRow_4x_4
+        af85f6ee-2dfa941c:
+          family: 5193bb03
+          model: 1caae1ea
+          name: MS_Tarpan_233_v3
+        afc394b1-2cae62b2:
+          family: 5193bb03
+          model: bcab43d8
+          name: MS_PF_132pGLS_beige_v3
+        b045247f-223ece1d:
+          family: 5193bb02
+          model: 5d4d5503
+          name: MS_Zuk_A07M
+        b11cfd4e-64df6e52:
+          family: 5193bb01
+          model: 9d4d30e0
+          name: MS_Fiat_850
+        b1b55489-a71ffc02:
+          family: 5193bb01
+          model: 1d4d4f72
+          name: MS_Trabant_601_Uni
+        b59458db-26f5966f:
+          family: 5193bb04
+          model: 7bf92d7c
+          name: MS_DiagCarsRow_4x_1
+        b5b402d8-93ec0a6e:
+          family: 5193bb03
+          model: 7cab09dc
+          name: MS_PF_126p_blue_v3
+        b8657d4d-6a9c4298:
+          family: 5193bb01
+          model: fd4d417a
+          name: MS_PF_126p_yellow
+        ba374385-241e7345:
+          family: 5193bb01
+          model: 3d4d41ba
+          name: MS_PF_127p
+        bb773d05-48e76259:
+          family: 5193bb01
+          model: 5d4d3bc1
+          name: MS_PF_125p_MR73
+        c1827157-033502ba:
+          family: 5193bb03
+          model: 1cab28fb
+          name: MS_Z1100p_black_v3
+        c3c87efb-65b9fa95:
+          family: 5193bb01
+          model: 1d4d4db9
+          name: MS_Skoda_100_rrack
+        c64f730e-7b8e6e4f:
+          family: 5193bb03
+          model: 3cab3cac
+          name: MS_VW_411_Variant_v3
+        c660cbc2-5beb3486:
+          family: 5193bb03
+          model: 9cd3f832
+          name: MS_PF_125p_MR75_blue_v3
+        c78c5b1c-aa937bdf:
+          family: 5193bb03
+          model: 5cd407a8
+          name: MS_PF_125p_MR75_brown_v3
+        cd5a59df-0dde5685:
+          family: 5193bb01
+          model: bd4d2f61
+          name: MS_Cit_Ami_Super
+        cf48e71b-c6deba72:
+          family: 5193bb01
+          model: 7d4d4d67
+          name: MS_Skoda_100_green_v2
+        cff2dc9f-52ca5522:
+          family: 5193bb03
+          model: dcab4688
+          name: MS_PF_132pGLS_orange_v3
+        d000e998-427bb80b:
+          family: 5193bb01
+          model: 1d4d3f23
+          name: MS_PF_125p_yellow_v2
+        d0213e72-78700753:
+          family: 5193bb01
+          model: 9d4d37fa
+          name: MS_PF_125p_beige
+        d0e2cb12-e14bb332:
+          family: 5193bb03
+          model: bcab4939
+          name: MS_BMW_E12_brown_v3
+        d0e8677c-c9ef4dbc:
+          family: 5193bb03
+          model: dcab3e9c
+          name: MS_PF_125p_Kombi_v3
+        d3f09206-a5152b9a:
+          family: 5193bb01
+          model: dd4d3d2a
+          name: MS_PF_125p_MR75_blue_v2
+        de2743be-6dae17f9:
+          family: 5193bb03
+          model: dc1f5cdc
+          name: MS_Fiat_130_v3
+        df1dc90a-7dd50d7e:
+          family: 5193bb03
+          model: 1cab2b74
+          name: MS_FSO_Syrena_105_v3
+        dfbd9fb0-62f4b757:
+          family: 5193bb03
+          model: 9c1f5561
+          name: MS_PF_127p_v3
+        e1f19997-4afeb6f1:
+          family: 5193bb01
+          model: 1d4d477d
+          name: MS_R12_Gordini
+        e2e95dce-45d103f7:
+          family: 5193bb01
+          model: 9d4d3de8
+          name: MS_PF_125p_MR75_brown_v2
+        e5ef4828-1d3dbe6a:
+          family: 5193bb01
+          model: 7d4d435f
+          name: MS_PF_128p_S_v2
+        e6c05d9b-b09dbfb6:
+          family: 5193bb03
+          model: 7cd3ed69
+          name: MS_PF_125p_blue_v3
+        e6e2cc5a-15f21d29:
+          family: 5193bb03
+          model: bcd3f275
+          name: MS_PF_125p_MR75_green_v3
+        e967d1d3-b0f9a316:
+          family: 5193bb01
+          model: 3d4d3769
+          name: MS_PF_125p_Akropolis
+        eacedd57-78febef0:
+          family: 5193bb03
+          model: fcab2d59
+          name: MS_Skoda_100_rrack_v3
+        f18ef0c4-9b8da051:
+          family: 5193bb01
+          model: 5d4d4039
+          name: MS_PF_126p_blue
+        f1f974e3-9f1f53e8:
+          family: 5193bb01
+          model: 5d4d4404
+          name: MS_PF_132pGLS_beige_v2
+        f2b6652a-446c145d:
+          family: 5193bb03
+          model: 1cd404cf
+          name: MS_PF_125p_yellow_v3
+        f61478dd-c47035da:
+          family: 5193bb01
+          model: 3d4d3a64
+          name: MS_PF_125p_blue_v2
+        f74a078f-31ec9657:
+          family: 5193bb01
+          model: 9d4d4488
+          name: MS_PF_132pGLS_orange_v2
+        f9e29482-25bb3141:
+          family: 5193bb03
+          model: bcab0731
+          name: MS_PF_126p_yellow_v3
+        faf23e2b-1ce33184:
+          family: 5193bb03
+          model: 1cd41941
+          name: MS_empty_place
+        ff334f0f-c9ad1b33:
+          family: 5193bb01
+          model: 9d4d34c8
+          name: MS_Moskvitch_412IE
+      MS_ParkingAndCarProps/Motokloss/MS Parking Lots - Road Set/MS_Motokloss_P_ModsProps.dat:
+        3be57ef2-5bfd13a4:
+          model: fbf91c8d
+          name: MSPaspoprz
+        3be57ef2-5bfd13b5:
+          model: 5bf91ea1
+          name: MSPowWyl2SC4Model
+        3be57ef2-7bfd13ae:
+          model: bbf91e5e
+          name: MSPowWyl
+        3be57ef2-dbebeff0:
+          model: 5b24dca0
+          name: MS_pas2x
+        3be57ef2-dc41b84b:
+          model: dd74e1ec
+          name: MS_Parking_Sign
+        3be57ef2-fbebe746:
+          model: 3b24d29b
+          name: MS_pas4x
+        3be57ef2-fbebec00:
+          model: db24d758
+          name: MS_pas6x
+        3be57ef2-fbebefe2:
+          model: db24db68
+          name: MS_pas3x
+    sha256: 8594231dc957d2b2176c4e749b03d24c898eb8ae13281b23810c2d48186b60c0
+    size: 4311227
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2012/thumb-14d6ac2988b5ca0a120d6bad5de803d5-msparking.jpg
+    uncompressed: 5591881
     url: https://community.simtropolis.com/files/file/27291-ms-parking-lots-road-set-and-car-props/
+    version: '1.0'
   simtropolis/27333:
     assetId: simtropolis/27333-ms-marszalkowska-street-74-warsaw
     authors:
@@ -1629,4 +4325,4 @@ assets:
     url: https://community.simtropolis.com/files/file/36522-jack-polish-high-school-wroclaw/
 
 meta:
-  timestamp: 2025-01-14T08:38:42.212Z
+  timestamp: 2025-01-15T09:18:59.383Z

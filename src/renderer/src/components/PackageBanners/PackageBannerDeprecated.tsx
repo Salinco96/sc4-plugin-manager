@@ -3,10 +3,12 @@ import { Link } from "@mui/material"
 import { Trans, useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
+import type { VariantID } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
-import { useCurrentVariant, usePackageInfo, usePackageStatus } from "@utils/packages"
+import { usePackageInfo, usePackageStatus, useVariantInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
+import { useMemo } from "react"
 import { PackageBanner } from "./PackageBanner"
 
 export function PackageBannerDeprecated({
@@ -14,32 +16,66 @@ export function PackageBannerDeprecated({
   superseded,
 }: {
   packageId: PackageID
-  superseded?: PackageID
+  superseded?: PackageID | VariantID
 }): JSX.Element {
   const actions = useStoreActions()
-  const packageInfo = usePackageInfo(superseded ?? packageId)
   const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useCurrentVariant(superseded ?? packageId)
+
+  const supersededByPackage = !!superseded?.includes("/")
+  const supersededByVariant = !!superseded && !supersededByPackage
+  const otherPackageId = supersededByPackage ? (superseded as PackageID) : packageId
+  const otherPackageInfo = usePackageInfo(otherPackageId)
+  const otherVariantId = supersededByVariant ? (superseded as VariantID) : undefined
+  const otherVariantInfo = useVariantInfo(otherPackageId, otherVariantId)
 
   const { t } = useTranslation("PackageBanner")
   const { openPackageView } = useNavigation()
 
+  const action = useMemo(() => {
+    if (packageStatus?.enabled) {
+      if (supersededByPackage) {
+        return {
+          description: t("deprecated.actions.replacePackage.description", {
+            packageName: otherPackageInfo.name,
+          }),
+          label: t("deprecated.actions.replacePackage.label"),
+          onClick: () =>
+            actions.addPackage(otherPackageInfo.id, otherVariantInfo.id, {
+              packages: { [packageId]: { enabled: false } },
+            }),
+        }
+      }
+
+      if (supersededByVariant) {
+        return {
+          description: t("deprecated.actions.replaceVariant.description", {
+            variantName: otherVariantInfo.name,
+          }),
+          label: t("deprecated.actions.replaceVariant.label"),
+          onClick: () => actions.setPackageVariant(packageId, otherVariantInfo.id),
+        }
+      }
+    }
+  }, [
+    actions,
+    otherPackageInfo,
+    otherVariantInfo,
+    packageId,
+    packageStatus,
+    supersededByPackage,
+    supersededByVariant,
+    t,
+  ])
+
+  const messageKey = supersededByPackage
+    ? "deprecated.supersededByPackage"
+    : supersededByVariant
+      ? "deprecated.supersededByVariant"
+      : "deprecated.message"
+
   return (
     <PackageBanner
-      action={
-        superseded && packageStatus?.enabled
-          ? {
-              description: t("deprecated.actions.replacePackage.description", {
-                packageName: packageInfo.name,
-              }),
-              label: t("deprecated.actions.replacePackage.label"),
-              onClick: () =>
-                actions.addPackage(superseded, variantInfo.id, {
-                  packages: { [packageId]: { enabled: false } },
-                }),
-            }
-          : undefined
-      }
+      action={action}
       color="experimental"
       header={t("deprecated.title")}
       icon={<DeprecatedIcon />}
@@ -49,7 +85,7 @@ export function PackageBannerDeprecated({
           a: (
             <Link
               color="inherit"
-              onClick={() => openPackageView(superseded ?? packageId)}
+              onClick={() => openPackageView(otherPackageId)}
               sx={{
                 ":hover": { textDecoration: "underline" },
                 cursor: "pointer",
@@ -61,9 +97,9 @@ export function PackageBannerDeprecated({
           ),
           b: <strong />,
         }}
-        i18nKey={superseded ? "deprecated.messageSuperseded" : "deprecated.message"}
+        i18nKey={messageKey}
         ns="PackageBanner"
-        values={{ packageName: packageInfo.name }}
+        values={{ packageName: otherPackageInfo.name, variantName: otherVariantInfo.name }}
       />
     </PackageBanner>
   )

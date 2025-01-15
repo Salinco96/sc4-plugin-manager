@@ -61,9 +61,9 @@ export interface LotInfo {
   props?: PropID[]
 
   /**
-   * Lot instance ID to replace with this one (e.g. different ID for DN/MN)
+   * Lot instance IDs to replace with this one (e.g. different ID for DN/MN)
    */
-  replace?: LotID
+  replace?: LotID[]
 
   /**
    * Whether this lot replaces a Maxis lot that may suffer from phantom slider bug

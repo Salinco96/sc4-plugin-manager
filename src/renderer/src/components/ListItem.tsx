@@ -3,14 +3,20 @@ import { type ComponentType, type ReactNode, useState } from "react"
 import type { HeaderProps } from "./Header"
 
 export function ListItem<T>({
+  banners,
   children,
   header: Header,
   isDisabled,
   ...props
 }: T & {
+  banners?: ReactNode
   children?: ReactNode
   header: ComponentType<
-    HeaderProps<Omit<T, "children" | "header" | "isDisabled"> & { isDisabled?: boolean }>
+    HeaderProps<
+      Omit<T, "banners" | "children" | "header" | "isDisabled"> & {
+        isDisabled?: boolean
+      }
+    >
   >
   isDisabled?: boolean
 }): JSX.Element {
@@ -23,13 +29,13 @@ export function ListItem<T>({
         color: isDisabled ? "rgba(0, 0, 0, 0.38)" : undefined,
         display: "flex",
         flexDirection: "column",
-        height: "100%",
         opacity: isDisabled ? 0.6 : undefined,
         width: "100%",
       }}
     >
       <CardContent sx={{ width: "100%" }}>
         <Header isDisabled={isDisabled} isListItem setActive={setActive} {...props} />
+        {banners}
         {children && <Divider sx={{ my: 2 }} />}
         {children}
       </CardContent>

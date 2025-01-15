@@ -29842,11 +29842,76 @@ assets:
     assetId: simtropolis/34071-small-park-4-way
     authors:
       - davide1983it
+    buildings:
+      parco 4 strade/Davide1983it - Giardino 4 Strade.SC4Lot:
+        cbd483bc-cd19a393:
+          bulldoze: 100
+          cost: 100
+          description: Insert ploppable description here.
+          flamability: 10
+          label: Custom Ploppable
+          landmark: 20
+          landmarkRadius: 5
+          maintenance: 15
+          menu: Parks
+          model: cbd483bc-00c5
+          name: Davide1983it - Giardino 4 strade
+          relief:
+            r$: 750
+            r$$: 750
+            r$$$: 750
+      parco 4 strade/Davide1983it - Giardino 4 strade.SC4Desc:
+        cbd483bc-8d19a29b:
+          bulldoze: 100
+          cost: 100
+          description: Insert ploppable description here.
+          flamability: 10
+          label: Custom Ploppable
+          landmark: 20
+          landmarkRadius: 5
+          maintenance: 15
+          menu: Parks
+          model: cbd483bc-00c5
+          name: Davide1983it - Giardino 4 strade
+          relief:
+            r$: 750
+            r$$: 750
+            r$$$: 750
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tA small park 1x1\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: parco 4 strade.rar
+    files:
+      - parco 4 strade/Davide1983it - Giardino 4 Strade.SC4Lot
+      - parco 4 strade/Davide1983it - Giardino 4 strade.SC4Desc
+      - parco 4 strade/Davide1983it - Giardino 4 strade.SC4Model
+      - parco 4 strade/Thumbs.db
+      - parco 4 strade/parco 4 strade.jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_01/600d7cd407777_parco4strade.jpg.93eb4ee67df108cdc753d2449ee112e9.jpg
     lastModified: 2021-01-24T13:58:10.000Z
+    lots:
+      parco 4 strade/Davide1983it - Giardino 4 Strade.SC4Lot:
+        cd19a393:
+          building: cd19a393
+          name: Davide1983 - Giardino 4 Strade
+          size: 1x1
+          textures:
+            - 25dc0000
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      parco 4 strade/Davide1983it - Giardino 4 strade.SC4Model:
+        - cbd483bc-00c5
     name: Small park 4 way
+    sha256: 8dcc1cfece82d2ee4084303063fc4f5196edb821b2951c5c6eec8149d6f91d11
+    size: 83374
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_01/600d7cf21f45c_parco4strade.thumb.jpg.160e1ffd27f98750d2f982e1771b7089.jpg
+    uncompressed: 104863
     url: https://community.simtropolis.com/files/file/34071-small-park-4-way/
+    version: 1.0.0
   simtropolis/34085:
     assetId: simtropolis/34085-agc-abraham-lincoln-monument
     authors:
@@ -29896,11 +29961,111 @@ assets:
     assetId: simtropolis/34212-belvedere
     authors:
       - davide1983it
+    buildings:
+      belvedere/Davide1983it - Belvedere.SC4Desc:
+        cbd483bc-4d4c1bc8:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Insert ploppable description here.
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: cbd483bc-0111
+          name: Davide1983it - Belvedere
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      belvedere/Davide1983it - Belvedere.SC4Lot:
+        cbd483bc-cd498423:
+          bulldoze: 100
+          categories: landmarks
+          cost: 110000
+          description: Insert ploppable description here.
+          flamability: 10
+          garbage: 15
+          label: Custom Ploppable
+          landmark: 40
+          landmarkRadius: 20
+          maintenance: 150
+          menu: Landmarks
+          model: cbd483bc-0111
+          name: Davide1983it - belvedere
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
     category: 108-parks-plazas
+    dependencies:
+      - cycledogg/mega-props-vol01
+      - deadwoods/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tBelvedere is italian is used to indicate a viewpoint\n</p>\n\n<p>\n\tA small viewpoint with terrace, a small pic nic area, a toilett and a parking.<br>\n\tLandmark 110.000\n</p>\n\n<p>\n\tDepedencies\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01.dat<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - DAE Vol01.dat<br>\n\tDel_People.dat<br>\n\tNams PROPS PACK Vol 2.dat<br>\n\tPC Ford Fiesta Blue-0x6534284a-0xc80b6ac4-0x49d8ea2c.SC4Desc<br>\n\tPC Ford Mustang 96 Yellow-0x6534284a-0xc80b6ac4-0x49da5492.SC4Desc<br>\n\tPorkieProps-Vol1.dat<br>\n\tSM2 Mega Prop Pack Vol3.dat<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 02.dat\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: belvedere.rar
+    files:
+      - belvedere/Davide1983it - Belvedere.SC4Desc
+      - belvedere/Davide1983it - Belvedere.SC4Lot
+      - belvedere/Davide1983it - Belvedere.SC4Model
+      - belvedere/Thumbs.db
+      - belvedere/belvedere (1).jpg
+      - belvedere/belvedere (2).jpg
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/6040a94d25bc7_belvedere(1).jpg.c223b8ec7859181be14ea146b98f1c02.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2021_03/6040a94e8e9a5_belvedere(2).jpg.c58c2affb06898cf9c850a68b6e58241.jpg
     lastModified: 2021-03-04T09:36:04.000Z
+    lots:
+      belvedere/Davide1983it - Belvedere.SC4Lot:
+        cd498423:
+          building: cd498423
+          name: Davide1983it - Belvedere
+          props:
+            - 1337b3d7
+            - 2ac40000
+            - 2bd40000
+            - 49d8ea2c
+            - 49da5492
+            - 5337b3f7
+            - 5fd8b1ca
+            - 8ee82b92
+            - 9337b3b3
+            - 9bbe11db
+            - a902023e
+            - ceb27c0b
+            - f337b392
+            - f337b393
+            - f337b394
+            - ffd94d5f
+            - ffd961f2
+          size: 2x2
+          textures:
+            - 25b41000
+            - 25f70000
+            - '35054100'
+            - 35ea4b50
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      belvedere/Davide1983it - Belvedere.SC4Model:
+        - cbd483bc-0111
     name: Belvedere
+    sha256: 31c50a65d52973a5d3a83cb22a9bb2fb8e3576d47cbfff18913f812fb4444df9
+    size: 310520
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2021_03/6040aa0394000_belvedere(1).thumb.jpg.de1b212c2859f624b3556e8bfa304806.jpg
+    uncompressed: 327234
     url: https://community.simtropolis.com/files/file/34212-belvedere/
+    version: 1.0.0
   simtropolis/3422:
     assetId: simtropolis/3422-summer-concert-shed
     authors:
@@ -35709,4 +35874,4 @@ assets:
     url: https://community.simtropolis.com/files/file/998-large-park/
 
 meta:
-  timestamp: 2025-01-14T08:38:42.212Z
+  timestamp: 2025-01-15T09:18:59.383Z

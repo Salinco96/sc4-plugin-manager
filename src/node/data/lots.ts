@@ -37,12 +37,12 @@ export interface LotData {
   /**
    * Instance IDs of all props used by this lot
    */
-  props?: PropID[]
+  props?: MaybeArray<string>
 
   /**
-   * Lot instance ID to replace with this one (e.g. different ID for DN/MN)
+   * Lot instance IDs to replace with this one (e.g. different ID for DN/MN)
    */
-  replace?: LotID
+  replace?: MaybeArray<string>
 
   /**
    * Whether this lot replaces a Maxis lot that may suffer from phantom slider bug
@@ -67,7 +67,7 @@ export interface LotData {
   /**
    * Instance IDs of all textures used by this lot
    */
-  textures?: TextureID[]
+  textures?: MaybeArray<string>
 }
 
 export function loadLotInfo(file: string, id: LotID, data: LotData): LotInfo {
@@ -84,13 +84,13 @@ export function loadLotInfo(file: string, id: LotID, data: LotData): LotInfo {
     images: data.images,
     id,
     name: data.name,
-    props: data.props,
-    replace: data.replace,
+    props: data.props ? (unique(parseStringArray(data.props)) as PropID[]) : undefined,
+    replace: data.replace ? (unique(parseStringArray(data.replace)) as LotID[]) : undefined,
     replaceMaxis: data.replaceMaxis,
     requirements: data.requirements,
     size: data.size,
     stage: data.stage,
-    textures: data.textures,
+    textures: data.textures ? (unique(parseStringArray(data.textures)) as TextureID[]) : undefined,
   }
 }
 
@@ -101,12 +101,12 @@ export function writeLotInfo(lot: LotInfo): LotData {
     density: lot.density?.length === size(ZoneDensity) ? "all" : lot.density?.join(","),
     images: lot.images,
     name: lot.name,
-    props: lot.props && sort(lot.props),
-    replace: lot.replace,
+    props: lot.props && sort(lot.props).join(","),
+    replace: lot.replace && sort(lot.replace).join(","),
     replaceMaxis: lot.replaceMaxis,
     requirements: lot.requirements,
     size: lot.size,
     stage: lot.stage,
-    textures: lot.textures && sort(lot.textures),
+    textures: lot.textures && sort(lot.textures).join(","),
   }
 }

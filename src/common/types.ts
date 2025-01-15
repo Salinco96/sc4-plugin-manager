@@ -1,4 +1,3 @@
-import { keys } from "@salinco/nice-utils"
 import type { Options } from "./options"
 import {
   type PackageID,
@@ -16,7 +15,13 @@ import {
   isPatched,
 } from "./packages"
 import type { ProfileID, ProfileInfo } from "./profiles"
-import type { FileInfo, VariantID, VariantInfo, VariantIssue } from "./variants"
+import {
+  type FileInfo,
+  type VariantID,
+  type VariantInfo,
+  type VariantIssue,
+  getDefaultVariant,
+} from "./variants"
 
 /** Supported configuration formats */
 export enum ConfigFormat {
@@ -137,13 +142,13 @@ export function getState(
   state: VariantState,
   packageInfo: PackageInfo,
   variantInfo: VariantInfo,
-  profileInfo?: ProfileInfo,
+  profileInfo: ProfileInfo | undefined,
 ): boolean {
   const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
 
   switch (state) {
     case VariantState.DEFAULT:
-      return variantInfo.id === keys(packageInfo.variants)[0] // TODO
+      return variantInfo.id === getDefaultVariant(packageInfo, profileInfo).id
 
     case VariantState.DEPENDENCY:
       return isDependency(packageStatus)

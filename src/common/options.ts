@@ -2,6 +2,7 @@ import { type ID, isArray, isBoolean, isNumber, isString } from "@salinco/nice-u
 import type { Namespace, TFunction } from "i18next"
 
 import { getFeatureLabel } from "./i18n"
+import type { LotID } from "./lots"
 import type { Feature } from "./types"
 
 export const ALL = "all"
@@ -56,7 +57,7 @@ export type OptionValue<
 export type Options = {
   [optionId in OptionID]?: OptionValue
 } & {
-  lots?: string[]
+  lots?: LotID[]
 }
 
 export type Requirement = OptionID | Feature | "install.minVersion" | "install.patched"

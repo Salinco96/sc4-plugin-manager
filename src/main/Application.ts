@@ -115,6 +115,7 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
+import { getDefaultVariant } from "@common/variants"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -128,7 +129,7 @@ import {
   loadTools,
 } from "./data/db"
 import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
-import { getDefaultVariant, resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {

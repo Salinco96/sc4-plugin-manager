@@ -940,10 +940,145 @@ assets:
     authors:
       - Pegasus
     category: 34-cdk-coastal-development-kit
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p align=\"justify\">This is the second, essential dependency file for the re-styled <span style=\"font-weight:bold;\"><abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront 2\">OWW2</abbr></span> (Old Wooden Waterfront) and is required for all \_<abbr title=\"Coastal Development Kit\">CDK</abbr>-<abbr title=\"Old Wooden Waterfront\">OWW</abbr> lots.</p>\n<p><span style=\"font-weight:bold;color:rgb(153,0,0);\">This Dependency... has no Dependencies.</span></p>\n<p><strong style=\"font-family:Roboto, sans-serif;line-height:22px;\"><span style=\"color:rgb(128,0,0);\">All Pegasus files are\_now legacy content and are no longer officially\_supported\_- however support from the wider community can be requested</span>\_<u><a style=\"color:rgb(51,122,183);\" href=\"https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support/\" rel=\"\">here</a></u></strong>.</p>\n<p>\_</p>\n<p>\_</p>\n<p>\_</p>\n<p>\_</p>\n<p>\_</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: PEG-OWW2_RESOURCE-PACK2.zip
+    files:
+      - PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE2.dat
+      - PEGPROD/CDK3/OWW2/product_image.jpg
+      - PEGPROD/CDK3/OWW2/readme_236.htm
+    images:
+      - https://www.simtropolis.com/objects/screens/0028/ff5f0213be1973077bc70957bc3fc590-product_image.jpg
     lastModified: 2008-01-21T22:52:14.000Z
+    meta:
+      timestamp: 2025-01-14T10:59:28.060Z
+      version: 1
+    models:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE2.dat:
+        - 148cb2d9
+        - 3484c248
+        - '3484e019'
+        - 348cbce7
+        - 5489343f
+        - '94825828'
+        - aebb18e9
+        - b480a71c
+        - b49c8926
+        - d484e9bc
+        - f43b1382
+        - f4804fc3
+        - f48cba46
     name: PEG OWW2 RESOURCE PACK 2
+    props:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE2.dat:
+        4d2d325b-6ebb2157:
+          name: peg_xmas lites_14x1_colored
+        c977c536-073d4581:
+          name: Effect_pigeons
+        c977c536-073d4708:
+          family: a0001435
+          name: C16x7x3_$$5LotCarCluster-11111_28B5
+        c977c536-073d4709:
+          family: a0001435
+          name: C16x7x3_$$5LotCarCluster-11111_28B4
+        c977c536-073d470a:
+          family: a0001435
+          name: C16x7x3_$$5LotCarCluster-11111_28B3
+        c977c536-073d470b:
+          family: a0001435
+          name: C16x7x3_$4LotCarCluster-11110_1E59
+        c977c536-073d470c:
+          family: a0001435
+          name: C16x7x3_$4LotCarCluster-11101_1E56
+        c977c536-073d470d:
+          family: a0001435
+          name: C16x7x3_$4LotCarCluster-11011_1E58
+        c977c536-073d470e:
+          family: a0001435
+          name: C16x7x3_$3LotCarCluster-10101_1E53
+        c977c536-073d470f:
+          family: a0001435
+          name: C16x7x3_$3LotCarCluster-01011_1E4E
+        c977c536-073d48af:
+          family: a000149d
+          name: Aper2x2x4_fisherman-drk01-wait
+        c977c536-073d48b0:
+          family: a000149d
+          name: Aper2x2x4_male-Chuck
+        c977c536-073d48b1:
+          family: a000149d
+          name: Aper2x2x4_female-S-med01-wait
+        c977c536-073d48b2:
+          family: a000149d
+          name: Aper2x2x4_male-lgt01-wait
+        c977c536-073d48b3:
+          family: a000149d
+          name: Aper2x2x4_male-med01-wait
+        c977c536-073d48b4:
+          family: a000149d
+          name: Aper2x2x4_child-M-lgt03-wait
+        c977c536-073d48b5:
+          family: a000149d
+          name: Aper2x2x4_male-lgt01-negative-booer_287B
+        c977c536-073d48b7:
+          family: a000149d
+          name: Aper2x2x4_male-drk01-negative-booer_2870
+        c977c536-073d48b8:
+          family: a000149d
+          name: Aper2x2x4_male-med02-negative-booer_2886
+        f38748f8-143db69f:
+          name: OWW2_pierset_fishingpoles
+        f38748f8-148a9dcd:
+          model: 5489343f
+          name: OWW2_3x_Dual-AccessRamp
+        f38748f8-348e0e92:
+          name: OWW_Fishermen-Front
+        f38748f8-5486bf96:
+          model: d484e9bc
+          name: OWW2_pier-ramp_angled+5
+        f38748f8-549ded4a:
+          model: b49c8926
+          name: OWW2_2x_Dual-AccessRamp
+        f38748f8-748e0ed0:
+          name: OWW_Fishermen-Left
+        f38748f8-94835e40:
+          model: b480a71c
+          name: OWW2_3x_Feature_dock
+        f38748f8-949e359e:
+          family: a00014a2,a00014a5,a00014a6
+          model: 949ce134
+          name: CDK3_CabinCruiser_V
+        f38748f8-b482f322:
+          model: f4804fc3
+          name: OWW2_2x_Feature_dock
+        f38748f8-b4852451:
+          model: '94825828'
+          name: OWW2_pier-short
+        f38748f8-b486232f:
+          model: 3484c248
+          name: OWW2_pier-stub
+        f38748f8-b486334d:
+          model: '3484e019'
+          name: OWW2_pier-ramp
+        f38748f8-d48e0eb5:
+          name: OWW_Fishermen-Right
+    sha256: 11dcdf68b9bbf23ba1ee6bdae12524b9605cb025a6fc0748ba7c17b735df2408
+    size: 1403523
+    support: https://community.simtropolis.com/forums/topic/68471-plex-on-the-stex-community-support
+    textures:
+      PEGPROD/CDK3/OWW2/PEG-OWW2_RESOURCE2.dat:
+        - 1da44a5a
+        - 1da44a60
+        - 1da44a65
+        - 1da44a6a
+        - 1da44a70
+        - 1da44a75
+        - 1da44a7a
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2008/thumb-ff5f0213be1973077bc70957bc3fc590-product_image.jpg
+    uncompressed: 1708015
     url: https://community.simtropolis.com/files/file/19261-peg-oww2-resource-pack-2/
+    version: '1.0'
   simtropolis/19264:
     assetId: simtropolis/19264-peg-oww2-annabellelin-restaurant
     authors:
@@ -1925,4 +2060,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4527-peg-cdk-leveler-v205/
 
 meta:
-  timestamp: 2025-01-14T08:38:42.212Z
+  timestamp: 2025-01-15T09:18:59.383Z

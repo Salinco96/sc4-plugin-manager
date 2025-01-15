@@ -5,7 +5,6 @@ import {
   get,
   isEmpty,
   isEqual,
-  keys,
   mapDefined,
   mapValues,
   reduce,
@@ -17,7 +16,7 @@ import {
 } from "@salinco/nice-utils"
 
 import type { BuildingInfo } from "@common/buildings"
-import { type LotInfo, getEnabledLots, isEnabledLot } from "@common/lots"
+import { type LotID, type LotInfo, getEnabledLots, isEnabledLot } from "@common/lots"
 import {
   type OptionID,
   type OptionInfo,
@@ -32,7 +31,6 @@ import {
   checkCondition,
   getPackageStatus,
   isIncluded,
-  isIncompatible,
   isInvalid,
 } from "@common/packages"
 import type { ProfileInfo, ProfileUpdate } from "@common/profiles"
@@ -51,6 +49,7 @@ import {
   type VariantID,
   type VariantInfo,
   type VariantIssue,
+  getDefaultVariant,
 } from "@common/variants"
 import { type Warning, getWarningId, getWarningMessage, getWarningTitle } from "@common/warnings"
 import type { TaskContext } from "@node/tasks"
@@ -148,19 +147,6 @@ function getVariantIncompatibilities(
   return incompatibilities
 }
 
-export function getDefaultVariant(
-  packageInfo: Readonly<PackageInfo>,
-  profileInfo: Readonly<ProfileInfo>,
-): VariantInfo {
-  const packageStatus = packageInfo.status[profileInfo.id]
-
-  const compatibleVariant = values(packageInfo.variants).find(
-    variantInfo => !isIncompatible(variantInfo, packageStatus),
-  )
-
-  return compatibleVariant ?? values(packageInfo.variants)[0]
-}
-
 export function getFeatures(
   packages: Readonly<Packages>,
   profileInfo: Readonly<ProfileInfo>,
@@ -233,7 +219,7 @@ export function resolvePackages(
 
       // Set temporary status to avoid circular dependencies
       resultingStatus[packageId] = {
-        variantId: selectedVariantId ?? keys(packageInfo.variants)[0],
+        variantId: selectedVariantId ?? getDefaultVariant(packageInfo, profileInfo).id,
       }
 
       const issues = mapValues(packageInfo.variants, (originalVariantInfo, variantId) => {
@@ -287,16 +273,11 @@ export function resolvePackages(
         return issues
       })
 
-      // Select first compatible variant if not explicit
-      selectedVariantId ??= keys(packageInfo.variants).find(variantId => !issues[variantId]?.length)
-
-      // Select first variant if none compatible
-      selectedVariantId ??= keys(packageInfo.variants)[0]
-
       // Set final status
       packageStatus = {
         issues,
-        variantId: selectedVariantId,
+        // Select default variant if not explicit
+        variantId: selectedVariantId ?? getDefaultVariant(packageInfo, profileInfo).id,
       }
 
       resultingStatus[packageId] = packageStatus
@@ -577,7 +558,7 @@ export function resolvePackageUpdates(
         const enabledLots = packageConfig?.options?.lots
         if (lots && enabledLots) {
           const replacedLots = mapDefined(enabledLots, id =>
-            lots.find(where("id", id)) ? id : lots.find(where("replace", id))?.id,
+            lots.find(lot => lot.id === id) ? id : lots.find(lot => lot.replace?.includes(id))?.id,
           )
 
           if (!isEqual(enabledLots, replacedLots)) {
@@ -783,25 +764,33 @@ export function resolvePackageUpdates(
       }
     } = {}
 
-    for (const lotId in newLots) {
-      const { lotInfo, packageId } = newLots[lotId]
+    forEach(newLots, ({ lotInfo, packageId }, lotId) => {
+      if (lotInfo.replace) {
+        for (const replaceId of lotInfo.replace) {
+          const replacedLot = lotInfo.replace ? oldLots[replaceId] : undefined
 
-      if (lotInfo.replace && oldLots[lotInfo.replace]) {
-        if (oldLots[lotId].lotInfo !== lotInfo) {
-          replacingLots[lotId] = {
-            buildingInfo: oldLots[lotInfo.replace].buildingInfo,
-            newInfo: lotInfo,
-            oldInfo: oldLots[lotInfo.replace].lotInfo,
-            packageId,
+          if (replacedLot) {
+            if (replacedLot.lotInfo !== lotInfo) {
+              replacingLots[lotId] = {
+                buildingInfo: replacedLot.buildingInfo,
+                newInfo: lotInfo,
+                oldInfo: replacedLot.lotInfo,
+                packageId,
+              }
+            }
+
+            delete oldLots[replaceId]
+            delete newLots[lotId]
           }
         }
+      }
 
-        delete oldLots[lotInfo.replace]
-        delete newLots[lotId]
-      } else if (oldLots[lotId]) {
+      if (oldLots[lotId]) {
         delete oldLots[lotId]
         delete newLots[lotId]
-      } else if (lotInfo.replaceMaxis) {
+      }
+
+      if (lotInfo.replaceMaxis) {
         replacingMaxisLots[lotId] = {
           lotInfo,
           packageId,
@@ -809,7 +798,7 @@ export function resolvePackageUpdates(
 
         delete newLots[lotId]
       }
-    }
+    })
 
     if (!isEmpty(replacingMaxisLots)) {
       const lotNames = unique(
@@ -920,14 +909,14 @@ function getIncludedLots(
   features: Readonly<Features>,
   settings: Readonly<Settings>,
 ): {
-  [lotId: string]: {
+  [lotId in LotID]: {
     buildingInfo?: BuildingInfo
     lotInfo: LotInfo
     packageId: PackageID
   }
 } {
   const result: {
-    [lotId: string]: {
+    [lotId in LotID]: {
       buildingInfo?: BuildingInfo
       lotInfo: LotInfo
       packageId: PackageID
