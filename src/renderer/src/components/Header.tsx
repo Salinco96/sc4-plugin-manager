@@ -141,8 +141,9 @@ export function Header({
 
         {isListItem && (summary ?? description) && (
           <Text
+            fontStyle={summary ? "italic" : undefined}
             maxLines={summary ? undefined : 2}
-            sx={{ fontStyle: summary ? "italic" : undefined, marginTop: 2 }}
+            mt={2}
             title={description}
             variant="body2"
           >

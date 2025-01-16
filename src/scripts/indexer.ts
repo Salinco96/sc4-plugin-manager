@@ -126,7 +126,7 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
-      davide1983it: 2021, // todo
+      davide1983it: 2020, // todo
       "dead-end": true,
       cococity: true,
       jasoncw: 2020, // todo
@@ -773,7 +773,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
   // Step 7e - Write package changes
   console.debug("Writing packages...")
-  const modifiedAuthors = new Set(keys(packages).map(getOwnerId))
+  const modifiedAuthors = new Set(keys(generatingPackages).map(getOwnerId))
   for (const authorId of modifiedAuthors) {
     await writeConfig<{ [packageId in PackageID]?: PackageData }>(
       dbPackagesDir,
@@ -948,10 +948,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} does not exist`,
             )
           } else if (!containsAny(ids, packageIds)) {
-            errors.add(
-              `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} is not listed as dependency: ${ids.join(", ")}`,
-            )
-
             if (ids.length === 1) {
               variantInfo.dependencies = unionBy(
                 variantInfo.dependencies ?? [],
@@ -960,6 +956,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               )
 
               changed = true
+            } else {
+              errors.add(
+                `${prefix}, building ${building.name} (${building.id}) - Model ${building.model} is not listed as dependency: ${ids.join(", ")}`,
+              )
             }
           }
         }
@@ -973,10 +973,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           if (!ids) {
             warnings.add(`${prefix} - Building ${lot.building} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
-            errors.add(
-              `${prefix} - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
-            )
-
             if (ids.length === 1) {
               variantInfo.dependencies = unionBy(
                 variantInfo.dependencies ?? [],
@@ -985,6 +981,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               )
 
               changed = true
+            } else {
+              errors.add(
+                `${prefix} - Building ${lot.building} is not listed as dependency: ${ids.join(", ")}`,
+              )
             }
           }
         }
@@ -995,8 +995,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             if (!ids) {
               warnings.add(`${prefix} - Prop ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
-              errors.add(`${prefix} - Prop ${id} is not listed as dependency: ${ids.join(", ")}`)
-
               if (ids.length === 1) {
                 variantInfo.dependencies = unionBy(
                   variantInfo.dependencies ?? [],
@@ -1005,6 +1003,8 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
                 )
 
                 changed = true
+              } else {
+                errors.add(`${prefix} - Prop ${id} is not listed as dependency: ${ids.join(", ")}`)
               }
             }
           }
@@ -1024,8 +1024,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
             if (!ids) {
               warnings.add(`${prefix} - Texture ${id} does not exist`)
             } else if (!containsAny(ids, packageIds)) {
-              errors.add(`${prefix} - Texture ${id} is not listed as dependency: ${ids.join(", ")}`)
-
               if (ids.length === 1) {
                 variantInfo.dependencies = unionBy(
                   variantInfo.dependencies ?? [],
@@ -1034,6 +1032,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
                 )
 
                 changed = true
+              } else {
+                errors.add(
+                  `${prefix} - Texture ${id} is not listed as dependency: ${ids.join(", ")}`,
+                )
               }
             }
           }
@@ -1048,10 +1050,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           if (!ids) {
             warnings.add(`${prefix} - Model ${mmp.model} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
-            errors.add(
-              `${prefix} - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
-            )
-
             if (ids.length === 1) {
               variantInfo.dependencies = unionBy(
                 variantInfo.dependencies ?? [],
@@ -1060,6 +1058,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               )
 
               changed = true
+            } else {
+              errors.add(
+                `${prefix} - Model ${mmp.model} is not listed as dependency: ${ids.join(", ")}`,
+              )
             }
           }
         }
@@ -1071,10 +1073,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               if (!ids) {
                 warnings.add(`${prefix} - Model ${stage.model} does not exist`)
               } else if (!containsAny(ids, packageIds)) {
-                errors.add(
-                  `${prefix} - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
-                )
-
                 if (ids.length === 1) {
                   variantInfo.dependencies = unionBy(
                     variantInfo.dependencies ?? [],
@@ -1083,6 +1081,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
                   )
 
                   changed = true
+                } else {
+                  errors.add(
+                    `${prefix} - Model ${stage.model} is not listed as dependency: ${ids.join(", ")}`,
+                  )
                 }
               }
             }
@@ -1098,10 +1100,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           if (!ids) {
             warnings.add(`${prefix} - Model ${prop.model} does not exist`)
           } else if (!containsAny(ids, packageIds)) {
-            errors.add(
-              `${prefix} - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,
-            )
-
             if (ids.length === 1) {
               variantInfo.dependencies = unionBy(
                 variantInfo.dependencies ?? [],
@@ -1110,6 +1108,10 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
               )
 
               changed = true
+            } else {
+              errors.add(
+                `${prefix} - Model ${prop.model} is not listed as dependency: ${ids.join(", ")}`,
+              )
             }
           }
         }

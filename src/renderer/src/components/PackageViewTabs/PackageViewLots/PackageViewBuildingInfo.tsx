@@ -155,7 +155,7 @@ export function PackageViewBuildingInfo({
       </FlexRow>
 
       {building.description && (
-        <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
+        <Typography fontStyle="italic" variant="body2" whiteSpace="pre">
           {building.description}
         </Typography>
       )}

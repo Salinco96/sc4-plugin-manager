@@ -133,7 +133,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
 
           <FlexCol gap={1}>
             {mmp.description && (
-              <Typography sx={{ fontStyle: "italic", whiteSpace: "pre" }} variant="body2">
+              <Typography fontStyle="italic" variant="body2" whiteSpace="pre">
                 {mmp.description}
               </Typography>
             )}

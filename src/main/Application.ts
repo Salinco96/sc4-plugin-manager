@@ -2621,7 +2621,7 @@ export class Application {
 
           // TODO: This assumes that package is disabled in other profiles!
           if (variantInfo.local) {
-            if (isOnlyInstalledVariant) {
+            if (allVariants.length === 1) {
               delete packages[packageId]
             } else {
               delete packageInfo.variants[variantId]

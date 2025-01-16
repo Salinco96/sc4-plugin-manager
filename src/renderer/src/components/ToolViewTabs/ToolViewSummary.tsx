@@ -21,7 +21,7 @@ export function ToolViewSummary({ toolId }: { toolId: ToolID }): JSX.Element {
   return (
     <Box>
       {toolInfo.summary && (
-        <Text sx={{ fontStyle: "italic", marginBottom: 2 }} variant="body2">
+        <Text fontStyle="italic" mb={2} variant="body2">
           {toolInfo.summary}
         </Text>
       )}
