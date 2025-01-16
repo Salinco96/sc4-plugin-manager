@@ -2630,7 +2630,7 @@ export class Application {
               forEach(packageInfo.status, (packageStatus, profileId) => {
                 const profileInfo = profiles[profileId]
                 if (profileInfo && packageStatus.variantId === variantId) {
-                  const defaultVariant = getDefaultVariant(packageInfo, profileInfo)
+                  const defaultVariant = getDefaultVariant(packageInfo, packageStatus)
                   packageStatus.variantId = defaultVariant.id
                 }
               })

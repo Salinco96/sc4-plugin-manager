@@ -11,10 +11,9 @@ import type { FamilyInfo } from "./families"
 import type { LotInfo } from "./lots"
 import type { FloraInfo } from "./mmps"
 import type { OptionID, OptionInfo, OptionValue, Requirements } from "./options"
-import { type PackageID, isIncompatible } from "./packages"
-import type { ProfileInfo } from "./profiles"
+import { type PackageID, getVariantIssues } from "./packages"
 import type { PropInfo } from "./props"
-import type { Feature, PackageInfo, PackageWarning, VariantState } from "./types"
+import type { Feature, PackageInfo, PackageStatus, PackageWarning, VariantState } from "./types"
 
 /** Variant ID */
 export type VariantID = ID<string, VariantInfo>
@@ -131,15 +130,14 @@ export function getStateLabel(
 ): string {
   return t(state, { ns: "VariantState" })
 }
+
 export function getDefaultVariant(
   packageInfo: Readonly<PackageInfo>,
-  profileInfo: Readonly<ProfileInfo> | undefined,
+  packageStatus?: Readonly<PackageStatus>,
 ): VariantInfo {
-  const packageStatus = profileInfo && packageInfo.status[profileInfo.id]
-
-  const allVariants = values(packageInfo.variants)
-  const compatibleVariants = allVariants.filter(variant => !isIncompatible(variant, packageStatus))
-  const selectableVariants = compatibleVariants.length ? compatibleVariants : allVariants
+  const variants = values(packageInfo.variants)
+  const validVariants = variants.filter(variant => !getVariantIssues(variant, packageStatus).length)
+  const selectableVariants = validVariants.length ? validVariants : variants
 
   return (
     selectableVariants.find(variant => variant.default) ??

@@ -144,11 +144,11 @@ export function getState(
   variantInfo: VariantInfo,
   profileInfo: ProfileInfo | undefined,
 ): boolean {
-  const packageStatus = profileInfo ? packageInfo.status[profileInfo.id] : undefined
+  const packageStatus = profileInfo && packageInfo.status[profileInfo.id]
 
   switch (state) {
     case VariantState.DEFAULT:
-      return variantInfo.id === getDefaultVariant(packageInfo, profileInfo).id
+      return variantInfo.id === getDefaultVariant(packageInfo, packageStatus).id
 
     case VariantState.DEPENDENCY:
       return isDependency(packageStatus)

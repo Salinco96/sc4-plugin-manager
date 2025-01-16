@@ -218,11 +218,11 @@ export function resolvePackages(
       }
 
       // Set temporary status to avoid circular dependencies
-      resultingStatus[packageId] = {
-        variantId: selectedVariantId ?? getDefaultVariant(packageInfo, profileInfo).id,
+      packageStatus = {
+        variantId: selectedVariantId ?? getDefaultVariant(packageInfo).id,
       }
 
-      const issues = mapValues(packageInfo.variants, (originalVariantInfo, variantId) => {
+      packageStatus.issues = mapValues(packageInfo.variants, (originalVariantInfo, variantId) => {
         let variantInfo = originalVariantInfo
 
         if (packageConfig?.variant === variantId && packageConfig.version) {
@@ -273,11 +273,9 @@ export function resolvePackages(
         return issues
       })
 
-      // Set final status
-      packageStatus = {
-        issues,
-        // Select default variant if not explicit
-        variantId: selectedVariantId ?? getDefaultVariant(packageInfo, profileInfo).id,
+      // Select default variant if not explicit
+      if (!selectedVariantId) {
+        packageStatus.variantId = getDefaultVariant(packageInfo, packageStatus).id
       }
 
       resultingStatus[packageId] = packageStatus
@@ -588,7 +586,7 @@ export function resolvePackageUpdates(
         }
       }
 
-      const defaultVariant = getDefaultVariant(packageInfo, resultingProfile)
+      const defaultVariant = getDefaultVariant(packageInfo, newStatus)
 
       if (newStatus.enabled) {
         if (!oldStatus.enabled) {

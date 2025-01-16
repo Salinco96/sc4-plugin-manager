@@ -15404,10 +15404,103 @@ assets:
     authors:
       - Jasoncw
     category: 108-parks-plazas
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\tRoosevelt Circle is a 2x2 roundabout filler park dedicated to Franklin Delano\_Roosevelt, the 32nd President of the United State of America. It features an art deco bell tower, reflection pool, and steel statues.</p>\n<p>\tThis park was created to be placed in roundabouts,\_but it also works well as a normal park outside of roundabouts. It can be found near the end of the parks menu.</p>\n<ul><li>\t\t2x2 park lot.\t</li>\t<li>\t\tMaxisNite and DarkNite versions included.\t</li>\t<li>\t\tDarkNite requires the Day and Nite Modd.\t</li>\n</ul><p>\tInstallation Instructions:</p>\n<ol><li>\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version.\t</li>\t<li>\t\tUnzip the .zip and move its contents to Documents/SimCity4/Plugins.\t</li>\n</ol>\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2016_08/57b220d4dbbe4_1RooseveltCircleSTEX.jpg.f4f8776ecbca040ee8b68cf2302e7286.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_08/57b220d5cf203_2RooseveltCircleSTEX.jpg.b8045dc5ac195fb71f19526c76544edc.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_08/57b220d6ed69b_3RooseveltCircleSTEX.jpg.75dfef702e7ddf333e6cff03db224452.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_08/57b220d8d536f_4RooseveltCircleSTEX.jpg.5c372465d3a7870368971276242d55cd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2016_08/57b220da76655_5RooseveltCircleSTEX.jpg.000fd35ce9eb7c10f267a4806ace532b.jpg
     lastModified: 2016-08-15T20:22:06.000Z
+    meta:
+      timestamp: 2025-01-16T13:31:05.747Z
+      version: 1
     name: Roosevelt Circle
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2016_08/57b2246e6687a_1RooseveltCircleSTEX.thumb.jpg.c98f5e66b057abbf1330bb8b33e1ccf9.jpg
     url: https://community.simtropolis.com/files/file/31240-roosevelt-circle/
+    variants:
+      '162871':
+        buildings:
+          Jasoncw - Roosevelt Circle (MN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot:
+            b5365d1c-b53748b3:
+              bulldoze: 417
+              cost: 670
+              flamability: 10
+              garbage: 1
+              maintenance: 65
+              menu: Parks
+              model: 0200e353-0008
+              name: Jasoncw - Roosevelt Circle (PZ2x2_Roosevelt Circle)
+              pollution: 4294967294
+              pollutionRadius: 4
+              power: 4
+              relief:
+                r$: 4000
+                r$$: 4000
+                r$$$: 4000
+              water: 2
+              waterPollution: 4294967295
+              waterPollutionRadius: 2
+        features: []
+        filename: Jasoncw - Roosevelt Circle (MN).zip
+        files:
+          - Jasoncw - Roosevelt Circle (MN)/Jasoncw - Roosevelt Circle (MN).SC4Model
+          - Jasoncw - Roosevelt Circle (MN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot
+        lots:
+          Jasoncw - Roosevelt Circle (MN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot:
+            b53748b3:
+              building: b53748b3
+              name: PZ2x2_Roosevelt Circle
+              size: 2x2
+              textures: 258f2000
+        models:
+          Jasoncw - Roosevelt Circle (MN)/Jasoncw - Roosevelt Circle (MN).SC4Model:
+            - 0200e353-0008
+        sha256: 68458b84dae9466d02eb947dd88cbd1004736b1dc174676db8bf3d50d6d98865
+        size: 713241
+        uncompressed: 851391
+      '162872':
+        buildings:
+          Jasoncw - Roosevelt Circle (DN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot:
+            b5365d1c-b53748b3:
+              bulldoze: 417
+              cost: 670
+              flamability: 10
+              garbage: 1
+              maintenance: 65
+              menu: Parks
+              model: 0200e353-0008
+              name: Jasoncw - Roosevelt Circle (PZ2x2_Roosevelt Circle)
+              pollution: 4294967294
+              pollutionRadius: 4
+              power: 4
+              relief:
+                r$: 4000
+                r$$: 4000
+                r$$$: 4000
+              water: 2
+              waterPollution: 4294967295
+              waterPollutionRadius: 2
+        features: []
+        filename: Jasoncw - Roosevelt Circle (DN).zip
+        files:
+          - Jasoncw - Roosevelt Circle (DN)/Jasoncw - Roosevelt Circle (DN).SC4Model
+          - Jasoncw - Roosevelt Circle (DN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot
+        lots:
+          Jasoncw - Roosevelt Circle (DN)/Jasoncw - Roosevelt Circle (PZ2x2).SC4Lot:
+            b53748b3:
+              building: b53748b3
+              name: PZ2x2_Roosevelt Circle
+              size: 2x2
+              textures: 258f2000
+        models:
+          Jasoncw - Roosevelt Circle (DN)/Jasoncw - Roosevelt Circle (DN).SC4Model:
+            - 0200e353-0008
+        sha256: ae11121f15d7db7d1ba026abe19a7fc84752eb7fc2e523061951cecf761aff77
+        size: 706993
+        uncompressed: 839518
+    version: '1.0'
   simtropolis/31242:
     assetId: simtropolis/31242-roman-roundabout
     authors:

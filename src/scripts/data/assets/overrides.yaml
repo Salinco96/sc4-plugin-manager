@@ -2117,6 +2117,22 @@ simtropolis/30955-kosc-sp-damn-menus: null
 simtropolis/30958-kosc-sp-modular-parking-add-on-pack-1:
   packageId: kingofsimcity/modular-parking-addon-pack-1
 
+simtropolis/30962-windsor-atlantica-hotel:
+  packageId: jasoncw/windsor-atlantica
+  variants:
+    '160813':
+      packageId: jasoncw/windsor-atlantica
+      variantId: default
+    '160814':
+      packageId: jasoncw/windsor-atlantica
+      variantId: darknite
+    '160815':
+      packageId: jasoncw/windsor-atlantica
+      variantId: default
+    '160816':
+      packageId: jasoncw/windsor-atlantica
+      variantId: darknite
+
 simtropolis/30979-b62-remastered-culvers:
   packageId: nos-17/b62-remastered-culvers
   variants:
@@ -2155,6 +2171,19 @@ simtropolis/31024-kosc-sp-modular-parking-extension-set:
     '161348':
       variantId: default
 
+simtropolis/31028-994-vargas-avenue:
+  packageId: jasoncw/994-vargas-avenue
+  variants:
+    '161390':
+      packageId: jasoncw/994-vargas-avenue
+      variantId: default
+    '161391':
+      packageId: jasoncw/994-vargas-avenue
+      variantId: darknite
+    '161392':
+      packageId: jasoncw/994-vargas-avenue
+      variantId: default,darknite
+
 simtropolis/31106-b62-remastered-bjs-wholesale:
   variants:
     '202451':
@@ -2181,6 +2210,16 @@ simtropolis/31166-veredas-santiaguinas-sidewalk-mod:
     '170720': null
     '170721': null
     '170722': null
+
+simtropolis/31240-roosevelt-circle:
+  packageId: jasoncw/roosevelt-circle
+  variants:
+    '162871':
+      packageId: jasoncw/roosevelt-circle
+      variantId: default
+    '162872':
+      packageId: jasoncw/roosevelt-circle
+      variantId: darknite
 
 simtropolis/31244-mgb-convenience-store:
   packageId: mgb204/convenience-stores
@@ -2268,6 +2307,16 @@ simtropolis/31420-allianz-arena:
       variantId: default
     '202929':
       variantId: default
+
+simtropolis/31421-trier-tower-v2:
+  packageId: jasoncw/trier-tower
+  variants:
+    '164196':
+      packageId: jasoncw/trier-tower
+      variantId: default
+    '164197':
+      packageId: jasoncw/trier-tower
+      variantId: darknite
 
 simtropolis/31423-supershk-fa3-parking-textures:
   packageId: kingofsimcity/supershk-mega-parking-textures
