@@ -2427,6 +2427,25 @@ simtropolis/32690-mysimtropolis-members-immortalized-in-sc4: null
 simtropolis/32732-pc-prop-pack-2:
   superseded: simtropolis/32952-pc-mega-props-vol-1
 
+simtropolis/32737-guardian-building:
+  packageId: jasoncw/guardian-building
+  variants:
+    '174538':
+      packageId: jasoncw/guardian-building
+      variantId: sd,hd
+    '174539':
+      packageId: jasoncw/guardian-building
+      variantId: darknite-sd,darknite-hd
+    '174540':
+      packageId: jasoncw/guardian-building
+      variantId: sd,hd,darknite-sd,darknite-hd
+    '174541':
+      packageId: jasoncw/guardian-building
+      variantId: hd
+    '174542':
+      packageId: jasoncw/guardian-building
+      variantId: darknite-hd
+
 simtropolis/32781-rr-mega-prop-pack-vol-1:
   packageId: rretail/mega-props-vol01
   variantId: default
@@ -2472,6 +2491,26 @@ simtropolis/32982-sm2-mega-prop-pack-vol3:
 
 simtropolis/33068-cloqlo-parking-textures:
   packageId: cloqlo/parking-textures
+
+simtropolis/33179-residencial-rachel-de-queiroz:
+  packageId: jasoncw/rachel-de-queiroz
+  variants:
+    '177886':
+      packageId: jasoncw/rachel-de-queiroz
+      variantId: default
+    '177887':
+      packageId: jasoncw/rachel-de-queiroz
+      variantId: darknite
+
+simtropolis/33180-hathaway-tower:
+  packageId: jasoncw/hathaway-tower
+  variants:
+    '177898':
+      packageId: jasoncw/hathaway-tower
+      variantId: default
+    '177899':
+      packageId: jasoncw/hathaway-tower
+      variantId: darknite
 
 simtropolis/33238-sm2-medium-water-treatment-plant:
   packageId: simmer2/medium-water-treatment-plant

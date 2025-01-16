@@ -67,7 +67,7 @@ export async function promptVariantId(hint: VariantID, filename?: string): Promi
     default: hint,
     message: `Variant ID${filename ? ` (${filename})` : ""}:`,
     validate: value => {
-      if (!/^[a-z0-9-]+$/.test(value)) {
+      if (!/^[a-z0-9-]+(,[a-z0-9-]+)*$/.test(value)) {
         return "Invalid variant ID"
       }
 

@@ -15807,19 +15807,207 @@ assets:
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tResidencial Rachel de Queiroz is an apartment complex located in Fortaleza, Brazil. It grows on medium and high density residential zones, and is in the Houston tileset.\n</p>\n\n<ul>\n\t<li>\n\t\t5x4 growable R$ lot.\n\t</li>\n\t<li>\n\t\tMaxisNite and DarkNite night versions included.\n\t</li>\n\t<li>\n\t\tDarkNite requires the <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t</li>\n</ul>\n\n<p>\n\t<strong>Installation Instructions:</strong>\n</p>\n\n<ol>\n\t<li>\n\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version. If you change your mind, you can switch between DN and MN versions by swapping out the .SC4Model files.\n\t</li>\n\t<li>\n\t\tUnzip the .zip and move its contents to Documents/SimCity 4/Plugins.\n\t</li>\n</ol>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-00.jpg.b804f97df495c6e14c61712693f4244b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-01.jpg.55dfe40c8754bd57a24f4d7c8f8d7bc0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-02.jpg.f3981b52ff06f011818ce4f9f1a439e6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-03.jpg.9ba79b411c19339cc69ad6ec502a871e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-04.jpg.42a4f4d36d94864dc6e6dde90b85018b.jpg
     lastModified: 2019-09-17T19:42:13.000Z
+    meta:
+      timestamp: 2025-01-16T13:02:38.790Z
+      version: 1
     name: Residencial Rachel de Queiroz
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/RRQ-00.thumb.jpg.139dbf0a1c61907b6e695ccb083d7a00.jpg
     url: https://community.simtropolis.com/files/file/33179-residencial-rachel-de-queiroz/
+    variants:
+      '177886':
+        buildings:
+          Jasoncw - Residencial Rachel de Queiroz (MN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot:
+            b9d64dd2-1b052559:
+              bulldoze: 261
+              capacity:
+                r$: 1053
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 2a83fc08
+              name: Jasoncw - Residencial Rachel de Queiroz (R$6_5x4)
+              pollution: 5
+              pollutionRadius: 5
+              power: 5
+              tilesets: Houston
+              water: 11
+              waterPollution: 2
+              waterPollutionRadius: 5
+              worth: 14310
+        features: []
+        filename: Jasoncw - Residencial Rachel de Queiroz (MN).zip
+        files:
+          - Jasoncw - Residencial Rachel de Queiroz (MN)/Jasoncw - Residencial Rachel de Queiroz (MN).SC4Model
+          - Jasoncw - Residencial Rachel de Queiroz (MN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot
+        lots:
+          Jasoncw - Residencial Rachel de Queiroz (MN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot:
+            7b0525fb:
+              building: 1b052559
+              density: all
+              name: R$6_5x4_Residencial Rachel de Queiroz
+              size: 5x4
+              stage: 6
+              textures: 251c1100,256b1000,256c1000,25901000,25ae2000,25b02000,25f00000,25fc0000
+        models:
+          Jasoncw - Residencial Rachel de Queiroz (MN)/Jasoncw - Residencial Rachel de Queiroz (MN).SC4Model:
+            - 2a83fc08
+        sha256: fed23cdbd70e41bf1a58788c88e170c373f7ae4fa1ed2aeaaec9c3f6d75a78aa
+        size: 1760808
+        uncompressed: 2075309
+      '177887':
+        buildings:
+          Jasoncw - Residencial Rachel de Queiroz (DN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot:
+            b9d64dd2-1b052559:
+              bulldoze: 261
+              capacity:
+                r$: 1053
+              categories: r$
+              flamability: 45
+              garbage: 4
+              model: 2a83fc08
+              name: Jasoncw - Residencial Rachel de Queiroz (R$6_5x4)
+              pollution: 5
+              pollutionRadius: 5
+              power: 5
+              tilesets: Houston
+              water: 11
+              waterPollution: 2
+              waterPollutionRadius: 5
+              worth: 14310
+        features: []
+        filename: Jasoncw - Residencial Rachel de Queiroz (DN).zip
+        files:
+          - Jasoncw - Residencial Rachel de Queiroz (DN)/Jasoncw - Residencial Rachel de Queiroz (DN).SC4Model
+          - Jasoncw - Residencial Rachel de Queiroz (DN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot
+        lots:
+          Jasoncw - Residencial Rachel de Queiroz (DN)/Jasoncw - Residencial Rachel de Queiroz - R$ Grow (R$6_5x4).SC4Lot:
+            7b0525fb:
+              building: 1b052559
+              density: all
+              name: R$6_5x4_Residencial Rachel de Queiroz
+              size: 5x4
+              stage: 6
+              textures: 251c1100,256b1000,256c1000,25901000,25ae2000,25b02000,25f00000,25fc0000
+        models:
+          Jasoncw - Residencial Rachel de Queiroz (DN)/Jasoncw - Residencial Rachel de Queiroz (DN).SC4Model:
+            - 2a83fc08
+        sha256: 35c519360dc86d71c2bf38751fc14c3ec00422fa11401f3b57f95a57f843b25e
+        size: 1673961
+        uncompressed: 1980519
+    version: 1.0.0
   simtropolis/33180:
     assetId: simtropolis/33180-hathaway-tower
     authors:
       - Jasoncw
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tHathaway Tower is a small apartment tower located in Milwaukee, United States. It grows on medium and high density residential zones on corner lots, and is in the New York tileset.\n</p>\n\n<p>\n\tAfter years of thinking that the Maxis 1x1 buildings were implausibly skinny, I discovered a real life American 1x1 building in Milwaukee!\_\n</p>\n\n<p>\n\tBecause this is a 1x1 lot which houses a relatively large amount of sims, you can expect it to grow a lot.\n</p>\n\n<ul>\n\t<li>\n\t\t1x1 growable R$$ corner lot.\n\t</li>\n\t<li>\n\t\tMaxisNite and DarkNite night versions included.\n\t</li>\n\t<li>\n\t\tDarkNite requires the <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">Day and Nite Modd</a>.\n\t</li>\n</ul>\n\n<p>\n\t<strong>Installation Instructions:</strong>\n</p>\n\n<ol>\n\t<li>\n\t\tDownload either the DarkNite (DN) or MaxisNite (MN) version. If you're unsure, choose the MN version. If you change your mind, you can switch between DN and MN versions by swapping out the .SC4Model files.\n\t</li>\n\t<li>\n\t\tUnzip the .zip and move its contents to Documents/SimCity 4/Plugins.\n\t</li>\n</ol>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/5d8163da45c15_STEXHathawayTower00.jpg.7d7f3642b4010265674435f37cfc2b15.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/5d8196cbd93a5_STEXHathawayTower01.jpg.58207043fa79d0567bde8dc420a90e9e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2019_09/5d8196d5158db_STEXHathawayTower02.jpg.0a418c9cad0f1b5b5abff76849931753.jpg
     lastModified: 2019-09-18T02:30:50.000Z
+    meta:
+      timestamp: 2025-01-16T13:02:38.790Z
+      version: 1
     name: Hathaway Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2019_09/5d816d406451e_STEXHathawayTower00.thumb.jpg.bc79ba1bb07ffb5dc59b916f78a4d2a6.jpg
     url: https://community.simtropolis.com/files/file/33180-hathaway-tower/
+    variants:
+      '177898':
+        buildings:
+          Jasoncw - Hathaway Tower (MN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot:
+            b9d64dd2-3b068a1e:
+              bulldoze: 474
+              capacity:
+                r$: 90
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: ea86a64a
+              name: Jasoncw - Hathaway Tower (R$$6_1x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: NY
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1298
+        features: []
+        filename: Jasoncw - Hathaway Tower (MN).zip
+        files:
+          - Jasoncw - Hathaway Tower (MN)/Jasoncw - Hathaway Tower (MN).SC4Model
+          - Jasoncw - Hathaway Tower (MN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot
+        lots:
+          Jasoncw - Hathaway Tower (MN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot:
+            1b068b7e:
+              building: 3b068a1e
+              density: medium,high
+              name: R$$6_1x1_ Hathaway Tower
+              size: 1x1
+              stage: 6
+              textures: 258d1000
+        models:
+          Jasoncw - Hathaway Tower (MN)/Jasoncw - Hathaway Tower (MN).SC4Model:
+            - ea86a64a
+        sha256: 1f9a12034a3c770068893b306e800fc905136b89601bd278bd3fca1065b4c031
+        size: 281877
+        uncompressed: 347451
+      '177899':
+        buildings:
+          Jasoncw - Hathaway Tower (DN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot:
+            b9d64dd2-3b068a1e:
+              bulldoze: 474
+              capacity:
+                r$: 90
+                r$$: 51
+              categories: r$$
+              flamability: 40
+              garbage: 4
+              model: ea86a64a
+              name: Jasoncw - Hathaway Tower (R$$6_1x1)
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: NY
+              water: 3
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1298
+        features: []
+        filename: Jasoncw - Hathaway Tower (DN).zip
+        files:
+          - Jasoncw - Hathaway Tower (DN)/Jasoncw - Hathaway Tower (DN).SC4Model
+          - Jasoncw - Hathaway Tower (DN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot
+        lots:
+          Jasoncw - Hathaway Tower (DN)/Jasoncw - Hathaway Tower - R$$ Grow (R$$6_1x1).SC4Lot:
+            1b068b7e:
+              building: 3b068a1e
+              density: medium,high
+              name: R$$6_1x1_ Hathaway Tower
+              size: 1x1
+              stage: 6
+              textures: 258d1000
+        models:
+          Jasoncw - Hathaway Tower (DN)/Jasoncw - Hathaway Tower (DN).SC4Model:
+            - ea86a64a
+        sha256: 17c30254e9340086ce8ab6f86126df9f2b2f276521bee68af53a3cb7d3226b99
+        size: 286880
+        uncompressed: 353516
+    version: 1.0.0
   simtropolis/3320:
     assetId: simtropolis/3320-the-cobb-atlantic
     authors:

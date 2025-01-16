@@ -126,10 +126,10 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
-      davide1983it: 2020, // todo
+      davide1983it: true,
       "dead-end": true,
       cococity: true,
-      jasoncw: 2020, // todo
+      jasoncw: 2018, // todo
       jestarr: true,
       koonam: true,
       madhatter106: true,
@@ -1158,9 +1158,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   function getDefaultVariantId(variantEntry: IndexerVariantEntry): VariantID {
-    return variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)
-      ? ("darknite" as VariantID)
-      : ("default" as VariantID)
+    if (variantEntry.filename?.match(/\b(dn|dark\W?nite)\b/i)) {
+      return "darknite" as VariantID
+    }
+
+    if (variantEntry.filename?.match(/\bhd\b/i)) {
+      return "hd" as VariantID
+    }
+
+    if (variantEntry.filename?.match(/\bsd\b/i)) {
+      return "sd" as VariantID
+    }
+
+    return "default" as VariantID
   }
 
   async function getPackageId(
