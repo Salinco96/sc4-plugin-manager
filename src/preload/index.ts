@@ -6,6 +6,7 @@ import type { ExemplarDataPatch } from "@common/exemplars"
 import type { ModalData, ModalID } from "@common/modals"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
+import type { CityID, RegionID } from "@common/regions"
 import type { ApplicationStateUpdate } from "@common/state"
 import type { ToolID } from "@common/tools"
 import type { VariantID } from "@common/variants"
@@ -26,6 +27,9 @@ export const api = {
   },
   clearUnusedPackages(): Promise<void> {
     return ipcRenderer.invoke("clearUnusedPackages")
+  },
+  createBackup(regionId: RegionID, cityId: CityID, description?: string): Promise<void> {
+    return ipcRenderer.invoke("createBackup", regionId, cityId, description)
   },
   createProfile(name: string, templateProfileId?: ProfileID): Promise<void> {
     return ipcRenderer.invoke("createProfile", name, templateProfileId)
@@ -88,6 +92,9 @@ export const api = {
   openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
+  openRegionFolder(regionId: RegionID): Promise<void> {
+    return ipcRenderer.invoke("openRegionFolder", regionId)
+  },
   openToolFile(toolId: ToolID, filePath: string): Promise<void> {
     return ipcRenderer.invoke("openToolFile", toolId, filePath)
   },
@@ -104,6 +111,9 @@ export const api = {
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
   },
+  removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
+    return ipcRenderer.invoke("removeBackup", regionId, cityId, file)
+  },
   removeProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("removeProfile", profileId)
   },
@@ -112,6 +122,9 @@ export const api = {
   },
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("removeVariant", packageId, variantId)
+  },
+  restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
+    return ipcRenderer.invoke("restoreBackup", regionId, cityId, file)
   },
   runTool(toolId: ToolID): Promise<boolean> {
     return ipcRenderer.invoke("runTool", toolId)

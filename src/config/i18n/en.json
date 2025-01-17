@@ -65,6 +65,24 @@
     "success": "$t(General:dgVoodoo) was setup successfully!",
     "title": "$t(General:dgVoodoo)"
   },
+  "CityView": {
+    "actions": {
+      "createBackup": {
+        "description": "Create a backup of this city",
+        "label": "Backup"
+      },
+      "removeBackup": {
+        "description": "Delete this backup",
+        "label": "Delete"
+      },
+      "restoreBackup": {
+        "description": "Restore the city from this backup",
+        "label": "Restore"
+      }
+    },
+    "missing": "City {{cityId}} does not exist",
+    "noBackups": "This city has no backups."
+  },
   "ClearUnusedPackagesModal": {
     "confirmation": "Remove unused packages?",
     "description_one": "Found {{count}} unused variant:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
@@ -84,7 +102,7 @@
     }
   },
   "CollectionView": {
-    "missing": "Collection {{collectionID}} does not exist"
+    "missing": "Collection {{collectionId}} does not exist"
   },
   "CreateProfileModal": {
     "actions": {
@@ -600,6 +618,11 @@
       "label": "Profile Name"
     }
   },
+  "RegionView": {
+    "missing": "Region {{regionId}} does not exist",
+    "noEstablishedCities": "There are no established cities in this region.",
+    "showEstablishedOnly": "Show only established cities"
+  },
   "RemoveConflictingFilesModal": {
     "confirmation": "Remove conflicting files?",
     "description": "The following external files are conflicting with this plugin:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backups will be created in {{pluginsBackup}}."
@@ -761,6 +784,10 @@
     }
   },
   "Tabs": {
+    "backups_one": "{{count}} backup",
+    "backups_other": "{{count}} backups",
+    "cities_one": "{{count}} city",
+    "cities_other": "{{count}} cities",
     "dependencies_one": "{{count}} dependency",
     "dependencies_other": "{{count}} dependencies",
     "files_one": "{{count}} file",
@@ -812,6 +839,7 @@
     "openFiles": "Open installed files",
     "openGitHub": "View source code on GitHub",
     "openReadme": "Open README",
+    "openRegionFolder": "Open region folder",
     "openRepository": "View source code",
     "openSimtropolis": "Open Simtropolis page",
     "openSupport": "Open support thread",
@@ -833,6 +861,7 @@
     }
   },
   "VariantState": {
+    "current": "Current",
     "default": "Default",
     "dependency": "Dependency",
     "deprecated": "Deprecated",
@@ -846,8 +875,7 @@
     "local": "Local",
     "new": "New",
     "outdated": "Outdated",
-    "patched": "Patched",
-    "selected": "Selected"
+    "patched": "Patched"
   },
   "WarningMessage": {
     "inconsistentVariantLotIds": "This package uses different lot IDs across variants. Before selecting a different variant, you must bulldoze all corresponding lots from your regions."

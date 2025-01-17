@@ -23,7 +23,7 @@ const tabs: TabInfo<{ collectionId: CollectionID }>[] = [
   },
 ]
 
-function CollectionView({ id: collectionId }: { id: CollectionID }): JSX.Element {
+function CollectionView({ collectionId }: { collectionId: CollectionID }): JSX.Element {
   const isLoading = useStore(store => !store.collections)
   const exists = useStore(store => !!getCollectionInfo(store, collectionId))
 

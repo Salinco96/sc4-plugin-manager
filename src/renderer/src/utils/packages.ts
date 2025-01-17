@@ -21,18 +21,23 @@ import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
 import type { CollectionID, CollectionInfo } from "@common/collections"
+import type { CityID, CityInfo, RegionID, RegionInfo } from "@common/regions"
 import type { ToolID, ToolInfo } from "@common/tools"
 import { prioritize } from "@common/utils/arrays"
+import type { Page } from "./navigation"
 import { hasMatchingContents, isHexSearch } from "./search"
 import {
   type PackageFilters,
   type PackageUi,
   type Store,
+  type View,
   getCollectionInfo,
   getCurrentProfile,
   getPackageInfo,
+  getRegionInfo,
   getToolInfo,
   useStore,
+  useStoreActions,
 } from "./store"
 
 function getFilteredPackages(store: Store): PackageID[] {
@@ -46,18 +51,63 @@ function getPackageStatus(
   return profileInfo && packageInfo.status[profileInfo.id]
 }
 
-export function useCollectionInfo(collectionId: CollectionID): CollectionInfo {
+export function useCollectionInfo(id: CollectionID): CollectionInfo {
   return useStore(
     useCallback(
       store => {
-        const toolInfo = getCollectionInfo(store, collectionId)
-        if (!toolInfo) {
-          throw Error(`Unknown collection '${collectionId}'`)
+        const collection = getCollectionInfo(store, id)
+        if (!collection) {
+          throw Error(`Unknown collection '${id}'`)
         }
 
-        return toolInfo
+        return collection
       },
-      [collectionId],
+      [id],
+    ),
+  )
+}
+
+export function useRegionInfo(id: RegionID): RegionInfo {
+  return useStore(
+    useCallback(
+      store => {
+        const region = getRegionInfo(store, id)
+        if (!region) {
+          throw Error(`Unknown region '${id}'`)
+        }
+
+        return region
+      },
+      [id],
+    ),
+  )
+}
+
+export function useView<T extends Page>(
+  page: T,
+): [view: View<T>, setView: (view: Partial<View<T>>) => void] {
+  const actions = useStoreActions()
+  const view = useStore(useCallback(store => store.views[page], [page]))
+  return [view, useCallback(view => actions.setView(page, view), [actions, page])]
+}
+
+export function useCityInfo(id: CityID, regionId: RegionID): CityInfo {
+  return useStore(
+    useCallback(
+      store => {
+        const region = getRegionInfo(store, regionId)
+        if (!region) {
+          throw Error(`Unknown region '${regionId}'`)
+        }
+
+        const city = region.cities[id]
+        if (!city) {
+          throw Error(`Unknown city '${id}'`)
+        }
+
+        return city
+      },
+      [id, regionId],
     ),
   )
 }

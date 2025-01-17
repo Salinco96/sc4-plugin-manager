@@ -1,4 +1,5 @@
 export const DIRNAMES = {
+  backups: "Backups",
   cleanitol: "~cleanitol",
   db: "Database",
   dbAssets: "assets",

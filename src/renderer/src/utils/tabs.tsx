@@ -14,6 +14,7 @@ import {
   LocalFlorist as ParksIcon,
   ReportProblem as ProblemsIcon,
   AccountBox as ProfileIcon,
+  Save as RegionsIcon,
   Apartment as ResidentialIcon,
   Settings as SettingsIcon,
   Construction as ToolsIcon,
@@ -84,6 +85,15 @@ export const tabs: TabInfo[] = [
   },
   {
     badge(store) {
+      return { label: size(store.authors) }
+    },
+    icon: <AuthorsIcon />,
+    id: "authors",
+    label: "Authors",
+    location: { page: Page.Authors, data: {} },
+  },
+  {
+    badge(store) {
       const tools = store.tools && values(store.tools).filter(tool => !tool?.disabled)
 
       if (tools?.some(tool => tool.new)) {
@@ -101,12 +111,16 @@ export const tabs: TabInfo[] = [
   },
   {
     badge(store) {
-      return { label: size(store.authors) }
+      const regions = store.regions && values(store.regions)
+
+      if (regions?.length) {
+        return { label: regions.length }
+      }
     },
-    icon: <AuthorsIcon />,
-    id: "authors",
-    label: "Authors",
-    location: { page: Page.Authors, data: {} },
+    icon: <RegionsIcon />,
+    id: "regions",
+    label: "Regions",
+    location: { page: Page.Regions, data: {} },
   },
   {
     badge(store) {

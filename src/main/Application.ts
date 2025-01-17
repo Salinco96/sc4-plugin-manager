@@ -113,6 +113,7 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
+import { type CityID, type RegionID, getCityFileName } from "@common/regions"
 import { getDefaultVariant } from "@common/variants"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
@@ -129,7 +130,7 @@ import {
 import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
-import { loadRegions } from "./data/regions"
+import { getBackupFileName, loadRegions } from "./data/regions"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
@@ -569,6 +570,61 @@ export class Application {
   }
 
   /**
+   * Stores a copy of the current city's save file inside "Backups" folder.
+   */
+  public async createBackup(
+    regionId: RegionID,
+    cityId: CityID,
+    description?: string,
+  ): Promise<void> {
+    const { regions } = await this.load()
+
+    const region = regions[regionId]
+    if (!region) {
+      throw Error(`Region '${regionId}' does not exist`)
+    }
+
+    const city = region.cities[cityId]
+    if (!city) {
+      throw Error(`City '${cityId}' does not exist`)
+    }
+
+    if (city.backups.some(backup => backup.current)) {
+      return
+    }
+
+    await this.tasks.queue(`backup:create:${regionId}:${cityId}`, {
+      handler: async context => {
+        const cityFile = path.join(regionId, getCityFileName(cityId))
+
+        const backupTime = new Date()
+        const backupFile = getBackupFileName(backupTime, description)
+
+        context.debug(`Backing up '${cityFile}'...`)
+
+        await copyTo(
+          path.join(this.getRegionsPath(), cityFile),
+          path.join(this.getBackupsPath(), regionId, cityId, backupFile),
+        )
+
+        for (const backup of city.backups) {
+          backup.current = false
+        }
+
+        city.backups.push({
+          current: true,
+          description,
+          file: backupFile,
+          time: backupTime,
+        })
+
+        this.sendStateUpdate({ regions })
+      },
+      pool: `region:${regionId}`,
+    })
+  }
+
+  /**
    * Creates and checks out a new profile.
    * @param name Profile name
    * @param fromProfileId ID of the profile to copy (create an empty profile otherwise)
@@ -777,6 +833,13 @@ export class Application {
         return patchDBPFEntries(originalFile, patchedFile, patches, { exemplarProperties })
       })
     })
+  }
+
+  /**
+   * Returns the absolute path to the 'Backups' directory.
+   */
+  public getBackupsPath(): string {
+    return path.join(this.gamePath, DIRNAMES.backups)
   }
 
   /**
@@ -1142,6 +1205,7 @@ export class Application {
     this.handle("checkDgVoodoo")
     this.handle("clearPackageLogs")
     this.handle("clearUnusedPackages")
+    this.handle("createBackup")
     this.handle("createProfile")
     this.handle("createVariant")
     this.handle("getPackageLogs")
@@ -1158,12 +1222,15 @@ export class Application {
     this.handle("openPackageFile")
     this.handle("openPackageURL")
     this.handle("openProfileConfig")
+    this.handle("openRegionFolder")
     this.handle("openToolFile")
     this.handle("openToolURL")
     this.handle("patchDBPFEntries")
+    this.handle("removeBackup")
     this.handle("removeProfile")
     this.handle("removeTool")
     this.handle("removeVariant")
+    this.handle("restoreBackup")
     this.handle("runTool")
     this.handle("simtropolisLogin")
     this.handle("simtropolisLogout")
@@ -1929,7 +1996,7 @@ export class Application {
         const externals = await loadExternals(context, this.getPluginsPath(), exemplarProperties)
         this.sendStateUpdate({ externals })
 
-        const regions = await loadRegions(context, this.getRegionsPath())
+        const regions = await loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
         this.sendStateUpdate({ regions })
 
         return {
@@ -2163,6 +2230,13 @@ export class Application {
 
     const configName = profileId + profileInfo.format
     await this.openInExplorer(path.join(this.getProfilesPath(), configName))
+  }
+
+  /**
+   * Opens a region's savegame folder in the file explorer.
+   */
+  public async openRegionFolder(regionId: RegionID): Promise<void> {
+    await this.openInExplorer(path.join(this.getRegionsPath(), regionId))
   }
 
   /**
@@ -2468,6 +2542,45 @@ export class Application {
   }
 
   /**
+   * Removes a backup.
+   */
+  public async removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
+    const { regions } = await this.load()
+
+    const region = regions[regionId]
+    if (!region) {
+      throw Error(`Region '${regionId}' does not exist`)
+    }
+
+    const city = region.cities[cityId]
+    if (!city) {
+      throw Error(`City '${cityId}' does not exist`)
+    }
+
+    const backup = city.backups.find(backup => backup.file === file)
+    if (!backup) {
+      throw Error(`Backup '${backup}' does not exist`)
+    }
+
+    await this.tasks.queue(`backup:delete:${regionId}:${cityId}`, {
+      handler: async context => {
+        const backupPath = path.join(regionId, cityId, backup.file)
+        const fullPath = path.join(this.getBackupsPath(), backupPath)
+
+        context.debug(`Deleting backup '${backupPath}'...`)
+
+        await removeIfPresent(fullPath)
+        await removeIfEmptyRecursive(path.dirname(fullPath), this.getBackupsPath())
+
+        city.backups = city.backups.filter(backup => backup.file !== file)
+
+        this.sendStateUpdate({ regions })
+      },
+      pool: `region:${regionId}`,
+    })
+  }
+
+  /**
    * Remove an installed variant.
    */
   public async removeProfile(profileId: ProfileID): Promise<boolean> {
@@ -2648,6 +2761,46 @@ export class Application {
         }
       },
       pool: `${packageId}#${variantId}`,
+    })
+  }
+
+  /**
+   * Restores a backup. THIS PERMANENTLY OVERWRITES THE CURRENT SAVE!
+   */
+  public async restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
+    const { regions } = await this.load()
+
+    const region = regions[regionId]
+    if (!region) {
+      throw Error(`Region '${regionId}' does not exist`)
+    }
+
+    const city = region.cities[cityId]
+    if (!city) {
+      throw Error(`City '${cityId}' does not exist`)
+    }
+
+    const backup = city.backups.find(backup => backup.file === file)
+    if (!backup) {
+      throw Error(`Backup '${backup}' does not exist`)
+    }
+
+    await this.tasks.queue(`backup:restore:${regionId}:${cityId}`, {
+      handler: async context => {
+        const backupPath = path.join(regionId, cityId, backup.file)
+        const fullPath = path.join(this.getBackupsPath(), backupPath)
+
+        context.debug(`Restoring backup '${backupPath}'...`)
+
+        await copyTo(fullPath, path.join(this.getRegionsPath(), regionId, getCityFileName(cityId)))
+
+        for (const backup of city.backups) {
+          backup.current = backup.file === file
+        }
+
+        this.sendStateUpdate({ regions })
+      },
+      pool: `region:${regionId}`,
     })
   }
 

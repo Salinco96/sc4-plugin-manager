@@ -87,7 +87,7 @@ export function PackageListFilters(): JSX.Element {
       <ToggleButtonGroup
         value={packageFilters.state}
         exclusive
-        onChange={(event, value) => actions.setPackageFilters({ state: value ?? null })}
+        onChange={(_e, value) => actions.setPackageFilters({ state: value ?? null })}
         size="small"
       >
         <Tooltip placement="bottom" title={t("actions.showOnlyEnabled")}>
@@ -117,7 +117,7 @@ export function PackageListFilters(): JSX.Element {
                 packageFilters.incompatible && "incompatible",
               ].filter(Boolean)
         }
-        onChange={(event, values) => {
+        onChange={(_e, values) => {
           actions.setPackageFilters({
             dependencies: values.includes("dependencies"),
             experimental: values.includes("experimental"),
@@ -153,7 +153,7 @@ export function PackageListFilters(): JSX.Element {
       </ToggleButtonGroup>
       <ToggleButtonGroup
         value={packageFilters.combine === "and" ? [] : ["combine"]}
-        onChange={(event, values) => {
+        onChange={(_e, values) => {
           actions.setPackageFilters({
             combine: values.includes("combine") ? "or" : "and",
           })
@@ -185,7 +185,7 @@ export function PackageListFilters(): JSX.Element {
         inputValue={packageFilters.search}
         limitTags={4}
         multiple
-        onChange={(event, values, reason) => {
+        onChange={(_e, values, reason) => {
           const filters = { ...packageFilters }
 
           filters.authors = []
@@ -223,7 +223,7 @@ export function PackageListFilters(): JSX.Element {
 
           actions.setPackageFilters(filters)
         }}
-        onInputChange={(event, search, reason) => {
+        onInputChange={(_e, search, reason) => {
           if (reason !== "reset") {
             actions.setPackageFilters({ search })
           }

@@ -19,7 +19,7 @@ const tabs: TabInfo<{ toolId: ToolID }>[] = [
   },
 ]
 
-function ToolView({ id: toolId }: { id: ToolID }): JSX.Element {
+function ToolView({ toolId }: { toolId: ToolID }): JSX.Element {
   const isLoading = useStore(store => !store.tools)
   const exists = useStore(store => !!getToolInfo(store, toolId))
 

@@ -5,7 +5,7 @@ import type { PackageID } from "@common/packages"
 import { ListItem } from "@components/ListItem"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { PackageHeader } from "@components/PackageHeader"
-import { Page, useHistory, useLocation } from "@utils/navigation"
+import { Page, useLocation, useNavigation } from "@utils/navigation"
 import { useCurrentVariant } from "@utils/packages"
 import { getMatchingContents, isHexSearch } from "@utils/search"
 import { usePackageFilters, useStoreActions } from "@utils/store"
@@ -18,11 +18,11 @@ export const PackageListItem = memo(function PackageListItem({
   packageId: PackageID
 }): JSX.Element {
   const { page } = useLocation()
+  const { openPackageView } = useNavigation()
   const { search } = usePackageFilters()
 
   const actions = useStoreActions()
   const variantInfo = useCurrentVariant(packageId)
-  const history = useHistory()
 
   const matchingContents = useMemo(() => {
     if (isHexSearch(search) && page === Page.Packages) {
@@ -49,8 +49,8 @@ export const PackageListItem = memo(function PackageListItem({
                   <Link
                     color="inherit"
                     onClick={() => {
-                      actions.setActiveTab(Page.PackageView, tab, element)
-                      history.push({ page: Page.PackageView, data: { id: packageId } })
+                      actions.setView(Page.PackageView, { activeTab: tab, elementId: element })
+                      openPackageView(packageId)
                     }}
                     sx={{
                       cursor: "pointer",

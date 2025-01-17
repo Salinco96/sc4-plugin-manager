@@ -121,6 +121,7 @@ export interface PackageWarning {
 }
 
 export enum VariantState {
+  CURRENT = "current", // todo: this is not a *variant* state
   DEFAULT = "default",
   DEPENDENCY = "dependency",
   DEPRECATED = "deprecated",
@@ -135,7 +136,6 @@ export enum VariantState {
   NEW = "new",
   OUTDATED = "outdated",
   PATCHED = "patched",
-  SELECTED = "selected",
 }
 
 export function getState(
@@ -147,6 +147,9 @@ export function getState(
   const packageStatus = profileInfo && packageInfo.status[profileInfo.id]
 
   switch (state) {
+    case VariantState.CURRENT:
+      return variantInfo.id === packageStatus?.variantId
+
     case VariantState.DEFAULT:
       return variantInfo.id === getDefaultVariant(packageInfo, packageStatus).id
 
@@ -188,9 +191,6 @@ export function getState(
 
     case VariantState.PATCHED:
       return isPatched(variantInfo)
-
-    case VariantState.SELECTED:
-      return variantInfo.id === packageStatus?.variantId
   }
 }
 

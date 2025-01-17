@@ -108,7 +108,7 @@ export function ToolHeader({
       description={toolInfo.description}
       images={toolInfo.images}
       isListItem={isListItem}
-      location={{ data: { id: toolId }, page: Page.ToolView }}
+      location={{ data: { toolId }, page: Page.ToolView }}
       setActive={setActive}
       subtitle={toolId}
       summary={toolInfo.summary}

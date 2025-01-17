@@ -71,7 +71,7 @@ export function CollectionHeader({
       description={collection.description}
       images={collection.images}
       isListItem={isListItem}
-      location={{ data: { id: collectionId }, page: Page.CollectionView }}
+      location={{ data: { collectionId }, page: Page.CollectionView }}
       setActive={setActive}
       subtitle={collectionId}
       summary={collection.summary}

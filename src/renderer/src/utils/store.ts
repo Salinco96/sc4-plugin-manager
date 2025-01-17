@@ -23,8 +23,9 @@ import type { Features, PackageInfo, VariantState } from "@common/types"
 import type { VariantID } from "@common/variants"
 
 import type { CollectionID, CollectionInfo } from "@common/collections"
+import type { CityID, RegionID, RegionInfo } from "@common/regions"
 import { getStore } from "./context"
-import type { Page } from "./navigation"
+import { Page } from "./navigation"
 import { computePackageList } from "./packages"
 import type { SnackbarProps, SnackbarType } from "./snackbar"
 
@@ -55,6 +56,7 @@ export interface StoreActions {
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void>
   clearUnusedPackages(): Promise<void>
   closeSnackbar(type: SnackbarType): void
+  createBackup(regionId: RegionID, cityId: CityID, description?: string): Promise<void>
   createProfile(name: string, templateProfileId?: ProfileID): Promise<void>
   createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void>
   disableCollection(collectionId: CollectionID): Promise<boolean>
@@ -90,6 +92,7 @@ export interface StoreActions {
     type: "repository" | "support" | "url",
   ): Promise<void>
   openProfileConfig(profileId: ProfileID): Promise<void>
+  openRegionFolder(regionId: RegionID): Promise<void>
   openSnackbar<T extends SnackbarType>(type: T, props: SnackbarProps<T>): void
   openToolFile(toolId: ToolID, filePath: string): Promise<void>
   openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void>
@@ -101,17 +104,19 @@ export interface StoreActions {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile>
+  removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void>
   removeProfile(profileId: ProfileID): Promise<boolean>
   removeTool(toolId: ToolID): Promise<void>
   removeVariant(packageId: PackageID, variantId: VariantID): Promise<void>
   resetPackageOptions(packageId: PackageID): Promise<void>
+  restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void>
   runTool(toolId: ToolID): Promise<void>
   setPackageOption(packageId: PackageID, optionId: "lots", value: string[]): Promise<boolean>
   setPackageOption(packageId: PackageID, optionId: OptionID, value: OptionValue): Promise<boolean>
   setPackageVariant(packageId: PackageID, variantId: VariantID): Promise<boolean>
-  setActiveTab(page: Page, tabId: string, elementId?: string): void
   setPackageFilters(filters: Partial<PackageFilters>): void
   setProfileOption(optionId: OptionID, optionValue: OptionValue): Promise<boolean>
+  setView<T extends Page>(page: T, view: Partial<View<T>>): void
   showErrorToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   showSuccessToast(message: string): void
@@ -123,6 +128,8 @@ export interface StoreActions {
   updateState(update: ApplicationStateUpdate): void
 }
 
+export type View<T extends Page> = Store["views"][T]
+
 export interface Store extends ApplicationState {
   actions: StoreActions
   modal?: {
@@ -131,7 +138,6 @@ export interface Store extends ApplicationState {
     id: ModalID
   }
   packageFilters: PackageFilters
-
   filteredPackages: PackageID[]
   packageUi: {
     [packageId in PackageID]?: PackageUi
@@ -143,6 +149,12 @@ export interface Store extends ApplicationState {
     [page in Page]?: {
       activeTab: string
       elementId?: string
+    }
+  } & {
+    [Page.RegionView]: {
+      cities: {
+        showEstablishedOnly: boolean
+      }
     }
   }
 }
@@ -166,7 +178,29 @@ const initialState: Omit<Store, "actions"> = {
   },
   packageUi: {},
   snackbars: {},
-  views: {},
+  views: {
+    [Page.AuthorView]: {
+      activeTab: "packages",
+    },
+    [Page.CityView]: {
+      activeTab: "backups",
+    },
+    [Page.CollectionView]: {
+      activeTab: "packages",
+    },
+    [Page.PackageView]: {
+      activeTab: "summary",
+    },
+    [Page.RegionView]: {
+      activeTab: "cities",
+      cities: {
+        showEstablishedOnly: false,
+      },
+    },
+    [Page.ToolView]: {
+      activeTab: "summary",
+    },
+  },
 }
 
 export const useStore = getStore(initialState, initialState => (set, get): Store => {
@@ -217,6 +251,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           closeSnackbar(id)
           updateState({ snackbars: { $unset: [type] } })
         }
+      },
+      createBackup(regionId, cityId, description) {
+        return window.api.createBackup(regionId, cityId, description)
       },
       createProfile(name, templateProfileId) {
         return window.api.createProfile(name, templateProfileId)
@@ -387,6 +424,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       openProfileConfig(profileId) {
         return window.api.openProfileConfig(profileId)
       },
+      openRegionFolder(regionId) {
+        return window.api.openRegionFolder(regionId)
+      },
       openSnackbar(type, props) {
         if (get().snackbars[type] === undefined) {
           const id = enqueueSnackbar({ persist: true, variant: type, ...props })
@@ -401,6 +441,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       },
       patchDBPFEntries(packageId, variantId, filePath, patches) {
         return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
+      },
+      removeBackup(regionId, cityId, file) {
+        return window.api.removeBackup(regionId, cityId, file)
       },
       async removeProfile(profileId) {
         try {
@@ -444,6 +487,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           console.error("Failed to reset options", error)
           this.showErrorToast("Failed to reset options")
         }
+      },
+      restoreBackup(regionId, cityId, file) {
+        return window.api.restoreBackup(regionId, cityId, file)
       },
       async runTool(toolId) {
         try {
@@ -513,8 +559,8 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
       },
-      setActiveTab(page, tabId, elementId) {
-        updateState({ views: { [page]: { $set: { activeTab: tabId, elementId } } } })
+      setView(page, view) {
+        updateState({ views: { [page]: { $set: view } } })
       },
       async setProfileOption(optionId, optionValue) {
         const store = get()
@@ -651,11 +697,12 @@ function getAuthors(store: Store): Authors {
   return store.authors
 }
 
-export function getCollectionInfo(
-  store: Store,
-  collectionId: CollectionID,
-): CollectionInfo | undefined {
-  return store.collections?.[collectionId]
+export function getCollectionInfo(store: Store, id: CollectionID): CollectionInfo | undefined {
+  return store.collections?.[id]
+}
+
+export function getRegionInfo(store: Store, id: RegionID): RegionInfo | undefined {
+  return store.regions?.[id]
 }
 
 export function getCurrentProfile(store: Store): ProfileInfo | undefined {

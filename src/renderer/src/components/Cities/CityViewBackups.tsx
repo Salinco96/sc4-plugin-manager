@@ -1,0 +1,27 @@
+import type { CityID, RegionID } from "@common/regions"
+import { FlexCol } from "@components/FlexBox"
+import { List } from "@components/List"
+import { useCityInfo } from "@utils/packages"
+import { useTranslation } from "react-i18next"
+import { CityBackupListItem } from "./CityBackupListItem"
+
+export default function CityViewBackups({
+  cityId,
+  regionId,
+}: { cityId: CityID; regionId: RegionID }): JSX.Element {
+  const city = useCityInfo(cityId, regionId)
+
+  const { t } = useTranslation("CityView")
+
+  return (
+    <FlexCol fullHeight>
+      <List
+        emptyMessage={t("noBackups")}
+        items={city.backups}
+        renderItem={backup => (
+          <CityBackupListItem backup={backup} cityId={cityId} regionId={regionId} />
+        )}
+      />
+    </FlexCol>
+  )
+}

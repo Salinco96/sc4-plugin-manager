@@ -37,7 +37,7 @@ export function AuthorHeader({
   return (
     <Header
       isListItem={isListItem}
-      location={{ data: { id: authorId }, page: Page.AuthorView }}
+      location={{ data: { authorId }, page: Page.AuthorView }}
       setActive={setActive}
       subtitle={authorId}
       thumbnail={authorInfo?.thumbnail ?? getDefaultThumbnail(authorId)}

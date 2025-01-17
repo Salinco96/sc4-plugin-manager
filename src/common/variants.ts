@@ -124,10 +124,7 @@ export interface DependencyInfo {
   transitive: boolean
 }
 
-export function getStateLabel(
-  t: TFunction<Namespace>,
-  state: VariantState | "default" | "selected",
-): string {
+export function getStateLabel(t: TFunction<Namespace>, state: VariantState): string {
   return t(state, { ns: "VariantState" })
 }
 

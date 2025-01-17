@@ -5,16 +5,20 @@ import { create } from "zustand"
 import type { AuthorID } from "@common/authors"
 import type { CollectionID } from "@common/collections"
 import type { PackageID } from "@common/packages"
+import type { CityID, RegionID } from "@common/regions"
 import type { ToolID } from "@common/tools"
 
 export enum Page {
   Authors = "Authors",
   AuthorView = "AuthorView",
+  CityView = "CityView",
   Collections = "Collections",
   CollectionView = "CollectionView",
   Packages = "Packages",
   PackageView = "PackageView",
   Profile = "Profile",
+  Regions = "Regions",
+  RegionView = "RegionView",
   Settings = "Settings",
   Tools = "Tools",
   ToolView = "ToolView",
@@ -22,15 +26,18 @@ export enum Page {
 
 export type PageData<T extends Page> = {
   Authors: EmptyRecord
-  AuthorView: { id: AuthorID }
+  AuthorView: { authorId: AuthorID }
+  CityView: { cityId: CityID; regionId: RegionID }
   Collections: EmptyRecord
-  CollectionView: { id: CollectionID }
+  CollectionView: { collectionId: CollectionID }
   Packages: EmptyRecord
-  PackageView: { id: PackageID }
+  PackageView: { packageId: PackageID }
   Profile: EmptyRecord
   Settings: EmptyRecord
+  Regions: EmptyRecord
+  RegionView: { regionId: RegionID }
   Tools: EmptyRecord
-  ToolView: { id: ToolID }
+  ToolView: { toolId: ToolID }
 }[T]
 
 export type Location<T extends Page = Page> = {
@@ -117,12 +124,16 @@ export const useLocation = (() => useHistory(history => history.current)) as <
 
 export interface Navigation {
   fromAuthorId?: AuthorID
+  fromCityId?: CityID
   fromCollectionId?: CollectionID
   fromPackageId?: PackageID
+  fromRegionId?: RegionID
   fromToolId?: ToolID
   openAuthorView(authorId: AuthorID): void
+  openCityView(cityId: CityID, regionId: RegionID): void
   openCollectionView(collectionId: CollectionID): void
   openPackageView(packageId: PackageID): void
+  openRegionView(regionId: RegionID): void
   openToolView(toolId: ToolID): void
 }
 
@@ -133,21 +144,30 @@ export function useNavigation(): Navigation {
     const { previous } = history
 
     return {
-      fromAuthorId: previous?.page === Page.AuthorView ? previous.data.id : undefined,
-      fromCollectionId: previous?.page === Page.CollectionView ? previous.data.id : undefined,
-      fromPackageId: previous?.page === Page.PackageView ? previous.data.id : undefined,
-      fromToolId: previous?.page === Page.ToolView ? previous.data.id : undefined,
-      openAuthorView(id: AuthorID) {
-        history.push({ page: Page.AuthorView, data: { id } })
+      fromAuthorId: previous?.page === Page.AuthorView ? previous.data.authorId : undefined,
+      fromCityId: previous?.page === Page.CityView ? previous.data.cityId : undefined,
+      fromCollectionId:
+        previous?.page === Page.CollectionView ? previous.data.collectionId : undefined,
+      fromPackageId: previous?.page === Page.PackageView ? previous.data.packageId : undefined,
+      fromRegionId: previous?.page === Page.RegionView ? previous.data.regionId : undefined,
+      fromToolId: previous?.page === Page.ToolView ? previous.data.toolId : undefined,
+      openAuthorView(authorId) {
+        history.push({ page: Page.AuthorView, data: { authorId } })
       },
-      openCollectionView(id: CollectionID) {
-        history.push({ page: Page.CollectionView, data: { id } })
+      openCityView(cityId, regionId) {
+        history.push({ page: Page.CityView, data: { cityId, regionId } })
       },
-      openPackageView(id: PackageID) {
-        history.push({ page: Page.PackageView, data: { id } })
+      openCollectionView(collectionId) {
+        history.push({ page: Page.CollectionView, data: { collectionId } })
       },
-      openToolView(id: ToolID) {
-        history.push({ page: Page.ToolView, data: { id } })
+      openPackageView(packageId) {
+        history.push({ page: Page.PackageView, data: { packageId } })
+      },
+      openRegionView(regionId) {
+        history.push({ page: Page.RegionView, data: { regionId } })
+      },
+      openToolView(toolId) {
+        history.push({ page: Page.ToolView, data: { toolId } })
       },
     }
   }, [history])

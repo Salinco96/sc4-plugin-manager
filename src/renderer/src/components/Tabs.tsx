@@ -16,7 +16,7 @@ import type { TagInfo } from "./Tags/utils"
 export type TabInfo<T> = {
   component: ComponentType<Omit<T, "tabs">>
   id: string
-  label: (t: TFunction<"Tabs">, count: number) => string
+  label: (t: TFunction<"Tabs">, count?: number) => string
   labelTag?: (props: Omit<T, "tabs">, store: Store) => TagInfo | undefined
   condition?: (props: Omit<T, "tabs">, store: Store) => boolean
   count?: (props: Omit<T, "tabs">, store: Store) => number
@@ -34,12 +34,12 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
   const filteredTabs = useStore(store =>
     mapDefined(tabs, tab => {
       const count = tab.count?.(props, store)
-      const isEnabled = tab.condition ? tab.condition(props, store) : count !== 0
+      const isEnabled = tab.condition?.(props, store) ?? count !== 0
 
       if (isEnabled) {
         return {
           ...tab,
-          label: tab.label(t, count ?? 0),
+          label: tab.label(t, count),
           labelTag: tab.labelTag?.(props, store),
         }
       }
@@ -57,7 +57,11 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
     <TabContext value={currentTab.id}>
       <FlexCol fullHeight>
         <Box borderBottom={1} borderColor="divider">
-          <TabList onChange={(_event, value) => actions.setActiveTab(location.page, value)}>
+          <TabList
+            onChange={(_e, value) =>
+              actions.setView(location.page, { activeTab: value, elementId: undefined })
+            }
+          >
             {filteredTabs.map(({ id, label, labelTag }) => (
               <Tab
                 key={`${pageId}:${id}`}

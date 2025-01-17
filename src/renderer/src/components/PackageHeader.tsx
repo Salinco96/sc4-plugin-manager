@@ -25,7 +25,7 @@ export function PackageHeader({
       description={variantInfo.description}
       images={variantInfo.images}
       isListItem={isListItem}
-      location={{ data: { id: packageId }, page: Page.PackageView }}
+      location={{ data: { packageId }, page: Page.PackageView }}
       setActive={setActive}
       subtitle={`${packageId}#${variantInfo.id}`}
       summary={variantInfo.summary}
