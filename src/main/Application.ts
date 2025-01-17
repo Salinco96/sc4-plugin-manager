@@ -25,10 +25,9 @@ import escapeHtml from "escape-html"
 import { glob } from "glob"
 
 import type { AssetInfo, Assets } from "@common/assets"
-import type { AuthorID, Authors } from "@common/authors"
+import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
-import type { Collections } from "@common/collections"
 import {
   DBPFDataType,
   type DBPFEntry,
@@ -39,7 +38,7 @@ import {
 } from "@common/dbpf"
 import {
   type ExemplarDataPatch,
-  type ExemplarPropertyInfo,
+  type ExemplarProperties,
   ExemplarType,
   getExemplarType,
 } from "@common/exemplars"
@@ -60,17 +59,16 @@ import {
   type ProfileID,
   type ProfileInfo,
   type ProfileUpdate,
-  type Profiles,
   createUniqueId,
 } from "@common/profiles"
 import type { PropID } from "@common/props"
 import type { Settings, SettingsData } from "@common/settings"
 import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
-import type { ToolID, Tools } from "@common/tools"
+import type { ToolID } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
-import type { ContentsInfo, FileInfo, VariantID } from "@common/variants"
+import type { FileInfo, VariantID } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
 import { loadAuthors } from "@node/data/authors"
@@ -131,6 +129,7 @@ import {
 import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
+import { loadRegions } from "./data/regions"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
@@ -152,21 +151,10 @@ import {
 } from "./utils/sessions/simtropolis"
 import { TaskManager } from "./utils/tasks"
 
-interface Loaded {
+type Loaded = Required<
+  Omit<ApplicationState, "downloads" | "linker" | "loader" | "simtropolis">
+> & {
   assets: Assets
-  authors: Authors
-  categories: Categories
-  collections: Collections
-  exemplarProperties: Record<string, ExemplarPropertyInfo>
-  externals: { [path: string]: ContentsInfo }
-  features: Features
-  maxis: ContentsInfo
-  packages: Packages
-  profiles: Profiles
-  profileOptions: OptionInfo[]
-  settings: Settings
-  templates: Profiles
-  tools: Tools
 }
 
 export class Application {
@@ -779,7 +767,7 @@ export class Application {
     originalFullPath: string,
     patchedFullPath: string,
     patches: Record<TGI, ExemplarDataPatch | undefined>,
-    exemplarProperties: Record<string, ExemplarPropertyInfo>,
+    exemplarProperties: ExemplarProperties,
   ): Promise<DBPFFile> {
     context.info(`Patching ${path.basename(originalFullPath)}...`)
 
@@ -953,7 +941,7 @@ export class Application {
     packageId: PackageID,
     variantId: VariantID,
     fileInfo: FileInfo,
-    exemplarProperties: Record<string, ExemplarPropertyInfo>,
+    exemplarProperties: ExemplarProperties,
   ): Promise<string> {
     const originalFullPath = this.getVariantFilePath(packageId, variantId, fileInfo.path)
     const patches = fileInfo.patches
@@ -1000,6 +988,13 @@ export class Application {
   }
 
   /**
+   * Returns the absolute path to the 'Regions' directory.
+   */
+  public getRegionsPath(): string {
+    return path.join(this.gamePath, DIRNAMES.regions)
+  }
+
+  /**
    * Returns the absolute path to the 'Manager' directory.
    */
   public getRootPath(): string {
@@ -1021,6 +1016,7 @@ export class Application {
       packages,
       profiles,
       profileOptions,
+      regions,
       settings,
       templates,
       tools,
@@ -1040,6 +1036,7 @@ export class Application {
       packages,
       profiles,
       profileOptions,
+      regions,
       settings,
       simtropolis: this.simtropolisSession?.sessionId
         ? {
@@ -1932,6 +1929,9 @@ export class Application {
         const externals = await loadExternals(context, this.getPluginsPath(), exemplarProperties)
         this.sendStateUpdate({ externals })
 
+        const regions = await loadRegions(context, this.getRegionsPath())
+        this.sendStateUpdate({ regions })
+
         return {
           assets,
           authors,
@@ -1944,6 +1944,7 @@ export class Application {
           packages,
           profiles,
           profileOptions,
+          regions,
           settings,
           templates,
           tools,

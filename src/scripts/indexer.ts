@@ -883,15 +883,19 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     const packageIds = [packageInfo.id, baseGameId]
 
     if (variantInfo.dependencies) {
+      const bannedDependencies = [
+        "bsc/common-dependencies", // should list indidividual packages instead
+        "simfox/day-and-nite", // should list 'darknite' feature instead
+      ]
+
       for (const dependency of variantInfo.dependencies) {
         packageIds.push(dependency.id)
         if (!packages[dependency.id]) {
           errors.add(`${prefix} - Dependency ${dependency.id} does not exist`)
         }
 
-        // Should list individual packages rather than whole BSC dependencies
-        if (dependency.id === "bsc/common-dependencies") {
-          errors.add(`${prefix} - Dependency set '${dependency.id}' listed as direct dependency`)
+        if (bannedDependencies.includes(dependency.id)) {
+          errors.add(`${prefix} - ${dependency.id} listed as direct dependency`)
         }
       }
     }
