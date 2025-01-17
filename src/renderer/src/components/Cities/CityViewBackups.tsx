@@ -1,8 +1,11 @@
+import { sortBy } from "@salinco/nice-utils"
+import { useTranslation } from "react-i18next"
+
 import type { CityID, RegionID } from "@common/regions"
 import { FlexCol } from "@components/FlexBox"
 import { List } from "@components/List"
 import { useCityInfo } from "@utils/packages"
-import { useTranslation } from "react-i18next"
+
 import { CityBackupListItem } from "./CityBackupListItem"
 
 export default function CityViewBackups({
@@ -17,7 +20,7 @@ export default function CityViewBackups({
     <FlexCol fullHeight>
       <List
         emptyMessage={t("noBackups")}
-        items={city.backups}
+        items={sortBy(city.backups, backup => backup.time.getTime())}
         renderItem={backup => (
           <CityBackupListItem backup={backup} cityId={cityId} regionId={regionId} />
         )}

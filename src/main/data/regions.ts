@@ -1,10 +1,11 @@
+import { lstat } from "node:fs/promises"
 import path from "node:path"
 
-import { mapDefined, size } from "@salinco/nice-utils"
+import { size } from "@salinco/nice-utils"
 import { glob } from "glob"
 import { parse as parseINI } from "ini"
 
-import type { CityBackupInfo, CityID, RegionID, RegionInfo, Regions } from "@common/regions"
+import type { CityID, RegionID, RegionInfo, Regions } from "@common/regions"
 import { readFile } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
@@ -37,25 +38,47 @@ export async function loadRegions(
       const cityFiles = await glob("City - *.sc4", {
         cwd: regionPath,
         nodir: true,
-        withFileTypes: true,
       })
 
       for (const cityFile of cityFiles) {
-        const cityId = cityFile.relative().match(/City - (.+)[.]sc4/i)?.[1] as CityID
+        const cityStat = await lstat(path.join(regionPath, cityFile))
+        const cityId = cityFile.match(/City - (.+)[.]sc4/i)?.[1] as CityID
+
+        region.cities[cityId] = {
+          backups: [],
+          established: !cityId.startsWith("New City"),
+          id: cityId,
+          name: cityId,
+        }
+
         const backupPath = path.join(backupsPath, regionId, cityId)
         const backupFiles = await glob("*.sc4", {
           cwd: backupPath,
           nodir: true,
-          withFileTypes: true,
         })
 
-        region.cities[cityId] = {
-          backups: mapDefined(backupFiles, file =>
-            parseBackupInfo(file.relative(), file.mtime, cityFile.mtime),
-          ),
-          established: !cityId.startsWith("New City"),
-          id: cityId,
-          name: cityId,
+        for (const backupFile of backupFiles) {
+          const backupStat = await lstat(path.join(backupPath, backupFile))
+          const match = backupFile.match(
+            /^(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})(?:-(.*))?[.]sc4/i,
+          )
+
+          region.cities[cityId].backups.push({
+            current: backupStat.mtimeMs === cityStat.mtimeMs,
+            description: match?.[7] ?? undefined,
+            file: backupFile,
+            time: match
+              ? new Date(
+                  Number.parseInt(match[1], 10),
+                  Number.parseInt(match[2], 10) - 1,
+                  Number.parseInt(match[3], 10),
+                  Number.parseInt(match[4], 10),
+                  Number.parseInt(match[5], 10),
+                  Number.parseInt(match[6], 10),
+                )
+              : backupStat.mtime,
+            version: backupStat.mtimeMs,
+          })
         }
       }
 
@@ -67,37 +90,6 @@ export async function loadRegions(
   } catch (error) {
     context.error("Failed to load regions", error)
     return {}
-  }
-}
-
-function parseBackupInfo(
-  fileName: string,
-  backupTime?: Date,
-  cityTime?: Date,
-): CityBackupInfo | undefined {
-  const match = fileName.match(/^(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})(?:-(.*))?[.]sc4/i)
-  if (!match) {
-    return
-  }
-
-  const [, year, month, date, hour, minute, second, description] = match
-
-  const time =
-    backupTime ??
-    new Date(
-      Number.parseInt(year, 10),
-      Number.parseInt(month, 10) - 1,
-      Number.parseInt(date, 10),
-      Number.parseInt(hour, 10),
-      Number.parseInt(minute, 10),
-      Number.parseInt(second, 10),
-    )
-
-  return {
-    current: backupTime === cityTime,
-    description,
-    file: fileName,
-    time,
   }
 }
 

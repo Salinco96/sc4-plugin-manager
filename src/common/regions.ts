@@ -16,6 +16,7 @@ export interface CityBackupInfo {
   description?: string
   file: string
   time: Date
+  version: number
 }
 
 export type Cities = {

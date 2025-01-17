@@ -654,6 +654,10 @@
     "ignore": "Ignore conflicts",
     "title": "$t(General:app)"
   },
+  "RestoreBackupModal": {
+    "confirmation": "Restore backup?",
+    "description": "Your current save will be permanently overwritten."
+  },
   "SelectGameDataFolderModal": {
     "title": "Select your $t(General:game) data folder (containing your {{plugins}} folder)"
   },

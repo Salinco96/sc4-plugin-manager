@@ -1,4 +1,4 @@
-import fs from "node:fs/promises"
+import fs, { lstat } from "node:fs/promises"
 import path from "node:path"
 
 import {
@@ -596,16 +596,16 @@ export class Application {
     await this.tasks.queue(`backup:create:${regionId}:${cityId}`, {
       handler: async context => {
         const cityFile = path.join(regionId, getCityFileName(cityId))
+        const cityFullPath = path.join(this.getRegionsPath(), cityFile)
 
         const backupTime = new Date()
         const backupFile = getBackupFileName(backupTime, description)
+        const backupFullPath = path.join(this.getBackupsPath(), regionId, cityId, backupFile)
 
         context.debug(`Backing up '${cityFile}'...`)
 
-        await copyTo(
-          path.join(this.getRegionsPath(), cityFile),
-          path.join(this.getBackupsPath(), regionId, cityId, backupFile),
-        )
+        const cityStat = await lstat(cityFullPath)
+        await copyTo(cityFullPath, backupFullPath)
 
         for (const backup of city.backups) {
           backup.current = false
@@ -616,6 +616,7 @@ export class Application {
           description,
           file: backupFile,
           time: backupTime,
+          version: cityStat.mtimeMs,
         })
 
         this.sendStateUpdate({ regions })
@@ -2787,6 +2788,20 @@ export class Application {
 
     await this.tasks.queue(`backup:restore:${regionId}:${cityId}`, {
       handler: async context => {
+        if (!city.backups.find(backup => backup.current)) {
+          const { confirmed } = await showConfirmation(
+            `${region.name} - ${city.name}`,
+            t("RestoreBackupModal:confirmation"),
+            t("RestoreBackupModal:description"),
+            false,
+            "warning",
+          )
+
+          if (!confirmed) {
+            return
+          }
+        }
+
         const backupPath = path.join(regionId, cityId, backup.file)
         const fullPath = path.join(this.getBackupsPath(), backupPath)
 
