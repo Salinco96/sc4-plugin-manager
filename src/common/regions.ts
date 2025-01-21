@@ -30,12 +30,12 @@ export type UpdateSaveAction = Action<
     growify: {
       backup: boolean
       density: ZoneDensity
-      makeHistorical: boolean
-      rciTypes?: RCIType[]
+      historical: boolean
+      rciTypes: RCIType[]
     }
     historical: {
       backup: boolean
-      rciTypes?: RCIType[]
+      rciTypes: RCIType[]
     }
   }
 >

@@ -3534,19 +3534,18 @@ export class Application {
         } else {
           source = city
           sourceFullPath = path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
-
-          // TODO: Confirm no backup
         }
 
         if (action.backup) {
+          const description = `(${action.action})`
           const backupTime = new Date()
-          const backupFile = getBackupFileName(backupTime, action.action)
+          const backupFile = getBackupFileName(backupTime, description)
           backupFullPath = path.join(this.getBackupsPath(), regionId, cityId, backupFile)
 
           await copyTo(sourceFullPath, backupFullPath)
 
           backup = {
-            description: action.action,
+            description,
             file: backupFile,
             time: backupTime,
             version: source.version,

@@ -1,9 +1,7 @@
 import path from "node:path"
 
-import { values } from "@salinco/nice-utils"
-
 import type { ZoneDensity } from "@common/lots"
-import { RCIType } from "@common/lots"
+import type { RCIType } from "@common/lots"
 import { FileOpenMode, createIfMissing, moveTo, openFile, removeIfPresent } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
@@ -52,13 +50,11 @@ export async function growify(
   fullPath: string,
   options: {
     density: ZoneDensity
-    makeHistorical: boolean
-    rciTypes?: RCIType[]
+    historical: boolean
+    rciTypes: RCIType[]
     tempPath: string
   },
 ): Promise<boolean> {
-  const rciTypes = options.rciTypes ?? values(RCIType)
-
   return updateSaveFile(context, fullPath, {
     tempPath: options.tempPath,
     handler: async (context, save) => {
@@ -76,13 +72,13 @@ export async function growify(
       }
 
       for (const lot of lots.data) {
-        const rciType = rciTypes.find(type => lot.isGrowifyable(type))
+        const rciType = options.rciTypes.find(type => lot.isGrowifyable(type))
 
         if (rciType) {
           lot.zoneType = RCITypeToZoneType[rciType][options.density]
           lot.dirty()
 
-          if (options.makeHistorical) {
+          if (options.historical) {
             lot.makeHistorical()
           }
 
@@ -105,12 +101,10 @@ export async function makeHistorical(
   context: TaskContext,
   fullPath: string,
   options: {
-    rciTypes?: RCIType[]
+    rciTypes: RCIType[]
     tempPath: string
   },
 ): Promise<boolean> {
-  const rciTypes = options.rciTypes ?? values(RCIType)
-
   return updateSaveFile(context, fullPath, {
     tempPath: options.tempPath,
     handler: async (context, save) => {
@@ -124,7 +118,7 @@ export async function makeHistorical(
 
       for (const lot of lots.data) {
         const rciType = ZoneTypeToRCIType[lot.zoneType]
-        if (rciType && rciTypes.includes(rciType)) {
+        if (rciType && options.rciTypes.includes(rciType)) {
           lot.makeHistorical()
         }
       }

@@ -73,11 +73,15 @@
       },
       "growify": {
         "description": "Convert plopped buildings to growables",
-        "label": "Growify"
+        "label": "Growify",
+        "modalDescription": "Convert plopped buildings to normal growables. This is primarily meant to fully enable growable lots placed with 'buildingplop' or 'lotplop' cheats, in particular for residential lots, which will always abandon otherwise. It also enables industrial fret and normal redevelopment after destruction.",
+        "modalTitle": "Growify lots"
       },
       "historical": {
         "description": "Mark growables as historical",
-        "label": "Make historical"
+        "label": "Make historical",
+        "modalDescription": "Mark all lots of the given RCI types as historical. This prevents them from being redeveloped.",
+        "modalTitle": "Make historical"
       },
       "removeBackup": {
         "description": "Delete this backup",
