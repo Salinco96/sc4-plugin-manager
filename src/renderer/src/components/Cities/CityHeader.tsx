@@ -1,4 +1,5 @@
-import { type CityID, type RegionID, getCityFileName } from "@common/regions"
+import { ZoneDensity } from "@common/lots"
+import { type CityID, type RegionID, getCityFileName, hasBackup } from "@common/regions"
 import { ActionButton } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { Page } from "@utils/navigation"
@@ -25,9 +26,31 @@ export function CityHeader({
             {
               action: () => actions.createBackup(regionId, cityId),
               description: t("actions.createBackup.description"),
-              disabled: city.backups.some(backup => backup.current),
+              disabled: hasBackup(city),
               id: "createBackup",
               label: t("actions.createBackup.label"),
+            },
+            city.established && {
+              action: () =>
+                actions.updateSave(regionId, cityId, null, {
+                  action: "growify",
+                  backup: true, // todo
+                  density: ZoneDensity.LOW, // todo
+                  makeHistorical: true, // todo
+                }),
+              description: t("actions.growify.description"),
+              id: "growify",
+              label: t("actions.growify.label"),
+            },
+            city.established && {
+              action: () =>
+                actions.updateSave(regionId, cityId, null, {
+                  action: "historical",
+                  backup: true, // todo
+                }),
+              description: t("actions.historical.description"),
+              id: "historical",
+              label: t("actions.historical.label"),
             },
           ]}
         />

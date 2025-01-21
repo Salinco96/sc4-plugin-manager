@@ -15,6 +15,13 @@ export enum ZoneDensity {
   HIGH = "high",
 }
 
+export enum RCIType {
+  Residential = "R",
+  Commercial = "C",
+  Industrial = "I",
+  Agriculture = "A",
+}
+
 export type LotID = InstanceID<LotInfo>
 
 export interface LotInfo {

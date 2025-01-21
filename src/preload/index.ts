@@ -6,7 +6,7 @@ import type { ExemplarDataPatch } from "@common/exemplars"
 import type { ModalData, ModalID } from "@common/modals"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
-import type { CityID, RegionID } from "@common/regions"
+import type { CityID, RegionID, UpdateSaveAction } from "@common/regions"
 import type { ApplicationStateUpdate } from "@common/state"
 import type { ToolID } from "@common/tools"
 import type { VariantID } from "@common/variants"
@@ -162,6 +162,14 @@ export const api = {
   },
   updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("updateProfile", profileId, data)
+  },
+  updateSave(
+    regionId: RegionID,
+    cityId: CityID,
+    file: string | null,
+    action: UpdateSaveAction,
+  ): Promise<boolean> {
+    return ipcRenderer.invoke("updateSave", regionId, cityId, file, action)
   },
 }
 

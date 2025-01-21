@@ -92,6 +92,7 @@ import {
   createIfMissing,
   exists,
   getExtension,
+  isChild,
   isURL,
   moveTo,
   openFile,
@@ -113,7 +114,15 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
-import { type CityID, type RegionID, getCityFileName } from "@common/regions"
+import {
+  type CityBackupInfo,
+  type CityID,
+  type CityInfo,
+  type RegionID,
+  type UpdateSaveAction,
+  getCityFileName,
+  hasBackup,
+} from "@common/regions"
 import { getDefaultVariant } from "@common/variants"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
@@ -131,6 +140,7 @@ import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./d
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { getBackupFileName, loadRegions } from "./data/regions"
+import { growify, makeHistorical } from "./data/saves/update"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
@@ -576,7 +586,7 @@ export class Application {
     regionId: RegionID,
     cityId: CityID,
     description?: string,
-  ): Promise<void> {
+  ): Promise<boolean> {
     const { regions } = await this.load()
 
     const region = regions[regionId]
@@ -589,8 +599,8 @@ export class Application {
       throw Error(`City '${cityId}' does not exist`)
     }
 
-    if (city.backups.some(backup => backup.current)) {
-      return
+    if (hasBackup(city)) {
+      return false
     }
 
     await this.tasks.queue(`backup:create:${regionId}:${cityId}`, {
@@ -604,25 +614,21 @@ export class Application {
 
         context.debug(`Backing up '${cityFile}'...`)
 
-        const cityStat = await lstat(cityFullPath)
         await copyTo(cityFullPath, backupFullPath)
 
-        for (const backup of city.backups) {
-          backup.current = false
-        }
-
         city.backups.push({
-          current: true,
           description,
           file: backupFile,
           time: backupTime,
-          version: cityStat.mtimeMs,
+          version: city.version,
         })
 
         this.sendStateUpdate({ regions })
       },
       pool: `region:${regionId}`,
     })
+
+    return true
   }
 
   /**
@@ -1120,8 +1126,17 @@ export class Application {
    */
   public getTempPath(fullPath?: string): string {
     if (fullPath) {
-      const relativePath = path.relative(this.getRootPath(), fullPath)
-      return path.join(this.getRootPath(), DIRNAMES.temp, relativePath)
+      if (isChild(fullPath, this.getRootPath())) {
+        const relativePath = path.relative(this.getRootPath(), fullPath)
+        return path.join(this.getTempPath(), relativePath)
+      }
+
+      if (isChild(fullPath, this.gamePath)) {
+        const relativePath = path.relative(this.gamePath, fullPath)
+        return path.join(this.getTempPath(), relativePath)
+      }
+
+      throw Error(`Cannot generate temporary path for ${fullPath}`)
     }
 
     return path.join(this.getRootPath(), DIRNAMES.temp)
@@ -1237,6 +1252,7 @@ export class Application {
     this.handle("simtropolisLogout")
     this.handle("switchProfile")
     this.handle("updateProfile")
+    this.handle("updateSave")
 
     this.initLogs()
     this.initCustomProtocols()
@@ -2768,7 +2784,7 @@ export class Application {
   /**
    * Restores a backup. THIS PERMANENTLY OVERWRITES THE CURRENT SAVE!
    */
-  public async restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
+  public async restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<boolean> {
     const { regions } = await this.load()
 
     const region = regions[regionId]
@@ -2786,9 +2802,9 @@ export class Application {
       throw Error(`Backup '${backup}' does not exist`)
     }
 
-    await this.tasks.queue(`backup:restore:${regionId}:${cityId}`, {
+    return this.tasks.queue(`backup:restore:${regionId}:${cityId}`, {
       handler: async context => {
-        if (!city.backups.find(backup => backup.current)) {
+        if (!hasBackup(city)) {
           const { confirmed } = await showConfirmation(
             `${region.name} - ${city.name}`,
             t("RestoreBackupModal:confirmation"),
@@ -2798,7 +2814,7 @@ export class Application {
           )
 
           if (!confirmed) {
-            return
+            return false
           }
         }
 
@@ -2809,11 +2825,11 @@ export class Application {
 
         await copyTo(fullPath, path.join(this.getRegionsPath(), regionId, getCityFileName(cityId)))
 
-        for (const backup of city.backups) {
-          backup.current = backup.file === file
-        }
+        city.version = backup.version
 
         this.sendStateUpdate({ regions })
+
+        return true
       },
       pool: `region:${regionId}`,
     })
@@ -3480,6 +3496,97 @@ export class Application {
     }
 
     return result
+  }
+
+  public async updateSave(
+    regionId: RegionID,
+    cityId: CityID,
+    file: string | null,
+    action: UpdateSaveAction,
+  ): Promise<boolean> {
+    const { regions } = await this.load()
+
+    return this.tasks.queue(`region:update:${regionId}:${cityId}`, {
+      handler: async context => {
+        let source: CityBackupInfo | CityInfo
+        let sourceFullPath: string
+        let backup: CityBackupInfo | undefined
+        let backupFullPath: string | undefined
+
+        const region = regions[regionId]
+        if (!region) {
+          throw Error(`Region '${regionId}' does not exist`)
+        }
+
+        const city = region.cities[cityId]
+        if (!city) {
+          throw Error(`City '${cityId}' does not exist`)
+        }
+
+        if (file) {
+          const backup = city.backups.find(backup => backup.file === file)
+          if (!backup) {
+            throw Error(`Backup '${file}' does not exist`)
+          }
+
+          source = backup
+          sourceFullPath = path.join(this.getBackupsPath(), regionId, cityId, file)
+        } else {
+          source = city
+          sourceFullPath = path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
+
+          // TODO: Confirm no backup
+        }
+
+        if (action.backup) {
+          const backupTime = new Date()
+          const backupFile = getBackupFileName(backupTime, action.action)
+          backupFullPath = path.join(this.getBackupsPath(), regionId, cityId, backupFile)
+
+          await copyTo(sourceFullPath, backupFullPath)
+
+          backup = {
+            description: action.action,
+            file: backupFile,
+            time: backupTime,
+            version: source.version,
+          }
+        }
+
+        const tempPath = this.getTempPath(sourceFullPath)
+
+        let updated: boolean
+
+        switch (action.action) {
+          case "growify": {
+            updated = await growify(context, sourceFullPath, { ...action, tempPath })
+            break
+          }
+
+          case "historical": {
+            updated = await makeHistorical(context, sourceFullPath, { ...action, tempPath })
+            break
+          }
+        }
+
+        if (updated) {
+          if (backup) {
+            city.backups.push(backup)
+          }
+
+          // File was updated - update the version
+          const stat = await lstat(sourceFullPath)
+          source.version = stat.mtimeMs
+          this.sendStateUpdate({ regions })
+        } else if (backupFullPath) {
+          // File was not updated - automatic backup no longer needed
+          await removeIfPresent(backupFullPath)
+        }
+
+        return updated
+      },
+      pool: `region:${regionId}`,
+    })
   }
 
   protected async writePackageConfig(

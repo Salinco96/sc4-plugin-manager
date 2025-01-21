@@ -23,7 +23,7 @@ import type { Features, PackageInfo, VariantState } from "@common/types"
 import type { VariantID } from "@common/variants"
 
 import type { CollectionID, CollectionInfo } from "@common/collections"
-import type { CityID, RegionID, RegionInfo } from "@common/regions"
+import type { CityID, RegionID, RegionInfo, UpdateSaveAction } from "@common/regions"
 import { getStore } from "./context"
 import { Page } from "./navigation"
 import { computePackageList } from "./packages"
@@ -118,6 +118,7 @@ export interface StoreActions {
   setProfileOption(optionId: OptionID, optionValue: OptionValue): Promise<boolean>
   setView<T extends Page>(page: T, view: Partial<View<T>>): void
   showErrorToast(message: string): void
+  showInfoToast(message: string): void
   showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
   showSuccessToast(message: string): void
   simtropolisLogin(): Promise<void>
@@ -125,6 +126,12 @@ export interface StoreActions {
   switchProfile(profileId: ProfileID): Promise<void>
   updatePackage(packageId: PackageID, variantId: VariantID): Promise<boolean>
   updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean>
+  updateSave(
+    regionId: RegionID,
+    cityId: CityID,
+    file: string | null,
+    action: UpdateSaveAction,
+  ): Promise<boolean>
   updateState(update: ApplicationStateUpdate): void
 }
 
@@ -194,7 +201,7 @@ const initialState: Omit<Store, "actions"> = {
     [Page.RegionView]: {
       activeTab: "cities",
       cities: {
-        showEstablishedOnly: false,
+        showEstablishedOnly: true,
       },
     },
     [Page.ToolView]: {
@@ -582,6 +589,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
       showErrorToast(message) {
         enqueueSnackbar(message, { variant: "error" })
       },
+      showInfoToast(message) {
+        enqueueSnackbar(message, { variant: "info" })
+      },
       async showModal(id, data) {
         try {
           const result = await new Promise<boolean>(resolve => {
@@ -655,6 +665,35 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         } catch (error) {
           console.error(`Failed to update profile ${profileInfo.name}`, error)
           this.showErrorToast(`Failed to update profile ${profileInfo.name}`)
+          return false
+        }
+      },
+      async updateSave(regionId, cityId, file, action) {
+        const city = get().regions?.[regionId]?.cities[cityId]
+        if (!city) {
+          return false
+        }
+
+        try {
+          const updated = await window.api.updateSave(regionId, cityId, file, action)
+
+          if (updated) {
+            this.showSuccessToast(`${city.name} updated`)
+          } else {
+            this.showInfoToast("Nothing to update")
+          }
+
+          return updated
+        } catch (error) {
+          console.error(`Failed to update ${city.name}`, error)
+          // Lock error typically occurs if the city is currently in play
+          if (error instanceof Error && error.message.match(/resource busy or locked/i)) {
+            this.showErrorToast(
+              `Failed to update ${city.name} - Please save and exit the city first`,
+            )
+          } else {
+            this.showErrorToast(`Failed to update ${city.name}`)
+          }
           return false
         }
       },

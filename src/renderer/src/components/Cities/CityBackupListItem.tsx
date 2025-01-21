@@ -1,6 +1,7 @@
 import { memo } from "react"
 import { useTranslation } from "react-i18next"
 
+import { ZoneDensity } from "@common/lots"
 import type { CityBackupInfo, CityID, RegionID } from "@common/regions"
 import { VariantState } from "@common/types"
 import { ActionButton } from "@components/ActionButton"
@@ -8,6 +9,7 @@ import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { Tags } from "@components/Tags/Tags"
 import { TagType, createTag } from "@components/Tags/utils"
+import { useCityInfo } from "@utils/packages"
 import { useStoreActions } from "@utils/store"
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
@@ -25,6 +27,9 @@ export const CityBackupListItem = memo(function CityBackupListItem({
   regionId: RegionID
 }): JSX.Element {
   const actions = useStoreActions()
+  const city = useCityInfo(cityId, regionId)
+
+  const isCurrent = backup.version === city.version
 
   const { t } = useTranslation("CityView")
 
@@ -36,9 +41,31 @@ export const CityBackupListItem = memo(function CityBackupListItem({
             {
               action: () => actions.restoreBackup(regionId, cityId, backup.file),
               description: t("actions.restoreBackup.description"),
-              disabled: backup.current,
+              disabled: isCurrent,
               id: "restoreBackup",
               label: t("actions.restoreBackup.label"),
+            },
+            city.established && {
+              action: () =>
+                actions.updateSave(regionId, cityId, backup.file, {
+                  action: "growify",
+                  backup: true, // todo
+                  density: ZoneDensity.LOW, // todo
+                  makeHistorical: true, // todo
+                }),
+              description: t("actions.growify.description"),
+              id: "growify",
+              label: t("actions.growify.label"),
+            },
+            city.established && {
+              action: () =>
+                actions.updateSave(regionId, cityId, backup.file, {
+                  action: "historical",
+                  backup: true, // todo
+                }),
+              description: t("actions.historical.description"),
+              id: "makeHistorical",
+              label: t("actions.historical.label"),
             },
             {
               action: () => actions.removeBackup(regionId, cityId, backup.file),
@@ -52,7 +79,7 @@ export const CityBackupListItem = memo(function CityBackupListItem({
       }
       header={Header}
       subtitle={backup.file}
-      tags={backup.current && <Tags tags={[createTag(TagType.STATE, VariantState.CURRENT)]} />}
+      tags={isCurrent && <Tags tags={[createTag(TagType.STATE, VariantState.CURRENT)]} />}
       title={backup.description ?? dateFormat.format(backup.time)}
     />
   )

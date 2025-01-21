@@ -141,6 +141,20 @@ export async function loadDBPF(
   return contents
 }
 
+export async function loadDBPFEntryBytes(file: FileHandle, entry: DBPFEntry): Promise<Binary> {
+  const bytes = await Binary.fromFile(file, entry.size, entry.offset)
+
+  if (isCompressed(entry)) {
+    bytes.decompress()
+
+    if (entry.uncompressed === 0) {
+      entry.uncompressed = bytes.length
+    }
+  }
+
+  return bytes
+}
+
 export async function loadDBPFEntry<T extends DBPFDataType>(
   file: FileHandle,
   entry: DBPFEntry<T>,
@@ -152,15 +166,7 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
 ): Promise<DBPFEntryData<T>> {
   const type = getDataType(entry.id)
 
-  const bytes = await Binary.fromFile(file, entry.size, entry.offset)
-
-  if (isCompressed(entry)) {
-    bytes.decompress()
-
-    if (entry.uncompressed === 0) {
-      entry.uncompressed = bytes.length
-    }
-  }
+  const bytes = await loadDBPFEntryBytes(file, entry)
 
   switch (type) {
     case DBPFDataType.EXMP: {
@@ -190,7 +196,7 @@ export async function patchDBPFEntries(
   inFile: FileHandle,
   outFile: FileHandle,
   patches: {
-    [entryId in TGI]?: ExemplarDataPatch | null
+    [entryId in TGI]?: Buffer | ExemplarDataPatch | null
   },
   options: {
     exemplarProperties: {
@@ -229,7 +235,19 @@ export async function patchDBPFEntries(
 
     const patch = patches[entry.id]
 
-    if (patch) {
+    if (Buffer.isBuffer(patch)) {
+      const bytes = new Binary(patch)
+
+      if (entry.uncompressed) {
+        entry.uncompressed = bytes.length
+        bytes.compress()
+      }
+
+      entry.offset = offset
+      entry.size = bytes.length
+
+      offset += await bytes.writeTofile(outFile)
+    } else if (patch) {
       if (entry.type !== DBPFDataType.EXMP) {
         throw Error(`Not an exemplar entry: ${entry.id}`)
       }

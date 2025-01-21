@@ -58,6 +58,10 @@ export class Binary {
     this.offset = 0
   }
 
+  public slice(start: number, end?: number, options?: Omit<BinaryOptions, "alloc">): Binary {
+    return new Binary(this.toBytes().subarray(start, end), options)
+  }
+
   protected checkRead(size: number, offset: number = this.offset): void {
     if (offset + size <= this.$length) {
       return
@@ -124,10 +128,31 @@ export class Binary {
     return this.readUInt8(offset) !== 0
   }
 
+  public readBytes(length: number, offset: number = this.offset): Buffer {
+    this.checkRead(length, offset)
+    const bytes = this.$bytes.subarray(offset, offset + length)
+    this.offset = offset + length
+    return bytes
+  }
+
   public readFloat32(offset: number = this.offset): number {
     this.checkRead(4, offset)
     const value = this.$bytes.readFloatLE(offset)
     this.offset = offset + 4
+    return value
+  }
+
+  public readSInt8(offset: number = this.offset): number {
+    this.checkRead(1, offset)
+    const value = this.$bytes.readInt8(offset)
+    this.offset = offset + 1
+    return value
+  }
+
+  public readSInt16(offset: number = this.offset): number {
+    this.checkRead(2, offset)
+    const value = this.$bytes.readInt16LE(offset)
+    this.offset = offset + 2
     return value
   }
 
@@ -251,10 +276,28 @@ export class Binary {
     this.writeUInt8(value ? 1 : 0, offset)
   }
 
+  public writeBytes(bytes: Buffer, offset: number = this.offset): void {
+    this.checkWrite(bytes.length, offset)
+    bytes.copy(this.$bytes, offset)
+    this.offset = offset + bytes.length
+  }
+
   public writeFloat32(value: number, offset: number = this.offset): void {
     this.checkWrite(4, offset)
     this.$bytes.writeFloatLE(value, offset)
     this.offset = offset + 4
+  }
+
+  public writeSInt8(value: number, offset: number = this.offset): void {
+    this.checkWrite(1, offset)
+    this.$bytes.writeInt8(value, offset)
+    this.offset = offset + 1
+  }
+
+  public writeSInt16(value: number, offset: number = this.offset): void {
+    this.checkWrite(2, offset)
+    this.$bytes.writeInt16LE(value, offset)
+    this.offset = offset + 2
   }
 
   public writeSInt32(value: number, offset: number = this.offset): void {

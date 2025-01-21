@@ -19,7 +19,7 @@ export function ActionButton({
   isLoading,
   loadingLabel,
 }: {
-  actions: Action[]
+  actions: Array<Action | false | null | undefined>
   isLoading?: boolean
   loadingLabel?: string
 }): JSX.Element | null {
@@ -32,8 +32,9 @@ export function ActionButton({
     return null
   }
 
-  const mainAction = actions[0]
-  const moreActions = actions.slice(1).filter(action => !action.disabled)
+  const filteredActions = actions.filter(action => !!action)
+  const mainAction = filteredActions.find(action => !action.disabled) ?? filteredActions[0]
+  const moreActions = filteredActions.filter(action => action !== mainAction && !action.disabled)
   const hasMore = !!moreActions.length && !mainAction.disabled
   const disabled = !!mainAction.disabled || !!isLoading
 

@@ -29,10 +29,12 @@ export async function loadRegions(
       const regionConfig = parseINI(await readFile(path.join(regionsPath, configPath)))
       const regionPath = path.join(regionsPath, regionId)
 
+      const regionName: string | undefined = regionConfig["Regional Settings"]?.Name
+
       const region: RegionInfo = {
         cities: {},
         id: regionId,
-        name: regionConfig["Regional Settings"]?.Name ?? regionId,
+        name: regionName && !regionName.startsWith("#") ? regionName : regionId,
       }
 
       const cityFiles = await glob("City - *.sc4", {
@@ -49,6 +51,7 @@ export async function loadRegions(
           established: !cityId.startsWith("New City"),
           id: cityId,
           name: cityId,
+          version: cityStat.mtimeMs,
         }
 
         const backupPath = path.join(backupsPath, regionId, cityId)
@@ -64,7 +67,6 @@ export async function loadRegions(
           )
 
           region.cities[cityId].backups.push({
-            current: backupStat.mtimeMs === cityStat.mtimeMs,
             description: match?.[7] ?? undefined,
             file: backupFile,
             time: match
