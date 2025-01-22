@@ -14,7 +14,7 @@ import {
   LocalFlorist as ParksIcon,
   ReportProblem as ProblemsIcon,
   AccountBox as ProfileIcon,
-  Save as RegionsIcon,
+  Map as RegionsIcon,
   Apartment as ResidentialIcon,
   Settings as SettingsIcon,
   Construction as ToolsIcon,

@@ -1,10 +1,23 @@
-import { type CityID, type RegionID, getCityFileName, hasBackup } from "@common/regions"
-import { ActionButton } from "@components/ActionButton"
+import { Map as RegionIcon } from "@mui/icons-material"
+import { sortBy, values } from "@salinco/nice-utils"
+import { useMemo } from "react"
+import { useTranslation } from "react-i18next"
+
+import type { ProfileID } from "@common/profiles"
+import {
+  type CityID,
+  type RegionID,
+  getCityFileName,
+  getCityLinkedProfileId,
+  getRegionLinkedProfileId,
+  hasBackup,
+} from "@common/regions"
+import { ActionButton, type Variant } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { Page } from "@utils/navigation"
 import { useCityInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
-import { useTranslation } from "react-i18next"
+import { useSettings, useStore, useStoreActions } from "@utils/store"
+
 import { UpdateSaveActionModal, useUpdateSaveActionModal } from "./UpdateSaveActionModal"
 
 export function CityHeader({
@@ -15,6 +28,8 @@ export function CityHeader({
 }: HeaderProps<{ cityId: CityID; regionId: RegionID }>): JSX.Element {
   const actions = useStoreActions()
   const city = useCityInfo(cityId, regionId)
+  const profiles = useStore(store => store.profiles)
+  const settings = useSettings()
 
   const { t } = useTranslation("CityView")
 
@@ -22,6 +37,31 @@ export function CityHeader({
     cityId,
     regionId,
   })
+
+  const regionProfileId = getRegionLinkedProfileId(regionId, settings, profiles)
+  const cityProfileId = getCityLinkedProfileId(regionId, cityId, settings)
+
+  const profileOptions = useMemo(() => {
+    if (profiles) {
+      const options = sortBy(values(profiles), profile => profile.name).map<
+        Variant<ProfileID | "*">
+      >(profile => ({
+        id: profile.id,
+        label: profile.name,
+      }))
+
+      if (regionProfileId) {
+        options.unshift({
+          description: "Defaults to region",
+          icon: RegionIcon,
+          id: "*",
+          label: <i>{profiles[regionProfileId]?.name}</i>,
+        })
+      }
+
+      return options
+    }
+  }, [profiles, regionProfileId])
 
   return (
     <Header
@@ -50,6 +90,22 @@ export function CityHeader({
                 label: t("actions.historical.label"),
               },
             ]}
+            variant={cityProfileId ?? "*"}
+            variants={profileOptions}
+            setVariant={profileId =>
+              actions.updateSettings({
+                regions: {
+                  ...settings?.regions,
+                  [regionId]: {
+                    ...settings?.regions?.[regionId],
+                    cities: {
+                      ...settings?.regions?.[regionId]?.cities,
+                      [cityId]: profileId === "*" ? undefined : { profile: profileId },
+                    },
+                  },
+                },
+              })
+            }
           />
         </>
       }

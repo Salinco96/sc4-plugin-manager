@@ -149,6 +149,7 @@ export function toSettingsData(settings: Readonly<Settings>): SettingsData {
   const data: SettingsData = {
     currentProfile: settings.currentProfile,
     install: settings.install,
+    regions: settings.regions,
   }
 
   return data

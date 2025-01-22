@@ -132,6 +132,7 @@ export interface StoreActions {
     file: string | null,
     action: UpdateSaveAction,
   ): Promise<boolean>
+  updateSettings(data: Partial<Settings>): Promise<void>
   updateState(update: ApplicationStateUpdate): void
 }
 
@@ -666,6 +667,16 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           console.error(`Failed to update profile ${profileInfo.name}`, error)
           this.showErrorToast(`Failed to update profile ${profileInfo.name}`)
           return false
+        }
+      },
+      async updateSettings(data) {
+        try {
+          if (await window.api.updateSettings(data)) {
+            this.showSuccessToast("Settings updated")
+          }
+        } catch (error) {
+          console.error("Failed to update settings", error)
+          this.showErrorToast("Failed to update settings")
         }
       },
       async updateSave(regionId, cityId, file, action) {

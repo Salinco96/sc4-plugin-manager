@@ -1,4 +1,5 @@
 import type { ProfileID } from "./profiles"
+import type { CityID, RegionID } from "./regions"
 import type { ConfigFormat } from "./types"
 
 /** Raw global settings */
@@ -15,6 +16,17 @@ export interface SettingsData {
     version?: string
     /** Whether DgVoodoo is installed */
     dgvoodoo?: boolean
+  }
+  /** Regions */
+  regions?: {
+    [regionId in RegionID]?: {
+      cities?: {
+        [cityId in CityID]?: {
+          profile?: ProfileID
+        }
+      }
+      profile?: ProfileID
+    }
   }
 }
 
@@ -34,6 +46,17 @@ export interface Settings {
     version?: string
     /** Whether DgVoodoo is installed */
     voodoo?: boolean
+  }
+  /** Regions */
+  regions?: {
+    [regionId in RegionID]?: {
+      cities?: {
+        [cityId in CityID]?: {
+          profile?: ProfileID
+        }
+      }
+      profile?: ProfileID
+    }
   }
   /** Available manager update */
   update?: {

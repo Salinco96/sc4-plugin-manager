@@ -1,6 +1,6 @@
 import { MoreVert as MoreOptionsIcon } from "@mui/icons-material"
 import { Button, Divider, Menu, MenuItem, Select, Tooltip } from "@mui/material"
-import { useRef, useState } from "react"
+import { type ComponentType, type ReactNode, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { FlexCol, FlexRow } from "./FlexBox"
@@ -15,9 +15,11 @@ export interface Action {
 }
 
 export interface Variant<VariantID extends string> {
+  description?: string
   disabled?: boolean
+  icon?: ComponentType<{ fontSize: "inherit" }>
   id: VariantID
-  label: string
+  label: ReactNode
 }
 
 export function ActionButton<VariantID extends string>({
@@ -47,7 +49,9 @@ export function ActionButton<VariantID extends string>({
   const disabled = !!mainAction?.disabled || !!isLoading
 
   const filteredVariants = variants?.filter(variant => !!variant)
-  const selectableVariants = filteredVariants?.filter(variant => !variant.disabled)
+  const selectableVariants = filteredVariants
+    ?.filter(variant => !variant.disabled)
+    .map(variant => variant.id)
 
   if (!mainAction && !filteredVariants?.length) {
     return null
@@ -124,9 +128,10 @@ export function ActionButton<VariantID extends string>({
         <Select
           disabled={
             selectableVariants?.length === 0 ||
-            (selectableVariants?.length === 1 && variant === selectableVariants[0].id) ||
+            (selectableVariants?.length === 1 && variant === selectableVariants[0]) ||
             !setVariant
           }
+          error={!variant || !selectableVariants?.includes(variant)}
           fullWidth
           onClose={() => setMenuOpen(false)}
           MenuProps={{ sx: { maxHeight: 320 } }}
@@ -137,9 +142,12 @@ export function ActionButton<VariantID extends string>({
           value={variant}
           variant="outlined"
         >
-          {filteredVariants.map(variant => (
-            <MenuItem key={variant.id} value={variant.id} disabled={variant.disabled}>
-              {variant.label}
+          {filteredVariants.map(({ description, disabled, icon: IconComponent, id, label }) => (
+            <MenuItem key={id} value={id} disabled={disabled}>
+              <FlexRow centered fullWidth gap={1} title={description}>
+                {label}
+                {IconComponent && <IconComponent fontSize="inherit" />}
+              </FlexRow>
             </MenuItem>
           ))}
         </Select>

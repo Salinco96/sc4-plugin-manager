@@ -1,5 +1,7 @@
-import type { ID } from "@salinco/nice-utils"
+import { type ID, keys, size } from "@salinco/nice-utils"
 import type { RCIType, ZoneDensity } from "./lots"
+import type { ProfileID, Profiles } from "./profiles"
+import type { Settings } from "./settings"
 
 export type CityID = ID<string, CityInfo>
 
@@ -60,4 +62,29 @@ export function getCityFileName(cityId: CityID): string {
 
 export function hasBackup(city: CityInfo): boolean {
   return city.backups.some(backup => backup.version === city.version)
+}
+
+export function getRegionLinkedProfileId(
+  regionId: RegionID,
+  settings: Settings | undefined,
+  profiles: Profiles | undefined,
+): ProfileID | undefined {
+  const regionSettings = settings?.regions?.[regionId]
+  if (regionSettings?.profile) {
+    if (!profiles || profiles[regionSettings.profile]) {
+      return regionSettings.profile
+    }
+  }
+
+  if (profiles && size(profiles) === 1) {
+    return keys(profiles)[0]
+  }
+}
+
+export function getCityLinkedProfileId(
+  regionId: RegionID,
+  cityId: CityID,
+  settings: Settings | undefined,
+): ProfileID | undefined {
+  return settings?.regions?.[regionId]?.cities?.[cityId]?.profile
 }

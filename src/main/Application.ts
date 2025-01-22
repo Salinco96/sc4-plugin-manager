@@ -121,6 +121,8 @@ import {
   type RegionID,
   type UpdateSaveAction,
   getCityFileName,
+  getCityLinkedProfileId,
+  getRegionLinkedProfileId,
   hasBackup,
 } from "@common/regions"
 import { getDefaultVariant } from "@common/variants"
@@ -1253,6 +1255,7 @@ export class Application {
     this.handle("switchProfile")
     this.handle("updateProfile")
     this.handle("updateSave")
+    this.handle("updateSettings")
 
     this.initLogs()
     this.initCustomProtocols()
@@ -3585,6 +3588,71 @@ export class Application {
         return updated
       },
       pool: `region:${regionId}`,
+    })
+  }
+
+  public async updateSettings(data: Partial<Settings>): Promise<boolean> {
+    const { profiles, regions, settings } = await this.load()
+
+    return this.tasks.queue("settings:update", {
+      handler: async context => {
+        const newSettings = { ...settings, ...data }
+
+        // Warn about changing the linked profile of established cities
+        if (data.regions && !this.ignoredWarnings.has("relinkEstablishedCities")) {
+          const relinkedCities = values(regions).flatMap(region => {
+            const oldRegionProfileId = getRegionLinkedProfileId(region.id, settings, profiles)
+            const newRegionProfileId = getRegionLinkedProfileId(region.id, newSettings, profiles)
+
+            return values(region.cities).filter(city => {
+              const oldCityProfileId =
+                getCityLinkedProfileId(region.id, city.id, settings) ?? oldRegionProfileId
+              const newCityProfileId =
+                getCityLinkedProfileId(region.id, city.id, newSettings) ?? newRegionProfileId
+
+              return city.established && oldCityProfileId !== newCityProfileId
+            })
+          })
+
+          if (relinkedCities.length) {
+            const { confirmed, doNotAskAgain } = await showConfirmation(
+              t("RelinkEstablishedCitiesModal:title", {
+                city: relinkedCities[0].name,
+                count: relinkedCities.length,
+              }),
+              t("RelinkEstablishedCitiesModal:confirmation", {
+                city: relinkedCities[0].name,
+                count: relinkedCities.length,
+              }),
+              t("RelinkEstablishedCitiesModal:description", {
+                cities: relinkedCities.map(city => city.name).sort(),
+                count: relinkedCities.length,
+              }),
+              true,
+              "warning",
+              t("RelinkEstablishedCitiesModal:confirm"),
+              t("RelinkEstablishedCitiesModal:cancel"),
+            )
+
+            if (!confirmed) {
+              return false
+            }
+
+            if (doNotAskAgain) {
+              this.ignoredWarnings.add("relinkEstablishedCities")
+            }
+          }
+        }
+
+        settings.regions = data.regions
+
+        this.sendStateUpdate({ settings })
+
+        await this.writeSettings(context, settings)
+
+        return true
+      },
+      pool: "main",
     })
   }
 

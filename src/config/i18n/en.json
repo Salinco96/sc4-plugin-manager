@@ -635,6 +635,16 @@
     "noEstablishedCities": "There are no established cities in this region.",
     "showEstablishedOnly": "Show only established cities"
   },
+  "RelinkEstablishedCitiesModal": {
+    "cancel": "$t(General:cancel)",
+    "confirm": "Relink",
+    "confirmation_one": "Relink established city?",
+    "confirmation_other": "Relink established cities?",
+    "description_one": "The following established city will be linked to a new profile:\n{{cities, join(multiline: true)}}\n\nPlease first ensure that the new profile contains all necessary dependencies, or bulldoze any incompatible lots.",
+    "description_other": "The following established cities will be linked to a new profile:\n{{cities, join(multiline: true)}}\n\nPlease first ensure that the new profile contains all necessary dependencies, or bulldoze any incompatible lots.",
+    "title_one": "{{city}}",
+    "title_other": "$t(General:app)"
+  },
   "RemoveConflictingFilesModal": {
     "confirmation": "Remove conflicting files?",
     "description": "The following external files are conflicting with this plugin:\n{{files, join(multiline: true)}}\n\nDo you want to remove these files? Backups will be created in {{pluginsBackup}}."
