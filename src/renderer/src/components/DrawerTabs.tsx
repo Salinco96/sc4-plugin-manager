@@ -1,6 +1,11 @@
-import { ExpandLess as CollapseIcon, ExpandMore as ExpandIcon } from "@mui/icons-material"
+import {
+  ExpandLess as CollapseIcon,
+  Error as ErrorIcon,
+  ExpandMore as ExpandIcon,
+} from "@mui/icons-material"
 import {
   Badge,
+  Box,
   Divider,
   IconButton,
   List,
@@ -17,6 +22,11 @@ import { Fragment, useCallback, useMemo, useState } from "react"
 import { Page, useHistory, useLocation } from "@utils/navigation"
 import { useStore, useStoreActions } from "@utils/store"
 import { type TabInfo, tabs } from "@utils/tabs"
+import { FlexRow } from "./FlexBox"
+
+const BadgeIcons = {
+  error: ErrorIcon,
+}
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
   const actions = useStoreActions()
@@ -35,19 +45,36 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
     [actions, history, isActive],
   )
 
+  const BadgeIcon = badge?.icon && BadgeIcons[badge.icon]
+
+  const tooltip = (BadgeIcon && badge.label) ?? tab.tooltip
+
   const button = (
     <ListItemButton onClick={() => setActiveTab(tab)} selected={isActive}>
       <ListItemIcon sx={{ minWidth: 0, marginRight: 2 }}>{tab.icon}</ListItemIcon>
       <ListItemText primary={tab.label} />
-      {badge && (
-        <Badge badgeContent={badge.label} color={badge.color} max={9999} sx={{ marginRight: 1 }} />
+      {badge && !BadgeIcon && (
+        <Badge badgeContent={badge.label} color={badge.color} max={9999} sx={{ mr: 1 }} />
+      )}
+      {BadgeIcon && (
+        <Box component="span" position="relative" mr={1}>
+          <FlexRow
+            centered
+            position="absolute"
+            right={0}
+            top={0}
+            sx={{ transform: "translate(50%, -50%)", transformOrigin: "100% 0%" }}
+          >
+            <BadgeIcon color={badge.color} />
+          </FlexRow>
+        </Box>
       )}
     </ListItemButton>
   )
 
-  if (tab.tooltip) {
+  if (tooltip) {
     return (
-      <Tooltip arrow placement="right" title={tab.tooltip}>
+      <Tooltip arrow placement="right" title={tooltip}>
         {button}
       </Tooltip>
     )

@@ -139,7 +139,7 @@ export function ActionButton<VariantID extends string>({
           onChange={event => setVariant?.(event.target.value as VariantID)}
           required
           size="small"
-          value={variant}
+          value={variant ?? ""}
           variant="outlined"
         >
           {filteredVariants.map(({ description, disabled, icon: IconComponent, id, label }) => (

@@ -25,13 +25,20 @@ import { size, values } from "@salinco/nice-utils"
 
 import { CategoryID } from "@common/categories"
 import { getPackageStatus, isError } from "@common/packages"
+import { getRegionLinkedProfileId } from "@common/regions"
 import { VariantState } from "@common/types"
 import { type Location, Page } from "@utils/navigation"
 import { filterVariant, getCurrentVariant } from "@utils/packages"
 import { type PackageFilters, type Store, getCurrentProfile } from "@utils/store"
 
+export interface BadgeInfo {
+  color?: "error" | "info" | "warning"
+  icon?: "error"
+  label: number | string
+}
+
 export interface TabInfo {
-  badge?: (store: Store) => { color?: "error" | "info"; label: number | "new" } | undefined
+  badge?: (store: Store) => BadgeInfo | undefined
   collapse?: boolean
   group?: string
   icon?: JSX.Element
@@ -112,6 +119,16 @@ export const tabs: TabInfo[] = [
   {
     badge(store) {
       const regions = store.regions && values(store.regions)
+
+      if (
+        store.profiles &&
+        size(store.profiles) > 1 &&
+        regions?.some(
+          region => !getRegionLinkedProfileId(region.id, store.settings, store.profiles),
+        )
+      ) {
+        return { color: "warning", icon: "error", label: "Some regions have no linked profile" }
+      }
 
       if (regions?.length) {
         return { label: regions.length }

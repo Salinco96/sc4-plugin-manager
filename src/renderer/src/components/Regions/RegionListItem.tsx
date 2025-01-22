@@ -1,10 +1,11 @@
+import { size } from "@salinco/nice-utils"
 import { memo } from "react"
 
 import { type RegionID, getRegionLinkedProfileId } from "@common/regions"
 import { ListItem } from "@components/ListItem"
-
 import { PackageBanner } from "@components/PackageBanners/PackageBanner"
 import { useSettings, useStore } from "@utils/store"
+
 import { RegionHeader } from "./RegionHeader"
 
 export const RegionListItem = memo(function CollectionListItem(props: {
@@ -17,7 +18,11 @@ export const RegionListItem = memo(function CollectionListItem(props: {
 
   return (
     <ListItem
-      banners={!regionProfileId && <PackageBanner>No linked profile</PackageBanner>}
+      banners={
+        !!profiles &&
+        size(profiles) > 1 &&
+        !regionProfileId && <PackageBanner>No linked profile</PackageBanner>
+      }
       header={RegionHeader}
       {...props}
     />

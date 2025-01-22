@@ -1,3 +1,4 @@
+import { size } from "@salinco/nice-utils"
 import { memo } from "react"
 
 import {
@@ -7,9 +8,9 @@ import {
   getRegionLinkedProfileId,
 } from "@common/regions"
 import { ListItem } from "@components/ListItem"
+import { PackageBanner } from "@components/PackageBanners/PackageBanner"
 import { useSettings, useStore } from "@utils/store"
 
-import { PackageBanner } from "@components/PackageBanners/PackageBanner"
 import { CityHeader } from "./CityHeader"
 
 export const CityListItem = memo(function CollectionListItem(props: {
@@ -25,7 +26,10 @@ export const CityListItem = memo(function CollectionListItem(props: {
   return (
     <ListItem
       banners={
-        !regionProfileId && !cityProfileId && <PackageBanner>No linked profile</PackageBanner>
+        !!profiles &&
+        size(profiles) > 1 &&
+        !regionProfileId &&
+        !cityProfileId && <PackageBanner>No linked profile</PackageBanner>
       }
       header={CityHeader}
       {...props}
