@@ -19836,19 +19836,315 @@ assets:
     authors:
       - Ct1999
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"62765c9b8dcb3__15.jpg.fbe1eed4b1c549148704683050f1405f.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"85987\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_05/62765c9b8dcb3__15.jpg.fbe1eed4b1c549148704683050f1405f.jpg\" >\n</p>\n\n<p>\n\tZhenHai Tower (Chinese：镇海楼) Located in the Yuexiu Park in Guangzhou\_<br>\n\tCity (Canton),ZhenHai Tower\_ is a comprehensive history museum with\_<br>\n\tlocal characteristics. Established in 1929, it is a place used for collection and\_<br>\n\texhibition of historical data and cultural relics of the city. It has two major\_<br>\n\texhibition areas – the Zhenhai Tower housing the historical relics and the\_<br>\n\tArt Gallery showing many exquisite local craftworks.\n</p>\n\n<p>\n\tA Little History:\n</p>\n\n<p>\n\tIn 1380.\_ \_Zhenhai Tower (Sea Guard Tower)\_is 28 meters (92 feet) high and 31 meters (102 feet) wide.\n</p>\n\n<p>\n\tIt has been destroyed\_and rebuilt five times and was changed from a wooden structure to reinforced\_<br>\n\tconcrete in 1928. The reddish-brown bricks and grey tiles made the building\_<br>\n\tprimitively simple and unique. At the front of the building, there is a pair of\_<br>\n\ttwo-meter-high stone lions in red sandstone made in the Ming Dynasty\_<br>\n\t(1368-1644).\n</p>\n\n<p>\n\tThe tower houses nearly a thousand pictures, data and other exhibits on\_<br>\n\thistory of the city's history. Those collections display the changes of culture,\_<br>\n\tcustom and city developments. Walking into it, you can see a geographical\_<br>\n\tmodel and a diagram of the ancient Guangzhou city at the first floor. On\_<br>\n\tthe second floor, there are historical relics (4000 BC - 589 AD) and unearthed\_<br>\n\tremains of the Neolithic Age. When you come to the third floor, you can look\_<br>\n\taround the historical relics of Sui, Tang, Song, Yuan, Ming and Qing Dynasties.\_<br>\n\tThe fourth floor mainly exhibits plentiful historical relics of the Qing Dynasty\_<br>\n\t(1644 - 1911). Modern Chinese cultural relics since the Opium War (1840 - 1842)\_<br>\n\tare displayed on the fifth floor. Besides, there are also special showrooms at\_<br>\n\tthe east side of the tower where all kinds of temporary or memorable special\_<br>\n\texhibitions are often held. At the west side, there is a barbette with cannon\_<br>\n\ton it and 23 ancient stone tablets.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_3x2<br>\n\tPlop Cost : \_ \_ \_ \_ \_ \_ \_ 9000<br>\n\tBudget Cost: \_ \_ \_ \_ \_ \_350\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tDownload \"MaxisNite\" or \"DarkNite\"\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: (For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tThere is \"no\" Easter egg in this building.\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_4.jpg.415aa4b3d3db9d0f377deb8acadecaf1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_5.jpg.d69670492d930055dcde5f3eef5b7526.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_6.jpg.1e69b50bd93b378ccaa39e0b5dec1277.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_7.jpg.53d5f908e418732e7715208f414433ae.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_8.jpg.4c292fcd1edc29908c43f2521c5f751d.jpg
     lastModified: 2022-05-07T11:49:32.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: ZhenHai Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_05/ZhenHaiTower_4.thumb.jpg.7e246955329413acd9b067a12f9c5779.jpg
     url: https://community.simtropolis.com/files/file/35176-zhenhai-tower/
+    variants:
+      '194178':
+        buildings:
+          ZhenHaiTower(DN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot:
+            9faf82fb-af804d07:
+              bulldoze: 6000
+              categories: landmarks
+              cost: 9000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenHaiTower_(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 350
+              menu: Landmarks
+              model: 2f78584b
+              name: ZhenHaiTower_(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenHaiTower(DN)/ZhenHaiTower_(LM)-0x6534284a-0x9faf82fb-0x6f804b04.SC4Desc:
+            9faf82fb-6f804b04:
+              bulldoze: 6000
+              categories: landmarks
+              cost: 9000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenHaiTower_(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 350
+              menu: Landmarks
+              model: 2f78584b
+              name: ZhenHaiTower_(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: ZhenHaiTower(DN).zip
+        files:
+          - ZhenHaiTower(DN)/Do Not Delete!/ZhenHaiTower-0x5ad0e817_0x2f78584b_0x30000.SC4Model
+          - ZhenHaiTower(DN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot
+          - ZhenHaiTower(DN)/ZhenHaiTower_(LM)-0x6534284a-0x9faf82fb-0x6f804b04.SC4Desc
+          - ZhenHaiTower(DN)/_ReadMe.txt
+        lots:
+          ZhenHaiTower(DN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot:
+            af804d07:
+              building: af804d07
+              name: LM3x2_ZhenHaiTower
+              props: 2bd40000
+              size: 3x2
+              textures: '25901000'
+        models:
+          ZhenHaiTower(DN)/Do Not Delete!/ZhenHaiTower-0x5ad0e817_0x2f78584b_0x30000.SC4Model:
+            - 2f78584b
+        sha256: 41af43cb3755b56ffc599d5ada1916e37d06af369ea37d24bd7ca14f31ea770e
+        size: 698812
+        uncompressed: 821391
+      '194179':
+        buildings:
+          ZhenHaiTower(MN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot:
+            9faf82fb-af804d07:
+              bulldoze: 6000
+              categories: landmarks
+              cost: 9000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenHaiTower_(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 350
+              menu: Landmarks
+              model: 2f78584b
+              name: ZhenHaiTower_(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenHaiTower(MN)/ZhenHaiTower_(LM)-0x6534284a-0x9faf82fb-0x6f804b04.SC4Desc:
+            9faf82fb-6f804b04:
+              bulldoze: 6000
+              categories: landmarks
+              cost: 9000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenHaiTower_(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 350
+              menu: Landmarks
+              model: 2f78584b
+              name: ZhenHaiTower_(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: ZhenHaiTower(MN).zip
+        files:
+          - ZhenHaiTower(MN)/Do Not Delete!/ZhenHaiTower-0x5ad0e817_0x2f78584b_0x30000.SC4Model
+          - ZhenHaiTower(MN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot
+          - ZhenHaiTower(MN)/ZhenHaiTower_(LM)-0x6534284a-0x9faf82fb-0x6f804b04.SC4Desc
+          - ZhenHaiTower(MN)/_ReadMe.txt
+        lots:
+          ZhenHaiTower(MN)/LM3x2_ZhenHaiTower_af804d07.SC4Lot:
+            af804d07:
+              building: af804d07
+              name: LM3x2_ZhenHaiTower
+              props: 2bd40000
+              size: 3x2
+              textures: '25901000'
+        models:
+          ZhenHaiTower(MN)/Do Not Delete!/ZhenHaiTower-0x5ad0e817_0x2f78584b_0x30000.SC4Model:
+            - 2f78584b
+        sha256: e51a8d33592bb0e0e5ee5f022468aa02da9e38fc3a411ba43b0a97f6da8f4031
+        size: 759616
+        uncompressed: 886527
+    version: 1.0.0
   simtropolis/35182:
     assetId: simtropolis/35182-flowery-pagoda
     authors:
       - Ct1999
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"627e422155b16__16.jpg.1bb7e21a13ac34edeb50d1d900f1be9f.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"86264\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_05/627e422155b16__16.jpg.1bb7e21a13ac34edeb50d1d900f1be9f.jpg\" >\n</p>\n\n<p>\n\tFlowery Pagoda ( Chinese:花塔 ) is inside The Temple of the Six Banyan Trees or Liurong Temple\_<br>\n\t( Chinese: 六榕寺 )，which is a Buddhist temple in Guangzhou, China, originally built in AD 537.\n</p>\n\n<p>\n\tHistory about The Temple of the Six Banyan Trees or Liurong Temple:\n</p>\n\n<p>\n\tThe Baozhuangyan Temple was first constructed by the monk Tanyu under orders from Emperor\_<br>\n\tWu of the Liang in AD 537. It was constructed to house the relics of Cambodian Buddhist saints\_<br>\n\twhich had been brought to Panyu (modern Guangzhou).\n</p>\n\n<p>\n\tThe temple was burned down and rebuilt during the Northern Song dynasty. Around the same\_<br>\n\ttime, Su Shi composed a poem \"Six Banyans\" (Liu Rong) in honor of a visit to the temple. It was\_<br>\n\tsince renamed in honor of the famous poem.\n</p>\n\n<p>\n\tFlower Pagoda, the main structure of the temple, was built in 1097 and was named for its colorful\_<br>\n\texterior. The Flower Pagoda once had a square base in its architecture, but was given an octagonal\_<br>\n\tshaped base after it was rebuilt in 1097. It was rebuilt again in 1373 after another fire in the early\_<br>\n\tMing dynasty period and restored in 1900.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_2x2<br>\n\tPlop Cost : \_ \_ \_ \_ \_ \_ \_ 3000<br>\n\tBudget Cost: \_ \_ \_ \_ \_ \_249\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tDownload \"MaxisNite\" or \"DarkNite\"\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: (For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_1.jpg.2f18872b3a384572f75afcc3dded86c2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_2.jpg.72195e41709cc4756adcf8082386359d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_3.jpg.ae82efa879a6e41ecf91c43e02f889ec.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_4.jpg.d5f409a9e522adb19eb5cdedf30e3198.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_8.jpg.94ca2b396cd786343acd6529ae32565c.jpg
     lastModified: 2022-05-13T11:34:39.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Flowery Pagoda
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_05/FloweryPagoda_1.thumb.jpg.086958f27d1f9f34bd308a6786187f4b.jpg
     url: https://community.simtropolis.com/files/file/35182-flowery-pagoda/
+    variants:
+      '194215':
+        buildings:
+          FloweryPagoda(DN)/FloweryPagoda-0x6534284a-0x9faf82fb-0x8f8689e9.SC4Desc:
+            9faf82fb-8f8689e9:
+              bulldoze: 1000
+              categories: landmarks
+              cost: 3000
+              description: A mythical Eye-Candy
+              flamability: 10
+              garbage: 15
+              label: FloweryPagoda
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 249
+              menu: Landmarks
+              model: 8f7e8dc5
+              name: FloweryPagoda
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          FloweryPagoda(DN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot:
+            9faf82fb-ef868b62:
+              bulldoze: 1000
+              categories: landmarks
+              cost: 3000
+              description: A mythical Eye-Candy
+              flamability: 10
+              garbage: 15
+              label: FloweryPagoda
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 249
+              menu: Landmarks
+              model: 8f7e8dc5
+              name: FloweryPagoda
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: FloweryPagoda(DN).zip
+        files:
+          - FloweryPagoda(DN)/FloweryPagoda-0x5ad0e817_0x8f7e8dc5_0x30000.SC4Model
+          - FloweryPagoda(DN)/FloweryPagoda-0x6534284a-0x9faf82fb-0x8f8689e9.SC4Desc
+          - FloweryPagoda(DN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot
+          - FloweryPagoda(DN)/ReadMe.txt
+        lots:
+          FloweryPagoda(DN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot:
+            ef868b62:
+              building: ef868b62
+              name: LM2x2_FloweryPagoda
+              props: 2bd40000
+              size: 2x2
+              textures: '25901000'
+        models:
+          FloweryPagoda(DN)/FloweryPagoda-0x5ad0e817_0x8f7e8dc5_0x30000.SC4Model:
+            - 8f7e8dc5
+        sha256: 50bc36b6e4269693129d88071039e9abd1c71e8936efb9c99462a1c71c5171d0
+        size: 863242
+        uncompressed: 1032741
+      '194216':
+        buildings:
+          FloweryPagoda(MN)/FloweryPagoda-0x6534284a-0x9faf82fb-0x8f8689e9.SC4Desc:
+            9faf82fb-8f8689e9:
+              bulldoze: 1000
+              categories: landmarks
+              cost: 3000
+              description: A mythical Eye-Candy
+              flamability: 10
+              garbage: 15
+              label: FloweryPagoda
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 249
+              menu: Landmarks
+              model: 8f7e8dc5
+              name: FloweryPagoda
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          FloweryPagoda(MN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot:
+            9faf82fb-ef868b62:
+              bulldoze: 1000
+              categories: landmarks
+              cost: 3000
+              description: A mythical Eye-Candy
+              flamability: 10
+              garbage: 15
+              label: FloweryPagoda
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 249
+              menu: Landmarks
+              model: 8f7e8dc5
+              name: FloweryPagoda
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: FloweryPagoda(MN).zip
+        files:
+          - FloweryPagoda(MN)/FloweryPagoda-0x5ad0e817_0x8f7e8dc5_0x30000.SC4Model
+          - FloweryPagoda(MN)/FloweryPagoda-0x6534284a-0x9faf82fb-0x8f8689e9.SC4Desc
+          - FloweryPagoda(MN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot
+          - FloweryPagoda(MN)/ReadMe.txt
+        lots:
+          FloweryPagoda(MN)/LM2x2_FloweryPagoda_ef868b62.SC4Lot:
+            ef868b62:
+              building: ef868b62
+              name: LM2x2_FloweryPagoda
+              props: 2bd40000
+              size: 2x2
+              textures: '25901000'
+        models:
+          FloweryPagoda(MN)/FloweryPagoda-0x5ad0e817_0x8f7e8dc5_0x30000.SC4Model:
+            - 8f7e8dc5
+        sha256: 47bb565f7d2d1f6b54f416bce916db6c76b4bb4dbc3abc93ed0e41d2d0632c07
+        size: 959166
+        uncompressed: 1135123
+    version: 1.0.0
   simtropolis/35202:
     assetId: simtropolis/35202-the-chatelmay-haus
     authors:
@@ -20071,10 +20367,225 @@ assets:
     authors:
       - Ct1999
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"CathedralOfStVictor_30.jpg.36c7cafb74c221a3dffcd0f8a5ab2bbf.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"91826\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_12/CathedralOfStVictor_30.jpg.36c7cafb74c221a3dffcd0f8a5ab2bbf.jpg\" >\n</p>\n\n<p>\n\t<strong>Cathedral of St. Victor</strong> (Chinese: <strong>维多尔天主教堂</strong> Also known as “<strong>霞山天主教堂</strong>”), is a delicate small church located\_in Zhanjiang(湛江) Xiashan district (霞山区).\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 2x4<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_ 8500<br>\n\tBudget Item Cost: \_ \_ \_ \_ \_150\n</p>\n\n<p>\n\t--------------------------------------------------------<br>\n\t--------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tThere are two available versions for you, which is \" HD \" and \" SD (MN)/(DN) \" versions\n</p>\n\n<p>\n\t<br>\n\tHD : For \" DarkNite \" Only.\n</p>\n\n<p>\n\tSD : For \" DarkNite \" and \" MaxisNite \".\n</p>\n\n<p>\n\t<br>\n\tBoth versions does not compatible with each other ( Two files with different <abbr title=\"Type, Group, Instance\">TGI</abbr> ).\_\n</p>\n\n<p>\n\tIf you want to Switch \"MaxisNite\" and \"DarkNite\" without bullzone the building, Choose SD version.\n</p>\n\n<p>\n\tOr......\n</p>\n\n<p>\n\tIf you just want a delicate building ( DarkNite only ), Choose HD version\n</p>\n\n<p>\n\t--------------------------------------------------------<br>\n\t--------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tMay the god be with us.<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_6.jpg.2fecb1c167fe2f963c0eb487da9eccb2.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_7.jpg.087492857ec8171b28d58001107ef932.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_8.jpg.04cf3e6522191570e39a56baf433a97c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_4.jpg.1b4416b76b3d435caa917f34e99c415e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_5.jpg.2d42aa480500f9d21d75474e2a315b69.jpg
     lastModified: 2022-12-30T02:58:14.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Cathedral of St. Victor
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/CathedralOfStVictor_6.thumb.jpg.814c3b6db307b5e8936e91fc17a3d9f4.jpg
     url: https://community.simtropolis.com/files/file/35375-cathedral-of-st-victor/
+    variants:
+      '195930':
+        buildings:
+          CathedralOfStVictor_HD(DN)/CathedralOfStVictor_HD_LM-0x6534284a-0x9faf82fb-0x2fd61cb8.SC4Desc:
+            9faf82fb-2fd61cb8:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_HD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: cfce28f4
+              name: CathedralOfStVictor_HD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CathedralOfStVictor_HD(DN)/LM2x4_CarhedralOfStVictor(HD)_afd61f86.SC4Lot:
+            9faf82fb-afd61f86:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_HD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: cfce28f4
+              name: CathedralOfStVictor_HD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CathedralOfStVictor_HD(DN).zip
+        files:
+          - CathedralOfStVictor_HD(DN)/CathedralOfStVictor_HD-0x5ad0e817_0xcfce28f4_0x30000.SC4Model
+          - CathedralOfStVictor_HD(DN)/CathedralOfStVictor_HD_LM-0x6534284a-0x9faf82fb-0x2fd61cb8.SC4Desc
+          - CathedralOfStVictor_HD(DN)/LM2x4_CarhedralOfStVictor(HD)_afd61f86.SC4Lot
+          - CathedralOfStVictor_HD(DN)/ReadMe.txt
+        lots:
+          CathedralOfStVictor_HD(DN)/LM2x4_CarhedralOfStVictor(HD)_afd61f86.SC4Lot:
+            afd61f86:
+              building: afd61f86
+              name: LM2x4_CarhedralOfStVictor(HD)
+              props: 2ab60000,2ab70000,2afb0000,2b180000,a000004d,a0000077,a0000078
+              size: 2x4
+              textures: 25bf1000,25c11000,25d60000
+        models:
+          CathedralOfStVictor_HD(DN)/CathedralOfStVictor_HD-0x5ad0e817_0xcfce28f4_0x30000.SC4Model:
+            - cfce28f4
+        sha256: ebdc59e1b2886ed39e7dc3d60335ac38a5b8fe9c5d2b227ffa11c7c2d8d3c3c3
+        size: 1659756
+        uncompressed: 1945150
+      '195931':
+        buildings:
+          CathedralOfStVictor_SD(DN)/CathedralOfStVictor_SD_LM-0x6534284a-0x9faf82fb-0xafd61d04.SC4Desc:
+            9faf82fb-afd61d04:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_SD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8fce290b
+              name: CathedralOfStVictor_SD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CathedralOfStVictor_SD(DN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot:
+            9faf82fb-6fd61f96:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_SD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8fce290b
+              name: CathedralOfStVictor_SD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CathedralOfStVictor_SD(DN).zip
+        files:
+          - CathedralOfStVictor_SD(DN)/CathedralOfStVictor_SD-0x5ad0e817_0x8fce290b_0x30000.SC4Model
+          - CathedralOfStVictor_SD(DN)/CathedralOfStVictor_SD_LM-0x6534284a-0x9faf82fb-0xafd61d04.SC4Desc
+          - CathedralOfStVictor_SD(DN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot
+          - CathedralOfStVictor_SD(DN)/ReadMe.txt
+        lots:
+          CathedralOfStVictor_SD(DN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot:
+            6fd61f96:
+              building: 6fd61f96
+              name: LM2x4_CarhedralOfStVictor(SD)
+              props: 2ab60000,2ab70000,2afb0000,2b180000,a000004d,a0000077,a0000078
+              size: 2x4
+              textures: 25bf1000,25c11000,25d60000
+        models:
+          CathedralOfStVictor_SD(DN)/CathedralOfStVictor_SD-0x5ad0e817_0x8fce290b_0x30000.SC4Model:
+            - 8fce290b
+        sha256: c4d340abdf24ec6a4d10c79ea93d01bd5e587d22e1689208ca20ab6e3dc3dd5e
+        size: 629625
+        uncompressed: 745746
+      '195932':
+        buildings:
+          CathedralOfStVictor_SD(MN)/CathedralOfStVictor_SD_LM-0x6534284a-0x9faf82fb-0xafd61d04.SC4Desc:
+            9faf82fb-afd61d04:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_SD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8fce290b
+              name: CathedralOfStVictor_SD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CathedralOfStVictor_SD(MN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot:
+            9faf82fb-6fd61f96:
+              bulldoze: 100
+              categories: landmarks
+              cost: 8500
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CathedralOfStVictor_SD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8fce290b
+              name: CathedralOfStVictor_SD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CathedralOfStVictor_SD(MN).zip
+        files:
+          - CathedralOfStVictor_SD(MN)/CathedralOfStVictor_SD-0x5ad0e817_0x8fce290b_0x30000.SC4Model
+          - CathedralOfStVictor_SD(MN)/CathedralOfStVictor_SD_LM-0x6534284a-0x9faf82fb-0xafd61d04.SC4Desc
+          - CathedralOfStVictor_SD(MN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot
+          - CathedralOfStVictor_SD(MN)/ReadMe.txt
+        lots:
+          CathedralOfStVictor_SD(MN)/LM2x4_CarhedralOfStVictor(SD)_6fd61f96.SC4Lot:
+            6fd61f96:
+              building: 6fd61f96
+              name: LM2x4_CarhedralOfStVictor(SD)
+              props: 2ab60000,2ab70000,2afb0000,2b180000,a000004d,a0000077,a0000078
+              size: 2x4
+              textures: 25bf1000,25c11000,25d60000
+        models:
+          CathedralOfStVictor_SD(MN)/CathedralOfStVictor_SD-0x5ad0e817_0x8fce290b_0x30000.SC4Model:
+            - 8fce290b
+        sha256: b870165db8bc07857462320ae7b6b1c3d5b1bd9393e32c96f1f077d1b9316542
+        size: 705651
+        uncompressed: 829318
+    version: 1.0.0
   simtropolis/354:
     assetId: simtropolis/354-fire-training-house
     authors:
@@ -20098,19 +20609,570 @@ assets:
     authors:
       - Ct1999
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"92715\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_02/KwangTungPostOffice_17.jpg.06911ce9d69da536fdd8e739d29dadd6.jpg\" alt=\"KwangTungPostOffice_17.jpg.06911ce9d69da536fdd8e739d29dadd6.jpg\" >\n</p>\n\n<p>\n\t<strong>Kwang Tung Post Office </strong>(Chinese: 广东省邮务管理局 \_Today: 广州邮政博览馆)\_<br>\n\tis Neoclassical Style building located in Guangzhou (广州) Yuexiou district\_<br>\n\t(越秀区), Constructed in 1916.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS LM ：\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 5x4\n</p>\n\n<p>\n\t<br>\n\tSTATS Civic (Museum) :\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 5x4\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tThere are two available versions for you, which is \" HD \" and \" SD (MN)/(DN) \" versions\n</p>\n\n<p>\n\t<br>\n\tHD : For \" DarkNite \" Only.\n</p>\n\n<p>\n\tSD : For \" DarkNite \" and \" MaxisNite \".\n</p>\n\n<p>\n\t<br>\n\tBoth versions does not compatible each other ( Two files with different <abbr title=\"Type, Group, Instance\">TGI</abbr> ).\_\n</p>\n\n<p>\n\tIf you want to Switch \"MaxisNite\" and \"DarkNite\" without bullzone the building, Choose SD version.\n</p>\n\n<p>\n\tOr......\n</p>\n\n<p>\n\tIf you just want a delicate building ( DarkNite only ), Choose HD version\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tThis building collected all the stamps around the region.<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_9.jpg.8f7b24a84221fd1753157727e644545d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_5.jpg.3fac571a1048a4817842424e26eb1bbe.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_6.jpg.5505e4939bf9831dcb05d364a30bae1d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_7.jpg.47c24200f48260ad39c9f15a93b84aa9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_8.jpg.09d535f309def60560c562e183ab2649.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_4.jpg.ffa773ac9c5694691dd5ddb05747517c.jpg
     lastModified: 2023-02-11T11:27:24.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: KwangTung Post Office
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_02/KwangTungPostOffice_9.thumb.jpg.c75a2ded9a8941a1ebad4f7ca04ab091.jpg
     url: https://community.simtropolis.com/files/file/35462-kwangtung-post-office/
+    variants:
+      '196513':
+        buildings:
+          KwangTungPostOffice_HD(DN)/CV5x4_KwangTungPostMuseum_(HD)_90044f45.SC4Lot:
+            9faf82fb-90044f45:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_HD(MU)
+              maintenance: 750
+              menu: Education
+              model: 2ffc39ea
+              name: KwangTungPostOffice_HD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD(LM)-0x6534284a-0x9faf82fb-0x9004449f.SC4Desc:
+            9faf82fb-9004449f:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_HD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 2ffc39ea
+              name: KwangTungPostOffice_HD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD(MU)-0x6534284a-0x9faf82fb-0x300445b4.SC4Desc:
+            9faf82fb-300445b4:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_HD(MU)
+              maintenance: 750
+              menu: Education
+              model: 2ffc39ea
+              name: KwangTungPostOffice_HD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_HD(DN)/LM5x4_KwangTungPostOffice_HD(LM)_500448e6.SC4Lot:
+            9faf82fb-500448e6:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_HD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 2ffc39ea
+              name: KwangTungPostOffice_HD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: KwangTungPostOffice_HD(DN).zip
+        files:
+          - KwangTungPostOffice_HD(DN)/CV5x4_KwangTungPostMuseum_(HD)_90044f45.SC4Lot
+          - KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD(LM)-0x6534284a-0x9faf82fb-0x9004449f.SC4Desc
+          - KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD(MU)-0x6534284a-0x9faf82fb-0x300445b4.SC4Desc
+          - KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD-0x5ad0e817_0x2ffc39ea_0x30000.SC4Model
+          - KwangTungPostOffice_HD(DN)/LM5x4_KwangTungPostOffice_HD(LM)_500448e6.SC4Lot
+          - KwangTungPostOffice_HD(DN)/ReadMe.txt
+        lots:
+          KwangTungPostOffice_HD(DN)/CV5x4_KwangTungPostMuseum_(HD)_90044f45.SC4Lot:
+            90044f45:
+              building: 90044f45
+              name: CV5x4_KwangTungPostMuseum_(HD)
+              props: 1dfb0000,1dfc0000,1dfe0000,1e0d0000,1e180000,29020000,29210000,29e10000,a000003d,a000004a,a000004b,a000004d,a0000050,a0000051,a0000055,a000007c
+              size: 4x5
+              textures: 258f2000,25a32000,25a42000,25a52000,25a72000,25d60000
+          KwangTungPostOffice_HD(DN)/LM5x4_KwangTungPostOffice_HD(LM)_500448e6.SC4Lot:
+            '500448e6':
+              building: '500448e6'
+              name: LM5x4_KwangTungPostOffice_HD(LM)
+              props: 1dfe0000,1e8a0000,1ef80000,28150000,28330000,28430000,284b0000,28840000,2a6b0000,2aaa0000,2aaf0000,2ab40000
+              size: 4x5
+              textures: 258f2000,25943000,25a32000,25a42000,25a72000,25d60000
+        models:
+          KwangTungPostOffice_HD(DN)/KwangTungPostOffice_HD-0x5ad0e817_0x2ffc39ea_0x30000.SC4Model:
+            - 2ffc39ea
+        sha256: e88d3dcfb06144a769ac268e8055fb1c506d12508ffd6c2746575c3d402259a5
+        size: 3916347
+        uncompressed: 4576556
+      '196514':
+        buildings:
+          KwangTungPostOffice_SD(DN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot:
+            9faf82fb-50044f54:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_SD(MU)
+              maintenance: 700
+              menu: Education
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD(LM)-0x6534284a-0x9faf82fb-0x3004444f.SC4Desc:
+            9faf82fb-3004444f:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_SD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD(MU)-0x6534284a-0x9faf82fb-0xf00444db.SC4Desc:
+            9faf82fb-f00444db:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_SD(MU)
+              maintenance: 700
+              menu: Education
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_SD(DN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot:
+            9faf82fb-f0044d37:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_SD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: KwangTungPostOffice_SD(DN).zip
+        files:
+          - KwangTungPostOffice_SD(DN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot
+          - KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD(LM)-0x6534284a-0x9faf82fb-0x3004444f.SC4Desc
+          - KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD(MU)-0x6534284a-0x9faf82fb-0xf00444db.SC4Desc
+          - KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD-0x5ad0e817_0x4ffc3a0d_0x30000.SC4Model
+          - KwangTungPostOffice_SD(DN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot
+          - KwangTungPostOffice_SD(DN)/ReadMe.txt
+        lots:
+          KwangTungPostOffice_SD(DN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot:
+            50044f54:
+              building: 50044f54
+              name: CV5x4_KwangTungPostMuseum_(SD)
+              props: 1dfb0000,1dfc0000,1dfe0000,1e0d0000,1e180000,29020000,29210000,29e10000,a000003d,a000004a,a000004b,a000004d,a0000050,a0000051,a0000055,a000007c
+              size: 4x5
+              textures: 258f2000,25a32000,25a42000,25a52000,25a72000,25d60000
+          KwangTungPostOffice_SD(DN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot:
+            f0044d37:
+              building: f0044d37
+              name: LM5x4_KwangTungPostOffice_SD(LM)
+              props: 1dfe0000,1e8a0000,1ef80000,28150000,28330000,28430000,284b0000,28840000,2a6b0000,2aaa0000,2aaf0000,2ab40000
+              size: 4x5
+              textures: 258f2000,25943000,25a32000,25a42000,25a72000,25d60000
+        models:
+          KwangTungPostOffice_SD(DN)/KwangTungPostOffice_SD-0x5ad0e817_0x4ffc3a0d_0x30000.SC4Model:
+            - 4ffc3a0d
+        sha256: c4022b698eaba8b21bc4ca67faed9d49c37c9d66510d4878c3cb67d612587721
+        size: 1426496
+        uncompressed: 1680203
+      '196515':
+        buildings:
+          KwangTungPostOffice_SD(MN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot:
+            9faf82fb-50044f54:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_SD(MU)
+              maintenance: 700
+              menu: Education
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD(LM)-0x6534284a-0x9faf82fb-0x3004444f.SC4Desc:
+            9faf82fb-3004444f:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_SD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD(MU)-0x6534284a-0x9faf82fb-0xf00444db.SC4Desc:
+            9faf82fb-f00444db:
+              bulldoze: 9000
+              categories: education
+              cost: 8000
+              description: The museum collected the stamp from all around the region.
+              flamability: 10
+              jobs:
+                $: 90
+                $$: 10
+              label: KwangTungPostOffice_SD(MU)
+              maintenance: 700
+              menu: Education
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(MU)
+              submenu: Education/Libraries
+          KwangTungPostOffice_SD(MN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot:
+            9faf82fb-f0044d37:
+              bulldoze: 9000
+              categories: landmarks
+              cost: 8000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: KwangTungPostOffice_SD(LM)
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 560
+              menu: Landmarks
+              model: 4ffc3a0d
+              name: KwangTungPostOffice_SD(LM)
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: KwangTungPostOffice_SD(MN).zip
+        files:
+          - KwangTungPostOffice_SD(MN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot
+          - KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD(LM)-0x6534284a-0x9faf82fb-0x3004444f.SC4Desc
+          - KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD(MU)-0x6534284a-0x9faf82fb-0xf00444db.SC4Desc
+          - KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD-0x5ad0e817_0x4ffc3a0d_0x30000.SC4Model
+          - KwangTungPostOffice_SD(MN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot
+          - KwangTungPostOffice_SD(MN)/ReadMe.txt
+        lots:
+          KwangTungPostOffice_SD(MN)/CV5x4_KwangTungPostMuseum_(SD)_50044f54.SC4Lot:
+            50044f54:
+              building: 50044f54
+              name: CV5x4_KwangTungPostMuseum_(SD)
+              props: 1dfb0000,1dfc0000,1dfe0000,1e0d0000,1e180000,29020000,29210000,29e10000,a000003d,a000004a,a000004b,a000004d,a0000050,a0000051,a0000055,a000007c
+              size: 4x5
+              textures: 258f2000,25a32000,25a42000,25a52000,25a72000,25d60000
+          KwangTungPostOffice_SD(MN)/LM5x4_KwangTungPostOffice_SD(LM)_f0044d37.SC4Lot:
+            f0044d37:
+              building: f0044d37
+              name: LM5x4_KwangTungPostOffice_SD(LM)
+              props: 1dfe0000,1e8a0000,1ef80000,28150000,28330000,28430000,284b0000,28840000,2a6b0000,2aaa0000,2aaf0000,2ab40000
+              size: 4x5
+              textures: 258f2000,25943000,25a32000,25a42000,25a72000,25d60000
+        models:
+          KwangTungPostOffice_SD(MN)/KwangTungPostOffice_SD-0x5ad0e817_0x4ffc3a0d_0x30000.SC4Model:
+            - 4ffc3a0d
+        sha256: feac6923fd6c907b0816102c3645fc9dfed430d613db15ab2b35fe3d4b791fa5
+        size: 1593571
+        uncompressed: 1864980
+    version: 1.0.0
   simtropolis/35472:
     assetId: simtropolis/35472-canton-tower
     authors:
       - Ct1999
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"720px-Canton_Tower_20220626_(cropped_2).jpg.8445e44f3822871b1d3f416440bdb587.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"93043\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_03/720px-Canton_Tower_20220626_(cropped_2).jpg.8445e44f3822871b1d3f416440bdb587.jpg\" >\n</p>\n\n<p>\n\tThe <strong>Canton Tower</strong> (Chinese: <strong>广州塔</strong>), formally <strong>Guangzhou TV Astronomical and Sightseeing Tower</strong>\n</p>\n\n<p>\n\t(Chinese: <strong>广州电视台天文及观光塔</strong>), is a 604-meter (1,982 ft)-tall multi-purpose observation tower\n</p>\n\n<p>\n\tin the <strong>Haizhu District</strong> (<strong>海珠区</strong>)\_<strong>Guangzhou\_</strong>(<strong>广州</strong>)\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tSTATS LM ：\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 5x5<br>\n\t(Alert: The maintenance budget is really expensive! )\n</p>\n\n<p>\n\t<br>\n\tSTATS LM (CS$$) :\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 5x5\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\tFor some reason, I accidentally support LGBT+ in SC4.<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_10.jpg.47437fe306ddf621d7777823b6481692.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_6.jpg.43955172fc25356203da41f6a888ca98.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_7.jpg.091ea5df8a580764ab7de84d2f7c6bbb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_8.jpg.f3aeb92248f71f4f93405589fe7359fe.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_9.jpg.ed026dd6891d2b915037141295d6ee8c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_5.jpg.1dfe51448a32918b70c6b217ff4d3ddf.jpg
     lastModified: 2023-03-15T14:18:59.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Canton Tower
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_03/CantonTower_10.thumb.jpg.332640a45efc310bb2c1cfcaff6d4419.jpg
     url: https://community.simtropolis.com/files/file/35472-canton-tower/
+    variants:
+      '196750':
+        buildings:
+          CantonTower(DN)/CantonTower_LM-0x6534284a-0x9faf82fb-0x7031d9fb.SC4Desc:
+            9faf82fb-7031d9fb:
+              bulldoze: 210000
+              categories: landmarks
+              cost: 310000
+              description: For Eye Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantonTower_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 2000
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantonTower(DN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot:
+            9faf82fb-7031d2d9:
+              bulldoze: 6539
+              capacity:
+                cs$: 7800
+                cs$$: 7800
+              categories: landmarks,cs$$
+              cost: 112208
+              description: This building was made by a Typing Monkey
+              flamability: 40
+              garbage: 218
+              label: CantonTower_LM(CS$$)
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM(CS$$)
+              pollution: 218
+              pollutionRadius: 5
+              power: 350
+              submenu: Commercial/CS$$
+              water: 4194
+              waterPollution: 109
+              waterPollutionRadius: 6
+              worth: 149798
+          CantonTower(DN)/LM5x5_CantonTower_5031da86.SC4Lot:
+            9faf82fb-5031da86:
+              bulldoze: 210000
+              categories: landmarks
+              cost: 310000
+              description: For Eye Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantonTower_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 2000
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantonTower(DN).zip
+        files:
+          - CantonTower(DN)/CantonTower-0x5ad0e817_0x10287d0b_0x30000.SC4Model
+          - CantonTower(DN)/CantonTower_LM(CS$$)-0x6534284a-0x9faf82fb-0xd0ab1aec._LooseDesc
+          - CantonTower(DN)/CantonTower_LM-0x6534284a-0x9faf82fb-0x7031d9fb.SC4Desc
+          - CantonTower(DN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot
+          - CantonTower(DN)/LM5x5_CantonTower_5031da86.SC4Lot
+          - CantonTower(DN)/ReadMe.txt
+        lots:
+          CantonTower(DN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot:
+            7031d2d9:
+              building: 7031d2d9
+              name: LM5x5_CantonTower(CS$$)
+              props: 2ab60000,2ab70000,2af60000,2afb0000
+              size: 5x5
+              textures: 26060000,26070000
+          CantonTower(DN)/LM5x5_CantonTower_5031da86.SC4Lot:
+            5031da86:
+              building: 5031da86
+              name: LM5x5_CantonTower
+              props: 2ab60000,2ab70000,2af60000,2afb0000
+              size: 5x5
+              textures: 26060000,26070000
+        models:
+          CantonTower(DN)/CantonTower-0x5ad0e817_0x10287d0b_0x30000.SC4Model:
+            - 10287d0b
+        sha256: 6101dc11a488e08e46557319306c7059a04b0d8b5331fbdecd63a551a1700854
+        size: 10154765
+        uncompressed: 11640437
+      '196751':
+        buildings:
+          CantonTower(MN)/CantonTower_LM-0x6534284a-0x9faf82fb-0x7031d9fb.SC4Desc:
+            9faf82fb-7031d9fb:
+              bulldoze: 210000
+              categories: landmarks
+              cost: 310000
+              description: For Eye Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantonTower_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 2000
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantonTower(MN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot:
+            9faf82fb-7031d2d9:
+              bulldoze: 6539
+              capacity:
+                cs$: 7800
+                cs$$: 7800
+              categories: landmarks,cs$$
+              cost: 112208
+              description: This building was made by a Typing Monkey
+              flamability: 40
+              garbage: 218
+              label: CantonTower_LM(CS$$)
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM(CS$$)
+              pollution: 218
+              pollutionRadius: 5
+              power: 350
+              submenu: Commercial/CS$$
+              water: 4194
+              waterPollution: 109
+              waterPollutionRadius: 6
+              worth: 149798
+          CantonTower(MN)/LM5x5_CantonTower_5031da86.SC4Lot:
+            9faf82fb-5031da86:
+              bulldoze: 210000
+              categories: landmarks
+              cost: 310000
+              description: For Eye Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantonTower_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 2000
+              menu: Landmarks
+              model: 10287d0b
+              name: CantonTower_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantonTower(MN).zip
+        files:
+          - CantonTower(MN)/CantonTower-0x5ad0e817_0x10287d0b_0x30000.SC4Model
+          - CantonTower(MN)/CantonTower_LM(CS$$)-0x6534284a-0x9faf82fb-0xd0ab1aec._LooseDesc
+          - CantonTower(MN)/CantonTower_LM-0x6534284a-0x9faf82fb-0x7031d9fb.SC4Desc
+          - CantonTower(MN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot
+          - CantonTower(MN)/LM5x5_CantonTower_5031da86.SC4Lot
+          - CantonTower(MN)/ReadMe.txt
+        lots:
+          CantonTower(MN)/LM5x5_CantonTower(CS$$)_7031d2d9.SC4Lot:
+            7031d2d9:
+              building: 7031d2d9
+              name: LM5x5_CantonTower(CS$$)
+              props: 2ab60000,2ab70000,2af60000,2afb0000
+              size: 5x5
+              textures: 26060000,26070000
+          CantonTower(MN)/LM5x5_CantonTower_5031da86.SC4Lot:
+            5031da86:
+              building: 5031da86
+              name: LM5x5_CantonTower
+              props: 2ab60000,2ab70000,2af60000,2afb0000
+              size: 5x5
+              textures: 26060000,26070000
+        models:
+          CantonTower(MN)/CantonTower-0x5ad0e817_0x10287d0b_0x30000.SC4Model:
+            - 10287d0b
+        sha256: 9e44e8f9d7cdf1ba289eae8d62a15e58caed3a51325e2cd5bade6e37a13b0983
+        size: 9322083
+        uncompressed: 10740427
+    version: 1.0.1
   simtropolis/3548:
     assetId: simtropolis/3548-st-paul-mn-landmark-center
     authors:
@@ -20226,11 +21288,79 @@ assets:
     assetId: simtropolis/35624-sunyatsen-memorial-hall-guangzhou
     authors:
       - Ct1999
+    buildings:
+      SunYatSenMemorialHall_GZ(DN)/CV/CV6x6_SunYatSenMemorialHall(GZ)_f06f0ae9.SC4Lot:
+        9faf82fb-f06f0ae9:
+          bulldoze: 9000
+          categories: education
+          cost: 15000
+          description: TianXiaWeiGong
+          flamability: 10
+          jobs:
+            $: 500
+            $$: 100
+            $$$: 50
+          label: SunYatSenMemorialHall_GZ_MU
+          maintenance: 900
+          menu: Education
+          model: 1065d309
+          name: SunYatSenMemorialHall_GZ_MU
+          submenu: Education/Libraries
+      SunYatSenMemorialHall_GZ(DN)/CV/SunYatSenMemorialHall_GZ_MU-0x6534284a-0x9faf82fb-0xb06f0963.SC4Desc:
+        9faf82fb-b06f0963:
+          bulldoze: 9000
+          categories: education
+          cost: 15000
+          description: TianXiaWeiGong
+          flamability: 10
+          jobs:
+            $: 500
+            $$: 100
+            $$$: 50
+          label: SunYatSenMemorialHall_GZ_MU
+          maintenance: 900
+          menu: Education
+          model: 1065d309
+          name: SunYatSenMemorialHall_GZ_MU
+          submenu: Education/Libraries
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"6506f94da8b02_SunYat-senMemorialHall_GZ_3.jpg.c4c6bbdc53bc0450dbf0ccc5fd266755.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"96498\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_09/6506f94da8b02_SunYat-senMemorialHall_GZ_3.jpg.c4c6bbdc53bc0450dbf0ccc5fd266755.jpg\" >\n</p>\n\n<p>\n\tSunYatSenMemorialHall_GZ ( Chinese :广州中山纪念堂) is a historical landmark<br>\n\tlocated in Guangzhou Yuexiou district. (广州市越秀区)\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tSTATS Museum\_:\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_6x6\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tOnly \"DarkNite\" version of the building are available\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tFor DarkNite\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: SunYatSenMemorialHall_GZ(DN).zip
+    files:
+      - SunYatSenMemorialHall_GZ(DN)/CV/CV6x6_SunYatSenMemorialHall(GZ)_f06f0ae9.SC4Lot
+      - SunYatSenMemorialHall_GZ(DN)/CV/SunYatSenMemorialHall_GZ_MU-0x6534284a-0x9faf82fb-0xb06f0963.SC4Desc
+      - SunYatSenMemorialHall_GZ(DN)/Readme.txt
+      - SunYatSenMemorialHall_GZ(DN)/SunYatSenMemorialHall_GZ-0x5ad0e817_0x1065d309_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_1(Day).jpg.9169b4852893ebb1e7d1197fd16961e3.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_2(DarkNite).jpg.77c9fb1ef6aa3a97568ffbe6e6400ca4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_4.jpg.36c92658f5246025dfee7c2c25f31144.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_5.jpg.d6b194ef62bb0b405e742329c766fd37.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_6.jpg.71efc7bb32999a7dfc71d68a867ef194.jpg
     lastModified: 2023-09-17T13:04:44.000Z
+    lots:
+      SunYatSenMemorialHall_GZ(DN)/CV/CV6x6_SunYatSenMemorialHall(GZ)_f06f0ae9.SC4Lot:
+        f06f0ae9:
+          building: f06f0ae9
+          name: CV6x6_SunYatSenMemorialHall(GZ)
+          size: 6x6
+          textures: 258f2000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      SunYatSenMemorialHall_GZ(DN)/SunYatSenMemorialHall_GZ-0x5ad0e817_0x1065d309_0x30000.SC4Model:
+        - 1065d309
     name: SunYatSen Memorial Hall Guangzhou
+    sha256: 8aeebeb077fc6ed1bf1cd7d1abb0310cea05030cde4527400b7ba9360a348e70
+    size: 3314955
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/SunYatSenMemorialHall_GZ_1(Day).thumb.jpg.92755c6480ab005794d69bc35e471623.jpg
+    uncompressed: 3833011
     url: https://community.simtropolis.com/files/file/35624-sunyatsen-memorial-hall-guangzhou/
+    version: 1.0.0
   simtropolis/35638:
     assetId: simtropolis/35638-agc-hms-devonshire-1942
     authors:
@@ -20798,20 +21928,142 @@ assets:
     assetId: simtropolis/36191-queshitang-church
     authors:
       - Ct1999
+    buildings:
+      QueShiTangChurch/RW(Custom)_3x3_QueShiTangChurch_70d5d24b.SC4Lot:
+        9faf82fb-70d5d24b:
+          bulldoze: 1600
+          categories: religion,rewards
+          description: This building was made by a Typing Monkey
+          flamability: 31
+          garbage: 9
+          jobs:
+            $: 2
+            $$: 5
+            $$$: 3
+          label: QueShiTangChurch_RW
+          menu: Rewards
+          model: 30cde2ec
+          name: QueShiTangChurch_RW
+          pollution: 1
+          pollutionRadius: 2
+          power: 13
+          rating: 4
+          ratingRadius: 110
+          relief:
+            r$$: 5000
+          submenu: Landmarks/Religion
+          water: 10
+          waterPollution: 1
+          waterPollutionRadius: 3
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"QueShiTangChurch_20.jpg.d6fb16c48cbd231f825f482811ffd375.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"101297\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2024_04/QueShiTangChurch_20.jpg.d6fb16c48cbd231f825f482811ffd375.jpg\" >\n</p>\n\n<p>\n\tQueShiTangChurch ( Chinese :礐石堂 )\n</p>\n\n<p>\n\t...(Introduction removed due to the budget cut)...\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS Reward :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 3x3\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tOnly \"DarkNite\" version are available.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\t<br>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: QueShiTangChurch.zip
+    files:
+      - QueShiTangChurch/QueShiTangChurch-0x5ad0e817_0x30cde2ec_0x30000.SC4Model
+      - QueShiTangChurch/QueShiTangChurch_RW-0x6534284a-0x9faf82fb-0x914f193f._LooseDesc
+      - QueShiTangChurch/RW(Custom)_3x3_QueShiTangChurch_70d5d24b.SC4Lot
+      - QueShiTangChurch/ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_4.jpg.e01919c24bf083382265bfa49cd7e7bd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_5.jpg.c25034594d68483e1ed96133e6350b16.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_6.jpg.23778998e6b304adb95dca39a6a7b90b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_7.jpg.487d1287f8c48899ed915a3d1a5d8050.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_8.jpg.ff1bbdfaa08e6de1484035d5b29281ba.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_9.jpg.f2db2abc3f84a01146d14221b7587f24.jpg
     lastModified: 2024-04-03T11:06:16.000Z
+    lots:
+      QueShiTangChurch/RW(Custom)_3x3_QueShiTangChurch_70d5d24b.SC4Lot:
+        70d5d24b:
+          building: 70d5d24b
+          name: RW(Custom)_3x3_QueShiTangChurch
+          props: 1e9b0000,2ab70000,2ac60000
+          size: 3x3
+          textures: 25bb1000,25f40000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      QueShiTangChurch/QueShiTangChurch-0x5ad0e817_0x30cde2ec_0x30000.SC4Model:
+        - 30cde2ec
     name: QueShiTang Church
+    sha256: 2ab06ef3f21ec7cb7765685e8c227675f35b496b88b5f1f2b87b8d9303c4e1e8
+    size: 361953
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/QueShiTangChurch_9.thumb.jpg.960521aabd4157b4967ade070f5442a5.jpg
+    uncompressed: 443277
     url: https://community.simtropolis.com/files/file/36191-queshitang-church/
+    version: 1.0.1
   simtropolis/36192:
     assetId: simtropolis/36192-szmg
     authors:
       - Ct1999
+    buildings:
+      SZMG/RW(Custom)_9x9_SZMG_51c5a62c.SC4Lot:
+        9faf82fb-51c5a62c:
+          bulldoze: 1763900
+          categories: rewards
+          description: This building was made by a Typing Monkey
+          flamability: 33
+          garbage: 884
+          jobs:
+            $: 146
+            $$: 952
+            $$$: 73
+          label: SZMG_RW
+          menu: Rewards
+          model: 11b1a9b4
+          name: SZMG_RW
+          pollution: 440
+          pollutionRadius: 3
+          power: 3559
+          relief:
+            co$$: 20000
+            r$$: 3000
+          submenu: Landmarks/Entertainment
+          water: 903
+          waterPollution: 220
+          waterPollutionRadius: 4
     category: 106-civic-non-rci
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\r\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"101299\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2024_04/SZMG_17.jpg.61076f6c3ac5e8d7beceb19d9d8371f7.jpg\" alt=\"SZMG_17.jpg.61076f6c3ac5e8d7beceb19d9d8371f7.jpg\" >\r\n</p>\r\n\r\n<p>\r\n\tSZMG ( Chinese :深圳广电集团大厦 )\r\n</p>\r\n\r\n<p>\r\n\t...(Introduction removed due to the budget cut)...\r\n</p>\r\n\r\n<p>\r\n\t-----------------------------------------------------------------<br>\r\n\t-----------------------------------------------------------------\r\n</p>\r\n\r\n<p>\r\n\tSTATS Reward :\r\n</p>\r\n\r\n<p>\r\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 9x9\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\t-----------------------------------------------------------------<br>\r\n\t-----------------------------------------------------------------\r\n</p>\r\n\r\n<p>\r\n\tRemind:\r\n</p>\r\n\r\n<p>\r\n\tOnly \"DarkNite\" version are available.\r\n</p>\r\n\r\n<p>\r\n\t-----------------------------------------------------------------<br>\r\n\t-----------------------------------------------------------------\r\n</p>\r\n\r\n<p>\r\n\tDependence:\r\n</p>\r\n\r\n<p>\r\n\t<br>\r\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\r\n</p>\r\n\r\n<p>\r\n\t-----------------------------------------------------------------<br>\r\n\t-----------------------------------------------------------------<br>\r\n\t\_\r\n</p>\r\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: SZMG.zip
+    files:
+      - SZMG/RW(Custom)_9x9_SZMG_51c5a62c.SC4Lot
+      - SZMG/ReadMe.txt
+      - SZMG/SZMG-0x5ad0e817_0x11b1a9b4_0x30000.SC4Model
+      - SZMG/SZMG_RW-0x6534284a-0x9faf82fb-0xb23eecae._LooseDesc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_3.jpg.dd3ae10796a5f1d03685f70ea0a93458.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_4.jpg.efbb4fbcc1f16734b6a2c47edd014c4b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_5.jpg.5e6d9ab7f61b9b5b9637320af913b176.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_6.jpg.584de6e281017823d00edca8587a3d9f.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_7.jpg.ca2cfc2c89308ba42aa1a373dd74234b.jpg
     lastModified: 2024-04-03T11:08:28.000Z
+    lots:
+      SZMG/RW(Custom)_9x9_SZMG_51c5a62c.SC4Lot:
+        51c5a62c:
+          building: 51c5a62c
+          name: RW(Custom)_9x9_SZMG
+          props: 16690000,1e280000,1e580000,1e650000,1e990000,1e9b0000,284c0000,28b00000
+          size: 9x9
+          textures: 25840000,258c2000,258e3000,258f2000,25ab2000,25f41000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      SZMG/SZMG-0x5ad0e817_0x11b1a9b4_0x30000.SC4Model:
+        - 11b1a9b4
     name: SZMG
+    sha256: e2b3ec0875f87855ee33d178b73ef66066ea887ec93a4aeacff795d3f460fc19
+    size: 8315124
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/SZMG_4.thumb.jpg.6f0a3b83d718d6320856570e6228c602.jpg
+    uncompressed: 9651328
     url: https://community.simtropolis.com/files/file/36192-szmg/
+    version: 1.0.1
   simtropolis/36205:
     assetId: simtropolis/36205-ct1999-sacred-heart-cathedral
     authors:
@@ -25731,11 +26983,67 @@ assets:
     assetId: simtropolis/36651-peifengpagoda
     authors:
       - Ct1999
+    buildings:
+      PeiFengPagoda_DN/RW(Custom)_2x2_PeiFengPagoda_f11a500a.SC4Lot:
+        9faf82fb-f11a500a:
+          bulldoze: 2700
+          categories: religion,rewards
+          description: This building was made by a Typing Monkey
+          flamability: 31
+          garbage: 5
+          jobs:
+            $$: 1
+          label: PeiFengPagoda_RW
+          menu: Rewards
+          model: 3112649f
+          name: PeiFengPagoda_RW
+          pollution: 1
+          pollutionRadius: 2
+          power: 2
+          rating: 6
+          ratingRadius: 110
+          relief:
+            r$$: 5000
+          submenu: Landmarks/Religion
+          water: 2
+          waterPollution: 1
+          waterPollutionRadius: 3
     category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"109239\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2025_01/PeiFengPagoda_3.jpg.db38d0bb939e21ac9d297d864d8d5eb3.jpg\" alt=\"PeiFengPagoda_3.jpg.db38d0bb939e21ac9d297d864d8d5eb3.jpg\" >\n</p>\n\n<p>\n\tPeiFengPagoda(培风塔)\n</p>\n\n<p>\n\tReward LOT Only\n</p>\n\n<p>\n\tLOT Size: 2x2<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: PeiFengPagoda_DN.zip
+    files:
+      - PeiFengPagoda_DN/PeiFengPagoda-0x5ad0e817_0x3112649f_0x30000.SC4Model
+      - PeiFengPagoda_DN/PeiFengPagoda_RW-0x6534284a-0x9faf82fb-0x31939910._LooseDesc
+      - PeiFengPagoda_DN/RW(Custom)_2x2_PeiFengPagoda_f11a500a.SC4Lot
+      - PeiFengPagoda_DN/ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/PeiFengPagoda_3.jpg.bb43cd46946db6052fe049c97d866891.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/6778d4788bc29_Swatow(City)-May.68131723031023.png.6686e7967ab3f847374dcb90f04ad43a.png
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/6778d47b40240_Swatow(City)-May.98131723031033.png.ac63a0c2d15f8b25f24698da31fb633a.png
     lastModified: 2025-01-04T06:27:32.000Z
+    lots:
+      PeiFengPagoda_DN/RW(Custom)_2x2_PeiFengPagoda_f11a500a.SC4Lot:
+        f11a500a:
+          building: f11a500a
+          name: RW(Custom)_2x2_PeiFengPagoda
+          props: 1e9b0000,28330000,2ab70000,2ac00000,2ac60000
+          size: 2x2
+          textures: 25901000,25bf1000,261a0000,30301000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      PeiFengPagoda_DN/PeiFengPagoda-0x5ad0e817_0x3112649f_0x30000.SC4Model:
+        - 3112649f
     name: PeiFengPagoda
+    sha256: 08531f39a70a2e0e68723c4b9fcc933a4bc91de6e058321807f0b57b0cd04ae6
+    size: 246725
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/PeiFengPagoda_3.thumb.jpg.037ec31f69fad17f156391ac243a2384.jpg
+    uncompressed: 310121
     url: https://community.simtropolis.com/files/file/36651-peifengpagoda/
+    version: 1.0.0
   simtropolis/3667:
     assetId: simtropolis/3667-mies-van-der-rohe-school-of-architecture
     authors:
@@ -27922,4 +29230,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2025-01-16T08:04:08.095Z
+  timestamp: 2025-01-22T07:05:40.696Z

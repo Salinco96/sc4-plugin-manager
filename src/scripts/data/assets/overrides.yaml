@@ -4011,8 +4011,30 @@ simtropolis/34843-paris-batiments-20-21:
 simtropolis/3485-7eleven-stores-bsc:
   packageId: simgoober/7-eleven-stores
 
+simtropolis/34862-modern-chinese-village-box-1:
+  packageId: ct1999/village-box-1
+  paths:
+    Ct1999_ChineseVillageBox_1_DarkNite:
+      packageId: ct1999/village-box-1
+      variantId: darknite
+    Ct1999_ChineseVillageBox_1_MaxisNite:
+      packageId: ct1999/village-box-1
+      variantId: default
+  variantId: default,darknite
+
 simtropolis/34864-fa3-559-anderson-ave-residential:
   packageId: effthegrid/fa3-559-anderson-ave
+
+simtropolis/34868-modern-chinese-village-box-2:
+  packageId: ct1999/village-box-2
+  paths:
+    Ct1999_ChineseVillageBox_2_DarkNite:
+      packageId: ct1999/village-box-2
+      variantId: darknite
+    Ct1999_ChineseVillageBox_2_MaxisNite:
+      packageId: ct1999/village-box-2
+      variantId: default
+  variantId: default,darknite
 
 simtropolis/34872-sm2-mega-prop-pack-vol6:
   packageId: simmer2/mega-props-vol06
@@ -4070,9 +4092,30 @@ simtropolis/34972-davide-prop-v1:
       variantId: hd
   variantId: default
 
+simtropolis/35005-oi-kwan-hotel:
+  packageId: ct1999/oi-kwan-hotel
+  paths:
+    Ct1999_OiKwanHotel/OiKwanHotel_DarkNite:
+      packageId: ct1999/oi-kwan-hotel
+      variantId: darknite
+    Ct1999_OiKwanHotel/OiKwanHotel_MaxisNite:
+      packageId: ct1999/oi-kwan-hotel
+      variantId: default
+  variantId: default,darknite
+
 simtropolis/35010-palazzo-maresio:
   packageId: davide1983it/palazzo-maresio
   variantId: default
+
+simtropolis/35013-hakka-tulou-zhencheng-building:
+  packageId: ct1999/zhencheng-building
+  variants:
+    '192555':
+      packageId: ct1999/zhencheng-building
+      variantId: darknite
+    '192556':
+      packageId: ct1999/zhencheng-building
+      variantId: default
 
 simtropolis/35016-villa-almansa:
   packageId: davide1983it/villa-almansa
@@ -4126,6 +4169,23 @@ simtropolis/35031-pc-mgb-convenience-stores-global-expansion:
   packageId: pclark06/mgb-convenience-stores
   variantId: default
 
+simtropolis/35034-wenshan-building:
+  packageId: ct1999/wenshan-building
+  variants:
+    '192712':
+      packageId: ct1999/wenshan-building
+      variantId: darknite-hd
+    '192713':
+      packageId: ct1999/wenshan-building
+      paths:
+        WenShanBuilding_SD( DarkNite ):
+          packageId: ct1999/wenshan-building
+          variantId: darknite-sd
+        WenShanBuilding_SD( MasixNite ):
+          packageId: ct1999/wenshan-building
+          variantId: default
+      variantId: default,darknite-sd
+
 simtropolis/35036-hybrid-railway-hrw-subway-converter:
   superseded: sc4evermore/95-ulisse-wolf-hybrid-railway-hrw-subway-converter
 
@@ -4135,9 +4195,35 @@ simtropolis/35039-villa-oropesa:
 
 simtropolis/35053-fshwrite-for-bat4max: null
 
+simtropolis/35055-daqing-building:
+  packageId: ct1999/daqing-building
+  variants:
+    '194508':
+      packageId: ct1999/daqing-building
+      variantId: darknite
+    '194509':
+      packageId: ct1999/daqing-building
+      variantId: default
+    '194510':
+      packageId: ct1999/daqing-building-scale-adjusted
+      variantId: darknite
+    '194511':
+      packageId: ct1999/daqing-building-scale-adjusted
+      variantId: default
+
 simtropolis/35057-palazzo-residential-building-set-1:
   packageId: davide1983it/residential-building-set-1
   variantId: default
+
+simtropolis/35167-the-sun-co-ltd:
+  packageId: ct1999/nanfang-building
+  variants:
+    '194006':
+      packageId: ct1999/nanfang-building
+      variantId: darknite
+    '194007':
+      packageId: ct1999/nanfang-building
+      variantId: default
 
 simtropolis/35169-duplex-house-set-1:
   packageId: davide1983it/duplex-house-set-1
@@ -4153,6 +4239,26 @@ simtropolis/35173-norfair-corporation:
       packageId: jasoncw/norfair-corporation
       variantId: darknite
 
+simtropolis/35176-zhenhai-tower:
+  packageId: ct1999/zhenhai-tower
+  variants:
+    '194178':
+      packageId: ct1999/zhenhai-tower
+      variantId: darknite
+    '194179':
+      packageId: ct1999/zhenhai-tower
+      variantId: default
+
+simtropolis/35182-flowery-pagoda:
+  packageId: ct1999/flowery-pagoda
+  variants:
+    '194215':
+      packageId: ct1999/flowery-pagoda
+      variantId: darknite
+    '194216':
+      packageId: ct1999/flowery-pagoda
+      variantId: default
+
 simtropolis/35187-social-housing-set-1:
   packageId: davide1983it/social-housing-set-1
   variantId: default
@@ -4161,6 +4267,16 @@ simtropolis/3519-copacabana-beach:
   variants:
     '202790': null
     '202791':
+      variantId: default
+
+simtropolis/35195-engauntong-building:
+  packageId: ct1999/engauntong-building
+  variants:
+    '194351':
+      packageId: ct1999/engauntong-building
+      variantId: darknite
+    '194352':
+      packageId: ct1999/engauntong-building
       variantId: default
 
 simtropolis/35206-kallax-residential:
@@ -4194,9 +4310,55 @@ simtropolis/35212-torre-teala:
   packageId: davide1983it/torre-teala
   variantId: default
 
+simtropolis/35213-modern-chinese-village-box-3:
+  packageId: ct1999/village-box-3
+  variants:
+    '194519':
+      packageId: ct1999/village-box-3
+      variantId: darknite-hd
+    '194520':
+      packageId: ct1999/village-box-3
+      variantId: darknite-sd
+    '194521':
+      packageId: ct1999/village-box-3
+      variantId: default
+
+simtropolis/35221-cantonese-house-pack-1:
+  packageId: ct1999/cantonese-house-pack-1
+  variants:
+    '194668':
+      packageId: ct1999/cantonese-house-pack-1
+      variantId: darknite
+    '194669':
+      packageId: ct1999/cantonese-house-pack-1
+      variantId: default
+
 simtropolis/35229-parea-building:
   packageId: davide1983it/parea-building
   variantId: default
+
+simtropolis/35230-lihai-building-apt:
+  packageId: ct1999/lihai-building
+  variants:
+    '194726':
+      packageId: ct1999/lihai-building
+      variantId: darknite
+    '194727':
+      packageId: ct1999/lihai-building
+      variantId: default
+
+simtropolis/35239-inoale-inn:
+  packageId: ct1999/inoale-inn
+  variants:
+    '194816':
+      packageId: ct1999/inoale-inn
+      variantId: darknite-hd
+    '194817':
+      packageId: ct1999/inoale-inn
+      variantId: darknite-sd
+    '194818':
+      packageId: ct1999/inoale-inn
+      variantId: default
 
 simtropolis/35245-apple-store-pack:
   packageId: jasoncw/apple-store-pack
@@ -4218,6 +4380,16 @@ simtropolis/35246-wellman-building:
       packageId: jasoncw/wellman-building
       variantId: darknite
 
+simtropolis/35269-chuang-jian-building:
+  packageId: ct1999/chuang-jian-building
+  variants:
+    '195073':
+      packageId: ct1999/chuang-jian-building
+      variantId: darknite
+    '195074':
+      packageId: ct1999/chuang-jian-building
+      variantId: default
+
 simtropolis/35286-beacon-apartments:
   packageId: jasoncw/beacon-apartments
   variants:
@@ -4228,6 +4400,16 @@ simtropolis/35286-beacon-apartments:
       packageId: jasoncw/beacon-apartments
       variantId: darknite
 
+simtropolis/35291-cantonese-house-pack-2:
+  packageId: ct1999/cantonese-house-pack-2
+  variants:
+    '195233':
+      packageId: ct1999/cantonese-house-pack-2
+      variantId: darknite
+    '195234':
+      packageId: ct1999/cantonese-house-pack-2
+      variantId: default
+
 simtropolis/35299-maraldi-building:
   packageId: davide1983it/maraldi-building
   variantId: default
@@ -4236,6 +4418,32 @@ simtropolis/35301-haunted-mansion:
   packageId: wannglondon/haunted-mansion
   variantId: darknite
 
+simtropolis/35309-eugauntong-swatow-branch:
+  packageId: ct1999/eugauntong-swatow-branch
+  variants:
+    '195410':
+      packageId: ct1999/eugauntong-swatow-branch
+      variantId: darknite-hd
+    '195411':
+      packageId: ct1999/eugauntong-swatow-branch
+      variantId: darknite-sd
+    '195412':
+      packageId: ct1999/eugauntong-swatow-branch
+      variantId: default
+
+simtropolis/35325-canton-custom-house:
+  packageId: ct1999/canton-custom-house
+  variants:
+    '195571':
+      packageId: ct1999/canton-custom-house
+      variantId: darknite-hd
+    '195572':
+      packageId: ct1999/canton-custom-house
+      variantId: darknite-sd
+    '195573':
+      packageId: ct1999/canton-custom-house
+      variantId: default
+
 simtropolis/35341-jenx-dulles-and-jfk-airport-patch-and-transit-route-mod: null
 
 simtropolis/35345-zasco-building:
@@ -4243,6 +4451,16 @@ simtropolis/35345-zasco-building:
   variantId: default
 
 simtropolis/35353-pegasus-cdk3-collection: null
+
+simtropolis/35363-christmas-tree-roundabout:
+  packageId: ct1999/christmas-tree-roundabout
+  variants:
+    '195882':
+      packageId: ct1999/christmas-tree-roundabout
+      variantId: darknite
+    '195883':
+      packageId: ct1999/christmas-tree-roundabout
+      variantId: default
 
 simtropolis/35364-denton-corporation:
   packageId: jasoncw/denton-corporation
@@ -4323,6 +4541,19 @@ simtropolis/35371-hsbc-tower:
 
 simtropolis/35373-new-menus-and-sounds-for-rretail-gas-station-relots-version-20: null
 
+simtropolis/35375-cathedral-of-st-victor:
+  packageId: ct1999/cathedral-of-st-victor
+  variants:
+    '195930':
+      packageId: ct1999/cathedral-of-st-victor
+      variantId: darknite-hd
+    '195931':
+      packageId: ct1999/cathedral-of-st-victor
+      variantId: darknite-sd
+    '195932':
+      packageId: ct1999/cathedral-of-st-victor
+      variantId: default
+
 simtropolis/35406-victorian-row-houses-megapack-02:
   variants:
     '196084':
@@ -4362,6 +4593,16 @@ simtropolis/35415-hotel-utica:
       packageId: jasoncw/hotel-utica
       variantId: darknite
 
+simtropolis/35416-sdb-building:
+  packageId: ct1999/sdb-building
+  variants:
+    '196171':
+      packageId: ct1999/sdb-building
+      variantId: darknite
+    '196172':
+      packageId: ct1999/sdb-building
+      variantId: default
+
 simtropolis/35435-palazzo-currucci:
   packageId: davide1983it/palazzo-currucci
   variantId: default
@@ -4370,9 +4611,52 @@ simtropolis/35438-esa-stores:
   packageId: oidaas/esa-stores
   variantId: default
 
+simtropolis/35453-seg-plaza:
+  packageId: ct1999/seg-plaza
+  variants:
+    '196459':
+      packageId: ct1999/seg-plaza
+      variantId: darknite
+    '196460':
+      packageId: ct1999/seg-plaza
+      variantId: default
+
+simtropolis/35462-kwangtung-post-office:
+  packageId: ct1999/kwangtung-post-office
+  variants:
+    '196513':
+      packageId: ct1999/kwangtung-post-office
+      variantId: darknite-hd
+    '196514':
+      packageId: ct1999/kwangtung-post-office
+      variantId: darknite-sd
+    '196515':
+      packageId: ct1999/kwangtung-post-office
+      variantId: default
+
 simtropolis/35470-pre-2000-car-props-pack:
   packageId: art128/pre-2000-car-props
   variantId: default
+
+simtropolis/35472-canton-tower:
+  packageId: ct1999/canton-tower
+  variants:
+    '196750':
+      packageId: ct1999/canton-tower
+      variantId: darknite
+    '196751':
+      packageId: ct1999/canton-tower
+      variantId: default
+
+simtropolis/35483-new-asia-hotel:
+  packageId: ct1999/new-asia-hotel
+  variants:
+    '196742':
+      packageId: ct1999/new-asia-hotel
+      variantId: darknite
+    '196743':
+      packageId: ct1999/new-asia-hotel
+      variantId: default
 
 simtropolis/35492-residential-building-1x1:
   packageId: davide1983it/1x1-residential-building-set-1
@@ -4484,6 +4768,30 @@ simtropolis/35620-take-a-whizz-brewing-company:
   variantId: default
 
 simtropolis/35621-simcity-4-multiplayer-project-launcher: null
+
+simtropolis/35623-new-china-hotel:
+  packageId: ct1999/new-china-hotel
+  variantId: darknite
+
+simtropolis/35624-sunyatsen-memorial-hall-guangzhou:
+  packageId: ct1999/sunyatsen-memorial
+  variantId: darknite
+
+simtropolis/35625-hua-e-building:
+  packageId: ct1999/hua-e-building
+  variantId: darknite
+
+simtropolis/35626-kingkey-100:
+  packageId: ct1999/kingkey-100
+  variantId: darknite
+
+simtropolis/35627-yue-yun-building:
+  packageId: ct1999/yue-yun-building
+  variantId: darknite
+
+simtropolis/35628-lai-kit-lau:
+  packageId: ct1999/lai-kit-lau
+  variantId: darknite
 
 simtropolis/35632-new-york-pack-1:
   collectionId: wannglondon/ny-buildings
@@ -4639,6 +4947,14 @@ simtropolis/35782-sc4-city-date-sync:
 simtropolis/35783-supermarket-prix:
   packageId: davide1983it/supermarket-prix
   variantId: default
+
+simtropolis/35788-shude-building:
+  packageId: ct1999/shude-building
+  variantId: darknite
+
+simtropolis/35789-honkwok-city-center:
+  packageId: ct1999/honkwok-city-center
+  variantId: darknite
 
 simtropolis/35790-sc4-cleanitol: null
 
@@ -4889,6 +5205,14 @@ simtropolis/36188-3d-camera-dll-for-simcity-4:
   packageId: memo/3d-camera
   variantId: default
 
+simtropolis/36191-queshitang-church:
+  packageId: ct1999/queshi-tang
+  variantId: darknite
+
+simtropolis/36192-szmg:
+  packageId: ct1999/szmg
+  variantId: darknite
+
 simtropolis/36194-bsc-batprops_hd-jes-vol15:
   packageId: jestarr/batprops-vol15
   variantId: default
@@ -4964,6 +5288,14 @@ simtropolis/36236-esa-farmprops-vol-1:
 
 simtropolis/36238-amps-beta-v032:
   packageId: robertame/amps
+
+simtropolis/36240-village-box-4:
+  packageId: ct1999/village-box-4
+  variantId: darknite
+
+simtropolis/36241-szdc:
+  packageId: ct1999/szdc
+  variantId: darknite
 
 simtropolis/36242-resource-loading-hooks-dll-for-simcity-4:
   packageId: null-45/resource-loading-hooks
@@ -5392,6 +5724,10 @@ simtropolis/36542-sp-building:
       packageId: jasoncw/sp-building
       variantId: darknite
 
+simtropolis/36543-finance-center:
+  packageId: ct1999/finance-center
+  variantId: darknite
+
 simtropolis/36544-coco_e-pyeonhansesang_apt:
   packageId: cococity/coco-pyeonhansesang-apartment
   variants:
@@ -5574,6 +5910,10 @@ simtropolis/36632-data-view-extensions-dll:
   packageId: null-45/data-view-extensions-dll
   variantId: default
 
+simtropolis/36651-peifengpagoda:
+  packageId: ct1999/peifeng-pagoda
+  variantId: darknite
+
 simtropolis/36655-the-fealds-theatre:
   packageId: koonam/fealds-theatre
   variantId: default
@@ -5587,6 +5927,14 @@ simtropolis/36660-altman-miller-machine-shop:
     '205235':
       packageId: jestarr/altman-miller-machine-shop
       variantId: sd
+
+simtropolis/36671-los-angeles-home-5:
+  packageId: wannglondon/los-angeles-home-5
+  variantId: darknite
+
+simtropolis/36674-yeefatmansion:
+  packageId: ct1999/yeefat-mansion
+  variantId: darknite
 
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31

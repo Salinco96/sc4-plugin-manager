@@ -126,6 +126,7 @@ runIndexer({
   include: {
     authors: {
       buggi: true,
+      ct1999: true,
       davide1983it: true,
       "dead-end": true,
       cococity: true,
@@ -1232,7 +1233,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           { name: "Include as collection", value: "collection" },
         ],
         default: "include",
-        message: `Include ${assetId}?`,
+        message: `Include ${assetId}?${entry.url && ` (${entry.url})`}`,
       })
 
       switch (answer) {

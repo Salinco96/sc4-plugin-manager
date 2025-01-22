@@ -455,19 +455,35 @@ export function generateVariantInfo(
 
   variantInfo.images = union(variantInfo.images ?? [], images)
 
+  if (variantInfo.id.includes("darknite")) {
+    variantInfo.requirements ??= {}
+    variantInfo.requirements.darknite = true
+
+    for (const other of values(packageInfo.variants)) {
+      if (!other.id.includes("darknite") && !other.requirements?.darknite) {
+        if (other.id === "default") {
+          other.name ??= "Maxis Nite"
+        }
+
+        other.requirements ??= {}
+        other.requirements.darknite = false
+      }
+    }
+  }
+
   switch (variantInfo.id) {
+    case "darknite-hd": {
+      variantInfo.name ??= "Dark Nite (HD)"
+      break
+    }
+
+    case "darknite-sd": {
+      variantInfo.name ??= "Dark Nite (SD)"
+      break
+    }
+
     case "darknite": {
       variantInfo.name ??= "Dark Nite"
-      variantInfo.requirements ??= {}
-      variantInfo.requirements.darknite = true
-
-      const defaultVariantData = packageInfo.variants["default" as VariantID]
-      if (defaultVariantData) {
-        defaultVariantData.name ??= "Maxis Nite"
-        defaultVariantData.requirements ??= {}
-        defaultVariantData.requirements.darknite = false
-      }
-
       break
     }
 

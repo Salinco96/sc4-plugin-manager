@@ -2928,10 +2928,16 @@ buildings:
     - davide1983it/villa-tamarit
   0e8f4414:
     - davide1983it/djohaal-building
+  0f1a89a7:
+    - ct1999/village-box-1
+  0f1edf7d:
+    - ct1999/village-box-2
   0f39596d:
     - davide1983it/palazzo-maresio
   0f443a0e:
     - davide1983it/villa-almansa
+  0f54618f:
+    - ct1999/wenshan-building
   0f5ba00f:
     - davide1983it/residential-building-set-1
   0f5ba14d:
@@ -2956,6 +2962,22 @@ buildings:
     - davide1983it/social-housing-set-1
   0f861d4c:
     - davide1983it/social-housing-set-1
+  0fc7ae42:
+    - ct1999/cantonese-house-pack-1
+  0fc7ae7f:
+    - ct1999/cantonese-house-pack-1
+  0fc7b0b8:
+    - ct1999/cantonese-house-pack-1
+  0fc8d177:
+    - ct1999/cantonese-house-pack-2
+  0fc8d2e1:
+    - ct1999/cantonese-house-pack-2
+  0fcf9059:
+    - ct1999/canton-custom-house
+  0fcf9092:
+    - ct1999/canton-custom-house
+  0fec8a40:
+    - ct1999/seg-plaza
   '10010000':
     - maxis/base
     - toroca/functional-landmarks
@@ -2965,6 +2987,8 @@ buildings:
   '10030000':
     - maxis/base
     - toroca/functional-landmarks
+  '10044849':
+    - ct1999/canton-custom-house
   1030c920:
     - jasoncw/the-paragon
   106fba30:
@@ -2983,6 +3007,10 @@ buildings:
     - jasoncw/small-police-station-1
   10c6bbb8:
     - mattb325/batprops-vol01
+  10c885ba:
+    - ct1999/kingkey-100
+  10cf57f9:
+    - ct1999/finance-center
   10d19ae9:
     - mattb325/batprops-vol01
   10d2c270:
@@ -3003,6 +3031,8 @@ buildings:
     - csx/mega-props-vol05
   10ea9a9c:
     - wannglondon/ny-building-7
+  10f29414:
+    - ct1999/yue-yun-building
   10ffa72d:
     - csx/mega-props-vol05
   1108adda:
@@ -3035,6 +3065,8 @@ buildings:
     - csx/mega-props-vol06
   '11687906':
     - mickebear/mega-props-vol02
+  116c35ee:
+    - ct1999/szdc
   1181f32b:
     - historic-harbor/lots
   '11851867':
@@ -3083,6 +3115,8 @@ buildings:
     - davide1983it/r$-villa-pack-2
   130cd79b:
     - wannglondon/home-alone-house
+  132ed0ff:
+    - ct1999/yeefat-mansion
   133eafba:
     - davide1983it/r$-villa-pack-2
   '1340e366':
@@ -3574,6 +3608,8 @@ buildings:
     - bsc/misc-props-vol01
   2ee0c2a9:
     - jasoncw/denton-corporation
+  2f366261:
+    - ct1999/oi-kwan-hotel
   2f395979:
     - davide1983it/palazzo-maresio
   2f395b57:
@@ -3582,6 +3618,16 @@ buildings:
     - davide1983it/villa-teulada
   2f51c453:
     - davide1983it/residential-building-set-1
+  2fa695e3:
+    - ct1999/inoale-inn
+  2fb1f5c8:
+    - ct1999/chuang-jian-building
+  2fbd151c:
+    - ct1999/village-box-3
+  2fc7add3:
+    - ct1999/cantonese-house-pack-1
+  2fc7aea3:
+    - ct1999/cantonese-house-pack-1
   3031d7d4:
     - historic-harbor/lots
   30398a99:
@@ -3667,6 +3713,8 @@ buildings:
     - csx/mega-props-vol06
   '31538973':
     - csx/mega-props-vol06
+  31595a87:
+    - ct1999/shude-building
   316055a0:
     - jasoncw/model-discount-furniture
   '31851826':
@@ -4214,20 +4262,58 @@ buildings:
     - csx/mega-props-vol05
   4edfb616:
     - davide1983it/atlantia-insurance-building
+  4f19a5e1:
+    - ct1999/village-box-1
   4f1d5045:
     - davide1983it/villa-denia
+  4f351a0c:
+    - ct1999/oi-kwan-hotel
   4f395b62:
     - davide1983it/palazzo-sagesta
+  4f40f4ad:
+    - ct1999/zhencheng-building
+  4f544e14:
+    - ct1999/wenshan-building
+  4f545036:
+    - ct1999/wenshan-building
+  4f545c05:
+    - ct1999/wenshan-building
+  4f545c7b:
+    - ct1999/wenshan-building
+  4f546227:
+    - ct1999/wenshan-building
   4f6121bf:
     - davide1983it/residential-building-set-1
+  4f62b544:
+    - ct1999/daqing-building
   4f788a2f:
     - davide1983it/duplex-house-set-1
   4f78ae50:
     - davide1983it/duplex-house-set-1
   4f7ef18b:
     - historic-harbor/lots
+  4f9045f8:
+    - ct1999/engauntong-building
   4f9c0d66:
     - madhatter106/midrise-office-pack-vol09
+  4fbb3362:
+    - ct1999/eugauntong-swatow-branch
+  4fbd1626:
+    - ct1999/village-box-3
+  4fc7b093:
+    - ct1999/cantonese-house-pack-1
+  4fc8d0ed:
+    - ct1999/cantonese-house-pack-2
+  4fc8d29a:
+    - ct1999/cantonese-house-pack-2
+  4fec8649:
+    - ct1999/seg-plaza
+  '500448e6':
+    - ct1999/kwangtung-post-office
+  50044f54:
+    - ct1999/kwangtung-post-office
+  5031da86:
+    - ct1999/canton-tower
   5047df1e:
     - buddybud/jeronij-concrete-wall-addon-stairs
   5047efac:
@@ -4327,6 +4413,8 @@ buildings:
     - wannglondon/american-townhomes-4
   51ae2b71:
     - jasoncw/magasin-valois
+  51c5a62c:
+    - ct1999/szmg
   51c8743b:
     - davide1983it/1x1-residential-building-set-2
   51d5c7c3:
@@ -4888,8 +4976,12 @@ buildings:
     - bsc/misc-props-vol01
   6eb00002:
     - gascooker/mega-props-vol01
+  6f1a8ad7:
+    - ct1999/village-box-1
   6f3959ae:
     - davide1983it/palazzo-maresio
+  6f410b53:
+    - ct1999/zhencheng-building
   6f4bffa5:
     - csx/mega-props-vol05
   6f51c46b:
@@ -4902,6 +4994,24 @@ buildings:
     - davide1983it/social-housing-set-1
   6f87f5c2:
     - davide1983it/social-housing-set-1
+  6f90fda8:
+    - ct1999/daqing-building-scale-adjusted
+  6f9e8db5:
+    - ct1999/lihai-building
+  6fa697c2:
+    - ct1999/inoale-inn
+  6fb1f7f3:
+    - ct1999/chuang-jian-building
+  6fb1f807:
+    - ct1999/chuang-jian-building
+  6fd61f96:
+    - ct1999/cathedral-of-st-victor
+  6fec8a31:
+    - ct1999/seg-plaza
+  7031d2d9:
+    - ct1999/canton-tower
+  7031d9fb:
+    - ct1999/canton-tower
   706db573:
     - jasoncw/hotel-utica
   706fbd92:
@@ -4918,6 +5028,8 @@ buildings:
     - jeronij/ship-pack
   70c01450:
     - wannglondon/american-townhomes-1
+  70d5d24b:
+    - ct1999/queshi-tang
   70e190ff:
     - csx/mega-props-vol06
   '70e89309':
@@ -4965,6 +5077,8 @@ buildings:
     - csx/mega-props-vol05
   7150603f:
     - csx/mega-props-vol05
+  '71753193':
+    - ct1999/honkwok-city-center
   7180df77:
     - wannglondon/tulum-homes
   '71851816':
@@ -4987,6 +5101,8 @@ buildings:
     - davide1983it/niroco-building
   71a04e25:
     - wannglondon/american-townhomes-4
+  71ab79e1:
+    - ct1999/village-box-4
   71b6e4dc:
     - mattb325/batprops-vol01
   71d45402:
@@ -5496,6 +5612,14 @@ buildings:
     - gascooker/mega-props-vol01
   8ecbaf1b:
     - gascooker/mega-props-vol01
+  8f1ecd00:
+    - ct1999/village-box-2
+  8f1ee110:
+    - ct1999/village-box-2
+  8f1ee39e:
+    - ct1999/village-box-2
+  8f36437d:
+    - ct1999/oi-kwan-hotel
   8f395949:
     - davide1983it/palazzo-maresio
   8f5c3a6f:
@@ -5504,12 +5628,28 @@ buildings:
     - jasoncw/dreieck-park
   8f77c3a9:
     - historic-harbor/lots
+  8f786d66:
+    - ct1999/nanfang-building
+  8f7870a8:
+    - ct1999/nanfang-building
   8f7fe1b3:
     - historic-harbor/lots
   8f87e4a2:
     - davide1983it/social-housing-set-1
+  8fbd163a:
+    - ct1999/village-box-3
   8fc234eb:
     - wannglondon/french-hospital
+  8fc7adf7:
+    - ct1999/cantonese-house-pack-1
+  8fc7ae17:
+    - ct1999/cantonese-house-pack-1
+  8fe16c40:
+    - ct1999/sdb-building
+  9004483c:
+    - ct1999/canton-custom-house
+  90044f45:
+    - ct1999/kwangtung-post-office
   '90644677':
     - jasoncw/medium-sized-train-station
   906d1d2a:
@@ -5532,6 +5672,8 @@ buildings:
     - historic-harbor/lots
   9094a3be:
     - historic-harbor/lots
+  909929b3:
+    - ct1999/new-asia-hotel
   90be0bd3:
     - jeronij/ship-pack
   90c002c4:
@@ -5544,6 +5686,8 @@ buildings:
     - historic-harbor/lots
   90c810da:
     - mattb325/batprops-vol01
+  90c89212:
+    - ct1999/kingkey-100
   90d9b023:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
@@ -6102,6 +6246,10 @@ buildings:
     - davide1983it/villa-creixell
   ae7cbf50:
     - davide1983it/villa-oropesa
+  af19a4d1:
+    - ct1999/village-box-1
+  af365e3b:
+    - ct1999/oi-kwan-hotel
   af456cce:
     - davide1983it/palazzo-sagesta
   af49bfef:
@@ -6114,16 +6262,42 @@ buildings:
     - historic-harbor/lots
   af77e550:
     - historic-harbor/lots
+  af787175:
+    - ct1999/nanfang-building
   af78c85f:
     - davide1983it/duplex-house-set-1
+  af804d07:
+    - ct1999/zhenhai-tower
   af82c514:
     - davide1983it/social-housing-set-1
   af82c6fe:
     - davide1983it/social-housing-set-1
   af82c70b:
     - davide1983it/social-housing-set-1
+  af904747:
+    - ct1999/engauntong-building
+  afa697f0:
+    - ct1999/inoale-inn
+  afbb2e6f:
+    - ct1999/eugauntong-swatow-branch
   afc2346e:
     - wannglondon/french-hospital
+  afc7ae92:
+    - ct1999/cantonese-house-pack-1
+  afc7b070:
+    - ct1999/cantonese-house-pack-1
+  afc8d132:
+    - ct1999/cantonese-house-pack-2
+  afc8d1a7:
+    - ct1999/cantonese-house-pack-2
+  afc8d2be:
+    - ct1999/cantonese-house-pack-2
+  afcf907b:
+    - ct1999/canton-custom-house
+  afd61d04:
+    - ct1999/cathedral-of-st-victor
+  afd61f86:
+    - ct1999/cathedral-of-st-victor
   afdbca52:
     - davide1983it/parea-building
   b047f102:
@@ -6148,6 +6322,8 @@ buildings:
     - wannglondon/ny-building-1
   b0c5873a:
     - mattb325/batprops-vol01
+  b0cf595e:
+    - ct1999/finance-center
   b0d9adef:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
@@ -6197,6 +6373,8 @@ buildings:
     - csx/mega-props-vol06
   b162df0b:
     - madhatter106/medium-wealth-shops-vol02
+  b17533e1:
+    - ct1999/honkwok-city-center
   b184c540:
     - jasoncw/train-station-set
   b1851883:
@@ -6261,6 +6439,8 @@ buildings:
     - jestarr/fall-river-mill
   b472e29c:
     - jestarr/trackside-maintenance-building
+  b48a8077:
+    - wannglondon/los-angeles-home-5
   b49943bf:
     - wannglondon/american-townhomes-8
   b4c083ee:
@@ -6669,10 +6849,16 @@ buildings:
     - gascooker/mega-props-vol01
   ceb139ee:
     - gascooker/mega-props-vol01
+  cf365ed8:
+    - ct1999/oi-kwan-hotel
   cf395b4c:
     - davide1983it/palazzo-sagesta
   cf3969d7:
     - davide1983it/palazzo-maresio
+  cf40f201:
+    - ct1999/zhencheng-building
+  cf544dad:
+    - ct1999/wenshan-building
   cf5baea5:
     - davide1983it/residential-building-set-1
   cf77c863:
@@ -6689,8 +6875,18 @@ buildings:
     - davide1983it/palazzo-derio
   cf906b2e:
     - davide1983it/torre-teala
+  cfb53db4:
+    - ct1999/lihai-building
+  cfbb3192:
+    - ct1999/eugauntong-swatow-branch
   cfbf7787:
     - jasoncw/shields-youth-center
+  cfc7ad50:
+    - ct1999/cantonese-house-pack-1
+  cfc8d152:
+    - ct1999/cantonese-house-pack-2
+  cfcf90a4:
+    - ct1999/canton-custom-house
   d0109010:
     - pegasus/spam
   d01c2195:
@@ -6721,8 +6917,16 @@ buildings:
     - jasoncw/beacon-apartments
   d097ca4e:
     - jasoncw/beacon-apartments
+  d0992bac:
+    - ct1999/new-asia-hotel
+  d09936f0:
+    - ct1999/new-china-hotel
+  d0ac6fb4:
+    - ct1999/christmas-tree-roundabout
   d0af7bf0:
     - wannglondon/haunted-mansion
+  d0bf03b7:
+    - ct1999/hua-e-building
   d0bf0413:
     - jeronij/ship-pack
   d0bf0a44:
@@ -6752,6 +6956,8 @@ buildings:
     - csx/mega-props-vol05
   d0e964db:
     - wannglondon/ny-building-6
+  d0f29747:
+    - ct1999/yue-yun-building
   d0f402c0:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
@@ -7347,26 +7553,58 @@ buildings:
     - 11241036/modular-plaza-system
   ef34f28a:
     - davide1983it/villa-javea
+  ef352d30:
+    - ct1999/oi-kwan-hotel
+  ef36427d:
+    - ct1999/oi-kwan-hotel
   ef395b6f:
     - davide1983it/palazzo-sagesta
+  ef410acb:
+    - ct1999/zhencheng-building
   ef6121d9:
     - davide1983it/residential-building-set-1
+  ef62b40f:
+    - ct1999/daqing-building
   ef77e4ca:
     - historic-harbor/lots
   ef7e6aaa:
     - davide1983it/social-housing-set-1
   ef7f3d32:
     - jasoncw/metropolitan-exchange-plaza
+  ef868b62:
+    - ct1999/flowery-pagoda
+  ef90ff5b:
+    - ct1999/daqing-building-scale-adjusted
+  efa695a9:
+    - ct1999/inoale-inn
+  efbb33da:
+    - ct1999/eugauntong-swatow-branch
+  efbd153b:
+    - ct1999/village-box-3
+  efc7b046:
+    - ct1999/cantonese-house-pack-1
+  efc8d1bd:
+    - ct1999/cantonese-house-pack-2
+  efe16aa9:
+    - ct1999/sdb-building
+  f0044d37:
+    - ct1999/kwangtung-post-office
   f05f8545:
     - pegasus/spam
+  f06f0ae9:
+    - ct1999/sunyatsen-memorial
   f08a0ff5:
     - csx/mega-props-vol05
+  f0992a12:
+    - ct1999/new-china-hotel
   f0bf0dab:
     - jeronij/ship-pack
   f0c045df:
     - jeronij/ship-pack
   f0c57411:
     - mattb325/batprops-vol01
+  f0c891ff:
+    - ct1999/kingkey-100
   f0e13390:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
@@ -7409,6 +7647,8 @@ buildings:
     - csx/mega-props-vol05
   f11040f2:
     - csx/mega-props-vol05
+  f11a500a:
+    - ct1999/peifeng-pagoda
   f11bb5f8:
     - csx/mega-props-vol05
   f124faab:
@@ -7424,6 +7664,8 @@ buildings:
     - csx/mega-props-vol05
   f1538897:
     - csx/mega-props-vol06
+  f16c3980:
+    - ct1999/szdc
   f184e53f:
     - jasoncw/train-station-set
   f1851856:
@@ -7446,6 +7688,8 @@ buildings:
     - davide1983it/1x1-residential-building-set-2
   f1c9743c:
     - mattb325/batprops-vol01
+  f1dadf68:
+    - ct1999/lai-kit-lau
   f1ef1f1f:
     - mickebear/mega-props-vol03
   f1ef1f32:
@@ -8027,6 +8271,24 @@ lots:
     - madhatter106/midrise-office-pack-vol09
   0f9bfee9:
     - madhatter106/midrise-office-pack-vol09
+  0fbb32aa:
+    - ct1999/eugauntong-swatow-branch
+  0fc7b0b8:
+    - ct1999/cantonese-house-pack-1
+  0fc7b1b6:
+    - ct1999/cantonese-house-pack-1
+  0fc8d2e1:
+    - ct1999/cantonese-house-pack-2
+  0fcf9059:
+    - ct1999/canton-custom-house
+  0fcf9092:
+    - ct1999/canton-custom-house
+  0fec8a40:
+    - ct1999/seg-plaza
+  0fec8aae:
+    - ct1999/seg-plaza
+  '10044849':
+    - ct1999/canton-custom-house
   101c2267:
     - jasoncw/alaska-building
   106fba30:
@@ -8039,6 +8301,8 @@ lots:
     - pegasus/spam
   10bd03c4:
     - jasoncw/small-police-station-1
+  10bf07a1:
+    - ct1999/hua-e-building
   10d420ef:
     - wannglondon/ny-building-3
   10e6fa81:
@@ -8085,12 +8349,16 @@ lots:
     - madhatter106/medium-wealth-shops-vol02
   1162ef52:
     - madhatter106/medium-wealth-shops-vol02
+  116c3be3:
+    - ct1999/szdc
   1181f32b:
     - historic-harbor/lots
   118707c0:
     - davide1983it/tarasco-building
   11a04e3c:
     - wannglondon/american-townhomes-4
+  11ab7c65:
+    - ct1999/village-box-4
   1219caac:
     - madhatter106/midrise-office-pack-vol10
   1219ce58:
@@ -8728,6 +8996,8 @@ lots:
     - davide1983it/villa-cubelles
   2ee0c2a9:
     - jasoncw/denton-corporation
+  2f19a655:
+    - ct1999/village-box-1
   2f213c99:
     - wannglondon/mediterranean-flats-i
   2f2b9135:
@@ -8768,6 +9038,8 @@ lots:
     - madhatter106/midrise-office-pack-vol09
   2f9c14e6:
     - madhatter106/midrise-office-pack-vol09
+  2fa6988f:
+    - ct1999/inoale-inn
   2fbce2aa:
     - wannglondon/london-building-1
   '30000010':
@@ -9421,8 +9693,12 @@ lots:
     - madhatter106/medium-wealth-shops-vol02
   3162ee98:
     - madhatter106/medium-wealth-shops-vol02
+  3175354b:
+    - ct1999/honkwok-city-center
   31ae2d4c:
     - jasoncw/magasin-valois
+  31dae1a8:
+    - ct1999/lai-kit-lau
   '32032554':
     - wannglondon/random-pack-1
   3215f63c:
@@ -10109,10 +10385,18 @@ lots:
     - wannglondon/mediterranean-building-11
   4ec9ac52:
     - wannglondon/mediterranean-building-11
+  4f19a5e1:
+    - ct1999/village-box-1
   4f1d5589:
     - davide1983it/villa-denia
+  4f351a0c:
+    - ct1999/oi-kwan-hotel
+  4f353291:
+    - ct1999/oi-kwan-hotel
   4f3fb2be:
     - pclark06/mgb-convenience-stores
+  4f40f4ad:
+    - ct1999/zhencheng-building
   4f41294f:
     - pclark06/mgb-convenience-stores
   4f4287d3:
@@ -10121,10 +10405,22 @@ lots:
     - pclark06/mgb-convenience-stores
   4f523842:
     - wannglondon/mediterranean-building-23
+  4f545036:
+    - ct1999/wenshan-building
+  4f545c7b:
+    - ct1999/wenshan-building
+  4f545cb0:
+    - ct1999/wenshan-building
+  4f546227:
+    - ct1999/wenshan-building
   4f5ba600:
     - davide1983it/residential-building-set-1
   4f5bd42f:
     - davide1983it/residential-building-set-1
+  4f62b544:
+    - ct1999/daqing-building
+  4f62b59c:
+    - ct1999/daqing-building
   4f7aaf74:
     - wannglondon/paris-building-21
   4f7ef18b:
@@ -10135,6 +10431,22 @@ lots:
     - davide1983it/social-housing-set-1
   4f9bfc8e:
     - madhatter106/midrise-office-pack-vol09
+  4fb1f8ae:
+    - ct1999/chuang-jian-building
+  4fbd1626:
+    - ct1999/village-box-3
+  4fc7b093:
+    - ct1999/cantonese-house-pack-1
+  4fc7b24c:
+    - ct1999/cantonese-house-pack-1
+  4fc8d29a:
+    - ct1999/cantonese-house-pack-2
+  '500448e6':
+    - ct1999/kwangtung-post-office
+  50044f54:
+    - ct1999/kwangtung-post-office
+  5031da86:
+    - ct1999/canton-tower
   5047df1e:
     - buddybud/jeronij-concrete-wall-addon-stairs
   5047efac:
@@ -10179,6 +10491,8 @@ lots:
     - madhatter106/medium-wealth-shops-vol02
   51ab888e:
     - jasoncw/pizza-ribs-sushi
+  51c5a62c:
+    - ct1999/szmg
   51d5c7c3:
     - jasoncw/webb-chapel-park-pavilion
   '51e16274':
@@ -13161,6 +13475,8 @@ lots:
     - davide1983it/atlantia-insurance-building
   6eec4974:
     - wannglondon/mediterranean-flats-g
+  6f1a8ad7:
+    - ct1999/village-box-1
   6f2254a2:
     - wannglondon/mediterranean-flats-j
   6f34f4d0:
@@ -13169,12 +13485,18 @@ lots:
     - davide1983it/villa-oropesa
   6f3f5715:
     - wannglondon/mediterranean-building-20
+  6f40f5bb:
+    - ct1999/zhencheng-building
+  6f410b53:
+    - ct1999/zhencheng-building
   6f479d1d:
     - pclark06/mgb-convenience-stores
   6f47a842:
     - pclark06/mgb-convenience-stores
   6f53d97b:
     - pclark06/mgb-convenience-stores
+  6f546278:
+    - ct1999/wenshan-building
   6f5c5005:
     - davide1983it/residential-building-set-1
   6f78b316:
@@ -13183,12 +13505,34 @@ lots:
     - davide1983it/social-housing-set-1
   6f831d36:
     - davide1983it/social-housing-set-1
+  6f90ffd0:
+    - ct1999/daqing-building-scale-adjusted
   6f9bf23f:
     - madhatter106/midrise-office-pack-vol09
   6f9bf93c:
     - madhatter106/midrise-office-pack-vol09
   6f9e8bcf:
     - wannglondon/mediterranean-building-28
+  6f9e8db5:
+    - ct1999/lihai-building
+  6fa697c2:
+    - ct1999/inoale-inn
+  6fa69880:
+    - ct1999/inoale-inn
+  6fb1f7f3:
+    - ct1999/chuang-jian-building
+  6fb1f807:
+    - ct1999/chuang-jian-building
+  6fc8d36a:
+    - ct1999/cantonese-house-pack-2
+  6fd61f96:
+    - ct1999/cathedral-of-st-victor
+  6fe16de0:
+    - ct1999/sdb-building
+  6fec8a31:
+    - ct1999/seg-plaza
+  7031d2d9:
+    - ct1999/canton-tower
   706db573:
     - jasoncw/hotel-utica
   706fbd92:
@@ -13203,10 +13547,14 @@ lots:
     - historic-harbor/lots
   7097cb41:
     - jasoncw/beacon-apartments
+  70992bd1:
+    - ct1999/new-china-hotel
   70b5cb20:
     - jeronij/ship-pack
   70bca162:
     - wannglondon/american-townhomes-1
+  70d5d24b:
+    - ct1999/queshi-tang
   70d9c050:
     - davide1983it/palazzo-currucci
   '710e6021':
@@ -13843,10 +14191,20 @@ lots:
     - wannglondon/mediterranean-building-1
   8ecb8f7d:
     - wannglondon/mediterranean-building-7
+  8f1ee110:
+    - ct1999/village-box-2
+  8f1ee14b:
+    - ct1999/village-box-2
+  8f1ee39e:
+    - ct1999/village-box-2
+  8f1ee406:
+    - ct1999/village-box-2
   8f2ca263:
     - davide1983it/villa-almansa
   8f34f233:
     - wannglondon/mediterranean-building-15
+  8f36437d:
+    - ct1999/oi-kwan-hotel
   8f39b22c:
     - davide1983it/residential-building-set-1
   8f39c1d8:
@@ -13875,6 +14233,8 @@ lots:
     - pclark06/mgb-convenience-stores
   8f523d3c:
     - pclark06/mgb-convenience-stores
+  8f5452a2:
+    - ct1999/wenshan-building
   8f65cd97:
     - jasoncw/dreieck-park
   8f77c3a9:
@@ -13883,20 +14243,36 @@ lots:
     - davide1983it/duplex-house-set-1
   8f78173d:
     - davide1983it/duplex-house-set-1
+  8f7870a8:
+    - ct1999/nanfang-building
   8f7fe1b3:
     - historic-harbor/lots
   8f82ff63:
     - davide1983it/social-housing-set-1
   8f864ed6:
     - wannglondon/mediterranean-building-25
+  8f90478f:
+    - ct1999/engauntong-building
   8f9bf208:
     - madhatter106/midrise-office-pack-vol09
   8f9bf5d0:
     - madhatter106/midrise-office-pack-vol09
   8f9bfba9:
     - madhatter106/midrise-office-pack-vol09
+  8fb53ff7:
+    - ct1999/lihai-building
+  8fbd163a:
+    - ct1999/village-box-3
+  8fbd1696:
+    - ct1999/village-box-3
+  8fbd16ac:
+    - ct1999/village-box-3
   8fc234eb:
     - wannglondon/french-hospital
+  8fc7b1db:
+    - ct1999/cantonese-house-pack-1
+  8fe16c40:
+    - ct1999/sdb-building
   '90000010':
     - maxis/base
   '90000030':
@@ -14469,6 +14845,10 @@ lots:
   '90001390':
     - maxis/base
     - pegasus/spam
+  9004483c:
+    - ct1999/canton-custom-house
+  90044f45:
+    - ct1999/kwangtung-post-office
   9032dc28:
     - davide1983it/maraldi-building
   '90644677':
@@ -14501,6 +14881,8 @@ lots:
     - jeronij/ship-pack
   90c2b954:
     - historic-harbor/lots
+  90c89212:
+    - ct1999/kingkey-100
   90d9c0d1:
     - davide1983it/palazzo-currucci
   90d9c822:
@@ -15104,6 +15486,10 @@ lots:
     - wannglondon/mediterranean-building-14
   af2ca37f:
     - davide1983it/villa-almansa
+  af365e3b:
+    - ct1999/oi-kwan-hotel
+  af3662e6:
+    - ct1999/oi-kwan-hotel
   af3d3dc9:
     - pclark06/mgb-convenience-stores
   af3f5934:
@@ -15136,18 +15522,36 @@ lots:
     - historic-harbor/lots
   af77e550:
     - historic-harbor/lots
+  af787175:
+    - ct1999/nanfang-building
   af787d1d:
     - davide1983it/duplex-house-set-1
   af7c3686:
     - wannglondon/mediterranean-building-24
+  af804d07:
+    - ct1999/zhenhai-tower
   af82fe09:
     - davide1983it/social-housing-set-1
   af87e61a:
     - davide1983it/social-housing-set-1
+  af904747:
+    - ct1999/engauntong-building
   af9beffd:
     - madhatter106/midrise-office-pack-vol09
+  afa697f0:
+    - ct1999/inoale-inn
   afc2346e:
     - wannglondon/french-hospital
+  afc7b070:
+    - ct1999/cantonese-house-pack-1
+  afc8d2be:
+    - ct1999/cantonese-house-pack-2
+  afc8d384:
+    - ct1999/cantonese-house-pack-2
+  afcf907b:
+    - ct1999/canton-custom-house
+  afd61f86:
+    - ct1999/cathedral-of-st-victor
   b047f102:
     - buddybud/jeronij-concrete-wall-addon-stairs
   b0721a14:
@@ -15166,6 +15570,8 @@ lots:
     - historic-harbor/lots
   b094ebb8:
     - jasoncw/great-northern-hotel
+  b0cf595e:
+    - ct1999/finance-center
   b0d9c0c6:
     - davide1983it/palazzo-currucci
   b0e6ef35:
@@ -15194,10 +15600,14 @@ lots:
   b128d801:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
+  b1595cca:
+    - ct1999/shude-building
   b162ec10:
     - madhatter106/medium-wealth-shops-vol02
   b162ec58:
     - madhatter106/medium-wealth-shops-vol02
+  b17533e1:
+    - ct1999/honkwok-city-center
   b184c540:
     - jasoncw/train-station-set
   b1e2b5d5:
@@ -15784,6 +16194,8 @@ lots:
     - maxis/luckys-hang-ten
   cecb90e7:
     - wannglondon/mediterranean-building-4
+  cf1a8b44:
+    - ct1999/village-box-1
   cf222dcc:
     - wannglondon/mediterranean-flats-i
   cf2bfc9e:
@@ -15792,6 +16204,8 @@ lots:
     - wannglondon/mediterranean-building-15
   cf34c02e:
     - wannglondon/mediterranean-building-15
+  cf365ed8:
+    - ct1999/oi-kwan-hotel
   cf39c204:
     - davide1983it/palazzo-maresio
   cf39c256:
@@ -15802,6 +16216,8 @@ lots:
     - davide1983it/palazzo-sagesta
   cf404bd9:
     - davide1983it/palazzo-sagesta
+  cf410b85:
+    - ct1999/zhencheng-building
   cf4210e4:
     - wannglondon/mediterranean-building-21
   cf4254bf:
@@ -15826,8 +16242,16 @@ lots:
     - historic-harbor/lots
   cf9beecf:
     - madhatter106/midrise-office-pack-vol09
+  cfbb3192:
+    - ct1999/eugauntong-swatow-branch
+  cfbb33b2:
+    - ct1999/eugauntong-swatow-branch
   cfbf7787:
     - jasoncw/shields-youth-center
+  cfc7b192:
+    - ct1999/cantonese-house-pack-1
+  cfcf90a4:
+    - ct1999/canton-custom-house
   d024c533:
     - historic-harbor/lots
   d0276032:
@@ -15844,6 +16268,14 @@ lots:
     - historic-harbor/lots
   d082a3d3:
     - historic-harbor/lots
+  d0992bac:
+    - ct1999/new-asia-hotel
+  d0992c12:
+    - ct1999/new-asia-hotel
+  d09936f0:
+    - ct1999/new-china-hotel
+  d0ac6fb4:
+    - ct1999/christmas-tree-roundabout
   d0af7bf0:
     - wannglondon/haunted-mansion
   d0bf0413:
@@ -15862,6 +16294,10 @@ lots:
     - wannglondon/ny-building-1
   d0ead240:
     - wannglondon/ny-building-7
+  d0f29747:
+    - ct1999/yue-yun-building
+  d0f29a19:
+    - ct1999/yue-yun-building
   d0f430ff:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
@@ -15909,10 +16345,14 @@ lots:
     - wannglondon/random-pack-1
   d24fa947:
     - jestarr/acme-pool-garden-supply
+  d2558d79:
+    - ct1999/finance-center
   d2c98f82:
     - davide1983it/1x1-residential-building-set-2
   d326f4ea:
     - davide1983it/r$-villa-pack-2
+  d32ed3ed:
+    - ct1999/yeefat-mansion
   d356b751:
     - jasoncw/wade-patton-insurance
   d38d8aaa:
@@ -16383,6 +16823,8 @@ lots:
     - madhatter106/midrise-office-pack-vol07
   e486d8d9:
     - madhatter106/midrise-office-pack-vol07
+  e48a8088:
+    - wannglondon/los-angeles-home-5
   e4acd9d0:
     - dead-end/hjorthagen-school-relot
   e4cd1390:
@@ -16655,10 +17097,14 @@ lots:
     - jasoncw/metropolitan-exchange-plaza
   ef82ff30:
     - davide1983it/social-housing-set-1
+  ef868b62:
+    - ct1999/flowery-pagoda
   ef86c4c0:
     - wannglondon/mediterranean-building-26
   ef9073ff:
     - davide1983it/torre-teala
+  ef90ff5b:
+    - ct1999/daqing-building-scale-adjusted
   ef964be9:
     - wannglondon/mediterranean-building-27
   ef9bee7d:
@@ -16677,12 +17123,26 @@ lots:
     - madhatter106/midrise-office-pack-vol09
   ef9bfece:
     - madhatter106/midrise-office-pack-vol09
+  efbb33da:
+    - ct1999/eugauntong-swatow-branch
+  efc7b046:
+    - ct1999/cantonese-house-pack-1
+  efc8d39f:
+    - ct1999/cantonese-house-pack-2
   efdbcc25:
     - davide1983it/parea-building
+  f0044d37:
+    - ct1999/kwangtung-post-office
+  f06f0ae9:
+    - ct1999/sunyatsen-memorial
   f0bf0dab:
     - jeronij/ship-pack
   f0c045df:
     - jeronij/ship-pack
+  f0c891ff:
+    - ct1999/kingkey-100
+  f0c892b6:
+    - ct1999/kingkey-100
   f0d9c061:
     - davide1983it/palazzo-currucci
   f0e6eea8:
@@ -16697,10 +17157,14 @@ lots:
   f1126a0f:
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
+  f11a500a:
+    - ct1999/peifeng-pagoda
   f162ecaa:
     - madhatter106/medium-wealth-shops-vol02
   f162eec5:
     - madhatter106/medium-wealth-shops-vol02
+  f16c3980:
+    - ct1999/szdc
   f184e53f:
     - jasoncw/train-station-set
   f1924bf0:
@@ -28441,6 +28905,8 @@ models:
     - agc/automobile-dlc
   0f2641c9:
     - agc/automobile-dlc
+  0f2d4f77:
+    - ct1999/oi-kwan-hotel
   0f31a4ce:
     - davide1983it/palazzo-maresio
   0f31bd3d:
@@ -28451,6 +28917,8 @@ models:
     - pclark06/mgb-convenience-stores
   0f3684fd:
     - pclark06/mgb-convenience-stores
+  0f37e151:
+    - ct1999/zhencheng-building
   0f3e3478:
     - jasoncw/shields-youth-center
   0f3fb5ab:
@@ -28467,6 +28935,10 @@ models:
     - agc/environment-dlc
   0f4b8d48:
     - agc/environment-dlc
+  0f4bca37:
+    - ct1999/wenshan-building
+  0f4bca6d:
+    - ct1999/wenshan-building
   0f4c41b6:
     - agc/automobile-dlc
   0f4cbadc:
@@ -28523,6 +28995,8 @@ models:
     - jeronij/mega-props-vol02
   0f574e26:
     - agc/automobile-dlc
+  0f70728e:
+    - ct1999/nanfang-building
   0f73d960:
     - agc/automobile-dlc
   0f745ee0:
@@ -28535,6 +29009,8 @@ models:
     - agc/automobile-dlc
   0f858e44:
     - agc/environment-dlc
+  0f882789:
+    - ct1999/engauntong-building
   0f9018d6:
     - agc/environment-dlc
   0f913b6a:
@@ -28547,6 +29023,8 @@ models:
     - agc/automobile-dlc
   0f9ceb4f:
     - agc/automobile-dlc
+  0f9e7ef0:
+    - ct1999/inoale-inn
   0fa0a30d:
     - davide1983it/social-housing-set-1
   0fa27560:
@@ -28563,6 +29041,12 @@ models:
     - agc/automobile-dlc
   0fbcf135-1ab2:
     - robdragon/props-vol01
+  0fbfada2:
+    - ct1999/cantonese-house-pack-1
+  0fbfbdcc:
+    - ct1999/cantonese-house-pack-1
+  0fc0ded7:
+    - ct1999/cantonese-house-pack-2
   0fc719d2:
     - wannglondon/paris-building-3
   0fc9753d:
@@ -28667,6 +29151,8 @@ models:
     - mickebear/mega-props-vol01
   10228e59-005e:
     - mickebear/mega-props-vol01
+  10287d0b:
+    - ct1999/canton-tower
   102b8367:
     - agc/automobile-dlc
   102b8d3f:
@@ -28709,6 +29195,8 @@ models:
     - agc/environment-dlc
   106535ab:
     - agc/environment-dlc
+  1065d309:
+    - ct1999/sunyatsen-memorial
   1068dc1a:
     - davide1983it/villa-topeka-v2
   '10694849':
@@ -28801,6 +29289,8 @@ models:
     - agc/environment-dlc
   109a6c42:
     - agc/environment-dlc
+  10a3a66f:
+    - ct1999/christmas-tree-roundabout
   10aef642:
     - art128/pre-2000-car-props
   10af0f5a:
@@ -29457,6 +29947,8 @@ models:
     - jeronij/mega-props-vol05
   '11662628':
     - ripptide/mega-props-vol02
+  1169ae5a:
+    - ct1999/honkwok-city-center
   116d4369:
     - agc/environment-dlc
   116fc5fb:
@@ -29694,6 +30186,8 @@ models:
     - dolphin66/mega-props-vol02
   11b0a0ad:
     - jeronij/mega-props-vol04
+  11b1a9b4:
+    - ct1999/szmg
   11b446d8:
     - wannglondon/grand-arch
   11b59bdb:
@@ -39479,6 +39973,10 @@ models:
     - agc/automobile-dlc
   2f0e520f:
     - agc/automobile-dlc
+  2f11b6ad:
+    - ct1999/village-box-1
+  2f129def:
+    - ct1999/village-box-1
   2f199fd5:
     - davide1983it/props-vol01
   2f1a37f7:
@@ -39513,6 +40011,8 @@ models:
     - davide1983it/social-housing-set-1
   2f75a4bf:
     - davide1983it/props-vol01
+  2f78584b:
+    - ct1999/zhenhai-tower
   2f7ed5b9:
     - agc/automobile-dlc
   2f82d226:
@@ -39547,12 +40047,16 @@ models:
     - wannglondon/old-mediterranean-pack
   2fb0d78d:
     - wannglondon/old-mediterranean-pack
+  2fb29435:
+    - ct1999/eugauntong-swatow-branch
   2fb2a6cd:
     - girafe/flora-pack
   2fb359ea:
     - agc/automobile-dlc
   2fb37d27:
     - girafe/flora-pack
+  2fb52757:
+    - ct1999/village-box-3
   2fbb1ea9:
     - wannglondon/mediterranean-flats
   2fc39518:
@@ -39579,6 +40083,8 @@ models:
     - agc/automobile-dlc
   2fefcd3e:
     - davide1983it/residential-building-set-1
+  2ffc39ea:
+    - ct1999/kwangtung-post-office
   30092ad1:
     - davide1983it/props-vol01
   300aa994:
@@ -39835,6 +40341,8 @@ models:
     - art128/pre-2000-car-props
   30c7472c:
     - art128/pre-2000-car-props
+  30c7679d:
+    - ct1999/finance-center
   30c76808:
     - art128/pre-2000-car-props
   30c77842:
@@ -39877,6 +40385,8 @@ models:
     - art128/pre-2000-car-props
   30cdb773:
     - art128/pre-2000-car-props
+  30cde2ec:
+    - ct1999/queshi-tang
   30ce4eca:
     - simgoober/mega-props-vol01
   30cead3e:
@@ -40081,6 +40591,8 @@ models:
     - simgoober/models-manufacture-vol02
   30e97d8f:
     - jeronij/mega-props-vol02
+  30ea72b6:
+    - ct1999/yue-yun-building
   30eac4d7:
     - simgoober/models-manufacture-vol01
   30eaf107:
@@ -40225,6 +40737,8 @@ models:
     - simgoober/models-rewards
   3110fa3c:
     - jeronij/mega-props-vol02
+  3112649f:
+    - ct1999/peifeng-pagoda
   3118fd5b:
     - jasoncw/savisaar-insurance
   311da76b:
@@ -42297,6 +42811,8 @@ models:
     - jeronij/mega-props-vol06
   332161dd:
     - jeronij/mega-props-vol06
+  '33216305':
+    - ct1999/yeefat-mansion
   332288ff:
     - jeronij/mega-props-vol06
   3322ed7d:
@@ -46395,6 +46911,8 @@ models:
     - agc/automobile-dlc
   4f0d05b5:
     - agc/automobile-dlc
+  4f16e27c:
+    - ct1999/village-box-2
   4f1e06b9:
     - davide1983it/props-vol01
   4f1e0893:
@@ -46443,6 +46961,8 @@ models:
     - agc/automobile-dlc
   4f8859bc:
     - davide1983it/torre-teala
+  4f886632:
+    - ct1999/daqing-building-scale-adjusted
   4f8b14be:
     - girafe/flora-pack
   4f9155a6:
@@ -46461,6 +46981,8 @@ models:
     - agc/automobile-dlc
   4f9ccd38:
     - agc/automobile-dlc
+  4f9e7ed9:
+    - ct1999/inoale-inn
   4fa088eb:
     - davide1983it/social-housing-set-1
   4fad0e34:
@@ -46481,10 +47003,14 @@ models:
     - agc/automobile-dlc
   4fb36049:
     - agc/automobile-dlc
+  4fc0deef:
+    - ct1999/cantonese-house-pack-2
   4fc33281:
     - agc/environment-dlc
   4fc44587:
     - agc/automobile-dlc
+  4fc6697e:
+    - ct1999/canton-custom-house
   4fc9ffa9:
     - agc/automobile-dlc
   4fcf2a4f:
@@ -46495,6 +47021,8 @@ models:
     - wannglondon/hotel-particuliers
   4febdb29:
     - agc/environment-dlc
+  4ffc3a0d:
+    - ct1999/kwangtung-post-office
   50093bbd:
     - davide1983it/props-vol01
   '50095839':
@@ -46627,6 +47155,8 @@ models:
     - davide1983it/props-vol01
   508eae91:
     - davide1983it/m10
+  '50912172':
+    - ct1999/new-asia-hotel
   509266be:
     - agc/environment-dlc
   '50927702':
@@ -53533,6 +54063,8 @@ models:
     - agc/automobile-dlc
   6f2804aa:
     - davide1983it/social-housing-set-1
+  6f2cbdf6:
+    - ct1999/oi-kwan-hotel
   6f3178b1:
     - davide1983it/palazzo-maresio
   6f353c1c:
@@ -53619,6 +54151,8 @@ models:
     - wannglondon/old-mediterranean-pack
   6fb0d32e:
     - wannglondon/old-mediterranean-pack
+  6fbfad89:
+    - ct1999/cantonese-house-pack-1
   6fc2eddb:
     - agc/environment-dlc
   6fc35605:
@@ -53958,6 +54492,8 @@ models:
     - agc/environment-dlc
   709f354b:
     - agc/environment-dlc
+  70a484dd:
+    - ct1999/christmas-tree-roundabout
   70a8c306:
     - agc/environment-dlc
   70a8dd2c:
@@ -53998,12 +54534,16 @@ models:
     - art128/pre-2000-car-props
   70b65881:
     - art128/pre-2000-car-props
+  70b713e4:
+    - ct1999/hua-e-building
   70bad3d8:
     - agc/environment-dlc
   70bc142c:
     - wannglondon/mediterranean-building-5
   70bccf59:
     - davide1983it/tarasco-building
+  70bf8064:
+    - ct1999/kingkey-100
   70c112dc:
     - ripptide/mega-props-wfk-vol01
   70c29856:
@@ -54546,6 +55086,8 @@ models:
     - agc/environment-dlc
   '71615220':
     - agc/environment-dlc
+  7162fd4b:
+    - ct1999/szdc
   716332f5:
     - ripptide/mega-props-vol02
   71635d6f:
@@ -59890,6 +60432,8 @@ models:
     - agc/automobile-dlc
   8f0d7411:
     - agc/automobile-dlc
+  8f16f49c:
+    - ct1999/village-box-2
   8f23fd0d:
     - agc/automobile-dlc
   8f261a4f:
@@ -59910,6 +60454,8 @@ models:
     - agc/environment-dlc
   8f51ea3d:
     - agc/environment-dlc
+  8f59e9da:
+    - ct1999/daqing-building
   8f71c672:
     - jasoncw/hsbc-tower
   8f7321aa:
@@ -59922,6 +60468,8 @@ models:
     - davide1983it/props-vol01
   8f798894:
     - agc/environment-dlc
+  8f7e8dc5:
+    - ct1999/flowery-pagoda
   8f7ee857:
     - agc/automobile-dlc
   8f83d876:
@@ -59936,6 +60484,8 @@ models:
     - girafe/flora-pack
   8f95531d:
     - agc/environment-dlc
+  8f966f18:
+    - ct1999/lihai-building
   8f97aaee:
     - agc/automobile-dlc
   8f9a9b53:
@@ -59970,6 +60520,10 @@ models:
     - wannglondon/mediterranean-flats-a
   8fbdded5:
     - wannglondon/mediterranean-flats-b
+  8fbfadae:
+    - ct1999/cantonese-house-pack-1
+  8fc0e5bb:
+    - ct1999/cantonese-house-pack-2
   8fc3955d:
     - davide1983it/props-vol01
   8fc86435:
@@ -59980,6 +60534,8 @@ models:
     - agc/automobile-dlc
   8fcc5c3e:
     - wannglondon/paris-building-6
+  8fce290b:
+    - ct1999/cathedral-of-st-victor
   8fd1abbc:
     - wannglondon/paris-building-10
   8fdef6ae:
@@ -60631,6 +61187,8 @@ models:
     - mickebear/mega-props-vol02
   91516aa3:
     - agc/environment-dlc
+  '91516e58':
+    - ct1999/shude-building
   9152a707:
     - ripptide/mega-props-vol03
   9152ea0b:
@@ -66408,6 +66966,8 @@ models:
     - pclark06/mgb-convenience-stores
   af353929:
     - pclark06/mgb-convenience-stores
+  af38d73c:
+    - ct1999/zhencheng-building
   af3a6f98:
     - pclark06/mgb-convenience-stores
   af3aa0e1:
@@ -66480,6 +67040,8 @@ models:
     - agc/automobile-dlc
   afb24f5c:
     - agc/automobile-dlc
+  afb29407:
+    - ct1999/eugauntong-swatow-branch
   afb33ca1:
     - agc/automobile-dlc
   afb373dc:
@@ -66494,6 +67056,8 @@ models:
     - agc/automobile-dlc
   afc4c643:
     - agc/automobile-dlc
+  afc669a5:
+    - ct1999/canton-custom-house
   afc97ca7:
     - agc/automobile-dlc
   afc9825a:
@@ -67744,6 +68308,8 @@ models:
     - wannglondon/paris-building-34
   b19c83fa:
     - csx/mega-props-vol06
+  b19d14f2:
+    - ct1999/village-box-4
   b19dfe64:
     - csx/mega-props-vol02
   b19ea7bc:
@@ -67954,6 +68520,8 @@ models:
     - art128/pre-2000-car-props
   b1cf03e3:
     - art128/pre-2000-car-props
+  b1d1dd7a:
+    - ct1999/lai-kit-lau
   b1d3975a:
     - mikeseith/mega-props-vol01
   b1d397dd:
@@ -78874,6 +79442,8 @@ models:
     - jmyers2043/mega-props-agriculture-vol01
   cf2bdcf8-0061:
     - jmyers2043/mega-props-agriculture-vol01
+  cf2e5931:
+    - ct1999/oi-kwan-hotel
   cf31822d:
     - davide1983it/palazzo-maresio
   cf319213:
@@ -78906,6 +79476,8 @@ models:
     - agc/automobile-dlc
   cf575ec1:
     - agc/automobile-dlc
+  cf707223:
+    - ct1999/nanfang-building
   cf71201f:
     - davide1983it/social-housing-set-1
   cf74499b:
@@ -78974,8 +79546,12 @@ models:
     - agc/automobile-dlc
   cfccc9b4:
     - agc/automobile-dlc
+  cfce28f4:
+    - ct1999/cathedral-of-st-victor
   cfd5ecb5:
     - wannglondon/paris-building-12
+  cfd8800f:
+    - ct1999/sdb-building
   cfe2e25f:
     - wannglondon/hotel-particuliers
   cfe843e6:
@@ -81952,6 +82528,8 @@ models:
     - jestarr/willis-nut-bolt
   d40a6009:
     - csx/mega-props-vol07
+  d40a927c:
+    - wannglondon/los-angeles-home-5
   d40a9392:
     - agc/automobile-dlc
   d40a96c9:
@@ -85762,6 +86340,8 @@ models:
     - agc/automobile-dlc
   efa7b784:
     - agc/automobile-dlc
+  efa96dd6:
+    - ct1999/chuang-jian-building
   efab553b:
     - wannglondon/old-mediterranean-pack
   efabc047:
@@ -85780,6 +86360,8 @@ models:
     - agc/automobile-dlc
   efb3404f:
     - agc/automobile-dlc
+  efb52765:
+    - ct1999/village-box-3
   efba1bc8:
     - wannglondon/mediterranean-flats
   efbf7155:
@@ -85790,6 +86372,8 @@ models:
     - wannglondon/paris-building-5
   efdf0d8c:
     - wannglondon/hotel-particuliers
+  efe3574b:
+    - ct1999/seg-plaza
   efec4a48:
     - jasoncw/hotel-utica
   efeec02d:
@@ -85920,6 +86504,8 @@ models:
     - davide1983it/props-vol01
   f08e3bf9:
     - agc/automobile-dlc
+  f091219c:
+    - ct1999/new-china-hotel
   f09771b2:
     - agc/automobile-dlc
   f097ba72:
@@ -100977,6 +101563,8 @@ props:
   '112564e0':
     - davide1983it/1x1-residential-building-set-1
     - davide1983it/1x1-residential-building-set-2
+  1125b88a:
+    - ct1999/christmas-tree-roundabout
   '112768e9':
     - agc/automobile-dlc
   11276d6f:
@@ -126979,6 +127567,8 @@ props:
     - rretail/mega-props-vol03
   5facc5d9:
     - rretail/mega-props-vol03
+  5fafa7ce:
+    - ct1999/oi-kwan-hotel
   5fb0b211:
     - girafe/carpack
   5fb0b757:
@@ -144073,6 +144663,8 @@ props:
     - rretail/mega-props-vol03
   9facc186:
     - rretail/mega-props-vol03
+  9faf85fc:
+    - ct1999/oi-kwan-hotel
   9fb0b21d:
     - girafe/carpack
   9fb2d744:
@@ -144151,6 +144743,10 @@ props:
     - historic-harbor/props
   9febfe93:
     - historic-harbor/props
+  9ff1b707:
+    - ct1999/nanfang-building
+  9ff1b72e:
+    - ct1999/nanfang-building
   9ff7494f:
     - shokthrpy/parking-pack
   a0027bfb:

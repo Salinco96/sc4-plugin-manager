@@ -32113,10 +32113,152 @@ assets:
     authors:
       - Ct1999
     category: 108-parks-plazas
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"91704\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_12/ChrismasTree2022_7(Preview).jpg.e7344ad5158c8803d3541029973a988d.jpg\" alt=\"ChrismasTree2022_7(Preview).jpg.e7344ad5158c8803d3541029973a988d.jpg\" >\n</p>\n\n<p>\n\tChristmas Tree (Chinese: 圣诞树)… Just a Christmas Tree, Please don’t expect any description from this.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS PA :\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ \_ \_ \_ 2x2<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_ 500\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tJust download \"MaxisNite\" or \"DarkNite\" version of the building.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tThis time there is no spot for an Easter Egg to put in this building.<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/ChrismasTree2022_5.jpg.b13ac738d6688e4e9d7ae293a7c95b77.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/ChrismasTree2022_6.jpg.a7b0a87c0a226d9b28d16d697e7a2c09.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_12/ChrismasTree2022_8.jpg.887e39acb3b55ca7cc8d1d74fc5174d7.jpg
     lastModified: 2022-12-24T14:16:24.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Christmas Tree Roundabout
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_12/ChrismasTree2022_5.thumb.jpg.66922f24b7f82f4680e1b1cba2ec41b8.jpg
     url: https://community.simtropolis.com/files/file/35363-christmas-tree-roundabout/
+    variants:
+      '195882':
+        buildings:
+          ChristmasTree2022(DN)/ChristmasTree2022(BlankBox)-0x6534284a-0x9faf82fb-0xf0ac6e06.SC4Desc:
+            9faf82fb-f0ac6e06:
+              bulldoze: 100
+              cost: 500
+              description: Merry Christmas--Ct1999
+              flamability: 10
+              label: ChristmasTree2022
+              landmark: 20
+              landmarkRadius: 5
+              maintenance: 15
+              menu: Parks
+              model: 70a484dd
+              name: ChristmasTree2022(BlankBox)
+              relief:
+                r$: 750
+                r$$: 750
+                r$$$: 750
+          ChristmasTree2022(DN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot:
+            9faf82fb-d0ac6fb4:
+              bulldoze: 100
+              cost: 500
+              description: Merry Christmas--Ct1999
+              flamability: 10
+              label: ChristmasTree2022
+              landmark: 20
+              landmarkRadius: 5
+              maintenance: 15
+              menu: Parks
+              model: 70a484dd
+              name: ChristmasTree2022(BlankBox)
+              relief:
+                r$: 750
+                r$$: 750
+                r$$$: 750
+        features: []
+        filename: ChristmasTree2022(DN).zip
+        files:
+          - ChristmasTree2022(DN)/ChristmasTree2022(BlankBox)-0x5ad0e817_0x70a484dd_0x30000.SC4Model
+          - ChristmasTree2022(DN)/ChristmasTree2022(BlankBox)-0x6534284a-0x9faf82fb-0xf0ac6e06.SC4Desc
+          - ChristmasTree2022(DN)/ChristmasTree2022(HD)-0x5ad0e817_0x10a3a66f_0x30000.SC4Model
+          - ChristmasTree2022(DN)/ChristmasTree2022(HD)-0x6534284a-0x9faf82fb-0x1125b88a.SC4Desc
+          - ChristmasTree2022(DN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot
+          - ChristmasTree2022(DN)/ReadMe.txt
+        lots:
+          ChristmasTree2022(DN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot:
+            d0ac6fb4:
+              building: d0ac6fb4
+              name: PLOP_2x2_ChristmasTree2022
+              props: 1125b88a
+              size: 2x2
+        models:
+          ChristmasTree2022(DN)/ChristmasTree2022(BlankBox)-0x5ad0e817_0x70a484dd_0x30000.SC4Model:
+            - 70a484dd
+          ChristmasTree2022(DN)/ChristmasTree2022(HD)-0x5ad0e817_0x10a3a66f_0x30000.SC4Model:
+            - 10a3a66f
+        props:
+          ChristmasTree2022(DN)/ChristmasTree2022(HD)-0x6534284a-0x9faf82fb-0x1125b88a.SC4Desc:
+            9faf82fb-1125b88a:
+              model: 10a3a66f
+              name: ChristmasTree2022(HD)
+        sha256: 8ff0232528fa4523975639848481070e2a1d433a89d4177090e13c0bd06ab3b0
+        size: 3506110
+        uncompressed: 4047701
+      '195883':
+        buildings:
+          ChristmasTree2022(MN)/ChristmasTree2022(BlankBox)-0x6534284a-0x9faf82fb-0xf0ac6e06.SC4Desc:
+            9faf82fb-f0ac6e06:
+              bulldoze: 100
+              cost: 500
+              description: Merry Christmas--Ct1999
+              flamability: 10
+              label: ChristmasTree2022
+              landmark: 20
+              landmarkRadius: 5
+              maintenance: 15
+              menu: Parks
+              model: 70a484dd
+              name: ChristmasTree2022(BlankBox)
+              relief:
+                r$: 750
+                r$$: 750
+                r$$$: 750
+          ChristmasTree2022(MN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot:
+            9faf82fb-d0ac6fb4:
+              bulldoze: 100
+              cost: 500
+              description: Merry Christmas--Ct1999
+              flamability: 10
+              label: ChristmasTree2022
+              landmark: 20
+              landmarkRadius: 5
+              maintenance: 15
+              menu: Parks
+              model: 70a484dd
+              name: ChristmasTree2022(BlankBox)
+              relief:
+                r$: 750
+                r$$: 750
+                r$$$: 750
+        features: []
+        filename: ChristmasTree2022(MN).zip
+        files:
+          - ChristmasTree2022(MN)/ChristmasTree2022(BlankBox)-0x5ad0e817_0x70a484dd_0x30000.SC4Model
+          - ChristmasTree2022(MN)/ChristmasTree2022(BlankBox)-0x6534284a-0x9faf82fb-0xf0ac6e06.SC4Desc
+          - ChristmasTree2022(MN)/ChristmasTree2022(HD)-0x5ad0e817_0x10a3a66f_0x30000.SC4Model
+          - ChristmasTree2022(MN)/ChristmasTree2022(HD)-0x6534284a-0x9faf82fb-0x1125b88a.SC4Desc
+          - ChristmasTree2022(MN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot
+          - ChristmasTree2022(MN)/ReadMe.txt
+        lots:
+          ChristmasTree2022(MN)/PLOP_2x2_ChristmasTree2022_d0ac6fb4.SC4Lot:
+            d0ac6fb4:
+              building: d0ac6fb4
+              name: PLOP_2x2_ChristmasTree2022
+              props: 1125b88a
+              size: 2x2
+        models:
+          ChristmasTree2022(MN)/ChristmasTree2022(BlankBox)-0x5ad0e817_0x70a484dd_0x30000.SC4Model:
+            - 70a484dd
+          ChristmasTree2022(MN)/ChristmasTree2022(HD)-0x5ad0e817_0x10a3a66f_0x30000.SC4Model:
+            - 10a3a66f
+        props:
+          ChristmasTree2022(MN)/ChristmasTree2022(HD)-0x6534284a-0x9faf82fb-0x1125b88a.SC4Desc:
+            9faf82fb-1125b88a:
+              model: 10a3a66f
+              name: ChristmasTree2022(HD)
+        sha256: b1b9047f6f64391eb416ee61ae9634ff3143773550e0e376440f297d82710ea1
+        size: 3157957
+        uncompressed: 3681407
+    version: 1.0.0
   simtropolis/35368:
     assetId: simtropolis/35368-dreieck-park
     authors:
@@ -33652,6 +33794,15 @@ assets:
     name: The Cyclone
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-83f83a1de803ae7b23e44ab82655dd2e-TheCyclone3.jpg
     url: https://community.simtropolis.com/files/file/3664-the-cyclone/
+  simtropolis/36672:
+    assetId: simtropolis/36672-kamis-lookout
+    authors:
+      - Dutchdragon
+    category: 108-parks-plazas
+    lastModified: 2025-01-17T15:07:33.000Z
+    name: Kami's Lookout
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/3.thumb.jpg.13c875b5993d3c06cf660bf911eb7975.jpg
+    url: https://community.simtropolis.com/files/file/36672-kamis-lookout/
   simtropolis/3671:
     assetId: simtropolis/3671-river-woods-park-auburn-hills-michigan
     authors:
@@ -35967,4 +36118,4 @@ assets:
     url: https://community.simtropolis.com/files/file/998-large-park/
 
 meta:
-  timestamp: 2025-01-16T08:04:08.095Z
+  timestamp: 2025-01-22T07:05:40.696Z

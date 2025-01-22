@@ -24631,38 +24631,6 @@ assets:
     name: Radiation particle effect remover
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/radiationgone.thumb.png.856971d224064c3cbeba45a05f91a8a0.png
     url: https://community.simtropolis.com/files/file/36223-radiation-particle-effect-remover/
-  simtropolis/36227:
-    assetId: simtropolis/36227-dgvoodoo-2-simcity-4-edition
-    authors:
-      - Ulisse Wolf
-    category: 113-graphical-mods
-    dependencies: []
-    description: "<body>\n\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n                                  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p style=\"color:#22262a; font-size:16px; text-align:center;\">\n\t<strong><span style=\"font-size:36px\">DgVoodoo 2 - SimCity 4 Edition</span></strong>\n</p>\n\n<p style=\"font-size:16px;\">\n\tThis package allows a quick installation of DgVoodoo 2 for SimCity 4 and its configuration. It\_also offers solutions on how to solve possible compatibility problems with DgVoodoo 2 and SC4 with modern CPUs.\_\n</p>\n\n<p style=\"font-size:16px;\">\n\tThis version of DgVoodoo has already been configured for maximum performance from the game but we still recommend that you edit \"Adapter(s) to use / enable\" to include your primary GPU\n</p>\n\n<p style=\"font-size:16px;\">\n\tBefore installing DgVoodoo 2 \"SC4 Version\" you must make sure that the 4GB Patch is applied as it is essential for the corect operation of DgVoodoo 2.\n</p>\n\n<p style=\"font-size:16px;\">\n\tGenerally the 4GB Patch is included in <abbr title=\"Network Addon Mod\">NAM</abbr> 40 or later versions and <abbr title=\"Colossus Addon Mod\">CAM</abbr> 2.5 or later versions but in the case the 4GB Patch was included in this package.\n</p>\n\n<p style=\"font-size:16px;\">\n\t\_\n</p>\n\n<p style=\"font-size:16px;\">\n\t<strong>INSTALLATION</strong>\n</p>\n\n<p style=\"font-size:16px;\">\n\t1) Copy the contents of the SimCity 4 folder inside the SimCity 4 installation folder and overwrite the indicated files during the transfer step<br>\n\t2) Go inside the APPS folder and drag SimCity4.exe to 4gb_patch.exe to apply the 4 GB patch.<br>\n\t3) Depending on your GPU you need to follow the Fixes given in the other text files in the package.\_<br>\n\t\_ \_3a) If you have Intel GPUs then you need to follow the procedures indicated on Intel GPU Fix.txt.<br>\n\t\_ \_3b) If you have AMD GPU then you need to follow the procedures indicated on AMD GPU Fix.txt<br>\n\t\_ \_3c) If you have NVIDIA GPU then you need to follow the procedures given on NVIDIA GPU Fix.txt<br>\n\t4) Configuration completed\n</p>\n\n<p style=\"font-size:16px;\">\n\t\_\n</p>\n\n<p style=\"font-size:16px;\">\n\t<strong>CREDITS</strong>\n</p>\n\n<p style=\"font-size:16px;\">\n\tThanks to the original creator DgVoodoo 2 (dege-diosg) for developing a wrapper that converts old DirectX calls to DirectX 9/11/12 calls. You can find his work here\_\n</p>\n\n<p style=\"font-size:16px;\">\n\t<a href=\"https://github.com/dege-diosg/dgVoodoo2\" ipsnoembed=\"true\" rel=\"external nofollow\">https://github.com/dege-diosg/dgVoodoo2</a>\n</p>\n\n<p style=\"font-size:16px;\">\n\tThanks to RSC204 / MGB\_who provided specially modified versions of the\_Graphics Rules.sgr and Video Cards.sgr files of SimCity 4, which ensure\_DgVoodoo runs optimally.\n</p>\n\n<p style=\"font-size:16px;\">\n\tThanks to the creator of the 4GB Patch for developing the tool that allows SimCity 4 to use 4GB of RAM instead of 2GB of RAM.\n</p>\n\n<p style=\"font-size:16px;\">\n\tThanks to jdenm8 for posting a solution to improve SimCity 4 compatibility on AMD video cards.\n</p>\n\n\t\t\t\t\t\t</body>"
-    file: DgVoodoo 2 SC4 Version.zip
-    files:
-      - DgVoodoo 2 SC4 Version/3c - NVIDIA GPU Fix.txt
-      - DgVoodoo 2 SC4 Version/3b - AMD GPU Fix.txt
-      - DgVoodoo 2 SC4 Version/3a - Intel GPU Fix.txt
-      - DgVoodoo 2 SC4 Version/01 - Installation guide.txt
-      - DgVoodoo 2 SC4 Version/SimCity 4/Video Cards.sgr
-      - DgVoodoo 2 SC4 Version/SimCity 4/Graphics Rules.sgr
-      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/dgVoodoo.conf
-      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/DDraw.dll
-      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3DImm.dll
-      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3D9.dll
-      - DgVoodoo 2 SC4 Version/SimCity 4/Apps/D3D8.dll
-    images:
-      - https://www.simtropolis.com/objects/screens/monthly_2024_04/communityIcon_pznebvf29ih91.jpg.280703d35609822b6611b442e81c3082.jpg
-    lastModified: 2024-08-11T11:58:24.000Z
-    name: DgVoodoo 2 - SimCity 4 Edition
-    repository: https://github.com/dege-diosg/dgVoodoo2
-    sha256: a8ee58d2f36482fc6c231027bea70c1be370e86b81bea972936b3bf9c55563dd
-    size: 1540947
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_04/communityIcon_pznebvf29ih91.thumb.jpg.ff024df162ef710ab91aae67c66745e4.jpg
-    timestamp: 2024-08-05T10:23:31.202Z
-    uncompressed: 1839447
-    url: https://community.simtropolis.com/files/file/36227-dgvoodoo-2-simcity-4-edition/
-    version: '2.0'
   simtropolis/36330:
     assetId: simtropolis/36330-westwind-streets
     authors:
@@ -25190,4 +25158,4 @@ assets:
     url: https://community.simtropolis.com/files/file/966-surface-water-volume-1/
 
 meta:
-  timestamp: 2025-01-16T08:04:08.095Z
+  timestamp: 2025-01-22T07:05:40.696Z

@@ -33900,11 +33900,184 @@ assets:
     assetId: simtropolis/34862-modern-chinese-village-box-1
     authors:
       - Ct1999
+    buildings:
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/LM1x1_ChineseVillageBox_Test_4f19a5e1.SC4Lot:
+        8d1359d4-4f19a5e1:
+          categories: landmarks
+          description: Only for testing purpose
+          flamability: 10
+          garbage: 15
+          label: VillageBox_Test
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 2f11b6ad
+          name: VillageBox_LM
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox_LM-0x6534284a-0x8d1359d4-0x8f19a480.SC4Desc:
+        8d1359d4-8f19a480:
+          categories: landmarks
+          description: Only for testing purpose
+          flamability: 10
+          garbage: 15
+          label: VillageBox_Test
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 2f11b6ad
+          name: VillageBox_LM
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox_R$-0x6534284a-0x8d1359d4-0xaf19a4d1.SC4Desc:
+        8d1359d4-af19a4d1:
+          bulldoze: 168
+          capacity:
+            r$: 31
+          categories: r$
+          flamability: 45
+          garbage: 3
+          model: 2f11b6ad
+          name: VillageBox_R$
+          pollution: 1
+          pollutionRadius: 5
+          power: 2
+          tilesets: Euro
+          water: 3
+          worth: 597
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/LM1x1_VillageBox_6f1a8ad7.SC4Lot:
+        8d1359d4-6f1a8ad7:
+          categories: landmarks
+          description: Only for testing purpose
+          flamability: 10
+          garbage: 15
+          label: VillageBox_Testing
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 2f129def
+          name: VillageBox_LM
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox_LM-0x6534284a-0x8d1359d4-0xef1a8957.SC4Desc:
+        8d1359d4-ef1a8957:
+          categories: landmarks
+          description: Only for testing purpose
+          flamability: 10
+          garbage: 15
+          label: VillageBox_Testing
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 2f129def
+          name: VillageBox_LM
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox_R$-0x6534284a-0x8d1359d4-0x0f1a89a7.SC4Desc:
+        8d1359d4-0f1a89a7:
+          bulldoze: 168
+          capacity:
+            r$: 31
+          categories: r$
+          flamability: 45
+          garbage: 3
+          model: 2f129def
+          name: VillageBox_R$
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          tilesets: Euro
+          water: 3
+          worth: 597
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"86022\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_05/62774eb163eeb_.jpg.92031529f2413cf94efbe630815575df.jpg\" alt=\"62774eb163eeb_.jpg.92031529f2413cf94efbe630815575df.jpg\" >\n</p>\n\n<p>\n\tThis kind building can usually seen in the southern Chinese province\_<br>\n\t( Such as : GuangDong Specially there are a lot of higher version of these can be found in ShenZhen, which\_is called as \"农民房\" in Chinese)\n</p>\n\n<p>\n\tHonestly, the reasons why I choose this building is because my modeling skill is not skillful enough.\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tSTATS R$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tGrowth Stage: \_ \_ \_ \_ 3 (At least Medium Density)<br>\n\tCapacity Satisfied: \_ R$ 31\_<br>\n\tBuilding Style: \_ \_ \_ \_ Euro<br>\n\tOccupant Group: \_ \_Low Wealth Residential Building\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tSTATS LM (This for preview purpose) :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tBulldoze Cost: \_ \_ \_ \_Free\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tDEPENDENCIES:\n</p>\n\n<p>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> Textures Vol 01 ( <a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90\" rel=\"external nofollow\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=90</a> )\n</p>\n\n<p>\n\t---------------------------------------<br>\n\tThis zip file contains both MaxisNite and DarkNite version, just choose one of it and<br>\n\tunzip the file and put it in your plugin file.\n</p>\n\n<p>\n\t( I personally recommend the DarkNite version which is because this is the version I fully tested. )\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Ct1999_ChineseVillageBox_1.zip
+    files:
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/LM1x1_ChineseVillageBox_Test_4f19a5e1.SC4Lot
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/R$3_1x1_ChineseVillageBox_2f19a655.SC4Lot
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox-0x5ad0e817_0x2f11b6ad_0x30000.SC4Model
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox_LM-0x6534284a-0x8d1359d4-0x8f19a480.SC4Desc
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox_R$-0x6534284a-0x8d1359d4-0xaf19a4d1.SC4Desc
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/LM1x1_VillageBox_6f1a8ad7.SC4Lot
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/R$3_1x1_VillageBox_cf1a8b44.SC4Lot
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox-0x5ad0e817_0x2f129def_0x30000.SC4Model
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox_LM-0x6534284a-0x8d1359d4-0xef1a8957.SC4Desc
+      - Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox_R$-0x6534284a-0x8d1359d4-0x0f1a89a7.SC4Desc
+      - Ct1999_ChineseVillageBox_1/ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/620dfac62f423_Canton-Apr.214801645015935.jpg.3dd853c6107eb5d8fe7af396b57b7007.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/620dfae22c42e_Canton-Apr.214801645015943.jpg.a9bc00b872c3fec93a0692720f7cd39a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/620dfafc46b9a_Canton-Nov.54871645024136.png.95d12cf52559a2a7ecc266f596c5a988.png
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/VillageBox.jpg.9f2b31d2b22a34d12b1e80c7f2ee1668.jpg
     lastModified: 2022-02-17T07:42:45.000Z
+    lots:
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/LM1x1_ChineseVillageBox_Test_4f19a5e1.SC4Lot:
+        4f19a5e1:
+          building: 4f19a5e1
+          name: LM1x1_ChineseVillageBox_Test
+          props: 2bd40000
+          size: 1x1
+          textures: 258f2000
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/R$3_1x1_ChineseVillageBox_2f19a655.SC4Lot:
+        2f19a655:
+          building: af19a4d1
+          density: medium,high
+          name: R$3_1x1_ChineseVillageBox
+          size: 1x1
+          stage: 3
+          textures: 1da44060
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/LM1x1_VillageBox_6f1a8ad7.SC4Lot:
+        6f1a8ad7:
+          building: 6f1a8ad7
+          name: LM1x1_VillageBox
+          props: 2bd40000
+          size: 1x1
+          textures: 258f2000
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/R$3_1x1_VillageBox_cf1a8b44.SC4Lot:
+        cf1a8b44:
+          building: 0f1a89a7
+          density: medium,high
+          name: R$3_1x1_VillageBox
+          size: 1x1
+          stage: 3
+          textures: 1da44060
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_DarkNite/VillageBox-0x5ad0e817_0x2f11b6ad_0x30000.SC4Model:
+        - 2f11b6ad
+      Ct1999_ChineseVillageBox_1/Ct1999_ChineseVillageBox_1_MaxisNite/VillageBox-0x5ad0e817_0x2f129def_0x30000.SC4Model:
+        - 2f129def
     name: Modern Chinese Village Box 1
+    sha256: 8dd39f55fef393b53c56c4a3887a37606e3c50112a482753f34e3ca7ea0baf3a
+    size: 456142
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_02/620dfc693160b_Canton-Apr.214801645015935.thumb.jpg.cd414089e2b955c2ade2ccb7369d935b.jpg
+    uncompressed: 547620
     url: https://community.simtropolis.com/files/file/34862-modern-chinese-village-box-1/
+    version: 1.0.0
   simtropolis/34863:
     assetId: simtropolis/34863-81-summer-st-overhanging-residential
     authors:
@@ -33974,11 +34147,188 @@ assets:
     assetId: simtropolis/34868-modern-chinese-village-box-2
     authors:
       - Ct1999
+    buildings:
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/ChineseVillageBox2_LM_DarkNite-0x6534284a-0x8d1359d4-0xef1eccc2.SC4Desc:
+        8d1359d4-ef1eccc2:
+          categories: landmarks
+          description: For Preview Only
+          flamability: 10
+          garbage: 15
+          label: ChineseVillageBox2_LM_DarkNite
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 4f16e27c
+          name: ChineseVillageBox2_LM_DarkNite
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/ChineseVillageBox2_R$_DarkNite-0x6534284a-0x8d1359d4-0x8f1ecd00.SC4Desc:
+        8d1359d4-8f1ecd00:
+          bulldoze: 315
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: 4f16e27c
+          name: ChineseVillageBox2_R$_DarkNite
+          pollution: 3
+          pollutionRadius: 5
+          power: 10
+          tilesets: Euro
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1313
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/LM1x1_ChineseVillageBox2_LM_DarkNite_8f1ee39e.SC4Lot:
+        8d1359d4-8f1ee39e:
+          categories: landmarks
+          description: For Preview Only
+          flamability: 10
+          garbage: 15
+          label: ChineseVillageBox2_LM_DarkNite
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 4f16e27c
+          name: ChineseVillageBox2_LM_DarkNite
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/ChineseVillageBox2_LM_MaxisNite-0x6534284a-0x8d1359d4-0x6f1edf26.SC4Desc:
+        8d1359d4-6f1edf26:
+          categories: landmarks
+          description: For Preview Only
+          flamability: 10
+          garbage: 15
+          label: ChineseVillageBox2_LM_MaxisNite
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 8f16f49c
+          name: ChineseVillageBox2_LM_MaxisNite
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/ChineseVillageBox2_R$_MaxisNite-0x6534284a-0x8d1359d4-0x0f1edf7d.SC4Desc:
+        8d1359d4-0f1edf7d:
+          bulldoze: 315
+          capacity:
+            r$: 121
+          categories: r$
+          flamability: 45
+          garbage: 6
+          model: 8f16f49c
+          name: ChineseVillageBox2_R$_MaxisNite
+          pollution: 3
+          pollutionRadius: 5
+          power: 5
+          tilesets: Euro
+          water: 5
+          waterPollution: 1
+          waterPollutionRadius: 5
+          worth: 1313
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/LM1x1_ChineseVillageBox2_LM_MaxisNite_8f1ee110.SC4Lot:
+        8d1359d4-8f1ee110:
+          categories: landmarks
+          description: For Preview Only
+          flamability: 10
+          garbage: 15
+          label: ChineseVillageBox2_LM_MaxisNite
+          landmark: 40
+          landmarkRadius: 20
+          menu: Landmarks
+          model: 8f16f49c
+          name: ChineseVillageBox2_LM_MaxisNite
+          pollution: 1
+          pollutionRadius: 1
+          power: 60
+          rating: 10
+          ratingRadius: 256
+          waterPollution: 1
+          waterPollutionRadius: 2
     category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"86023\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_05/62774ef404efa_.jpg.9a7441c1bdc0d20c5213913506e10415.jpg\" alt=\"62774ef404efa_.jpg.9a7441c1bdc0d20c5213913506e10415.jpg\" >\n</p>\n\n<p>\n\tThis kind building can usually seen in the southern Chinese province\_<br>\n\t( Such as : GuangDong Specially there are a lot of higher version of these can be found in ShenZhen,<br>\n\tUsually this is called as \"农民房\" in Chinese)\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tSTATS R$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tGrowth Stage: \_ \_ \_ \_ 4 (At least Medium Density)<br>\n\tCapacity Satisfied: \_ R$ 121\_<br>\n\tBuilding Style: \_ \_ \_ \_ Euro<br>\n\tOccupant Group: \_ \_Low Wealth Residential Building\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tBulldoze Cost: \_ \_ \_ \_Free\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tDEPENDENCIES:<br>\n\tNone\n</p>\n\n<p>\n\t---------------------------------------\n</p>\n\n<p>\n\tThis zip file contains both MaxisNite and DarkNite version, just choose one of it and<br>\n\tunzip the file and put it in your plugin file.\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Ct1999_ChineseVillageBox_2.zip
+    files:
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/ChineseVillageBox2_LM_DarkNite-0x6534284a-0x8d1359d4-0xef1eccc2.SC4Desc
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/ChineseVillageBox2_R$_DarkNite-0x6534284a-0x8d1359d4-0x8f1ecd00.SC4Desc
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/LM1x1_ChineseVillageBox2_LM_DarkNite_8f1ee39e.SC4Lot
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/R$4_1x1_ChineseVillageBox2_R$_DarkNite_8f1ee406.SC4Lot
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/VillageBox2-0x5ad0e817_0x4f16e27c_0x30000.SC4Model
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/ChineseVillageBox2_LM_MaxisNite-0x6534284a-0x8d1359d4-0x6f1edf26.SC4Desc
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/ChineseVillageBox2_R$_MaxisNite-0x6534284a-0x8d1359d4-0x0f1edf7d.SC4Desc
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/LM1x1_ChineseVillageBox2_LM_MaxisNite_8f1ee110.SC4Lot
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/R$4_ChineseVillageNite2_R$_MaxisNite_8f1ee14b.SC4Lot
+      - Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/VillageBox2-0x5ad0e817_0x8f16f49c_0x30000.SC4Model
+      - Ct1999_ChineseVillageBox_2/ReadMe.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/62130728e56ad_Canton-Nov.134911645362916.jpg.2b220602c3f3a26f7d291bade935f8e0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/6213075954dbe_Canton-Apr.224921645366750.jpg.b22524c335efc7f95660ef8871f28046.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/62130774cfc31_Canton-May.14921645366773.jpg.479c736fb63e3acace3a317aa964fb23.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_02/VillageBox2.jpg.f70d5a67f0e7518af23241b582118e6a.jpg
     lastModified: 2022-02-21T03:33:25.000Z
+    lots:
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/LM1x1_ChineseVillageBox2_LM_DarkNite_8f1ee39e.SC4Lot:
+        8f1ee39e:
+          building: 8f1ee39e
+          name: LM1x1_ChineseVillageBox2_LM_DarkNite
+          props: 2bd40000
+          size: 1x1
+          textures: 258f2000
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/R$4_1x1_ChineseVillageBox2_R$_DarkNite_8f1ee406.SC4Lot:
+        8f1ee406:
+          building: 8f1ecd00
+          density: medium,high
+          name: R$4_1x1_ChineseVillageBox2_R$_DarkNite
+          size: 1x1
+          stage: 4
+          textures: '25901000'
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/LM1x1_ChineseVillageBox2_LM_MaxisNite_8f1ee110.SC4Lot:
+        8f1ee110:
+          building: 8f1ee110
+          name: LM1x1_ChineseVillageBox2_LM_MaxisNite
+          props: 2bd40000
+          size: 1x1
+          textures: 258f2000
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/R$4_ChineseVillageNite2_R$_MaxisNite_8f1ee14b.SC4Lot:
+        8f1ee14b:
+          building: 0f1edf7d
+          density: medium,high
+          name: R$4_ChineseVillageNite2_R$_MaxisNite
+          size: 1x1
+          stage: 4
+          textures: '25901000'
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_DarkNite/VillageBox2-0x5ad0e817_0x4f16e27c_0x30000.SC4Model:
+        - 4f16e27c
+      Ct1999_ChineseVillageBox_2/Ct1999_ChineseVillageBox_2_MaxisNite/VillageBox2-0x5ad0e817_0x8f16f49c_0x30000.SC4Model:
+        - 8f16f49c
     name: Modern Chinese Village Box 2
+    sha256: d932eadabe92ade7cb07ba1976e3e71f0681807ca6ff8da37d9100840d54c3ea
+    size: 544925
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_02/62130801cad72_Canton-Nov.134911645362916.thumb.jpg.aef7d59bd535db686311a5153a96b53a.jpg
+    uncompressed: 622599
     url: https://community.simtropolis.com/files/file/34868-modern-chinese-village-box-2/
+    version: 1.0.0
   simtropolis/34877:
     assetId: simtropolis/34877-flat-arnhem
     authors:
@@ -34255,10 +34605,218 @@ assets:
     authors:
       - Ct1999
     category: 101-residential
+    dependencies:
+      - cycledogg/mega-props-vol01
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"6235ba9ccf536__15.jpg.4d43360b4fdd04613cf907c3ca885376.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"84218\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_03/6235ba9ccf536__15.jpg.4d43360b4fdd04613cf907c3ca885376.jpg\" >\n</p>\n\n<p>\n\tZhencheng building is located in the central and southern\_part of hongkeng village, Hukeng Town, Yongding County,\_Longyan City, Fujian Province. It was built in 1912 by Lin\_Hongchao brothers, the 21st generation of hongkeng Lin\_family. Commonly known as Bagua building, it is famous\_for its magnificence and exquisite interior space design.\_ts local architectural style and the colors used in the gate,\_interior wall, ancestral hall and flower wall boldly adopt the\_principle of diversity and unity emphasized by western\_architectural aesthetics, reaching a very high aesthetic realm.\_It can be called a masterpiece of native land residential\_buildings combining Chinese and western. The building\_faces south and covers an area of about 5000 square meters.\_It is composed of two concentric rings. Outer ring civil structure,\_4 stories high, 57.2m in diameter, inner corridor type. It is divided\_into inner and outer circles. There are four outer rings with 48\_rooms on each floor, which are built completely according\_to the layout of \"Eight Diagrams\" in the book of changes,\_with 6 rooms on each.\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$$ : \_( I am not kidding this is technically a resident building )\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_6x6<br>\n\tGrowth Stage: \_ \_ \_ \_ 6\_<br>\n\tCapacity Satisfied: \_ R$$ 500 \_ R$ 850<br>\n\tBuilding Style: \_ \_ \_ \_ Euro<br>\n\tOccupant Group: \_ \_Medium Wealth Resident Building\n</p>\n\n<p>\n\t<br>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_6x6<br>\n\tPlop Cost : \_ \_ \_ \_ \_ \_ \_ 15000<br>\n\tBulldoze Cost: \_ \_ \_ \_ \_550\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence\n</p>\n\n<p>\n\t<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr> MEGA Props - CP Vol01 ( <a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180\" rel=\"external nofollow\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1180</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tInstallation\n</p>\n\n<p>\n\t\_Download either \" MaxisNite\_\" or \" DarkNite \" version.\n</p>\n\n<p>\n\tSimply unzip it into your plugin file.\n</p>\n\n<p>\n\tDo Not Delete The File with \" .SC4Model\_\"!\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/ZhenChengBuilding_5.jpg.4b570058f75a669a96fadff7b88619d1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/ZhenChengBuilding_6.jpg.d401cdb57b38a8036549cc91ef25acc7.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/6235b821c73e9_ZhenChengBuilding_DayNitePreview.jpg.81756ee85e0652c516aded3c0b9093d8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/ZhenChengBuilding_3.jpg.72744dc78dbfcc337427828a5395ddd8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_03/ZhenChengBuilding_4.jpg.7dbef395f5230d44a333562f81f9fc2c.jpg
     lastModified: 2022-03-19T11:13:14.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Hakka-TuLou ZhenCheng Building
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_03/ZhenChengBuilding_5.thumb.jpg.2feab579aa6eae94ea5424bd5a205fc0.jpg
     url: https://community.simtropolis.com/files/file/35013-hakka-tulou-zhencheng-building/
+    variants:
+      '192555':
+        buildings:
+          ZhenChengBuilding_DN/LM/LM6x6_ZhenChengBuilding_4f40f4ad.SC4Lot:
+            9faf82fb-4f40f4ad:
+              bulldoze: 1550
+              categories: landmarks
+              cost: 15000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenChengEarthBuilding_DarkNite_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 550
+              menu: Landmarks
+              model: 0f37e151
+              name: ZhenChengEarthBuilding_DarkNite_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenChengBuilding_DN/LM/ZhenChengEarthBuilding_DarkNite_LM-0x6534284a-0x9faf82fb-0x2f40f19f.SC4Desc:
+            9faf82fb-2f40f19f:
+              bulldoze: 1550
+              categories: landmarks
+              cost: 15000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenChengEarthBuilding_DarkNite_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 550
+              menu: Landmarks
+              model: 0f37e151
+              name: ZhenChengEarthBuilding_DarkNite_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenChengBuilding_DN/R$$/ZhenChengEarthBuilding_DarkNite_R$$-0x6534284a-0x9faf82fb-0xcf40f201.SC4Desc:
+            9faf82fb-cf40f201:
+              bulldoze: 368
+              capacity:
+                r$: 850
+                r$$: 500
+              categories: r$$
+              flamability: 40
+              garbage: 261
+              model: 0f37e151
+              name: ZhenChengEarthBuilding_DarkNite_R$$
+              pollution: 52
+              pollutionRadius: 5
+              power: 26
+              tilesets: Euro
+              water: 292
+              waterPollution: 52
+              waterPollutionRadius: 6
+              worth: 48496
+        features: []
+        filename: ZhenChengBuilding_DN.zip
+        files:
+          - ZhenChengBuilding_DN/LM/LM6x6_ZhenChengBuilding_4f40f4ad.SC4Lot
+          - ZhenChengBuilding_DN/LM/ZhenChengEarthBuilding_DarkNite_LM-0x6534284a-0x9faf82fb-0x2f40f19f.SC4Desc
+          - ZhenChengBuilding_DN/R$$/R$$6_6x6_ZhenChengBuilding_6f40f5bb.SC4Lot
+          - ZhenChengBuilding_DN/R$$/ZhenChengEarthBuilding_DarkNite_R$$-0x6534284a-0x9faf82fb-0xcf40f201.SC4Desc
+          - ZhenChengBuilding_DN/ZhenChengEarthBuilding_DarkNite-0x5ad0e817_0xf37e151_0x30000.SC4Model
+          - ZhenChengBuilding_DN/_____!!!ReadMe.txt
+        lots:
+          ZhenChengBuilding_DN/LM/LM6x6_ZhenChengBuilding_4f40f4ad.SC4Lot:
+            4f40f4ad:
+              building: 4f40f4ad
+              name: LM6x6_ZhenChengBuilding
+              props: 2ab60000,2af60000,2af80000,a000004d,a0000077,a0000078,a000007c
+              size: 6x6
+              textures: 26060000,261a0000
+          ZhenChengBuilding_DN/R$$/R$$6_6x6_ZhenChengBuilding_6f40f5bb.SC4Lot:
+            6f40f5bb:
+              building: cf40f201
+              density: medium,high
+              name: R$$6_6x6_ZhenChengBuilding
+              props: 2ab60000,2ab70000,2af80000,70a81635,733be828,b0a823f5,d0a816b6,d0a8237d
+              size: 6x6
+              stage: 6
+              textures: 26060000,261a0000
+        models:
+          ZhenChengBuilding_DN/ZhenChengEarthBuilding_DarkNite-0x5ad0e817_0xf37e151_0x30000.SC4Model:
+            - 0f37e151
+        sha256: 6a9a81d50556991377022f401099e9c0b613cbdffc78f5822a5ae7fda4416aa2
+        size: 6799536
+        uncompressed: 7872568
+      '192556':
+        buildings:
+          ZhenChengBuilding_MN/LM/LM6x6_ZhenChengBuilding_MaxisNite_6f410b53.SC4Lot:
+            9faf82fb-6f410b53:
+              bulldoze: 1550
+              categories: landmarks
+              cost: 15000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenChengEarthBuilding_MaxisNite_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 550
+              menu: Landmarks
+              model: af38d73c
+              name: ZhenChengEarthBuilding_MaxisNite_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenChengBuilding_MN/LM/ZhenChengEarthBuilding_MaxisNite_LM-0x6534284a-0x9faf82fb-0xef410a6c.SC4Desc:
+            9faf82fb-ef410a6c:
+              bulldoze: 1550
+              categories: landmarks
+              cost: 15000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: ZhenChengEarthBuilding_MaxisNite_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 550
+              menu: Landmarks
+              model: af38d73c
+              name: ZhenChengEarthBuilding_MaxisNite_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ZhenChengBuilding_MN/R$$/ZhenChengEarthBuilding_MaxisNite_R$$-0x6534284a-0x9faf82fb-0xef410acb.SC4Desc:
+            9faf82fb-ef410acb:
+              bulldoze: 368
+              capacity:
+                r$: 850
+                r$$: 500
+              categories: r$$
+              flamability: 40
+              garbage: 261
+              model: af38d73c
+              name: ZhenChengEarthBuilding_MaxisNite_R$$
+              pollution: 52
+              pollutionRadius: 5
+              power: 26
+              tilesets: Euro
+              water: 292
+              waterPollution: 52
+              waterPollutionRadius: 6
+              worth: 48496
+        features: []
+        filename: ZhenChengBuilding_MN.zip
+        files:
+          - ZhenChengBuilding_MN/LM/LM6x6_ZhenChengBuilding_MaxisNite_6f410b53.SC4Lot
+          - ZhenChengBuilding_MN/LM/ZhenChengEarthBuilding_MaxisNite_LM-0x6534284a-0x9faf82fb-0xef410a6c.SC4Desc
+          - ZhenChengBuilding_MN/R$$/R$$6_6x6_ZhenChengBuilding_MaxisNite_cf410b85.SC4Lot
+          - ZhenChengBuilding_MN/R$$/ZhenChengEarthBuilding_MaxisNite_R$$-0x6534284a-0x9faf82fb-0xef410acb.SC4Desc
+          - ZhenChengBuilding_MN/ZhenChengEarthBuilding_MaxisNite-0x5ad0e817_0xaf38d73c_0x30000.SC4Model
+          - ZhenChengBuilding_MN/_____!!!ReadMe.txt
+        lots:
+          ZhenChengBuilding_MN/LM/LM6x6_ZhenChengBuilding_MaxisNite_6f410b53.SC4Lot:
+            6f410b53:
+              building: 6f410b53
+              name: LM6x6_ZhenChengBuilding_MaxisNite
+              props: 2ab60000,2af60000,2af80000,a000004d,a0000077,a0000078,a000007c
+              size: 6x6
+              textures: 26060000,261a0000
+          ZhenChengBuilding_MN/R$$/R$$6_6x6_ZhenChengBuilding_MaxisNite_cf410b85.SC4Lot:
+            cf410b85:
+              building: ef410acb
+              density: medium,high
+              name: R$$6_6x6_ZhenChengBuilding_MaxisNite
+              props: 2ab60000,2ab70000,2af80000,70a81635,733be828,b0a823f5,d0a816b6,d0a8237d
+              size: 6x6
+              stage: 6
+              textures: 26060000,261a0000
+        models:
+          ZhenChengBuilding_MN/ZhenChengEarthBuilding_MaxisNite-0x5ad0e817_0xaf38d73c_0x30000.SC4Model:
+            - af38d73c
+        sha256: c6bac707cc9ae3f9a526aaafb666a2cd059e068fa8eb3f73c977c5333ec915fd
+        size: 7418379
+        uncompressed: 8557743
+    version: 1.0.0
   simtropolis/35016:
     assetId: simtropolis/35016-villa-almansa
     authors:
@@ -37058,19 +37616,1020 @@ assets:
     authors:
       - Ct1999
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tThis particular Village Box (Chinese:农民房) is renovated\_with cleaner color, but it doesn't\_<br>\n\tmake the building too special after all. So it is still a really normal building located in ：<br>\n\t\_ShenZhen NanShan district NanTou Village.\_\n</p>\n\n<p>\n\t<img alt=\"VillageBox_5(Pixelied).jpg.190ba04814b5af717504c12953bc84f8.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"87416\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_06/VillageBox_5(Pixelied).jpg.190ba04814b5af717504c12953bc84f8.jpg\" >\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tGrowth Stage: \_ \_ \_ \_ 4\_<br>\n\tCapacity Satisfied: \_ R$$ 31 \_ \_ R$ 64<br>\n\tBuilding Style: \_ \_ \_ \_ Euro<br>\n\tOccupant Group: \_ \_Medium Wealth Residential Building\n</p>\n\n<p>\n\t<br>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_1000<br>\n\tBudget Item Cost: \_ \_10\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tThere are two available versions for you, which is \" HD \" and \" SD (MN)/(DN) \" versions\n</p>\n\n<p>\n\t<br>\n\tHD : For \" DarkNite \" Only.\n</p>\n\n<p>\n\tSD : For \" DarkNite \" and \" MaxisNite \".\n</p>\n\n<p>\n\t<br>\n\tBoth versions dose not compatible each other ( Two files with different <abbr title=\"Type, Group, Instance\">TGI</abbr> ).\_\n</p>\n\n<p>\n\tIf you want to Switch \"MaxisNite\" and \"DarkNite\" without bullzone the building, Choose SD version.\n</p>\n\n<p>\n\tOr......\n</p>\n\n<p>\n\tIf you just want a delicate building ( DarkNite only ), Choose HD version.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tThis time there is not spot for a Easter Egg to put in this building.\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_7.jpg.d9a9fb17109d25e786ff91201203ddde.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_4.jpg.04856e574815e4ef17a8d3db59787d7b.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_5.jpg.e9f6bbd5360a5322055af9486bedb9b4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_6.jpg.3cb28bd9bc4cd8e73c10545272f77350.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_8.jpg.28503c5306cf3e5a3ac853ee37ea8932.jpg
     lastModified: 2022-06-23T11:47:10.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Modern Chinese Village Box 3
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_06/VillageBox3_7.thumb.jpg.8bf72de359656d921a465fd8cde8966b.jpg
     url: https://community.simtropolis.com/files/file/35213-modern-chinese-village-box-3/
+    variants:
+      '194519':
+        buildings:
+          ModernChineseVillageBox3_HD(DN)/LM1x1_VillageBox3(HD)_4fbd1626.SC4Lot:
+            9faf82fb-4fbd1626:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_HD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 2fb52757
+              name: VillageBox3_HD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_HD(DN)/VillageBox3_HD_LM-0x6534284a-0x9faf82fb-0xcfbd149e.SC4Desc:
+            9faf82fb-cfbd149e:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_HD_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 2fb52757
+              name: VillageBox3_HD_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_HD(DN)/VillageBox3_HD_R$$-0x6534284a-0x9faf82fb-0x2fbd151c.SC4Desc:
+            9faf82fb-2fbd151c:
+              bulldoze: 286
+              capacity:
+                r$: 64
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 6
+              model: 2fb52757
+              name: VillageBox3_HD_R$$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 7
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1128
+        features: []
+        filename: ModernChineseVillageBox3_HD(DN).zip
+        files:
+          - ModernChineseVillageBox3_HD(DN)/LM1x1_VillageBox3(HD)_4fbd1626.SC4Lot
+          - ModernChineseVillageBox3_HD(DN)/R$$4_1x1_VillageBox3(HD)_8fbd1696.SC4Lot
+          - ModernChineseVillageBox3_HD(DN)/ReadMe.txt
+          - ModernChineseVillageBox3_HD(DN)/VillageBox3_HD-0x5ad0e817_0x2fb52757_0x30000.SC4Model
+          - ModernChineseVillageBox3_HD(DN)/VillageBox3_HD_LM-0x6534284a-0x9faf82fb-0xcfbd149e.SC4Desc
+          - ModernChineseVillageBox3_HD(DN)/VillageBox3_HD_R$$-0x6534284a-0x9faf82fb-0x2fbd151c.SC4Desc
+        lots:
+          ModernChineseVillageBox3_HD(DN)/LM1x1_VillageBox3(HD)_4fbd1626.SC4Lot:
+            4fbd1626:
+              building: 4fbd1626
+              name: LM1x1_VillageBox3(HD)
+              size: 1x1
+              textures: 258f2000
+          ModernChineseVillageBox3_HD(DN)/R$$4_1x1_VillageBox3(HD)_8fbd1696.SC4Lot:
+            8fbd1696:
+              building: 2fbd151c
+              density: medium,high
+              name: R$$4_1x1_VillageBox3(HD)
+              size: 1x1
+              stage: 6
+              textures: 251c2000,258f2000
+        models:
+          ModernChineseVillageBox3_HD(DN)/VillageBox3_HD-0x5ad0e817_0x2fb52757_0x30000.SC4Model:
+            - 2fb52757
+        sha256: 70d82480e4386e5b3d77a35514fdabf7386e33c4ed22bb6491397f6b670a8683
+        size: 644006
+        uncompressed: 745687
+      '194520':
+        buildings:
+          ModernChineseVillageBox3_SD(DN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot:
+            9faf82fb-8fbd163a:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_SDSameTGI_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: efb52765
+              name: VillageBox3_SDSameTGI_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_SD(DN)/VillageBox3_SDSameTGI_LM-0x6534284a-0x9faf82fb-0x6fbd14d1.SC4Desc:
+            9faf82fb-6fbd14d1:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_SDSameTGI_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: efb52765
+              name: VillageBox3_SDSameTGI_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_SD(DN)/VillageBox3_SDSameTGI_R$$-0x6534284a-0x9faf82fb-0xefbd153b.SC4Desc:
+            9faf82fb-efbd153b:
+              bulldoze: 286
+              capacity:
+                r$: 64
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 6
+              model: efb52765
+              name: VillageBox3_SDSameTGI_R$$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 7
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1128
+        features: []
+        filename: ModernChineseVillageBox3_SD(DN).zip
+        files:
+          - ModernChineseVillageBox3_SD(DN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot
+          - ModernChineseVillageBox3_SD(DN)/R$$4_1x1_VillageBox3(SDSameTGI)_8fbd16ac.SC4Lot
+          - ModernChineseVillageBox3_SD(DN)/ReadMe.txt
+          - ModernChineseVillageBox3_SD(DN)/VillageBox3-0x5ad0e817_0xefb52765_0x30000.SC4Model
+          - ModernChineseVillageBox3_SD(DN)/VillageBox3_SDSameTGI_LM-0x6534284a-0x9faf82fb-0x6fbd14d1.SC4Desc
+          - ModernChineseVillageBox3_SD(DN)/VillageBox3_SDSameTGI_R$$-0x6534284a-0x9faf82fb-0xefbd153b.SC4Desc
+        lots:
+          ModernChineseVillageBox3_SD(DN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot:
+            8fbd163a:
+              building: 8fbd163a
+              name: LM1x1_VillageBox3(SDSameTGI)
+              size: 1x1
+              textures: 258f2000
+          ModernChineseVillageBox3_SD(DN)/R$$4_1x1_VillageBox3(SDSameTGI)_8fbd16ac.SC4Lot:
+            8fbd16ac:
+              building: efbd153b
+              density: medium,high
+              name: R$$4_1x1_VillageBox3(SDSameTGI)
+              size: 1x1
+              stage: 6
+              textures: 251c2000,258f2000
+        models:
+          ModernChineseVillageBox3_SD(DN)/VillageBox3-0x5ad0e817_0xefb52765_0x30000.SC4Model:
+            - efb52765
+        sha256: 0710d92a3244feaf7ad0d19669303c509c0ec37b7726ad1b95bee2ddc1935fae
+        size: 275110
+        uncompressed: 312279
+      '194521':
+        buildings:
+          ModernChineseVillageBox3_SD(MN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot:
+            9faf82fb-8fbd163a:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_SDSameTGI_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: efb52765
+              name: VillageBox3_SDSameTGI_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_SD(MN)/VillageBox3_SDSameTGI_LM-0x6534284a-0x9faf82fb-0x6fbd14d1.SC4Desc:
+            9faf82fb-6fbd14d1:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: VillageBox3_SDSameTGI_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: efb52765
+              name: VillageBox3_SDSameTGI_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          ModernChineseVillageBox3_SD(MN)/VillageBox3_SDSameTGI_R$$-0x6534284a-0x9faf82fb-0xefbd153b.SC4Desc:
+            9faf82fb-efbd153b:
+              bulldoze: 286
+              capacity:
+                r$: 64
+                r$$: 31
+              categories: r$$
+              flamability: 40
+              garbage: 6
+              model: efb52765
+              name: VillageBox3_SDSameTGI_R$$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 7
+              waterPollution: 1
+              waterPollutionRadius: 6
+              worth: 1128
+        features: []
+        filename: ModernChineseVillageBox3_SD(MN).zip
+        files:
+          - ModernChineseVillageBox3_SD(MN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot
+          - ModernChineseVillageBox3_SD(MN)/R$$4_1x1_VillageBox3(SDSameTGI)_8fbd16ac.SC4Lot
+          - ModernChineseVillageBox3_SD(MN)/ReadMe.txt
+          - ModernChineseVillageBox3_SD(MN)/VillageBox3-0x5ad0e817_0xefb52765_0x30000.SC4Model
+          - ModernChineseVillageBox3_SD(MN)/VillageBox3_SDSameTGI_LM-0x6534284a-0x9faf82fb-0x6fbd14d1.SC4Desc
+          - ModernChineseVillageBox3_SD(MN)/VillageBox3_SDSameTGI_R$$-0x6534284a-0x9faf82fb-0xefbd153b.SC4Desc
+        lots:
+          ModernChineseVillageBox3_SD(MN)/LM1x1_VillageBox3(SDSameTGI)_8fbd163a.SC4Lot:
+            8fbd163a:
+              building: 8fbd163a
+              name: LM1x1_VillageBox3(SDSameTGI)
+              size: 1x1
+              textures: 258f2000
+          ModernChineseVillageBox3_SD(MN)/R$$4_1x1_VillageBox3(SDSameTGI)_8fbd16ac.SC4Lot:
+            8fbd16ac:
+              building: efbd153b
+              density: medium,high
+              name: R$$4_1x1_VillageBox3(SDSameTGI)
+              size: 1x1
+              stage: 6
+              textures: 251c2000,258f2000
+        models:
+          ModernChineseVillageBox3_SD(MN)/VillageBox3-0x5ad0e817_0xefb52765_0x30000.SC4Model:
+            - efb52765
+        sha256: 35c64f4dba8236af68db4f763739d2c430524a5e75ed881037f6812a2077e007
+        size: 291929
+        uncompressed: 330835
+    version: 1.0.0
   simtropolis/35221:
     assetId: simtropolis/35221-cantonese-house-pack-1
     authors:
       - Ct1999
     category: 101-residential
+    dependencies:
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - girafe/carpack
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\tThese kinds of houses can usually be seen in Southern Chinese provinces (like GuangDong(广东) GuangXi(广西) FuJian(福建)),<br>\n\tbut the most common place you can see it is around Pearl River Delta ( Chinese:珠江三角洲 ).\n</p>\n\n<p>\n\t<img alt=\"62c41e9053438__12.jpg.50ce1422c160fb94de14d50492ae0a4b.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"87720\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_07/62c41e9053438__12.jpg.50ce1422c160fb94de14d50492ae0a4b.jpg\" >\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$ ( All of the houses are the same ) :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 1x1<br>\n\tGrowth Stage: \_ \_ \_ \_ \_2\_<br>\n\tCapacity Satisfied: \_ \_R$ 16<br>\n\tBuilding Style: \_ \_ \_ \_ \_Euro<br>\n\tOccupant Group: \_ \_ Low Wealth Resident Building\n</p>\n\n<p>\n\t<br>\n\tSTATS LM ( All of the houses are the same ) :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_100<br>\n\tBudget Item Cost: \_ \_10\_\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tRemind:\n</p>\n\n<p>\n\tDownload \"MaxisNite\" or \"DarkNite\"\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tDependence:\n</p>\n\n<p>\n\t<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr>-VIP girafe carpack vol. 1&amp;2 ( <a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821\" rel=\"external nofollow\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821</a> )\n</p>\n\n<p>\n\t<abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK:\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed312204668\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/?do=embed\" style=\"height:385px;max-width:502px;\"></iframe>\n\n<p>\n\t<br>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\tThere is not spot for Easter Egg.\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_13.jpg.6f532dfe3926cdf5a077a2fa848f3bdb.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_14.jpg.9c9d6c23455499d39986473ef6ef457c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_15.jpg.72c2ffb8e65c9b766e4dfada90574dbd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_16.jpg.a9357d326f3bbf9f4844a84b196ebf0d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_17.jpg.ef2fdf0a6c0f74ac298eafb85ee0b61c.jpg
     lastModified: 2022-07-05T11:21:50.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Cantonese House Pack 1
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_07/CantoneseHouse4_15.thumb.jpg.a0935f8acbb3eed64a4fa44e21ddae2c.jpg
     url: https://community.simtropolis.com/files/file/35221-cantonese-house-pack-1/
+    variants:
+      '194668':
+        buildings:
+          CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc7ad50.SC4Desc:
+            9faf82fb-cfc7ad50:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae42.SC4Desc:
+            9faf82fb-0fc7ae42:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(DN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot:
+            9faf82fb-efc7b046:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)_LM-0x6534284a-0x9faf82fb-0x2fc7add3.SC4Desc:
+            9faf82fb-2fc7add3:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae7f.SC4Desc:
+            9faf82fb-0fc7ae7f:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(DN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot:
+            9faf82fb-afc7b070:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7adf7.SC4Desc:
+            9faf82fb-8fc7adf7:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)_R$-0x6534284a-0x9faf82fb-0xafc7ae92.SC4Desc:
+            9faf82fb-afc7ae92:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(DN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot:
+            9faf82fb-4fc7b093:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7ae17.SC4Desc:
+            9faf82fb-8fc7ae17:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_4(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)_R$-0x6534284a-0x9faf82fb-0x2fc7aea3.SC4Desc:
+            9faf82fb-2fc7aea3:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(DN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot:
+            9faf82fb-0fc7b0b8:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_4(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantoneseHousePack1(DN).zip
+        files:
+          - CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)-0x5ad0e817_0x6fbfad89_0x30000.SC4Model
+          - CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc7ad50.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae42.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse1/R$2_1x1_CantoneseHouse1_(Edited)_cfc7b192.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)-0x5ad0e817_0xfbfada2_0x30000.SC4Model
+          - CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)_LM-0x6534284a-0x9faf82fb-0x2fc7add3.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae7f.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse2/R$2_1x1_CantoneseHouse2_(Edited)_0fc7b1b6.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)-0x5ad0e817_0x8fbfadae_0x30000.SC4Model
+          - CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7adf7.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)_R$-0x6534284a-0x9faf82fb-0xafc7ae92.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse3/R$2_1x1_CantoneseHouse3_(Edited)_8fc7b1db.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)-0x5ad0e817_0xfbfbdcc_0x30000.SC4Model
+          - CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7ae17.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)_R$-0x6534284a-0x9faf82fb-0x2fc7aea3.SC4Desc
+          - CantoneseHousePack1(DN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot
+          - CantoneseHousePack1(DN)/CantoneseHouse4/R$2_1x1_CantoneseHouse4_(Edited)_4fc7b24c.SC4Lot
+          - CantoneseHousePack1(DN)/ReadMe.txt
+        lots:
+          CantoneseHousePack1(DN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot:
+            efc7b046:
+              building: efc7b046
+              name: LM1x1_CantoneseHouse1_(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse1/R$2_1x1_CantoneseHouse1_(Edited)_cfc7b192.SC4Lot:
+            cfc7b192:
+              building: 0fc7ae42
+              density: all
+              name: R$2_1x1_CantoneseHouse1_(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot:
+            afc7b070:
+              building: afc7b070
+              name: LM1x1_CantoneseHouse2_(Edited)
+              props: bd4eaae7
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse2/R$2_1x1_CantoneseHouse2_(Edited)_0fc7b1b6.SC4Lot:
+            0fc7b1b6:
+              building: 0fc7ae7f
+              density: all
+              name: R$2_1x1_CantoneseHouse2_(Edited)
+              props: bd4eaae7
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot:
+            4fc7b093:
+              building: 4fc7b093
+              name: LM1x1_CantoneseHouse3_(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse3/R$2_1x1_CantoneseHouse3_(Edited)_8fc7b1db.SC4Lot:
+            8fc7b1db:
+              building: afc7ae92
+              density: all
+              name: R$2_1x1_CantoneseHouse3_(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot:
+            0fc7b0b8:
+              building: 0fc7b0b8
+              name: LM1x1_CantoneseHouse4_(Edited)
+              props: 9d4eab26
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(DN)/CantoneseHouse4/R$2_1x1_CantoneseHouse4_(Edited)_4fc7b24c.SC4Lot:
+            4fc7b24c:
+              building: 2fc7aea3
+              density: all
+              name: R$2_1x1_CantoneseHouse4_(Edited)
+              props: 9d4eab26
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+        models:
+          CantoneseHousePack1(DN)/CantoneseHouse1/CantoneseHouse_1(Edited)-0x5ad0e817_0x6fbfad89_0x30000.SC4Model:
+            - 6fbfad89
+          CantoneseHousePack1(DN)/CantoneseHouse2/CantoneseHouse_2(Edited)-0x5ad0e817_0xfbfada2_0x30000.SC4Model:
+            - 0fbfada2
+          CantoneseHousePack1(DN)/CantoneseHouse3/CantoneseHouse_3(Edited)-0x5ad0e817_0x8fbfadae_0x30000.SC4Model:
+            - 8fbfadae
+          CantoneseHousePack1(DN)/CantoneseHouse4/CantoneseHouse_4(Edited)-0x5ad0e817_0xfbfbdcc_0x30000.SC4Model:
+            - 0fbfbdcc
+        sha256: b8170b53387fb6aec1e3a822b9dc76053750f2f5ddd42376382d723f8c4ec988
+        size: 1737522
+        uncompressed: 2008963
+      '194669':
+        buildings:
+          CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc7ad50.SC4Desc:
+            9faf82fb-cfc7ad50:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae42.SC4Desc:
+            9faf82fb-0fc7ae42:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(MN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot:
+            9faf82fb-efc7b046:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 6fbfad89
+              name: CantoneseHouse_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)_LM-0x6534284a-0x9faf82fb-0x2fc7add3.SC4Desc:
+            9faf82fb-2fc7add3:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae7f.SC4Desc:
+            9faf82fb-0fc7ae7f:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(MN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot:
+            9faf82fb-afc7b070:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfada2
+              name: CantoneseHouse_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7adf7.SC4Desc:
+            9faf82fb-8fc7adf7:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)_R$-0x6534284a-0x9faf82fb-0xafc7ae92.SC4Desc:
+            9faf82fb-afc7ae92:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(MN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot:
+            9faf82fb-4fc7b093:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fbfadae
+              name: CantoneseHouse_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7ae17.SC4Desc:
+            9faf82fb-8fc7ae17:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_4(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)_R$-0x6534284a-0x9faf82fb-0x2fc7aea3.SC4Desc:
+            9faf82fb-2fc7aea3:
+              bulldoze: 107
+              capacity:
+                r$: 16
+              categories: r$
+              flamability: 45
+              garbage: 1
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 326
+          CantoneseHousePack1(MN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot:
+            9faf82fb-0fc7b0b8:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_4(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fbfbdcc
+              name: CantoneseHouse_4(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantoneseHousePack1(MN).zip
+        files:
+          - CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)-0x5ad0e817_0x6fbfad89_0x30000.SC4Model
+          - CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc7ad50.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae42.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse1/R$2_1x1_CantoneseHouse1_(Edited)_cfc7b192.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)-0x5ad0e817_0xfbfada2_0x30000.SC4Model
+          - CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)_LM-0x6534284a-0x9faf82fb-0x2fc7add3.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc7ae7f.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse2/R$2_1x1_CantoneseHouse2_(Edited)_0fc7b1b6.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)-0x5ad0e817_0x8fbfadae_0x30000.SC4Model
+          - CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7adf7.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)_R$-0x6534284a-0x9faf82fb-0xafc7ae92.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse3/R$2_1x1_CantoneseHouse3_(Edited)_8fc7b1db.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)-0x5ad0e817_0xfbfbdcc_0x30000.SC4Model
+          - CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)_LM-0x6534284a-0x9faf82fb-0x8fc7ae17.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)_R$-0x6534284a-0x9faf82fb-0x2fc7aea3.SC4Desc
+          - CantoneseHousePack1(MN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot
+          - CantoneseHousePack1(MN)/CantoneseHouse4/R$2_1x1_CantoneseHouse4_(Edited)_4fc7b24c.SC4Lot
+          - CantoneseHousePack1(MN)/ReadMe.txt
+        lots:
+          CantoneseHousePack1(MN)/CantoneseHouse1/LM1x1_CantoneseHouse1_(Edited)_efc7b046.SC4Lot:
+            efc7b046:
+              building: efc7b046
+              name: LM1x1_CantoneseHouse1_(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse1/R$2_1x1_CantoneseHouse1_(Edited)_cfc7b192.SC4Lot:
+            cfc7b192:
+              building: 0fc7ae42
+              density: all
+              name: R$2_1x1_CantoneseHouse1_(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse2/LM1x1_CantoneseHouse2_(Edited)_afc7b070.SC4Lot:
+            afc7b070:
+              building: afc7b070
+              name: LM1x1_CantoneseHouse2_(Edited)
+              props: bd4eaae7
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse2/R$2_1x1_CantoneseHouse2_(Edited)_0fc7b1b6.SC4Lot:
+            0fc7b1b6:
+              building: 0fc7ae7f
+              density: all
+              name: R$2_1x1_CantoneseHouse2_(Edited)
+              props: bd4eaae7
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse3/LM1x1_CantoneseHouse3_(Edited)_4fc7b093.SC4Lot:
+            4fc7b093:
+              building: 4fc7b093
+              name: LM1x1_CantoneseHouse3_(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse3/R$2_1x1_CantoneseHouse3_(Edited)_8fc7b1db.SC4Lot:
+            8fc7b1db:
+              building: afc7ae92
+              density: all
+              name: R$2_1x1_CantoneseHouse3_(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse4/LM1x1_CantoneseHouse4_(Edited)_0fc7b0b8.SC4Lot:
+            0fc7b0b8:
+              building: 0fc7b0b8
+              name: LM1x1_CantoneseHouse4_(Edited)
+              props: 9d4eab26
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack1(MN)/CantoneseHouse4/R$2_1x1_CantoneseHouse4_(Edited)_4fc7b24c.SC4Lot:
+            4fc7b24c:
+              building: 2fc7aea3
+              density: all
+              name: R$2_1x1_CantoneseHouse4_(Edited)
+              props: 9d4eab26
+              size: 1x1
+              stage: 2
+              textures: 1da4470a
+        models:
+          CantoneseHousePack1(MN)/CantoneseHouse1/CantoneseHouse_1(Edited)-0x5ad0e817_0x6fbfad89_0x30000.SC4Model:
+            - 6fbfad89
+          CantoneseHousePack1(MN)/CantoneseHouse2/CantoneseHouse_2(Edited)-0x5ad0e817_0xfbfada2_0x30000.SC4Model:
+            - 0fbfada2
+          CantoneseHousePack1(MN)/CantoneseHouse3/CantoneseHouse_3(Edited)-0x5ad0e817_0x8fbfadae_0x30000.SC4Model:
+            - 8fbfadae
+          CantoneseHousePack1(MN)/CantoneseHouse4/CantoneseHouse_4(Edited)-0x5ad0e817_0xfbfbdcc_0x30000.SC4Model:
+            - 0fbfbdcc
+        sha256: 7c6379f2992bba5f43d809b4e0fc3ba6aa0af316566738d2c3d4f00b23211616
+        size: 1899776
+        uncompressed: 2186599
+    version: 1.0.0
   simtropolis/35226:
     assetId: simtropolis/35226-esa-boklok
     authors:
@@ -37085,10 +38644,219 @@ assets:
     authors:
       - Ct1999
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img alt=\"LiHaiBuilding_34(preview).jpg.2ce53856cc57a1baee07bc59c7ba52e0.jpg\" class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"87943\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_07/LiHaiBuilding_34(preview).jpg.2ce53856cc57a1baee07bc59c7ba52e0.jpg\" >\n</p>\n\n<p>\n\tLiHaiBuilding ( Chinese :荔海楼 ) is a really normal high-rise apartment\_<br>\n\tloacate in ShenZhen NanShan district.\n</p>\n\n<p>\n\t\_\n</p>\n\n<p>\n\t<span style=\"font-size:14px;\">You can find some\_similarities\_if you are familiar with <a contenteditable=\"false\" data-ipshover=\"\" data-ipshover-target=\"https://community.simtropolis.com/profile/32777-bixel/?do=hovercard\" data-mentionid=\"32777\" href=\"https://community.simtropolis.com/profile/32777-bixel/\" rel=\"\">@bixel</a>\_'s apartment building.</span>\n</p>\n\n<p>\n\t<span style=\"font-size:14px;\">This is because this is one of the early Chinese apartments with HongKong design</span>\n</p>\n\n<p>\n\t<span style=\"font-size:14px;\">format.</span>\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 4x4<br>\n\tGrowth Stage: \_ \_ \_ \_ \_8\_<br>\n\tCapacity Satisfied: \_ \_R$$ 4210 \_ \_ R$ 5308<br>\n\tBuilding Style: \_ \_ \_ \_ \_Euro<br>\n\tOccupant Group: \_ \_ Medium Wealth Resident Building\n</p>\n\n<p>\n\t<br>\n\tSTATS LM :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_4x4<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_2000<br>\n\tBudget Item Cost: \_ \_150\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tJust download \"MaxisNite\" or \"DarkNite\" version of the building.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tNone\n</p>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tThis time there is not spot for a Easter Egg to put in this building.\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_8.jpg.ecfba61d0e1e44404b8ced542bc1c7ef.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_4.jpg.7c1f417b83b10bf2c51f911b44641e2e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_5.jpg.22da1e07aa16401247ee8d89d864be56.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_6.jpg.531ebb55d43c155fba00655ed77bdb65.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_7.jpg.a80a0c2fc281c192dc1f6b5456c5781e.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_9.jpg.0fe9c14e02ce1eeb612eaf58cd8542c7.jpg
     lastModified: 2022-07-17T05:14:21.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: LiHai Building Apt.
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_07/LiHaiBuilding_8.thumb.jpg.b62ea28d00a3a683922b76e6f0aef3e8.jpg
     url: https://community.simtropolis.com/files/file/35230-lihai-building-apt/
+    variants:
+      '194726':
+        buildings:
+          LiHaiBuilding(DN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot:
+            9faf82fb-6f9e8db5:
+              bulldoze: 100
+              categories: landmarks
+              cost: 2000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: LiHaiBuilding_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8f966f18
+              name: LiHaiBuilding_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          LiHaiBuilding(DN)/LiHaiBuilding_LM-0x6534284a-0x9faf82fb-0x2f9e8c1e.SC4Desc:
+            9faf82fb-2f9e8c1e:
+              bulldoze: 100
+              categories: landmarks
+              cost: 2000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: LiHaiBuilding_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8f966f18
+              name: LiHaiBuilding_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          LiHaiBuilding(DN)/LiHaiBuilding_R$$(Edited2.0)-0x6534284a-0x9faf82fb-0xcfb53db4.SC4Desc:
+            9faf82fb-cfb53db4:
+              bulldoze: 1514
+              capacity:
+                r$: 5308
+                r$$: 4210
+              categories: r$$
+              flamability: 40
+              garbage: 412
+              model: 8f966f18
+              name: LiHaiBuilding_R$$(Edited2.0)
+              pollution: 82
+              pollutionRadius: 5
+              power: 40
+              tilesets: Euro
+              water: 461
+              waterPollution: 82
+              waterPollutionRadius: 6
+              worth: 76589
+        features: []
+        filename: LiHaiBuilding(DN).zip
+        files:
+          - LiHaiBuilding(DN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot
+          - LiHaiBuilding(DN)/LiHaiBuilding-0x5ad0e817_0x8f966f18_0x30000.SC4Model
+          - LiHaiBuilding(DN)/LiHaiBuilding_LM-0x6534284a-0x9faf82fb-0x2f9e8c1e.SC4Desc
+          - LiHaiBuilding(DN)/LiHaiBuilding_R$$(Edited2.0)-0x6534284a-0x9faf82fb-0xcfb53db4.SC4Desc
+          - LiHaiBuilding(DN)/R$$8_4x4_LiHaiBuilding(Edited2.0)_8fb53ff7.SC4Lot
+          - LiHaiBuilding(DN)/ReadMe.txt
+        lots:
+          LiHaiBuilding(DN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot:
+            6f9e8db5:
+              building: 6f9e8db5
+              name: LM4x4_LiHaiBuilding
+              props: 0ab03ba4,28fe0000,29b10000,a000004d,a0000078,a000007c
+              size: 4x4
+              textures: 258e3000,259d3000,25f40000,26060000,26213000
+          LiHaiBuilding(DN)/R$$8_4x4_LiHaiBuilding(Edited2.0)_8fb53ff7.SC4Lot:
+            8fb53ff7:
+              building: cfb53db4
+              density: high
+              name: R$$8_4x4_LiHaiBuilding(Edited2.0)
+              props: 1cca0000,1eca0000,29010000,2ac30000,2ac70000,2ac90000,a000007c
+              size: 4x4
+              stage: 8
+              textures: 258f2000,25f40000,26060000,26213000
+        models:
+          LiHaiBuilding(DN)/LiHaiBuilding-0x5ad0e817_0x8f966f18_0x30000.SC4Model:
+            - 8f966f18
+        sha256: 4f5aa0fb56fc710edcaaa11987034ed682a4641ec64b1c519f0b5c37aa57deb8
+        size: 2384876
+        uncompressed: 2749577
+      '194727':
+        buildings:
+          LiHaiBuilding(MN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot:
+            9faf82fb-6f9e8db5:
+              bulldoze: 100
+              categories: landmarks
+              cost: 2000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: LiHaiBuilding_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8f966f18
+              name: LiHaiBuilding_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          LiHaiBuilding(MN)/LiHaiBuilding_LM-0x6534284a-0x9faf82fb-0x2f9e8c1e.SC4Desc:
+            9faf82fb-2f9e8c1e:
+              bulldoze: 100
+              categories: landmarks
+              cost: 2000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: LiHaiBuilding_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 150
+              menu: Landmarks
+              model: 8f966f18
+              name: LiHaiBuilding_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          LiHaiBuilding(MN)/LiHaiBuilding_R$$(Edited2.0)-0x6534284a-0x9faf82fb-0xcfb53db4.SC4Desc:
+            9faf82fb-cfb53db4:
+              bulldoze: 1514
+              capacity:
+                r$: 5308
+                r$$: 4210
+              categories: r$$
+              flamability: 40
+              garbage: 412
+              model: 8f966f18
+              name: LiHaiBuilding_R$$(Edited2.0)
+              pollution: 82
+              pollutionRadius: 5
+              power: 40
+              tilesets: Euro
+              water: 461
+              waterPollution: 82
+              waterPollutionRadius: 6
+              worth: 76589
+        features: []
+        filename: LiHaiBuilding(MN).zip
+        files:
+          - LiHaiBuilding(MN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot
+          - LiHaiBuilding(MN)/LiHaiBuilding-0x5ad0e817_0x8f966f18_0x30000.SC4Model
+          - LiHaiBuilding(MN)/LiHaiBuilding_LM-0x6534284a-0x9faf82fb-0x2f9e8c1e.SC4Desc
+          - LiHaiBuilding(MN)/LiHaiBuilding_R$$(Edited2.0)-0x6534284a-0x9faf82fb-0xcfb53db4.SC4Desc
+          - LiHaiBuilding(MN)/R$$8_4x4_LiHaiBuilding(Edited2.0)_8fb53ff7.SC4Lot
+          - LiHaiBuilding(MN)/ReadMe.txt
+        lots:
+          LiHaiBuilding(MN)/LM4x4_LiHaiBuilding_6f9e8db5.SC4Lot:
+            6f9e8db5:
+              building: 6f9e8db5
+              name: LM4x4_LiHaiBuilding
+              props: 0ab03ba4,28fe0000,29b10000,a000004d,a0000078,a000007c
+              size: 4x4
+              textures: 258e3000,259d3000,25f40000,26060000,26213000
+          LiHaiBuilding(MN)/R$$8_4x4_LiHaiBuilding(Edited2.0)_8fb53ff7.SC4Lot:
+            8fb53ff7:
+              building: cfb53db4
+              density: high
+              name: R$$8_4x4_LiHaiBuilding(Edited2.0)
+              props: 1cca0000,1eca0000,29010000,2ac30000,2ac70000,2ac90000,a000007c
+              size: 4x4
+              stage: 8
+              textures: 258f2000,25f40000,26060000,26213000
+        models:
+          LiHaiBuilding(MN)/LiHaiBuilding-0x5ad0e817_0x8f966f18_0x30000.SC4Model:
+            - 8f966f18
+        sha256: be17f68d42ede2a02bfcfc02132c8d9bff2ec776c442ba117254fa245b9abc25
+        size: 2600360
+        uncompressed: 2987229
+    version: 1.0.0
   simtropolis/35233:
     assetId: simtropolis/35233-nybt-morgan-court-sliver-building-v2
     authors:
@@ -37312,10 +39080,546 @@ assets:
     authors:
       - Ct1999
     category: 101-residential
+    dependencies:
+      - simtropolis/20966-peg-mtp-super-pack
+      - simtropolis/23089-simfox-day-and-nite-modd
+      - girafe/carpack
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"89228\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2022_09/631571e66067c__13(Shrinked).jpg.d1bdbdd49c00ac9e9fa57e7f878929f8.jpg\" alt=\"631571e66067c__13(Shrinked).jpg.d1bdbdd49c00ac9e9fa57e7f878929f8.jpg\" >\n</p>\n\n<p>\n\tThese kinds of houses can usually be seen in Southern Chinese provinces (like GuangDong(广东) FuJian(福建)),<br>\n\tbut the most common place you can see it is around Teochew (潮州) - Swatow (汕头) Region.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$ ( All of the houses are the same ) :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 1x1<br>\n\tGrowth Stage: \_ \_ \_ \_ \_3\_<br>\n\tCapacity Satisfied: \_ \_R$ 26<br>\n\tBuilding Style: \_ \_ \_ \_ \_Euro<br>\n\tOccupant Group: \_ \_ Low Wealth Resident Building\n</p>\n\n<p>\n\t<br>\n\tSTATS LM ( All of the houses are the same ) :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_1x1<br>\n\tPlop Cost: \_ \_ \_ \_ \_ \_ \_ \_100<br>\n\tBudget Item Cost: \_ \_10\_\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tRemind:\n</p>\n\n<p>\n\tDownload \"MaxisNite\" or \"DarkNite\"\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\t<br>\n\tDependence:\n</p>\n\n<p>\n\t<br>\n\t<abbr title=\"BATT Squad Certification\">BSC</abbr>-VIP girafe carpack vol. 1&amp;2 ( <a href=\"https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821\" rel=\"external nofollow\">https://www.sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2821</a> )\n</p>\n\n<p>\n\t<abbr title=\"Pegasus\">PEG</abbr> <abbr title=\"Mountain Theme Pack\">MTP</abbr> SUPER PACK:\n</p>\n<iframe allowfullscreen=\"\" data-controller=\"core.front.core.autosizeiframe\" data-embedcontent=\"\" data-embedid=\"embed2934959324\" scrolling=\"no\" src=\"https://community.simtropolis.com/files/file/20966-peg-mtp-super-pack/?do=embed\" style=\"height:364px;max-width:502px;\"></iframe>\n\n<p>\n\tOptional: \_(For DarkNite)\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\tThere is not spot for Easter Egg.\n</p>\n\n\t\t\t\t\t\t</body>"
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_13.jpg.bee6b1b98060cb1e7100afcd7ba2a0c9.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_14.jpg.aacd7798a4ac3d4028c80bc46ad3d07c.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_11.jpg.36dfe0889586c941eaceec83493e87cd.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_12.jpg.4c8fb0949c6a257fa8876c84887f4cb8.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_10.jpg.8b1bb2a84c6fb17b5baf6110d28d61e1.jpg
     lastModified: 2022-09-05T03:50:42.000Z
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
     name: Cantonese House Pack 2
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2022_09/CantoneseHouse_TeoSwa_3_13.thumb.jpg.25d9bdfe800f41d39cf13cbb386252c6.jpg
     url: https://community.simtropolis.com/files/file/35291-cantonese-house-pack-2/
+    variants:
+      '195233':
+        buildings:
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_LM-0x6534284a-0x9faf82fb-0x4fc8d0ed.SC4Desc:
+            9faf82fb-4fc8d0ed:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc8d177.SC4Desc:
+            9faf82fb-0fc8d177:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot:
+            9faf82fb-4fc8d29a:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_LM-0x6534284a-0x9faf82fb-0xafc8d132.SC4Desc:
+            9faf82fb-afc8d132:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_R$-0x6534284a-0x9faf82fb-0xafc8d1a7.SC4Desc:
+            9faf82fb-afc8d1a7:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot:
+            9faf82fb-afc8d2be:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc8d152.SC4Desc:
+            9faf82fb-cfc8d152:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_R$-0x6534284a-0x9faf82fb-0xefc8d1bd.SC4Desc:
+            9faf82fb-efc8d1bd:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot:
+            9faf82fb-0fc8d2e1:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantoneseHousePack2(TeoSwa)_DN.zip
+        files:
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)-0x5ad0e817_0xfc0ded7_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_LM-0x6534284a-0x9faf82fb-0x4fc8d0ed.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc8d177.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)_6fc8d36a.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)-0x5ad0e817_0x4fc0deef_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_LM-0x6534284a-0x9faf82fb-0xafc8d132.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_R$-0x6534284a-0x9faf82fb-0xafc8d1a7.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d384.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)-0x5ad0e817_0x8fc0e5bb_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc8d152.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_R$-0x6534284a-0x9faf82fb-0xefc8d1bd.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)_efc8d39f.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_DN/ReadMe.txt
+        lots:
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot:
+            4fc8d29a:
+              building: 4fc8d29a
+              name: LM1x1_CantoneseHouse_TeoSwa_1(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)_6fc8d36a.SC4Lot:
+            6fc8d36a:
+              building: 0fc8d177
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot:
+            afc8d2be:
+              building: afc8d2be
+              name: LM1x1_CantoneseHouse_TeoSwa_2(Edited)
+              props: bd4eaae7
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d384.SC4Lot:
+            afc8d384:
+              building: afc8d1a7
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)
+              props: bd4eaae7
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot:
+            0fc8d2e1:
+              building: 0fc8d2e1
+              name: LM1x1_CantoneseHouse_TeoSwa_3(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)_efc8d39f.SC4Lot:
+            efc8d39f:
+              building: efc8d1bd
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+        models:
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)-0x5ad0e817_0xfc0ded7_0x30000.SC4Model:
+            - 0fc0ded7
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)-0x5ad0e817_0x4fc0deef_0x30000.SC4Model:
+            - 4fc0deef
+          CantoneseHousePack2(TeoSwa)_DN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)-0x5ad0e817_0x8fc0e5bb_0x30000.SC4Model:
+            - 8fc0e5bb
+        sha256: d9cf4c8fbac0973226d9cbc664184dcc752d09e4fd464ca00236af05263ade24
+        size: 1352751
+        uncompressed: 1583410
+      '195234':
+        buildings:
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_LM-0x6534284a-0x9faf82fb-0x4fc8d0ed.SC4Desc:
+            9faf82fb-4fc8d0ed:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc8d177.SC4Desc:
+            9faf82fb-0fc8d177:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot:
+            9faf82fb-4fc8d29a:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_1(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 0fc0ded7
+              name: CantoneseHouse_TeoSwa_1(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_LM-0x6534284a-0x9faf82fb-0xafc8d132.SC4Desc:
+            9faf82fb-afc8d132:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_R$-0x6534284a-0x9faf82fb-0xafc8d1a7.SC4Desc:
+            9faf82fb-afc8d1a7:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot:
+            9faf82fb-afc8d2be:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_2(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 4fc0deef
+              name: CantoneseHouse_TeoSwa_2(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc8d152.SC4Desc:
+            9faf82fb-cfc8d152:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_R$-0x6534284a-0x9faf82fb-0xefc8d1bd.SC4Desc:
+            9faf82fb-efc8d1bd:
+              bulldoze: 147
+              capacity:
+                r$: 26
+              categories: r$
+              flamability: 45
+              garbage: 2
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_R$
+              pollution: 1
+              pollutionRadius: 5
+              power: 1
+              tilesets: Euro
+              water: 2
+              worth: 456
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot:
+            9faf82fb-0fc8d2e1:
+              bulldoze: 100
+              categories: landmarks
+              cost: 1000
+              description: For Eye-Candy Only
+              flamability: 10
+              garbage: 15
+              label: CantoneseHouse_TeoSwa_3(Edited)_LM
+              landmark: 40
+              landmarkRadius: 20
+              maintenance: 10
+              menu: Landmarks
+              model: 8fc0e5bb
+              name: CantoneseHouse_TeoSwa_3(Edited)_LM
+              pollution: 1
+              pollutionRadius: 1
+              power: 60
+              rating: 10
+              ratingRadius: 256
+              waterPollution: 1
+              waterPollutionRadius: 2
+        features: []
+        filename: CantoneseHousePack2(TeoSwa)_MN.zip
+        files:
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)-0x5ad0e817_0xfc0ded7_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_LM-0x6534284a-0x9faf82fb-0x4fc8d0ed.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)_R$-0x6534284a-0x9faf82fb-0x0fc8d177.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)_6fc8d36a.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)-0x5ad0e817_0x4fc0deef_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_LM-0x6534284a-0x9faf82fb-0xafc8d132.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)_R$-0x6534284a-0x9faf82fb-0xafc8d1a7.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d384.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)-0x5ad0e817_0x8fc0e5bb_0x30000.SC4Model
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_LM-0x6534284a-0x9faf82fb-0xcfc8d152.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)_R$-0x6534284a-0x9faf82fb-0xefc8d1bd.SC4Desc
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)_efc8d39f.SC4Lot
+          - CantoneseHousePack2(TeoSwa)_MN/ReadMe.txt
+        lots:
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/LM1x1_CantoneseHouse_TeoSwa_1(Edited)_4fc8d29a.SC4Lot:
+            4fc8d29a:
+              building: 4fc8d29a
+              name: LM1x1_CantoneseHouse_TeoSwa_1(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)_6fc8d36a.SC4Lot:
+            6fc8d36a:
+              building: 0fc8d177
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_1(Edited)
+              props: 5d4eaa84
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/LM1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d2be.SC4Lot:
+            afc8d2be:
+              building: afc8d2be
+              name: LM1x1_CantoneseHouse_TeoSwa_2(Edited)
+              props: bd4eaae7
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)_afc8d384.SC4Lot:
+            afc8d384:
+              building: afc8d1a7
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_2(Edited)
+              props: bd4eaae7
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/LM1x1_CantoneseHouse_TeoSwa_3(Edited)_0fc8d2e1.SC4Lot:
+            0fc8d2e1:
+              building: 0fc8d2e1
+              name: LM1x1_CantoneseHouse_TeoSwa_3(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              textures: 1da4470a
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)_efc8d39f.SC4Lot:
+            efc8d39f:
+              building: efc8d1bd
+              density: medium,high
+              name: R$3_1x1_CantoneseHouse_TeoSwa_3(Edited)
+              props: 5d4eaab5
+              size: 1x1
+              stage: 3
+              textures: 1da4470a,25271000
+        models:
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_1/CantoneseHouse_TeoSwa_1(Edited)-0x5ad0e817_0xfc0ded7_0x30000.SC4Model:
+            - 0fc0ded7
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_2/CantoneseHouse_TeoSwa_2(Edited)-0x5ad0e817_0x4fc0deef_0x30000.SC4Model:
+            - 4fc0deef
+          CantoneseHousePack2(TeoSwa)_MN/CantoneseHouse_TeoSwa_3/CantoneseHouse_TeoSwa_3(Edited)-0x5ad0e817_0x8fc0e5bb_0x30000.SC4Model:
+            - 8fc0e5bb
+        sha256: 7a7d07ba4ddeddbff95a8d001d12a1ec0350d944feadb327616f3d96a704a9b8
+        size: 1484412
+        uncompressed: 1726853
+    version: 1.0.0
   simtropolis/35302:
     assetId: simtropolis/35302-aozora-condominiums
     authors:
@@ -40447,20 +42751,129 @@ assets:
     assetId: simtropolis/35625-hua-e-building
     authors:
       - Ct1999
+    buildings:
+      HuaEBuilding(DN)/R$/HuaEBuilding_R$-0x6534284a-0x9faf82fb-0xd0bf03b7.SC4Desc:
+        9faf82fb-d0bf03b7:
+          bulldoze: 200
+          capacity:
+            r$: 800
+          categories: r$
+          flamability: 45
+          garbage: 47
+          model: 70b713e4
+          name: HuaEBuilding_R$
+          pollution: 24
+          pollutionRadius: 5
+          power: 4
+          tilesets: Euro
+          water: 37
+          waterPollution: 8
+          waterPollutionRadius: 5
+          worth: 10688
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"96499\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_09/HuaEBuilding_1.jpg.ac81527b9c0bb5de9a08a3b795e6dd64.jpg\" alt=\"HuaEBuilding_1.jpg.ac81527b9c0bb5de9a08a3b795e6dd64.jpg\" >\n</p>\n\n<p>\n\tHuaEBuilding ( Chinese :花萼楼) is a really normal traditional Chinese architecture<br>\n\tlocated in Meizhou Dapu County.（梅州市大埔县)\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 4x4<br>\n\tGrowth Stage: \_ \_ \_ \_ \_4<br>\n\tCapacity Satisfied: \_ \_R$ 800<br>\n\tBuilding Style: \_ \_ \_ \_ \_Euro\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tOnly \"DarkNite\" version of the building are available\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\tFor DarkNite\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: HuaEBuilding(DN).zip
+    files:
+      - HuaEBuilding(DN)/HuaEBuilding-0x5ad0e817_0x70b713e4_0x30000.SC4Model
+      - HuaEBuilding(DN)/R$/HuaEBuilding_R$-0x6534284a-0x9faf82fb-0xd0bf03b7.SC4Desc
+      - HuaEBuilding(DN)/R$/R$4_4x4_HuaEbuilding_10bf07a1.SC4Lot
+      - HuaEBuilding(DN)/Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_1(Day).jpg.b53e2f7b27a209e5744dbbaea01a5b1d.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_2(DarkNite).jpg.be957dd05cdb5c7cab19c25cbc05e456.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_4.jpg.3acb5a3cace1acc9c7f64cadd7c1a442.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_5.jpg.36be83579be86fb5c561926a6bb1e020.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_6.jpg.4c52ba343f4f7ef28dc8a43b56b5191e.jpg
     lastModified: 2023-09-17T13:09:10.000Z
+    lots:
+      HuaEBuilding(DN)/R$/R$4_4x4_HuaEbuilding_10bf07a1.SC4Lot:
+        10bf07a1:
+          building: d0bf03b7
+          density: medium,high
+          name: R$4_4x4_HuaEbuilding
+          props: 1e8f0000,1e910000,2a1d0000,2a4f0000,2a580000,a000004a,a000004d
+          size: 4x4
+          stage: 6
+          textures: 25fb1000,261a0000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      HuaEBuilding(DN)/HuaEBuilding-0x5ad0e817_0x70b713e4_0x30000.SC4Model:
+        - 70b713e4
     name: Hua E Building
+    sha256: 9df8e26b41119c947aad99b67eb11bd297739027b9cfa8eebf6fbee9109c7f68
+    size: 1096061
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/HuaEBuilding_1(Day).thumb.jpg.67f39e8da9cb61ab59f445d9457017f8.jpg
+    uncompressed: 1293205
     url: https://community.simtropolis.com/files/file/35625-hua-e-building/
+    version: 1.0.0
   simtropolis/35628:
     assetId: simtropolis/35628-lai-kit-lau
     authors:
       - Ct1999
+    buildings:
+      LaiKitLau(DN)/R$/LaiKitLau_R$-0x6534284a-0x9faf82fb-0xf1dadf68.SC4Desc:
+        9faf82fb-f1dadf68:
+          bulldoze: 1149
+          capacity:
+            r$: 2588
+          categories: r$
+          flamability: 45
+          garbage: 150
+          model: b1d1dd7a
+          name: LaiKitLau_R$
+          pollution: 15
+          pollutionRadius: 5
+          power: 15
+          water: 158
+          waterPollution: 15
+          waterPollutionRadius: 5
+          worth: 45789
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"96502\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_09/LaiKitLau_5.jpg.0b7ac21dbcded2187e4ea2544363897b.jpg\" alt=\"LaiKitLau_5.jpg.0b7ac21dbcded2187e4ea2544363897b.jpg\" >\n</p>\n\n<p>\n\tLaiKitLau (Chinese:勵潔樓) is a really normal high-rise apartment \_<br>\n\tlocated in Hong Kong Wanchai district.(香港灣仔區)\_\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$:\n</p>\n\n<p>\n\tLot size: \_ \_ \_ \_ \_ \_ 2x5<br>\n\tGrowth Stage: \_ \_ \_ \_ \_8<br>\n\tCapacity Satisfied: \_ \_ \_2588<br>\n\tBuilding Style: \_ \_ \_ \_ \_All\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tOnly \"DarkNite\" version of the building are available\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\t\_DarkNite:\n</p>\n\n<p>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: LaiKitLau(DN).zip
+    files:
+      - LaiKitLau(DN)/LaiKitLau-0x5ad0e817_0xb1d1dd7a_0x30000.SC4Model
+      - LaiKitLau(DN)/R$/LaiKitLau_R$-0x6534284a-0x9faf82fb-0xf1dadf68.SC4Desc
+      - LaiKitLau(DN)/R$/R$8_2x5_LaiKitLau_31dae1a8.SC4Lot
+      - LaiKitLau(DN)/Readme.txt
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_1(Day).jpg.eb8c502bd43f52d4a025664ef34fb8c0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_2(DarkNite).jpg.55b2f8652f31d033bcafb6477c60dcd4.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_3.jpg.53e6dd563bb0d54cffa04db2f3fa5955.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_4.jpg.5783b73d338a6a03f20ef9c405ad26d5.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_5.jpg.5ec98dcc75768617713fe74deda244de.jpg
     lastModified: 2023-09-17T13:25:46.000Z
+    lots:
+      LaiKitLau(DN)/R$/R$8_2x5_LaiKitLau_31dae1a8.SC4Lot:
+        31dae1a8:
+          building: f1dadf68
+          density: high
+          name: R$8_2x5_LaiKitLau
+          props: 1e280000,28410000,29860000
+          size: 2x5
+          stage: 8
+          textures: 258d1000,258f2000,25c52000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      LaiKitLau(DN)/LaiKitLau-0x5ad0e817_0xb1d1dd7a_0x30000.SC4Model:
+        - b1d1dd7a
     name: Lai Kit Lau
+    sha256: 226407dae9d332b2c87c504660a362e2988d10a8399cb6a76b547863bcfea124
+    size: 2148477
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_09/LaiKitLau_1(Day).thumb.jpg.8216928035709232872883c49c4caae5.jpg
+    uncompressed: 2474225
     url: https://community.simtropolis.com/files/file/35628-lai-kit-lau/
+    version: 1.0.0
   simtropolis/35632:
     assetId: simtropolis/35632-new-york-pack-1
     authors:
@@ -41324,11 +43737,65 @@ assets:
     assetId: simtropolis/35788-shude-building
     authors:
       - Ct1999
+    buildings:
+      ShuDeBuilding(DN)/R$/ShuDeBuilding_R$-0x6534284a-0x9faf82fb-0x31595a87.SC4Desc:
+        9faf82fb-31595a87:
+          bulldoze: 221
+          capacity:
+            r$: 350
+          categories: r$
+          flamability: 45
+          garbage: 25
+          model: '91516e58'
+          name: ShuDeBuilding_R$
+          pollution: 12
+          pollutionRadius: 5
+          power: 2
+          water: 20
+          waterPollution: 4
+          waterPollutionRadius: 5
+          worth: 5571
     category: 101-residential
+    dependencies:
+      - simtropolis/23089-simfox-day-and-nite-modd
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"98334\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2023_12/ShuDeBuilding_1.jpg.8fe2c4290e4f80a55a1ce94545961199.jpg\" alt=\"ShuDeBuilding_1.jpg.8fe2c4290e4f80a55a1ce94545961199.jpg\" >\n</p>\n\n<p>\n\tShuDe Building ( Chinese :树德楼 ) is a really normal traditional Chinese House\_<br>\n\tlocated in MeiZhou City(梅州市) JiaoLing Country(蕉岭县).\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tSTATS R$ :\n</p>\n\n<p>\n\tLot size : \_ \_ \_ \_ \_ \_ \_ \_ \_ 3x3<br>\n\tGrowth Stage: \_ \_ \_ \_ \_4\_<br>\n\tCapacity Satisfied: \_ \_R$$ 350 \_ \_<br>\n\tBuilding Style: \_ \_ \_ \_ \_All<br>\n\tOccupant Group: \_ \_ Middle Rise Resident Building\n</p>\n\n<p>\n\t<br>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tRemind:\n</p>\n\n<p>\n\tOnly \"DarkNite\" version are available.\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------\n</p>\n\n<p>\n\tDependence:\n</p>\n\n<p>\n\t<br>\n\tSimFox Day and Nite Modd ( <a href=\"https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/\" rel=\"\">https://community.simtropolis.com/files/file/23089-simfox-day-and-nite-modd/</a> )\n</p>\n\n<p>\n\t-----------------------------------------------------------------<br>\n\t-----------------------------------------------------------------<br>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: ShuDeBuilding(DN).zip
+    files:
+      - ShuDeBuilding(DN)/R$/R$4_3x3_ShuDeBuilding_b1595cca.SC4Lot
+      - ShuDeBuilding(DN)/R$/ShuDeBuilding_R$-0x6534284a-0x9faf82fb-0x31595a87.SC4Desc
+      - ShuDeBuilding(DN)/ReadMe.txt
+      - ShuDeBuilding(DN)/ShuDeBuilding-0x5ad0e817_0x91516e58_0x30000.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_1(Day).jpg.286d339ed982ee438e42dddf096b8be1.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_2(DarkNite).jpg.7962a14ff6fa06c50e6235ec86d3dae0.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_3.jpg.166d98c418aeedfdce849e44c0d3d699.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_4.jpg.b7a5fedc169570e40469a981f21305e6.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_5.jpg.aa2ca7939e3bd85d211923a941327e58.jpg
     lastModified: 2023-12-02T10:13:23.000Z
+    lots:
+      ShuDeBuilding(DN)/R$/R$4_3x3_ShuDeBuilding_b1595cca.SC4Lot:
+        b1595cca:
+          building: 31595a87
+          density: medium,high
+          name: R$4_3x3_ShuDeBuilding
+          props: 1d8f0000,2a1d0000,2a580000,a000000f,a000004a,a000004d
+          size: 3x3
+          stage: 5
+          textures: 1da443c5,1da44c7a,251c1000,25271000,25901000,25ba1000,25fb1100
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      ShuDeBuilding(DN)/ShuDeBuilding-0x5ad0e817_0x91516e58_0x30000.SC4Model:
+        - '91516e58'
     name: ShuDe Building
+    sha256: 5c0cc9da35e0f3ad21531ab4500dc396ebeefb04f0146333c76ddf0272dcb559
+    size: 676502
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_12/ShuDeBuilding_1(Day).thumb.jpg.7bc02fb94785c70e4d99150a8fbe0a80.jpg
+    uncompressed: 800117
     url: https://community.simtropolis.com/files/file/35788-shude-building/
+    version: 1.0.0
   simtropolis/3579:
     assetId: simtropolis/3579-new-college-as-residential-only
     authors:
@@ -46926,6 +49393,138 @@ assets:
     name: Modern Row Houses Set
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-2fef783630604c1ef9e1c8b06f6b92f4-1.JPG
     url: https://community.simtropolis.com/files/file/3663-modern-row-houses-set/
+  simtropolis/36671:
+    assetId: simtropolis/36671-los-angeles-home-5
+    authors:
+      - WannGLondon
+    buildings:
+      LA Home 5_DN/LA Home 5-0x6534284a-0x1c2d4663-0xb48a8077.SC4Desc:
+        1c2d4663-b48a8077:
+          bulldoze: 264
+          capacity:
+            r$: 117
+            r$$: 66
+            r$$$: 31
+          categories: r$$$
+          flamability: 35
+          garbage: 4
+          model: d40a927c
+          name: LA Home 5
+          pollution: 1
+          pollutionRadius: 6
+          power: 4
+          tilesets: Chicago
+          water: 8
+          waterPollution: 1
+          waterPollutionRadius: 7
+          worth: 1786
+    category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tIn light of the fires that have swept through my beautiful city I wanted to upload this mansion. Inspired by a home found in Hancock Park (far enough from the fires).\n</p>\n\n<p>\n\t- R$$$ 3x3\n</p>\n\n<p>\n\t- Chicago &amp; NY Tileset\n</p>\n\n<p>\n\t- DarkNite version only\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: LA Home 5_DN.zip
+    files:
+      - LA Home 5_DN/AmericanHome3DN-0x5ad0e817_0xd40a927c_0x30000.SC4Model
+      - LA Home 5_DN/LA Home 5-0x6534284a-0x1c2d4663-0xb48a8077.SC4Desc
+      - LA Home 5_DN/R$$$4_3x3_LA Home 5_e48a8088.SC4Lot
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/Day.jpg.1bc948f772f9778688133a61fe05bc2d.jpg
+    lastModified: 2025-01-16T21:47:21.000Z
+    lots:
+      LA Home 5_DN/R$$$4_3x3_LA Home 5_e48a8088.SC4Lot:
+        e48a8088:
+          building: b48a8077
+          density: low
+          name: R$$$4_3x3_LA Home 5
+          props: 1f0b0000,2a0f0000,2a180000,a0000008,a0000014,a0000015,a0000038,a000003a,a0000050,a0000051
+          size: 3x3
+          stage: 4
+          textures: 252a2000,25f40000,25f50000,25f60000,25f80000,25fa0000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      LA Home 5_DN/AmericanHome3DN-0x5ad0e817_0xd40a927c_0x30000.SC4Model:
+        - d40a927c
+    name: Los Angeles Home 5
+    sha256: d47ff1b7f6ffebe9d0f3dfd1aef3ab83ee3fb57245e19dd529b273f56304e47a
+    size: 207999
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/Day.thumb.jpg.5d5d890b00535de679340435adb9ab70.jpg
+    uncompressed: 274599
+    url: https://community.simtropolis.com/files/file/36671-los-angeles-home-5/
+    version: 1.0.0
+  simtropolis/36673:
+    assetId: simtropolis/36673-victorian-semi-detached-houses-diagonal-pack
+    authors:
+      - justforfun
+    category: 101-residential
+    lastModified: 2025-01-17T17:23:49.000Z
+    name: Victorian Semi-detached Houses Diagonal Pack
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/678a922418dc3_Rsemi19.thumb.jpg.bd01ce300674a43ead7c63a7fde8f52c.jpg
+    url: https://community.simtropolis.com/files/file/36673-victorian-semi-detached-houses-diagonal-pack/
+  simtropolis/36674:
+    assetId: simtropolis/36674-yeefatmansion
+    authors:
+      - Ct1999
+    buildings:
+      YeeFatMansion_DN/YeeFatMansion_R$-0x6534284a-0x9faf82fb-0x132ed0ff.SC4Desc:
+        9faf82fb-132ed0ff:
+          bulldoze: 1034
+          capacity:
+            r$: 418
+          categories: r$
+          flamability: 45
+          garbage: 25
+          model: '33216305'
+          name: YeeFatMansion_R$
+          pollution: 13
+          pollutionRadius: 5
+          power: 2
+          tilesets: Euro
+          water: 20
+          waterPollution: 4
+          waterPollutionRadius: 5
+          worth: 5675
+    category: 101-residential
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\t<img class=\"ipsImage ipsImage_thumbnailed\" data-fileid=\"109831\" src=\"https://www.simtropolis.com/objects/attachments/monthly_2025_01/YeeFatMansion_9.jpg.a063ab09ee8f123556e926978be13239.jpg\" alt=\"YeeFatMansion_9.jpg.a063ab09ee8f123556e926978be13239.jpg\" >\n</p>\n\n<p>\n\tYeeFatMansion(怡發大廈)\n</p>\n\n<p>\n\tGrowable Only\n</p>\n\n<p>\n\tLOT Type: Residential<br>\n\tLOT Size: 1x2(Right Corner)<br>\n\tStage: 8<br>\n\tBuilding Style: All\n</p>\n\n<p>\n\tThe growable test has been passed!\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: YeeFatMansion_DN.zip
+    files:
+      - YeeFatMansion_DN/R$8_1x2_YeeFatMansion(RCorner)_d32ed3ed.SC4Lot
+      - YeeFatMansion_DN/ReadMe.txt
+      - YeeFatMansion_DN/YeeFatMansion-0x5ad0e817_0x33216305_0x30000.SC4Model
+      - YeeFatMansion_DN/YeeFatMansion_R$-0x6534284a-0x9faf82fb-0x132ed0ff.SC4Desc
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/YeeFatMansion_3.jpg.1732aca409c7111d6e7d5155cb40e99a.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/678b3bf4a26da_Singapore(Capital)-Jul.204081737177865.png.3b9d3f9e22cd5803be841c1284815b4e.png
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/678b3c070e894_Singapore(Capital)-Jul.224081737177873.png.c43cebdcce795636e99c2534898fc0e4.png
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/Snipaste_2025-01-18_13-29-04.jpg.39a167365e5459877117a9d994179072.jpg
+      - https://www.simtropolis.com/objects/screens/monthly_2025_01/678b3c3cd72aa_Singapore(Capital)-Jul.274081737177889.png.7c79c19681861b6387d0f961119be434.png
+    lastModified: 2025-01-18T05:34:33.000Z
+    lots:
+      YeeFatMansion_DN/R$8_1x2_YeeFatMansion(RCorner)_d32ed3ed.SC4Lot:
+        d32ed3ed:
+          building: 132ed0ff
+          density: high
+          name: R$8_1x2_YeeFatMansion(RCorner)
+          props: 29c20000
+          size: 1x2
+          stage: 8
+          textures: 258d1000,26060000
+    meta:
+      timestamp: 2025-01-22T07:05:40.696Z
+      version: 1
+    models:
+      YeeFatMansion_DN/YeeFatMansion-0x5ad0e817_0x33216305_0x30000.SC4Model:
+        - '33216305'
+    name: YeeFatMansion
+    sha256: 8dcc83b6d956e5ca79cb779985adfd0c7d0ef89f494288ce2a1dacb3569adacb
+    size: 675323
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/YeeFatMansion_3.thumb.jpg.772716c6adc09b27174e5227c183b910.jpg
+    uncompressed: 807333
+    url: https://community.simtropolis.com/files/file/36674-yeefatmansion/
+    version: 1.0.0
   simtropolis/3683:
     assetId: simtropolis/3683-victorian-terraces
     authors:
@@ -47957,4 +50556,4 @@ assets:
     url: https://community.simtropolis.com/files/file/992-small-bb-the-greeley-house/
 
 meta:
-  timestamp: 2025-01-16T08:04:08.095Z
+  timestamp: 2025-01-22T07:05:40.696Z
