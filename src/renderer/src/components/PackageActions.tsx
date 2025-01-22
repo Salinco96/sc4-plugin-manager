@@ -1,9 +1,8 @@
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import {
   type PackageID,
-  isDisabled,
   isEnabled,
   isIncluded,
   isIncompatible,
@@ -33,6 +32,8 @@ export function PackageActions({
   packageId: PackageID
 }): JSX.Element | null {
   const { t } = useTranslation("PackageActions")
+
+  const [isVariantLoading, setVariantLoading] = useState(false)
 
   const actions = useStoreActions()
   const currentProfile = useCurrentProfile()
@@ -68,13 +69,16 @@ export function PackageActions({
   const packageActions = useMemo(() => {
     const packageActions: Action[] = []
 
+    const enabled = isEnabled(packageStatus)
+    const included = isIncluded(packageStatus)
     const incompatible = isIncompatible(variantInfo, packageStatus)
-    const required = isRequired(variantInfo, packageStatus)
+    const installed = isInstalled(variantInfo)
+    const required = isRequired(packageStatus)
 
     const enableWarning = variantInfo.warnings?.find(warning => warning.on === "enable")
     const disableWarning = variantInfo.warnings?.find(warning => warning.on === "disable")
 
-    if (isMissing(variantInfo)) {
+    if (isMissing(variantInfo, packageStatus)) {
       packageActions.push({
         action: () => actions.addPackage(packageId, variantId),
         color: "warning",
@@ -92,7 +96,7 @@ export function PackageActions({
       })
     }
 
-    if (isEnabled(variantInfo, packageStatus)) {
+    if (enabled) {
       packageActions.push({
         action: () => actions.disablePackage(packageId),
         color: "error",
@@ -104,7 +108,7 @@ export function PackageActions({
         id: "disable",
         label: t("disable.label"),
       })
-    } else if (isDisabled(variantInfo, packageStatus)) {
+    } else if (installed) {
       packageActions.push({
         action: () => actions.enablePackage(packageId),
         color: "success",
@@ -119,11 +123,11 @@ export function PackageActions({
       })
     }
 
-    if (isInstalled(variantInfo) && !isRequired(variantInfo, packageStatus)) {
+    if (installed) {
       // TODO: Only allow removing if not used by ANY profile
       packageActions.push({
         action: async () => {
-          if (!isEnabled(variantInfo, packageStatus) || (await actions.disablePackage(packageId))) {
+          if (!enabled || (await actions.disablePackage(packageId))) {
             await actions.removeVariant(packageId, variantId)
           }
         },
@@ -137,9 +141,7 @@ export function PackageActions({
         id: "remove",
         label: t("remove.label"),
       })
-    }
-
-    if (!isInstalled(variantInfo) && !isIncluded(variantInfo, packageStatus)) {
+    } else if (!included) {
       if (currentProfile) {
         packageActions.push({
           action: () => actions.addPackage(packageId, variantId),
@@ -170,7 +172,7 @@ export function PackageActions({
       return t(`actions.${variantInfo.action}`)
     }
 
-    if (packageStatus?.action) {
+    if (packageStatus?.action && packageStatus.action !== "switching") {
       return t(`actions.${packageStatus.action}`)
     }
   }, [packageStatus, t, variantInfo])
@@ -180,9 +182,17 @@ export function PackageActions({
       actions={packageActions}
       isLoading={!!loadingLabel}
       loadingLabel={loadingLabel}
+      setVariant={async variantId => {
+        try {
+          setVariantLoading(isIncluded(packageStatus))
+          await actions.setPackageVariant(packageInfo.id, variantId)
+        } finally {
+          setVariantLoading(false)
+        }
+      }}
       variant={variantId}
       variants={variants}
-      setVariant={variantId => actions.setPackageVariant(packageInfo.id, variantId)}
+      variantLoading={packageStatus?.action === "switching"}
     />
   )
 }

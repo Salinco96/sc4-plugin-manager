@@ -26,18 +26,21 @@ export function ActionButton<VariantID extends string>({
   actions,
   isLoading,
   loadingLabel,
+  setVariant,
   variant,
   variants,
-  setVariant,
+  variantLoading,
 }: {
   actions: Array<Action | false | null | undefined>
   isLoading?: boolean
   loadingLabel?: string
+  setVariant?: (variant: VariantID) => void
   variant?: VariantID
   variants?: Array<Variant<VariantID> | false | null | undefined>
-  setVariant?: (variant: VariantID) => void
+  variantLoading?: boolean
 }): JSX.Element | null {
   const anchorRef = useRef<HTMLButtonElement>(null)
+
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const { t } = useTranslation("General")
@@ -127,13 +130,13 @@ export function ActionButton<VariantID extends string>({
       {!!filteredVariants?.length && (
         <Select
           disabled={
+            variantLoading ||
             selectableVariants?.length === 0 ||
             (selectableVariants?.length === 1 && variant === selectableVariants[0]) ||
             !setVariant
           }
           error={!variant || !selectableVariants?.includes(variant)}
           fullWidth
-          onClose={() => setMenuOpen(false)}
           MenuProps={{ sx: { maxHeight: 320 } }}
           name="variant"
           onChange={event => setVariant?.(event.target.value as VariantID)}

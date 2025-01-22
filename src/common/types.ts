@@ -96,7 +96,7 @@ export type Features = {
 
 export interface PackageStatus {
   /** Current action relating to this package */
-  action?: "disabling" | "enabling"
+  action?: "disabling" | "enabling" | "switching"
   /** Whether package is explicitly enabled */
   enabled?: boolean
   /** Which files are included (glob patterns, only as dependency, defaults to all) */
@@ -163,7 +163,7 @@ export function getState(
       return isDisabled(variantInfo, packageStatus)
 
     case VariantState.ENABLED:
-      return isEnabled(variantInfo, packageStatus)
+      return isEnabled(packageStatus)
 
     case VariantState.ERROR:
       return isError(variantInfo, packageStatus)
@@ -172,7 +172,7 @@ export function getState(
       return isExperimental(variantInfo)
 
     case VariantState.INCLUDED:
-      return isIncluded(variantInfo, packageStatus)
+      return isIncluded(packageStatus)
 
     case VariantState.INCOMPATIBLE:
       return isIncompatible(variantInfo, packageStatus)

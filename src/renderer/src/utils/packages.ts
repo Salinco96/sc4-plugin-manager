@@ -10,13 +10,7 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { ProfileInfo } from "@common/profiles"
-import {
-  type PackageInfo,
-  type PackageStatus,
-  type Packages,
-  VariantState,
-  getState,
-} from "@common/types"
+import { type PackageInfo, type PackageStatus, type Packages, getState } from "@common/types"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
 
@@ -277,31 +271,8 @@ export function filterVariant(
     return false
   }
 
-  if (filters.state) {
-    switch (filters.state) {
-      case VariantState.DISABLED:
-        if (packageStatus?.enabled) {
-          return false
-        }
-
-        break
-      case VariantState.ENABLED:
-        if (filters.dependencies ? !packageStatus?.included : !packageStatus?.enabled) {
-          return false
-        }
-
-        break
-      case VariantState.INCLUDED:
-        if (!packageStatus?.included) {
-          return false
-        }
-
-        break
-      default:
-        if (!getState(filters.state, packageInfo, variantInfo, profileInfo)) {
-          return false
-        }
-    }
+  if (filters.state && !getState(filters.state, packageInfo, variantInfo, profileInfo)) {
+    return false
   }
 
   if (filters.states.length) {

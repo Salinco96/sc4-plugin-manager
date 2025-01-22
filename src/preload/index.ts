@@ -138,15 +138,18 @@ export const api = {
   },
   subscribe(handlers: {
     showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
-    updateState(data: ApplicationStateUpdate): void
+    updateState(data: ApplicationStateUpdate, noRecompute?: boolean): void
   }): () => void {
     const showModal = async <T extends ModalID>(_: IpcRendererEvent, id: T, data: ModalData<T>) => {
       const result = await handlers.showModal(id, data)
       ipcRenderer.send("showModalResult", result)
     }
 
-    const updateState = (_: IpcRendererEvent, data: ApplicationStateUpdate) => {
-      handlers.updateState(data)
+    const updateState = (
+      _: IpcRendererEvent,
+      { noRecompute, ...data }: ApplicationStateUpdate & { noRecompute?: boolean },
+    ) => {
+      handlers.updateState(data, noRecompute)
     }
 
     ipcRenderer.on("showModal", showModal)

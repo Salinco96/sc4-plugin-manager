@@ -48,8 +48,6 @@ export function RegionHeader({
       actions={
         <ActionButton
           actions={[]}
-          variant={regionProfileId}
-          variants={profileOptions}
           setVariant={profileId =>
             actions.updateSettings({
               regions: {
@@ -61,6 +59,8 @@ export function RegionHeader({
               },
             })
           }
+          variant={regionProfileId}
+          variants={profileOptions}
         />
       }
       description={`${establishedCities.length} / ${cities.length} established cities`}

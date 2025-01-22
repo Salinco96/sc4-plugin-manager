@@ -429,6 +429,7 @@ export function resolvePackageUpdates(
       (result, newEnabled, feature) => {
         if (result[feature] !== newEnabled) {
           result[feature] = newEnabled
+          console.log(5)
           shouldRecalculate = true
         }
 
@@ -451,10 +452,12 @@ export function resolvePackageUpdates(
         if (isOptionDefaultValue(globalOption, newValue)) {
           if (result[optionId] !== undefined) {
             delete result[optionId]
+            console.log(4)
             shouldRecalculate = true
           }
         } else if (result[optionId] !== newValue) {
           result[optionId] = newValue
+          console.log(3)
           shouldRecalculate = true
         }
 
@@ -470,14 +473,17 @@ export function resolvePackageUpdates(
       updates.packages,
       (result, newConfig, packageId) => {
         const oldConfig = profileInfo.packages[packageId]
+        const oldStatus = packages[packageId]?.status[profileInfo.id]
 
         // Must recalculate if package is newly enabled or disabled
-        if (!!oldConfig?.enabled !== newConfig.enabled) {
+        if (newConfig.enabled !== undefined && newConfig.enabled !== !!oldConfig?.enabled) {
+          console.log(1)
           shouldRecalculate = true
         }
 
         // Must recalculate if included package is changed
-        if (packages[packageId]?.status[resultingProfile.id]?.included) {
+        if (oldStatus?.included) {
+          console.log(2)
           shouldRecalculate = true
         }
 
@@ -630,8 +636,8 @@ export function resolvePackageUpdates(
         }
       }
 
-      if (isIncluded(variantInfo, newStatus)) {
-        if (!isIncluded(variantInfo, oldStatus)) {
+      if (isIncluded(newStatus)) {
+        if (!isIncluded(oldStatus)) {
           includingPackages.push(packageId)
         }
 

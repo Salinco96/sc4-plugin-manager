@@ -6,6 +6,7 @@ import {
   type EmptyRecord,
   collect,
   entries,
+  filterValues,
   forEach,
   forEachAsync,
   isEmpty,
@@ -53,6 +54,7 @@ import {
   isInstalled,
   isLocal,
   isPatched,
+  isSelected,
 } from "@common/packages"
 import {
   type ProfileData,
@@ -529,7 +531,11 @@ export class Application {
               variantInfo =>
                 isInstalled(variantInfo) &&
                 !isLocal(variantInfo) &&
-                !packageStatus.some(status => isIncluded(variantInfo, status[packageInfo.id])),
+                !packageStatus.some(
+                  status =>
+                    isIncluded(status[packageInfo.id]) &&
+                    isSelected(variantInfo, status[packageInfo.id]),
+                ),
             )
             .map(variantInfo => ({
               packageId: packageInfo.id,
@@ -1550,7 +1556,7 @@ export class Application {
             variantInfo.action = "installing"
           }
 
-          this.sendPackageUpdate(packageInfo)
+          this.sendPackageUpdate(packageInfo, true)
 
           const variantPath = this.getVariantPath(packageId, variantId)
 
@@ -2399,7 +2405,8 @@ export class Application {
 
         // Trigger a relink of this package only if it is included in current profile
         if (settings.currentProfile) {
-          if (isIncluded(variantInfo, packageInfo.status[settings.currentProfile])) {
+          const packageStatus = packageInfo.status[settings.currentProfile]
+          if (isIncluded(packageStatus) && isSelected(variantInfo, packageStatus)) {
             this.linkPackages({ packageId })
           }
         }
@@ -2740,7 +2747,7 @@ export class Application {
           context.info(`Removing variant '${packageId}#${variantId}'...`)
 
           variantInfo.action = "removing"
-          this.sendPackageUpdate(packageInfo)
+          this.sendPackageUpdate(packageInfo, true)
 
           variantInfo.files = undefined
           variantInfo.installed = undefined
@@ -2873,8 +2880,8 @@ export class Application {
   /**
    * Sends updates to a single package to the renderer.
    */
-  protected sendPackageUpdate(packageInfo: PackageInfo): void {
-    this.sendStateUpdate({ packages: { [packageInfo.id]: packageInfo } })
+  protected sendPackageUpdate(packageInfo: PackageInfo, noRecompute?: boolean): void {
+    this.sendStateUpdate({ packages: { [packageInfo.id]: packageInfo } }, noRecompute)
   }
 
   /**
@@ -2887,8 +2894,8 @@ export class Application {
   /**
    * Sends updates to the renderer.
    */
-  protected sendStateUpdate(data: ApplicationStateUpdate): void {
-    this.mainWindow?.webContents.postMessage("updateState", data)
+  protected sendStateUpdate(data: ApplicationStateUpdate, noRecompute?: boolean): void {
+    this.mainWindow?.webContents.postMessage("updateState", { ...data, noRecompute })
   }
 
   /**
@@ -3053,11 +3060,14 @@ export class Application {
 
             try {
               if (shouldRecalculate) {
+                const packagesWithAction: typeof packages = {}
+
                 // Set enabling/disabling status
                 for (const packageId of disablingPackages) {
                   const packageStatus = packages[packageId]?.status[profileId]
                   if (packageStatus) {
                     packageStatus.action = "disabling"
+                    packagesWithAction[packageId] = packages[packageId]
                   }
                 }
 
@@ -3065,10 +3075,13 @@ export class Application {
                   const packageStatus = packages[packageId]?.status[profileId]
                   if (packageStatus) {
                     packageStatus.action = "enabling"
+                    packagesWithAction[packageId] = packages[packageId]
                   }
                 }
 
-                this.sendStateUpdate({ packages })
+                if (!isEmpty(packagesWithAction)) {
+                  this.sendStateUpdate({ packages: packagesWithAction }, true)
+                }
 
                 // Apply implicit variant changes automatically
                 if (!isEmpty(implicitVariantChanges)) {
@@ -3446,6 +3459,12 @@ export class Application {
               forEach(packages, (packageInfo, packageId) => {
                 packageInfo.status[profileId] = resultingStatus[packageId]
               })
+
+              if (update.packages && !shouldRecalculate) {
+                this.sendStateUpdate({
+                  packages: filterValues(packages, info => !!update.packages?.[info.id]),
+                })
+              }
 
               // Run cleaner and linker
               if (shouldRecalculate && settings.currentProfile === profileId) {

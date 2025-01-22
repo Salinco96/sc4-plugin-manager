@@ -90,8 +90,6 @@ export function CityHeader({
                 label: t("actions.historical.label"),
               },
             ]}
-            variant={cityProfileId ?? "*"}
-            variants={profileOptions}
             setVariant={profileId =>
               actions.updateSettings({
                 regions: {
@@ -106,6 +104,8 @@ export function CityHeader({
                 },
               })
             }
+            variant={cityProfileId ?? "*"}
+            variants={profileOptions}
           />
         </>
       }

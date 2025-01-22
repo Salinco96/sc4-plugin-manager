@@ -14,6 +14,7 @@ import {
   isEnabled,
   isIncluded,
   isIncompatible,
+  isSelected,
 } from "@common/packages"
 import type { ProfileID, ProfileInfo, ProfileUpdate } from "@common/profiles"
 import type { Settings } from "@common/settings"
@@ -26,7 +27,7 @@ import type { CollectionID, CollectionInfo } from "@common/collections"
 import type { CityID, RegionID, RegionInfo, UpdateSaveAction } from "@common/regions"
 import { getStore } from "./context"
 import { Page } from "./navigation"
-import { computePackageList } from "./packages"
+import { computePackageList, getCurrentVariant } from "./packages"
 import type { SnackbarProps, SnackbarType } from "./snackbar"
 
 export interface PackageUi {
@@ -133,7 +134,7 @@ export interface StoreActions {
     action: UpdateSaveAction,
   ): Promise<boolean>
   updateSettings(data: Partial<Settings>): Promise<void>
-  updateState(update: ApplicationStateUpdate): void
+  updateState(update: ApplicationStateUpdate, noRecompute?: boolean): void
 }
 
 export type View<T extends Page> = Store["views"][T]
@@ -227,6 +228,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
 
+        updateState({
+          packages: {
+            [packageId]: {
+              status: {
+                [profileInfo.id]: {
+                  $merge: {
+                    action: "enabling",
+                  },
+                },
+              },
+            },
+          },
+        })
+
         try {
           return await window.api.updateProfile(profileInfo.id, {
             ...data,
@@ -286,8 +301,7 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         for (const packageId of collectionInfo.packages) {
           const packageInfo = getPackageInfo(store, packageId)
           const packageStatus = packageInfo && getPackageStatus(packageInfo, profileInfo)
-          const variantInfo = packageStatus && packageInfo.variants[packageStatus.variantId]
-          if (variantInfo && isEnabled(variantInfo, packageStatus)) {
+          if (isEnabled(packageStatus)) {
             update.packages ??= {}
             update.packages[packageId] = { enabled: false }
           }
@@ -311,6 +325,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         if (!profileInfo) {
           return false
         }
+
+        updateState({
+          packages: {
+            [packageId]: {
+              status: {
+                [profileInfo.id]: {
+                  $merge: {
+                    action: "disabling",
+                  },
+                },
+              },
+            },
+          },
+        })
 
         try {
           return await window.api.updateProfile(profileInfo.id, {
@@ -341,12 +369,8 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         for (const packageId of collectionInfo.packages) {
           const packageInfo = getPackageInfo(store, packageId)
           const packageStatus = packageInfo && getPackageStatus(packageInfo, profileInfo)
-          const variantInfo = packageStatus && packageInfo.variants[packageStatus.variantId]
-          if (
-            variantInfo &&
-            !isEnabled(variantInfo, packageStatus) &&
-            !isIncompatible(variantInfo, packageStatus)
-          ) {
+          const variantInfo = getCurrentVariant(store, packageId)
+          if (!isEnabled(packageStatus) && !isIncompatible(variantInfo, packageStatus)) {
             update.packages ??= {}
             update.packages[packageId] = { enabled: true, variant: variantInfo.id }
           }
@@ -370,6 +394,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         if (!profileInfo) {
           return false
         }
+
+        updateState({
+          packages: {
+            [packageId]: {
+              status: {
+                [profileInfo.id]: {
+                  $merge: {
+                    action: "enabling",
+                  },
+                },
+              },
+            },
+          },
+        })
 
         try {
           return await window.api.updateProfile(profileInfo.id, {
@@ -398,6 +436,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         }
       },
       async installVariant(packageId, variantId) {
+        updateState({
+          packages: {
+            [packageId]: {
+              variants: {
+                [variantId]: {
+                  $merge: {
+                    action: "installing",
+                  },
+                },
+              },
+            },
+          },
+        })
+
         try {
           await window.api.installVariant(packageId, variantId)
         } catch (error) {
@@ -471,6 +523,20 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         }
       },
       async removeVariant(packageId, variantId) {
+        updateState({
+          packages: {
+            [packageId]: {
+              variants: {
+                [variantId]: {
+                  $merge: {
+                    action: "removing",
+                  },
+                },
+              },
+            },
+          },
+        })
+
         try {
           await window.api.removeVariant(packageId, variantId)
         } catch (error) {
@@ -484,6 +550,19 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
         if (!profileInfo) {
           return
         }
+
+        updateState({
+          profiles: {
+            [profileInfo.id]: {
+              packages: {
+                [packageId]: (config = {}) => ({
+                  ...config,
+                  options: undefined,
+                }),
+              },
+            },
+          },
+        })
 
         try {
           await window.api.updateProfile(profileInfo.id, {
@@ -520,6 +599,22 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
 
+        updateState({
+          profiles: {
+            [profileInfo.id]: {
+              packages: {
+                [packageId]: (config = {}) => ({
+                  ...config,
+                  options: {
+                    ...config.options,
+                    [optionId]: value,
+                  },
+                }),
+              },
+            },
+          },
+        })
+
         try {
           return await window.api.updateProfile(profileInfo.id, {
             packages: {
@@ -541,7 +636,21 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
 
-        if (!profileInfo) {
+        if (profileInfo && isIncluded(getPackageStatus(packageInfo, profileInfo))) {
+          updateState({
+            packages: {
+              [packageId]: {
+                status: {
+                  [profileInfo.id]: {
+                    $merge: {
+                      action: "switching",
+                    },
+                  },
+                },
+              },
+            },
+          })
+        } else {
           updateState({
             packageUi: {
               [packageId]: {
@@ -551,7 +660,9 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
               },
             },
           })
+        }
 
+        if (!profileInfo) {
           return true
         }
 
@@ -638,7 +749,8 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           // If the variant to update is included in the current profile, then the update may cause
           // changes in files/conflicts/dependencies. Thus we need to trigger package resolution as
           // if the profile was changed.
-          if (profileInfo && isIncluded(variantInfo, getPackageStatus(packageInfo, profileInfo))) {
+          const packageStatus = getPackageStatus(packageInfo, profileInfo)
+          if (profileInfo && isIncluded(packageStatus) && isSelected(variantInfo, packageStatus)) {
             return await window.api.updateProfile(profileInfo.id, {
               packages: {
                 [packageId]: {
@@ -708,7 +820,7 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
           return false
         }
       },
-      updateState(data) {
+      updateState(data, noRecompute) {
         const { downloads, linker, loader, ...dataToLog } = data
 
         if (!isEmpty(dataToLog)) {
@@ -732,7 +844,7 @@ export const useStore = getStore(initialState, initialState => (set, get): Store
             updates.profiles = compact({ ...store.profiles, ...profiles })
           }
 
-          if (packages) {
+          if (packages && !noRecompute) {
             Object.assign(updates, computePackageList({ ...store, ...updates }, false))
           }
 

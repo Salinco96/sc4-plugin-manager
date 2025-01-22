@@ -35,8 +35,7 @@ export function CollectionTags({
 
     const enabledPackages = packages.filter(packageInfo => {
       const packageStatus = getPackageStatus(packageInfo, profileInfo)
-      const variantInfo = packageStatus && packageInfo.variants[packageStatus?.variantId]
-      return !!variantInfo && isEnabled(variantInfo, packageStatus)
+      return isEnabled(packageStatus)
     })
 
     const authors = new Set<AuthorID>()
