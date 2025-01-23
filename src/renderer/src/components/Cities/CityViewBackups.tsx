@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import type { CityID, RegionID } from "@common/regions"
 import { FlexCol } from "@components/FlexBox"
 import { List } from "@components/List"
-import { useCityInfo } from "@utils/packages"
+import { store } from "@stores/main"
 
 import { CityBackupListItem } from "./CityBackupListItem"
 
@@ -12,7 +12,7 @@ export default function CityViewBackups({
   cityId,
   regionId,
 }: { cityId: CityID; regionId: RegionID }): JSX.Element {
-  const city = useCityInfo(cityId, regionId)
+  const city = store.useCityInfo(regionId, cityId)
 
   const { t } = useTranslation("CityView")
 

@@ -18,7 +18,7 @@ import {
   type ExemplarPropertyValue,
   ExemplarValueType,
 } from "@common/exemplars"
-import { useExemplarProperties } from "@utils/store"
+import { store } from "@stores/main"
 
 export function isEqualPropertyValue(
   value: ExemplarPropertyValue | null,
@@ -409,7 +409,7 @@ export const PARENT_COHORT_ID_INFO = {
 } satisfies ExemplarPropertyInfo
 
 export function useExemplarPropertyInfo(propertyId: number): ExemplarPropertyInfo | undefined {
-  const exemplarProperties = useExemplarProperties()
+  const exemplarProperties = store.useExemplarProperties()
 
   if (propertyId === PARENT_COHORT_ID_INFO.id) {
     return PARENT_COHORT_ID_INFO

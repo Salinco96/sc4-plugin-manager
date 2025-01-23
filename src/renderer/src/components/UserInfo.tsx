@@ -3,15 +3,13 @@ import { IconButton, Tooltip, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import type { ApplicationState } from "@common/state"
-import { useStoreActions } from "@utils/store"
+import { showSuccessToast } from "@stores/ui"
 
 import { FlexRow } from "./FlexBox"
 
 export function UserInfo({
   session: { displayName, sessionId, userId },
 }: { session: NonNullable<ApplicationState["simtropolis"]> }): JSX.Element {
-  const actions = useStoreActions()
-
   const { t } = useTranslation("AppBar")
 
   return (
@@ -36,7 +34,7 @@ export function UserInfo({
             color="inherit"
             onClick={async () => {
               await navigator.clipboard.writeText(sessionId)
-              actions.showSuccessToast(t("actions.sessionKey.success"))
+              showSuccessToast(t("actions.sessionKey.success"))
             }}
             size="small"
           >

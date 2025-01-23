@@ -1,11 +1,11 @@
 import { sortBy, values } from "@salinco/nice-utils"
 
 import { Loader } from "@components/Loader"
-import { useStore } from "@utils/store"
-import { RegionList } from "../../components/Regions/RegionList"
+import { RegionList } from "@components/Regions/RegionList"
+import { store } from "@stores/main"
 
 function Regions(): JSX.Element {
-  const regions = useStore(store => store.regions)
+  const regions = store.useRegions()
 
   if (!regions) {
     return <Loader />

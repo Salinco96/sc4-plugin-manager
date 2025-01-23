@@ -1,9 +1,11 @@
 import { getAuthorName } from "@common/authors"
 import { Box, Chip, Tooltip } from "@mui/material"
 import { difference } from "@salinco/nice-utils"
-import { useAuthors } from "@utils/store"
 import { type ComponentType, useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
+
+import { store } from "@stores/main"
+
 import { Tag } from "./Tag"
 import { type TagInfo, TagType, serializeTag } from "./utils"
 
@@ -14,7 +16,7 @@ export function Tags({
   component?: ComponentType<{ tag: TagInfo }>
   tags: TagInfo[]
 }): JSX.Element | null {
-  const authors = useAuthors()
+  const authors = store.useAuthors()
 
   const containerRef = useRef<HTMLDivElement | null>(null)
 

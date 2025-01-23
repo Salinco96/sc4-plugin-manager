@@ -65,7 +65,11 @@ import {
 } from "@common/profiles"
 import type { PropID } from "@common/props"
 import type { Settings, SettingsData } from "@common/settings"
-import type { ApplicationState, ApplicationStateUpdate } from "@common/state"
+import type {
+  ApplicationState,
+  ApplicationStateUpdate,
+  ApplicationStatusUpdate,
+} from "@common/state"
 import type { ToolID } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
@@ -166,9 +170,9 @@ import {
 } from "./utils/sessions/simtropolis"
 import { TaskManager } from "./utils/tasks"
 
-type Loaded = Required<
-  Omit<ApplicationState, "downloads" | "linker" | "loader" | "simtropolis">
-> & {
+type Loaded = {
+  [K in Exclude<keyof ApplicationState, "simtropolis">]-?: Exclude<ApplicationState[K], undefined>
+} & {
   assets: Assets
 }
 
@@ -481,7 +485,7 @@ export class Application {
       },
       invalidate: true,
       onStatusUpdate: info => {
-        this.sendStateUpdate({ linker: info })
+        this.sendStatusUpdate({ linker: info })
       },
       pool: "link",
     })
@@ -581,7 +585,7 @@ export class Application {
         }
       },
       onStatusUpdate: info => {
-        this.sendStateUpdate({ loader: info })
+        this.sendStatusUpdate({ loader: info })
       },
       pool: "main",
     })
@@ -820,7 +824,7 @@ export class Application {
         })
       },
       onStatusUpdate: info => {
-        this.sendStateUpdate({ downloads: { [key]: info } })
+        this.sendStatusUpdate({ downloads: { [key]: info } })
       },
       pool: "download",
     })
@@ -1104,12 +1108,9 @@ export class Application {
       authors,
       categories,
       collections,
-      downloads: {},
       exemplarProperties,
       externals,
       features,
-      linker: null,
-      loader: null,
       maxis,
       packages,
       profiles,
@@ -1367,7 +1368,7 @@ export class Application {
       },
       invalidate: isReload,
       onStatusUpdate: info => {
-        this.sendStateUpdate({ linker: info })
+        this.sendStatusUpdate({ linker: info })
       },
       pool: "link",
     })
@@ -1903,7 +1904,7 @@ export class Application {
       },
       invalidate: true,
       onStatusUpdate: info => {
-        this.sendStateUpdate({ linker: info })
+        this.sendStatusUpdate({ linker: info })
       },
       pool: "link",
     })
@@ -2045,7 +2046,7 @@ export class Application {
       },
       invalidate: isReload,
       onStatusUpdate: info => {
-        this.sendStateUpdate({ loader: info })
+        this.sendStatusUpdate({ loader: info })
       },
       pool: "main",
     })
@@ -2896,6 +2897,13 @@ export class Application {
    */
   protected sendStateUpdate(data: ApplicationStateUpdate, noRecompute?: boolean): void {
     this.mainWindow?.webContents.postMessage("updateState", { ...data, noRecompute })
+  }
+
+  /**
+   * Sends status updates to the renderer.
+   */
+  protected sendStatusUpdate(data: ApplicationStatusUpdate): void {
+    this.mainWindow?.webContents.postMessage("updateStatus", data)
   }
 
   /**

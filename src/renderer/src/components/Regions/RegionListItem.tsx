@@ -4,25 +4,23 @@ import { memo } from "react"
 import { type RegionID, getRegionLinkedProfileId } from "@common/regions"
 import { ListItem } from "@components/ListItem"
 import { PackageBanner } from "@components/PackageBanners/PackageBanner"
-import { useSettings, useStore } from "@utils/store"
 
+import { store } from "@stores/main"
 import { RegionHeader } from "./RegionHeader"
 
 export const RegionListItem = memo(function CollectionListItem(props: {
   regionId: RegionID
 }): JSX.Element {
-  const profiles = useStore(store => store.profiles)
-  const settings = useSettings()
-
-  const regionProfileId = getRegionLinkedProfileId(props.regionId, settings, profiles)
+  const isUnlinked = store.useStore(
+    state =>
+      !!state.profiles &&
+      size(state.profiles) > 1 &&
+      !getRegionLinkedProfileId(props.regionId, state.settings, state.profiles),
+  )
 
   return (
     <ListItem
-      banners={
-        !!profiles &&
-        size(profiles) > 1 &&
-        !regionProfileId && <PackageBanner>No linked profile</PackageBanner>
-      }
+      banners={isUnlinked && <PackageBanner>No linked profile</PackageBanner>}
       header={RegionHeader}
       {...props}
     />

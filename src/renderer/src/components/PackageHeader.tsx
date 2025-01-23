@@ -1,7 +1,8 @@
 import type { PackageID } from "@common/packages"
 import { PackageActions } from "@components/PackageActions"
 import { Page, useLocation } from "@utils/navigation"
-import { useCurrentVariant, usePackageInfo } from "@utils/packages"
+
+import { store } from "@stores/main"
 import { Header } from "./Header"
 import { PackageTools } from "./PackageTools"
 import { PackageTags } from "./Tags/PackageTags"
@@ -16,8 +17,9 @@ export function PackageHeader({
   setActive?: (active: boolean) => void
 }): JSX.Element {
   const { page } = useLocation()
-  const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+
+  const packageInfo = store.usePackageInfo(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   return (
     <Header

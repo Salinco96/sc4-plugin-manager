@@ -6,19 +6,18 @@ import { type RegionID, getRegionLinkedProfileId } from "@common/regions"
 import { ActionButton, type Variant } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { ToolBelt, type ToolBeltAction } from "@components/ToolBelt"
+import { linkRegion, openRegionFolder } from "@stores/actions"
+import { store } from "@stores/main"
 import { Page } from "@utils/navigation"
-import { useRegionInfo } from "@utils/packages"
-import { useSettings, useStore, useStoreActions } from "@utils/store"
 
 export function RegionHeader({
   isListItem,
   regionId,
   setActive,
 }: HeaderProps<{ regionId: RegionID }>): JSX.Element {
-  const actions = useStoreActions()
-  const profiles = useStore(store => store.profiles)
-  const region = useRegionInfo(regionId)
-  const settings = useSettings()
+  const profiles = store.useProfiles()
+  const region = store.useRegionInfo(regionId)
+  const settings = store.useSettings()
 
   const regionProfileId = getRegionLinkedProfileId(regionId, settings, profiles)
 
@@ -27,7 +26,7 @@ export function RegionHeader({
 
   const toolbeltActions: ToolBeltAction[] = [
     {
-      action: () => actions.openRegionFolder(regionId),
+      action: () => openRegionFolder(regionId),
       description: "openRegionFolder",
       icon: "files",
       id: "openRegionFolder",
@@ -48,17 +47,7 @@ export function RegionHeader({
       actions={
         <ActionButton
           actions={[]}
-          setVariant={profileId =>
-            actions.updateSettings({
-              regions: {
-                ...settings?.regions,
-                [regionId]: {
-                  ...settings?.regions?.[regionId],
-                  profile: profileId,
-                },
-              },
-            })
-          }
+          setVariant={profileId => linkRegion(regionId, profileId)}
           variant={regionProfileId}
           variants={profileOptions}
         />

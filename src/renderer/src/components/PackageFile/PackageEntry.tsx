@@ -10,10 +10,10 @@ import type { FileInfo } from "@common/variants"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { EntryViewer } from "@components/Viewer/EntryViewer"
-import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
 
 import { Tag } from "@components/Tags/Tag"
+import { loadDBPFEntry, patchDBPFEntries } from "@stores/actions"
+import { store } from "@stores/main"
 import { getDBPFEntryLabel } from "./utils"
 
 const EDITABLETYPES = [
@@ -49,8 +49,7 @@ export function PackageEntry({
   packageId,
   setFileData,
 }: PackageEntryProps): JSX.Element {
-  const actions = useStoreActions()
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const [isViewing, setViewing] = useState(false)
 
@@ -63,7 +62,7 @@ export function PackageEntry({
   const compression = entry.uncompressed ? 1 - entry.size / entry.uncompressed : 0
 
   async function loadEntry() {
-    const data = await actions.loadDBPFEntry(packageId, variantInfo.id, file.path, entry.id)
+    const data = await loadDBPFEntry(packageId, variantInfo.id, file.path, entry.id)
 
     setFileData({
       ...fileData,
@@ -120,7 +119,7 @@ export function PackageEntry({
           onClose={() => setViewing(false)}
           onPatch={async patch => {
             setFileData(
-              await actions.patchDBPFEntries(packageId, variantInfo.id, file.path, {
+              await patchDBPFEntries(packageId, variantInfo.id, file.path, {
                 [entry.id]: patch,
               }),
             )

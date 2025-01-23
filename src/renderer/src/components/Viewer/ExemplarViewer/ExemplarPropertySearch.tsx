@@ -5,7 +5,8 @@ import { useMemo, useState } from "react"
 import type { TGI } from "@common/dbpf"
 import { type ExemplarData, type ExemplarProperty, getExemplarType } from "@common/exemplars"
 import { FlexRow } from "@components/FlexBox"
-import { useStore } from "@utils/store"
+
+import { store } from "@stores/main"
 import { getDefaultValue } from "./utils"
 
 export interface ExemplarPropertyNewProps {
@@ -21,7 +22,7 @@ export function ExemplarPropertySearch({
   onSelect,
   readonly,
 }: ExemplarPropertyNewProps): JSX.Element {
-  const exemplarProperties = useStore(store => store.exemplarProperties)
+  const exemplarProperties = store.useExemplarProperties()
   const exemplarType = getExemplarType(id, data)
 
   const filterOptions = useMemo(() => {
@@ -79,7 +80,7 @@ export function ExemplarPropertySearch({
         return option.label
       }}
       handleHomeEndKeys
-      onChange={(event, newValue) => {
+      onChange={(_event, newValue) => {
         if (!isString(newValue)) {
           const propertyId = newValue.value
           const property = data.properties[propertyId]

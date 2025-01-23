@@ -1,18 +1,17 @@
+import { Alert, AlertTitle, Button } from "@mui/material"
 import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import { FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { Alert, AlertTitle, Button } from "@mui/material"
-import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
-import { useTranslation } from "react-i18next"
+import { clearPackageLogs, getPackageLogs } from "@stores/actions"
+import { store } from "@stores/main"
 
 export default function PackageViewLogs({
   packageId,
 }: { packageId: PackageID }): JSX.Element | null {
-  const actions = useStoreActions()
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
   const [logs, setLogs] = useState<{ size: number; text: string } | null>()
@@ -20,8 +19,8 @@ export default function PackageViewLogs({
   const { t } = useTranslation("PackageViewLogs")
 
   useEffect(() => {
-    actions.getPackageLogs(packageId, variantId).then(setLogs).catch(console.error)
-  }, [actions, packageId, variantId])
+    getPackageLogs(packageId, variantId).then(setLogs).catch(console.error)
+  }, [packageId, variantId])
 
   if (logs === undefined) {
     return <Loader />
@@ -45,7 +44,7 @@ export default function PackageViewLogs({
           <Button
             color="inherit"
             onClick={async () => {
-              await actions.clearPackageLogs(packageId, variantId)
+              await clearPackageLogs(packageId, variantId)
               setLogs(null)
             }}
             size="small"

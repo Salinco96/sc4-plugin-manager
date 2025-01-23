@@ -17,6 +17,7 @@
       "@config/*": ["src/config/*"],
       "@pages/*": ["src/renderer/src/pages/*"],
       "@providers/*": ["src/renderer/src/providers/*"],
+      "@stores/*": ["src/renderer/src/stores/*"],
       "@utils/*": ["src/renderer/src/utils/*"]
     }
   }

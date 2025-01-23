@@ -23,8 +23,8 @@ import { useTranslation } from "react-i18next"
 import type { PackageID } from "@common/packages"
 import { createUniqueId } from "@common/profiles"
 import type { VariantID } from "@common/variants"
-import { useCurrentVariant, usePackageInfo, useVariantInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import { createVariant } from "@stores/actions"
+import { store } from "@stores/main"
 
 export interface CreateVariantModalProps {
   onClose(): void
@@ -38,10 +38,8 @@ export interface CreateVariantFormProps {
 }
 
 export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps): JSX.Element {
-  const actions = useStoreActions()
-
-  const packageInfo = usePackageInfo(packageId)
-  const currentVariant = useCurrentVariant(packageId)
+  const packageInfo = store.usePackageInfo(packageId)
+  const currentVariant = store.useCurrentVariant(packageId)
 
   const variantIds = keys(packageInfo.variants)
 
@@ -51,7 +49,7 @@ export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps
   const [variantId, setVariantId] = useState(currentVariant.id)
   const [isCreating, setCreating] = useState(false)
 
-  const sourceVariant = useVariantInfo(packageId, variantId)
+  const sourceVariant = store.useVariantInfo(packageId, variantId)
   const defaultName = `${sourceVariant.name ?? sourceVariant.id} (Copy)`
 
   const nameValue = name ?? defaultName
@@ -143,7 +141,7 @@ export function CreateVariantForm({ onClose, packageId }: CreateVariantFormProps
           onClick={async () => {
             try {
               setCreating(true)
-              await actions.createVariant(packageId, nameValue.trim(), variantId)
+              await createVariant(packageId, nameValue.trim(), variantId)
               onClose()
             } finally {
               setCreating(false)

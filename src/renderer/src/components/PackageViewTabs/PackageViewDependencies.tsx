@@ -1,17 +1,17 @@
+import { List } from "@mui/material"
+
 import { type PackageID, checkCondition } from "@common/packages"
 import { PackageListItem } from "@components/PackageList/PackageListItem"
-import { List } from "@mui/material"
-import { useCurrentVariant } from "@utils/packages"
-import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 export default function PackageViewDependencies({
   packageId,
 }: { packageId: PackageID }): JSX.Element {
-  const features = useFeatures()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
-  const settings = useSettings()
-  const variantInfo = useCurrentVariant(packageId)
+  const features = store.useFeatures()
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>

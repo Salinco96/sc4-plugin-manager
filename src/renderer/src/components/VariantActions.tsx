@@ -13,8 +13,14 @@ import {
 } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { getWarningMessage } from "@common/warnings"
-import { usePackageStatus, useVariantInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import {
+  addPackage,
+  installVariant,
+  removeVariant,
+  setPackageVariant,
+  updateVariant,
+} from "@stores/actions"
+import { store } from "@stores/main"
 import { type Action, ActionButton } from "./ActionButton"
 
 export function VariantActions({
@@ -26,9 +32,8 @@ export function VariantActions({
 }): JSX.Element | null {
   const { t } = useTranslation("PackageActions")
 
-  const actions = useStoreActions()
-  const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useVariantInfo(packageId, variantId)
+  const packageStatus = store.usePackageStatus(packageId)
+  const variantInfo = store.useVariantInfo(packageId, variantId)
 
   const variantActions = useMemo(() => {
     const variantActions: Action[] = []
@@ -41,7 +46,7 @@ export function VariantActions({
 
     if (isMissing(variantInfo, packageStatus)) {
       variantActions.push({
-        action: () => actions.addPackage(packageId, variantId),
+        action: () => addPackage(packageId, variantId),
         color: "warning",
         description: t("install.description"),
         id: "install",
@@ -49,7 +54,7 @@ export function VariantActions({
       })
     } else if (isOutdated(variantInfo)) {
       variantActions.push({
-        action: () => actions.updatePackage(packageId, variantId),
+        action: () => updateVariant(packageId, variantId),
         color: "warning",
         description: t("update.description", { version: variantInfo.update?.version }),
         id: "update",
@@ -61,7 +66,7 @@ export function VariantActions({
       const selectWarning = variantInfo.warnings?.find(warning => warning.on === "variant")
 
       variantActions.push({
-        action: () => actions.setPackageVariant(packageId, variantId),
+        action: () => setPackageVariant(packageId, variantId),
         color: "success",
         description: incompatible
           ? t("select.reason.incompatible")
@@ -77,7 +82,7 @@ export function VariantActions({
     if (installed) {
       // TODO: Only allow removing if not used by ANY profile
       variantActions.push({
-        action: () => actions.removeVariant(packageId, variantId),
+        action: () => removeVariant(packageId, variantId),
         color: "error",
         description:
           required && selected
@@ -89,7 +94,7 @@ export function VariantActions({
       })
     } else if (!included || !selected) {
       variantActions.push({
-        action: () => actions.installVariant(packageId, variantId),
+        action: () => installVariant(packageId, variantId),
         description: t("download.description"),
         id: "download",
         label: t("download.label"),
@@ -97,7 +102,7 @@ export function VariantActions({
     }
 
     return variantActions
-  }, [actions, packageId, packageStatus, t, variantId, variantInfo])
+  }, [packageId, packageStatus, t, variantId, variantInfo])
 
   const loadingLabel = useMemo(() => {
     if (variantInfo.action) {

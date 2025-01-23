@@ -13,14 +13,15 @@ import {
   Typography,
   styled,
 } from "@mui/material"
-import { collect } from "@salinco/nice-utils"
+import { collect, isEmpty } from "@salinco/nice-utils"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ProfileID, ProfileInfo } from "@common/profiles"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 import { spacing } from "@utils/styles"
 
+import { simtropolisLogin, simtropolisLogout, switchProfile, updateProfile } from "@stores/actions"
+import { store } from "@stores/main"
 import { CreateProfileModal } from "./CreateProfileModal"
 import { UserInfo } from "./UserInfo"
 
@@ -53,13 +54,11 @@ const ProfileSelect = styled(Select<string>)`
 `
 
 export function AppBar(): JSX.Element {
-  const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
-  const profiles = useStore(store => store.profiles)
-  const simtropolis = useStore(store => store.simtropolis)
+  const currentProfile = store.useCurrentProfile()
+  const profiles = store.useProfiles()
+  const simtropolis = store.useSimtropolis()
 
-  const isLoadingProfiles = !profiles
-  const hasProfiles = profiles && Object.keys(profiles).length !== 0
+  const hasProfiles = profiles && !isEmpty(profiles)
 
   const [isCreating, setCreating] = useState(false)
   const [isRenaming, setRenaming] = useState(false)
@@ -75,7 +74,7 @@ export function AppBar(): JSX.Element {
 
   const renameProfile = (profile: ProfileInfo, value: string): void => {
     if (value && value !== profile.name) {
-      actions.updateProfile(profile.id, { name: value })
+      updateProfile(profile.id, { name: value })
     }
 
     setRenaming(false)
@@ -89,8 +88,8 @@ export function AppBar(): JSX.Element {
             <IconButton
               aria-label={t(`actions.${hasProfiles ? "selectProfile" : "createProfile"}.label`)}
               color="inherit"
-              disabled={isLoadingProfiles}
-              onClick={() => (hasProfiles ? setSelecting(true) : setCreating(true))}
+              disabled={hasProfiles === undefined}
+              onClick={() => (hasProfiles ? setSelecting : setCreating)(true)}
               sx={{ marginRight: 1 }}
             >
               <SwitchProfileIcon />
@@ -116,7 +115,7 @@ export function AppBar(): JSX.Element {
                   if (value === newProfileId) {
                     setCreating(true)
                   } else {
-                    actions.switchProfile(value)
+                    switchProfile(value)
                   }
                 }
               }}
@@ -181,7 +180,7 @@ export function AppBar(): JSX.Element {
 
         {simtropolis === null && (
           <Tooltip title={t("actions.signIn.description")}>
-            <Button color="inherit" onClick={actions.simtropolisLogin} variant="outlined">
+            <Button color="inherit" onClick={simtropolisLogin} variant="outlined">
               {t("actions.signIn.label")}
             </Button>
           </Tooltip>
@@ -192,12 +191,7 @@ export function AppBar(): JSX.Element {
             <UserInfo session={simtropolis} />
 
             <Tooltip title={t("actions.signOut.description")}>
-              <Button
-                color="inherit"
-                onClick={actions.simtropolisLogout}
-                sx={{ ml: 2 }}
-                variant="outlined"
-              >
+              <Button color="inherit" onClick={simtropolisLogout} sx={{ ml: 2 }} variant="outlined">
                 {t("actions.signOut.label")}
               </Button>
             </Tooltip>

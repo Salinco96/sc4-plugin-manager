@@ -3,20 +3,20 @@ import { collect, get, groupBy } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
 import { type PackageID, checkFile } from "@common/packages"
-import { useCurrentVariant } from "@utils/packages"
-import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
-
+import { store } from "@stores/main"
+import { ui } from "@stores/ui"
 import { Page } from "@utils/navigation"
+
 import { PackageViewMMPInfo } from "./PackageViewMMPInfo"
 
 export default function PackageViewMMPs({ packageId }: { packageId: PackageID }): JSX.Element {
-  const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
+  const elementId = ui.useStore(state => state.pages[Page.PackageView]?.elementId)
 
-  const features = useFeatures()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
-  const settings = useSettings()
-  const variantInfo = useCurrentVariant(packageId)
+  const features = store.useFeatures()
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   useEffect(() => {
     if (elementId) {

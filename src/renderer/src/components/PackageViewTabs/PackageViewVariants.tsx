@@ -10,12 +10,13 @@ import { Thumbnail } from "@components/Thumbnail"
 import { VariantActions } from "@components/VariantActions"
 import { ImageViewer } from "@components/Viewer/ImageViewer"
 import { Button, Card, CardActions, CardContent, List } from "@mui/material"
-import { getOrderedVariants, usePackageInfo } from "@utils/packages"
+import { store } from "@stores/main"
+import { getOrderedVariants } from "@utils/packages"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 export default function PackageViewVariants({ packageId }: { packageId: PackageID }): JSX.Element {
-  const packageInfo = usePackageInfo(packageId)
+  const packageInfo = store.usePackageInfo(packageId)
 
   const [openImages, setOpenImages] = useState<VariantID>()
   const [openCreateModal, setOpenCreateModal] = useState(false)

@@ -20,8 +20,10 @@ import { entries, keys } from "@salinco/nice-utils"
 import { Fragment, useCallback, useMemo, useState } from "react"
 
 import { Page, useHistory, useLocation } from "@utils/navigation"
-import { useStore, useStoreActions } from "@utils/store"
 import { type TabInfo, tabs } from "@utils/tabs"
+
+import { setPackageFilters } from "@stores/actions"
+import { store } from "@stores/main"
 import { FlexRow } from "./FlexBox"
 
 const BadgeIcons = {
@@ -29,8 +31,8 @@ const BadgeIcons = {
 }
 
 export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX.Element {
-  const actions = useStoreActions()
-  const badge = useStore.shallow(store => tab.badge?.(store))
+  // TODO: Bad!
+  const badge = store.useStore(store => tab.badge?.(store))
   const history = useHistory()
 
   const setActiveTab = useCallback(
@@ -38,11 +40,11 @@ export function Tab({ isActive, tab }: { isActive: boolean; tab: TabInfo }): JSX
       if (!isActive) {
         history.replace(tab.location)
         if (tab.packageFilters) {
-          actions.setPackageFilters(tab.packageFilters)
+          setPackageFilters(tab.packageFilters)
         }
       }
     },
-    [actions, history, isActive],
+    [history, isActive],
   )
 
   const BadgeIcon = badge?.icon && BadgeIcons[badge.icon]
@@ -95,8 +97,9 @@ const groupedTabs = tabs.reduce(
 )
 
 export function DrawerTabs(): JSX.Element {
-  const packageFilters = useStore(store => store.packageFilters)
   const { page } = useLocation()
+
+  const packageFilters = store.usePackageFilters()
 
   const [expandedGroups, setExpandedGroups] = useState<{ [group in string]?: boolean }>({})
 

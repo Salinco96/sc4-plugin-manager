@@ -20,9 +20,8 @@ import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
+import { store } from "@stores/main"
 import { formatRange } from "@utils/format"
-import { useCurrentVariant } from "@utils/packages"
-import { useStore } from "@utils/store"
 
 export interface PackageViewBuildingFamilyInfoProps {
   buildingFamily?: FamilyInfo
@@ -47,17 +46,17 @@ export function PackageViewBuildingFamilyInfo({
   packageId,
   setEnabled,
 }: PackageViewBuildingFamilyInfoProps): JSX.Element {
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const filePath = buildingFamily?.file
   const fileInfo = buildingFamily && variantInfo.files?.find(where("path", filePath))
 
-  const isMaxisFamily = useStore(
-    store => !!store.maxis?.buildingFamilies?.some(family => family.id === familyId),
+  const isMaxisFamily = store.useStore(
+    state => !!state.maxis?.buildingFamilies?.some(family => family.id === familyId),
   )
 
-  const maxisBuildings = useStore.shallow(store =>
-    store.maxis?.buildings?.filter(building => building.families?.includes(familyId)),
+  const maxisBuildings = store.useShallow(state =>
+    state.maxis?.buildings?.filter(building => building.families?.includes(familyId)),
   )
 
   const buildings = [...(familyBuildings ?? []), ...(maxisBuildings ?? [])]

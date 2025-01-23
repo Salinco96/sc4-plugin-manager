@@ -3,10 +3,10 @@ import { useMemo } from "react"
 
 import type { AuthorID } from "@common/authors"
 import { PackageList } from "@components/PackageList/PackageList"
-import { useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 export default function AuthorViewPackages({ authorId }: { authorId: AuthorID }): JSX.Element {
-  const packages = useStore(store => store.packages)
+  const packages = store.usePackages()
 
   const packageIds = useMemo(() => {
     if (!packages) {

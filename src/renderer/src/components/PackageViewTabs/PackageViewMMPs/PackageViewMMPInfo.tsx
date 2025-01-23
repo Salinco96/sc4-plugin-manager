@@ -11,14 +11,8 @@ import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
-import { useCurrentVariant } from "@utils/packages"
-import {
-  useCurrentProfile,
-  useFeatures,
-  useSettings,
-  useStore,
-  useStoreActions,
-} from "@utils/store"
+import { loadDBPFEntry } from "@stores/actions"
+import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
 export interface PackageViewMMPInfoProps {
@@ -29,12 +23,11 @@ export interface PackageViewMMPInfoProps {
 const iconSize = 44
 
 export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps): JSX.Element {
-  const actions = useStoreActions()
-  const features = useFeatures()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
-  const settings = useSettings()
-  const variantInfo = useCurrentVariant(packageId)
+  const features = store.useFeatures()
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(file => file.path === mmp.file)
 
@@ -59,7 +52,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
   const loadIcon = useEffectEvent(async () => {
     try {
       const entryId: TGI = `${DBPFFileType.PNG_MENU_ICONS}-${mmp.id}`
-      const entry = await actions.loadDBPFEntry(packageId, variantInfo.id, mmp.file, entryId)
+      const entry = await loadDBPFEntry(packageId, variantInfo.id, mmp.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const image = document.createElement("img")
 

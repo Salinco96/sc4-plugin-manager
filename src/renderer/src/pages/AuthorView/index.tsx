@@ -1,3 +1,4 @@
+import { values } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import type { AuthorID } from "@common/authors"
@@ -8,8 +9,7 @@ import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { type TabInfo, Tabs } from "@components/Tabs"
 import { View } from "@components/View"
-import { values } from "@salinco/nice-utils"
-import { useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 const tabs: TabInfo<{ authorId: AuthorID }>[] = [
   {
@@ -39,12 +39,12 @@ const tabs: TabInfo<{ authorId: AuthorID }>[] = [
 ]
 
 function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
-  const isLoading = useStore(store => !store.authors)
-  const exists = useStore(store => !!store.authors?.[authorId])
+  const exists = store.useStore(state => state.authors && !!state.authors[authorId])
 
   const { t } = useTranslation("AuthorView")
 
-  if (isLoading) {
+  // Loading
+  if (exists === undefined) {
     return (
       <View>
         <Loader />
@@ -52,7 +52,8 @@ function AuthorView({ authorId }: { authorId: AuthorID }): JSX.Element {
     )
   }
 
-  if (!exists) {
+  // Missing
+  if (exists === false) {
     return (
       <View>
         <Empty message={t("missing", { authorId })} />

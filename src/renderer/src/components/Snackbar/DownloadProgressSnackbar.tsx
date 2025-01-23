@@ -1,34 +1,37 @@
 import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
-import { keys, values } from "@salinco/nice-utils"
+import { keys } from "@salinco/nice-utils"
 import type { CustomContentProps } from "notistack"
 import { forwardRef, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 
-import { useStore, useStoreActions } from "@utils/store"
+import { status } from "@stores/status"
+import { closeSnackbar } from "@stores/ui"
 
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   (props, ref) => {
-    const actions = useStoreActions()
-
     const { t } = useTranslation("Snackbar")
 
-    const key = useStore(store => keys(store.downloads)[0])
-    const progress = useStore(store => values(store.downloads)[0]?.progress)
+    const taskInfo = status.useShallow(state => {
+      const key = keys(state.downloads)[0]
+      if (key) {
+        return { key, ...state.downloads[key] }
+      }
+    })
 
-    const message = key ? t("downloading", { key, progress }) : undefined
+    const message = taskInfo && t("downloading", taskInfo)
+
     const lastMessageRef = useRef(message)
-
     useEffect(() => {
       if (message) {
         lastMessageRef.current = message
       } else {
         // Clear after short duration to prevent closing and reopening for successive downloads
-        const timeout = setTimeout(() => actions.closeSnackbar("download-progress"), 100)
+        const timeout = setTimeout(() => closeSnackbar("download-progress"), 100)
         return () => clearTimeout(timeout)
       }
-    }, [actions, message])
+    }, [message])
 
     // Sometimes the action may be so fast that message will already be empty by the time we show the toast
     if (!message && !lastMessageRef.current) {
@@ -57,8 +60,8 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
           </CardActions>
           <LinearProgress
             sx={{ height: 2, justifySelf: "stretch" }}
-            value={progress}
-            variant={progress !== undefined ? "determinate" : "indeterminate"}
+            value={taskInfo?.progress}
+            variant={taskInfo?.progress !== undefined ? "determinate" : "indeterminate"}
           />
         </Box>
       </CustomSnackbar>

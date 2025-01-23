@@ -3,35 +3,30 @@ import { Alert, AlertTitle, List } from "@mui/material"
 import { forEach, get, groupBy, mapValues, sortBy, unionBy, values } from "@salinco/nice-utils"
 import { useEffect, useMemo } from "react"
 
-import { type LotInfo, getEnabledLots, isSC4LotFile, isTogglableLot } from "@common/lots"
-import { type PackageID, checkCondition, checkFile } from "@common/packages"
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
-import {
-  useCurrentProfile,
-  useFeatures,
-  useSettings,
-  useStore,
-  useStoreActions,
-} from "@utils/store"
-
 import type { BuildingID, BuildingInfo } from "@common/buildings"
 import type { FamilyID, FamilyInfo } from "@common/families"
+import { type LotInfo, getEnabledLots, isSC4LotFile, isTogglableLot } from "@common/lots"
+import { type PackageID, checkCondition, checkFile } from "@common/packages"
 import { FlexCol } from "@components/FlexBox"
-
+import { setPackageOption } from "@stores/actions"
+import { store } from "@stores/main"
+import { ui } from "@stores/ui"
 import { Page } from "@utils/navigation"
+
 import { PackageViewLotGroup } from "./PackageViewLotGroup"
 
 export default function PackageViewLots({ packageId }: { packageId: PackageID }): JSX.Element {
-  const actions = useStoreActions()
-  const elementId = useStore(store => store.views[Page.PackageView]?.elementId)
-  const maxis = useStore(store => store.maxis)
-  const features = useFeatures()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
+  const elementId = ui.useStore(state => state.pages[Page.PackageView]?.elementId)
+
+  const features = store.useFeatures()
+  const maxis = store.useMaxis()
+  const packageStatus = store.usePackageStatus(packageId)
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
+
   const packageConfig = profileInfo?.packages[packageId]
-  const packageStatus = usePackageStatus(packageId)
-  const settings = useSettings()
-  const variantInfo = useCurrentVariant(packageId)
 
   const isDependency = !!packageStatus?.included && !packageStatus.enabled
 
@@ -242,7 +237,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
             enabledLots={enabledLots}
             key={group.groupId}
             packageId={packageId}
-            setEnabledLots={lots => actions.setPackageOption(packageId, "lots", lots)}
+            setEnabledLots={lots => setPackageOption(packageId, "lots", lots)}
           />
         ))}
       </List>

@@ -7,15 +7,15 @@ import { PackageHeader } from "@components/PackageHeader"
 import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 import { Tabs } from "@components/Tabs"
 import { View } from "@components/View"
-import { useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
-  const isLoading = useStore(store => !store.packages)
-  const exists = useStore(store => !!store.packages?.[packageId])
+  const exists = store.useStore(state => state.packages && !!state.packages[packageId])
 
   const { t } = useTranslation("PackageView")
 
-  if (isLoading) {
+  // Loading
+  if (exists === undefined) {
     return (
       <View>
         <Loader />
@@ -23,7 +23,8 @@ function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
     )
   }
 
-  if (!exists) {
+  // Missing
+  if (exists === false) {
     return (
       <View>
         <Empty message={t("missing", { packageId })} />

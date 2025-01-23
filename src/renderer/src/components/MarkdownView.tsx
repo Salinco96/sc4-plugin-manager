@@ -5,16 +5,16 @@ import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
 import type { PackageID } from "@common/packages"
+import { store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
-import { useAuthors, useStore } from "@utils/store"
 
 export interface MarkdownViewProps {
   md: string
 }
 
 export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
-  const authors = useAuthors()
-  const packages = useStore(store => store.packages)
+  const authors = store.useAuthors()
+  const packages = store.usePackages()
 
   const { openAuthorView, openPackageView } = useNavigation()
 

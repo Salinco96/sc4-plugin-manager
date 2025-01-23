@@ -9,15 +9,14 @@ import type { PackageID } from "@common/packages"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { Text } from "@components/Text"
+import { store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
-import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useAuthors, useStore } from "@utils/store"
 
 export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
-  const authors = useAuthors()
-  const profileOptions = useStore(store => store.profileOptions)
-  const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const authors = store.useAuthors()
+  const profileOptions = store.useProfileOptions()
+  const packageInfo = store.usePackageInfo(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const { openAuthorView } = useNavigation()
 

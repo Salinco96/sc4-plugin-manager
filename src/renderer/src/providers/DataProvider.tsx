@@ -1,28 +1,67 @@
-import { isEmpty } from "@salinco/nice-utils"
+import { compact, isEmpty } from "@salinco/nice-utils"
 import { type ReactNode, useEffect } from "react"
 
-import { useStore, useStoreActions } from "@utils/store"
+import { store } from "@stores/main"
+import { status } from "@stores/status"
+import { openSnackbar } from "@stores/ui"
+import { computePackageList } from "@utils/packages"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
-  const isDownloading = useStore(store => !isEmpty(store.downloads))
-  const isLinking = useStore(store => !!store.linker)
-  const isLoading = useStore(store => !!store.loader)
+  const isDownloading = status.useStore(status => !isEmpty(status.downloads))
+  const isLinking = status.useStore(status => !!status.linker)
+  const isLoading = status.useStore(status => !!status.loader)
 
-  const actions = useStoreActions()
+  useEffect(() => {
+    return window.api.subscribe({
+      updateState(data, noRecompute) {
+        console.debug("updateState", data, noRecompute)
 
-  useEffect(() => window.api.subscribe(actions), [actions])
+        store.api.setState(state => {
+          const newState = {
+            ...state,
+            ...data,
+            packages: data.packages
+              ? compact({ ...state.packages, ...data.packages })
+              : state.packages,
+            profiles: data.profiles
+              ? compact({ ...state.profiles, ...data.profiles })
+              : state.profiles,
+          }
+
+          if (data.packages && !noRecompute) {
+            return { ...newState, ...computePackageList(newState, false) }
+          }
+
+          return newState
+        })
+      },
+      updateStatus(data) {
+        status.api.setState(state => {
+          const newState = {
+            ...state,
+            ...data,
+            downloads: data.downloads
+              ? compact({ ...state.downloads, ...data.downloads })
+              : state.downloads,
+          }
+
+          return newState
+        })
+      },
+    })
+  }, [])
 
   useEffect(() => {
     if (isLinking || isLoading) {
-      actions.openSnackbar("load-progress", {})
+      openSnackbar("load-progress", {})
     }
-  }, [actions, isLinking, isLoading])
+  }, [isLinking, isLoading])
 
   useEffect(() => {
     if (isDownloading) {
-      actions.openSnackbar("download-progress", {})
+      openSnackbar("download-progress", {})
     }
-  }, [actions, isDownloading])
+  }, [isDownloading])
 
   return <>{children}</>
 }

@@ -1,22 +1,17 @@
 import { checkCondition } from "@common/packages"
-import {
-  useCurrentProfile,
-  useFeatures,
-  useSettings,
-  useStore,
-  useStoreActions,
-} from "@utils/store"
 
+import { setProfileOption } from "@stores/actions"
+import { store } from "@stores/main"
 import { OptionsForm } from "./OptionsForm"
 import { useProfileOptions } from "./useProfileOptions"
 
 export function ProfileOptionsForm(): JSX.Element {
-  const actions = useStoreActions()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
   const options = useProfileOptions()
-  const features = useFeatures()
-  const settings = useSettings()
+
+  const features = store.useFeatures()
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
 
   return (
     <OptionsForm
@@ -32,7 +27,7 @@ export function ProfileOptionsForm(): JSX.Element {
         )
       }
       disabled={!profileInfo}
-      onChange={(option, newValue) => actions.setProfileOption(option.id, newValue)}
+      onChange={(option, newValue) => setProfileOption(option.id, newValue)}
       options={options}
       values={profileInfo?.options ?? {}}
     />

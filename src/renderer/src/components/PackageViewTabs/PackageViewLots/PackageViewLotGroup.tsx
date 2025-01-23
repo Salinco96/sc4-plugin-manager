@@ -7,8 +7,7 @@ import type { FamilyID, FamilyInfo } from "@common/families"
 import { type LotInfo, isCompatibleLot, isTogglableLot } from "@common/lots"
 import type { PackageID } from "@common/packages"
 import { FlexCol } from "@components/FlexBox"
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
-import { useCurrentProfile, useFeatures, useSettings, useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 import { PackageViewBuildingFamilyInfo } from "./PackageViewBuildingFamilyInfo"
 import { PackageViewBuildingInfo } from "./PackageViewBuildingInfo"
@@ -35,12 +34,12 @@ export function PackageViewLotGroup({
   packageId,
   setEnabledLots,
 }: PackageViewLotGroupProps): JSX.Element {
-  const features = useFeatures()
-  const settings = useSettings()
-  const packageStatus = usePackageStatus(packageId)
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
-  const variantInfo = useCurrentVariant(packageId)
+  const features = store.useFeatures()
+  const settings = store.useSettings()
+  const packageStatus = store.usePackageStatus(packageId)
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const isDependency = !!packageStatus?.included && !packageStatus.enabled
 

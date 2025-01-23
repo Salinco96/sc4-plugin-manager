@@ -1,3 +1,6 @@
+import { containsAll, mapDefined } from "@salinco/nice-utils"
+import { useMemo } from "react"
+
 import type { AuthorID } from "@common/authors"
 import type { CategoryID } from "@common/categories"
 import type { CollectionID } from "@common/collections"
@@ -5,25 +8,22 @@ import { getPackageStatus, isEnabled, isIncompatible } from "@common/packages"
 import { VariantState } from "@common/types"
 import { Tags } from "@components/Tags/Tags"
 import { type TagInfo, TagType, createTag } from "@components/Tags/utils"
-import { containsAll, mapDefined } from "@salinco/nice-utils"
-import { getCurrentVariant, useCollectionInfo } from "@utils/packages"
-import { getPackageInfo, useCurrentProfile, useStore } from "@utils/store"
-import { useMemo } from "react"
+import { getCurrentVariant, getPackageInfo, store } from "@stores/main"
 
 export function CollectionTags({
   collectionId,
 }: {
   collectionId: CollectionID
 }): JSX.Element | null {
-  const collection = useCollectionInfo(collectionId)
-  const profileInfo = useCurrentProfile()
+  const collection = store.useCollectionInfo(collectionId)
+  const profileInfo = store.useCurrentProfile()
 
-  const packages = useStore.shallow(store => {
-    return mapDefined(collection.packages, packageId => getPackageInfo(store, packageId))
+  const packages = store.useShallow(state => {
+    return mapDefined(collection.packages, packageId => getPackageInfo(state, packageId))
   })
 
-  const variants = useStore.shallow(store => {
-    return mapDefined(collection.packages, packageId => getCurrentVariant(store, packageId))
+  const variants = store.useShallow(state => {
+    return mapDefined(collection.packages, packageId => getCurrentVariant(state, packageId))
   })
 
   const tags = useMemo(() => {

@@ -27,9 +27,14 @@ import { CategoryID } from "@common/categories"
 import { getPackageStatus, isError } from "@common/packages"
 import { getRegionLinkedProfileId } from "@common/regions"
 import { VariantState } from "@common/types"
+import {
+  type MainState,
+  type PackageFilters,
+  getCurrentProfile,
+  getCurrentVariant,
+} from "@stores/main"
 import { type Location, Page } from "@utils/navigation"
-import { filterVariant, getCurrentVariant } from "@utils/packages"
-import { type PackageFilters, type Store, getCurrentProfile } from "@utils/store"
+import { filterVariant } from "@utils/packages"
 
 export interface BadgeInfo {
   color?: "error" | "info" | "warning"
@@ -38,7 +43,7 @@ export interface BadgeInfo {
 }
 
 export interface TabInfo {
-  badge?: (store: Store) => BadgeInfo | undefined
+  badge?: (state: MainState) => BadgeInfo | undefined
   collapse?: boolean
   group?: string
   icon?: JSX.Element
@@ -49,24 +54,24 @@ export interface TabInfo {
   tooltip?: string
 }
 
-function countPackages(store: Store, overrideFilters?: Partial<PackageFilters>): number {
-  if (!store.packages) {
+function countPackages(state: MainState, overrideFilters?: Partial<PackageFilters>): number {
+  if (!state.packages) {
     return 0
   }
 
-  const profileInfo = getCurrentProfile(store)
+  const profileInfo = getCurrentProfile(state)
 
   const filters = {
-    ...store.packageFilters,
+    ...state.packageFilters,
     ...overrideFilters,
   }
 
-  return values(store.packages).filter(packageInfo => {
+  return values(state.packages).filter(packageInfo => {
     if (filters.onlyErrors) {
       // Only check errors for the selected variant
       const packageStatus = getPackageStatus(packageInfo, profileInfo)
-      const selectedVariant = getCurrentVariant(store, packageInfo.id)
-      if (filters.onlyErrors && !isError(selectedVariant, packageStatus)) {
+      const variantInfo = getCurrentVariant(state, packageInfo.id)
+      if (filters.onlyErrors && !isError(variantInfo, packageStatus)) {
         return false
       }
     }
@@ -91,8 +96,8 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Settings, data: {} },
   },
   {
-    badge(store) {
-      return { label: size(store.authors) }
+    badge(state) {
+      return { label: size(state.authors) }
     },
     icon: <AuthorsIcon />,
     id: "authors",
@@ -100,8 +105,8 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Authors, data: {} },
   },
   {
-    badge(store) {
-      const tools = store.tools && values(store.tools).filter(tool => !tool?.disabled)
+    badge(state) {
+      const tools = state.tools && values(state.tools).filter(tool => !tool?.disabled)
 
       if (tools?.some(tool => tool.new)) {
         return { color: "info", label: "new" }
@@ -117,14 +122,14 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Tools, data: {} },
   },
   {
-    badge(store) {
-      const regions = store.regions && values(store.regions)
+    badge(state) {
+      const regions = state.regions && values(state.regions)
 
       if (
-        store.profiles &&
-        size(store.profiles) > 1 &&
+        state.profiles &&
+        size(state.profiles) > 1 &&
         regions?.some(
-          region => !getRegionLinkedProfileId(region.id, store.settings, store.profiles),
+          region => !getRegionLinkedProfileId(region.id, state.settings, state.profiles),
         )
       ) {
         return { color: "warning", icon: "error", label: "Some regions have no linked profile" }
@@ -140,8 +145,8 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Regions, data: {} },
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -162,8 +167,8 @@ export const tabs: TabInfo[] = [
     },
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -186,8 +191,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Textures, props",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -210,8 +215,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Gameplay mods, bugfixes, DLLs",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -234,8 +239,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Residential lots",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -258,8 +263,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Commercial lots",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -282,8 +287,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Industrial lots",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -306,8 +311,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Agricultural lots",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -330,8 +335,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Civic buildings, rewards",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -354,8 +359,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Landmarks",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -378,8 +383,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Parks",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -402,8 +407,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Energy, water, waste",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { label: count }
@@ -426,8 +431,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Transportation infrastructure",
   },
   {
-    badge(store) {
-      const collections = store.collections && values(store.collections)
+    badge(state) {
+      const collections = state.collections && values(state.collections)
 
       if (collections?.some(collection => collection.new)) {
         return { color: "info", label: "new" }
@@ -444,8 +449,8 @@ export const tabs: TabInfo[] = [
     location: { page: Page.Collections, data: {} },
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { color: "info", label: count }
@@ -467,8 +472,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Newly-released packages",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { color: "error", label: count }
@@ -490,8 +495,8 @@ export const tabs: TabInfo[] = [
     tooltip: "Packages with issues",
   },
   {
-    badge(store) {
-      const count = countPackages(store, this.packageFilters)
+    badge(state) {
+      const count = countPackages(state, this.packageFilters)
 
       if (count) {
         return { color: "error", label: count }

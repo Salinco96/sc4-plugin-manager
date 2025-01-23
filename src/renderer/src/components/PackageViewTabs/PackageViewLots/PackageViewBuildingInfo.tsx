@@ -22,9 +22,8 @@ import { Tag } from "@components/Tags/Tag"
 import { TagType, createTag, serializeTag } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
+import { store } from "@stores/main"
 import { formatNumber, formatSimoleans } from "@utils/format"
-import { useCurrentVariant } from "@utils/packages"
-import { useFeatures, useStore } from "@utils/store"
 
 export interface PackageViewBuildingInfoProps {
   building: BuildingInfo
@@ -45,13 +44,13 @@ export function PackageViewBuildingInfo({
   packageId,
   setEnabled,
 }: PackageViewBuildingInfoProps): JSX.Element {
-  const features = useFeatures()
-  const variantInfo = useCurrentVariant(packageId)
+  const features = store.useFeatures()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(where("path", building.file))
 
-  const isMaxisBuilding = useStore(
-    store => !!store.maxis?.buildings?.some(where("id", building.id)),
+  const isMaxisBuilding = store.useStore(
+    state => !!state.maxis?.buildings?.some(where("id", building.id)),
   )
 
   const isMaxisOverride = isMaxisBuilding && building.file !== "SimCity_1.dat"

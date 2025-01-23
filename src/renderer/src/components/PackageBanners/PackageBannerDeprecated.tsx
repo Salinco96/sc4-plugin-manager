@@ -1,14 +1,14 @@
 import { BedtimeOutlined as DeprecatedIcon } from "@mui/icons-material"
 import { Link } from "@mui/material"
+import { useMemo } from "react"
 import { Trans, useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
-import { usePackageInfo, usePackageStatus, useVariantInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
 
-import { useMemo } from "react"
+import { addPackage, setPackageVariant } from "@stores/actions"
+import { store } from "@stores/main"
 import { PackageBanner } from "./PackageBanner"
 
 export function PackageBannerDeprecated({
@@ -18,15 +18,14 @@ export function PackageBannerDeprecated({
   packageId: PackageID
   superseded?: PackageID | VariantID
 }): JSX.Element {
-  const actions = useStoreActions()
-  const packageStatus = usePackageStatus(packageId)
+  const packageStatus = store.usePackageStatus(packageId)
 
   const supersededByPackage = !!superseded?.includes("/")
   const supersededByVariant = !!superseded && !supersededByPackage
   const otherPackageId = supersededByPackage ? (superseded as PackageID) : packageId
-  const otherPackageInfo = usePackageInfo(otherPackageId)
+  const otherPackageInfo = store.usePackageInfo(otherPackageId)
   const otherVariantId = supersededByVariant ? (superseded as VariantID) : undefined
-  const otherVariantInfo = useVariantInfo(otherPackageId, otherVariantId)
+  const otherVariantInfo = store.useVariantInfo(otherPackageId, otherVariantId)
 
   const { t } = useTranslation("PackageBanner")
   const { openPackageView } = useNavigation()
@@ -40,7 +39,7 @@ export function PackageBannerDeprecated({
           }),
           label: t("deprecated.actions.replacePackage.label"),
           onClick: () =>
-            actions.addPackage(otherPackageInfo.id, otherVariantInfo.id, {
+            addPackage(otherPackageInfo.id, otherVariantInfo.id, {
               packages: { [packageId]: { enabled: false } },
             }),
         }
@@ -52,12 +51,11 @@ export function PackageBannerDeprecated({
             variantName: otherVariantInfo.name,
           }),
           label: t("deprecated.actions.replaceVariant.label"),
-          onClick: () => actions.setPackageVariant(packageId, otherVariantInfo.id),
+          onClick: () => setPackageVariant(packageId, otherVariantInfo.id),
         }
       }
     }
   }, [
-    actions,
     otherPackageInfo,
     otherVariantInfo,
     packageId,

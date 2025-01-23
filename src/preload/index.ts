@@ -3,12 +3,11 @@ import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 import type { AuthorID } from "@common/authors"
 import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
-import type { ModalData, ModalID } from "@common/modals"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
 import type { CityID, RegionID, UpdateSaveAction } from "@common/regions"
 import type { Settings } from "@common/settings"
-import type { ApplicationStateUpdate } from "@common/state"
+import type { ApplicationStateUpdate, ApplicationStatusUpdate } from "@common/state"
 import type { ToolID } from "@common/tools"
 import type { VariantID } from "@common/variants"
 
@@ -137,14 +136,9 @@ export const api = {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
-    showModal<T extends ModalID>(id: T, data: ModalData<T>): Promise<boolean>
     updateState(data: ApplicationStateUpdate, noRecompute?: boolean): void
+    updateStatus(data: ApplicationStatusUpdate): void
   }): () => void {
-    const showModal = async <T extends ModalID>(_: IpcRendererEvent, id: T, data: ModalData<T>) => {
-      const result = await handlers.showModal(id, data)
-      ipcRenderer.send("showModalResult", result)
-    }
-
     const updateState = (
       _: IpcRendererEvent,
       { noRecompute, ...data }: ApplicationStateUpdate & { noRecompute?: boolean },
@@ -152,13 +146,17 @@ export const api = {
       handlers.updateState(data, noRecompute)
     }
 
-    ipcRenderer.on("showModal", showModal)
+    const updateStatus = (_: IpcRendererEvent, data: ApplicationStatusUpdate) => {
+      handlers.updateStatus(data)
+    }
+
     ipcRenderer.on("updateState", updateState)
+    ipcRenderer.on("updateStatus", updateStatus)
     ipcRenderer.invoke("getState").then(handlers.updateState)
 
     return () => {
-      ipcRenderer.off("showModal", showModal)
       ipcRenderer.off("updateState", updateState)
+      ipcRenderer.off("updateStatus", updateStatus)
     }
   },
   switchProfile(profileId: ProfileID): Promise<boolean> {

@@ -8,11 +8,17 @@ import { useTranslation } from "react-i18next"
 
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Text } from "@components/Text"
-import { useSettings, useStoreActions } from "@utils/store"
+import {
+  check4GBPatch,
+  checkDgVoodoo,
+  clearUnusedPackages,
+  openExecutableDirectory,
+  openInstallationDirectory,
+} from "@stores/actions"
+import { store } from "@stores/main"
 
 function Settings(): JSX.Element {
-  const settings = useSettings()
-  const actions = useStoreActions()
+  const settings = store.useSettings()
   const theme = useTheme()
 
   const { t } = useTranslation("Settings")
@@ -32,7 +38,7 @@ function Settings(): JSX.Element {
                 <Text
                   color="primary"
                   maxLines={1}
-                  onClick={() => actions.openInstallationDirectory()}
+                  onClick={openInstallationDirectory}
                   sx={{ cursor: "pointer" }}
                 >
                   {settings.install.path}
@@ -50,7 +56,7 @@ function Settings(): JSX.Element {
                 <Text
                   color="primary"
                   maxLines={1}
-                  onClick={() => actions.openExecutableDirectory()}
+                  onClick={openExecutableDirectory}
                   sx={{ cursor: "pointer" }}
                 >
                   {settings.install.version}
@@ -85,7 +91,7 @@ function Settings(): JSX.Element {
             ) : (
               <FlexRow
                 centered
-                onClick={() => actions.check4GBPatch()}
+                onClick={check4GBPatch}
                 sx={{
                   cursor: "pointer",
                   "& span": {
@@ -130,7 +136,7 @@ function Settings(): JSX.Element {
             ) : (
               <FlexRow
                 centered
-                onClick={() => actions.checkDgVoodoo()}
+                onClick={checkDgVoodoo}
                 sx={{
                   cursor: "pointer",
                   "& span": {
@@ -203,7 +209,7 @@ function Settings(): JSX.Element {
 
       <Button
         color="error"
-        onClick={() => actions.clearUnusedPackages()}
+        onClick={clearUnusedPackages}
         title={t("actions.clearUnusedPackages.description")}
         variant="outlined"
       >

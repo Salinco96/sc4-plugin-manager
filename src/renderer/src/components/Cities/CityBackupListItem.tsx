@@ -1,3 +1,6 @@
+import { memo } from "react"
+import { useTranslation } from "react-i18next"
+
 import type { CityBackupInfo, CityID, RegionID } from "@common/regions"
 import { VariantState } from "@common/types"
 import { ActionButton } from "@components/ActionButton"
@@ -5,10 +8,9 @@ import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { Tags } from "@components/Tags/Tags"
 import { TagType, createTag } from "@components/Tags/utils"
-import { useCityInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
-import { memo } from "react"
-import { useTranslation } from "react-i18next"
+
+import { removeBackup, restoreBackup } from "@stores/actions"
+import { store } from "@stores/main"
 import { UpdateSaveActionModal, useUpdateSaveActionModal } from "./UpdateSaveActionModal"
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
@@ -25,8 +27,7 @@ export const CityBackupListItem = memo(function CityBackupListItem({
   cityId: CityID
   regionId: RegionID
 }): JSX.Element {
-  const actions = useStoreActions()
-  const city = useCityInfo(cityId, regionId)
+  const city = store.useCityInfo(regionId, cityId)
 
   const isCurrent = backup.version === city.version
 
@@ -46,7 +47,7 @@ export const CityBackupListItem = memo(function CityBackupListItem({
           <ActionButton
             actions={[
               {
-                action: () => actions.restoreBackup(regionId, cityId, backup.file),
+                action: () => restoreBackup(regionId, cityId, backup.file),
                 description: t("actions.restoreBackup.description"),
                 disabled: isCurrent,
                 id: "restoreBackup",
@@ -65,7 +66,7 @@ export const CityBackupListItem = memo(function CityBackupListItem({
                 label: t("actions.historical.label"),
               },
               {
-                action: () => actions.removeBackup(regionId, cityId, backup.file),
+                action: () => removeBackup(regionId, cityId, backup.file),
                 color: "error",
                 description: t("actions.removeBackup.description"),
                 id: "removeBackup",

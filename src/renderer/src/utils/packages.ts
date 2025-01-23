@@ -1,129 +1,27 @@
-import { mapValues, sortBy, values } from "@salinco/nice-utils"
-import { useCallback, useMemo } from "react"
+import { isEmpty, mapValues, sortBy, values } from "@salinco/nice-utils"
 
 import { CategoryID, isCategory } from "@common/categories"
 import {
   type PackageID,
+  getPackageStatus,
   isError,
   isExperimental,
   isIncompatible,
   isOutdated,
 } from "@common/packages"
 import type { ProfileInfo } from "@common/profiles"
-import { type PackageInfo, type PackageStatus, type Packages, getState } from "@common/types"
+import { type PackageInfo, type Packages, getState } from "@common/types"
+import { prioritize } from "@common/utils/arrays"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
-
-import type { CollectionID, CollectionInfo } from "@common/collections"
-import type { CityID, CityInfo, RegionID, RegionInfo } from "@common/regions"
-import type { ToolID, ToolInfo } from "@common/tools"
-import { prioritize } from "@common/utils/arrays"
-import type { Page } from "./navigation"
-import { hasMatchingContents, isHexSearch } from "./search"
+import { updateProfile } from "@stores/actions"
 import {
+  type MainState,
   type PackageFilters,
   type PackageUi,
-  type Store,
-  type View,
-  getCollectionInfo,
   getCurrentProfile,
-  getPackageInfo,
-  getRegionInfo,
-  getToolInfo,
-  useStore,
-  useStoreActions,
-} from "./store"
-
-function getFilteredPackages(store: Store): PackageID[] {
-  return store.filteredPackages
-}
-
-function getPackageStatus(
-  packageInfo: PackageInfo,
-  profileInfo?: ProfileInfo,
-): PackageStatus | undefined {
-  return profileInfo && packageInfo.status[profileInfo.id]
-}
-
-export function useCollectionInfo(id: CollectionID): CollectionInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const collection = getCollectionInfo(store, id)
-        if (!collection) {
-          throw Error(`Unknown collection '${id}'`)
-        }
-
-        return collection
-      },
-      [id],
-    ),
-  )
-}
-
-export function useRegionInfo(id: RegionID): RegionInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const region = getRegionInfo(store, id)
-        if (!region) {
-          throw Error(`Unknown region '${id}'`)
-        }
-
-        return region
-      },
-      [id],
-    ),
-  )
-}
-
-export function useView<T extends Page>(
-  page: T,
-): [view: View<T>, setView: (view: Partial<View<T>>) => void] {
-  const actions = useStoreActions()
-  const view = useStore(useCallback(store => store.views[page], [page]))
-  return [view, useCallback(view => actions.setView(page, view), [actions, page])]
-}
-
-export function useCityInfo(id: CityID, regionId: RegionID): CityInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const region = getRegionInfo(store, regionId)
-        if (!region) {
-          throw Error(`Unknown region '${regionId}'`)
-        }
-
-        const city = region.cities[id]
-        if (!city) {
-          throw Error(`Unknown city '${id}'`)
-        }
-
-        return city
-      },
-      [id, regionId],
-    ),
-  )
-}
-
-export function getCurrentVariant(store: Store, packageId: PackageID): VariantInfo {
-  const packageInfo = getPackageInfo(store, packageId)
-  const packageUi = store.packageUi[packageId]
-  if (!packageInfo || !packageUi) {
-    throw Error(`Unknown package '${packageId}'`)
-  }
-
-  const variantInfo = packageInfo.variants[packageUi.variantId]
-  if (!variantInfo) {
-    throw Error(`Unknown variant '${packageId}#${packageUi.variantId}'`)
-  }
-
-  return variantInfo
-}
-
-export function useCurrentVariant(packageId: PackageID): VariantInfo {
-  return useStore(useCallback(store => getCurrentVariant(store, packageId), [packageId]))
-}
+} from "@stores/main"
+import { hasMatchingContents, isHexSearch } from "./search"
 
 export function getDependentPackages(packages: Packages, dependencyId: PackageID): PackageID[] {
   return values(packages)
@@ -133,108 +31,6 @@ export function getDependentPackages(packages: Packages, dependencyId: PackageID
       })
     })
     .map(packageInfo => packageInfo.id)
-}
-
-export function useDependentPackages(dependencyId: PackageID): PackageID[] {
-  const packages = useStore(store => store.packages)
-
-  return useMemo(() => {
-    return packages ? getDependentPackages(packages, dependencyId) : []
-  }, [dependencyId, packages])
-}
-
-export function useFilteredPackages(): PackageID[] {
-  return useStore(getFilteredPackages)
-}
-
-export function useFilteredVariants(packageId: PackageID): VariantID[] {
-  return useStore(
-    useCallback(
-      store => {
-        const packageUi = store.packageUi[packageId]
-        if (!packageUi) {
-          throw Error(`Unknown package '${packageId}'`)
-        }
-
-        return packageUi.variantIds
-      },
-      [packageId],
-    ),
-  )
-}
-
-export function usePackageInfo(packageId: PackageID): PackageInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const packageInfo = getPackageInfo(store, packageId)
-        if (!packageInfo) {
-          throw Error(`Unknown package '${packageId}'`)
-        }
-
-        return packageInfo
-      },
-      [packageId],
-    ),
-  )
-}
-
-export function usePackageStatus(packageId: PackageID): PackageStatus | undefined {
-  return useStore(
-    useCallback(
-      store => {
-        const packageInfo = getPackageInfo(store, packageId)
-        if (!packageInfo) {
-          throw Error(`Unknown package '${packageId}'`)
-        }
-
-        const profileInfo = getCurrentProfile(store)
-        return getPackageStatus(packageInfo, profileInfo)
-      },
-      [packageId],
-    ),
-  )
-}
-
-export function useToolInfo(toolId: ToolID): ToolInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const toolInfo = getToolInfo(store, toolId)
-        if (!toolInfo) {
-          throw Error(`Unknown tool '${toolId}'`)
-        }
-
-        return toolInfo
-      },
-      [toolId],
-    ),
-  )
-}
-
-export function useVariantInfo(
-  packageId: PackageID,
-  variantId: VariantID | undefined,
-): VariantInfo {
-  return useStore(
-    useCallback(
-      store => {
-        const packageInfo = getPackageInfo(store, packageId)
-        const packageUi = store.packageUi[packageId]
-        if (!packageInfo || !packageUi) {
-          throw Error(`Unknown package '${packageId}'`)
-        }
-
-        const variantInfo = packageInfo.variants[variantId ?? packageUi.variantId]
-        if (!variantInfo) {
-          throw Error(`Unknown variant '${packageId}#${variantId ?? packageUi.variantId}'`)
-        }
-
-        return variantInfo
-      },
-      [packageId, variantId],
-    ),
-  )
 }
 
 export function filterVariant(
@@ -307,12 +103,12 @@ export function filterVariant(
 }
 
 export function computePackageList(
-  store: Store,
+  state: MainState,
   triggeredByFilters: boolean,
-): Pick<Store, "filteredPackages" | "packageUi"> {
-  const profileInfo = getCurrentProfile(store)
-  const packageFilters = store.packageFilters
-  const packages = store.packages
+): Pick<MainState, "filteredPackages" | "packageUi"> {
+  const profileInfo = getCurrentProfile(state)
+  const packageFilters = state.packageFilters
+  const packages = state.packages
   if (!packages) {
     return {
       filteredPackages: [],
@@ -349,7 +145,7 @@ export function computePackageList(
 
       let selectedVariantId =
         packageStatus?.variantId ??
-        store.packageUi[packageId]?.variantId ??
+        state.packageUi[packageId]?.variantId ??
         (filteredVariants[0] ?? allVariants[0]).id
 
       const selectedVariant = packageInfo.variants[selectedVariantId]
@@ -388,8 +184,8 @@ export function computePackageList(
 
   // Send adjusted variants back to main process
   // Enabled packages do not get adjusted so this should not trigger expensive calculations
-  if (profileInfo && Object.keys(variantChanges).length) {
-    store.actions.updateProfile(profileInfo.id, {
+  if (profileInfo && !isEmpty(variantChanges)) {
+    updateProfile(profileInfo.id, {
       packages: mapValues(variantChanges, variantId => ({ variant: variantId })),
     })
   }

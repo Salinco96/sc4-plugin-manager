@@ -6,15 +6,15 @@ import { useTranslation } from "react-i18next"
 import { Feature } from "@common/types"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { ProfileOptionsForm } from "@components/Options/ProfileOptionsForm"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
+import { openProfileConfig, removeProfile } from "@stores/actions"
+import { store } from "@stores/main"
 import { ProfileNameInputField } from "./ProfileNameInputField"
 import { ProfileSettingFeatureSwitchField } from "./ProfileSettingSwitchField"
 
 function Profile(): JSX.Element | null {
-  const profileCount = useStore(store => size(store.profiles ?? {}))
-  const profileInfo = useCurrentProfile()
-  const actions = useStoreActions()
+  const canRemove = store.useStore(state => state.profiles && size(state.profiles) > 1)
+  const profileInfo = store.useCurrentProfile()
 
   const { t } = useTranslation("Profile")
 
@@ -30,7 +30,7 @@ function Profile(): JSX.Element | null {
           InputProps={{
             endAdornment: (
               <Tooltip arrow placement="left" title={t("actions.open")}>
-                <IconButton onClick={() => actions.openProfileConfig(profileInfo.id)} size="small">
+                <IconButton onClick={() => openProfileConfig(profileInfo.id)} size="small">
                   <ConfigIcon fontSize="small" />
                 </IconButton>
               </Tooltip>
@@ -72,8 +72,8 @@ function Profile(): JSX.Element | null {
 
       <Button
         color="error"
-        disabled={profileCount === 1}
-        onClick={() => actions.removeProfile(profileInfo.id)}
+        disabled={!canRemove}
+        onClick={() => removeProfile(profileInfo.id)}
         variant="outlined"
       >
         {t("actions.remove.label")}

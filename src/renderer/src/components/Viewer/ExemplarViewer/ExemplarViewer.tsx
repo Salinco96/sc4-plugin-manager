@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useRef, useState } from "react"
-
 import {
   Box,
   Button,
@@ -10,6 +8,7 @@ import {
   Typography,
 } from "@mui/material"
 import { collect, isArray, parseHex, toHex } from "@salinco/nice-utils"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { Virtuoso, type VirtuosoHandle } from "react-virtuoso"
 
 import { TGI } from "@common/dbpf"
@@ -18,7 +17,7 @@ import { FlexCol, FlexRow } from "@components/FlexBox"
 
 import { Viewer } from "../Viewer"
 
-import { useStore } from "@utils/store"
+import { store } from "@stores/main"
 import { ExemplarProperty, type ExemplarPropertyProps } from "./ExemplarProperty"
 import { ExemplarPropertySearch } from "./ExemplarPropertySearch"
 import { PARENT_COHORT_ID_INFO, getDiff, getErrors } from "./utils"
@@ -44,7 +43,7 @@ export function ExemplarViewer({
   original,
   readonly = false,
 }: ExemplarViewerProps): JSX.Element {
-  const exemplarProperties = useStore(store => store.exemplarProperties)
+  const exemplarProperties = store.useExemplarProperties()
 
   const [currentData, setCurrentData] = useState(data)
   const [originalData, setOriginalData] = useState(original ?? data)

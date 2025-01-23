@@ -1,12 +1,13 @@
+import { List } from "@mui/material"
+
 import type { PackageID } from "@common/packages"
 import { PackageListItem } from "@components/PackageList/PackageListItem"
-import { List } from "@mui/material"
-import { useCurrentVariant } from "@utils/packages"
+import { store } from "@stores/main"
 
 export default function PackageViewOptionalDependencies({
   packageId,
 }: { packageId: PackageID }): JSX.Element {
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   return (
     <List sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 0 }}>

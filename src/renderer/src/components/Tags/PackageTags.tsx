@@ -1,9 +1,8 @@
 import type { PackageID } from "@common/packages"
 import { VariantState, getState } from "@common/types"
-import { useCurrentVariant, usePackageInfo } from "@utils/packages"
-import { useCurrentProfile } from "@utils/store"
-
+import { store } from "@stores/main"
 import { Page, useLocation } from "@utils/navigation"
+
 import { PackageTag } from "./PackageTag"
 import { Tags } from "./Tags"
 import { TagType, createTag } from "./utils"
@@ -14,9 +13,9 @@ export function PackageTags({
   packageId: PackageID
 }): JSX.Element | null {
   const location = useLocation()
-  const profileInfo = useCurrentProfile()
-  const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const profileInfo = store.useCurrentProfile()
+  const packageInfo = store.usePackageInfo(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const isSelectable = location.page === Page.Packages
 

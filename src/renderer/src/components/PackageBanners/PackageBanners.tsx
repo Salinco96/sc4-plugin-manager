@@ -11,7 +11,7 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { VariantID } from "@common/variants"
-import { usePackageStatus, useVariantInfo } from "@utils/packages"
+import { store } from "@stores/main"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
 import { PackageBannerDeprecated } from "./PackageBannerDeprecated"
@@ -28,8 +28,8 @@ export function PackageBanners({
   packageId: PackageID
   variantId?: VariantID
 }): JSX.Element {
-  const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useVariantInfo(packageId, variantId)
+  const packageStatus = store.usePackageStatus(packageId)
+  const variantInfo = store.useVariantInfo(packageId, variantId)
 
   const issues = getVariantIssues(variantInfo, packageStatus)
 

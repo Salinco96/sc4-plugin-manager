@@ -7,7 +7,7 @@ import { type TabInfo, Tabs } from "@components/Tabs"
 import { ToolViewSummary } from "@components/ToolViewTabs/ToolViewSummary"
 import { ToolHeader } from "@components/Tools/ToolHeader"
 import { View } from "@components/View"
-import { getToolInfo, useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 const tabs: TabInfo<{ toolId: ToolID }>[] = [
   {
@@ -20,12 +20,12 @@ const tabs: TabInfo<{ toolId: ToolID }>[] = [
 ]
 
 function ToolView({ toolId }: { toolId: ToolID }): JSX.Element {
-  const isLoading = useStore(store => !store.tools)
-  const exists = useStore(store => !!getToolInfo(store, toolId))
+  const exists = store.useStore(state => state.tools && !!state.tools[toolId])
 
   const { t } = useTranslation("ToolView")
 
-  if (isLoading) {
+  // Loading
+  if (exists === undefined) {
     return (
       <View>
         <Loader />
@@ -33,7 +33,8 @@ function ToolView({ toolId }: { toolId: ToolID }): JSX.Element {
     )
   }
 
-  if (!exists) {
+  // Missing
+  if (exists === false) {
     return (
       <View>
         <Empty message={t("missing", { toolId })} />

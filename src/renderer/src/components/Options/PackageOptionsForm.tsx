@@ -1,26 +1,20 @@
-import { type PackageID, checkCondition } from "@common/packages"
-import { useCurrentVariant } from "@utils/packages"
-import {
-  useCurrentProfile,
-  useFeatures,
-  useSettings,
-  useStore,
-  useStoreActions,
-} from "@utils/store"
-
 import { isEmpty } from "@salinco/nice-utils"
+
+import { type PackageID, checkCondition } from "@common/packages"
+import { store } from "@stores/main"
+
+import { resetPackageOptions, setPackageOption, setProfileOption } from "@stores/actions"
 import { OptionsForm } from "./OptionsForm"
 import { usePackageOptions } from "./usePackageOptions"
 
 export default function PackageOptionsForm({ packageId }: { packageId: PackageID }): JSX.Element {
-  const actions = useStoreActions()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
   const options = usePackageOptions(packageId)
 
-  const variantInfo = useCurrentVariant(packageId)
-  const features = useFeatures()
-  const settings = useSettings()
+  const features = store.useFeatures()
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const packageValues = profileInfo?.packages[packageId]?.options ?? {}
   const profileValues = profileInfo?.options ?? {}
@@ -42,14 +36,12 @@ export default function PackageOptionsForm({ packageId }: { packageId: PackageID
       disabled={!profileInfo}
       onChange={(option, newValue) => {
         if (option.global) {
-          actions.setProfileOption(option.id, newValue)
+          setProfileOption(option.id, newValue)
         } else {
-          actions.setPackageOption(packageId, option.id, newValue)
+          setPackageOption(packageId, option.id, newValue)
         }
       }}
-      onReset={() => {
-        actions.resetPackageOptions(packageId)
-      }}
+      onReset={() => resetPackageOptions(packageId)}
       options={options}
       resetDisabled={isEmpty(packageValues)}
       values={values}

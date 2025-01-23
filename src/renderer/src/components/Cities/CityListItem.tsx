@@ -9,7 +9,7 @@ import {
 } from "@common/regions"
 import { ListItem } from "@components/ListItem"
 import { PackageBanner } from "@components/PackageBanners/PackageBanner"
-import { useSettings, useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 import { CityHeader } from "./CityHeader"
 
@@ -17,20 +17,17 @@ export const CityListItem = memo(function CollectionListItem(props: {
   cityId: CityID
   regionId: RegionID
 }): JSX.Element {
-  const profiles = useStore(store => store.profiles)
-  const settings = useSettings()
-
-  const regionProfileId = getRegionLinkedProfileId(props.regionId, settings, profiles)
-  const cityProfileId = getCityLinkedProfileId(props.regionId, props.cityId, settings)
+  const isUnlinked = store.useStore(
+    state =>
+      !!state.profiles &&
+      size(state.profiles) > 1 &&
+      !getRegionLinkedProfileId(props.regionId, state.settings, state.profiles) &&
+      !getCityLinkedProfileId(props.regionId, props.cityId, state.settings),
+  )
 
   return (
     <ListItem
-      banners={
-        !!profiles &&
-        size(profiles) > 1 &&
-        !regionProfileId &&
-        !cityProfileId && <PackageBanner>No linked profile</PackageBanner>
-      }
+      banners={isUnlinked && <PackageBanner>No linked profile</PackageBanner>}
       header={CityHeader}
       {...props}
     />

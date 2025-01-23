@@ -15,12 +15,12 @@ export function normalizeString(value: string): string {
   )
 }
 
-// TODO: Move to nice-utils
+// TODO: Move to nice-utils?
 export function parseStringArray(value: MaybeArray<string>, separator = ","): string[] {
   return isArray(value) ? value : value.split(separator).map(trim)
 }
 
-// TODO: Move to nice-utils
+// TODO: Move to nice-utils?
 export function bitMask(value: number, mask: number): number {
   return (value & mask) >>> 0
 }

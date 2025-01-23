@@ -7,7 +7,7 @@ import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { type TabInfo, Tabs } from "@components/Tabs"
 import { View } from "@components/View"
-import { getRegionInfo, useStore } from "@utils/store"
+import { getCityInfo, store } from "@stores/main"
 
 const tabs: TabInfo<{ cityId: CityID; regionId: RegionID }>[] = [
   {
@@ -16,8 +16,8 @@ const tabs: TabInfo<{ cityId: CityID; regionId: RegionID }>[] = [
     condition() {
       return true
     },
-    count({ cityId, regionId }, store) {
-      return getRegionInfo(store, regionId)?.cities[cityId]?.backups.length ?? 0
+    count({ cityId, regionId }, state) {
+      return getCityInfo(state, regionId, cityId).backups.length
     },
     fullsize: true,
     label(t, count) {
@@ -27,12 +27,12 @@ const tabs: TabInfo<{ cityId: CityID; regionId: RegionID }>[] = [
 ]
 
 function CityView({ cityId, regionId }: { cityId: CityID; regionId: RegionID }): JSX.Element {
-  const isLoading = useStore(store => !store.regions)
-  const exists = useStore(store => !!getRegionInfo(store, regionId)?.cities[cityId])
+  const exists = store.useStore(store => store.regions && !!store.regions[regionId]?.cities[cityId])
 
   const { t } = useTranslation("CityView")
 
-  if (isLoading) {
+  // Loading
+  if (exists === undefined) {
     return (
       <View>
         <Loader />
@@ -40,7 +40,8 @@ function CityView({ cityId, regionId }: { cityId: CityID; regionId: RegionID }):
     )
   }
 
-  if (!exists) {
+  // Missing
+  if (exists === false) {
     return (
       <View>
         <Empty message={t("missing", { cityId })} />

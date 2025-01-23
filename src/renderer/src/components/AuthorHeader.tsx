@@ -1,8 +1,11 @@
+import { useMemo } from "react"
+
 import type { AuthorID } from "@common/authors"
 import { getAuthorName } from "@common/authors"
 import { Page } from "@utils/navigation"
-import { useAuthors, useStoreActions } from "@utils/store"
-import { useMemo } from "react"
+
+import { openAuthorURL } from "@stores/actions"
+import { store } from "@stores/main"
 import { Header } from "./Header"
 import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
 
@@ -15,8 +18,7 @@ export function AuthorHeader({
   setActive?: (active: boolean) => void
   authorId: AuthorID
 }): JSX.Element {
-  const actions = useStoreActions()
-  const authors = useAuthors()
+  const authors = store.useAuthors()
   const authorInfo = authors[authorId]
 
   const toolbeltActions: ToolBeltAction[] = useMemo(() => {
@@ -24,7 +26,7 @@ export function AuthorHeader({
 
     if (authorInfo?.url) {
       toolbeltActions.push({
-        action: () => actions.openAuthorURL(authorId),
+        action: () => openAuthorURL(authorId),
         description: authorInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl",
         icon: "website",
         id: "url",
@@ -32,7 +34,7 @@ export function AuthorHeader({
     }
 
     return toolbeltActions
-  }, [actions, authorId, authorInfo])
+  }, [authorId, authorInfo])
 
   return (
     <Header

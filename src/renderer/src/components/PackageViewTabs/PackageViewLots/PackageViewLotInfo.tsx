@@ -16,9 +16,9 @@ import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
+import { loadDBPFEntry } from "@stores/actions"
+import { store } from "@stores/main"
 import { formatNumber } from "@utils/format"
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
-import { useStore, useStoreActions } from "@utils/store"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
 export interface PackageViewLotInfoProps {
@@ -40,10 +40,9 @@ export function PackageViewLotInfo({
   packageId,
   setEnabled,
 }: PackageViewLotInfoProps): JSX.Element {
-  const actions = useStoreActions()
-  const packageStatus = usePackageStatus(packageId)
-  const profileOptions = useStore(store => store.profileOptions)
-  const variantInfo = useCurrentVariant(packageId)
+  const packageStatus = store.usePackageStatus(packageId)
+  const profileOptions = store.useProfileOptions()
+  const variantInfo = store.useCurrentVariant(packageId)
 
   const isDependency = !!packageStatus?.included && !packageStatus.enabled
 
@@ -51,7 +50,7 @@ export function PackageViewLotInfo({
 
   const isDisabled = (isTogglable && (!isEnabled || isDependency)) || !isCompatible
 
-  const isMaxisLot = useStore(store => !!store.maxis?.lots?.some(where("id", lot.id)))
+  const isMaxisLot = store.useStore(state => !!state.maxis?.lots?.some(where("id", lot.id)))
 
   const isMaxisOverride = isMaxisLot && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
@@ -63,7 +62,7 @@ export function PackageViewLotInfo({
   const loadLotPicture = useEffectEvent(async () => {
     try {
       const entryId: TGI = `${DBPFFileType.PNG_LOT_PICTURES}-${lot.id}`
-      const entry = await actions.loadDBPFEntry(packageId, variantInfo.id, lot.file, entryId)
+      const entry = await loadDBPFEntry(packageId, variantInfo.id, lot.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const src = `data:image/${entry.type};base64, ${entry.data.base64}`
         setLotPicture(src)

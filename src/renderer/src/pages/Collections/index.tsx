@@ -1,11 +1,11 @@
 import { keys, sort } from "@salinco/nice-utils"
 
+import { CollectionList } from "@components/Collections/CollectionList"
 import { Loader } from "@components/Loader"
-import { useStore } from "@utils/store"
-import { CollectionList } from "../../components/Collections/CollectionList"
+import { store } from "@stores/main"
 
 function Collections(): JSX.Element {
-  const collections = useStore(store => store.collections)
+  const collections = store.useCollections()
 
   if (!collections) {
     return <Loader />

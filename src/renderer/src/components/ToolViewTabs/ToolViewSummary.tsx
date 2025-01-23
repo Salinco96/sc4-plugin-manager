@@ -6,13 +6,12 @@ import { getAuthorName } from "@common/authors"
 import type { ToolID } from "@common/tools"
 import { MarkdownView } from "@components/MarkdownView"
 import { Text } from "@components/Text"
+import { store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
-import { useToolInfo } from "@utils/packages"
-import { useAuthors } from "@utils/store"
 
 export function ToolViewSummary({ toolId }: { toolId: ToolID }): JSX.Element {
-  const authors = useAuthors()
-  const toolInfo = useToolInfo(toolId)
+  const authors = store.useAuthors()
+  const toolInfo = store.useToolInfo(toolId)
 
   const { openAuthorView } = useNavigation()
 

@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
-import { usePackageInfo, useVariantInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import { installVariant } from "@stores/actions"
+import { store } from "@stores/main"
 
 import { PackageBanner } from "./PackageBanner"
 
@@ -16,10 +16,8 @@ export function PackageBannerMissing({
   packageId: PackageID
   variantId: VariantID
 }): JSX.Element {
-  const actions = useStoreActions()
-
-  const packageInfo = usePackageInfo(packageId)
-  const variantInfo = useVariantInfo(packageId, variantId)
+  const packageInfo = store.usePackageInfo(packageId)
+  const variantInfo = store.useVariantInfo(packageId, variantId)
 
   const { t } = useTranslation("PackageBanner")
 
@@ -32,7 +30,7 @@ export function PackageBannerMissing({
       action={{
         description: t("missing.actions.install.description"),
         label: t("missing.actions.install.label"),
-        onClick: () => actions.installVariant(packageInfo.id, variantInfo.id),
+        onClick: () => installVariant(packageInfo.id, variantInfo.id),
       }}
       header={t("missing.title")}
       icon={<MissingIcon />}

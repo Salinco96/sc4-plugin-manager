@@ -7,9 +7,9 @@ import { Trans, useTranslation } from "react-i18next"
 import { getFeatureLabel } from "@common/i18n"
 import type { PackageID } from "@common/packages"
 import { Issue, type VariantID, type VariantIssue } from "@common/variants"
+import { addPackage, updateProfile } from "@stores/actions"
+import { getPackageName, store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
-import { useCurrentVariant } from "@utils/packages"
-import { getPackageName, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
 import { PackageBanner } from "./PackageBanner"
 
@@ -22,11 +22,12 @@ export function PackageBannerIncompatible({
   packageId: PackageID
   variantId: VariantID
 }): JSX.Element {
-  const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
-  const currentVariantId = useCurrentVariant(packageId).id
+  const currentProfile = store.useCurrentProfile()
+  const currentVariantId = store.useCurrentVariant(packageId).id
 
-  const packageNames = useStore(store => issue.packages?.map(id => getPackageName(store, id)))
+  const packageNames = store.useShallow(state =>
+    issue.packages?.map(id => getPackageName(state, id)),
+  )
   const incompatiblePackageId = issue.packages?.at(0)
 
   const { t } = useTranslation("PackageBanner")
@@ -49,7 +50,7 @@ export function PackageBannerIncompatible({
               }),
               label: t("incompatible.actions.replacePackages.label"),
               onClick: async () => {
-                await actions.addPackage(packageId, variantId, {
+                await addPackage(packageId, variantId, {
                   packages: { [incompatiblePackageId]: { enabled: false } },
                 })
               },
@@ -61,7 +62,7 @@ export function PackageBannerIncompatible({
               description: t("incompatible.actions.replaceExternal.description"),
               label: t("incompatible.actions.replaceExternal.label"),
               onClick: async () => {
-                await actions.addPackage(packageId, variantId, {
+                await addPackage(packageId, variantId, {
                   features: { [feature]: false },
                 })
               },
@@ -78,7 +79,7 @@ export function PackageBannerIncompatible({
             description: t("conflict.actions.setOption.description", { option, value }),
             label: t("conflict.actions.setOption.label"),
             onClick: async () => {
-              await actions.updateProfile(currentProfile.id, {
+              await updateProfile(currentProfile.id, {
                 options: { [option]: value },
               })
             },
@@ -87,7 +88,6 @@ export function PackageBannerIncompatible({
       }
     }
   }, [
-    actions,
     currentProfile,
     currentVariantId,
     incompatiblePackageId,

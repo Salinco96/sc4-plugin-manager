@@ -1,7 +1,7 @@
 import { Chip, type ChipProps, Tooltip } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
-import { useAuthors, useStore } from "@utils/store"
+import { store } from "@stores/main"
 
 import { STATE_TAGS, type TagInfo, TagType, getTagLabel } from "./utils"
 
@@ -16,8 +16,8 @@ export type TagProps = {
 }
 
 export function Tag({ color, dense, isSelected, onClick, tag }: TagProps): JSX.Element {
-  const authors = useAuthors()
-  const categories = useStore(store => store.categories)
+  const authors = store.useAuthors()
+  const categories = store.useCategories()
 
   const { t } = useTranslation("PackageTag")
 

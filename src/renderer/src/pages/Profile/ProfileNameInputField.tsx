@@ -4,7 +4,7 @@ import { type SxProps, TextField } from "@mui/material"
 import { useTranslation } from "react-i18next"
 
 import type { ProfileInfo } from "@common/profiles"
-import { useStoreActions } from "@utils/store"
+import { updateProfile } from "@stores/actions"
 
 export function ProfileNameInputField({
   profileInfo,
@@ -13,8 +13,6 @@ export function ProfileNameInputField({
   profileInfo: ProfileInfo
   sx?: SxProps
 }): JSX.Element {
-  const actions = useStoreActions()
-
   const [name, setName] = useState(profileInfo.name)
 
   // Update defaultValue if name changes in some other way
@@ -32,11 +30,8 @@ export function ProfileNameInputField({
           return
         }
 
-        if (value) {
-          const success = await actions.updateProfile(profileInfo.id, { name: value })
-          if (success) {
-            return
-          }
+        if (value && (await updateProfile(profileInfo.id, { name: value }))) {
+          return
         }
 
         setName(profileInfo.name)

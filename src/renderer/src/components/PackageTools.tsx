@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import {
   Settings as ConfigIcon,
   Topic as DocsIcon,
@@ -10,14 +8,16 @@ import {
   LiveHelpOutlined as SupportIcon,
   Language as WebIcon,
 } from "@mui/icons-material"
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { FlexRow } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options/PackageOptionsDialog"
-import { useVariantInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+
+import { openPackageConfig, openPackageFile, openPackageURL } from "@stores/actions"
+import { store } from "@stores/main"
 import { ToolButton } from "./ToolButton"
 
 export function PackageTools({
@@ -27,8 +27,7 @@ export function PackageTools({
   packageId: PackageID
   variantId?: VariantID
 }): JSX.Element {
-  const actions = useStoreActions()
-  const variantInfo = useVariantInfo(packageId, variantId)
+  const variantInfo = store.useVariantInfo(packageId, variantId)
 
   const docsPath = variantInfo.docs
   const readmePaths = variantInfo.readme
@@ -57,49 +56,49 @@ export function PackageTools({
         <ToolButton
           description={t(variantInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl")}
           icon={WebIcon}
-          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "url")}
+          onClick={() => openPackageURL(packageId, variantInfo.id, "url")}
         />
       )}
       {variantInfo.repository && (
         <ToolButton
           description={t("openRepository")}
           icon={GitHubIcon}
-          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "repository")}
+          onClick={() => openPackageURL(packageId, variantInfo.id, "repository")}
         />
       )}
       {variantInfo.support && (
         <ToolButton
           description={t("openSupport")}
           icon={SupportIcon}
-          onClick={() => actions.openPackageURL(packageId, variantInfo.id, "support")}
+          onClick={() => openPackageURL(packageId, variantInfo.id, "support")}
         />
       )}
       {variantInfo.installed && !variantId && (
         <ToolButton
           description={t("openConfig")}
           icon={ConfigIcon}
-          onClick={() => actions.openPackageConfig(packageId)}
+          onClick={() => openPackageConfig(packageId)}
         />
       )}
       {variantInfo.installed && (
         <ToolButton
           description={t("openFiles")}
           icon={FilesIcon}
-          onClick={() => actions.openPackageFile(packageId, variantInfo.id, "")}
+          onClick={() => openPackageFile(packageId, variantInfo.id, "")}
         />
       )}
       {variantInfo.installed && docsPath && (
         <ToolButton
           description={t("openDocs")}
           icon={DocsIcon}
-          onClick={() => actions.openPackageFile(packageId, variantInfo.id, docsPath)}
+          onClick={() => openPackageFile(packageId, variantInfo.id, docsPath)}
         />
       )}
       {variantInfo.installed && readmePaths?.length && (
         <ToolButton
           description={t("openReadme")}
           icon={ReadmeIcon}
-          onClick={() => actions.openPackageFile(packageId, variantInfo.id, readmePaths[0])}
+          onClick={() => openPackageFile(packageId, variantInfo.id, readmePaths[0])}
         />
       )}
     </FlexRow>

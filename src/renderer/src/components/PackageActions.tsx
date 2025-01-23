@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 import {
@@ -14,14 +14,18 @@ import {
 } from "@common/packages"
 import type { VariantID } from "@common/variants"
 import { getWarningMessage } from "@common/warnings"
+import { store } from "@stores/main"
+import { getOrderedVariants } from "@utils/packages"
+
 import {
-  getOrderedVariants,
-  useCurrentVariant,
-  useFilteredVariants,
-  usePackageInfo,
-  usePackageStatus,
-} from "@utils/packages"
-import { useCurrentProfile, useStoreActions } from "@utils/store"
+  addPackage,
+  disablePackage,
+  enablePackage,
+  installVariant,
+  removeVariant,
+  setPackageVariant,
+  updateVariant,
+} from "@stores/actions"
 import { type Action, ActionButton, type Variant } from "./ActionButton"
 
 export function PackageActions({
@@ -33,16 +37,13 @@ export function PackageActions({
 }): JSX.Element | null {
   const { t } = useTranslation("PackageActions")
 
-  const [isVariantLoading, setVariantLoading] = useState(false)
-
-  const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
-  const packageInfo = usePackageInfo(packageId)
-  const packageStatus = usePackageStatus(packageId)
-  const variantInfo = useCurrentVariant(packageId)
+  const currentProfile = store.useCurrentProfile()
+  const packageInfo = store.usePackageInfo(packageId)
+  const packageStatus = store.usePackageStatus(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
-  const filteredVariantIds = useFilteredVariants(packageId)
+  const filteredVariantIds = store.useFilteredVariants(packageId)
 
   const variants = useMemo(() => {
     const variants = getOrderedVariants(packageInfo).filter(
@@ -80,7 +81,7 @@ export function PackageActions({
 
     if (isMissing(variantInfo, packageStatus)) {
       packageActions.push({
-        action: () => actions.addPackage(packageId, variantId),
+        action: () => addPackage(packageId, variantId),
         color: "warning",
         description: t("install.description"),
         id: "install",
@@ -88,7 +89,7 @@ export function PackageActions({
       })
     } else if (isOutdated(variantInfo)) {
       packageActions.push({
-        action: () => actions.updatePackage(packageId, variantId),
+        action: () => updateVariant(packageId, variantId),
         color: "warning",
         description: t("update.description", { version: variantInfo.update?.version }),
         id: "update",
@@ -98,7 +99,7 @@ export function PackageActions({
 
     if (enabled) {
       packageActions.push({
-        action: () => actions.disablePackage(packageId),
+        action: () => disablePackage(packageId),
         color: "error",
         description: required
           ? t("disable.reason.required", { count: packageStatus?.requiredBy?.length })
@@ -110,7 +111,7 @@ export function PackageActions({
       })
     } else if (installed) {
       packageActions.push({
-        action: () => actions.enablePackage(packageId),
+        action: () => enablePackage(packageId),
         color: "success",
         description: incompatible
           ? t("enable.reason.incompatible")
@@ -127,8 +128,8 @@ export function PackageActions({
       // TODO: Only allow removing if not used by ANY profile
       packageActions.push({
         action: async () => {
-          if (!enabled || (await actions.disablePackage(packageId))) {
-            await actions.removeVariant(packageId, variantId)
+          if (!enabled || (await disablePackage(packageId))) {
+            await removeVariant(packageId, variantId)
           }
         },
         color: "error",
@@ -144,7 +145,7 @@ export function PackageActions({
     } else if (!included) {
       if (currentProfile) {
         packageActions.push({
-          action: () => actions.addPackage(packageId, variantId),
+          action: () => addPackage(packageId, variantId),
           description: incompatible
             ? t("add.reason.incompatible")
             : enableWarning
@@ -157,7 +158,7 @@ export function PackageActions({
       }
 
       packageActions.push({
-        action: () => actions.installVariant(packageId, variantId),
+        action: () => installVariant(packageId, variantId),
         description: t("download.description"),
         id: "download",
         label: t("download.label"),
@@ -165,7 +166,7 @@ export function PackageActions({
     }
 
     return packageActions
-  }, [actions, currentProfile, packageId, packageStatus, t, variantId, variantInfo])
+  }, [currentProfile, packageId, packageStatus, t, variantId, variantInfo])
 
   const loadingLabel = useMemo(() => {
     if (variantInfo.action) {
@@ -182,14 +183,7 @@ export function PackageActions({
       actions={packageActions}
       isLoading={!!loadingLabel}
       loadingLabel={loadingLabel}
-      setVariant={async variantId => {
-        try {
-          setVariantLoading(isIncluded(packageStatus))
-          await actions.setPackageVariant(packageInfo.id, variantId)
-        } finally {
-          setVariantLoading(false)
-        }
-      }}
+      setVariant={variantId => setPackageVariant(packageInfo.id, variantId)}
       variant={variantId}
       variants={variants}
       variantLoading={packageStatus?.action === "switching"}

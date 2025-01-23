@@ -23,7 +23,8 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { type ProfileID, createUniqueId } from "@common/profiles"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
+import { createProfile } from "@stores/actions"
+import { store } from "@stores/main"
 
 export interface CreateProfileModalProps {
   onClose(): void
@@ -37,10 +38,9 @@ export interface CreateProfileFormProps {
 }
 
 export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Element {
-  const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
-  const profiles = useStore(store => store.profiles) ?? {}
-  const templates = useStore(store => store.templates) ?? {}
+  const currentProfile = store.useCurrentProfile()
+  const profiles = store.useProfiles() ?? {}
+  const templates = store.useTemplates() ?? {}
 
   const profileIds = keys(profiles)
   const hasProfiles = profileIds.length !== 0
@@ -154,9 +154,9 @@ export function CreateProfileForm({ onClose }: CreateProfileFormProps): JSX.Elem
           disabled={!!nameError}
           onClick={() => {
             if (templateId !== emptyValue) {
-              actions.createProfile(nameValue.trim(), templateId)
+              createProfile(nameValue.trim(), templateId)
             } else {
-              actions.createProfile(nameValue.trim())
+              createProfile(nameValue.trim())
             }
 
             onClose()

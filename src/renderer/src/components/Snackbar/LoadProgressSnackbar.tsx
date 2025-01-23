@@ -1,34 +1,30 @@
-import { forwardRef, useEffect, useRef } from "react"
-
 import { CardActions, CircularProgress, Typography } from "@mui/material"
 import type { CustomContentProps } from "notistack"
+import { forwardRef, useEffect, useRef } from "react"
 
-import { useStore, useStoreActions } from "@utils/store"
+import { status } from "@stores/status"
+import { closeSnackbar } from "@stores/ui"
 
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((props, ref) => {
-  const actions = useStoreActions()
-
-  const info = useStore(store => store.loader ?? store.linker)
-
-  const message = info
-    ? info.progress
-      ? `${info.step} (${info.progress}%)`
-      : info.step
-    : undefined
+  const message = status.useStore(status => {
+    const task = status.loader ?? status.linker
+    if (task) {
+      return task.progress ? `${task.step} (${task.progress}%)` : task.step
+    }
+  })
 
   const lastMessageRef = useRef(message)
-
   useEffect(() => {
     if (message) {
       lastMessageRef.current = message
     } else {
       // Clear after short duration to prevent closing and reopening for successive tasks
-      const timeout = setTimeout(() => actions.closeSnackbar("load-progress"), 100)
+      const timeout = setTimeout(() => closeSnackbar("load-progress"), 100)
       return () => clearTimeout(timeout)
     }
-  }, [actions, message])
+  }, [message])
 
   // Sometimes the action may be so fast that message will already be empty by the time we show the toast
   if (!message && !lastMessageRef.current) {

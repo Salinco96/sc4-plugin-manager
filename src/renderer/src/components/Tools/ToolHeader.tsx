@@ -5,9 +5,9 @@ import type { ToolID } from "@common/tools"
 import { type Action, ActionButton } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { ToolBelt, type ToolBeltAction } from "@components/ToolBelt"
+import { installTool, openToolFile, openToolURL, removeTool, runTool } from "@stores/actions"
+import { store } from "@stores/main"
 import { Page } from "@utils/navigation"
-import { useToolInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
 import { ToolTags } from "./ToolTags"
 
 export function ToolHeader({
@@ -15,8 +15,7 @@ export function ToolHeader({
   setActive,
   toolId,
 }: HeaderProps<{ toolId: ToolID }>): JSX.Element {
-  const actions = useStoreActions()
-  const toolInfo = useToolInfo(toolId)
+  const toolInfo = store.useToolInfo(toolId)
 
   const { t } = useTranslation("ToolActions")
 
@@ -25,7 +24,7 @@ export function ToolHeader({
 
     if (toolInfo.installed) {
       toolActions.push({
-        action: () => actions.runTool(toolInfo.id),
+        action: () => runTool(toolInfo.id),
         description: t("run.description"),
         id: "run",
         label: t("run.label"),
@@ -34,7 +33,7 @@ export function ToolHeader({
       // TODO: ATM cannot remove tool copied to SC4 installation folder
       if (!toolInfo.install) {
         toolActions.push({
-          action: () => actions.removeTool(toolInfo.id),
+          action: () => removeTool(toolInfo.id),
           description: t("remove.description"),
           id: "remove",
           label: t("remove.label"),
@@ -42,7 +41,7 @@ export function ToolHeader({
       }
     } else {
       toolActions.push({
-        action: () => actions.installTool(toolInfo.id),
+        action: () => installTool(toolInfo.id),
         description: t("add.description"),
         id: "add",
         label: t("add.label"),
@@ -50,14 +49,14 @@ export function ToolHeader({
     }
 
     return toolActions
-  }, [actions, t, toolInfo])
+  }, [t, toolInfo])
 
   const toolbeltActions = useMemo(() => {
     const toolbeltActions: ToolBeltAction[] = []
 
     if (toolInfo?.url) {
       toolbeltActions.push({
-        action: () => actions.openToolURL(toolId, "url"),
+        action: () => openToolURL(toolId, "url"),
         description: toolInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl",
         icon: "website",
         id: "url",
@@ -66,7 +65,7 @@ export function ToolHeader({
 
     if (toolInfo?.repository) {
       toolbeltActions.push({
-        action: () => actions.openToolURL(toolId, "repository"),
+        action: () => openToolURL(toolId, "repository"),
         description: toolInfo.repository.includes("github") ? "openGitHub" : "openRepository",
         icon: toolInfo.repository.includes("github") ? "github" : "repository",
         id: "repository",
@@ -75,7 +74,7 @@ export function ToolHeader({
 
     if (toolInfo?.support) {
       toolbeltActions.push({
-        action: () => actions.openToolURL(toolId, "support"),
+        action: () => openToolURL(toolId, "support"),
         description: "openSupport",
         icon: "support",
         id: "support",
@@ -86,7 +85,7 @@ export function ToolHeader({
       const exeParentPath = toolInfo.exe.split("/").slice(0, -1).join("/")
 
       toolbeltActions.push({
-        action: () => actions.openToolFile(toolId, exeParentPath),
+        action: () => openToolFile(toolId, exeParentPath),
         description: "openFiles",
         icon: "files",
         id: "files",
@@ -94,7 +93,7 @@ export function ToolHeader({
     }
 
     return toolbeltActions
-  }, [actions, toolId, toolInfo])
+  }, [toolId, toolInfo])
 
   return (
     <Header

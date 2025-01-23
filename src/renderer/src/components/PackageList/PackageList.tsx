@@ -10,19 +10,18 @@ import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { Page, useLocation, useNavigation } from "@utils/navigation"
 import { type MatchResult, getMatchingContents, isHexSearch } from "@utils/search"
-import { usePackageFilters, useStore } from "@utils/store"
 
+import { store } from "@stores/main"
 import { EmptyPackageList } from "./EmptyPackageList"
 import { PackageListItem } from "./PackageListItem"
 
 export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
   const { page } = useLocation()
-  const { search } = usePackageFilters()
+  const { search } = store.usePackageFilters()
+  const externalPlugins = store.useExternals()
+  const maxisExemplars = store.useMaxis()
 
   const { fromPackageId } = useNavigation()
-
-  const externalPlugins = useStore(store => store.externals)
-  const maxisExemplars = useStore(store => store.maxis)
 
   const matchingMaxisContents = useMemo(() => {
     if (maxisExemplars && isHexSearch(search) && page === Page.Packages) {

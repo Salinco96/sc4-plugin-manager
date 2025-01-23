@@ -15,10 +15,12 @@ import {
 import { ActionButton, type Variant } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { Page } from "@utils/navigation"
-import { useCityInfo } from "@utils/packages"
-import { useSettings, useStore, useStoreActions } from "@utils/store"
 
+import { createBackup, linkCity } from "@stores/actions"
+import { store } from "@stores/main"
 import { UpdateSaveActionModal, useUpdateSaveActionModal } from "./UpdateSaveActionModal"
+
+const DEFAULT = "*"
 
 export function CityHeader({
   cityId,
@@ -26,10 +28,9 @@ export function CityHeader({
   regionId,
   setActive,
 }: HeaderProps<{ cityId: CityID; regionId: RegionID }>): JSX.Element {
-  const actions = useStoreActions()
-  const city = useCityInfo(cityId, regionId)
-  const profiles = useStore(store => store.profiles)
-  const settings = useSettings()
+  const city = store.useCityInfo(regionId, cityId)
+  const profiles = store.useProfiles()
+  const settings = store.useSettings()
 
   const { t } = useTranslation("CityView")
 
@@ -44,7 +45,7 @@ export function CityHeader({
   const profileOptions = useMemo(() => {
     if (profiles) {
       const options = sortBy(values(profiles), profile => profile.name).map<
-        Variant<ProfileID | "*">
+        Variant<ProfileID | typeof DEFAULT>
       >(profile => ({
         id: profile.id,
         label: profile.name,
@@ -54,7 +55,7 @@ export function CityHeader({
         options.unshift({
           description: "Defaults to region",
           icon: RegionIcon,
-          id: "*",
+          id: DEFAULT,
           label: <i>{profiles[regionProfileId]?.name}</i>,
         })
       }
@@ -71,7 +72,7 @@ export function CityHeader({
           <ActionButton
             actions={[
               {
-                action: () => actions.createBackup(regionId, cityId),
+                action: () => createBackup(regionId, cityId),
                 description: t("actions.createBackup.description"),
                 disabled: hasBackup(city),
                 id: "createBackup",
@@ -91,20 +92,9 @@ export function CityHeader({
               },
             ]}
             setVariant={profileId =>
-              actions.updateSettings({
-                regions: {
-                  ...settings?.regions,
-                  [regionId]: {
-                    ...settings?.regions?.[regionId],
-                    cities: {
-                      ...settings?.regions?.[regionId]?.cities,
-                      [cityId]: profileId === "*" ? undefined : { profile: profileId },
-                    },
-                  },
-                },
-              })
+              linkCity(regionId, cityId, profileId === DEFAULT ? null : profileId)
             }
-            variant={cityProfileId ?? "*"}
+            variant={cityProfileId ?? DEFAULT}
             variants={profileOptions}
           />
         </>

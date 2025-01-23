@@ -5,8 +5,9 @@ import { get, size, unionBy, unique, uniqueBy, values } from "@salinco/nice-util
 import { lazy } from "react"
 
 import type { TabInfo } from "@components/Tabs"
-import { getCurrentVariant, getDependentPackages } from "@utils/packages"
-import { getPackageInfo } from "@utils/store"
+
+import { getCurrentVariant, getPackageInfo } from "@stores/main"
+import { getDependentPackages } from "@utils/packages"
 import { PackageViewSummary } from "./PackageViewSummary"
 
 export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
@@ -20,9 +21,9 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "lots",
     component: lazy(() => import("./PackageViewLots")),
-    count({ packageId }, store) {
-      const { buildings, lots } = getCurrentVariant(store, packageId)
-      const maxisLots = store.maxis?.lots ?? []
+    count({ packageId }, state) {
+      const { buildings, lots } = getCurrentVariant(state, packageId)
+      const maxisLots = state.maxis?.lots ?? []
 
       return unionBy(
         lots ?? [],
@@ -38,8 +39,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "mmps",
     component: lazy(() => import("./PackageViewMMPs")),
-    count({ packageId }, store) {
-      const { mmps } = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const { mmps } = getCurrentVariant(state, packageId)
 
       return mmps ? uniqueBy(mmps, get("id")).length : 0
     },
@@ -50,8 +51,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "props",
     component: lazy(() => import("./PackageViewProps")),
-    count({ packageId }, store) {
-      const { props } = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const { props } = getCurrentVariant(state, packageId)
 
       return props ? uniqueBy(props, get("id")).length : 0
     },
@@ -62,8 +63,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "textures",
     component: lazy(() => import("./PackageViewTextures")),
-    count({ packageId }, store) {
-      const { textures } = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const { textures } = getCurrentVariant(state, packageId)
 
       return textures ? unique(values(textures).flat()).length : 0
     },
@@ -74,8 +75,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "dependencies",
     component: lazy(() => import("./PackageViewDependencies")),
-    count({ packageId }, store) {
-      const { dependencies } = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const { dependencies } = getCurrentVariant(state, packageId)
 
       return dependencies?.length ?? 0
     },
@@ -86,8 +87,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "optionalDependencies",
     component: lazy(() => import("./PackageViewOptionalDependencies")),
-    count({ packageId }, store) {
-      const { optional } = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const { optional } = getCurrentVariant(state, packageId)
 
       return optional?.length ?? 0
     },
@@ -109,13 +110,13 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "files",
     component: lazy(() => import("./PackageViewFiles")),
-    condition({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return !!variantInfo.installed && !!variantInfo.files?.length
     },
-    count({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return variantInfo.files?.length ?? 0
     },
@@ -123,8 +124,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
     label(t, count) {
       return t("files", { count })
     },
-    labelTag({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    labelTag({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       if (isLocal(variantInfo)) {
         return createTag(TagType.STATE, VariantState.LOCAL)
@@ -138,13 +139,13 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "readme",
     component: lazy(() => import("./PackageViewReadme")),
-    condition({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return !!variantInfo.installed && !!variantInfo.readme?.length
     },
-    count({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    count({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return variantInfo.readme?.length ?? 0
     },
@@ -156,8 +157,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "options",
     component: lazy(() => import("../Options/PackageOptionsForm")),
-    condition({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return !!variantInfo.options?.length
     },
@@ -168,8 +169,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "logs",
     component: lazy(() => import("./PackageViewLogs")),
-    condition({ packageId }, store) {
-      const variantInfo = getCurrentVariant(store, packageId)
+    condition({ packageId }, state) {
+      const variantInfo = getCurrentVariant(state, packageId)
 
       return !!variantInfo.installed && !!variantInfo.logs
     },
@@ -180,10 +181,8 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "variants",
     component: lazy(() => import("./PackageViewVariants")),
-    count({ packageId }, store) {
-      const packageInfo = getPackageInfo(store, packageId)
-
-      return packageInfo ? size(packageInfo.variants) : 0
+    count({ packageId }, state) {
+      return size(getPackageInfo(state, packageId).variants)
     },
     label(t, count) {
       return t("variants", { count })

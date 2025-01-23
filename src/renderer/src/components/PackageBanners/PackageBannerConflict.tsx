@@ -7,15 +7,17 @@ import { Trans, useTranslation } from "react-i18next"
 import { getFeatureLabel } from "@common/i18n"
 import { Issue, type VariantIssue } from "@common/variants"
 import { useNavigation } from "@utils/navigation"
-import { getPackageInfo, useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
+import { disablePackage, updateProfile } from "@stores/actions"
+import { getPackageName, store } from "@stores/main"
 import { PackageBanner } from "./PackageBanner"
 
 export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.Element {
-  const actions = useStoreActions()
-  const currentProfile = useCurrentProfile()
+  const currentProfile = store.useCurrentProfile()
 
-  const packageNames = useStore(store => issue.packages?.map(id => getPackageInfo(store, id)?.name))
+  const packageNames = store.useShallow(store =>
+    issue.packages?.map(id => getPackageName(store, id)),
+  )
   const incompatiblePackageId = issue.packages?.at(0)
 
   const { t } = useTranslation("PackageBanner")
@@ -36,7 +38,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
               packages: packageNames?.at(0),
             }),
             label: t("conflict.actions.disablePackages.label"),
-            onClick: () => actions.disablePackage(incompatiblePackageId),
+            onClick: () => disablePackage(incompatiblePackageId),
           }
         }
 
@@ -45,7 +47,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
             description: t("conflict.actions.disableExternal.description"),
             label: t("conflict.actions.disableExternal.label"),
             onClick: async () => {
-              await actions.updateProfile(currentProfile.id, {
+              await updateProfile(currentProfile.id, {
                 features: { [feature]: false },
               })
             },
@@ -61,7 +63,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
             description: t("conflict.actions.setOption.description", { option, value }),
             label: t("conflict.actions.setOption.label"),
             onClick: async () => {
-              await actions.updateProfile(currentProfile.id, {
+              await updateProfile(currentProfile.id, {
                 options: { [option]: value },
               })
             },
@@ -69,7 +71,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
         }
       }
     }
-  }, [actions, currentProfile, incompatiblePackageId, issue, packageNames, t])
+  }, [currentProfile, incompatiblePackageId, issue, packageNames, t])
 
   return (
     <PackageBanner action={action} header={t("conflict.title")} icon={<ConflictIcon />}>

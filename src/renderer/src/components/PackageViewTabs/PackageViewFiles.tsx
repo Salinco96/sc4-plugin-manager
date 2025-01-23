@@ -4,26 +4,20 @@ import { globToRegex } from "@common/utils/glob"
 import { PackageFile } from "@components/PackageFile/PackageFile"
 import { List, ListItem } from "@mui/material"
 import { sortBy, values } from "@salinco/nice-utils"
-import { useCurrentVariant, usePackageStatus } from "@utils/packages"
-import {
-  useCurrentProfile,
-  useFeatures,
-  useSettings,
-  useStore,
-  useStoreActions,
-} from "@utils/store"
+import { loadDBPFEntries } from "@stores/actions"
+import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
 import { useEffect, useState } from "react"
 
 export default function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
-  const actions = useStoreActions()
-  const features = useFeatures()
-  const settings = useSettings()
-  const profileInfo = useCurrentProfile()
-  const profileOptions = useStore(store => store.profileOptions)
-  const packageStatus = usePackageStatus(packageId)
+  const features = store.useFeatures()
+  const packageStatus = store.usePackageStatus(packageId)
+  const profileInfo = store.useCurrentProfile()
+  const profileOptions = store.useProfileOptions()
+  const settings = store.useSettings()
+  const variantInfo = store.useCurrentVariant(packageId)
+
   const patterns = packageStatus?.files?.map(pattern => globToRegex(pattern))
-  const variantInfo = useCurrentVariant(packageId)
 
   const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})
 
@@ -32,7 +26,7 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
       const result: { [path in string]?: DBPFFile } = {}
 
       for (const file of variantInfo.files) {
-        result[file.path] = await actions.loadDBPFEntries(packageId, variantInfo.id, file.path)
+        result[file.path] = await loadDBPFEntries(packageId, variantInfo.id, file.path)
       }
 
       setFiles(files => ({ ...files, ...result }))

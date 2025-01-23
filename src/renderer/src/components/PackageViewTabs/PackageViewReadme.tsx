@@ -7,13 +7,13 @@ import type { VariantID } from "@common/variants"
 import { FlexBox, FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
-import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import { getPackageReadme } from "@stores/actions"
+import { store } from "@stores/main"
 
 export default function PackageViewReadme({
   packageId,
 }: { packageId: PackageID }): JSX.Element | null {
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
   const variantId = variantInfo.id
 
   const filePaths = variantInfo.readme ?? []
@@ -68,17 +68,14 @@ function ReadmeView({
   packageId: PackageID
   variantId: VariantID
 }): JSX.Element | null {
-  const actions = useStoreActions()
-
   const [error, setError] = useState<string>()
   const [readme, setReadme] = useState<{ html?: string; md?: string }>()
 
   useEffect(() => {
-    actions
-      .getPackageReadme(packageId, variantId, filePath)
+    getPackageReadme(packageId, variantId, filePath)
       .then(setReadme)
       .catch(error => setError(error.message))
-  }, [actions, filePath, packageId, variantId])
+  }, [filePath, packageId, variantId])
 
   if (error) {
     return (

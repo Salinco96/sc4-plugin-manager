@@ -35,8 +35,8 @@ import {
   hasBackup,
 } from "@common/regions"
 import { FlexCol } from "@components/FlexBox"
-import { useCityInfo } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
+import { updateSave } from "@stores/actions"
+import { store } from "@stores/main"
 
 export interface UpdateSaveActionModalProps {
   action?: UpdateSaveAction["action"]
@@ -69,8 +69,7 @@ function UpdateSaveActionModalForm({
   onClose,
   regionId,
 }: UpdateSaveActionModalProps & { action: UpdateSaveAction["action"] }): JSX.Element {
-  const actions = useStoreActions()
-  const city = useCityInfo(cityId, regionId)
+  const city = store.useCityInfo(regionId, cityId)
   const alreadyBackedUp = !backup && hasBackup(city)
 
   const { t } = useTranslation("CityView")
@@ -257,7 +256,7 @@ function UpdateSaveActionModalForm({
           onClick={async () => {
             try {
               setUpdating(true)
-              if (await actions.updateSave(regionId, cityId, backup?.file ?? null, options)) {
+              if (await updateSave(regionId, cityId, backup?.file ?? null, options)) {
                 onClose()
               }
             } finally {

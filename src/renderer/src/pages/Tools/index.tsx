@@ -1,11 +1,11 @@
 import { sortBy, values } from "@salinco/nice-utils"
 
 import { Loader } from "@components/Loader"
-import { useStore } from "@utils/store"
-import { ToolList } from "../../components/Tools/ToolList"
+import { ToolList } from "@components/Tools/ToolList"
+import { store } from "@stores/main"
 
 function Tools(): JSX.Element {
-  const tools = useStore(store => store.tools)
+  const tools = store.useTools()
 
   if (!tools) {
     return <Loader />

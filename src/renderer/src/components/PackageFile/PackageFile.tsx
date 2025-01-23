@@ -16,9 +16,9 @@ import { FlexRow } from "@components/FlexBox"
 import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
-import { useCurrentVariant } from "@utils/packages"
-import { useStoreActions } from "@utils/store"
 
+import { loadDBPFEntries, openPackageFile } from "@stores/actions"
+import { store } from "@stores/main"
 import { PackageEntries } from "./PackageEntries"
 
 export interface PackageFileProps {
@@ -38,8 +38,7 @@ export function PackageFile({
   packageId,
   setFileData,
 }: PackageFileProps): JSX.Element {
-  const actions = useStoreActions()
-  const variantInfo = useCurrentVariant(packageId)
+  const variantInfo = store.useCurrentVariant(packageId)
   const theme = useTheme()
 
   const isPatched = !!file.patches
@@ -84,7 +83,7 @@ export function PackageFile({
               icon={expanded ? CollapseIcon : ExpandIcon}
               onClick={async () => {
                 if (!fileData) {
-                  setFileData(await actions.loadDBPFEntries(packageId, variantInfo.id, file.path))
+                  setFileData(await loadDBPFEntries(packageId, variantInfo.id, file.path))
                 }
 
                 setExpanded(!expanded)
@@ -95,9 +94,7 @@ export function PackageFile({
           <ToolButton
             description={t("openFileLocation")}
             icon={OpenLocationIcon}
-            onClick={async () => {
-              await actions.openPackageFile(packageId, variantInfo.id, parentPath)
-            }}
+            onClick={() => openPackageFile(packageId, variantInfo.id, parentPath)}
           />
         </FlexRow>
       </FlexRow>

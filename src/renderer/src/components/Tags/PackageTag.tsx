@@ -1,13 +1,13 @@
-import { usePackageFilters, useStore, useStoreActions } from "@utils/store"
-
 import { $removeFirst, remove } from "@salinco/nice-utils"
+
+import { setPackageFilters } from "@stores/actions"
+import { store } from "@stores/main"
 import { Tag, type TagProps } from "./Tag"
 import { TagType, type TagValue } from "./utils"
 
 export function PackageTag(props: Omit<TagProps, "isSelected" | "onClick">): JSX.Element {
-  const actions = useStoreActions()
-  const categories = useStore(store => store.categories)
-  const filters = usePackageFilters()
+  const categories = store.useCategories()
+  const filters = store.usePackageFilters()
 
   const key = {
     author: "authors" as const,
@@ -25,7 +25,7 @@ export function PackageTag(props: Omit<TagProps, "isSelected" | "onClick">): JSX
       isSelected={isSelected}
       onClick={() => {
         if (values.includes(props.tag.value)) {
-          actions.setPackageFilters({ [key]: remove(values, props.tag.value) })
+          setPackageFilters({ [key]: remove(values, props.tag.value) })
         } else {
           // TODO: Awkward logic
           const newValues = [...values, props.tag.value]
@@ -37,7 +37,7 @@ export function PackageTag(props: Omit<TagProps, "isSelected" | "onClick">): JSX
             }
           }
 
-          actions.setPackageFilters({ [key]: newValues })
+          setPackageFilters({ [key]: newValues })
         }
       }}
     />

@@ -34,6 +34,7 @@ export default defineConfig({
         "@config": resolve("src/config"),
         "@pages": resolve("src/renderer/src/pages"),
         "@providers": resolve("src/renderer/src/providers"),
+        "@stores": resolve("src/renderer/src/stores"),
         "@utils": resolve("src/renderer/src/utils"),
       },
     },

@@ -8,8 +8,9 @@ import { useTranslation } from "react-i18next"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { useLocation } from "@utils/navigation"
-import { type Store, useStore, useStoreActions } from "@utils/store"
 
+import { type MainState, store } from "@stores/main"
+import { setActiveTab, ui } from "@stores/ui"
 import { Tag } from "./Tags/Tag"
 import type { TagInfo } from "./Tags/utils"
 
@@ -17,30 +18,30 @@ export type TabInfo<T> = {
   component: ComponentType<Omit<T, "tabs">>
   id: string
   label: (t: TFunction<"Tabs">, count?: number) => string
-  labelTag?: (props: Omit<T, "tabs">, store: Store) => TagInfo | undefined
-  condition?: (props: Omit<T, "tabs">, store: Store) => boolean
-  count?: (props: Omit<T, "tabs">, store: Store) => number
+  labelTag?: (props: Omit<T, "tabs">, state: MainState) => TagInfo | undefined
+  condition?: (props: Omit<T, "tabs">, state: MainState) => boolean
+  count?: (props: Omit<T, "tabs">, state: MainState) => number
   fullsize?: boolean
 }
 
 export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Element | null {
-  const actions = useStoreActions()
   const location = useLocation()
 
   const { t } = useTranslation("Tabs")
 
-  const activeTab = useStore(store => store.views[location.page]?.activeTab)
+  const activeTab = ui.useActiveTab(location.page)
 
-  const filteredTabs = useStore(store =>
+  // TODO: Bad!
+  const filteredTabs = store.useStore(state =>
     mapDefined(tabs, tab => {
-      const count = tab.count?.(props, store)
-      const isEnabled = tab.condition?.(props, store) ?? count !== 0
+      const count = tab.count?.(props, state)
+      const isEnabled = tab.condition?.(props, state) ?? count !== 0
 
       if (isEnabled) {
         return {
           ...tab,
           label: tab.label(t, count),
-          labelTag: tab.labelTag?.(props, store),
+          labelTag: tab.labelTag?.(props, state),
         }
       }
     }),
@@ -57,11 +58,7 @@ export function Tabs<T>({ tabs, ...props }: T & { tabs: TabInfo<T>[] }): JSX.Ele
     <TabContext value={currentTab.id}>
       <FlexCol fullHeight>
         <Box borderBottom={1} borderColor="divider">
-          <TabList
-            onChange={(_e, value) =>
-              actions.setView(location.page, { activeTab: value, elementId: undefined })
-            }
-          >
+          <TabList onChange={(_e, value) => setActiveTab(location.page, value)}>
             {filteredTabs.map(({ id, label, labelTag }) => (
               <Tab
                 key={`${pageId}:${id}`}

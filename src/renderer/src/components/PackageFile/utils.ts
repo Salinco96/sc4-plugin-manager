@@ -1,8 +1,9 @@
 import type { TFunction } from "i18next"
 import type { Namespace } from "i18next"
 
-import { DBPFDataType, type DBPFEntry, DBPFFileType, isType, parseTGI } from "@common/dbpf"
+import { DBPFDataType, type DBPFEntry, DBPFFileType, GroupID, isType } from "@common/dbpf"
 import { ExemplarType, getExemplarType } from "@common/exemplars"
+import { split } from "@common/utils/string"
 
 // Keep in dispay order
 export enum DBPFEntryCategory {
@@ -56,35 +57,32 @@ export function getDBPFEntryLabel(t: TFunction<Namespace>, entry: DBPFEntry): st
   }
 
   const label = t(entry.type, { ns: "DBPFEntryType" })
-  const groupId = parseTGI(entry.id)[1]
+  const groupId = split(entry.id, "-")[1]
 
   if (entry.type === DBPFDataType.FSH) {
-    // TODO: Constants
     switch (groupId) {
-      case 0x0986135e:
+      case GroupID.FSH_TEXTURE:
         return `${label} - ${t("fsh.texture", { ns: "DBPFEntryType" })}`
     }
   }
 
   if (entry.type === DBPFDataType.PNG) {
-    // TODO: Constants
-    const groupId = parseTGI(entry.id)[1]
     switch (groupId) {
-      case 0x00000001:
+      case GroupID.PNG_BUTTONS:
         return `${label} - ${t("png.button", { ns: "DBPFEntryType" })}`
-      case 0x8b6b7857:
+      case GroupID.PNG_LE_IMAGES:
         return `${label} - ${t("png.le-image", { ns: "DBPFEntryType" })}`
-      case 0xebdd10a4:
+      case GroupID.PNG_LOT_PICTURES:
         return `${label} - ${t("png.lot-image", { ns: "DBPFEntryType" })}`
-      case 0x6a386d26:
+      case GroupID.PNG_MENU_ICONS:
         return `${label} - ${t("png.menu-icon", { ns: "DBPFEntryType" })}`
-      case 0x6a1eed2c:
+      case GroupID.PNG_REGION_VIEW_TILES:
         return `${label} - ${t("png.region-view-tile", { ns: "DBPFEntryType" })}`
-      case 0x4c06f888:
+      case GroupID.PNG_UDRIVEIT_ICONS:
         return `${label} - ${t("png.udrive-icon", { ns: "DBPFEntryType" })}`
-      case 0x1abe787d:
+      case GroupID.PNG_UI:
         return `${label} - ${t("png.ui", { ns: "DBPFEntryType" })}`
-      case 0x46a006b0:
+      case GroupID.PNG_UI_IMAGES:
         return `${label} - ${t("png.ui-image", { ns: "DBPFEntryType" })}`
     }
   }

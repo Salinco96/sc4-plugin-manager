@@ -7,14 +7,14 @@ import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { type TabInfo, Tabs } from "@components/Tabs"
 import { View } from "@components/View"
-import { getCollectionInfo, useStore } from "@utils/store"
+import { getCollectionInfo, store } from "@stores/main"
 
 const tabs: TabInfo<{ collectionId: CollectionID }>[] = [
   {
     id: "packages",
     component: CollectionViewPackages,
-    count({ collectionId }, store) {
-      return getCollectionInfo(store, collectionId)?.packages.length ?? 0
+    count({ collectionId }, state) {
+      return getCollectionInfo(state, collectionId).packages.length
     },
     fullsize: true,
     label(t, count) {
@@ -24,12 +24,12 @@ const tabs: TabInfo<{ collectionId: CollectionID }>[] = [
 ]
 
 function CollectionView({ collectionId }: { collectionId: CollectionID }): JSX.Element {
-  const isLoading = useStore(store => !store.collections)
-  const exists = useStore(store => !!getCollectionInfo(store, collectionId))
+  const exists = store.useStore(state => state.collections && !!state.collections[collectionId])
 
   const { t } = useTranslation("CollectionView")
 
-  if (isLoading) {
+  // Loading
+  if (exists === undefined) {
     return (
       <View>
         <Loader />
@@ -37,7 +37,8 @@ function CollectionView({ collectionId }: { collectionId: CollectionID }): JSX.E
     )
   }
 
-  if (!exists) {
+  // Missing
+  if (exists === false) {
     return (
       <View>
         <Empty message={t("missing", { collectionId })} />

@@ -2,10 +2,10 @@ import { Box, Divider } from "@mui/material"
 
 import { PackageList } from "@components/PackageList/PackageList"
 import { PackageListFilters } from "@components/PackageList/PackageListFilters"
-import { useFilteredPackages } from "@utils/packages"
+import { store } from "@stores/main"
 
 function Packages(): JSX.Element {
-  const packageIds = useFilteredPackages()
+  const packageIds = store.useFilteredPackages()
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>

@@ -1,15 +1,15 @@
+import { difference, mapDefined } from "@salinco/nice-utils"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { CollectionID } from "@common/collections"
+import { getPackageStatus, isEnabled, isIncompatible } from "@common/packages"
 import { type Action, ActionButton } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
+import { disableCollection, enableCollection } from "@stores/actions"
+import { store } from "@stores/main"
 import { Page } from "@utils/navigation"
-import { useCollectionInfo } from "@utils/packages"
-import { useCurrentProfile, useStore, useStoreActions } from "@utils/store"
 
-import { getPackageStatus, isEnabled, isIncompatible } from "@common/packages"
-import { difference, mapDefined } from "@salinco/nice-utils"
 import { CollectionTags } from "./CollectionTags"
 
 export function CollectionHeader({
@@ -17,10 +17,9 @@ export function CollectionHeader({
   isListItem,
   setActive,
 }: HeaderProps<{ collectionId: CollectionID }>): JSX.Element {
-  const actions = useStoreActions()
-  const collection = useCollectionInfo(collectionId)
-  const packages = useStore(store => store.packages)
-  const profileInfo = useCurrentProfile()
+  const collection = store.useCollectionInfo(collectionId)
+  const packages = store.usePackages()
+  const profileInfo = store.useCurrentProfile()
 
   const { t } = useTranslation("CollectionActions")
 
@@ -42,7 +41,7 @@ export function CollectionHeader({
 
     if (enabledPackages.length < allPackages.length) {
       collectionActions.push({
-        action: () => actions.enableCollection(collection.id),
+        action: () => enableCollection(collection.id),
         color: "success",
         description: t("enable.description"),
         disabled: !difference(compatiblePackages, enabledPackages).length,
@@ -53,7 +52,7 @@ export function CollectionHeader({
 
     if (enabledPackages.length) {
       collectionActions.push({
-        action: () => actions.disableCollection(collection.id),
+        action: () => disableCollection(collection.id),
         color: "error",
         description: t("disable.description"),
         id: "disable",
@@ -62,7 +61,7 @@ export function CollectionHeader({
     }
 
     return collectionActions
-  }, [actions, collection, packages, profileInfo, t])
+  }, [collection, packages, profileInfo, t])
 
   return (
     <Header

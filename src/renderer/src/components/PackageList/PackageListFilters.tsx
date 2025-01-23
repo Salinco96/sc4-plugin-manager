@@ -24,8 +24,6 @@ import { getCategoryLabel } from "@common/categories"
 import { VariantState } from "@common/types"
 import { getLastWord, getStartOfWordSearchRegex, removeLastWord } from "@common/utils/regex"
 import { getStateLabel } from "@common/variants"
-import { useAuthors, usePackageFilters, useStore, useStoreActions } from "@utils/store"
-
 import {
   type SerializedTag,
   TagType,
@@ -34,14 +32,14 @@ import {
   getTagLongLabel,
   isValidTag,
   serializeTag,
-} from "../Tags/utils"
+} from "@components/Tags/utils"
+import { setPackageFilters } from "@stores/actions"
+import { store } from "@stores/main"
 
 export function PackageListFilters(): JSX.Element {
-  const actions = useStoreActions()
-
-  const authors = useAuthors()
-  const categories = useStore(store => store.categories)
-  const packageFilters = usePackageFilters()
+  const authors = store.useAuthors()
+  const categories = store.useCategories()
+  const packageFilters = store.usePackageFilters()
 
   const { t } = useTranslation("PackageListFilters")
 
@@ -87,7 +85,7 @@ export function PackageListFilters(): JSX.Element {
       <ToggleButtonGroup
         value={packageFilters.state}
         exclusive
-        onChange={(_e, value) => actions.setPackageFilters({ state: value ?? null })}
+        onChange={(_e, value) => setPackageFilters({ state: value ?? null })}
         size="small"
       >
         <Tooltip placement="bottom" title={t("actions.showOnlyEnabled")}>
@@ -118,7 +116,7 @@ export function PackageListFilters(): JSX.Element {
               ].filter(Boolean)
         }
         onChange={(_e, values) => {
-          actions.setPackageFilters({
+          setPackageFilters({
             dependencies: values.includes("dependencies"),
             experimental: values.includes("experimental"),
             incompatible: values.includes("incompatible"),
@@ -154,7 +152,7 @@ export function PackageListFilters(): JSX.Element {
       <ToggleButtonGroup
         value={packageFilters.combine === "and" ? [] : ["combine"]}
         onChange={(_e, values) => {
-          actions.setPackageFilters({
+          setPackageFilters({
             combine: values.includes("combine") ? "or" : "and",
           })
         }}
@@ -221,11 +219,11 @@ export function PackageListFilters(): JSX.Element {
             filters.search = removeLastWord(filters.search)
           }
 
-          actions.setPackageFilters(filters)
+          setPackageFilters(filters)
         }}
         onInputChange={(_e, search, reason) => {
           if (reason !== "reset") {
-            actions.setPackageFilters({ search })
+            setPackageFilters({ search })
           }
         }}
         options={options}
