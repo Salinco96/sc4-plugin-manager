@@ -7,7 +7,7 @@ import type { VariantID } from "@common/variants"
 import { installVariant } from "@stores/actions"
 import { store } from "@stores/main"
 
-import { PackageBanner } from "./PackageBanner"
+import { Banner } from "../Banner"
 
 export function PackageBannerMissing({
   packageId,
@@ -26,16 +26,16 @@ export function PackageBannerMissing({
     : t("missing.messagePackage")
 
   return (
-    <PackageBanner
+    <Banner
       action={{
         description: t("missing.actions.install.description"),
         label: t("missing.actions.install.label"),
         onClick: () => installVariant(packageInfo.id, variantInfo.id),
       }}
-      header={t("missing.title")}
       icon={<MissingIcon />}
+      title={t("missing.title")}
     >
       {message}
-    </PackageBanner>
+    </Banner>
   )
 }

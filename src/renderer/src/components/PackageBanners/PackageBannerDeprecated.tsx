@@ -9,7 +9,7 @@ import { useNavigation } from "@utils/navigation"
 
 import { addPackage, setPackageVariant } from "@stores/actions"
 import { store } from "@stores/main"
-import { PackageBanner } from "./PackageBanner"
+import { Banner } from "../Banner"
 
 export function PackageBannerDeprecated({
   packageId,
@@ -72,11 +72,11 @@ export function PackageBannerDeprecated({
       : "deprecated.message"
 
   return (
-    <PackageBanner
+    <Banner
       action={action}
       color="experimental"
-      header={t("deprecated.title")}
       icon={<DeprecatedIcon />}
+      title={t("deprecated.title")}
     >
       <Trans
         components={{
@@ -99,6 +99,6 @@ export function PackageBannerDeprecated({
         ns="PackageBanner"
         values={{ packageName: otherPackageInfo.name, variantName: otherVariantInfo.name }}
       />
-    </PackageBanner>
+    </Banner>
   )
 }

@@ -31,7 +31,7 @@ export const PackageListItem = memo(function PackageListItem({
 
   return (
     <ListItem
-      banners={<PackageBanners packageId={packageId} />}
+      banners={PackageBanners}
       header={PackageHeader}
       isDisabled={isDisabled}
       packageId={packageId}

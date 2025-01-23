@@ -10,7 +10,7 @@ import { useNavigation } from "@utils/navigation"
 
 import { disablePackage, updateProfile } from "@stores/actions"
 import { getPackageName, store } from "@stores/main"
-import { PackageBanner } from "./PackageBanner"
+import { Banner } from "../Banner"
 
 export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.Element {
   const currentProfile = store.useCurrentProfile()
@@ -74,7 +74,7 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
   }, [currentProfile, incompatiblePackageId, issue, packageNames, t])
 
   return (
-    <PackageBanner action={action} header={t("conflict.title")} icon={<ConflictIcon />}>
+    <Banner action={action} icon={<ConflictIcon />} title={t("conflict.title")}>
       <Trans
         components={{
           a: (
@@ -105,6 +105,6 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
           packages: packageNames,
         }}
       />
-    </PackageBanner>
+    </Banner>
   )
 }

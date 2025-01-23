@@ -48,7 +48,7 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
                 <Link
                   onClick={() => openAuthorView(authorInfo.id)}
                   sx={{ cursor: "pointer" }}
-                  title="View author"
+                  title="View author" // todo
                 >
                   {authorInfo.name}
                 </Link>
@@ -63,7 +63,7 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
                 <Link
                   onClick={() => openPackageView(packageInfo.id)}
                   sx={{ cursor: "pointer" }}
-                  title="View package"
+                  title="View package" // todo
                 >
                   {packageInfo.name}
                 </Link>
@@ -72,6 +72,9 @@ export function MarkdownView({ md }: MarkdownViewProps): JSX.Element {
           }
 
           return <Link href={href} rel="noreferrer" target="_blank" title={href} {...props} />
+        },
+        li({ ref, ...props }) {
+          return <Typography component="li" variant="body2" {...props} />
         },
         p({ ref, ...props }) {
           return <Typography component="p" mb={2} variant="body2" {...props} />

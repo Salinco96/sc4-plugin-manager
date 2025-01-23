@@ -6,7 +6,7 @@ import type { VariantID } from "@common/variants"
 import { updateVariant } from "@stores/actions"
 import { store } from "@stores/main"
 
-import { PackageBanner } from "./PackageBanner"
+import { Banner } from "../Banner"
 
 export function PackageBannerOutdated({
   packageId,
@@ -22,16 +22,16 @@ export function PackageBannerOutdated({
   const { t } = useTranslation("PackageBanner")
 
   return (
-    <PackageBanner
+    <Banner
       action={{
         description: t("outdated.actions.update.description", { version: newVersion }),
         label: t("outdated.actions.update.label"),
         onClick: () => updateVariant(packageInfo.id, variantInfo.id),
       }}
-      header={t("outdated.title")}
       icon={<UpdateIcon />}
+      title={t("outdated.title")}
     >
       {t("outdated.message")}
-    </PackageBanner>
+    </Banner>
   )
 }

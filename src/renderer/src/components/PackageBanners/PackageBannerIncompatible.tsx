@@ -11,7 +11,7 @@ import { addPackage, updateProfile } from "@stores/actions"
 import { getPackageName, store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
 
-import { PackageBanner } from "./PackageBanner"
+import { Banner } from "../Banner"
 
 export function PackageBannerIncompatible({
   issue,
@@ -99,11 +99,11 @@ export function PackageBannerIncompatible({
   ])
 
   return (
-    <PackageBanner
+    <Banner
       action={action}
       color="incompatible"
-      header={t("incompatible.title")}
       icon={<IncompatibleIcon />}
+      title={t("incompatible.title")}
     >
       <Trans
         components={{
@@ -135,6 +135,6 @@ export function PackageBannerIncompatible({
           packages: packageNames,
         }}
       />
-    </PackageBanner>
+    </Banner>
   )
 }

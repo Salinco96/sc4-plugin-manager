@@ -11,6 +11,8 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { VariantID } from "@common/variants"
+import { getWarningMessage } from "@common/warnings"
+import { Banner } from "@components/Banner"
 import { store } from "@stores/main"
 
 import { PackageBannerConflict } from "./PackageBannerConflict"
@@ -19,7 +21,6 @@ import { PackageBannerExperimental } from "./PackageBannerExperimental"
 import { PackageBannerIncompatible } from "./PackageBannerIncompatible"
 import { PackageBannerMissing } from "./PackageBannerMissing"
 import { PackageBannerOutdated } from "./PackageBannerOutdated"
-import { PackageBannerWarning } from "./PackageBannerWarning"
 
 export function PackageBanners({
   packageId,
@@ -64,7 +65,9 @@ export function PackageBanners({
         (warning, index) =>
           warning.on !== (isEnabled(packageStatus) ? "enable" : "disable") && (
             // biome-ignore lint/suspicious/noArrayIndexKey: no better key...
-            <PackageBannerWarning key={index} warning={warning} />
+            <Banner key={index} title={warning.title}>
+              {getWarningMessage(warning)}
+            </Banner>
           ),
       )}
     </>

@@ -2,24 +2,16 @@ import { Card, CardContent, Divider } from "@mui/material"
 import { type ComponentType, type ReactNode, useState } from "react"
 import type { HeaderProps } from "./Header"
 
-export function ListItem<T>({
-  banners,
-  children,
-  header: Header,
-  isDisabled,
-  ...props
-}: T & {
-  banners?: ReactNode
-  children?: ReactNode
-  header: ComponentType<
-    HeaderProps<
-      Omit<T, "banners" | "children" | "header" | "isDisabled"> & {
-        isDisabled?: boolean
-      }
-    >
-  >
-  isDisabled?: boolean
-}): JSX.Element {
+export function ListItem<T>(
+  props: T & {
+    banners?: ComponentType<T>
+    children?: ReactNode
+    header: ComponentType<HeaderProps<T>>
+    isDisabled?: boolean
+  },
+): JSX.Element {
+  const { banners: Banners, children, header: Header, isDisabled } = props
+
   const [active, setActive] = useState(false)
 
   return (
@@ -34,8 +26,8 @@ export function ListItem<T>({
       }}
     >
       <CardContent sx={{ width: "100%" }}>
-        <Header isDisabled={isDisabled} isListItem setActive={setActive} {...props} />
-        {banners}
+        <Header isListItem setActive={setActive} {...props} />
+        {Banners && <Banners {...props} />}
         {children && <Divider sx={{ my: 2 }} />}
         {children}
       </CardContent>

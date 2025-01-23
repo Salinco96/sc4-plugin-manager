@@ -136,6 +136,7 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
           </ul>
         </>
       )}
+
       <PackageBanners packageId={packageId} />
     </Box>
   )

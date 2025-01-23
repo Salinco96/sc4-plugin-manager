@@ -123,6 +123,11 @@ export interface ToolInfo {
    * Valid semver version (x.x.x)
    */
   version?: string
+
+  /**
+   * Warnings
+   */
+  warnings?: { message: string; title?: string }[]
 }
 
 export type Tools = {

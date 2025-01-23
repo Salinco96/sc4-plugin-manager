@@ -105,6 +105,11 @@ export interface ToolData {
    * Valid semver version (x.x.x)
    */
   version?: string
+
+  /**
+   * Warnings
+   */
+  warnings?: Array<{ message: string; title?: string } | string>
 }
 
 export function loadToolInfo(toolId: ToolID, toolData: ToolData, assets: Assets): ToolInfo {
@@ -134,6 +139,9 @@ export function loadToolInfo(toolId: ToolID, toolData: ToolData, assets: Assets)
     thumbnail: toolData.thumbnail,
     url: toolData.url,
     version: toolData.version ?? "0.0.0",
+    warnings: toolData.warnings?.map(warning =>
+      isString(warning) ? { message: warning } : warning,
+    ),
   }
 
   toolInfo.new = isNew(toolInfo)

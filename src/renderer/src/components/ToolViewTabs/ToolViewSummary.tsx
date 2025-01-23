@@ -6,6 +6,7 @@ import { getAuthorName } from "@common/authors"
 import type { ToolID } from "@common/tools"
 import { MarkdownView } from "@components/MarkdownView"
 import { Text } from "@components/Text"
+import { ToolBanners } from "@components/Tools/ToolBanners"
 import { store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
 
@@ -109,6 +110,8 @@ export function ToolViewSummary({ toolId }: { toolId: ToolID }): JSX.Element {
           </ul>
         </>
       )}
+
+      <ToolBanners toolId={toolId} />
     </Box>
   )
 }

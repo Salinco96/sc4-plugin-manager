@@ -1,12 +1,10 @@
 import { Alert, type AlertProps, Button, styled } from "@mui/material"
-
-export const PACKAGE_BANNER_HEIGHT = 56
-export const PACKAGE_BANNER_SPACING = 16
+import type { ReactNode } from "react"
 
 const StyledAlert = styled(Alert)`
   align-items: center;
-  height: ${PACKAGE_BANNER_HEIGHT}px;
-  margin-top: ${PACKAGE_BANNER_SPACING}px;
+  height: 56px;
+  margin-top: 16px;
 
   & .MuiAlert-action {
     margin-left: 8px;
@@ -24,22 +22,21 @@ const StyledAlert = styled(Alert)`
   }
 `
 
-export interface PackageBannerAction {
+export interface BannerAction {
   description: string
   label: string
   onClick: () => void
 }
 
-export function PackageBanner({
-  action,
-  children,
-  color,
-  header,
-  icon,
-}: Pick<AlertProps, "children" | "color" | "icon"> & {
-  action?: PackageBannerAction
-  header?: string
-}): JSX.Element {
+export interface BannerProps {
+  action?: BannerAction
+  children: ReactNode
+  color?: AlertProps["color"]
+  title?: string
+  icon?: AlertProps["icon"]
+}
+
+export function Banner({ action, children, color, title, icon }: BannerProps): JSX.Element {
   return (
     <StyledAlert
       action={
@@ -59,7 +56,7 @@ export function PackageBanner({
       icon={icon}
       severity="warning"
     >
-      {header && <b>{header}: </b>}
+      {title && <b>{title}: </b>}
       {children}
     </StyledAlert>
   )
