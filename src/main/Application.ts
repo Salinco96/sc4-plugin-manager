@@ -1,4 +1,4 @@
-import fs, { lstat } from "node:fs/promises"
+import fs from "node:fs/promises"
 import path from "node:path"
 
 import {
@@ -44,7 +44,7 @@ import {
   getExemplarType,
 } from "@common/exemplars"
 import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
-import type { LotID } from "@common/lots"
+import type { LotID, LotInfo } from "@common/lots"
 import { type OptionInfo, getOptionValue } from "@common/options"
 import {
   type PackageID,
@@ -64,6 +64,17 @@ import {
   createUniqueId,
 } from "@common/profiles"
 import type { PropID } from "@common/props"
+import {
+  type CityBackupInfo,
+  type CityID,
+  type CityInfo,
+  type RegionID,
+  type UpdateSaveAction,
+  getCityFileName,
+  getCityLinkedProfileId,
+  getRegionLinkedProfileId,
+  hasBackup,
+} from "@common/regions"
 import type { Settings, SettingsData } from "@common/settings"
 import type {
   ApplicationState,
@@ -75,6 +86,7 @@ import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@c
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
 import type { FileInfo, VariantID } from "@common/variants"
+import { getDefaultVariant } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
 import { loadAuthors } from "@node/data/authors"
@@ -120,18 +132,6 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
-import {
-  type CityBackupInfo,
-  type CityID,
-  type CityInfo,
-  type RegionID,
-  type UpdateSaveAction,
-  getCityFileName,
-  getCityLinkedProfileId,
-  getRegionLinkedProfileId,
-  hasBackup,
-} from "@common/regions"
-import { getDefaultVariant } from "@common/variants"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -148,7 +148,8 @@ import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./d
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { getBackupFileName, loadRegions } from "./data/regions"
-import { growify, makeHistorical } from "./data/saves/update"
+import { getFileVersion, loadSaveInfo } from "./data/saves/load"
+import { growify, makeHistorical, updateLots } from "./data/saves/update"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
@@ -617,14 +618,13 @@ export class Application {
 
     await this.tasks.queue(`backup:create:${regionId}:${cityId}`, {
       handler: async context => {
-        const cityFile = path.join(regionId, getCityFileName(cityId))
-        const cityFullPath = path.join(this.getRegionsPath(), cityFile)
+        const cityFullPath = this.getCityPath(regionId, cityId)
 
         const backupTime = new Date()
         const backupFile = getBackupFileName(backupTime, description)
-        const backupFullPath = path.join(this.getBackupsPath(), regionId, cityId, backupFile)
+        const backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
 
-        context.debug(`Backing up '${cityFile}'...`)
+        context.debug(`Backing up '${regionId}/${cityId}'...`)
 
         await copyTo(cityFullPath, backupFullPath)
 
@@ -859,6 +859,20 @@ export class Application {
    */
   public getBackupsPath(): string {
     return path.join(this.gamePath, DIRNAMES.backups)
+  }
+
+  /**
+   * Returns the absolute path to a city's backup file.
+   */
+  public getCityBackupPath(regionId: RegionID, cityId: CityID, file: string): string {
+    return path.join(this.getBackupsPath(), regionId, cityId, file)
+  }
+
+  /**
+   * Returns the absolute path to a city's save file.
+   */
+  public getCityPath(regionId: RegionID, cityId: CityID): string {
+    return path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
   }
 
   /**
@@ -2592,10 +2606,9 @@ export class Application {
 
     await this.tasks.queue(`backup:delete:${regionId}:${cityId}`, {
       handler: async context => {
-        const backupPath = path.join(regionId, cityId, backup.file)
-        const fullPath = path.join(this.getBackupsPath(), backupPath)
+        const fullPath = this.getCityBackupPath(regionId, cityId, backup.file)
 
-        context.debug(`Deleting backup '${backupPath}'...`)
+        context.debug(`Deleting backup '${regionId}/${cityId}/${backup.file}'...`)
 
         await removeIfPresent(fullPath)
         await removeIfEmptyRecursive(path.dirname(fullPath), this.getBackupsPath())
@@ -2829,12 +2842,11 @@ export class Application {
           }
         }
 
-        const backupPath = path.join(regionId, cityId, backup.file)
-        const fullPath = path.join(this.getBackupsPath(), backupPath)
+        const backupPath = this.getCityBackupPath(regionId, cityId, file)
 
-        context.debug(`Restoring backup '${backupPath}'...`)
+        context.debug(`Restoring backup '${region}/${cityId}/${file}'...`)
 
-        await copyTo(fullPath, path.join(this.getRegionsPath(), regionId, getCityFileName(cityId)))
+        await copyTo(backupPath, this.getCityPath(regionId, cityId))
 
         city.version = backup.version
 
@@ -3027,7 +3039,8 @@ export class Application {
     let result: boolean | undefined
 
     while (result === undefined) {
-      const { assets, features, packages, profiles, profileOptions, settings } = await this.load()
+      const { assets, features, packages, profiles, profileOptions, regions, settings } =
+        await this.load()
 
       const profileInfo = profiles[profileId]
       if (!profileInfo) {
@@ -3043,6 +3056,7 @@ export class Application {
           // Resolve conflicts/dependencies caused by pending profile changes
           if (!isEmpty(update.features) || !isEmpty(update.options) || !isEmpty(update.packages)) {
             const {
+              disablingLots,
               disablingPackages,
               enablingPackages,
               explicitVariantChanges,
@@ -3051,6 +3065,7 @@ export class Application {
               incompatibleExternals,
               incompatiblePackages,
               installingVariants,
+              replacingLots,
               resultingFeatures,
               resultingProfile,
               resultingStatus,
@@ -3460,6 +3475,156 @@ export class Application {
                 }
               }
 
+              // Update saves!
+              const saveUpdates: {
+                cityId: CityID
+                regionId: RegionID
+                removeLots: LotID[]
+                replaceLots: { [id in LotID]: LotInfo }
+              }[] = []
+
+              if (!isEmpty(disablingLots) || !isEmpty(replacingLots)) {
+                // Loading all linked saves
+                await forEachAsync(regions, async (region, regionId) => {
+                  const regionProfileId = getRegionLinkedProfileId(regionId, settings, profiles)
+                  await forEachAsync(region.cities, async (city, cityId) => {
+                    const cityProfileId = getCityLinkedProfileId(regionId, cityId, settings)
+                    if (city.established && (cityProfileId ?? regionProfileId) === profileId) {
+                      const fullPath = this.getCityPath(regionId, cityId)
+                      city.save ??= await loadSaveInfo(context, fullPath)
+
+                      const removeLots: LotID[] = []
+                      const replaceLots: { [id in LotID]: LotInfo } = {}
+
+                      for (const id of city.save.lots) {
+                        if (disablingLots[id]) {
+                          // TODO: Lot destruction not implemented
+                          // removeLots.push(id)
+                        } else if (replacingLots[id]) {
+                          replaceLots[id] = replacingLots[id].newInfo
+                        }
+                      }
+
+                      if (removeLots.length || !isEmpty(replaceLots)) {
+                        saveUpdates.push({ cityId, regionId, removeLots, replaceLots })
+                      }
+                    }
+                  })
+                })
+
+                if (saveUpdates.length) {
+                  const { confirmed } = await showConfirmation(
+                    "Update cities",
+                    "Update cities?",
+                    `The following cities will be updated:\n${saveUpdates
+                      .map(
+                        ({ cityId, regionId }) =>
+                          `- ${regions[regionId]?.cities[cityId]?.name ?? cityId} (${regions[regionId]?.name ?? regionId})`,
+                      )
+                      .join("\n")}\n\nBackups will be created.`,
+                    false,
+                    "question",
+                    "Confirm",
+                    "Skip",
+                  )
+
+                  if (confirmed) {
+                    const backups: {
+                      backup: CityBackupInfo
+                      backupPath: string
+                      city: CityInfo
+                      cityPath: string
+                    }[] = []
+
+                    try {
+                      for (const { regionId, cityId, ...updates } of saveUpdates) {
+                        const region = regions[regionId]
+                        const city = regions[regionId]?.cities[cityId]
+
+                        if (!region || !city) {
+                          throw Error(`Unknown city ${regionId}/${cityId}`)
+                        }
+
+                        const cityFullPath = this.getCityPath(regionId, cityId)
+
+                        const backupName = "(auto)"
+                        const backupTime = new Date()
+                        const backupFile = getBackupFileName(backupTime, backupName)
+                        const backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
+
+                        await copyTo(cityFullPath, backupFullPath)
+
+                        backups.push({
+                          backup: {
+                            description: backupName,
+                            file: backupFile,
+                            time: backupTime,
+                            version: city.version,
+                          },
+                          backupPath: backupFullPath,
+                          city,
+                          cityPath: cityFullPath,
+                        })
+
+                        let retry: boolean
+
+                        do {
+                          retry = false
+
+                          try {
+                            await updateLots(context, cityFullPath, {
+                              tempPath: this.getTempPath(cityFullPath),
+                              ...updates,
+                            })
+                          } catch (error) {
+                            console.error(error)
+
+                            const canRetry =
+                              error instanceof Error &&
+                              !!error.message.match(/resource busy or locked/i)
+
+                            const { confirmed } = await showConfirmation(
+                              `${region?.name ?? regionId} - ${city?.name ?? cityId}`,
+                              "Update failed",
+                              canRetry
+                                ? "The city could not be updated. If you are currently running the city, exit it before retrying."
+                                : "The city could not be updated. You may either skip it or revert all changes.",
+                              false,
+                              "error",
+                              canRetry ? "Retry" : "Skip",
+                              "Cancel",
+                            )
+
+                            if (!confirmed) {
+                              throw error
+                            }
+
+                            retry = canRetry
+                          }
+                        } while (retry)
+                      }
+
+                      // All successful - Update cities
+                      for (const backup of backups) {
+                        backup.city.backups.push(backup.backup)
+                        backup.city.version = await getFileVersion(backup.cityPath)
+                      }
+
+                      this.sendStateUpdate({ regions })
+                    } catch (_) {
+                      // Rollback - Restore from automatic backups
+                      for (const backup of backups) {
+                        if (await exists(backup.backupPath)) {
+                          await moveTo(backup.backupPath, backup.cityPath)
+                        }
+                      }
+
+                      return false
+                    }
+                  }
+                }
+              }
+
               // Apply config changes
               Object.assign(profileInfo, resultingProfile)
 
@@ -3560,17 +3725,17 @@ export class Application {
           }
 
           source = backup
-          sourceFullPath = path.join(this.getBackupsPath(), regionId, cityId, file)
+          sourceFullPath = this.getCityBackupPath(regionId, cityId, file)
         } else {
           source = city
-          sourceFullPath = path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
+          sourceFullPath = this.getCityPath(regionId, cityId)
         }
 
         if (action.backup) {
           const description = `(${action.action})`
           const backupTime = new Date()
           const backupFile = getBackupFileName(backupTime, description)
-          backupFullPath = path.join(this.getBackupsPath(), regionId, cityId, backupFile)
+          backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
 
           await copyTo(sourceFullPath, backupFullPath)
 
@@ -3604,8 +3769,7 @@ export class Application {
           }
 
           // File was updated - update the version
-          const stat = await lstat(sourceFullPath)
-          source.version = stat.mtimeMs
+          source.version = await getFileVersion(sourceFullPath)
           this.sendStateUpdate({ regions })
         } else if (backupFullPath) {
           // File was not updated - automatic backup no longer needed

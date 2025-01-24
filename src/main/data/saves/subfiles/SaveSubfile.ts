@@ -5,7 +5,8 @@ import { loadDBPFEntryBytes } from "@node/dbpf"
 import type { SaveRecord, SaveRecordParser } from "./SaveRecord"
 
 export enum SaveSubfileType {
-  Lot = 0xc9bd5d4a,
+  Buildings = 0xa9bd882d,
+  Lots = 0xc9bd5d4a,
   SimGridFloat32 = 0x49b9e60a,
   SimGridSInt16 = 0x49b9e605,
   SimGridSInt8 = 0x49b9e603,

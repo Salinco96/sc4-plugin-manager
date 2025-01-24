@@ -3,9 +3,11 @@ import { keys, sum, sumBy } from "@salinco/nice-utils"
 import type { RCIType } from "@common/lots"
 import type { Binary } from "@node/bin"
 import { type DeveloperID, WealthType, ZoneType } from "@node/dbpf/types"
+
 import { DeveloperIDToRCIType } from "../constants"
 import { type SaveProperties, parseProperties, writeProperties } from "./SaveProperties"
 import { SaveRecord, type SaveRecordData } from "./SaveRecord"
+import { SaveSubfileType } from "./SaveSubfile"
 
 enum LotFlagByte1 {
   Watered = 0x08,
@@ -181,7 +183,7 @@ export class LotRecord extends SaveRecord implements LotRecordData {
     const unknown1 = bytes.readUInt8()
 
     const linkedIndustrial = this.parseRef(bytes, 0x4a232da8)
-    const linkedAnchor = this.parseRef(bytes, 0xc9bd5d4a)
+    const linkedAnchor = this.parseRef(bytes, SaveSubfileType.Lots)
 
     const capacity: LotRecord["capacity"] = {}
     const capacityCount = bytes.readUInt8()

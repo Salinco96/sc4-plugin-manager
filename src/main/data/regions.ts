@@ -1,4 +1,3 @@
-import { lstat } from "node:fs/promises"
 import path from "node:path"
 
 import { size } from "@salinco/nice-utils"
@@ -8,6 +7,8 @@ import { parse as parseINI } from "ini"
 import type { CityID, RegionID, RegionInfo, Regions } from "@common/regions"
 import { readFile } from "@node/files"
 import type { TaskContext } from "@node/tasks"
+
+import { getFileVersion } from "./saves/load"
 
 export async function loadRegions(
   context: TaskContext,
@@ -43,7 +44,6 @@ export async function loadRegions(
       })
 
       for (const cityFile of cityFiles) {
-        const cityStat = await lstat(path.join(regionPath, cityFile))
         const cityId = cityFile.match(/City - (.+)[.]sc4/i)?.[1] as CityID
 
         region.cities[cityId] = {
@@ -51,7 +51,7 @@ export async function loadRegions(
           established: !cityId.startsWith("New City"),
           id: cityId,
           name: cityId,
-          version: cityStat.mtimeMs,
+          version: await getFileVersion(path.join(regionPath, cityFile)),
         }
 
         const backupPath = path.join(backupsPath, regionId, cityId)
@@ -61,10 +61,11 @@ export async function loadRegions(
         })
 
         for (const backupFile of backupFiles) {
-          const backupStat = await lstat(path.join(backupPath, backupFile))
           const match = backupFile.match(
             /^(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})(?:-(.*))?[.]sc4/i,
           )
+
+          const version = await getFileVersion(path.join(backupPath, backupFile))
 
           region.cities[cityId].backups.push({
             description: match?.[7] ?? undefined,
@@ -78,8 +79,8 @@ export async function loadRegions(
                   Number.parseInt(match[5], 10),
                   Number.parseInt(match[6], 10),
                 )
-              : backupStat.mtime,
-            version: backupStat.mtimeMs,
+              : new Date(version),
+            version,
           })
         }
       }

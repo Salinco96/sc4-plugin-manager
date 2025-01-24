@@ -1,6 +1,9 @@
 import path from "node:path"
 
-import type { ZoneDensity } from "@common/lots"
+import { parseHex, toHex } from "@salinco/nice-utils"
+
+import { TGI, parseTGI } from "@common/dbpf"
+import type { LotID, LotInfo, ZoneDensity } from "@common/lots"
 import type { RCIType } from "@common/lots"
 import { FileOpenMode, createIfMissing, moveTo, openFile, removeIfPresent } from "@node/files"
 import type { TaskContext } from "@node/tasks"
@@ -120,6 +123,87 @@ export async function makeHistorical(
         const rciType = ZoneTypeToRCIType[lot.zoneType]
         if (rciType && options.rciTypes.includes(rciType)) {
           lot.makeHistorical()
+        }
+      }
+    },
+  })
+}
+
+/**
+ * TODO: THIS DOES NOT SUPPORT LOTS USING BUILDING FAMILIES!!!
+ */
+export async function updateLots(
+  context: TaskContext,
+  fullPath: string,
+  options: {
+    removeLots?: LotID[]
+    replaceLots?: { [id in LotID]?: LotInfo }
+    tempPath: string
+  },
+): Promise<boolean> {
+  return updateSaveFile(context, fullPath, {
+    tempPath: options.tempPath,
+    handler: async (context, save) => {
+      context.debug(`Updating ${fullPath}...`, options)
+
+      const buildings = await save.buildings()
+
+      if (!buildings) {
+        throw Error("Unable to locate buildings")
+      }
+
+      const lots = await save.lots()
+
+      if (!lots) {
+        throw Error("Unable to locate lots")
+      }
+
+      for (const lot of lots.data) {
+        if (lot.lotId && lot.buildingId) {
+          const id = toHex(lot.lotId, 8) as LotID
+          if (options.removeLots?.includes(id)) {
+            // TODO: Removing lot is not implemented
+            context.warn("Removing lots is not yet implemented!")
+          } else if (options.replaceLots?.[id]) {
+            const newLotInfo = options.replaceLots[id]
+            const newBuildingId = newLotInfo.building ? parseHex(newLotInfo.building) : null
+
+            if (newBuildingId && newBuildingId !== lot.buildingId) {
+              const minX = lot.minX * 16
+              const maxX = (lot.maxX + 1) * 16
+              const minZ = lot.minZ * 16
+              const maxZ = (lot.maxZ + 1) * 16
+
+              // There is no direct reference to building, we just look by ID and overlapping coordinates
+              const building = buildings.data.find(
+                building =>
+                  building.buildingId === lot.buildingId &&
+                  building.minX < maxX &&
+                  building.maxX > minX &&
+                  building.minZ < maxZ &&
+                  building.maxZ > minZ,
+              )
+
+              if (!building) {
+                throw Error(
+                  `Unable to find building with ID ${toHex(lot.buildingId, 8)} for lot ${id} (${minX} - ${maxX} ; ${minZ} - ${maxZ})`,
+                )
+              }
+
+              // TODO: What happens if group ID is actually different???
+              const [typeId, groupId] = parseTGI(building.tgi)
+              building.tgi = TGI(typeId, groupId, newBuildingId)
+              building.buildingId = newBuildingId
+              building.dirty()
+
+              lot.buildingId = newBuildingId
+            }
+
+            // TODO: In some cases we may need to change other stats, e.g. wealth, jobs, budgets...
+            // TODO: For now we assume that replace functionality is only used for strictly-equivalent lot (e.g. HD/SD, Maxis/Dark Nite)
+            lot.lotId = parseHex(newLotInfo.id)
+            lot.dirty()
+          }
         }
       }
     },

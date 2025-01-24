@@ -5,13 +5,15 @@ import { forEach, values } from "@salinco/nice-utils"
 import { type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
 import { loadDBPF, patchDBPFEntries } from "@node/dbpf"
 
+import { BuildingRecord } from "./BuildingRecord"
 import { LotRecord } from "./LotRecord"
 import type { SaveRecordParser } from "./SaveRecord"
 import { SaveSubfileMulti, SaveSubfileType } from "./SaveSubfile"
 import { SimGrid, type SimGridDataID } from "./SimGrid"
 
 type SaveSubfileRecordType<T extends SaveSubfileType> = {
-  [SaveSubfileType.Lot]: LotRecord
+  [SaveSubfileType.Buildings]: BuildingRecord
+  [SaveSubfileType.Lots]: LotRecord
   [SaveSubfileType.SimGridFloat32]: SimGrid
   [SaveSubfileType.SimGridSInt16]: SimGrid
   [SaveSubfileType.SimGridSInt8]: SimGrid
@@ -23,7 +25,8 @@ type SaveSubfileRecordType<T extends SaveSubfileType> = {
 const SaveSubfileRecordParser: {
   [T in SaveSubfileType]: SaveRecordParser<SaveSubfileRecordType<T>>
 } = {
-  [SaveSubfileType.Lot]: LotRecord,
+  [SaveSubfileType.Buildings]: BuildingRecord,
+  [SaveSubfileType.Lots]: LotRecord,
   [SaveSubfileType.SimGridFloat32]: SimGrid,
   [SaveSubfileType.SimGridSInt16]: SimGrid,
   [SaveSubfileType.SimGridSInt8]: SimGrid,
@@ -85,8 +88,12 @@ export class SaveFile {
     return this.grids[dataId]
   }
 
+  public async buildings(): Promise<SaveSubfileMulti<BuildingRecord> | null> {
+    return this.subfile(SaveSubfileType.Buildings)
+  }
+
   public async lots(): Promise<SaveSubfileMulti<LotRecord> | null> {
-    return this.subfile(SaveSubfileType.Lot)
+    return this.subfile(SaveSubfileType.Lots)
   }
 
   public async write(outFile: FileHandle): Promise<void> {

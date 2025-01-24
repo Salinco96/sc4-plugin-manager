@@ -385,6 +385,14 @@ export function resolvePackageUpdates(
   settings: Readonly<Settings>,
   updates: ProfileUpdate,
 ): {
+  /** Lots that should be disabled */
+  disablingLots: {
+    [lotId in string]?: {
+      buildingInfo?: BuildingInfo
+      lotInfo: LotInfo
+      packageId: PackageID
+    }
+  }
   /** Packages that will be disabled */
   disablingPackages: PackageID[]
   /** Packages that will be enabled */
@@ -405,6 +413,15 @@ export function resolvePackageUpdates(
   incompatiblePackages: PackageID[]
   /** Variants that will to be installed */
   installingVariants: { [packageId in PackageID]?: VariantID }
+  /** Lots that should be replaced */
+  replacingLots: {
+    [lotId in string]?: {
+      buildingInfo?: BuildingInfo
+      newInfo: LotInfo
+      oldInfo: LotInfo
+      packageId: PackageID
+    }
+  }
   /** Resulting features */
   resultingFeatures: Features
   /** Resulting profile */
@@ -429,7 +446,6 @@ export function resolvePackageUpdates(
       (result, newEnabled, feature) => {
         if (result[feature] !== newEnabled) {
           result[feature] = newEnabled
-          console.log(5)
           shouldRecalculate = true
         }
 
@@ -452,12 +468,10 @@ export function resolvePackageUpdates(
         if (isOptionDefaultValue(globalOption, newValue)) {
           if (result[optionId] !== undefined) {
             delete result[optionId]
-            console.log(4)
             shouldRecalculate = true
           }
         } else if (result[optionId] !== newValue) {
           result[optionId] = newValue
-          console.log(3)
           shouldRecalculate = true
         }
 
@@ -477,13 +491,11 @@ export function resolvePackageUpdates(
 
         // Must recalculate if package is newly enabled or disabled
         if (newConfig.enabled !== undefined && newConfig.enabled !== !!oldConfig?.enabled) {
-          console.log(1)
           shouldRecalculate = true
         }
 
         // Must recalculate if included package is changed
         if (oldStatus?.included) {
-          console.log(2)
           shouldRecalculate = true
         }
 
@@ -730,6 +742,31 @@ export function resolvePackageUpdates(
 
   console.debug("Resulting profile", resultingProfile)
 
+  let disablingLots: {
+    [lotId: string]: {
+      buildingInfo?: BuildingInfo
+      lotInfo: LotInfo
+      packageId: PackageID
+    }
+  } = {}
+
+  const replacingLots: {
+    [lotId: string]: {
+      buildingInfo?: BuildingInfo
+      newInfo: LotInfo
+      oldInfo: LotInfo
+      packageId: PackageID
+    }
+  } = {}
+
+  const replacingMaxisLots: {
+    [lotId: string]: {
+      buildingInfo?: BuildingInfo
+      lotInfo: LotInfo
+      packageId: PackageID
+    }
+  } = {}
+
   if (shouldRecalculate) {
     const oldLots = getIncludedLots(
       context,
@@ -751,34 +788,15 @@ export function resolvePackageUpdates(
       settings,
     )
 
-    const replacingLots: {
-      [lotId: string]: {
-        buildingInfo?: BuildingInfo
-        newInfo: LotInfo
-        oldInfo: LotInfo
-        packageId: PackageID
-      }
-    } = {}
-
-    const replacingMaxisLots: {
-      [lotId: string]: {
-        buildingInfo?: BuildingInfo
-        lotInfo: LotInfo
-        packageId: PackageID
-      }
-    } = {}
-
     forEach(newLots, ({ lotInfo, packageId }, lotId) => {
       if (lotInfo.replace) {
         for (const replaceId of lotInfo.replace) {
-          const replacedLot = lotInfo.replace ? oldLots[replaceId] : undefined
-
-          if (replacedLot) {
-            if (replacedLot.lotInfo !== lotInfo) {
-              replacingLots[lotId] = {
-                buildingInfo: replacedLot.buildingInfo,
+          if (oldLots[replaceId] && (lotId === replaceId || !newLots[replaceId])) {
+            if (oldLots[replaceId].lotInfo !== lotInfo) {
+              replacingLots[replaceId] = {
+                buildingInfo: oldLots[replaceId].buildingInfo,
                 newInfo: lotInfo,
-                oldInfo: replacedLot.lotInfo,
+                oldInfo: oldLots[replaceId].lotInfo,
                 packageId,
               }
             }
@@ -861,8 +879,10 @@ export function resolvePackageUpdates(
       }
     }
 
+    disablingLots = oldLots
+
     console.debug("Resulting changes", {
-      disablingLots: oldLots,
+      disablingLots,
       disablingPackages,
       enablingLots: newLots,
       enablingPackages,
@@ -885,6 +905,7 @@ export function resolvePackageUpdates(
   }
 
   return {
+    disablingLots,
     disablingPackages,
     enablingPackages,
     excludingPackages,
@@ -895,6 +916,7 @@ export function resolvePackageUpdates(
     incompatibleExternals,
     incompatiblePackages,
     installingVariants,
+    replacingLots,
     resultingStatus,
     resultingFeatures,
     resultingProfile,

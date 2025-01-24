@@ -18,7 +18,7 @@ export async function showConfirmation(
   message: string,
   detail?: string,
   doNotAskAgain = false,
-  type: "question" | "warning" = "question",
+  type: "error" | "question" | "warning" = "question",
   yesLabel: string = i18n.t("yes"),
   noLabel: string = i18n.t("no"),
 ): Promise<{ confirmed: boolean; doNotAskAgain: boolean }> {
