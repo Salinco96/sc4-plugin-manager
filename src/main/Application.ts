@@ -2848,6 +2848,7 @@ export class Application {
 
         await copyTo(backupPath, this.getCityPath(regionId, cityId))
 
+        city.save = undefined // may now be outdated, clear to lazy-reload later
         city.version = backup.version
 
         this.sendStateUpdate({ regions })
@@ -3607,6 +3608,7 @@ export class Application {
                       // All successful - Update cities
                       for (const backup of backups) {
                         backup.city.backups.push(backup.backup)
+                        backup.city.save = undefined // may now be outdated, clear to lazy-reload later
                         backup.city.version = await getFileVersion(backup.cityPath)
                       }
 

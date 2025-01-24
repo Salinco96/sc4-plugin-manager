@@ -1,4 +1,6 @@
 import { type ID, keys, size } from "@salinco/nice-utils"
+
+import type { BuildingID } from "./buildings"
 import type { LotID, RCIType, ZoneDensity } from "./lots"
 import type { ProfileID, Profiles } from "./profiles"
 import type { Settings } from "./settings"
@@ -8,6 +10,7 @@ export type CityID = ID<string, CityInfo>
 export type RegionID = ID<string, RegionInfo>
 
 export interface SaveInfo {
+  buildings: BuildingID[]
   lots: LotID[]
 }
 

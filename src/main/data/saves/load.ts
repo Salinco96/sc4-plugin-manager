@@ -2,6 +2,7 @@ import { stat } from "node:fs/promises"
 
 import { toHex } from "@salinco/nice-utils"
 
+import type { BuildingID } from "@common/buildings"
 import type { LotID } from "@common/lots"
 import type { SaveInfo } from "@common/regions"
 import { FileOpenMode, openFile } from "@node/files"
@@ -19,10 +20,19 @@ export async function loadSaveInfo(context: TaskContext, fullPath: string): Prom
     context.debug(`Loading ${fullPath}...`)
 
     const save = new SaveFile(file)
+
+    const buildings = await save.buildings()
+    const buildingIds = new Set<BuildingID>()
+    if (buildings) {
+      for (const building of buildings.data) {
+        if (building.buildingId) {
+          buildingIds.add(toHex(building.buildingId, 8) as BuildingID)
+        }
+      }
+    }
+
     const lots = await save.lots()
-
     const lotIds = new Set<LotID>()
-
     if (lots) {
       for (const lot of lots.data) {
         if (lot.lotId) {
@@ -32,6 +42,7 @@ export async function loadSaveInfo(context: TaskContext, fullPath: string): Prom
     }
 
     return {
+      buildings: Array.from(buildingIds),
       lots: Array.from(lotIds),
     }
   })
