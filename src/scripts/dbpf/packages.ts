@@ -32,7 +32,7 @@ import {
 import { getExtension } from "@node/files"
 
 import path from "node:path"
-import { loadContentsInfo } from "@node/data/packages"
+import { loadVariantContentsInfo } from "@node/data/packages"
 import type { IndexerEntry } from "../types"
 import { htmlToMd } from "../utils"
 
@@ -503,7 +503,7 @@ export function generateVariantInfo(
   variantInfo.readme = union(intersection(variantInfo.readme ?? [], docPaths), readmePaths)
 
   const contents = mapValues(entries, entry =>
-    loadContentsInfo(
+    loadVariantContentsInfo(
       {
         buildingFamilies:
           entry.buildingFamilies &&

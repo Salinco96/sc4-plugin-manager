@@ -13,22 +13,22 @@ export function DataProvider({ children }: { children: ReactNode }): JSX.Element
 
   useEffect(() => {
     return window.api.subscribe({
-      updateState(data, noRecompute) {
-        console.debug("updateState", data, noRecompute)
+      updateState(data, options) {
+        console.debug("updateState", data, options)
 
         store.api.setState(state => {
           const newState = {
             ...state,
             ...data,
             packages: data.packages
-              ? compact({ ...state.packages, ...data.packages })
+              ? compact(options.merge ? { ...state.packages, ...data.packages } : data.packages)
               : state.packages,
             profiles: data.profiles
-              ? compact({ ...state.profiles, ...data.profiles })
+              ? compact(options.merge ? { ...state.profiles, ...data.profiles } : data.profiles)
               : state.profiles,
           }
 
-          if (data.packages && !noRecompute) {
+          if (options.recompute) {
             return { ...newState, ...computePackageList(newState, false) }
           }
 

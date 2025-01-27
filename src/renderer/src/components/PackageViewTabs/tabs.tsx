@@ -1,7 +1,7 @@
 import { type PackageID, isLocal, isPatched } from "@common/packages"
 import { VariantState } from "@common/types"
 import { TagType, createTag } from "@components/Tags/utils"
-import { get, size, unionBy, unique, uniqueBy, values } from "@salinco/nice-utils"
+import { get, size, unique, uniqueBy, values } from "@salinco/nice-utils"
 import { lazy } from "react"
 
 import type { TabInfo } from "@components/Tabs"
@@ -22,14 +22,20 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
     id: "lots",
     component: lazy(() => import("./PackageViewLots")),
     count({ packageId }, state) {
-      const { buildings, lots } = getCurrentVariant(state, packageId)
-      const maxisLots = state.maxis?.lots ?? []
+      const { buildings, lots = [] } = getCurrentVariant(state, packageId)
+      const lotIds = lots.map(lot => lot.id)
 
-      return unionBy(
-        lots ?? [],
-        buildings?.flatMap(building => maxisLots.filter(lot => lot.building === building.id)) ?? [],
-        lot => lot.id,
-      ).length
+      if (buildings && state.index) {
+        const buildingIds = buildings.map(building => building.id)
+        return unique([
+          ...lotIds,
+          ...values(state.index.lots)
+            .filter(([lot]) => lot.building && buildingIds.includes(lot.building))
+            .map(([lot]) => lot.id),
+        ]).length
+      }
+
+      return unique(lotIds).length
     },
     fullsize: true,
     label(t, count) {

@@ -421,15 +421,15 @@ assets:
       - SC4MoreBuildingStyles.dll
       - SC4MoreBuildingStyles.ini
       - Third Party Notices.txt
-    lastModified: 2024-11-15T01:04:35.000Z
+    lastModified: 2025-01-24T10:00:13.000Z
     meta:
-      timestamp: 2025-01-09T16:18:23.576Z
+      timestamp: 2025-01-27T10:26:26.390Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-more-building-styles
-    sha256: 88c8bfa6adf55a765b100b06ef557c070d6e6e498ededf496965873a28b98acd
-    size: 165224
-    uncompressed: 391016
-    version: 3.2.0
+    sha256: 9f7004c4eb9666ce154f10c3bebbfd723e1833ac095b4e80ad7293a98074c34a
+    size: 165543
+    uncompressed: 390180
+    version: 3.3.0
   github/0xC0000054/sc4-more-demand-info:
     assetId: github/0xC0000054/sc4-more-demand-info
     authors:
@@ -871,4 +871,4 @@ assets:
     version: 1.0.0
 
 meta:
-  timestamp: 2025-01-22T07:05:40.696Z
+  timestamp: 2025-01-27T10:26:26.390Z

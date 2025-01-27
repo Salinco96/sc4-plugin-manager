@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 
-import { Box, Typography } from "@mui/material"
-import { collect, isEmpty, mapValues } from "@salinco/nice-utils"
+import { Box } from "@mui/material"
+import { difference, isEmpty, keys, sort } from "@salinco/nice-utils"
 import { Virtuoso } from "react-virtuoso"
 
 import type { PackageID } from "@common/packages"
@@ -9,36 +9,28 @@ import { FlexRow } from "@components/FlexBox"
 import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { Page, useLocation, useNavigation } from "@utils/navigation"
-import { type MatchResult, getMatchingContents, isHexSearch } from "@utils/search"
+import { type MatchResult, isHexSearch, searchIndex, toHexSearch } from "@utils/search"
 
 import { store } from "@stores/main"
 import { EmptyPackageList } from "./EmptyPackageList"
+import { MatchResults } from "./MatchResults"
 import { PackageListItem } from "./PackageListItem"
 
 export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.Element {
   const { page } = useLocation()
   const { search } = store.usePackageFilters()
-  const externalPlugins = store.useExternals()
-  const maxisExemplars = store.useMaxis()
+
+  const index = store.useIndex()
 
   const { fromPackageId } = useNavigation()
 
-  const matchingMaxisContents = useMemo(() => {
-    if (maxisExemplars && isHexSearch(search) && page === Page.Packages) {
-      return getMatchingContents(maxisExemplars, search.trim().toLowerCase())
-    }
-  }, [maxisExemplars, page, search])
-
-  const matchingPluginContents = useMemo(() => {
-    if (isHexSearch(search) && page === Page.Packages) {
-      return mapValues(externalPlugins, contents => {
-        const matching = getMatchingContents(contents, search.trim().toLowerCase())
-        return matching.length ? matching : undefined
-      })
+  const searchResults = useMemo(() => {
+    if (index && isHexSearch(search) && page === Page.Packages) {
+      return searchIndex(index, toHexSearch(search))
     }
 
     return {}
-  }, [externalPlugins, page, search])
+  }, [index, page, search])
 
   const initialIndex = useMemo(() => {
     if (fromPackageId) {
@@ -51,14 +43,14 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
     return 0
   }, [fromPackageId, packageIds])
 
-  if (!packageIds.length && !matchingMaxisContents?.length && isEmpty(matchingPluginContents)) {
+  if (!packageIds.length && isEmpty(searchResults)) {
     return <EmptyPackageList />
   }
 
   return (
     <Virtuoso
       components={{ Header: SearchResults }}
-      context={{ matchingMaxisContents, matchingPluginContents }}
+      context={{ searchResults }}
       data={packageIds}
       itemContent={(index, packageId) => (
         <Box padding={2} paddingTop={index === 0 ? 2 : 0}>
@@ -72,49 +64,25 @@ export function PackageList({ packageIds }: { packageIds: PackageID[] }): JSX.El
 }
 
 function SearchResults({
-  context: { matchingMaxisContents, matchingPluginContents = {} } = {},
+  context: { searchResults = {} } = {},
 }: {
   context?: {
-    matchingMaxisContents?: MatchResult[]
-    matchingPluginContents?: { [path in string]?: MatchResult[] }
+    searchResults?: { [path in string]: MatchResult[] }
   }
 }): JSX.Element {
+  const maxisPaths = ["SimCity_1.dat", "SimCity_2.dat"]
+
+  const paths = [
+    ...maxisPaths.filter(path => searchResults[path]),
+    ...sort(difference(keys(searchResults), maxisPaths)),
+  ]
+
   return (
     <>
-      {!!matchingMaxisContents?.length && (
-        <FlexRow fullWidth pt={2} px={2}>
-          <ListItem header={Header} subtitle="SimCity_1.dat" title="SimCity 4 (base game)">
-            <Typography variant="body2">
-              <b>Match results:</b>
-            </Typography>
-            <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-              {matchingMaxisContents.map(({ name, type }) => (
-                <Typography component="li" key={type} variant="body2">
-                  {type}: {name}
-                </Typography>
-              ))}
-            </ul>
-          </ListItem>
-        </FlexRow>
-      )}
-
-      {collect(matchingPluginContents, (contents, pluginPath) => (
-        <FlexRow fullWidth pt={2} px={2}>
-          <ListItem
-            header={Header}
-            subtitle={pluginPath}
-            title={pluginPath.split("/").slice(-1)[0]}
-          >
-            <Typography variant="body2">
-              <b>Match results:</b>
-            </Typography>
-            <ul style={{ marginBlockStart: 0, marginBlockEnd: 0 }}>
-              {contents.map(({ name, type }) => (
-                <Typography component="li" key={type} variant="body2">
-                  {type}: {name}
-                </Typography>
-              ))}
-            </ul>
+      {paths.map(path => (
+        <FlexRow fullWidth key={path} pt={2} px={2}>
+          <ListItem header={Header} subtitle={path} title={path.split("/").slice(-1)[0]}>
+            <MatchResults results={searchResults[path]} />
           </ListItem>
         </FlexRow>
       ))}

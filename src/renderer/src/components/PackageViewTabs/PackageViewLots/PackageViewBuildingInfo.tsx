@@ -45,12 +45,13 @@ export function PackageViewBuildingInfo({
   setEnabled,
 }: PackageViewBuildingInfoProps): JSX.Element {
   const features = store.useFeatures()
+  const index = store.useIndex()
   const variantInfo = store.useCurrentVariant(packageId)
 
   const fileInfo = variantInfo.files?.find(where("path", building.file))
 
-  const isMaxisBuilding = store.useStore(
-    state => !!state.maxis?.buildings?.some(where("id", building.id)),
+  const isMaxisBuilding = index?.buildings[building.id]?.some(
+    building => building.file === "SimCity_1.dat",
   )
 
   const isMaxisOverride = isMaxisBuilding && building.file !== "SimCity_1.dat"

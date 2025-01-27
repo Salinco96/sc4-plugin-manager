@@ -7,11 +7,10 @@ import {
   Apartment as ResidentialIcon,
 } from "@mui/icons-material"
 import { Checkbox, Typography } from "@mui/material"
-import { keys, sum, where } from "@salinco/nice-utils"
+import { keys, sum, unionBy, where } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
 import type { BuildingInfo } from "@common/buildings"
-import { CategoryID } from "@common/categories"
 import type { FamilyID, FamilyInfo } from "@common/families"
 import type { PackageID } from "@common/packages"
 import { VariantState } from "@common/types"
@@ -46,22 +45,18 @@ export function PackageViewBuildingFamilyInfo({
   packageId,
   setEnabled,
 }: PackageViewBuildingFamilyInfoProps): JSX.Element {
+  const index = store.useIndex()
   const variantInfo = store.useCurrentVariant(packageId)
 
   const filePath = buildingFamily?.file
   const fileInfo = buildingFamily && variantInfo.files?.find(where("path", filePath))
 
-  const isMaxisFamily = store.useStore(
-    state => !!state.maxis?.buildingFamilies?.some(family => family.id === familyId),
+  const buildings = unionBy(
+    familyBuildings ?? [],
+    index?.buildingFamilies[familyId]?.buildings ?? [],
+    building => building.id,
   )
 
-  const maxisBuildings = store.useShallow(state =>
-    state.maxis?.buildings?.filter(building => building.families?.includes(familyId)),
-  )
-
-  const buildings = [...(familyBuildings ?? []), ...(maxisBuildings ?? [])]
-
-  const isMaxisOverride = isMaxisFamily && filePath !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 
   const { t } = useTranslation("PackageViewLots")
@@ -116,13 +111,7 @@ export function PackageViewBuildingFamilyInfo({
             <Text maxLines={1} variant="h6">
               {buildingFamily?.name ?? "Building family"}
             </Text>
-            {isMaxisOverride && (
-              <Tag
-                color="info"
-                dense
-                tag={{ type: TagType.CATEGORY, value: CategoryID.OVERRIDES }}
-              />
-            )}
+
             {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
           </FlexRow>
 

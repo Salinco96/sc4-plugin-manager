@@ -7,7 +7,7 @@ import type { CollectionID } from "@common/collections"
 import type { PackageID } from "@common/packages"
 import type { Feature } from "@common/types"
 import type { MaybeArray } from "@common/utils/types"
-import type { ContentsData } from "@node/data/packages"
+import type { VariantData } from "@node/data/packages"
 
 export interface IndexerOptions {
   include: {
@@ -48,7 +48,18 @@ export interface IndexerEntryDetails {
   version?: string
 }
 
-export interface IndexerVariantEntry extends ContentsData {
+export interface IndexerVariantEntry
+  extends Pick<
+    VariantData,
+    | "buildingFamilies"
+    | "buildings"
+    | "lots"
+    | "mmps"
+    | "models"
+    | "propFamilies"
+    | "props"
+    | "textures"
+  > {
   categories?: CategoryID[]
   download?: string
   features?: Feature[]

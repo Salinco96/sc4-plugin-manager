@@ -51,25 +51,21 @@ import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type {
-  ContentsInfo,
-  ModelID,
-  TextureID,
-  VariantAssetInfo,
-  VariantInfo,
-} from "@common/variants"
+import type { Contents, ModelID, TextureID, VariantAssetInfo, VariantInfo } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
 import {
   type PackageData,
-  loadContentsInfo,
+  loadContents,
   loadPackageInfo,
-  writeContentsInfo,
+  toVariantContentsInfo,
+  writeContents,
   writeModelId,
   writePackageInfo,
+  writeVariantContentsInfo,
 } from "@node/data/packages"
-import type { ContentsData } from "@node/data/packages"
+import type { FileContentsData } from "@node/data/packages"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -449,30 +445,29 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
    * STEP 4 - Analyze Maxis files if necessary
    */
 
-  const dbMaxisConfig = await loadConfig<ContentsData>(dbDir, "configs/maxis")
+  const dbMaxisConfig = await loadConfig<{ [path in string]?: FileContentsData }>(
+    dbAssetsDir,
+    "maxis",
+  )
 
-  let maxisContents: ContentsInfo
+  let maxisContents: Contents
   if (dbMaxisConfig?.data) {
-    maxisContents = loadContentsInfo(dbMaxisConfig.data, categories)
+    maxisContents = loadContents(dbMaxisConfig.data, categories)
   } else {
-    const files = [
-      "SimCity_1.dat",
-      "SimCity_2.dat",
-      "SimCity_3.dat",
-      "SimCity_4.dat",
-      "SimCity_5.dat",
-      "SimCityLocale.dat",
-      "Sound.dat",
-      "EP1.dat",
-    ]
-
-    const { contents } = await analyzeSC4Files(gameDir, files, exemplarProperties)
+    const { contents } = await analyzeSC4Files(
+      gameDir,
+      ["SimCity_1.dat", "SimCity_2.dat", "SimCity_3.dat", "SimCity_4.dat", "SimCity_5.dat"],
+      exemplarProperties,
+    )
 
     maxisContents = contents
 
-    const maxisData = writeContentsInfo(contents, categories)
-
-    await writeConfig<ContentsData>(dbDir, "configs/maxis", maxisData, ConfigFormat.YAML)
+    await writeConfig<{ [path in string]?: FileContentsData }>(
+      dbAssetsDir,
+      "maxis",
+      writeContents(contents, categories),
+      ConfigFormat.YAML,
+    )
   }
 
   /**
@@ -506,99 +501,97 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   // Step 5a - Index instances
   console.debug("Indexing contents...")
 
-  if (maxisContents.buildingFamilies) {
-    for (const { id } of maxisContents.buildingFamilies) {
-      if (!index.buildingFamilies[id]?.includes(baseGameId)) {
-        index.buildingFamilies[id] ??= []
-        index.buildingFamilies[id].push(baseGameId)
+  forEach(maxisContents, contents => {
+    if (contents.buildingFamilies) {
+      for (const { id } of contents.buildingFamilies) {
+        if (!index.buildingFamilies[id]?.includes(baseGameId)) {
+          index.buildingFamilies[id] ??= []
+          index.buildingFamilies[id].push(baseGameId)
+        }
       }
     }
-  }
 
-  if (maxisContents.buildings) {
-    for (const { families, id } of maxisContents.buildings) {
-      if (!index.buildings[id]?.includes(baseGameId)) {
-        index.buildings[id] ??= []
-        index.buildings[id].push(baseGameId)
-      }
+    if (contents.buildings) {
+      for (const { families, id } of contents.buildings) {
+        if (!index.buildings[id]?.includes(baseGameId)) {
+          index.buildings[id] ??= []
+          index.buildings[id].push(baseGameId)
+        }
 
-      if (families) {
-        for (const familyId of families) {
-          if (!index.buildingFamilies[familyId]?.includes(baseGameId)) {
-            index.buildingFamilies[familyId] ??= []
-            index.buildingFamilies[familyId].push(baseGameId)
+        if (families) {
+          for (const familyId of families) {
+            if (!index.buildingFamilies[familyId]?.includes(baseGameId)) {
+              index.buildingFamilies[familyId] ??= []
+              index.buildingFamilies[familyId].push(baseGameId)
+            }
           }
         }
       }
     }
-  }
 
-  if (maxisContents.lots) {
-    for (const { id } of maxisContents.lots) {
-      if (!index.lots[id]?.includes(baseGameId)) {
-        index.lots[id] ??= []
-        index.lots[id].push(baseGameId)
+    if (contents.lots) {
+      for (const { id } of contents.lots) {
+        if (!index.lots[id]?.includes(baseGameId)) {
+          index.lots[id] ??= []
+          index.lots[id].push(baseGameId)
+        }
       }
     }
-  }
 
-  if (maxisContents.mmps) {
-    for (const { id } of maxisContents.mmps) {
-      if (!index.mmps[id]?.includes(baseGameId)) {
-        index.mmps[id] ??= []
-        index.mmps[id].push(baseGameId)
+    if (contents.mmps) {
+      for (const { id } of contents.mmps) {
+        if (!index.mmps[id]?.includes(baseGameId)) {
+          index.mmps[id] ??= []
+          index.mmps[id].push(baseGameId)
+        }
       }
     }
-  }
 
-  if (maxisContents.models) {
-    forEach(maxisContents.models, models => {
-      for (const id of models) {
+    if (contents.models) {
+      for (const id of contents.models) {
         if (!index.models[id]?.includes(baseGameId)) {
           index.models[id] ??= []
           index.models[id].push(baseGameId)
         }
       }
-    })
-  }
+    }
 
-  if (maxisContents.propFamilies) {
-    for (const { id } of maxisContents.propFamilies) {
-      if (!index.propFamilies[id]?.includes(baseGameId)) {
-        index.propFamilies[id] ??= []
-        index.propFamilies[id].push(baseGameId)
+    if (contents.propFamilies) {
+      for (const { id } of contents.propFamilies) {
+        if (!index.propFamilies[id]?.includes(baseGameId)) {
+          index.propFamilies[id] ??= []
+          index.propFamilies[id].push(baseGameId)
+        }
       }
     }
-  }
 
-  if (maxisContents.props) {
-    for (const { families, id } of maxisContents.props) {
-      if (!index.props[id]?.includes(baseGameId)) {
-        index.props[id] ??= []
-        index.props[id].push(baseGameId)
-      }
+    if (contents.props) {
+      for (const { families, id } of contents.props) {
+        if (!index.props[id]?.includes(baseGameId)) {
+          index.props[id] ??= []
+          index.props[id].push(baseGameId)
+        }
 
-      if (families) {
-        for (const familyId of families) {
-          if (!index.propFamilies[familyId]?.includes(baseGameId)) {
-            index.propFamilies[familyId] ??= []
-            index.propFamilies[familyId].push(baseGameId)
+        if (families) {
+          for (const familyId of families) {
+            if (!index.propFamilies[familyId]?.includes(baseGameId)) {
+              index.propFamilies[familyId] ??= []
+              index.propFamilies[familyId].push(baseGameId)
+            }
           }
         }
       }
     }
-  }
 
-  if (maxisContents.textures) {
-    forEach(maxisContents.textures, textures => {
-      for (const id of textures) {
+    if (contents.textures) {
+      for (const id of contents.textures) {
         if (!index.textures[id]?.includes(baseGameId)) {
           index.textures[id] ??= []
           index.textures[id].push(baseGameId)
         }
       }
-    })
-  }
+    }
+  })
 
   forEach(packages, (packageInfo, packageId) => {
     forEach(packageInfo.variants, variantInfo => {
@@ -1571,7 +1564,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     // Analyze DBPF contents
     const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
-    const contents = writeContentsInfo(data.contents, categories)
+    const contents = writeVariantContentsInfo(toVariantContentsInfo(data.contents), categories)
 
     variantEntry.buildingFamilies = contents.buildingFamilies
     variantEntry.buildings = contents.buildings

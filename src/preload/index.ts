@@ -136,14 +136,21 @@ export const api = {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
-    updateState(data: ApplicationStateUpdate, noRecompute?: boolean): void
+    updateState(data: ApplicationStateUpdate, options: { merge: boolean; recompute: boolean }): void
     updateStatus(data: ApplicationStatusUpdate): void
   }): () => void {
     const updateState = (
       _: IpcRendererEvent,
-      { noRecompute, ...data }: ApplicationStateUpdate & { noRecompute?: boolean },
+      {
+        data,
+        ...options
+      }: {
+        data: ApplicationStateUpdate
+        merge: boolean
+        recompute: boolean
+      },
     ) => {
-      handlers.updateState(data, noRecompute)
+      handlers.updateState(data, options)
     }
 
     const updateStatus = (_: IpcRendererEvent, data: ApplicationStatusUpdate) => {
@@ -152,7 +159,9 @@ export const api = {
 
     ipcRenderer.on("updateState", updateState)
     ipcRenderer.on("updateStatus", updateStatus)
-    ipcRenderer.invoke("getState").then(handlers.updateState)
+    ipcRenderer.invoke("getState").then(state => {
+      handlers.updateState(state, { merge: false, recompute: true })
+    })
 
     return () => {
       ipcRenderer.off("updateState", updateState)

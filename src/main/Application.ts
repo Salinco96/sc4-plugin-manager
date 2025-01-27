@@ -85,7 +85,7 @@ import type { ToolID } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
-import type { FileInfo, VariantID } from "@common/variants"
+import type { Contents, FileInfo, VariantID } from "@common/variants"
 import { getDefaultVariant } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
@@ -138,12 +138,13 @@ import { type AppConfig, loadAppConfig } from "./data/config"
 import {
   loadCategories,
   loadExemplarProperties,
-  loadExternals,
-  loadMaxisExemplars,
+  loadMaxisContents,
+  loadPlugins,
   loadProfileOptions,
   loadProfileTemplates,
   loadTools,
 } from "./data/db"
+import { calculateIndex } from "./data/indexes"
 import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
@@ -175,6 +176,7 @@ type Loaded = {
   [K in Exclude<keyof ApplicationState, "simtropolis">]-?: Exclude<ApplicationState[K], undefined>
 } & {
   assets: Assets
+  maxis: Contents
 }
 
 export class Application {
@@ -354,7 +356,8 @@ export class Application {
    * Runs cleaner for all enabled packages.
    */
   public async cleanPackages(options: { packageIds?: PackageID[] } = {}): Promise<void> {
-    const { packages, profiles, settings } = await this.load()
+    const state = await this.load()
+    const { maxis, packages, plugins, profiles, settings } = state
 
     if (!settings.currentProfile) {
       return
@@ -364,8 +367,6 @@ export class Application {
     if (!profileInfo) {
       return
     }
-
-    const { externals } = await this.initLinks()
 
     await this.tasks.queue(options.packageIds ? `clean:${options.packageIds.join(",")}` : "clean", {
       handler: async context => {
@@ -395,7 +396,7 @@ export class Application {
             continue
           }
 
-          const conflictingFiles = new Set<string>()
+          const conflictingPaths = new Set<string>()
           const filePaths = new Set(variantInfo.files?.map(file => path.basename(file.path)))
 
           const variantPath = this.getVariantPath(packageId, variantId)
@@ -420,15 +421,15 @@ export class Application {
           }
 
           for (const filePath of filePaths) {
-            for (const externalFile of externals) {
-              if (path.basename(externalFile) === filePath) {
-                conflictingFiles.add(externalFile)
+            for (const pluginPath of keys(plugins)) {
+              if (path.basename(pluginPath) === filePath) {
+                conflictingPaths.add(pluginPath)
               }
             }
           }
 
-          if (conflictingFiles.size) {
-            const fileNames = Array.from(conflictingFiles)
+          if (conflictingPaths.size) {
+            const fileNames = Array.from(conflictingPaths)
 
             const { confirmed } = await showConfirmation(
               packageInfo.name,
@@ -440,28 +441,32 @@ export class Application {
             )
 
             if (confirmed) {
-              for (const conflictingFile of conflictingFiles) {
-                await this.backUpFile(context, conflictingFile)
-                externals.delete(conflictingFile)
+              for (const conflictingPath of conflictingPaths) {
+                await this.backUpFile(context, conflictingPath)
+                delete plugins[conflictingPath]
               }
 
-              context.debug(`Resolved ${conflictingFiles.size} conflicts`)
+              const index = calculateIndex({ ...maxis, ...plugins })
+              state.index = index
+              this.sendStateUpdate({ index, plugins })
+
+              context.debug(`Resolved ${conflictingPaths.size} conflicts`)
             } else {
-              context.debug(`Ignored ${conflictingFiles.size} conflicts`)
+              context.debug(`Ignored ${conflictingPaths.size} conflicts`)
             }
           }
         }
 
         // Prompt to remove unsupported files (e.g. leftover docs)
-        const unsupportedFiles = new Set<string>()
-        for (const externalFile of externals) {
-          if (!SC4_EXTENSIONS.includes(getExtension(externalFile))) {
-            unsupportedFiles.add(externalFile)
+        const unsupportedPaths = new Set<string>()
+        for (const externalPath of keys(plugins)) {
+          if (!SC4_EXTENSIONS.includes(getExtension(externalPath))) {
+            unsupportedPaths.add(externalPath)
           }
         }
 
-        if (unsupportedFiles.size) {
-          const fileNames = Array.from(unsupportedFiles)
+        if (unsupportedPaths.size) {
+          const fileNames = Array.from(unsupportedPaths)
 
           const { confirmed } = await showConfirmation(
             t("RemoveUnsupportedFilesModal:title"),
@@ -473,14 +478,18 @@ export class Application {
           )
 
           if (confirmed) {
-            for (const unsupportedFile of unsupportedFiles) {
-              await this.backUpFile(context, unsupportedFile)
-              externals.delete(unsupportedFile)
+            for (const unsupportedPath of unsupportedPaths) {
+              await this.backUpFile(context, unsupportedPath)
+              delete plugins[unsupportedPath]
             }
 
-            context.debug(`Removed ${unsupportedFiles.size} unsupported files`)
+            const index = calculateIndex({ ...maxis, ...plugins })
+            state.index = index
+            this.sendStateUpdate({ index, plugins })
+
+            context.debug(`Removed ${unsupportedPaths.size} unsupported files`)
           } else {
-            context.debug(`Ignored ${unsupportedFiles.size} unsupported files`)
+            context.debug(`Ignored ${unsupportedPaths.size} unsupported files`)
           }
         }
       },
@@ -1106,10 +1115,10 @@ export class Application {
       categories,
       collections,
       exemplarProperties,
-      externals,
       features,
-      maxis,
+      index,
       packages,
+      plugins,
       profiles,
       profileOptions,
       regions,
@@ -1123,10 +1132,10 @@ export class Application {
       categories,
       collections,
       exemplarProperties,
-      externals,
       features,
-      maxis,
+      index,
       packages,
+      plugins,
       profiles,
       profileOptions,
       regions,
@@ -1339,10 +1348,7 @@ export class Application {
     handleDocsProtocol(this.getRootPath(), DOC_EXTENSIONS)
   }
 
-  protected async initLinks(isReload?: boolean): Promise<{
-    externals: Set<string>
-    links: Map<string, string>
-  }> {
+  protected async initLinks(isReload?: boolean): Promise<Map<string, string>> {
     return this.tasks.queue("link:init", {
       cache: true,
       handler: async context => {
@@ -1352,7 +1358,6 @@ export class Application {
 
         await createIfMissing(pluginsPath)
 
-        const externals = new Set<string>()
         const links = new Map<string, string>()
 
         const files = await glob("**", {
@@ -1371,14 +1376,12 @@ export class Application {
           if (file.isSymbolicLink()) {
             const targetPath = await fs.readlink(file.fullpath())
             links.set(relativePath, targetPath)
-          } else if (![".ini", ".log"].includes(getExtension(relativePath))) {
-            externals.add(relativePath)
           }
         }
 
-        context.debug(`Done (found ${links.size} links and ${externals.size} external files)`)
+        context.debug(`Done (found ${links.size} links)`)
 
-        return { externals, links }
+        return links
       },
       invalidate: isReload,
       onStatusUpdate: info => {
@@ -1571,7 +1574,7 @@ export class Application {
             variantInfo.action = "installing"
           }
 
-          this.sendPackageUpdate(packageInfo, true)
+          this.sendPackageUpdate(packageInfo, { recompute: false })
 
           const variantPath = this.getVariantPath(packageId, variantId)
 
@@ -1756,10 +1759,19 @@ export class Application {
   }
 
   protected async linkPackages(options: { packageId?: PackageID } = {}): Promise<void> {
-    const { exemplarProperties, features, packages, profiles, profileOptions, settings } =
-      await this.load()
+    const state = await this.load()
+    const {
+      exemplarProperties,
+      features,
+      maxis,
+      packages,
+      plugins,
+      profiles,
+      profileOptions,
+      settings,
+    } = state
 
-    const { externals, links } = await this.initLinks()
+    const links = await this.initLinks()
 
     await this.tasks.queue(options.packageId ? `link:${options.packageId}` : "link", {
       handler: async context => {
@@ -1783,6 +1795,7 @@ export class Application {
         let nCreated = 0
         let nRemoved = 0
         let nUpdated = 0
+        let pluginsChanged = false
 
         let nPackages = 0
         const packageIds = options.packageId ? [options.packageId] : keys(packages)
@@ -1851,9 +1864,10 @@ export class Application {
 
             oldLinks.delete(targetRelativePath)
 
-            if (externals.has(targetRelativePath)) {
+            if (plugins[targetRelativePath]) {
               await this.backUpFile(context, targetRelativePath)
-              externals.delete(targetRelativePath)
+              delete plugins[targetRelativePath]
+              pluginsChanged = true
             }
 
             const currentLinkPath = links.get(targetRelativePath)
@@ -1865,6 +1879,12 @@ export class Application {
                 nCreated++
               }
             }
+          }
+
+          if (pluginsChanged) {
+            const index = calculateIndex({ ...maxis, ...plugins })
+            state.index = index
+            this.sendStateUpdate({ index, plugins })
           }
 
           // Generate INI files
@@ -2019,26 +2039,35 @@ export class Application {
 
         context.setStep("Indexing external plugins...")
 
-        const collections = await loadCollections(context, this.getDatabasePath())
-        this.sendStateUpdate({ collections })
-
-        const templates = await loadProfileTemplates(context, this.getDatabasePath())
-        this.sendStateUpdate({ templates })
+        const regionsPromise = loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
 
         const exemplarProperties = await loadExemplarProperties(context, this.getDatabasePath())
         this.sendStateUpdate({ exemplarProperties })
 
-        const maxis = await loadMaxisExemplars(context, this.getDatabasePath(), categories)
-        this.sendStateUpdate({ maxis })
+        const maxisPromise = settings.install?.path
+          ? loadMaxisContents(context, this.getRootPath(), settings.install?.path, {
+              categories,
+              exemplarProperties,
+            })
+          : Promise.resolve({})
 
+        const pluginsPromise = loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
+          categories,
+          exemplarProperties,
+        })
+
+        const collections = await loadCollections(context, this.getDatabasePath())
         const tools = await loadTools(context, this.getDatabasePath(), assets)
-        this.sendStateUpdate({ tools })
+        const templates = await loadProfileTemplates(context, this.getDatabasePath())
+        this.sendStateUpdate({ collections, templates, tools })
 
-        const externals = await loadExternals(context, this.getPluginsPath(), exemplarProperties)
-        this.sendStateUpdate({ externals })
-
-        const regions = await loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
+        const regions = await regionsPromise
         this.sendStateUpdate({ regions })
+
+        const maxis = await maxisPromise
+        const plugins = await pluginsPromise
+        const index = calculateIndex({ ...maxis, ...plugins })
+        this.sendStateUpdate({ index, plugins })
 
         return {
           assets,
@@ -2046,10 +2075,11 @@ export class Application {
           categories,
           collections,
           exemplarProperties,
-          externals,
           features,
+          index,
           maxis,
           packages,
+          plugins,
           profiles,
           profileOptions,
           regions,
@@ -2666,7 +2696,7 @@ export class Application {
         profileInfo.format = undefined
 
         // Send update to renderer
-        this.sendStateUpdate({ profiles: { [profileId]: null } })
+        this.sendStateUpdate({ profiles: { [profileId]: null } }, { merge: true })
 
         await showSuccess(i18n.t("RemoveProfileModal:title"), i18n.t("RemoveProfileModal:success"))
 
@@ -2761,7 +2791,7 @@ export class Application {
           context.info(`Removing variant '${packageId}#${variantId}'...`)
 
           variantInfo.action = "removing"
-          this.sendPackageUpdate(packageInfo, true)
+          this.sendPackageUpdate(packageInfo, { recompute: false })
 
           variantInfo.files = undefined
           variantInfo.installed = undefined
@@ -2797,7 +2827,7 @@ export class Application {
           if (packages[packageId]) {
             this.sendPackageUpdate(packageInfo)
           } else {
-            this.sendStateUpdate({ packages: { [packageId]: null } })
+            this.sendStateUpdate({ packages: { [packageId]: null } }, { merge: true })
           }
         }
       },
@@ -2894,22 +2924,35 @@ export class Application {
   /**
    * Sends updates to a single package to the renderer.
    */
-  protected sendPackageUpdate(packageInfo: PackageInfo, noRecompute?: boolean): void {
-    this.sendStateUpdate({ packages: { [packageInfo.id]: packageInfo } }, noRecompute)
+  protected sendPackageUpdate(packageInfo: PackageInfo, options?: { recompute?: boolean }): void {
+    this.sendStateUpdate(
+      { packages: { [packageInfo.id]: packageInfo } },
+      { merge: true, recompute: options?.recompute ?? true },
+    )
   }
 
   /**
    * Sends updates to a single package to the renderer.
    */
   protected sendProfileUpdate(profileInfo: ProfileInfo): void {
-    this.sendStateUpdate({ profiles: { [profileInfo.id]: profileInfo } })
+    this.sendStateUpdate({ profiles: { [profileInfo.id]: profileInfo } }, { recompute: true })
   }
 
   /**
    * Sends updates to the renderer.
    */
-  protected sendStateUpdate(data: ApplicationStateUpdate, noRecompute?: boolean): void {
-    this.mainWindow?.webContents.postMessage("updateState", { ...data, noRecompute })
+  protected sendStateUpdate(
+    data: ApplicationStateUpdate,
+    options?: {
+      merge?: boolean
+      recompute?: boolean
+    },
+  ): void {
+    this.mainWindow?.webContents.postMessage("updateState", {
+      data,
+      merge: options?.merge ?? false,
+      recompute: options?.recompute ?? !!data.packages,
+    })
   }
 
   /**
@@ -3104,7 +3147,10 @@ export class Application {
                 }
 
                 if (!isEmpty(packagesWithAction)) {
-                  this.sendStateUpdate({ packages: packagesWithAction }, true)
+                  this.sendStateUpdate(
+                    { packages: packagesWithAction },
+                    { merge: true, recompute: false },
+                  )
                 }
 
                 // Apply implicit variant changes automatically
@@ -3636,9 +3682,10 @@ export class Application {
               })
 
               if (update.packages && !shouldRecalculate) {
-                this.sendStateUpdate({
-                  packages: filterValues(packages, info => !!update.packages?.[info.id]),
-                })
+                this.sendStateUpdate(
+                  { packages: filterValues(packages, info => !!update.packages?.[info.id]) },
+                  { merge: true, recompute: false },
+                )
               }
 
               // Run cleaner and linker

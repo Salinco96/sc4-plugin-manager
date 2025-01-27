@@ -1,12 +1,13 @@
-import { parseHex, uniqueBy, values } from "@salinco/nice-utils"
+import { forEach, parseHex, uniqueBy, values } from "@salinco/nice-utils"
 
-import type { BuildingInfo } from "@common/buildings"
+import type { BuildingID, BuildingInfo } from "@common/buildings"
 import { GroupID, type InstanceID, TypeID, getTextureIdRange } from "@common/dbpf"
 import type { FamilyID, FamilyInfo } from "@common/families"
-import type { LotInfo } from "@common/lots"
-import type { FloraInfo } from "@common/mmps"
-import type { PropInfo } from "@common/props"
-import type { ContentsInfo } from "@common/variants"
+import type { LotID, LotInfo } from "@common/lots"
+import type { FloraID, FloraInfo } from "@common/mmps"
+import type { PropID, PropInfo } from "@common/props"
+import type { Index } from "@common/state"
+import type { TextureID, VariantInfo } from "@common/variants"
 
 export interface MatchResult {
   element: string
@@ -17,6 +18,10 @@ export interface MatchResult {
 
 export function isHexSearch(search: string): boolean {
   return !!search.match(/^[ ]*[0-9a-f]{8}(-[0-9a-f]{8})?(-[0-9a-f]{0,8})?[ ]*$/i)
+}
+
+export function toHexSearch(search: string): string {
+  return search.toLowerCase().trim()
 }
 
 function matchBuildingFamily(family: FamilyInfo, search: string): MatchResult | undefined {
@@ -330,7 +335,7 @@ function getTextureSearchRange(search: string): [InstanceID, InstanceID] | undef
     : undefined
 }
 
-export function hasMatchingContents(contents: ContentsInfo, search: string): boolean {
+export function hasMatchingContents(contents: VariantInfo, search: string): boolean {
   if (contents.buildingFamilies?.some(family => matchBuildingFamily(family, search))) {
     return true
   }
@@ -375,7 +380,7 @@ export function hasMatchingContents(contents: ContentsInfo, search: string): boo
   return false
 }
 
-export function getMatchingContents(contents: ContentsInfo, search: string): MatchResult[] {
+export function getMatchingContents(contents: VariantInfo, search: string): MatchResult[] {
   const results: MatchResult[] = []
 
   if (contents.buildingFamilies) {
@@ -456,4 +461,230 @@ export function getMatchingContents(contents: ContentsInfo, search: string): Mat
   }
 
   return uniqueBy(results, result => result.element)
+}
+
+export function searchIndex(index: Index, search: string): { [path: string]: MatchResult[] } {
+  const results: { [path: string]: MatchResult[] } = {}
+
+  const parts = search.split("-")
+
+  function searchBuildingFamilies(familyId: FamilyID): void {
+    const family = index.buildingFamilies[familyId]
+    if (family?.family?.file) {
+      results[family.family.file] ??= []
+      results[family.family.file].push({
+        element: `buildingFamily-${familyId}`,
+        name: family.family.name ?? familyId,
+        tab: "lots",
+        type: "Building family",
+      })
+    }
+
+    if (family?.buildings) {
+      for (const building of family.buildings) {
+        results[building.file] ??= []
+        results[building.file].push({
+          element: `buildingFamily-${familyId}`,
+          name: building.name ?? building.id,
+          tab: "lots",
+          type: "Building with family",
+        })
+      }
+    }
+  }
+
+  function searchBuildings(buildingId: BuildingID, groupId?: GroupID): void {
+    const buildings = index.buildings[buildingId]
+    if (buildings) {
+      for (const building of buildings) {
+        if (!groupId || building.group === groupId) {
+          results[building.file] ??= []
+          results[building.file].push({
+            element: `building-${buildingId}`,
+            name: building.name ?? buildingId,
+            tab: "lots",
+            type: "Building",
+          })
+        }
+      }
+    }
+  }
+
+  function searchLots(lotId: LotID): void {
+    const lots = index.lots[lotId]
+    if (lots) {
+      for (const lot of lots) {
+        results[lot.file] ??= []
+        results[lot.file].push({
+          element: `lot-${lotId}`,
+          name: lot.name ?? lotId,
+          tab: "lots",
+          type: "Lot",
+        })
+      }
+    }
+  }
+
+  function searchMMPs(mmpId: FloraID, groupId?: GroupID): void {
+    const mmps = index.mmps[mmpId]
+    if (mmps) {
+      for (const mmp of mmps) {
+        if (!groupId || mmp.group === groupId) {
+          const stage = mmp.id === mmpId ? mmp : mmp.stages?.find(stage => stage.id === mmpId)
+          results[mmp.file] ??= []
+          results[mmp.file].push({
+            element: `mmp-${mmpId}`,
+            name: stage?.name ?? mmpId,
+            tab: "mmps",
+            type: "MMP",
+          })
+        }
+      }
+    }
+  }
+
+  function searchModels(groupId: GroupID, instanceId?: string): void {
+    const models = index.models[groupId]
+    if (models) {
+      if (instanceId && instanceId.length >= 4) {
+        const normalizedInstanceId = instanceId.slice(0, 4).padEnd(8, "0") as InstanceID
+        const paths = models[normalizedInstanceId]
+        if (paths) {
+          for (const path of paths) {
+            results[path] ??= []
+            results[path].push({
+              element: `model-${groupId}-${normalizedInstanceId}`,
+              name: `${groupId}-${normalizedInstanceId}`,
+              // tab: "models",
+              type: "Model",
+            })
+          }
+        }
+      } else {
+        forEach(models, (paths, normalizedInstanceId) => {
+          if (!instanceId || normalizedInstanceId.startsWith(instanceId)) {
+            for (const path of paths) {
+              results[path] ??= []
+              results[path].push({
+                element: `model-${groupId}-${normalizedInstanceId}`,
+                name: `${groupId}-${normalizedInstanceId}`,
+                // tab: "models",
+                type: "Model",
+              })
+            }
+          }
+        })
+      }
+    }
+  }
+
+  function searchPropFamilies(familyId: FamilyID): void {
+    const family = index.propFamilies[familyId]
+    if (family?.family?.file) {
+      results[family.family.file] ??= []
+      results[family.family.file].push({
+        element: `propFamily-${familyId}`,
+        name: family.family.name ?? familyId,
+        tab: "props",
+        type: "Prop family",
+      })
+    }
+
+    if (family?.props) {
+      for (const prop of family.props) {
+        results[prop.file] ??= []
+        results[prop.file].push({
+          element: `propFamily-${familyId}`,
+          name: prop.name ?? prop.id,
+          tab: "props",
+          type: "Prop in family",
+        })
+      }
+    }
+  }
+
+  function searchProps(propId: PropID, groupId?: GroupID): void {
+    const props = index.props[propId]
+    if (props) {
+      for (const prop of props) {
+        if (!groupId || prop.group === groupId) {
+          results[prop.file] ??= []
+          results[prop.file].push({
+            element: `prop-${propId}`,
+            name: prop.name ?? propId,
+            tab: "lots",
+            type: "Prop",
+          })
+        }
+      }
+    }
+  }
+
+  function searchTextures(textureId: TextureID): void {
+    const searchRange = getTextureIdRange(textureId)
+    const paths = index.textures[searchRange[0]]
+    if (paths) {
+      for (const path of paths) {
+        results[path] ??= []
+        results[path].push({
+          element: `texture-${searchRange[0]}`,
+          name: searchRange.join(" ... "),
+          tab: "textures",
+          type: "Texture",
+        })
+      }
+    }
+  }
+
+  switch (parts.length) {
+    case 1: {
+      searchBuildingFamilies(search as FamilyID)
+      searchBuildings(search as BuildingID)
+      searchLots(search as LotID)
+      searchMMPs(search as FloraID)
+      searchModels(search as GroupID)
+      searchPropFamilies(search as FamilyID)
+      searchProps(search as PropID)
+      searchTextures(search as TextureID)
+      break
+    }
+
+    case 2: {
+      const [groupId, instanceId] = parts as [GroupID, InstanceID]
+      searchModels(groupId, instanceId)
+      if (instanceId.length === 8) {
+        searchBuildings(instanceId as BuildingID, groupId)
+        searchMMPs(instanceId as FloraID, groupId)
+        searchProps(instanceId as PropID, groupId)
+        if (groupId === GroupID.LOT_CONFIG) {
+          searchLots(instanceId as LotID)
+        } else if (groupId === GroupID.FSH_TEXTURE) {
+          searchTextures(instanceId as TextureID)
+        }
+      }
+
+      break
+    }
+
+    case 3: {
+      const [typeId, groupId, instanceId] = parts as [TypeID, GroupID, InstanceID]
+      if (typeId === TypeID.S3D) {
+        searchModels(groupId, instanceId)
+      } else if (instanceId.length === 8) {
+        if (typeId === TypeID.FSH && groupId === GroupID.FSH_TEXTURE) {
+          searchTextures(instanceId as TextureID)
+        } else if (typeId === TypeID.EXEMPLAR) {
+          searchBuildings(instanceId as BuildingID, groupId)
+          searchMMPs(instanceId as FloraID, groupId)
+          searchProps(instanceId as PropID, groupId)
+          if (groupId === GroupID.LOT_CONFIG) {
+            searchLots(instanceId as LotID)
+          }
+        }
+      }
+      break
+    }
+  }
+
+  return results
 }

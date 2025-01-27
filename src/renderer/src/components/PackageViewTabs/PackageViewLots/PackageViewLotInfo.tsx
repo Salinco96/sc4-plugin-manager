@@ -40,6 +40,7 @@ export function PackageViewLotInfo({
   packageId,
   setEnabled,
 }: PackageViewLotInfoProps): JSX.Element {
+  const index = store.useIndex()
   const packageStatus = store.usePackageStatus(packageId)
   const profileOptions = store.useProfileOptions()
   const variantInfo = store.useCurrentVariant(packageId)
@@ -50,8 +51,7 @@ export function PackageViewLotInfo({
 
   const isDisabled = (isTogglable && (!isEnabled || isDependency)) || !isCompatible
 
-  const isMaxisLot = store.useStore(state => !!state.maxis?.lots?.some(where("id", lot.id)))
-
+  const isMaxisLot = index?.lots[lot.id]?.some(lot => lot.file === "SimCity_1.dat")
   const isMaxisOverride = isMaxisLot && lot.file !== "SimCity_1.dat"
   const isPatched = !!fileInfo?.patches // TODO: Check entry, not whole file!
 

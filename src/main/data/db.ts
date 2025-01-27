@@ -13,16 +13,22 @@ import {
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import type { ContentsInfo } from "@common/variants"
-import { loadConfig, readConfig } from "@node/configs"
-import { type ContentsData, loadContentsInfo } from "@node/data/packages"
+import type { Contents, FileContentsInfo } from "@common/variants"
+import { loadConfig, readConfig, writeConfig } from "@node/configs"
+import {
+  type FileContentsData,
+  loadContents,
+  loadContentsInfo,
+  writeContents,
+} from "@node/data/packages"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 
 import type { Assets } from "@common/assets"
+import { isDBPF } from "@common/dbpf"
 import type { ToolID, Tools } from "@common/tools"
 import { type OptionData, loadOptionInfo } from "@node/data/options"
 import { type ToolData, loadToolInfo } from "@node/data/tools"
-import { analyzeSC4Files } from "@node/dbpf/analyze"
+import { analyzeSC4File, analyzeSC4Files } from "@node/dbpf/analyze"
 import type { TaskContext } from "@node/tasks"
 import { glob } from "glob"
 import { fromProfileData } from "./profiles"
@@ -86,57 +92,115 @@ export async function loadExemplarProperties(
   }
 }
 
-export async function loadMaxisExemplars(
+export async function loadMaxisContents(
   context: TaskContext,
   basePath: string,
-  categories: Categories,
-): Promise<ContentsInfo> {
+  gamePath: string,
+  options: {
+    categories: Categories
+    exemplarProperties: ExemplarProperties
+  },
+): Promise<{ [path in string]?: FileContentsInfo }> {
   try {
-    const config = await loadConfig<ContentsData>(basePath, FILENAMES.dbMaxisExemplars)
+    const config = await loadConfig<{ [path in string]?: FileContentsData }>(
+      basePath,
+      FILENAMES.indexMaxis,
+    )
 
-    if (!config) {
-      throw Error(`Missing config ${FILENAMES.dbMaxisExemplars}`)
+    if (config) {
+      return mapValues(config.data, (data, file) =>
+        loadContentsInfo(file, data, options.categories),
+      )
     }
 
-    return loadContentsInfo(config.data, categories)
+    context.debug("Indexing Maxis files...")
+
+    const files = [
+      "SimCity_1.dat",
+      "SimCity_2.dat",
+      "SimCity_3.dat",
+      "SimCity_4.dat",
+      "SimCity_5.dat",
+    ]
+
+    const { contents } = await analyzeSC4Files(gamePath, files, options.exemplarProperties)
+
+    await writeConfig<FileContentsData>(
+      basePath,
+      FILENAMES.indexMaxis,
+      writeContents(contents, options.categories),
+      ConfigFormat.YAML,
+    )
+
+    return contents
   } catch (error) {
     context.error("Failed to load Maxis exemplars", error)
     return {}
   }
 }
 
-export async function loadExternals(
+export async function loadPlugins(
   context: TaskContext,
   basePath: string,
-  exemplarProperties: ExemplarProperties,
-): Promise<{ [path: string]: ContentsInfo }> {
+  pluginsPath: string,
+  options: {
+    categories: Categories
+    exemplarProperties: ExemplarProperties
+  },
+): Promise<{ [path in string]?: FileContentsInfo }> {
   try {
+    const config = await loadConfig<{ [path in string]?: FileContentsData }>(
+      basePath,
+      FILENAMES.indexPlugins,
+    )
+
     context.debug("Indexing external plugins...")
 
-    const pluginFiles = await glob("**/*.{dat,sc4desc,sc4lot,sc4model}", {
-      cwd: basePath,
+    const cache = config ? loadContents(config.data, options.categories) : {}
+
+    const pluginFiles = await glob("**/*", {
+      cwd: pluginsPath,
       dot: true,
+      ignore: ["**/*.{ini,log}"],
       nodir: true,
       withFileTypes: true,
     })
 
-    const externals: { [path: string]: ContentsInfo } = {}
+    const plugins: Contents = {}
 
     for (const file of pluginFiles) {
       if (!file.isSymbolicLink()) {
         const relativePath = file.relativePosix()
 
-        try {
-          const { contents } = await analyzeSC4Files(basePath, [relativePath], exemplarProperties)
+        if (!isDBPF(relativePath)) {
+          plugins[relativePath] = {}
+        } else if (cache[relativePath]) {
+          plugins[relativePath] = cache[relativePath]
+        } else {
+          try {
+            const { contents } = await analyzeSC4File(
+              pluginsPath,
+              relativePath,
+              options.exemplarProperties,
+            )
 
-          externals[relativePath] = contents
-        } catch (error) {
-          context.error(`Failed to analyze ${relativePath}`, error)
+            plugins[relativePath] = contents
+          } catch (error) {
+            context.error(`Failed to analyze ${relativePath}`, error)
+          }
         }
       }
     }
 
-    return externals
+    await writeConfig<{ [path in string]?: FileContentsData }>(
+      basePath,
+      FILENAMES.indexPlugins,
+      writeContents(plugins, options.categories),
+      ConfigFormat.YAML,
+      config?.format,
+    )
+
+    return plugins
   } catch (error) {
     context.error("Failed to index external plugins", error)
     return {}

@@ -23,11 +23,12 @@ export const DIRNAMES = {
 export const FILENAMES = {
   dbCategories: "configs/categories",
   dbExemplarProperties: "configs/exemplar-properties",
-  dbMaxisExemplars: "configs/maxis",
   dbProfileOptions: "configs/profile-options",
   dbTools: "configs/tools",
   dgVoodoo: "Apps/dgVoodooCpl.exe",
   appConfig: "config",
+  indexMaxis: "index-maxis",
+  indexPlugins: "index-plugins",
   logs: "main.log",
   packageConfig: "package",
   sc4exe: "Apps/SimCity 4.exe",

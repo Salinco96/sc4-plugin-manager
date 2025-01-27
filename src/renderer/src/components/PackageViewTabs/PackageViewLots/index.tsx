@@ -19,7 +19,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
   const elementId = ui.useStore(state => state.pages[Page.PackageView]?.elementId)
 
   const features = store.useFeatures()
-  const maxis = store.useMaxis()
+  const index = store.useIndex()
   const packageStatus = store.usePackageStatus(packageId)
   const profileInfo = store.useCurrentProfile()
   const profileOptions = store.useProfileOptions()
@@ -150,17 +150,15 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
       }
     } = {}
 
-    // Group props by family
+    // Group lots by family
     forEach(lots, lot => {
       const buildingId = lot.building
 
       if (buildingId) {
-        const building =
-          buildings[buildingId] ?? maxis?.buildings?.find(building => building.id === buildingId)
+        const building = buildings[buildingId] ?? index?.buildings[buildingId]?.[0]
 
         const buildingFamily =
-          buildingFamilies[buildingId] ??
-          maxis?.buildingFamilies?.find(family => family.id === buildingId)
+          buildingFamilies[buildingId] ?? index?.buildingFamilies[buildingId]?.family
 
         if (building || buildingFamily) {
           groupedByBuilding[buildingId] ??= {
@@ -176,27 +174,27 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
       }
     })
 
-    for (const maxisLot of maxis?.lots ?? []) {
-      const buildingId = maxisLot.building
+    if (index) {
+      forEach(index.lots, ([lot]) => {
+        const buildingId = lot.building
 
-      if (buildingId) {
-        const building = buildings[buildingId]
-        const buildingFamily = buildingFamilies[buildingId]
+        if (buildingId) {
+          const building = buildings[buildingId]
+          const buildingFamily = buildingFamilies[buildingId]
 
-        if (building || buildingFamily) {
-          groupedByBuilding[buildingId] ??= {
-            building,
-            buildingFamily,
-            familyId: buildingFamily?.id,
-            groupId: buildingId,
-            lots: [],
-          }
+          if (building || buildingFamily) {
+            groupedByBuilding[buildingId] ??= {
+              building,
+              buildingFamily,
+              familyId: buildingFamily?.id,
+              groupId: buildingId,
+              lots: [],
+            }
 
-          if (!groupedByBuilding[buildingId].lots.some(lot => lot.id === maxisLot.id)) {
-            groupedByBuilding[buildingId].lots.push(maxisLot)
+            groupedByBuilding[buildingId].lots.push(lot)
           }
         }
-      }
+      })
     }
 
     // Sort props within families
@@ -205,11 +203,10 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
 
       if (familyId) {
         group.familyBuildings = unionBy(
-          values(buildings),
-          maxis?.buildings ?? [],
-
+          values(buildings).filter(building => building.families?.includes(familyId)),
+          index?.buildingFamilies[familyId]?.buildings ?? [],
           building => building.id,
-        ).filter(building => building.families?.includes(familyId))
+        )
       }
     })
 
@@ -218,7 +215,7 @@ export default function PackageViewLots({ packageId }: { packageId: PackageID })
       values(groupedByBuilding),
       group => group.buildingFamily?.name || group.building?.name || group.groupId,
     )
-  }, [features, maxis, packageId, profileInfo, profileOptions, settings, variantInfo])
+  }, [features, index, packageId, profileInfo, profileOptions, settings, variantInfo])
 
   return (
     <FlexCol fullHeight>
