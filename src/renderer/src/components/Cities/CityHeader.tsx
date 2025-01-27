@@ -1,6 +1,6 @@
 import { Map as RegionIcon } from "@mui/icons-material"
 import { sortBy, values } from "@salinco/nice-utils"
-import { useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ProfileID } from "@common/profiles"
@@ -16,7 +16,7 @@ import { ActionButton, type Variant } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { Page } from "@utils/navigation"
 
-import { createBackup, linkCity } from "@stores/actions"
+import { createBackup, linkCity, loadSavePreviewPicture } from "@stores/actions"
 import { store } from "@stores/main"
 import { UpdateSaveActionModal, useUpdateSaveActionModal } from "./UpdateSaveActionModal"
 
@@ -38,6 +38,29 @@ export function CityHeader({
     cityId,
     regionId,
   })
+
+  const [previewPicture, setPrevieWPicture] = useState<string>()
+
+  // Try to load the PNG preview picture included in save files
+  useEffect(() => {
+    loadSavePreviewPicture(regionId, cityId).then(
+      entry => {
+        if (entry.data) {
+          const src = `data:image/${entry.type};base64, ${entry.data.base64}`
+          setPrevieWPicture(src)
+        } else {
+          setPrevieWPicture(undefined)
+        }
+      },
+      error => {
+        if (error instanceof Error && error.message.match(/missing entry/i)) {
+          setPrevieWPicture(undefined)
+        } else {
+          console.error(error)
+        }
+      },
+    )
+  }, [cityId, regionId])
 
   const regionProfileId = getRegionLinkedProfileId(regionId, settings, profiles)
   const cityProfileId = getCityLinkedProfileId(regionId, cityId, settings)
@@ -99,6 +122,7 @@ export function CityHeader({
           />
         </>
       }
+      images={previewPicture ? [previewPicture] : undefined}
       isListItem={isListItem}
       location={{ data: { cityId, regionId }, page: Page.CityView }}
       setActive={setActive}

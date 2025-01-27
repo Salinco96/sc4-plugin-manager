@@ -1,6 +1,6 @@
 import type { AuthorID } from "@common/authors"
 import type { CollectionID } from "@common/collections"
-import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { DBPFDataType, DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { OptionID, OptionValue } from "@common/options"
 import { type PackageID, isEnabled, isIncluded, isIncompatible, isSelected } from "@common/packages"
@@ -316,6 +316,14 @@ export async function loadDBPFEntry(
   entryId: TGI,
 ): Promise<DBPFEntry> {
   return window.api.loadDBPFEntry(packageId, variantId, filePath, entryId)
+}
+
+export async function loadSavePreviewPicture(
+  regionId: RegionID,
+  cityId: CityID,
+  backupFile?: string,
+): Promise<DBPFEntry<DBPFDataType.PNG>> {
+  return window.api.loadSavePreviewPicture(regionId, cityId, backupFile)
 }
 
 export async function openAuthorURL(authorId: AuthorID): Promise<void> {

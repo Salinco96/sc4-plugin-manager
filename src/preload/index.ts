@@ -1,7 +1,7 @@
 import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import type { AuthorID } from "@common/authors"
-import type { DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { DBPFDataType, DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -66,6 +66,13 @@ export const api = {
     entryId: TGI,
   ): Promise<DBPFEntry> {
     return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
+  },
+  loadSavePreviewPicture(
+    regionId: RegionID,
+    cityId: CityID,
+    backupFile?: string,
+  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
+    return ipcRenderer.invoke("loadSavePreviewPicture", regionId, cityId, backupFile)
   },
   openAuthorURL(authorId: AuthorID): Promise<void> {
     return ipcRenderer.invoke("openAuthorURL", authorId)

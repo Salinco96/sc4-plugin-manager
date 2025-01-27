@@ -1263,6 +1263,7 @@ export class Application {
     this.handle("installVariant")
     this.handle("loadDBPFEntries")
     this.handle("loadDBPFEntry")
+    this.handle("loadSavePreviewPicture")
     this.handle("openAuthorURL")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
@@ -2194,6 +2195,43 @@ export class Application {
       },
       pool: `${packageId}#${variantId}`,
     })
+  }
+
+  public async loadSavePreviewPicture(
+    regionId: RegionID,
+    cityId: CityID,
+    backupFile?: string,
+  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
+    return this.tasks.queue(
+      `region:preview:${regionId}:${cityId}${backupFile ? `:${backupFile}` : ""}`,
+      {
+        handler: async () => {
+          const fullPath = backupFile
+            ? this.getCityBackupPath(regionId, cityId, backupFile)
+            : this.getCityPath(regionId, cityId)
+
+          return openFile(fullPath, FileOpenMode.READ, async file => {
+            const { entries } = await loadDBPF(file, {
+              exemplarProperties: {},
+              loadExemplars: false,
+            })
+
+            const entry = entries["8a2482b9-4a2482bb-00000000" as TGI]
+
+            if (entry?.type !== DBPFDataType.PNG) {
+              throw Error(`Missing preview picture in ${fullPath}`)
+            }
+
+            entry.data ??= await loadDBPFEntry<DBPFDataType.PNG>(file, entry, {
+              exemplarProperties: {},
+            })
+
+            return entry
+          })
+        },
+        pool: `region:${regionId}`,
+      },
+    )
   }
 
   /**

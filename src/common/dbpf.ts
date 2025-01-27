@@ -58,6 +58,7 @@ export const TypeID = {
   LD: "6be74c60" as TypeID,
   LTEXT: "2026960b" as TypeID,
   PNG: "856ddbac" as TypeID,
+  SAVE_PNG: "8a2482b9" as TypeID,
   S3D: "5ad0e817" as TypeID,
 }
 
@@ -100,6 +101,7 @@ export const DBPFFileType = {
   PNG_UDRIVEIT_ICONS: `${TypeID.PNG}-${GroupID.PNG_UDRIVEIT_ICONS}`,
   PNG_UI: `${TypeID.PNG}-${GroupID.PNG_UI}`,
   PNG_UI_IMAGES: `${TypeID.PNG}-${GroupID.PNG_UI_IMAGES}`,
+  SAVE_PNG: TypeID.SAVE_PNG,
   S3D: TypeID.S3D,
   XML: "8877760.",
 } as const
@@ -157,7 +159,7 @@ export function getDataType(id: TGI): DBPFDataType {
     return DBPFDataType.LTEXT
   }
 
-  if (isType(id, DBPFFileType.PNG)) {
+  if (isType(id, DBPFFileType.PNG) || isType(id, DBPFFileType.SAVE_PNG)) {
     return DBPFDataType.PNG
   }
 
