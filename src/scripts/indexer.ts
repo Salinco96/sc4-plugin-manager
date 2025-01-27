@@ -446,7 +446,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
    */
 
   const dbMaxisConfig = await loadConfig<{ [path in string]?: FileContentsData }>(
-    dbAssetsDir,
+    dataAssetsDir,
     "maxis",
   )
 
@@ -463,7 +463,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     maxisContents = contents
 
     await writeConfig<{ [path in string]?: FileContentsData }>(
-      dbAssetsDir,
+      dataAssetsDir,
       "maxis",
       writeContents(contents, categories),
       ConfigFormat.YAML,
