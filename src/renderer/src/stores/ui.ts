@@ -60,6 +60,7 @@ const initialState: UiState = {
     [Page.PackageView]: {
       activeTab: "summary",
     },
+    [Page.Plugins]: {},
     [Page.Profile]: {},
     [Page.Regions]: {},
     [Page.RegionView]: {

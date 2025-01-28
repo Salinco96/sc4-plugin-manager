@@ -3,7 +3,7 @@ import type { FileHandle } from "node:fs/promises"
 import { forEach, values } from "@salinco/nice-utils"
 
 import { type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
-import { loadDBPF, patchDBPFEntries } from "@node/dbpf"
+import { loadDBPF, patchVariantFileEntries } from "@node/dbpf"
 
 import { BuildingRecord } from "./BuildingRecord"
 import { LotRecord } from "./LotRecord"
@@ -105,7 +105,7 @@ export class SaveFile {
       }
     })
 
-    await patchDBPFEntries(this.file, outFile, patches, { exemplarProperties: {} })
+    await patchVariantFileEntries(this.file, outFile, patches, { exemplarProperties: {} })
   }
 
   protected async subfile<T extends SaveSubfileType>(

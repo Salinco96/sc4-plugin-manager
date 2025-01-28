@@ -1,13 +1,14 @@
+import { List, ListItem } from "@mui/material"
+import { sortBy, values } from "@salinco/nice-utils"
+import { useEffect, useState } from "react"
+
 import { DBPFDataType, type DBPFFile, isDBPF } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
-import { PackageFile } from "@components/PackageFile/PackageFile"
-import { List, ListItem } from "@mui/material"
-import { sortBy, values } from "@salinco/nice-utils"
-import { loadDBPFEntries } from "@stores/actions"
+import { loadVariantFileEntries } from "@stores/actions"
 import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
-import { useEffect, useState } from "react"
+import { PackageFile } from "../PackageFile"
 
 export default function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
   const features = store.useFeatures()
@@ -26,7 +27,7 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
       const result: { [path in string]?: DBPFFile } = {}
 
       for (const file of variantInfo.files) {
-        result[file.path] = await loadDBPFEntries(packageId, variantInfo.id, file.path)
+        result[file.path] = await loadVariantFileEntries(packageId, variantInfo.id, file.path)
       }
 
       setFiles(files => ({ ...files, ...result }))
@@ -58,9 +59,9 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
       {sortBy(variantInfo.files ?? [], file => file.path).map((file, index) => (
         <ListItem key={file.path} sx={{ p: 2, pt: index === 0 ? 2 : 0 }}>
           <PackageFile
-            disabled={!enabledFiles?.includes(file)}
             file={file}
             fileData={files[file.path]}
+            isDisabled={!enabledFiles?.includes(file)}
             overriddenEntries={
               isDBPF(file.path) && files[file.path]?.entries && enabledFiles?.includes(file)
                 ? dbpfFiles.flatMap(other => {

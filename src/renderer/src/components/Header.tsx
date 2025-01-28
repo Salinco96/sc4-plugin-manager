@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useState } from "react"
+import { type ComponentType, type ReactNode, useEffect, useState } from "react"
 
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { Link } from "@mui/material"
@@ -14,10 +14,13 @@ export type HeaderProps<T> = T & {
 
 export function Header({
   actions,
+  compact,
   description,
+  icon: IconComponent,
   images,
   isListItem,
   location,
+  onClick,
   setActive,
   subtitle,
   summary,
@@ -29,12 +32,15 @@ export function Header({
   tools,
 }: HeaderProps<{
   actions?: ReactNode
+  compact?: boolean
   description?: string
   images?: string[]
+  icon?: ComponentType<{ fontSize: "inherit" }>
   isLoading?: boolean
   loadingLabel?: string
   location?: Location
-  subtitle: string
+  onClick?: () => void
+  subtitle?: string
   summary?: string
   tags?: ReactNode
   thumbnail?: string
@@ -54,17 +60,26 @@ export function Header({
 
   const active = !!isListItem && (focus || hover)
 
+  const onClickTitle = () => {
+    if (onClick) {
+      onClick()
+      setFocus(false)
+    } else if (isListItem && location) {
+      history.push(location)
+    }
+  }
+
   useEffect(() => {
     setActive?.(active)
   }, [setActive, active])
 
   const titleElement = (
-    <Text maxLines={1} title={title} variant="h6">
+    <Text maxLines={1} fontSize="inherit" fontWeight={500} title={title} mt="2px">
       {title}
     </Text>
   )
 
-  const subtitleElement = (
+  const subtitleElement = subtitle && (
     <Text maxLines={1} title={subtitle} variant="body2">
       {subtitle}
     </Text>
@@ -91,31 +106,41 @@ export function Header({
           )}
 
           <FlexCol flex="1 1 0" overflow="hidden">
-            {isListItem && location ? (
-              <Link
-                color="inherit"
-                onBlur={() => setFocus(false)}
-                onClick={() => history.push(location)}
-                onFocus={event => setFocus(event.target === event.currentTarget)}
-                onKeyDown={event => event.key === "Enter" && history.push(location)}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                sx={{
-                  cursor: "pointer",
-                  display: "block",
-                  textDecoration: active ? "underline" : "unset",
-                  width: "fit-content",
-                }}
-                tabIndex={0}
-              >
-                {titleElement}
-              </Link>
-            ) : (
-              titleElement
-            )}
+            <FlexRow centered fontSize={compact ? 14 : 20} gap={1}>
+              {IconComponent && (
+                <FlexRow centered>
+                  <IconComponent fontSize="inherit" />
+                </FlexRow>
+              )}
+
+              {onClick || (isListItem && location) ? (
+                <Link
+                  color="inherit"
+                  onBlur={() => setFocus(false)}
+                  onClick={onClickTitle}
+                  onFocus={event => setFocus(event.target === event.currentTarget)}
+                  onKeyDown={event => event.key === "Enter" && onClickTitle}
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
+                  sx={{
+                    cursor: "pointer",
+                    display: "block",
+                    textDecoration: active ? "underline" : "unset",
+                    width: "fit-content",
+                  }}
+                  tabIndex={0}
+                >
+                  {titleElement}
+                </Link>
+              ) : (
+                titleElement
+              )}
+
+              {compact && tags}
+            </FlexRow>
 
             <FlexRow centered>
-              {isListItem && location ? (
+              {isListItem && location && subtitleElement ? (
                 <Link
                   color="inherit"
                   onClick={() => history.push(location)}
@@ -135,7 +160,7 @@ export function Header({
               {tools}
             </FlexRow>
 
-            {tags}
+            {!compact && tags}
           </FlexCol>
         </FlexRow>
 

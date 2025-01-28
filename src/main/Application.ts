@@ -96,7 +96,7 @@ import { CLEANITOL_EXTENSIONS, DOC_EXTENSIONS, SC4_EXTENSIONS, matchFiles } from
 import { loadLotInfo } from "@node/data/lots"
 import { type PackageData, writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
-import { loadDBPF, loadDBPFEntry, patchDBPFEntries } from "@node/dbpf"
+import { loadDBPF, loadDBPFEntry, patchVariantFileEntries } from "@node/dbpf"
 import { getBuildingInfo } from "@node/dbpf/buildings"
 import { getLotInfo } from "@node/dbpf/lots"
 import { getPropInfo } from "@node/dbpf/props"
@@ -858,7 +858,7 @@ export class Application {
     await createIfMissing(path.dirname(patchedFullPath))
     return openFile(originalFullPath, FileOpenMode.READ, originalFile => {
       return openFile(patchedFullPath, FileOpenMode.WRITE, patchedFile => {
-        return patchDBPFEntries(originalFile, patchedFile, patches, { exemplarProperties })
+        return patchVariantFileEntries(originalFile, patchedFile, patches, { exemplarProperties })
       })
     })
   }
@@ -1261,20 +1261,24 @@ export class Application {
     this.handle("getState")
     this.handle("installTool")
     this.handle("installVariant")
-    this.handle("loadDBPFEntries")
-    this.handle("loadDBPFEntry")
+    this.handle("loadPluginFileEntries")
+    this.handle("loadPluginFileEntry")
     this.handle("loadSavePreviewPicture")
+    this.handle("loadVariantFileEntries")
+    this.handle("loadVariantFileEntry")
     this.handle("openAuthorURL")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
     this.handle("openPackageConfig")
     this.handle("openPackageFile")
     this.handle("openPackageURL")
+    this.handle("openPluginFolder")
     this.handle("openProfileConfig")
     this.handle("openRegionFolder")
     this.handle("openToolFile")
     this.handle("openToolURL")
-    this.handle("patchDBPFEntries")
+    this.handle("patchPluginFileEntries")
+    this.handle("patchVariantFileEntries")
     this.handle("removeBackup")
     this.handle("removeProfile")
     this.handle("removeTool")
@@ -2098,7 +2102,82 @@ export class Application {
     })
   }
 
-  public async loadDBPFEntries(
+  public async loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
+    const { exemplarProperties, packages } = await this.load()
+
+    return this.tasks.queue(`plugins:load:${pluginPath}`, {
+      handler: async () => {
+        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+
+        return openFile(fullPath, FileOpenMode.READ, async patchedFile => {
+          return loadDBPF(patchedFile, { exemplarProperties })
+        })
+      },
+      pool: `plugins:${pluginPath}`,
+    })
+  }
+
+  public async loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFEntry> {
+    const { exemplarProperties } = await this.load()
+
+    return this.tasks.queue(`plugins:load:${pluginPath}#${entryId}`, {
+      handler: async () => {
+        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+
+        return openFile(fullPath, FileOpenMode.READ, async patchedFile => {
+          const contents = await loadDBPF(patchedFile, { exemplarProperties })
+          const entry = contents.entries[entryId]
+
+          if (!entry) {
+            throw Error(`Missing entry ${entryId} in ${pluginPath}`)
+          }
+
+          entry.data = await loadDBPFEntry(patchedFile, entry, { exemplarProperties })
+          return entry
+        })
+      },
+      pool: `plugins:${pluginPath}`,
+    })
+  }
+
+  public async loadSavePreviewPicture(
+    regionId: RegionID,
+    cityId: CityID,
+    backupFile?: string,
+  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
+    return this.tasks.queue(
+      `region:preview:${regionId}:${cityId}${backupFile ? `:${backupFile}` : ""}`,
+      {
+        handler: async () => {
+          const fullPath = backupFile
+            ? this.getCityBackupPath(regionId, cityId, backupFile)
+            : this.getCityPath(regionId, cityId)
+
+          return openFile(fullPath, FileOpenMode.READ, async file => {
+            const { entries } = await loadDBPF(file, {
+              exemplarProperties: {},
+              loadExemplars: false,
+            })
+
+            const entry = entries["8a2482b9-4a2482bb-00000000" as TGI]
+
+            if (entry?.type !== DBPFDataType.PNG) {
+              throw Error(`Missing preview picture in ${fullPath}`)
+            }
+
+            entry.data ??= await loadDBPFEntry<DBPFDataType.PNG>(file, entry, {
+              exemplarProperties: {},
+            })
+
+            return entry
+          })
+        },
+        pool: `region:${regionId}`,
+      },
+    )
+  }
+
+  public async loadVariantFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
@@ -2133,7 +2212,7 @@ export class Application {
     })
   }
 
-  public async loadDBPFEntry(
+  public async loadVariantFileEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
@@ -2196,43 +2275,6 @@ export class Application {
       },
       pool: `${packageId}#${variantId}`,
     })
-  }
-
-  public async loadSavePreviewPicture(
-    regionId: RegionID,
-    cityId: CityID,
-    backupFile?: string,
-  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
-    return this.tasks.queue(
-      `region:preview:${regionId}:${cityId}${backupFile ? `:${backupFile}` : ""}`,
-      {
-        handler: async () => {
-          const fullPath = backupFile
-            ? this.getCityBackupPath(regionId, cityId, backupFile)
-            : this.getCityPath(regionId, cityId)
-
-          return openFile(fullPath, FileOpenMode.READ, async file => {
-            const { entries } = await loadDBPF(file, {
-              exemplarProperties: {},
-              loadExemplars: false,
-            })
-
-            const entry = entries["8a2482b9-4a2482bb-00000000" as TGI]
-
-            if (entry?.type !== DBPFDataType.PNG) {
-              throw Error(`Missing preview picture in ${fullPath}`)
-            }
-
-            entry.data ??= await loadDBPFEntry<DBPFDataType.PNG>(file, entry, {
-              exemplarProperties: {},
-            })
-
-            return entry
-          })
-        },
-        pool: `region:${regionId}`,
-      },
-    )
   }
 
   /**
@@ -2328,6 +2370,16 @@ export class Application {
   }
 
   /**
+   * Opens the Plugins folder or one of its subfolder in the file explorer.
+   */
+  public async openPluginFolder(pluginPath?: string): Promise<void> {
+    const fullPath = pluginPath
+      ? path.join(this.getPluginsPath(), pluginPath)
+      : this.getPluginsPath()
+    await this.openInExplorer(fullPath)
+  }
+
+  /**
    * Opens a profile's config file in the default text editor.
    */
   public async openProfileConfig(profileId: ProfileID): Promise<void> {
@@ -2391,7 +2443,46 @@ export class Application {
     await this.openInExplorer(toolInfo[type])
   }
 
-  public async patchDBPFEntries(
+  public async patchPluginFileEntries(
+    pluginPath: string,
+    patches: {
+      [entryId in TGI]?: ExemplarDataPatch | null
+    },
+  ): Promise<DBPFFile> {
+    const { exemplarProperties } = await this.load()
+
+    return this.tasks.queue(`plugins:patch:${pluginPath}`, {
+      handler: async context => {
+        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+
+        const tempFullPath = this.getTempPath(fullPath)
+
+        // Generate patched file in temp folder
+        const file = await this.generatePatchedFile(
+          context,
+          fullPath,
+          tempFullPath,
+          mapValues(patches, patch => patch ?? undefined),
+          exemplarProperties,
+        )
+
+        // Replace original file with the patched version
+        await moveTo(tempFullPath, fullPath)
+
+        // Unset original field (so renderer will not show a diff)
+        forEach(file.entries, entry => {
+          entry.original = undefined
+        })
+
+        // TODO: Reanalyze entries
+
+        return file
+      },
+      pool: `plugins:${pluginPath}`,
+    })
+  }
+
+  public async patchVariantFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,

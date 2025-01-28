@@ -12,6 +12,7 @@ import {
   Extension as ModsIcon,
   NewReleases as NewIcon,
   LocalFlorist as ParksIcon,
+  InsertDriveFile as PluginsIcon,
   ReportProblem as ProblemsIcon,
   AccountBox as ProfileIcon,
   Map as RegionsIcon,
@@ -143,6 +144,17 @@ export const tabs: TabInfo[] = [
     id: "regions",
     label: "Regions",
     location: { page: Page.Regions, data: {} },
+  },
+  {
+    badge(state) {
+      if (state.plugins) {
+        return { label: size(state.plugins) }
+      }
+    },
+    icon: <PluginsIcon />,
+    id: "plugins",
+    label: "Plugins",
+    location: { page: Page.Plugins, data: {} },
   },
   {
     badge(state) {

@@ -3,17 +3,14 @@ import { ListItem, Typography } from "@mui/material"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { DBPFDataType, type DBPFEntry, type DBPFFile } from "@common/dbpf"
-import type { PackageID } from "@common/packages"
+import { DBPFDataType, type DBPFEntry as DBPFEntryType, type TGI } from "@common/dbpf"
+import type { ExemplarDataPatch } from "@common/exemplars"
 import { VariantState } from "@common/types"
-import type { FileInfo } from "@common/variants"
+import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { ToolButton } from "@components/ToolButton"
 import { EntryViewer } from "@components/Viewer/EntryViewer"
 
-import { Tag } from "@components/Tags/Tag"
-import { loadDBPFEntry, patchDBPFEntries } from "@stores/actions"
-import { store } from "@stores/main"
 import { getDBPFEntryLabel } from "./utils"
 
 const EDITABLETYPES = [
@@ -32,49 +29,30 @@ const VIEWABLETYPES = [
   // DBPFDataType.XML,
 ]
 
-export interface PackageEntryProps {
-  entry: DBPFEntry
-  file: FileInfo
-  fileData: DBPFFile
-  overridden?: boolean
-  packageId: PackageID
-  setFileData: (fileData: DBPFFile) => void
+export interface DBPFEntryProps {
+  entry: DBPFEntryType
+  isLocal?: boolean
+  isOverridden?: boolean
+  isPatched?: boolean
+  loadEntry: (entryId: TGI) => Promise<void>
+  onPatch: (patch: { [entryId in TGI]?: ExemplarDataPatch | null }) => void
 }
 
-export function PackageEntry({
+export function DBPFEntry({
   entry,
-  file,
-  fileData,
-  overridden,
-  packageId,
-  setFileData,
-}: PackageEntryProps): JSX.Element {
-  const variantInfo = store.useCurrentVariant(packageId)
-
+  isLocal = false,
+  isOverridden = false,
+  isPatched = false,
+  loadEntry,
+  onPatch,
+}: DBPFEntryProps): JSX.Element {
   const [isViewing, setViewing] = useState(false)
 
   const { t } = useTranslation("PackageViewFiles")
 
-  const isLocal = !!variantInfo.local
-  const isPatched = !!file.patches?.[entry.id]
   const isEditable = EDITABLETYPES.includes(entry.type)
   const isViewable = VIEWABLETYPES.includes(entry.type)
   const compression = entry.uncompressed ? 1 - entry.size / entry.uncompressed : 0
-
-  async function loadEntry() {
-    const data = await loadDBPFEntry(packageId, variantInfo.id, file.path, entry.id)
-
-    setFileData({
-      ...fileData,
-      entries: {
-        ...fileData.entries,
-        [entry.id]: {
-          ...fileData.entries[entry.id],
-          ...data,
-        },
-      },
-    })
-  }
 
   return (
     <ListItem
@@ -83,12 +61,12 @@ export function PackageEntry({
         alignItems: "center",
         display: "flex",
         gap: 0.5,
-        opacity: overridden ? 0.5 : undefined,
+        opacity: isOverridden ? 0.5 : undefined,
       }}
     >
       <Typography
-        sx={{ cursor: overridden ? "help" : undefined }}
-        title={overridden ? t("entry.overridden") : undefined}
+        sx={{ cursor: isOverridden ? "help" : undefined }}
+        title={isOverridden ? t("entry.overridden") : undefined}
         variant="body1"
       >
         {t(entry.uncompressed !== undefined ? "entry.labelCompressed" : "entry.label", {
@@ -98,32 +76,29 @@ export function PackageEntry({
           type: getDBPFEntryLabel(t, entry),
         })}
       </Typography>
+
       {isViewable && (
         <ToolButton
           description={isEditable ? t("entry.patch") : t("entry.view")}
           icon={isEditable ? PatchIcon : PreviewIcon}
           onClick={async () => {
             if (!entry.data) {
-              await loadEntry()
+              await loadEntry(entry.id)
             }
 
             setViewing(true)
           }}
         />
       )}
+
       {isPatched && <Tag dense tag={{ type: TagType.STATE, value: VariantState.PATCHED }} />}
+
       {isViewing && (
         <EntryViewer
           entry={entry}
           isLocal={isLocal}
           onClose={() => setViewing(false)}
-          onPatch={async patch => {
-            setFileData(
-              await patchDBPFEntries(packageId, variantInfo.id, file.path, {
-                [entry.id]: patch,
-              }),
-            )
-          }}
+          onPatch={patch => onPatch({ [entry.id]: patch })}
           open
         />
       )}

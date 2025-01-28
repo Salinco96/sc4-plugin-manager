@@ -301,21 +301,12 @@ export async function linkRegion(regionId: RegionID, profileId: ProfileID): Prom
   })
 }
 
-export async function loadDBPFEntries(
-  packageId: PackageID,
-  variantId: VariantID,
-  filePath: string,
-): Promise<DBPFFile> {
-  return window.api.loadDBPFEntries(packageId, variantId, filePath)
+export async function loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
+  return window.api.loadPluginFileEntries(pluginPath)
 }
 
-export async function loadDBPFEntry(
-  packageId: PackageID,
-  variantId: VariantID,
-  filePath: string,
-  entryId: TGI,
-): Promise<DBPFEntry> {
-  return window.api.loadDBPFEntry(packageId, variantId, filePath, entryId)
+export async function loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFEntry> {
+  return window.api.loadPluginFileEntry(pluginPath, entryId)
 }
 
 export async function loadSavePreviewPicture(
@@ -324,6 +315,23 @@ export async function loadSavePreviewPicture(
   backupFile?: string,
 ): Promise<DBPFEntry<DBPFDataType.PNG>> {
   return window.api.loadSavePreviewPicture(regionId, cityId, backupFile)
+}
+
+export async function loadVariantFileEntries(
+  packageId: PackageID,
+  variantId: VariantID,
+  filePath: string,
+): Promise<DBPFFile> {
+  return window.api.loadVariantFileEntries(packageId, variantId, filePath)
+}
+
+export async function loadVariantFileEntry(
+  packageId: PackageID,
+  variantId: VariantID,
+  filePath: string,
+  entryId: TGI,
+): Promise<DBPFEntry> {
+  return window.api.loadVariantFileEntry(packageId, variantId, filePath, entryId)
 }
 
 export async function openAuthorURL(authorId: AuthorID): Promise<void> {
@@ -358,6 +366,10 @@ export async function openPackageURL(
   return window.api.openPackageURL(packageId, variantId, type)
 }
 
+export async function openPluginFolder(pluginPath?: string): Promise<void> {
+  return window.api.openPluginFolder(pluginPath)
+}
+
 export async function openProfileConfig(profileId: ProfileID): Promise<void> {
   return window.api.openProfileConfig(profileId)
 }
@@ -377,13 +389,20 @@ export async function openToolURL(
   return window.api.openToolURL(toolId, type)
 }
 
-export async function patchDBPFEntries(
+export async function patchPluginFileEntries(
+  pluginPath: string,
+  patches: { [entryId in TGI]?: ExemplarDataPatch | null },
+): Promise<DBPFFile> {
+  return window.api.patchPluginFileEntries(pluginPath, patches)
+}
+
+export async function patchVariantFileEntries(
   packageId: PackageID,
   variantId: VariantID,
   filePath: string,
   patches: { [entryId in TGI]?: ExemplarDataPatch | null },
 ): Promise<DBPFFile> {
-  return window.api.patchDBPFEntries(packageId, variantId, filePath, patches)
+  return window.api.patchVariantFileEntries(packageId, variantId, filePath, patches)
 }
 
 export async function removeBackup(

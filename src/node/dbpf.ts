@@ -192,7 +192,7 @@ export async function loadDBPFEntry<T extends DBPFDataType>(
   }
 }
 
-export async function patchDBPFEntries(
+export async function patchVariantFileEntries(
   inFile: FileHandle,
   outFile: FileHandle,
   patches: {

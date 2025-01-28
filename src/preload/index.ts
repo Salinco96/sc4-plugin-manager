@@ -56,23 +56,33 @@ export const api = {
   installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
-  loadDBPFEntries(packageId: PackageID, variantId: VariantID, filePath: string): Promise<DBPFFile> {
-    return ipcRenderer.invoke("loadDBPFEntries", packageId, variantId, filePath)
-  },
-  loadDBPFEntry(
-    packageId: PackageID,
-    variantId: VariantID,
-    filePath: string,
-    entryId: TGI,
-  ): Promise<DBPFEntry> {
-    return ipcRenderer.invoke("loadDBPFEntry", packageId, variantId, filePath, entryId)
-  },
   loadSavePreviewPicture(
     regionId: RegionID,
     cityId: CityID,
     backupFile?: string,
   ): Promise<DBPFEntry<DBPFDataType.PNG>> {
     return ipcRenderer.invoke("loadSavePreviewPicture", regionId, cityId, backupFile)
+  },
+  loadPluginFileEntries(filePath: string): Promise<DBPFFile> {
+    return ipcRenderer.invoke("loadPluginFileEntries", filePath)
+  },
+  loadPluginFileEntry(filePath: string, entryId: TGI): Promise<DBPFEntry> {
+    return ipcRenderer.invoke("loadPluginFileEntry", filePath, entryId)
+  },
+  loadVariantFileEntries(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+  ): Promise<DBPFFile> {
+    return ipcRenderer.invoke("loadVariantFileEntries", packageId, variantId, filePath)
+  },
+  loadVariantFileEntry(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+    entryId: TGI,
+  ): Promise<DBPFEntry> {
+    return ipcRenderer.invoke("loadVariantFileEntry", packageId, variantId, filePath, entryId)
   },
   openAuthorURL(authorId: AuthorID): Promise<void> {
     return ipcRenderer.invoke("openAuthorURL", authorId)
@@ -96,6 +106,9 @@ export const api = {
   ): Promise<void> {
     return ipcRenderer.invoke("openPackageURL", packageId, variantId, type)
   },
+  openPluginFolder(pluginPath?: string): Promise<void> {
+    return ipcRenderer.invoke("openPluginFolder", pluginPath)
+  },
   openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
@@ -108,7 +121,15 @@ export const api = {
   openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void> {
     return ipcRenderer.invoke("openToolURL", toolId, type)
   },
-  patchDBPFEntries(
+  patchPluginFileEntries(
+    filePath: string,
+    patches: {
+      [entryId in TGI]?: ExemplarDataPatch | null
+    },
+  ): Promise<DBPFFile> {
+    return ipcRenderer.invoke("patchPluginFileEntries", filePath, patches)
+  },
+  patchVariantFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
@@ -116,7 +137,7 @@ export const api = {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile> {
-    return ipcRenderer.invoke("patchDBPFEntries", packageId, variantId, filePath, patches)
+    return ipcRenderer.invoke("patchVariantFileEntries", packageId, variantId, filePath, patches)
   },
   removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
     return ipcRenderer.invoke("removeBackup", regionId, cityId, file)

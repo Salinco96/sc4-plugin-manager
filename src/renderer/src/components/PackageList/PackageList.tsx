@@ -81,7 +81,12 @@ function SearchResults({
     <>
       {paths.map(path => (
         <FlexRow fullWidth key={path} pt={2} px={2}>
-          <ListItem header={Header} subtitle={path} title={path.split("/").slice(-1)[0]}>
+          <ListItem
+            header={Header}
+            location={{ data: { path }, page: Page.Plugins }}
+            subtitle={path}
+            title={path.split("/").slice(-1)[0]}
+          >
             <MatchResults results={searchResults[path]} />
           </ListItem>
         </FlexRow>

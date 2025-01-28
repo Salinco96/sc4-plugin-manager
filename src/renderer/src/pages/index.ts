@@ -12,6 +12,7 @@ export const PageComponents: {
   CollectionView: lazy(() => import("./CollectionView")),
   Packages: lazy(() => import("./Packages")),
   PackageView: lazy(() => import("./PackageView")),
+  Plugins: lazy(() => import("./Plugins")),
   Profile: lazy(() => import("./Profile")),
   Regions: lazy(() => import("./Regions")),
   RegionView: lazy(() => import("./RegionView")),

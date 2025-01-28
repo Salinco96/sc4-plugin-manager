@@ -11,7 +11,7 @@ import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
-import { loadDBPFEntry } from "@stores/actions"
+import { loadVariantFileEntry } from "@stores/actions"
 import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
@@ -52,7 +52,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
   const loadIcon = useEffectEvent(async () => {
     try {
       const entryId: TGI = `${DBPFFileType.PNG_MENU_ICONS}-${mmp.id}`
-      const entry = await loadDBPFEntry(packageId, variantInfo.id, mmp.file, entryId)
+      const entry = await loadVariantFileEntry(packageId, variantInfo.id, mmp.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const image = document.createElement("img")
 

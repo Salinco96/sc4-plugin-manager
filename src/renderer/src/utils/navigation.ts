@@ -16,6 +16,7 @@ export enum Page {
   CollectionView = "CollectionView",
   Packages = "Packages",
   PackageView = "PackageView",
+  Plugins = "Plugins",
   Profile = "Profile",
   Regions = "Regions",
   RegionView = "RegionView",
@@ -32,6 +33,7 @@ export type PageData<T extends Page> = {
   CollectionView: { collectionId: CollectionID }
   Packages: EmptyRecord
   PackageView: { packageId: PackageID }
+  Plugins: { path?: string }
   Profile: EmptyRecord
   Settings: EmptyRecord
   Regions: EmptyRecord
@@ -133,6 +135,7 @@ export interface Navigation {
   openCityView(cityId: CityID, regionId: RegionID): void
   openCollectionView(collectionId: CollectionID): void
   openPackageView(packageId: PackageID): void
+  openPluginsView(path?: string): void
   openRegionView(regionId: RegionID): void
   openToolView(toolId: ToolID): void
 }
@@ -162,6 +165,9 @@ export function useNavigation(): Navigation {
       },
       openPackageView(packageId) {
         history.push({ page: Page.PackageView, data: { packageId } })
+      },
+      openPluginsView(path) {
+        history.push({ page: Page.Plugins, data: { path } })
       },
       openRegionView(regionId) {
         history.push({ page: Page.RegionView, data: { regionId } })
