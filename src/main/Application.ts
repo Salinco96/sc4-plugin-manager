@@ -1974,6 +1974,7 @@ export class Application {
           context,
           this.getRootPath(),
           this.getPluginsPath(),
+          this.getRegionsPath(),
           profiles,
         )
 

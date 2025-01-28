@@ -39,10 +39,12 @@
     "openSimtropolis": "Open Simtropolis page"
   },
   "BackupPluginsModal": {
-    "confirmation": "Do you want to back up your {{plugins}} folder?",
-    "description": "Your {{plugins}} folder is not currently empty. The $t(General:app) is still experimental, so we recommend backing up your current {{plugins}} folder, then copying files back as needed.",
-    "failure": "Failed to backup {{plugins}} folder.",
-    "success": "Your {{plugins}} folder was backed up as {{pluginsBackup}}.",
+    "confirmation": "Do you want to back up your {{plugins}} and {{regions}} folders?",
+    "description": "Welcome and thanks for trying out $t(General:app)! While this tool is meant to be compatible with external content, and will not modify existing files without permission and automatic backups, it is also still experimental, and we suggest creating full backups of your current {{plugins}} and {{regions}} folders.",
+    "pluginsFailure": "Failed to backup {{plugins}} folder.",
+    "pluginsSuccess": "Your {{plugins}} folder was backed up as {{pluginsBackup}}.",
+    "regionsFailure": "Failed to backup {{regions}} folder.",
+    "regionsSuccess": "Your {{regions}} folder was backed up as {{regionsBackup}}.",
     "title": "$t(General:app)"
   },
   "BuildingStyle": {

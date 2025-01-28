@@ -1,4 +1,3 @@
-import fs from "node:fs/promises"
 import path from "node:path"
 
 import { isString, keys } from "@salinco/nice-utils"
@@ -8,7 +7,7 @@ import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
 import { loadConfig } from "@node/configs"
-import { createIfMissing, moveTo } from "@node/files"
+import { copyTo } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
@@ -20,6 +19,7 @@ export async function loadSettings(
   context: TaskContext,
   rootPath: string,
   pluginsPath: string,
+  regionsPath: string,
   profiles: Profiles,
 ): Promise<Settings> {
   const config = await loadConfig<SettingsData>(rootPath, FILENAMES.settings)
@@ -52,42 +52,63 @@ export async function loadSettings(
   // This must be the first time launching the manager, suggest creating a backup of Plugins folder
   if (!settings.format) {
     const pluginsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.pluginsBackup)
-    const plugins = await fs.readdir(pluginsPath)
+    const regionsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.regionsBackup)
 
-    if (plugins.length) {
-      const { confirmed } = await showConfirmation(
-        i18n.t("BackupPluginsModal:title"),
-        i18n.t("BackupPluginsModal:confirmation", {
-          plugins: DIRNAMES.plugins,
-        }),
-        i18n.t("BackupPluginsModal:description", {
-          plugins: DIRNAMES.plugins,
-        }),
-      )
+    const { confirmed } = await showConfirmation(
+      i18n.t("BackupPluginsModal:title"),
+      i18n.t("BackupPluginsModal:confirmation", {
+        plugins: DIRNAMES.plugins,
+        regions: DIRNAMES.regions,
+      }),
+      i18n.t("BackupPluginsModal:description", {
+        plugins: DIRNAMES.plugins,
+        regions: DIRNAMES.regions,
+      }),
+    )
 
-      if (confirmed) {
-        try {
-          // Rename folder, then recreate new empty one
-          await moveTo(pluginsPath, pluginsBackupPath)
-          await createIfMissing(pluginsPath)
-          await showSuccess(
-            i18n.t("BackupPluginsModal:title"),
-            i18n.t("BackupPluginsModal:success", {
-              plugins: DIRNAMES.plugins,
-              pluginsBackup: DIRNAMES.pluginsBackup,
-            }),
-          )
-        } catch (error) {
-          context.error(`Failed to backup ${DIRNAMES.plugins} folder`, error)
+    if (confirmed) {
+      try {
+        context.setStep(`Copying ${DIRNAMES.plugins}...`)
+        await copyTo(pluginsPath, pluginsBackupPath)
+        await showSuccess(
+          i18n.t("BackupPluginsModal:title"),
+          i18n.t("BackupPluginsModal:pluginsSuccess", {
+            plugins: DIRNAMES.plugins,
+            pluginsBackup: DIRNAMES.pluginsBackup,
+          }),
+        )
+      } catch (error) {
+        context.error(`Failed to backup ${DIRNAMES.plugins} folder`, error)
 
-          await showSuccess(
-            i18n.t("BackupPluginsModal:title"),
-            i18n.t("BackupPluginsModal:failure", {
-              plugins: DIRNAMES.plugins,
-            }),
-            (error as Error).message,
-          )
-        }
+        await showSuccess(
+          i18n.t("BackupPluginsModal:title"),
+          i18n.t("BackupPluginsModal:pluginsFailure", {
+            plugins: DIRNAMES.plugins,
+          }),
+          (error as Error).message,
+        )
+      }
+
+      try {
+        context.setStep(`Copying ${DIRNAMES.regions}...`)
+        await copyTo(regionsPath, regionsBackupPath)
+        await showSuccess(
+          i18n.t("BackupPluginsModal:title"),
+          i18n.t("BackupPluginsModal:regionsSuccess", {
+            regions: DIRNAMES.regions,
+            regionsBackup: DIRNAMES.regionsBackup,
+          }),
+        )
+      } catch (error) {
+        context.error(`Failed to backup ${DIRNAMES.plugins} folder`, error)
+
+        await showSuccess(
+          i18n.t("BackupPluginsModal:title"),
+          i18n.t("BackupPluginsModal:regionsFailure", {
+            regions: DIRNAMES.regions,
+          }),
+          (error as Error).message,
+        )
       }
     }
   }
