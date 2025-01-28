@@ -2735,9 +2735,7 @@ export class Application {
         profileInfo.format = undefined
 
         // Send update to renderer
-        this.sendStateUpdate({ profiles: { [profileId]: null } }, { merge: true })
-
-        await showSuccess(i18n.t("RemoveProfileModal:title"), i18n.t("RemoveProfileModal:success"))
+        this.sendProfileDeletion(profileId)
 
         return true
       },
@@ -2866,7 +2864,7 @@ export class Application {
           if (packages[packageId]) {
             this.sendPackageUpdate(packageInfo)
           } else {
-            this.sendStateUpdate({ packages: { [packageId]: null } }, { merge: true })
+            this.sendPackageDeletion(packageId)
           }
         }
       },
@@ -2961,20 +2959,34 @@ export class Application {
   }
 
   /**
-   * Sends updates to a single package to the renderer.
+   * Sends deletion of a single package to the renderer.
    */
-  protected sendPackageUpdate(packageInfo: PackageInfo, options?: { recompute?: boolean }): void {
-    this.sendStateUpdate(
-      { packages: { [packageInfo.id]: packageInfo } },
-      { merge: true, recompute: options?.recompute ?? true },
-    )
+  protected sendPackageDeletion(packageId: PackageID): void {
+    this.sendStateUpdate({ packages: { [packageId]: null } }, { merge: true, recompute: true })
   }
 
   /**
    * Sends updates to a single package to the renderer.
    */
+  protected sendPackageUpdate(packageInfo: PackageInfo, options?: { recompute?: boolean }): void {
+    this.sendStateUpdate(
+      { packages: { [packageInfo.id]: packageInfo } },
+      { ...options, merge: true },
+    )
+  }
+
+  /**
+   * Sends deletion of a single profile to the renderer.
+   */
+  protected sendProfileDeletion(profileId: ProfileID): void {
+    this.sendStateUpdate({ profiles: { [profileId]: null } }, { merge: true })
+  }
+
+  /**
+   * Sends updates to a single profile to the renderer.
+   */
   protected sendProfileUpdate(profileInfo: ProfileInfo): void {
-    this.sendStateUpdate({ profiles: { [profileInfo.id]: profileInfo } }, { recompute: true })
+    this.sendStateUpdate({ profiles: { [profileInfo.id]: profileInfo } }, { merge: true })
   }
 
   /**

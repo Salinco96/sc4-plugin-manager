@@ -395,11 +395,18 @@ export async function removeBackup(
 }
 
 export async function removeProfile(profileId: ProfileID): Promise<boolean> {
+  const profile = store.api.getProfileInfo(profileId)
+
   try {
-    return await window.api.removeProfile(profileId)
+    const success = await window.api.removeProfile(profileId)
+    if (success) {
+      showSuccessToast(`Profile ${profile.name} has been removed`)
+    }
+
+    return false
   } catch (error) {
     console.error(`Failed to remove ${profileId}`, error)
-    showErrorToast(`Failed to remove ${profileId}`)
+    showErrorToast(`Failed to remove ${profile.name}`)
     return false
   }
 }
