@@ -51,28 +51,27 @@ import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { parseStringArray } from "@common/utils/types"
-import type { Contents, ModelID, TextureID, VariantAssetInfo, VariantInfo } from "@common/variants"
+import type { ModelID, TextureID, VariantAssetInfo, VariantInfo } from "@common/variants"
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
 import {
   type PackageData,
-  loadContents,
   loadPackageInfo,
   toVariantContentsInfo,
-  writeContents,
   writeModelId,
   writePackageInfo,
   writeVariantContentsInfo,
 } from "@node/data/packages"
-import type { FileContentsData } from "@node/data/packages"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 
 import type { Categories, CategoryID } from "@common/categories"
+import { type FileContents, MAXIS_FILES } from "@common/plugins"
 import { loadAuthors, writeAuthors } from "@node/data/authors"
 import { loadCollections, writeCollections } from "@node/data/collections"
+import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
 import { exists, removeIfPresent, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "../node/dbpf/analyze"
@@ -450,15 +449,11 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     "maxis",
   )
 
-  let maxisContents: Contents
+  let maxisContents: FileContents
   if (dbMaxisConfig?.data) {
     maxisContents = loadContents(dbMaxisConfig.data, categories)
   } else {
-    const { contents } = await analyzeSC4Files(
-      gameDir,
-      ["SimCity_1.dat", "SimCity_2.dat", "SimCity_3.dat", "SimCity_4.dat", "SimCity_5.dat"],
-      exemplarProperties,
-    )
+    const { contents } = await analyzeSC4Files(gameDir, MAXIS_FILES, exemplarProperties)
 
     maxisContents = contents
 

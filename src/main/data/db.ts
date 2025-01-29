@@ -13,22 +13,18 @@ import {
 import type { OptionInfo } from "@common/options"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
 import { ConfigFormat } from "@common/types"
-import type { Contents, FileContentsInfo } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
-import {
-  type FileContentsData,
-  loadContents,
-  loadContentsInfo,
-  writeContents,
-} from "@node/data/packages"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 
 import type { Assets } from "@common/assets"
 import { isDBPF } from "@common/dbpf"
+import { type FileContents, MAXIS_FILES, type Plugins } from "@common/plugins"
 import type { ToolID, Tools } from "@common/tools"
 import { type OptionData, loadOptionInfo } from "@node/data/options"
+import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
 import { type ToolData, loadToolInfo } from "@node/data/tools"
 import { analyzeSC4File, analyzeSC4Files } from "@node/dbpf/analyze"
+import { exists, getExtension } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { glob } from "glob"
 import { fromProfileData } from "./profiles"
@@ -100,7 +96,7 @@ export async function loadMaxisContents(
     categories: Categories
     exemplarProperties: ExemplarProperties
   },
-): Promise<{ [path in string]?: FileContentsInfo }> {
+): Promise<FileContents> {
   try {
     const config = await loadConfig<{ [path in string]?: FileContentsData }>(
       basePath,
@@ -108,22 +104,12 @@ export async function loadMaxisContents(
     )
 
     if (config) {
-      return mapValues(config.data, (data, file) =>
-        loadContentsInfo(file, data, options.categories),
-      )
+      return loadContents(config.data, options.categories)
     }
 
     context.debug("Indexing Maxis files...")
 
-    const files = [
-      "SimCity_1.dat",
-      "SimCity_2.dat",
-      "SimCity_3.dat",
-      "SimCity_4.dat",
-      "SimCity_5.dat",
-    ]
-
-    const { contents } = await analyzeSC4Files(gamePath, files, options.exemplarProperties)
+    const { contents } = await analyzeSC4Files(gamePath, MAXIS_FILES, options.exemplarProperties)
 
     await writeConfig<FileContentsData>(
       basePath,
@@ -147,7 +133,7 @@ export async function loadPlugins(
     categories: Categories
     exemplarProperties: ExemplarProperties
   },
-): Promise<{ [path in string]?: FileContentsInfo }> {
+): Promise<Plugins> {
   try {
     const config = await loadConfig<{ [path in string]?: FileContentsData }>(
       basePath,
@@ -166,7 +152,7 @@ export async function loadPlugins(
       withFileTypes: true,
     })
 
-    const plugins: Contents = {}
+    const plugins: Plugins = {}
 
     for (const file of pluginFiles) {
       if (!file.isSymbolicLink()) {
@@ -187,6 +173,21 @@ export async function loadPlugins(
             plugins[relativePath] = contents
           } catch (error) {
             context.error(`Failed to analyze ${relativePath}`, error)
+          }
+        }
+
+        if (plugins[relativePath]) {
+          if (getExtension(relativePath) === ".dll") {
+            if (relativePath.includes("/")) {
+              plugins[relativePath].issues = { dllNotTopLevel: true }
+            }
+
+            const logsPath = relativePath.replace(".dll", ".log")
+            if (await exists(path.join(pluginsPath, logsPath))) {
+              plugins[relativePath].logs = logsPath
+            }
+          } else if (!isDBPF(relativePath)) {
+            plugins[relativePath].issues = { unsupported: true }
           }
         }
       }

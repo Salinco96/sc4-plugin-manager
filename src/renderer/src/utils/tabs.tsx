@@ -148,6 +148,10 @@ export const tabs: TabInfo[] = [
   {
     badge(state) {
       if (state.plugins) {
+        if (values(state.plugins).some(plugin => plugin.issues)) {
+          return { color: "warning", icon: "error", label: "Some files have issues" }
+        }
+
         return { label: size(state.plugins) }
       }
     },

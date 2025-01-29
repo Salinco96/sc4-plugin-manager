@@ -1,7 +1,7 @@
 import { type ComponentType, type ReactNode, useEffect, useState } from "react"
 
 import { FlexCol, FlexRow } from "@components/FlexBox"
-import { Link } from "@mui/material"
+import { type IconProps, Link } from "@mui/material"
 import { type Location, useHistory } from "@utils/navigation"
 import { Text } from "./Text"
 import { Thumbnail } from "./Thumbnail"
@@ -17,6 +17,8 @@ export function Header({
   compact,
   description,
   icon: IconComponent,
+  iconColor,
+  iconDescription,
   images,
   isListItem,
   location,
@@ -35,7 +37,9 @@ export function Header({
   compact?: boolean
   description?: string
   images?: string[]
-  icon?: ComponentType<{ fontSize: "inherit" }>
+  icon?: ComponentType<{ color?: IconProps["color"]; fontSize: "inherit" }>
+  iconColor?: IconProps["color"]
+  iconDescription?: string
   isLoading?: boolean
   loadingLabel?: string
   location?: Location
@@ -74,7 +78,7 @@ export function Header({
   }, [setActive, active])
 
   const titleElement = (
-    <Text maxLines={1} fontSize="inherit" fontWeight={500} title={title} mt="2px">
+    <Text maxLines={1} fontSize="inherit" fontWeight={500} marginTop="2px" title={title}>
       {title}
     </Text>
   )
@@ -108,8 +112,8 @@ export function Header({
           <FlexCol flex="1 1 0" overflow="hidden">
             <FlexRow centered fontSize={compact ? 14 : 20} gap={1}>
               {IconComponent && (
-                <FlexRow centered>
-                  <IconComponent fontSize="inherit" />
+                <FlexRow centered fontSize={compact ? 16 : 20} title={iconDescription}>
+                  <IconComponent color={iconColor} fontSize="inherit" />
                 </FlexRow>
               )}
 

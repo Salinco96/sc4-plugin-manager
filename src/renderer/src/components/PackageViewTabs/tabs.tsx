@@ -5,9 +5,9 @@ import { get, size, unique, uniqueBy, values } from "@salinco/nice-utils"
 import { lazy } from "react"
 
 import type { TabInfo } from "@components/Tabs"
-
 import { getCurrentVariant, getPackageInfo } from "@stores/main"
 import { getDependentPackages } from "@utils/packages"
+
 import { PackageViewSummary } from "./PackageViewSummary"
 
 export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [

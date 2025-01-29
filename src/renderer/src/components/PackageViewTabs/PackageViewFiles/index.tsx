@@ -8,7 +8,8 @@ import { globToRegex } from "@common/utils/glob"
 import { loadVariantFileEntries } from "@stores/actions"
 import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
-import { PackageFile } from "../PackageFile"
+
+import { PackageFileListItem } from "./PackageFileListItem"
 
 export default function PackageViewFiles({ packageId }: { packageId: PackageID }): JSX.Element {
   const features = store.useFeatures()
@@ -58,7 +59,7 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
     <List sx={{ display: "flex", flexDirection: "column", padding: 0 }}>
       {sortBy(variantInfo.files ?? [], file => file.path).map((file, index) => (
         <ListItem key={file.path} sx={{ p: 2, pt: index === 0 ? 2 : 0 }}>
-          <PackageFile
+          <PackageFileListItem
             file={file}
             fileData={files[file.path]}
             isDisabled={!enabledFiles?.includes(file)}

@@ -612,6 +612,36 @@
       }
     }
   },
+  "Plugins": {
+    "actions": {
+      "openFileLocation": {
+        "description": "Open file location"
+      },
+      "openFolder": {
+        "description": "Open folder"
+      },
+      "reloadPlugins": {
+        "description": "Reload Plugins folder",
+        "label": "Reload"
+      },
+      "removeFile": {
+        "description": "Move this file to Plugins (Backup)",
+        "label": "Remove"
+      },
+      "removeFolder": {
+        "description": "Move this folder to Plugins (Backup)",
+        "label": "Remove"
+      }
+    },
+    "empty": "No external plugins.",
+    "files_one": "{{count}} file",
+    "files_other": "{{count}} files",
+    "issues": {
+      "dllNotTopLevel": "DLL files must be located directly in the root Plugins folder.",
+      "unsupported": "This file format is not supported."
+    },
+    "missing": "This file or folder no longer exists."
+  },
   "Profile": {
     "actions": {
       "open": "Open configuration file",
@@ -819,6 +849,8 @@
     "cities_other": "{{count}} cities",
     "dependencies_one": "{{count}} dependency",
     "dependencies_other": "{{count}} dependencies",
+    "entries_one": "{{count}} entry",
+    "entries_other": "{{count}} entries",
     "files_one": "{{count}} file",
     "files_other": "{{count}} files",
     "logs": "Logs",

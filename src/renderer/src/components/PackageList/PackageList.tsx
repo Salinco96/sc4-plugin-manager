@@ -11,6 +11,7 @@ import { ListItem } from "@components/ListItem"
 import { Page, useLocation, useNavigation } from "@utils/navigation"
 import { type MatchResult, isHexSearch, searchIndex, toHexSearch } from "@utils/search"
 
+import { MAXIS_FILES } from "@common/plugins"
 import { store } from "@stores/main"
 import { EmptyPackageList } from "./EmptyPackageList"
 import { MatchResults } from "./MatchResults"
@@ -70,11 +71,9 @@ function SearchResults({
     searchResults?: { [path in string]: MatchResult[] }
   }
 }): JSX.Element {
-  const maxisPaths = ["SimCity_1.dat", "SimCity_2.dat"]
-
   const paths = [
-    ...maxisPaths.filter(path => searchResults[path]),
-    ...sort(difference(keys(searchResults), maxisPaths)),
+    ...MAXIS_FILES.filter(path => searchResults[path]),
+    ...sort(difference(keys(searchResults), MAXIS_FILES)),
   ]
 
   return (

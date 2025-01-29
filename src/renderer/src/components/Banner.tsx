@@ -3,8 +3,6 @@ import type { ReactNode } from "react"
 
 const StyledAlert = styled(Alert)`
   align-items: center;
-  height: 56px;
-  margin-top: 16px;
 
   & .MuiAlert-action {
     margin-left: 8px;
@@ -32,11 +30,19 @@ export interface BannerProps {
   action?: BannerAction
   children: ReactNode
   color?: AlertProps["color"]
+  compact?: boolean
   title?: string
   icon?: AlertProps["icon"]
 }
 
-export function Banner({ action, children, color, title, icon }: BannerProps): JSX.Element {
+export function Banner({
+  action,
+  children,
+  color,
+  compact,
+  title,
+  icon,
+}: BannerProps): JSX.Element {
   return (
     <StyledAlert
       action={
@@ -45,6 +51,7 @@ export function Banner({ action, children, color, title, icon }: BannerProps): J
             aria-label={action.description}
             color="inherit"
             onClick={action.onClick}
+            size={compact ? "small" : "medium"}
             title={action.description}
             variant="text"
           >
@@ -55,6 +62,7 @@ export function Banner({ action, children, color, title, icon }: BannerProps): J
       color={color}
       icon={icon}
       severity="warning"
+      sx={{ height: compact ? 40 : 56, marginTop: compact ? 1 : 2 }}
     >
       {title && <b>{title}: </b>}
       {children}

@@ -1,5 +1,7 @@
 import path from "node:path"
 
+import { toArray, toHex, values } from "@salinco/nice-utils"
+
 import {
   DBPFDataType,
   DBPFFileType,
@@ -16,8 +18,8 @@ import {
 } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { FloraInfo } from "@common/mmps"
+import type { FileContents, FileContentsInfo } from "@common/plugins"
 import { Feature } from "@common/types"
-import type { Contents, FileContentsInfo } from "@common/variants"
 import { loadDBPF } from "@node/dbpf"
 import { getBuildingInfo } from "@node/dbpf/buildings"
 import { getLotInfo } from "@node/dbpf/lots"
@@ -26,15 +28,14 @@ import { getPropInfo } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
 import { get, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
 import { FileOpenMode, openFile } from "@node/files"
-import { toArray, toHex, values } from "@salinco/nice-utils"
 
 export async function analyzeSC4Files(
   basePath: string,
   filePaths: string[],
   exemplarProperties: ExemplarProperties,
-): Promise<{ contents: Contents; features: Feature[] }> {
+): Promise<{ contents: FileContents; features: Feature[] }> {
   const features = new Set<Feature>()
-  const contents: Contents = {}
+  const contents: FileContents = {}
 
   for (const filePath of filePaths) {
     const results = await analyzeSC4File(basePath, filePath, exemplarProperties)

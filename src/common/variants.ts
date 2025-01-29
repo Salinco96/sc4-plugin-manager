@@ -21,21 +21,6 @@ export type VariantID = ID<string, VariantInfo>
 export type ModelID = `${GroupID}-${InstanceID}`
 export type TextureID = InstanceID<{ __type: "texture" }>
 
-export type FileContentsInfo = {
-  buildingFamilies?: FamilyInfo[]
-  buildings?: BuildingInfo[]
-  lots?: LotInfo[]
-  mmps?: FloraInfo[]
-  models?: ModelID[]
-  propFamilies?: FamilyInfo[]
-  props?: PropInfo[]
-  textures?: TextureID[]
-}
-
-export type Contents = {
-  [path in string]?: FileContentsInfo
-}
-
 export type VariantContentsInfo = {
   buildingFamilies?: FamilyInfo[]
   buildings?: BuildingInfo[]

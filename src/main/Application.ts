@@ -56,6 +56,7 @@ import {
   isPatched,
   isSelected,
 } from "@common/packages"
+import type { FileContents, Index } from "@common/plugins"
 import {
   type ProfileData,
   type ProfileID,
@@ -85,7 +86,7 @@ import type { ToolID } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
-import type { Contents, FileInfo, VariantID } from "@common/variants"
+import type { FileInfo, VariantID } from "@common/variants"
 import { getDefaultVariant } from "@common/variants"
 import { removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
@@ -111,6 +112,7 @@ import {
   exists,
   getExtension,
   isChild,
+  isDirectory,
   isURL,
   moveTo,
   openFile,
@@ -176,7 +178,7 @@ type Loaded = {
   [K in Exclude<keyof ApplicationState, "simtropolis">]-?: Exclude<ApplicationState[K], undefined>
 } & {
   assets: Assets
-  maxis: Contents
+  maxis: FileContents
 }
 
 export class Application {
@@ -357,7 +359,7 @@ export class Application {
    */
   public async cleanPackages(options: { packageIds?: PackageID[] } = {}): Promise<void> {
     const state = await this.load()
-    const { maxis, packages, plugins, profiles, settings } = state
+    const { packages, plugins, profiles, settings } = state
 
     if (!settings.currentProfile) {
       return
@@ -446,9 +448,7 @@ export class Application {
                 delete plugins[conflictingPath]
               }
 
-              const index = calculateIndex({ ...maxis, ...plugins })
-              state.index = index
-              this.sendStateUpdate({ index, plugins })
+              this.indexPlugins()
 
               context.debug(`Resolved ${conflictingPaths.size} conflicts`)
             } else {
@@ -483,9 +483,7 @@ export class Application {
               delete plugins[unsupportedPath]
             }
 
-            const index = calculateIndex({ ...maxis, ...plugins })
-            state.index = index
-            this.sendStateUpdate({ index, plugins })
+            this.indexPlugins()
 
             context.debug(`Removed ${unsupportedPaths.size} unsupported files`)
           } else {
@@ -1247,6 +1245,22 @@ export class Application {
     ipcMain.handle(event, (_, ...args: Args) => this[event](...args))
   }
 
+  protected async indexPlugins(): Promise<Index> {
+    const state = await this.load()
+    const { maxis, plugins } = state
+
+    return this.tasks.queue("plugins:index", {
+      handler: async () => {
+        const index = calculateIndex({ ...maxis, ...plugins })
+        state.index = index
+        this.sendStateUpdate({ index, plugins })
+        return index
+      },
+      invalidate: true,
+      pool: "main",
+    })
+  }
+
   protected init(): void {
     // Register message handlers
     this.handle("check4GBPatch")
@@ -1279,7 +1293,9 @@ export class Application {
     this.handle("openToolURL")
     this.handle("patchPluginFileEntries")
     this.handle("patchVariantFileEntries")
+    this.handle("reloadPlugins")
     this.handle("removeBackup")
+    this.handle("removePluginFile")
     this.handle("removeProfile")
     this.handle("removeTool")
     this.handle("removeVariant")
@@ -1764,17 +1780,8 @@ export class Application {
   }
 
   protected async linkPackages(options: { packageId?: PackageID } = {}): Promise<void> {
-    const state = await this.load()
-    const {
-      exemplarProperties,
-      features,
-      maxis,
-      packages,
-      plugins,
-      profiles,
-      profileOptions,
-      settings,
-    } = state
+    const { exemplarProperties, features, packages, plugins, profiles, profileOptions, settings } =
+      await this.load()
 
     const links = await this.initLinks()
 
@@ -1887,9 +1894,7 @@ export class Application {
           }
 
           if (pluginsChanged) {
-            const index = calculateIndex({ ...maxis, ...plugins })
-            state.index = index
-            this.sendStateUpdate({ index, plugins })
+            this.indexPlugins()
           }
 
           // Generate INI files
@@ -2103,7 +2108,7 @@ export class Application {
   }
 
   public async loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
-    const { exemplarProperties, packages } = await this.load()
+    const { exemplarProperties } = await this.load()
 
     return this.tasks.queue(`plugins:load:${pluginPath}`, {
       handler: async () => {
@@ -2744,6 +2749,27 @@ export class Application {
   }
 
   /**
+   * Reload plugins
+   */
+  public async reloadPlugins(): Promise<void> {
+    const state = await this.load()
+    const { categories, exemplarProperties } = state
+
+    await this.tasks.queue("plugins:load", {
+      handler: async context => {
+        const plugins = await loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
+          categories,
+          exemplarProperties,
+        })
+
+        state.plugins = plugins
+        this.indexPlugins()
+      },
+      pool: "main",
+    })
+  }
+
+  /**
    * Removes a backup.
    */
   public async removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
@@ -2778,6 +2804,41 @@ export class Application {
         this.sendStateUpdate({ regions })
       },
       pool: `region:${regionId}`,
+    })
+  }
+
+  /**
+   * Remove a file or folder from Plugins (moving it to backup).
+   */
+  public async removePluginFile(pluginPath: string): Promise<void> {
+    const { plugins } = await this.load()
+
+    await this.tasks.queue(`plugins:patch:${pluginPath}`, {
+      handler: async context => {
+        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        if (await isDirectory(fullPath)) {
+          const files = await glob("**/*", {
+            cwd: fullPath,
+            dot: true,
+            nodir: true,
+            withFileTypes: true,
+          })
+
+          for (const file of files) {
+            if (!file.isSymbolicLink()) {
+              const filePath = path.posix.join(pluginPath, file.relativePosix())
+              await this.backUpFile(context, filePath)
+              delete plugins[filePath]
+            }
+          }
+        } else {
+          await this.backUpFile(context, pluginPath)
+          delete plugins[pluginPath]
+        }
+
+        this.indexPlugins()
+      },
+      pool: `plugins:${pluginPath}`,
     })
   }
 

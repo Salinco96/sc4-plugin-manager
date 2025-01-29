@@ -42,6 +42,19 @@ export async function exists(fullPath: string): Promise<boolean> {
   }
 }
 
+export async function isDirectory(fullPath: string): Promise<boolean> {
+  try {
+    const stats = await fs.stat(fullPath)
+    return stats.isDirectory()
+  } catch (error) {
+    if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+      return false
+    }
+
+    throw error
+  }
+}
+
 export function getExtension(filePath: string): string {
   return path.extname(filePath).toLowerCase()
 }

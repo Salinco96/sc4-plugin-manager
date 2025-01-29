@@ -35,7 +35,7 @@ export interface DBPFEntryProps {
   isOverridden?: boolean
   isPatched?: boolean
   loadEntry: (entryId: TGI) => Promise<void>
-  onPatch: (patch: { [entryId in TGI]?: ExemplarDataPatch | null }) => void
+  patchFile: (patch: { [entryId in TGI]?: ExemplarDataPatch | null }) => void
 }
 
 export function DBPFEntry({
@@ -44,7 +44,7 @@ export function DBPFEntry({
   isOverridden = false,
   isPatched = false,
   loadEntry,
-  onPatch,
+  patchFile,
 }: DBPFEntryProps): JSX.Element {
   const [isViewing, setViewing] = useState(false)
 
@@ -98,7 +98,7 @@ export function DBPFEntry({
           entry={entry}
           isLocal={isLocal}
           onClose={() => setViewing(false)}
-          onPatch={patch => onPatch({ [entry.id]: patch })}
+          onPatch={patch => patchFile({ [entry.id]: patch })}
           open
         />
       )}

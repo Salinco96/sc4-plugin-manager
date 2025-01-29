@@ -5,8 +5,8 @@ import { GroupID, type InstanceID, TypeID, getTextureIdRange } from "@common/dbp
 import type { FamilyID, FamilyInfo } from "@common/families"
 import type { LotID, LotInfo } from "@common/lots"
 import type { FloraID, FloraInfo } from "@common/mmps"
+import type { Index } from "@common/plugins"
 import type { PropID, PropInfo } from "@common/props"
-import type { Index } from "@common/state"
 import type { TextureID, VariantInfo } from "@common/variants"
 
 export interface MatchResult {

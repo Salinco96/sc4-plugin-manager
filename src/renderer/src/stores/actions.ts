@@ -405,12 +405,20 @@ export async function patchVariantFileEntries(
   return window.api.patchVariantFileEntries(packageId, variantId, filePath, patches)
 }
 
+export async function reloadPlugins(): Promise<void> {
+  return window.api.reloadPlugins()
+}
+
 export async function removeBackup(
   regionId: RegionID,
   cityId: CityID,
   file: string,
 ): Promise<void> {
   return window.api.removeBackup(regionId, cityId, file)
+}
+
+export async function removePluginFile(pluginPath: string): Promise<void> {
+  return window.api.removePluginFile(pluginPath)
 }
 
 export async function removeProfile(profileId: ProfileID): Promise<boolean> {

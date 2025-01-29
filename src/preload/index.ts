@@ -56,18 +56,18 @@ export const api = {
   installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
+  loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
+    return ipcRenderer.invoke("loadPluginFileEntries", pluginPath)
+  },
+  loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFEntry> {
+    return ipcRenderer.invoke("loadPluginFileEntry", pluginPath, entryId)
+  },
   loadSavePreviewPicture(
     regionId: RegionID,
     cityId: CityID,
     backupFile?: string,
   ): Promise<DBPFEntry<DBPFDataType.PNG>> {
     return ipcRenderer.invoke("loadSavePreviewPicture", regionId, cityId, backupFile)
-  },
-  loadPluginFileEntries(filePath: string): Promise<DBPFFile> {
-    return ipcRenderer.invoke("loadPluginFileEntries", filePath)
-  },
-  loadPluginFileEntry(filePath: string, entryId: TGI): Promise<DBPFEntry> {
-    return ipcRenderer.invoke("loadPluginFileEntry", filePath, entryId)
   },
   loadVariantFileEntries(
     packageId: PackageID,
@@ -122,12 +122,12 @@ export const api = {
     return ipcRenderer.invoke("openToolURL", toolId, type)
   },
   patchPluginFileEntries(
-    filePath: string,
+    pluginPath: string,
     patches: {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
   ): Promise<DBPFFile> {
-    return ipcRenderer.invoke("patchPluginFileEntries", filePath, patches)
+    return ipcRenderer.invoke("patchPluginFileEntries", pluginPath, patches)
   },
   patchVariantFileEntries(
     packageId: PackageID,
@@ -139,8 +139,14 @@ export const api = {
   ): Promise<DBPFFile> {
     return ipcRenderer.invoke("patchVariantFileEntries", packageId, variantId, filePath, patches)
   },
+  reloadPlugins(): Promise<void> {
+    return ipcRenderer.invoke("reloadPlugins")
+  },
   removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
     return ipcRenderer.invoke("removeBackup", regionId, cityId, file)
+  },
+  removePluginFile(pluginPath: string): Promise<void> {
+    return ipcRenderer.invoke("removePluginFile", pluginPath)
   },
   removeProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("removeProfile", profileId)

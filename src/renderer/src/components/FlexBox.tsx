@@ -20,17 +20,17 @@ export function FlexBox({
       display="flex"
       flexDirection={direction}
       height={fullHeight ? "100%" : undefined}
-      justifyContent={centered && !direction ? "center" : undefined}
+      justifyContent={centered ? "center" : undefined}
       width={fullWidth ? "100%" : undefined}
       {...props}
     />
   )
 }
 
-export function FlexRow(props: Omit<FlexBoxProps, "direction">): JSX.Element {
-  return <FlexBox {...props} direction="row" />
+export function FlexRow({ centered, ...props }: Omit<FlexBoxProps, "direction">): JSX.Element {
+  return <FlexBox direction="row" alignItems={centered ? "center" : undefined} {...props} />
 }
 
 export function FlexCol({ centered, ...props }: Omit<FlexBoxProps, "direction">): JSX.Element {
-  return <FlexBox {...props} direction="column" />
+  return <FlexBox direction="column" alignItems={centered ? "center" : undefined} {...props} />
 }

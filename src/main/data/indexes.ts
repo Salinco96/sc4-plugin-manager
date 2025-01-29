@@ -1,9 +1,9 @@
-import type { Index } from "@common/state"
-import { split } from "@common/utils/string"
-import type { Contents } from "@common/variants"
 import { forEach } from "@salinco/nice-utils"
 
-export function calculateIndex(contents: Contents): Index {
+import type { FileContents, Index } from "@common/plugins"
+import { split } from "@common/utils/string"
+
+export function calculateIndex(contents: FileContents): Index {
   const index: Index = {
     buildingFamilies: {},
     buildings: {},
