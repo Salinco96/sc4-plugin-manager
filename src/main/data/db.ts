@@ -95,16 +95,19 @@ export async function loadMaxisContents(
   options: {
     categories: Categories
     exemplarProperties: ExemplarProperties
+    reload?: boolean
   },
 ): Promise<FileContents> {
   try {
-    const config = await loadConfig<{ [path in string]?: FileContentsData }>(
-      basePath,
-      FILENAMES.indexMaxis,
-    )
+    if (!options.reload) {
+      const config = await loadConfig<{ [path in string]?: FileContentsData }>(
+        basePath,
+        FILENAMES.indexMaxis,
+      )
 
-    if (config) {
-      return loadContents(config.data, options.categories)
+      if (config) {
+        return loadContents(config.data, options.categories)
+      }
     }
 
     context.debug("Indexing Maxis files...")
@@ -132,17 +135,24 @@ export async function loadPlugins(
   options: {
     categories: Categories
     exemplarProperties: ExemplarProperties
+    reload?: boolean
   },
 ): Promise<Plugins> {
   try {
-    const config = await loadConfig<{ [path in string]?: FileContentsData }>(
-      basePath,
-      FILENAMES.indexPlugins,
-    )
+    let cache: FileContents = {}
+
+    if (!options.reload) {
+      const config = await loadConfig<{ [path in string]?: FileContentsData }>(
+        basePath,
+        FILENAMES.indexPlugins,
+      )
+
+      if (config) {
+        cache = loadContents(config.data, options.categories)
+      }
+    }
 
     context.debug("Indexing external plugins...")
-
-    const cache = config ? loadContents(config.data, options.categories) : {}
 
     const pluginFiles = await glob("**/*", {
       cwd: pluginsPath,
@@ -198,7 +208,6 @@ export async function loadPlugins(
       FILENAMES.indexPlugins,
       writeContents(plugins, options.categories),
       ConfigFormat.YAML,
-      config?.format,
     )
 
     return plugins

@@ -614,6 +614,10 @@
   },
   "Plugins": {
     "actions": {
+      "cleanPlugins": {
+        "description": "Clean Plugins folder",
+        "label": "Clean"
+      },
       "openFileLocation": {
         "description": "Open file location"
       },

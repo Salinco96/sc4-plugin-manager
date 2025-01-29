@@ -27,6 +27,13 @@ export async function loadSettings(
   const settings: Settings = {
     format: config?.format,
     ...config?.data,
+    startup: {
+      reloadMaxis: false,
+      reloadPlugins: false,
+      removeConflictingPlugins: true,
+      removeUnsupportedPlugins: true,
+      ...config?.data.startup,
+    },
     version: app.getVersion(),
   }
 
@@ -171,6 +178,7 @@ export function toSettingsData(settings: Readonly<Settings>): SettingsData {
     currentProfile: settings.currentProfile,
     install: settings.install,
     regions: settings.regions,
+    startup: settings.startup,
   }
 
   return data

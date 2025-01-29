@@ -19,6 +19,9 @@ export const api = {
   checkDgVoodoo(): Promise<void> {
     return ipcRenderer.invoke("checkDgVoodoo")
   },
+  cleanPlugins(): Promise<void> {
+    return ipcRenderer.invoke("cleanPlugins")
+  },
   cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
   },

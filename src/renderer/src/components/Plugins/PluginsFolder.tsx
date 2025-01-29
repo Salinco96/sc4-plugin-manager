@@ -1,4 +1,5 @@
 import {
+  Sanitizer as CleanIcon,
   Folder as FolderIcon,
   Sync as ReloadIcon,
   Archive as RemoveIcon,
@@ -13,7 +14,7 @@ import { Empty } from "@components/Empty"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { List } from "@components/List"
 import { ToolButton } from "@components/ToolButton"
-import { openPluginFolder, reloadPlugins, removePluginFile } from "@stores/actions"
+import { cleanPlugins, openPluginFolder, reloadPlugins, removePluginFile } from "@stores/actions"
 
 import { useNavigation } from "@utils/navigation"
 import { PluginsBreadcrumbs } from "./PluginsBreadcrumbs"
@@ -86,6 +87,14 @@ export function PluginsFolder({
               icon={ReloadIcon}
               onClick={reloadPlugins}
             />
+
+            {!path && (
+              <ToolButton
+                description={t("actions.cleanPlugins.description")}
+                icon={CleanIcon}
+                onClick={cleanPlugins}
+              />
+            )}
           </FlexRow>
         )}
       </FlexRow>

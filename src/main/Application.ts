@@ -134,6 +134,7 @@ import {
 } from "@utils/dialog"
 import { getPluginsFolderName } from "@utils/linker"
 
+import { findKeys } from "@common/utils/objects"
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -357,18 +358,11 @@ export class Application {
   /**
    * Runs cleaner for all enabled packages.
    */
-  public async cleanPackages(options: { packageIds?: PackageID[] } = {}): Promise<void> {
+  public async cleanPlugins(
+    options: { isStartup?: boolean; packageIds?: PackageID[] } = {},
+  ): Promise<void> {
     const state = await this.load()
     const { packages, plugins, profiles, settings } = state
-
-    if (!settings.currentProfile) {
-      return
-    }
-
-    const profileInfo = profiles[settings.currentProfile]
-    if (!profileInfo) {
-      return
-    }
 
     await this.tasks.queue(options.packageIds ? `clean:${options.packageIds.join(",")}` : "clean", {
       handler: async context => {
@@ -377,104 +371,112 @@ export class Application {
 
         let nPackages = 0
         const packageIds = options.packageIds ? options.packageIds : keys(packages)
+        const profileInfo = profiles && settings.currentProfile && profiles[settings.currentProfile]
 
-        for (const packageId of packageIds) {
-          context.setProgress(nPackages++, packageIds.length)
+        if (profileInfo) {
+          for (const packageId of packageIds) {
+            context.setProgress(nPackages++, packageIds.length)
 
-          const packageInfo = packages[packageId]
-          if (!packageInfo) {
-            throw Error(`Unknown package '${packageId}'`)
-          }
+            const packageInfo = packages[packageId]
+            if (!packageInfo) {
+              throw Error(`Unknown package '${packageId}'`)
+            }
 
-          const packageStatus = packageInfo?.status[profileInfo.id]
-          if (!packageStatus?.included) {
-            continue
-          }
+            const packageStatus = packageInfo?.status[profileInfo.id]
+            if (!packageStatus?.included) {
+              continue
+            }
 
-          const variantId = packageStatus.variantId
-          const variantInfo = packageInfo?.variants[variantId]
-          if (!variantInfo?.files) {
-            context.warn(`Variant '${packageId}#${variantId}' is not installed`)
-            continue
-          }
+            const variantId = packageStatus.variantId
+            const variantInfo = packageInfo?.variants[variantId]
+            if (!variantInfo?.files) {
+              context.warn(`Variant '${packageId}#${variantId}' is not installed`)
+              continue
+            }
 
-          const conflictingPaths = new Set<string>()
-          const filePaths = new Set(variantInfo.files?.map(file => path.basename(file.path)))
+            const conflictingPaths = new Set<string>()
+            const filePaths = new Set(variantInfo.files?.map(file => path.basename(file.path)))
 
-          const variantPath = this.getVariantPath(packageId, variantId)
-          const cleanitolPath = path.join(variantPath, DIRNAMES.cleanitol)
+            const variantPath = this.getVariantPath(packageId, variantId)
+            const cleanitolPath = path.join(variantPath, DIRNAMES.cleanitol)
 
-          const cleanitolFiles = await glob("*.txt", {
-            cwd: cleanitolPath,
-            dot: true,
-            matchBase: true,
-            nodir: true,
-          })
+            const cleanitolFiles = await glob("*.txt", {
+              cwd: cleanitolPath,
+              dot: true,
+              matchBase: true,
+              nodir: true,
+            })
 
-          for (const cleanitolFile of cleanitolFiles) {
-            const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
-            for (const line of contents.split("\n")) {
-              const filePath = line.split(";")[0].trim()
+            for (const cleanitolFile of cleanitolFiles) {
+              const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
+              for (const line of contents.split("\n")) {
+                const filePath = line.split(";")[0].trim()
 
-              if (filePath) {
-                filePaths.add(filePath)
+                if (filePath) {
+                  filePaths.add(filePath)
+                }
               }
             }
-          }
 
-          for (const filePath of filePaths) {
-            for (const pluginPath of keys(plugins)) {
-              if (path.basename(pluginPath) === filePath) {
-                conflictingPaths.add(pluginPath)
+            for (const filePath of filePaths) {
+              for (const pluginPath of keys(plugins)) {
+                if (path.basename(pluginPath) === filePath) {
+                  conflictingPaths.add(pluginPath)
+                }
               }
             }
-          }
 
-          if (conflictingPaths.size) {
-            const fileNames = Array.from(conflictingPaths)
+            if (
+              conflictingPaths.size &&
+              (!options.isStartup || settings.startup.removeConflictingPlugins)
+            ) {
+              const fileNames = Array.from(conflictingPaths)
 
-            const { confirmed } = await showConfirmation(
-              packageInfo.name,
-              t("RemoveConflictingFilesModal:confirmation"),
-              t("RemoveConflictingFilesModal:description", {
-                files: fileNames.sort(),
-                pluginsBackup: DIRNAMES.pluginsBackup,
-              }),
-            )
+              const { confirmed, doNotAskAgain } = await showConfirmation(
+                packageInfo.name,
+                t("RemoveConflictingFilesModal:confirmation"),
+                t("RemoveConflictingFilesModal:description", {
+                  files: fileNames.sort(),
+                  pluginsBackup: DIRNAMES.pluginsBackup,
+                }),
+                options.isStartup,
+              )
 
-            if (confirmed) {
-              for (const conflictingPath of conflictingPaths) {
-                await this.backUpFile(context, conflictingPath)
-                delete plugins[conflictingPath]
+              if (confirmed) {
+                for (const conflictingPath of conflictingPaths) {
+                  await this.backUpFile(context, conflictingPath)
+                  delete plugins[conflictingPath]
+                }
+
+                this.indexPlugins()
+
+                context.debug(`Resolved ${conflictingPaths.size} conflicts`)
+              } else {
+                context.debug(`Ignored ${conflictingPaths.size} conflicts`)
+
+                if (doNotAskAgain) {
+                  settings.startup.removeConflictingPlugins = false
+                  this.writeSettings(context, settings)
+                }
               }
-
-              this.indexPlugins()
-
-              context.debug(`Resolved ${conflictingPaths.size} conflicts`)
-            } else {
-              context.debug(`Ignored ${conflictingPaths.size} conflicts`)
             }
           }
         }
 
         // Prompt to remove unsupported files (e.g. leftover docs)
-        const unsupportedPaths = new Set<string>()
-        for (const externalPath of keys(plugins)) {
-          if (!SC4_EXTENSIONS.includes(getExtension(externalPath))) {
-            unsupportedPaths.add(externalPath)
-          }
-        }
-
-        if (unsupportedPaths.size) {
-          const fileNames = Array.from(unsupportedPaths)
-
-          const { confirmed } = await showConfirmation(
+        const unsupportedPaths = findKeys(plugins, file => file.issues?.unsupported)
+        if (
+          unsupportedPaths.length &&
+          (!options.isStartup || settings.startup.removeUnsupportedPlugins)
+        ) {
+          const { confirmed, doNotAskAgain } = await showConfirmation(
             t("RemoveUnsupportedFilesModal:title"),
             t("RemoveUnsupportedFilesModal:confirmation"),
             t("RemoveUnsupportedFilesModal:description", {
-              files: fileNames.sort(),
+              files: unsupportedPaths.sort(),
               pluginsBackup: DIRNAMES.pluginsBackup,
             }),
+            options.isStartup,
           )
 
           if (confirmed) {
@@ -485,9 +487,14 @@ export class Application {
 
             this.indexPlugins()
 
-            context.debug(`Removed ${unsupportedPaths.size} unsupported files`)
+            context.debug(`Removed ${unsupportedPaths.length} unsupported files`)
           } else {
-            context.debug(`Ignored ${unsupportedPaths.size} unsupported files`)
+            context.debug(`Ignored ${unsupportedPaths.length} unsupported files`)
+
+            if (doNotAskAgain) {
+              settings.startup.removeUnsupportedPlugins = false
+              this.writeSettings(context, settings)
+            }
           }
         }
       },
@@ -1265,6 +1272,7 @@ export class Application {
     // Register message handlers
     this.handle("check4GBPatch")
     this.handle("checkDgVoodoo")
+    this.handle("cleanPlugins")
     this.handle("clearPackageLogs")
     this.handle("clearUnusedPackages")
     this.handle("createBackup")
@@ -2045,7 +2053,7 @@ export class Application {
           this.sendStateUpdate({ features, packages })
 
           // Run cleaner for all enabled packages
-          this.cleanPackages()
+          this.cleanPlugins({ isStartup: true })
         }
 
         context.setStep("Indexing external plugins...")
@@ -2059,12 +2067,14 @@ export class Application {
           ? loadMaxisContents(context, this.getRootPath(), settings.install?.path, {
               categories,
               exemplarProperties,
+              reload: settings.startup.reloadMaxis,
             })
           : Promise.resolve({})
 
         const pluginsPromise = loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
           categories,
           exemplarProperties,
+          reload: settings.startup.reloadPlugins,
         })
 
         const collections = await loadCollections(context, this.getDatabasePath())
@@ -3904,7 +3914,7 @@ export class Application {
                 })
 
                 this.sendStateUpdate({ features })
-                this.cleanPackages({ packageIds: enablingPackages })
+                this.cleanPlugins({ packageIds: enablingPackages })
                 this.linkPackages()
               }
             } finally {

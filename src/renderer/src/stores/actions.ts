@@ -61,6 +61,10 @@ export async function checkDgVoodoo(): Promise<void> {
   return window.api.checkDgVoodoo()
 }
 
+export async function cleanPlugins(): Promise<void> {
+  return window.api.cleanPlugins()
+}
+
 export async function clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
   return window.api.clearPackageLogs(packageId, variantId)
 }

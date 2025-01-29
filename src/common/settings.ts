@@ -28,6 +28,12 @@ export interface SettingsData {
       profile?: ProfileID
     }
   }
+  startup?: {
+    reloadMaxis?: boolean
+    reloadPlugins?: boolean
+    removeConflictingPlugins?: boolean
+    removeUnsupportedPlugins?: boolean
+  }
 }
 
 /** Loaded global settings */
@@ -57,6 +63,12 @@ export interface Settings {
       }
       profile?: ProfileID
     }
+  }
+  startup: {
+    reloadMaxis: boolean
+    reloadPlugins: boolean
+    removeConflictingPlugins: boolean
+    removeUnsupportedPlugins: boolean
   }
   /** Available manager update */
   update?: {
