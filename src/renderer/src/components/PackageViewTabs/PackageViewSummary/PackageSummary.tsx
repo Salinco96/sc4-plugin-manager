@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from "@mui/material"
+import { Link, Typography } from "@mui/material"
 import { collect, isEmpty, values } from "@salinco/nice-utils"
 import { useTranslation } from "react-i18next"
 
@@ -6,24 +6,27 @@ import { getAuthorName } from "@common/authors"
 import { getFeatureLabel } from "@common/i18n"
 import { getRequirementText } from "@common/options"
 import type { PackageID } from "@common/packages"
+import type { VariantInfo } from "@common/variants"
 import { MarkdownView } from "@components/MarkdownView"
 import { PackageBanners } from "@components/PackageBanners/PackageBanners"
 import { Text } from "@components/Text"
 import { store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
 
-export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX.Element {
+export function PackageSummary({
+  packageId,
+  variantInfo,
+}: { packageId: PackageID; variantInfo: VariantInfo }): JSX.Element {
   const authors = store.useAuthors()
   const profileOptions = store.useProfileOptions()
   const packageInfo = store.usePackageInfo(packageId)
-  const variantInfo = store.useCurrentVariant(packageId)
 
   const { openAuthorView } = useNavigation()
 
   const { t } = useTranslation("PackageViewSummary")
 
   return (
-    <Box>
+    <>
       {variantInfo.summary && (
         <Text fontStyle="italic" mb={2} variant="body2">
           {variantInfo.summary}
@@ -138,6 +141,6 @@ export function PackageViewSummary({ packageId }: { packageId: PackageID }): JSX
       )}
 
       <PackageBanners packageId={packageId} />
-    </Box>
+    </>
   )
 }

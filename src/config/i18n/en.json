@@ -278,6 +278,7 @@
   },
   "General": {
     "4gbpatch": "4GB Patch",
+    "addRow": "Add row",
     "andOthers_one": "{{label}} and {{count}} other",
     "andOthers_other": "{{label}} and {{count}} others",
     "app": "SC4 Plugin Manager",
@@ -514,6 +515,52 @@
       "label": "Search"
     }
   },
+  "PackageSummaryEditor": {
+    "authors": {
+      "label": "Authors"
+    },
+    "categories": {
+      "label": "Categories"
+    },
+    "credits": {
+      "label": "Credits",
+      "id": "Author",
+      "text": "Message"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Full description in MD format"
+    },
+    "features": "Features",
+    "name": {
+      "label": "Variant name"
+    },
+    "requirements": "Requirements",
+    "repository": {
+      "label": "Source code URL",
+      "placeholder": "e.g. https://github.com/xxxxx/yyyyyy"
+    },
+    "summary": {
+      "label": "Summary",
+      "placeholder": "Short one-line description"
+    },
+    "support": {
+      "label": "Support thread URL",
+      "placeholder": "e.g. https://community.simtropolis.com/forums/topic/123456-xxx"
+    },
+    "thanks": {
+      "label": "Thanks",
+      "id": "Author",
+      "text": "Message"
+    },
+    "url": {
+      "label": "Download page URL",
+      "placeholder": "e.g. https://community.simtropolis.com/files/file/123456-xxx"
+    },
+    "version": {
+      "label": "Version"
+    }
+  },
   "PackageTag": {
     "actions": {
       "expandAuthors": "View all authors",
@@ -597,9 +644,12 @@
   "PackageViewSummary": {
     "category": "Category",
     "credits": "Credits",
+    "description": "Description",
     "features": "Features",
+    "name": "Variant name",
     "requirements": "Requirements",
     "repository": "Source code",
+    "summary": "Summary",
     "support": "Support thread",
     "thanks": "Thanks",
     "url": "Download page"

@@ -9,7 +9,7 @@ import type { CityID, RegionID, UpdateSaveAction } from "@common/regions"
 import type { Settings } from "@common/settings"
 import type { ApplicationStateUpdate, ApplicationStatusUpdate } from "@common/state"
 import type { ToolID } from "@common/tools"
-import type { VariantID } from "@common/variants"
+import type { EditableVariantInfo, VariantID } from "@common/variants"
 
 // Custom APIs for renderer
 export const api = {
@@ -39,6 +39,13 @@ export const api = {
   },
   createVariant(packageId: PackageID, name: string, templateVariantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("createVariant", packageId, name, templateVariantId)
+  },
+  editVariant(
+    packageId: PackageID,
+    variantId: VariantID,
+    data: EditableVariantInfo,
+  ): Promise<void> {
+    return ipcRenderer.invoke("editVariant", packageId, variantId, data)
   },
   getPackageLogs(
     packageId: PackageID,

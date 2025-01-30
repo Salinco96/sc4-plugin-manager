@@ -13,7 +13,6 @@ export function ToolBanners({
   return (
     <>
       {toolInfo.warnings?.map((warning, index) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: no better key...
         <Banner key={index} title={warning.title}>
           {getWarningMessage(warning)}
         </Banner>

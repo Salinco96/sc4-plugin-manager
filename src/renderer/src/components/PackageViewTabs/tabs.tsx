@@ -14,6 +14,7 @@ export const packageViewTabs: TabInfo<{ packageId: PackageID }>[] = [
   {
     id: "summary",
     component: PackageViewSummary,
+    fullsize: true,
     label(t) {
       return t("summary")
     },

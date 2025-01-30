@@ -123,7 +123,6 @@ export function ExemplarPropertyInputGroup<T extends number[] | string[] | boole
   return (
     <>
       {values.map((item, index, rows) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: no other key available
         <FlexRow centered fullWidth key={index} gap={1}>
           <ExemplarPropertyInput
             error={isString(errors) || !!errors?.at(index)}

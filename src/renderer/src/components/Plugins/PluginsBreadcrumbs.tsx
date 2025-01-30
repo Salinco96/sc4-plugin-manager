@@ -15,7 +15,6 @@ export function PluginsBreadcrumbs({ path }: { path?: string }): JSX.Element {
 
         if (isLast) {
           return (
-            // biome-ignore lint/suspicious/noArrayIndexKey: no better key
             <Typography color="inherit" key={index}>
               {part}
             </Typography>
@@ -25,7 +24,6 @@ export function PluginsBreadcrumbs({ path }: { path?: string }): JSX.Element {
         return (
           <Link
             color="inherit"
-            // biome-ignore lint/suspicious/noArrayIndexKey: no better key
             key={index}
             underline="hover"
             onClick={() => openPluginsView(breadcrumbPath)}

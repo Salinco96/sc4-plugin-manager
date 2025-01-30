@@ -42,38 +42,41 @@ export interface FileInfo {
   priority?: number
 }
 
-export interface BaseVariantInfo extends VariantContentsInfo {
-  assets?: VariantAssetInfo[]
+export interface EditableVariantInfo {
   authors: AuthorID[]
   categories: CategoryID[]
   credits?: { id?: AuthorID; text?: string }[]
-  default?: boolean
-  dependencies?: DependencyInfo[]
   deprecated?: boolean | PackageID | VariantID
   description?: string
-  disabled?: boolean
   experimental?: boolean
+  name?: string
+  repository?: string
+  summary?: string
+  support?: string
+  thanks?: { id?: AuthorID; text?: string }[]
+  url?: string
+  version: string
+}
+
+export interface BaseVariantInfo extends VariantContentsInfo, EditableVariantInfo {
+  assets?: VariantAssetInfo[]
+  default?: boolean
+  dependencies?: DependencyInfo[]
+  disabled?: boolean
   files?: FileInfo[]
   id: VariantID
   images?: string[]
   lastGenerated?: Date
   lastModified?: Date
   logs?: string
-  name?: string
   new?: boolean
   optional?: PackageID[]
   options?: OptionInfo[]
   priority: number
   readme?: string[]
   release?: Date
-  repository?: string
   requirements?: Requirements
-  summary?: string
-  support?: string
-  thanks?: { id?: AuthorID; text?: string }[]
   thumbnail?: string
-  url?: string
-  version: string
   warnings?: PackageWarning[]
 }
 

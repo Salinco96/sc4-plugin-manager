@@ -86,13 +86,7 @@ export function FileListItem({
             />
           )}
 
-          {actions?.map(
-            (action, index) =>
-              action && (
-                // biome-ignore lint/suspicious/noArrayIndexKey: no better index
-                <ToolButton {...action} key={index} />
-              ),
-          )}
+          {actions?.map((action, index) => action && <ToolButton {...action} key={index} />)}
         </FlexRow>
       }
       compact

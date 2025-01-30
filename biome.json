@@ -54,7 +54,7 @@
         "useThrowOnlyError": "error"
       },
       "suspicious": {
-        "noArrayIndexKey": "warn",
+        "noArrayIndexKey": "off",
         "noConsole": {
           "level": "warn",
           "options": { "allow": ["debug", "error", "info", "warn"] }

@@ -8,7 +8,7 @@ import type { ProfileID, ProfileUpdate } from "@common/profiles"
 import type { CityID, RegionID, UpdateSaveAction } from "@common/regions"
 import type { Settings } from "@common/settings"
 import type { ToolID } from "@common/tools"
-import type { VariantID } from "@common/variants"
+import type { EditableVariantInfo, VariantID } from "@common/variants"
 import { computePackageList } from "@utils/packages"
 
 import { type PackageFilters, store } from "./main"
@@ -153,6 +153,22 @@ export async function disablePackage(packageId: PackageID): Promise<boolean> {
   } catch (error) {
     console.error(`Failed to disable ${packageId}`, error)
     showErrorToast(`Failed to disable ${packageId}`)
+    return false
+  }
+}
+
+export async function editVariant(
+  packageId: PackageID,
+  variantId: VariantID,
+  data: EditableVariantInfo,
+): Promise<boolean> {
+  try {
+    await window.api.editVariant(packageId, variantId, data)
+    showSuccessToast("Changes saved")
+    return true
+  } catch (error) {
+    console.error("Failed to save changes", error)
+    showErrorToast("Failed to save changes")
     return false
   }
 }

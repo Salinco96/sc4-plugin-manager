@@ -11,7 +11,6 @@ export function Banners({ banners, compact }: BannersProps): JSX.Element {
       {banners.map(
         (banner, index) =>
           banner && (
-            // biome-ignore lint/suspicious/noArrayIndexKey: no better key
             <Banner key={index} {...banner} compact={compact}>
               {banner.message}
             </Banner>

@@ -49,6 +49,7 @@ import { type OptionInfo, getOptionValue } from "@common/options"
 import {
   type PackageID,
   checkFile,
+  getOwnerId,
   isDependency,
   isIncluded,
   isInstalled,
@@ -86,9 +87,9 @@ import type { ToolID } from "@common/tools"
 import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
-import type { FileInfo, VariantID } from "@common/variants"
+import type { EditableVariantInfo, FileInfo, VariantID } from "@common/variants"
 import { getDefaultVariant } from "@common/variants"
-import { removeConfig, writeConfig } from "@node/configs"
+import { loadConfig, removeConfig, writeConfig } from "@node/configs"
 import { getAssetKey } from "@node/data/assets"
 import { loadAuthors } from "@node/data/authors"
 import { loadBuildingInfo } from "@node/data/buildings"
@@ -788,6 +789,66 @@ export class Application {
   }
 
   /**
+   * Edits a variant's metadata.
+   * @param packageId Package ID
+   * @param variantId Variant ID
+   * @param data Data to replace
+   */
+  public async editVariant(
+    packageId: PackageID,
+    variantId: VariantID,
+    data: EditableVariantInfo,
+  ): Promise<void> {
+    const { categories, packages, settings } = await this.load()
+
+    const packageInfo = packages[packageId]
+    if (!packageInfo) {
+      throw Error(`Unknown package '${packageId}'`)
+    }
+
+    const variantInfo = packageInfo.variants[variantId]
+    if (!variantInfo) {
+      throw Error(`Unknown variant '${packageId}#${variantId}'`)
+    }
+
+    await this.tasks.queue(`edit:${packageId}#${variantId}`, {
+      handler: async context => {
+        variantInfo.authors = data.authors
+        variantInfo.categories = data.categories
+        variantInfo.credits = data.credits?.length ? data.credits : undefined
+        variantInfo.deprecated = data.deprecated
+        variantInfo.description = data.description
+        variantInfo.experimental = data.experimental
+        variantInfo.name = data.name
+        variantInfo.repository = data.repository
+        variantInfo.summary = data.summary
+        variantInfo.support = data.support
+        variantInfo.thanks = data.thanks?.length ? data.thanks : undefined
+        variantInfo.url = data.url
+        variantInfo.version = data.version
+
+        await this.writePackageConfig(context, packageInfo, categories)
+
+        if (settings.db.path && !variantInfo.local) {
+          const ownerId = getOwnerId(packageId)
+          const dbPackagesPath = path.join(settings.db.path, DIRNAMES.dbPackages)
+
+          const config = await loadConfig<{ [packageId: PackageID]: PackageData }>(
+            dbPackagesPath,
+            ownerId,
+          )
+
+          if (config?.data[packageId]) {
+            config.data[packageId] = writePackageInfo(packageInfo, false, categories)
+            await writeConfig(dbPackagesPath, ownerId, config.data, ConfigFormat.YAML)
+          }
+        }
+      },
+      pool: `${packageId}#${variantId}`,
+    })
+  }
+
+  /**
    * Downloads an asset.
    */
   protected async downloadAsset(assetInfo: AssetInfo, isTool?: boolean): Promise<string> {
@@ -1278,6 +1339,7 @@ export class Application {
     this.handle("createBackup")
     this.handle("createProfile")
     this.handle("createVariant")
+    this.handle("editVariant")
     this.handle("getPackageLogs")
     this.handle("getPackageReadme")
     this.handle("getState")
@@ -1992,6 +2054,7 @@ export class Application {
           this.getRootPath(),
           this.getPluginsPath(),
           this.getRegionsPath(),
+          this.getDataRepository(),
           profiles,
         )
 

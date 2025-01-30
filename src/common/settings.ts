@@ -40,6 +40,11 @@ export interface SettingsData {
 export interface Settings {
   /** Current profile ID */
   currentProfile?: ProfileID
+  db: { path: string; url?: undefined } | { path?: undefined; url: string }
+  env: {
+    /** Are we in development mode? */
+    dev: boolean
+  }
   /** Current config format */
   format?: ConfigFormat
   /** Game installation data */

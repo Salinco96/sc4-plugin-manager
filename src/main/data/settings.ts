@@ -7,7 +7,7 @@ import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
 import { loadConfig } from "@node/configs"
-import { copyTo } from "@node/files"
+import { copyTo, isURL } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
@@ -20,6 +20,7 @@ export async function loadSettings(
   rootPath: string,
   pluginsPath: string,
   regionsPath: string,
+  dbPathOrUrl: string,
   profiles: Profiles,
 ): Promise<Settings> {
   const config = await loadConfig<SettingsData>(rootPath, FILENAMES.settings)
@@ -27,6 +28,8 @@ export async function loadSettings(
   const settings: Settings = {
     format: config?.format,
     ...config?.data,
+    db: isURL(dbPathOrUrl) ? { url: dbPathOrUrl } : { path: dbPathOrUrl },
+    env: { dev: import.meta.env.DEV },
     startup: {
       reloadMaxis: false,
       reloadPlugins: false,
