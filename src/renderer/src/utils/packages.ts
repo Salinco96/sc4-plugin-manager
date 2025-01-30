@@ -10,7 +10,7 @@ import {
   isOutdated,
 } from "@common/packages"
 import type { ProfileInfo } from "@common/profiles"
-import { type PackageInfo, type Packages, getState } from "@common/types"
+import { type PackageInfo, type Packages, VariantState, getState } from "@common/types"
 import { prioritize } from "@common/utils/arrays"
 import { getStartOfWordSearchRegex } from "@common/utils/regex"
 import type { VariantID, VariantInfo } from "@common/variants"
@@ -131,56 +131,60 @@ export function computePackageList(
     pattern: search ? getStartOfWordSearchRegex(search) : undefined,
   }
 
-  const filteredPackages = values(packages)
-    .filter(packageInfo => {
-      const packageId = packageInfo.id
-      const packageConfig = profileInfo?.packages[packageId]
-      const packageStatus = getPackageStatus(packageInfo, profileInfo)
+  const filteredPackages = values(packages).filter(packageInfo => {
+    const packageId = packageInfo.id
+    const packageConfig = profileInfo?.packages[packageId]
+    const packageStatus = getPackageStatus(packageInfo, profileInfo)
 
-      const allVariants = values(packageInfo.variants)
+    const allVariants = values(packageInfo.variants)
 
-      const filteredVariants = allVariants.filter(variantInfo => {
-        return filterVariant(packageInfo, variantInfo, profileInfo, filters)
-      })
-
-      let selectedVariantId =
-        packageStatus?.variantId ??
-        state.packageUi[packageId]?.variantId ??
-        (filteredVariants[0] ?? allVariants[0]).id
-
-      const selectedVariant = packageInfo.variants[selectedVariantId]
-      if (!selectedVariant) {
-        return false
-      }
-
-      // Adjust selected variant upon changing filters
-      if (!packageConfig?.enabled && triggeredByFilters) {
-        const compatibleVariants = filteredVariants.filter(
-          variantInfo => !isIncompatible(variantInfo, packageStatus),
-        )
-
-        if (compatibleVariants.length && !compatibleVariants.includes(selectedVariant)) {
-          variantChanges[packageId] = selectedVariantId = compatibleVariants[0].id
-        } else if (filteredVariants.length && !filteredVariants.includes(selectedVariant)) {
-          variantChanges[packageId] = selectedVariantId = filteredVariants[0].id
-        }
-      }
-
-      packageUi[packageId] = {
-        variantId: selectedVariantId,
-        variantIds: filteredVariants.map(variantInfo => variantInfo.id),
-      }
-
-      // Only check errors for the selected variant
-      if (packageFilters.onlyErrors && !isError(selectedVariant, packageStatus)) {
-        return false
-      }
-
-      // Package is visible if we managed to select a visible variant
-      return filteredVariants.includes(selectedVariant)
+    const filteredVariants = allVariants.filter(variantInfo => {
+      return filterVariant(packageInfo, variantInfo, profileInfo, filters)
     })
-    .map(packageInfo => packageInfo.id)
-    .sort()
+
+    let selectedVariantId =
+      packageStatus?.variantId ??
+      state.packageUi[packageId]?.variantId ??
+      (filteredVariants[0] ?? allVariants[0]).id
+
+    const selectedVariant = packageInfo.variants[selectedVariantId]
+    if (!selectedVariant) {
+      return false
+    }
+
+    // Adjust selected variant upon changing filters
+    if (!packageConfig?.enabled && triggeredByFilters) {
+      const compatibleVariants = filteredVariants.filter(
+        variantInfo => !isIncompatible(variantInfo, packageStatus),
+      )
+
+      if (compatibleVariants.length && !compatibleVariants.includes(selectedVariant)) {
+        variantChanges[packageId] = selectedVariantId = compatibleVariants[0].id
+      } else if (filteredVariants.length && !filteredVariants.includes(selectedVariant)) {
+        variantChanges[packageId] = selectedVariantId = filteredVariants[0].id
+      }
+    }
+
+    packageUi[packageId] = {
+      variantId: selectedVariantId,
+      variantIds: filteredVariants.map(variantInfo => variantInfo.id),
+    }
+
+    // Only check errors for the selected variant
+    if (packageFilters.onlyErrors && !isError(selectedVariant, packageStatus)) {
+      return false
+    }
+
+    // Package is visible if we managed to select a visible variant
+    return filteredVariants.includes(selectedVariant)
+  })
+
+  const sortedPackages = packageFilters.states.includes(VariantState.NEW)
+    ? sortBy(filteredPackages, packageInfo => {
+        const variantId = packageUi[packageInfo.id]?.variantId
+        return (variantId && packageInfo.variants[variantId]?.lastModified?.valueOf()) ?? 0
+      }).map(packageInfo => packageInfo.id)
+    : filteredPackages.map(packageInfo => packageInfo.id).sort()
 
   // Send adjusted variants back to main process
   // Enabled packages do not get adjusted so this should not trigger expensive calculations
@@ -191,7 +195,7 @@ export function computePackageList(
   }
 
   return {
-    filteredPackages,
+    filteredPackages: sortedPackages,
     packageUi,
   }
 }
