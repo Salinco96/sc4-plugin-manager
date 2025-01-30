@@ -531,11 +531,14 @@
       "label": "Description",
       "placeholder": "Full description in MD format"
     },
-    "features": "Features",
+    "images": {
+      "label": "Images",
+      "placeholder": "Image URL",
+      "preview": "Images (Preview)"
+    },
     "name": {
       "label": "Variant name"
     },
-    "requirements": "Requirements",
     "repository": {
       "label": "Source code URL",
       "placeholder": "e.g. https://github.com/xxxxx/yyyyyy"
@@ -552,6 +555,10 @@
       "label": "Thanks",
       "id": "Author",
       "text": "Message"
+    },
+    "thumbnail": {
+      "label": "Thumbnail",
+      "placeholder": "Thumbnail URL"
     },
     "url": {
       "label": "Download page URL",

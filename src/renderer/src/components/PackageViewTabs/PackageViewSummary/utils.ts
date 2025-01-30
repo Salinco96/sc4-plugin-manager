@@ -27,12 +27,14 @@ export function getFinalData(data: EditableVariantInfo): {
     deprecated: data.deprecated,
     description: data.description,
     experimental: data.experimental,
+    images: data.images?.filter(Boolean),
     name: data.name,
     repository: data.repository,
     summary: data.summary,
     support: data.support,
     url: data.url,
     thanks: data.thanks?.filter(credit => credit.id || credit.text),
+    thumbnail: data.thumbnail === data.images?.at(0) ? undefined : data.thumbnail,
     version: data.version,
   }
 }

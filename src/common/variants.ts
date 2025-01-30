@@ -49,11 +49,13 @@ export interface EditableVariantInfo {
   deprecated?: boolean | PackageID | VariantID
   description?: string
   experimental?: boolean
+  images?: string[]
   name?: string
   repository?: string
   summary?: string
   support?: string
   thanks?: { id?: AuthorID; text?: string }[]
+  thumbnail?: string
   url?: string
   version: string
 }
@@ -65,7 +67,6 @@ export interface BaseVariantInfo extends VariantContentsInfo, EditableVariantInf
   disabled?: boolean
   files?: FileInfo[]
   id: VariantID
-  images?: string[]
   lastGenerated?: Date
   lastModified?: Date
   logs?: string
@@ -76,7 +77,6 @@ export interface BaseVariantInfo extends VariantContentsInfo, EditableVariantInf
   readme?: string[]
   release?: Date
   requirements?: Requirements
-  thumbnail?: string
   warnings?: PackageWarning[]
 }
 

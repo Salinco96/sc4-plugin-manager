@@ -5,10 +5,14 @@ import type { CategoryID } from "@common/categories"
 import { type PackageID, getOwnerId } from "@common/packages"
 import type { EditableVariantInfo, VariantInfo } from "@common/variants"
 import { FlexCol, FlexRow } from "@components/FlexBox"
+import { ArrayInput } from "@components/Input/ArrayInput"
 import { ArraySelectInput } from "@components/Input/ArraySelectInput"
 import { MarkdownInput } from "@components/Input/MarkdownInput"
 import { MultiSelectInput } from "@components/Input/MultiSelectInput"
 import type { SelectOption } from "@components/Input/SelectInput"
+import { Thumbnail } from "@components/Thumbnail"
+import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
+import { Divider, FormControl, InputLabel, Paper } from "@mui/material"
 import { collect } from "@salinco/nice-utils"
 import { store } from "@stores/main"
 import { useMemo } from "react"
@@ -109,11 +113,52 @@ function PackageSummaryEditor({
       />
 
       <TextInput
+        error={errors?.thumbnail}
+        label={t("thumbnail.label")}
+        name="thumbnail"
+        onChange={thumbnail => setData({ ...data, thumbnail })}
+        placeholder={t("thumbnail.placeholder")}
+        type="url"
+        value={data.thumbnail}
+      />
+
+      <ArrayInput
+        error={errors?.images}
+        label={t("images.label")}
+        name="images"
+        onChange={images => setData({ ...data, images })}
+        placeholder={t("images.placeholder")}
+        value={data.images}
+      />
+
+      {(data.images?.some(Boolean) || data.thumbnail) && (
+        <FormControl fullWidth>
+          <InputLabel sx={{ backgroundColor: "white", marginLeft: "-5px", paddingX: "5px" }} shrink>
+            {t("images.preview")}
+          </InputLabel>
+
+          <Paper sx={{ borderColor: "rgba(0, 0, 0, 0.23)", p: 1.75 }} variant="outlined">
+            <FlexRow centered gap={1.75} overflow="auto" sx={{ scrollbarWidth: "thin" }}>
+              <Thumbnail size={84} src={data.thumbnail ?? data.images?.find(Boolean) ?? ""} />
+              {data.images?.some(Boolean) && (
+                <>
+                  <Divider flexItem orientation="vertical" />
+                  {data.images?.filter(Boolean).map((image, index) => (
+                    <ImageViewerThumbnail images={[image]} key={index} size={84} />
+                  ))}
+                </>
+              )}
+            </FlexRow>
+          </Paper>
+        </FormControl>
+      )}
+
+      <TextInput
         error={errors?.url}
         label={t("url.label")}
         name="url"
         onChange={url => setData({ ...data, url })}
-        placeholder={t("summary.placeholder")}
+        placeholder={t("url.placeholder")}
         type="url"
         value={data.url}
       />

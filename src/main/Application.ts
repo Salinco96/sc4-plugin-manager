@@ -819,11 +819,13 @@ export class Application {
         variantInfo.deprecated = data.deprecated
         variantInfo.description = data.description
         variantInfo.experimental = data.experimental
+        variantInfo.images = data.images?.length ? data.images : undefined
         variantInfo.name = data.name
         variantInfo.repository = data.repository
         variantInfo.summary = data.summary
         variantInfo.support = data.support
         variantInfo.thanks = data.thanks?.length ? data.thanks : undefined
+        variantInfo.thumbnail = data.thumbnail
         variantInfo.url = data.url
         variantInfo.version = data.version
 
