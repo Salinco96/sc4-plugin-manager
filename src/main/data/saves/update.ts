@@ -8,9 +8,10 @@ import type { RCIType } from "@common/lots"
 import { FileOpenMode, createIfMissing, moveTo, openFile, removeIfPresent } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
+import { ZoneType } from "@node/dbpf/types"
 import { RCITypeToZoneType, ZoneTypeToRCIType } from "./constants"
 import { SaveFile } from "./subfiles/SaveFile"
-import { SimGridDataID } from "./subfiles/SimGrid"
+import { SimGrid, SimGridDataID } from "./subfiles/SimGrid"
 
 async function updateSaveFile(
   context: TaskContext,
@@ -46,6 +47,64 @@ async function updateSaveFile(
   } finally {
     await removeIfPresent(options.tempPath)
   }
+}
+
+export async function fixSave(
+  context: TaskContext,
+  fullPath: string,
+  options: {
+    tempPath: string
+  },
+): Promise<boolean> {
+  return updateSaveFile(context, fullPath, {
+    tempPath: options.tempPath,
+    handler: async (context, save) => {
+      context.debug(`Fixing issues in ${fullPath}...`, options)
+
+      const lots = await save.lots()
+      const zoneTypes = await save.grid(SimGridDataID.ZoneTypes)
+
+      if (!lots) {
+        throw Error("Unable to locate lots")
+      }
+
+      if (!zoneTypes) {
+        throw Error("Unable to locate the zone type SimGrid")
+      }
+
+      // 1 - Regenerate Zone SimGrid
+
+      // Mutate a copy of the zone SimGrid
+      const zoneTypesCopy = new SimGrid(zoneTypes)
+      for (let x = 0; x <= zoneTypes.size; x++) {
+        for (let z = 0; z <= zoneTypes.size; z++) {
+          const zoneType = zoneTypes.get(x, z)
+          // Unset all zones, except landfills
+          zoneTypesCopy.set(x, z, zoneType === ZoneType.Landfill ? zoneType : ZoneType.None)
+        }
+      }
+
+      // Fill the copy according to lots
+      for (const lot of lots.data) {
+        for (let x = lot.minX; x <= lot.maxX; x++) {
+          for (let z = lot.minZ; z <= lot.maxZ; z++) {
+            zoneTypesCopy.set(x, z, lot.zoneType)
+          }
+        }
+      }
+
+      // Copy changes back
+      for (let x = 0; x <= zoneTypes.size; x++) {
+        for (let z = 0; z <= zoneTypes.size; z++) {
+          const zoneType = zoneTypesCopy.get(x, z)
+          if (zoneTypes.get(x, z) !== zoneType) {
+            zoneTypes.set(x, z, zoneType)
+            zoneTypes.dirty()
+          }
+        }
+      }
+    },
+  })
 }
 
 export async function growify(
@@ -85,15 +144,13 @@ export async function growify(
             lot.makeHistorical()
           }
 
-          if (zoneTypes) {
-            for (let x = lot.minX; x <= lot.maxX; x++) {
-              for (let z = lot.minZ; z <= lot.maxZ; z++) {
-                zoneTypes.set(x, z, lot.zoneType)
-              }
+          for (let x = lot.minX; x <= lot.maxX; x++) {
+            for (let z = lot.minZ; z <= lot.maxZ; z++) {
+              zoneTypes.set(x, z, lot.zoneType)
             }
-
-            zoneTypes.dirty()
           }
+
+          zoneTypes.dirty()
         }
       }
     },

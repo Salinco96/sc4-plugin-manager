@@ -88,6 +88,12 @@ export const CityBackupListItem = memo(function CityBackupListItem({
                 id: "makeHistorical",
                 label: t("actions.historical.label"),
               },
+              city.established && {
+                action: () => openModal("fix"),
+                description: t("actions.fix.description"),
+                id: "fix",
+                label: t("actions.fix.label"),
+              },
               {
                 action: () => removeBackup(regionId, cityId, backup.file),
                 color: "error",

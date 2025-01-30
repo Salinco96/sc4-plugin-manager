@@ -414,7 +414,7 @@ export class LotRecord extends SaveRecord implements LotRecordData {
   }
 
   public isPlop(): boolean {
-    return this.zoneType === ZoneType.Landmark
+    return this.zoneType === ZoneType.Plopped
   }
 
   public isGrowifyable(rciType: RCIType): boolean {

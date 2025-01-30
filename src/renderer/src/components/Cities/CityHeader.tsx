@@ -113,6 +113,12 @@ export function CityHeader({
                 id: "historical",
                 label: t("actions.historical.label"),
               },
+              city.established && {
+                action: () => openModal("fix"),
+                description: t("actions.fix.description"),
+                id: "fix",
+                label: t("actions.fix.label"),
+              },
             ]}
             setVariant={profileId =>
               linkCity(regionId, cityId, profileId === DEFAULT ? null : profileId)

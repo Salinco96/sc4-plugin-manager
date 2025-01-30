@@ -37,6 +37,9 @@ export type Action<K extends string, P extends Record<string, true | Record<stri
 export type UpdateSaveAction = Action<
   "action",
   {
+    fix: {
+      backup: boolean
+    }
     growify: {
       backup: boolean
       density: ZoneDensity

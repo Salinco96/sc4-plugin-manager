@@ -154,7 +154,7 @@ import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { getBackupFileName, loadRegions } from "./data/regions"
 import { getFileVersion, loadSaveInfo } from "./data/saves/load"
-import { growify, makeHistorical, updateLots } from "./data/saves/update"
+import { fixSave, growify, makeHistorical, updateLots } from "./data/saves/update"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
   UpdateDatabaseProcessData,
@@ -4079,6 +4079,11 @@ export class Application {
         let updated: boolean
 
         switch (action.action) {
+          case "fix": {
+            updated = await fixSave(context, sourceFullPath, { ...action, tempPath })
+            break
+          }
+
           case "growify": {
             updated = await growify(context, sourceFullPath, { ...action, tempPath })
             break

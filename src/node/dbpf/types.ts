@@ -188,6 +188,7 @@ export enum WealthType {
 }
 
 export enum ZoneType {
+  None = 0x00,
   ResidentialLow = 0x01,
   ResidentialMedium = 0x02,
   ResidentialHigh = 0x03,
@@ -197,5 +198,6 @@ export enum ZoneType {
   IndustrialLow = 0x07,
   IndustrialMedium = 0x08,
   IndustrialHigh = 0x09,
-  Landmark = 0x0f,
+  Landfill = 0x0e,
+  Plopped = 0x0f,
 }

@@ -201,7 +201,7 @@ function PackageSummaryEditor({
         value={data.thanks}
       />
 
-      <FlexRow>
+      <FlexRow gap={2}>
         <BooleanInput
           label="This variant is experimental"
           name="experimental"

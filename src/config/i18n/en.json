@@ -73,17 +73,17 @@
         "description": "Create a backup of this city",
         "label": "Backup"
       },
+      "fix": {
+        "description": "Regenerate files to remove inconsistencies",
+        "label": "Fix issues"
+      },
       "growify": {
         "description": "Convert plopped buildings to growables",
-        "label": "Growify",
-        "modalDescription": "Convert plopped buildings to normal growables. This is primarily meant to fully enable growable lots placed with 'buildingplop' or 'lotplop' cheats, in particular for residential lots, which will always abandon otherwise. It also enables industrial fret and normal redevelopment after destruction.",
-        "modalTitle": "Growify lots"
+        "label": "Growify"
       },
       "historical": {
         "description": "Mark growables as historical",
-        "label": "Make historical",
-        "modalDescription": "Mark all lots of the given RCI types as historical. This prevents them from being redeveloped.",
-        "modalTitle": "Make historical"
+        "label": "Make historical"
       },
       "removeBackup": {
         "description": "Delete this backup",
@@ -970,6 +970,53 @@
   },
   "ToolView": {
     "missing": "Tool {{toolId}} does not exist"
+  },
+
+  "UpdateSaveActionModal": {
+    "actions": {
+      "fix": {
+        "description": "Regenerate some parts of the savegame in order to remove inconsistencies. In some cases this may fix simulation bugs caused by data corruption.",
+        "title": "Fix issues"
+      },
+      "growify": {
+        "description": "Convert plopped buildings to normal growables. This is primarily meant to fully enable growable lots placed with 'buildingplop' or 'lotplop' cheats, in particular for residential lots, which will always abandon otherwise. It also enables industrial fret and normal redevelopment after destruction.",
+        "title": "Growify lots"
+      },
+      "historical": {
+        "description": "Mark all lots of the given RCI types as historical. This prevents them from being redeveloped.",
+        "title": "Make historical"
+      }
+    },
+    "backup": {
+      "alreadyBackedUp": "A backup of this version already exists",
+      "description": "Create a backup before updating (recommended)",
+      "label": "Create backup?"
+    },
+    "density": {
+      "description": "Which zone density should be used if one cannot be picked automatically?",
+      "label": "Preferred zone density"
+    },
+    "historical": {
+      "description": "Mark growified buildings as historical so they will not redevelop (recommended)",
+      "label": "Make historical?"
+    },
+    "rciTypes": {
+      "description": "Which RCI types should be affected?",
+      "label": "RCI Types"
+    },
+    "warnings": {
+      "backupDisabled": {
+        "message": "The original version will be permanently lost.",
+        "title": "Backup disabled"
+      },
+      "growify": {
+        "message": "Using growified or plopped RCI may unbalance the simulation, especially if there is not enough existing demand when building. Some abnormalities may be resolved by running the simulation for a few in-game months."
+      },
+      "growifyFunctionalLandmarks": {
+        "message": "This action will also convert functional landmarks, making them susceptible to abandonment and redevelopment. Additionally, civics and networks can be built directly onto such buildings, destroying them without warning, just like normal growables.",
+        "title": "Functional landmarks"
+      }
+    }
   },
   "Variant": {
     "id": {

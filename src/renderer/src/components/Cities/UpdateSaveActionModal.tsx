@@ -11,17 +11,12 @@ import {
   Alert,
   AlertTitle,
   Button,
-  Checkbox,
   Dialog,
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
   Divider,
-  FormControl,
-  FormLabel,
-  ToggleButton,
-  ToggleButtonGroup,
 } from "@mui/material"
 import { useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -35,6 +30,8 @@ import {
   hasBackup,
 } from "@common/regions"
 import { FlexCol } from "@components/FlexBox"
+import { BooleanInput } from "@components/Input/BooleanInput"
+import { PickerInput, type PickerOption } from "@components/Input/PickerInput"
 import { updateSave } from "@stores/actions"
 import { store } from "@stores/main"
 
@@ -72,7 +69,7 @@ function UpdateSaveActionModalForm({
   const city = store.useCityInfo(regionId, cityId)
   const alreadyBackedUp = !backup && hasBackup(city)
 
-  const { t } = useTranslation("CityView")
+  const { t } = useTranslation("UpdateSaveActionModal")
 
   const [isUpdating, setUpdating] = useState(false)
   const [options, setOptions] = useState(getDefaultOptions(action, alreadyBackedUp))
@@ -80,177 +77,84 @@ function UpdateSaveActionModalForm({
   return (
     <>
       <DialogTitle id="UpdateSaveActionModal-title">
-        {city.name} - {t(`actions.${action}.modalTitle`)}
+        {city.name} - {t(`actions.${action}.title`)}
       </DialogTitle>
       <DialogContent id="UpdateSaveActionModal-description">
         <FlexCol gap={1}>
-          <DialogContentText>{t(`actions.${action}.modalDescription`)}</DialogContentText>
+          <DialogContentText>{t(`actions.${action}.description`)}</DialogContentText>
           <Divider sx={{ mt: 1 }} />
 
           {"rciTypes" in options && (
-            <FormControl
-              fullWidth
-              sx={{ alignItems: "center", flexDirection: "row" }}
-              title="Which RCI types should be affected?"
-            >
-              <FormLabel id="rciTypes-label" sx={{ flex: 1 }}>
-                RCI types
-              </FormLabel>
-              <ToggleButtonGroup
-                aria-labelledby="rciTypes-label"
-                onChange={(_event, rciTypes) => setOptions({ ...options, rciTypes })}
-                size="small"
-                value={options.rciTypes}
-              >
-                <ToggleButton
-                  aria-label="Residential"
-                  color="success"
-                  value={RCIType.Residential}
-                  title="Residential"
-                >
-                  <ResidentialIcon />
-                </ToggleButton>
-                <ToggleButton
-                  aria-label="Commercial"
-                  color="info"
-                  value={RCIType.Commercial}
-                  title="Commercial"
-                >
-                  <CommercialIcon />
-                </ToggleButton>
-                <ToggleButton
-                  aria-label="Industry"
-                  color="warning"
-                  value={RCIType.Industrial}
-                  title="Industry"
-                >
-                  <IndustrialIcon />
-                </ToggleButton>
-                <ToggleButton
-                  aria-label="Agriculture"
-                  color="warning"
-                  value={RCIType.Agriculture}
-                  title="Agriculture"
-                >
-                  <AgricultureIcon />
-                </ToggleButton>
-              </ToggleButtonGroup>
-            </FormControl>
+            <PickerInput
+              description={t("rciTypes.description")}
+              label={t("rciTypes.label")}
+              multiple
+              name="rciTypes"
+              onChange={rciTypes => setOptions({ ...options, rciTypes })}
+              options={rciTypeOptions}
+              required
+              value={options.rciTypes}
+            />
           )}
 
           {"density" in options && options.rciTypes.some(type => type !== RCIType.Agriculture) && (
-            <FormControl
-              fullWidth
-              sx={{ alignItems: "center", flexDirection: "row" }}
-              title="Which zone density should be used if one cannot be picked automatically?"
-            >
-              <FormLabel id="density-label" sx={{ flex: 1 }}>
-                Preferred zone density
-              </FormLabel>
-              <ToggleButtonGroup
-                aria-labelledby="density-label"
-                exclusive
-                onChange={(_event, density) => density && setOptions({ ...options, density })}
-                size="small"
-                value={options.density}
-              >
-                <ToggleButton value={ZoneDensity.LOW} aria-label="Low density" title="Low density">
-                  <LowDensityIcon />
-                </ToggleButton>
-                <ToggleButton
-                  value={ZoneDensity.MEDIUM}
-                  aria-label="Medium density"
-                  title="Medium density"
-                >
-                  <MediumDensityIcon />
-                </ToggleButton>
-                <ToggleButton
-                  value={ZoneDensity.HIGH}
-                  aria-label="High density"
-                  title="High density"
-                >
-                  <HighDensityIcon />
-                </ToggleButton>
-              </ToggleButtonGroup>
-            </FormControl>
+            <PickerInput
+              description={t("density.description")}
+              label={t("density.label")}
+              name="density"
+              onChange={density => setOptions({ ...options, density })}
+              options={densityOptions}
+              required
+              value={options.density}
+            />
           )}
 
           {"historical" in options && (
-            <FormControl
-              fullWidth
-              sx={{ alignItems: "center", flexDirection: "row", minHeight: 40 }}
-              title="Mark growified buildings as historical so they will not redevelop (recommended)"
-            >
-              <FormLabel id="historical-label" sx={{ flex: 1 }}>
-                Make historical?
-              </FormLabel>
-              <Checkbox
-                aria-labelledby="historical-label"
-                checked={!!options.historical}
-                color="primary"
-                id="historical"
-                name="historical"
-                onChange={event => setOptions({ ...options, historical: event.target.checked })}
-                sx={{ marginRight: "-9px" }}
-              />
-            </FormControl>
+            <BooleanInput
+              description={t("historical.description")}
+              label={t("historical.label")}
+              name="historical"
+              onChange={historical => setOptions({ ...options, historical })}
+              value={options.historical}
+            />
           )}
 
-          <FormControl
+          <BooleanInput
+            description={t(alreadyBackedUp ? "backup.alreadyBackedUp" : "backup.description")}
             disabled={alreadyBackedUp}
-            fullWidth
-            sx={{ alignItems: "center", flexDirection: "row", minHeight: 40 }}
-            title={
-              alreadyBackedUp
-                ? "A backup of this version already exists"
-                : "Create a backup before updating (recommended)"
-            }
-          >
-            <FormLabel id="backup-label" sx={{ flex: 1 }}>
-              Create backup?
-            </FormLabel>
-            <Checkbox
-              aria-labelledby="backup-label"
-              checked={!!options.backup}
-              color="primary"
-              id="backup"
-              name="backup"
-              onChange={event => setOptions({ ...options, backup: event.target.checked })}
-              sx={{ marginRight: "-9px" }}
-            />
-          </FormControl>
+            label={t("backup.label")}
+            name="backup"
+            onChange={backup => setOptions({ ...options, backup })}
+            value={options.backup}
+          />
 
           <Divider sx={{ mb: 1 }} />
 
-          {action === "growify" && (
-            <Alert severity="warning">
-              Using growified or plopped RCI may unbalance the simulation, especially if there is
-              not enough existing demand when building. Some abnormalities may be resolved by
-              running the simulation for a few in-game months.
-            </Alert>
-          )}
-
-          {action === "growify" && options.rciTypes.some(type => type !== RCIType.Residential) && (
-            <Alert severity="warning">
-              <AlertTitle>Functional landmarks</AlertTitle>
-              This action will also convert functional landmarks, making them susceptible to
-              abandonment and redevelopment. Additionally, civics and networks can be built directly
-              onto such buildings, destroying them without warning, just like normal growables.
-            </Alert>
+          {options.action === "growify" && (
+            <>
+              <Alert severity="warning">{t("warnings.growify.message")}</Alert>
+              {options.rciTypes.some(type => type !== RCIType.Residential) && (
+                <Alert severity="warning">
+                  <AlertTitle> {t("warnings.growifyFunctionalLandmarks.title")}</AlertTitle>
+                  {t("warnings.growifyFunctionalLandmarks.message")}
+                </Alert>
+              )}
+            </>
           )}
 
           {!options.backup && !alreadyBackedUp && (
             <Alert severity="warning">
-              <AlertTitle>Backup disabled</AlertTitle>
-              The original version will be permanently lost.
+              <AlertTitle>{t("warnings.backupDisabled.title")}</AlertTitle>
+              {t("warnings.backupDisabled.message")}
             </Alert>
           )}
         </FlexCol>
       </DialogContent>
       <DialogActions>
         <Button color="error" onClick={onClose} variant="outlined">
-          Cancel
+          {t("cancel", { ns: "General" })}
         </Button>
+
         <Button
           disabled={isUpdating || !isValidOptions(options)}
           onClick={async () => {
@@ -266,7 +170,7 @@ function UpdateSaveActionModalForm({
           type="submit"
           variant="outlined"
         >
-          Confirm
+          {t("confirm", { ns: "General" })}
         </Button>
       </DialogActions>
     </>
@@ -278,6 +182,13 @@ function getDefaultOptions(
   alreadyBackedUp: boolean,
 ): UpdateSaveAction {
   switch (action) {
+    case "fix": {
+      return {
+        action,
+        backup: !alreadyBackedUp,
+      }
+    }
+
     case "growify": {
       return {
         action,
@@ -305,6 +216,10 @@ function getDefaultOptions(
 
 function isValidOptions(action: UpdateSaveAction): boolean {
   switch (action.action) {
+    case "fix": {
+      return true
+    }
+
     case "growify": {
       return action.rciTypes.length > 0
     }
@@ -329,3 +244,48 @@ export function useUpdateSaveActionModal(props: {
 
   return [{ ...props, action, onClose }, setAction]
 }
+
+const densityOptions: PickerOption<ZoneDensity>[] = [
+  {
+    description: "Low density",
+    icon: LowDensityIcon,
+    value: ZoneDensity.LOW,
+  },
+  {
+    description: "Medium density",
+    icon: MediumDensityIcon,
+    value: ZoneDensity.MEDIUM,
+  },
+  {
+    description: "High density",
+    icon: HighDensityIcon,
+    value: ZoneDensity.HIGH,
+  },
+]
+
+const rciTypeOptions: PickerOption<RCIType>[] = [
+  {
+    color: "success",
+    description: "Residential",
+    icon: ResidentialIcon,
+    value: RCIType.Residential,
+  },
+  {
+    color: "info",
+    description: "Commercial",
+    icon: CommercialIcon,
+    value: RCIType.Commercial,
+  },
+  {
+    color: "warning",
+    description: "Industry",
+    icon: IndustrialIcon,
+    value: RCIType.Industrial,
+  },
+  {
+    color: "warning",
+    description: "Agriculture",
+    icon: AgricultureIcon,
+    value: RCIType.Agriculture,
+  },
+]

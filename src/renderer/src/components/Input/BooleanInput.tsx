@@ -46,6 +46,7 @@ export function BooleanInput({
           color="primary"
           name={name}
           onChange={event => onChange(event.target.checked)}
+          sx={{ mr: "-9px" }}
         />
       )}
     </FormControl>
