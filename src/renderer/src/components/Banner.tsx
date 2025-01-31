@@ -24,6 +24,8 @@ export function Banner({
   title,
   icon,
 }: BannerProps): JSX.Element {
+  const inlineTitle = true // compact?
+
   return (
     <Alert
       action={
@@ -67,14 +69,14 @@ export function Banner({
       {title && (
         <AlertTitle
           sx={{
-            display: compact ? "inline" : undefined,
-            fontSize: compact ? "inherit" : undefined,
+            display: inlineTitle ? "inline" : undefined,
+            fontSize: inlineTitle ? "inherit" : undefined,
             marginBottom: 0.5,
             marginTop: 0,
           }}
         >
           {title}
-          {compact && ": "}
+          {inlineTitle && ": "}
         </AlertTitle>
       )}
 

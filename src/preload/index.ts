@@ -97,6 +97,9 @@ export const api = {
   openAuthorURL(authorId: AuthorID): Promise<void> {
     return ipcRenderer.invoke("openAuthorURL", authorId)
   },
+  openDataRepository(): Promise<void> {
+    return ipcRenderer.invoke("openDataRepository")
+  },
   openExecutableDirectory(): Promise<void> {
     return ipcRenderer.invoke("openExecutableDirectory")
   },

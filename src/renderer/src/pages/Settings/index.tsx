@@ -12,6 +12,7 @@ import {
   check4GBPatch,
   checkDgVoodoo,
   clearUnusedPackages,
+  openDataRepository,
   openExecutableDirectory,
   openInstallationDirectory,
 } from "@stores/actions"
@@ -158,7 +159,9 @@ function Settings(): JSX.Element {
           </FlexRow>
 
           <FlexRow centered gap={1} height={38}>
-            <Typography sx={{ flex: 1 }}>{t("version.label")}</Typography>
+            <Typography sx={{ flex: 1 }}>
+              {t(settings?.env.dev ? "version.labelDev" : "version.label")}
+            </Typography>
             {settings?.version ?? t("version.emptyValue")}
             {settings?.version && !settings?.update && (
               <FlexRow
@@ -202,6 +205,25 @@ function Settings(): JSX.Element {
                   {t("version.updateAvailable", { version: settings.update.version })}
                 </Link>
               </FlexRow>
+            )}
+          </FlexRow>
+
+          <FlexRow centered gap={2} height={38}>
+            <Typography sx={{ flex: 1 }}>{t("db.label")}</Typography>
+
+            {settings?.db ? (
+              <Tooltip arrow placement="left" title={t("db.actions.explorer")}>
+                <Text
+                  color="primary"
+                  maxLines={1}
+                  onClick={openDataRepository}
+                  sx={{ cursor: "pointer" }}
+                >
+                  {settings.db.path ?? settings.db.url}
+                </Text>
+              </Tooltip>
+            ) : (
+              t("db.emptyValue")
             )}
           </FlexRow>
         </FormGroup>

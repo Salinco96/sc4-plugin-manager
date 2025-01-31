@@ -2,6 +2,7 @@ import path from "node:path"
 
 import { isString, keys } from "@salinco/nice-utils"
 import { app } from "electron/main"
+import semver from "semver"
 
 import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
@@ -47,9 +48,9 @@ export async function loadSettings(
       throw Error(response.statusText)
     }
 
-    const json = await response.json()
-    const version = json.tag_name
-    if (isString(version) && version !== settings.version) {
+    const json: { tag_name: string } = await response.json()
+    const version = json.tag_name.replace(/^v/, "") // remove leading v
+    if (isString(version) && semver.gt(version, settings.version)) {
       const url = `https://github.com/${repository}/releases/latest`
       settings.update = { url, version }
     }

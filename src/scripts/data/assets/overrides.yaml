@@ -5936,6 +5936,18 @@ simtropolis/36674-yeefatmansion:
   packageId: ct1999/yeefat-mansion
   variantId: darknite
 
+simtropolis/36682-acme-restoration-company:
+  packageId: jestarr/acme-restoration-company
+  variants:
+    '205499': null
+    '205500':
+      packageId: jestarr/acme-restoration-company
+      paths:
+        '*HD*':
+          packageId: jestarr/acme-restoration-company
+          variantId: hd
+      variantId: sd
+
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31
 

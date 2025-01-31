@@ -977,18 +977,8 @@ export class Application {
    * - When using a Git repository, returns the path to the local clone.
    * - When using a local repository, returns the path to the repository itself.
    */
-  public getDatabasePath(): string {
-    const repository = this.getDataRepository()
-    return isURL(repository) ? path.join(this.getRootPath(), DIRNAMES.db) : repository
-  }
-
-  /**
-   * Returns the absolute path or Git URL to the current data repository.
-   */
-  public getDataRepository(): string {
-    // TODO: Make this overridable through Settings
-    const repository = env.DATA_REPOSITORY
-    return isURL(repository) ? repository : path.resolve(__dirname, "../..", env.DATA_REPOSITORY)
+  public getDatabasePath(settings: Settings): string {
+    return settings.db.path ?? path.join(this.getRootPath(), DIRNAMES.db)
   }
 
   /**
@@ -1374,6 +1364,7 @@ export class Application {
     this.handle("loadVariantFileEntries")
     this.handle("loadVariantFileEntry")
     this.handle("openAuthorURL")
+    this.handle("openDataRepository")
     this.handle("openExecutableDirectory")
     this.handle("openInstallationDirectory")
     this.handle("openPackageConfig")
@@ -2055,9 +2046,8 @@ export class Application {
     return this.tasks.queue<Loaded>("load", {
       cache: true,
       handler: async context => {
-        // Launch database update in child process
-        const databaseUpdatePromise = this.updateDatabase(isReload)
         const downloadsPromise = loadDownloadedAssets(context, this.getDownloadsPath())
+        const regionsPromise = loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
 
         // Launch link initialization in the background
         this.initLinks(isReload)
@@ -2071,15 +2061,18 @@ export class Application {
         this.sendStateUpdate({ profiles })
 
         // Load settings...
+        const repository = env.DATA_REPOSITORY
         context.setStep("Loading settings...")
         const settings = await loadSettings(
           context,
           this.getRootPath(),
           this.getPluginsPath(),
           this.getRegionsPath(),
-          this.getDataRepository(),
+          isURL(repository) ? repository : path.resolve(__dirname, "../..", repository),
           profiles,
         )
+
+        const dbPath = this.getDatabasePath(settings)
 
         // Rewrite modified settings...
         this.writeSettings(context, settings)
@@ -2087,22 +2080,24 @@ export class Application {
         const profileInfo = settings.currentProfile ? profiles[settings.currentProfile] : undefined
 
         // Wait for database update...
-        context.setStep("Updating database...")
-        await databaseUpdatePromise
+        if (settings.db.url) {
+          context.setStep("Updating database...")
+          await this.updateDatabase(settings.db.url, dbPath, isReload)
+        }
 
         // Load authors...
         context.setStep("Loading authors...")
-        const authors = await loadAuthors(context, this.getDatabasePath())
+        const authors = await loadAuthors(context, dbPath)
         this.sendStateUpdate({ authors })
 
         // Load categories...
         context.setStep("Loading categories...")
-        const categories = await loadCategories(context, this.getDatabasePath())
+        const categories = await loadCategories(context, dbPath)
         this.sendStateUpdate({ categories })
 
         // Load profile options...
         context.setStep("Loading profile options...")
-        const profileOptions = await loadProfileOptions(context, this.getDatabasePath())
+        const profileOptions = await loadProfileOptions(context, dbPath)
         this.sendStateUpdate({ profileOptions })
 
         // Load local packages...
@@ -2119,7 +2114,7 @@ export class Application {
         // Load remote packages...
         const { assets, packages } = await loadRemotePackages(
           context,
-          this.getDatabasePath(),
+          dbPath,
           categories,
           localPackages,
           downloadedAssets,
@@ -2140,9 +2135,7 @@ export class Application {
 
         context.setStep("Indexing external plugins...")
 
-        const regionsPromise = loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
-
-        const exemplarProperties = await loadExemplarProperties(context, this.getDatabasePath())
+        const exemplarProperties = await loadExemplarProperties(context, dbPath)
         this.sendStateUpdate({ exemplarProperties })
 
         const maxisPromise = settings.install?.path
@@ -2159,9 +2152,9 @@ export class Application {
           reload: settings.startup.reloadPlugins,
         })
 
-        const collections = await loadCollections(context, this.getDatabasePath())
-        const tools = await loadTools(context, this.getDatabasePath(), assets)
-        const templates = await loadProfileTemplates(context, this.getDatabasePath())
+        const collections = await loadCollections(context, dbPath)
+        const tools = await loadTools(context, dbPath, assets)
+        const templates = await loadProfileTemplates(context, dbPath)
         this.sendStateUpdate({ collections, templates, tools })
 
         const regions = await regionsPromise
@@ -2387,6 +2380,16 @@ export class Application {
     }
 
     await this.openInExplorer(authorInfo.url)
+  }
+
+  public async openDataRepository(): Promise<void> {
+    const { settings } = await this.load()
+
+    if (!settings.db) {
+      throw Error("Data repository is not configured")
+    }
+
+    await this.openInExplorer(settings.db.path ?? settings.db.url)
   }
 
   /**
@@ -3323,20 +3326,14 @@ export class Application {
    * Attempts to pull latest data from the remote Git repository.
    * @param isReload whether to force refetching new data
    */
-  protected async updateDatabase(isReload?: boolean): Promise<void> {
+  protected async updateDatabase(dbUrl: string, dbPath: string, isReload?: boolean): Promise<void> {
     await this.tasks.queue("db:update", {
       cache: true,
       handler: async context => {
-        const origin = this.getDataRepository()
-        if (!isURL(origin)) {
-          return
-        }
-
-        const databasePath = this.getDatabasePath()
-        await createIfMissing(databasePath)
+        await createIfMissing(dbPath)
 
         const branch = env.DATA_BRANCH || "main"
-        context.info(`Updating database from ${origin}/${branch}...`)
+        context.info(`Updating database from ${dbUrl}/${branch}...`)
 
         try {
           await new Promise<void>((resolve, reject) => {
@@ -3345,10 +3342,10 @@ export class Application {
               EmptyRecord,
               UpdateDatabaseProcessResponse
             >(updateDatabaseProcessPath, {
-              cwd: databasePath,
+              cwd: dbPath,
               data: {
                 branch,
-                origin,
+                origin: dbUrl,
               },
               onClose() {
                 reject(Error("Closed"))

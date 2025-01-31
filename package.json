@@ -1,6 +1,6 @@
 {
   "name": "sc4-plugin-manager",
-  "version": "1.0.0-alpha.2",
+  "version": "v1.0.0-beta.1",
   "description": "SC4 Plugin Manager interface using Electron",
   "homepage": "https://github.com/Salinco96/sc4-plugin-manager#readme",
   "repository": {
@@ -60,6 +60,7 @@
     "react-material-ui-carousel": "3.4.2",
     "react-virtuoso": "4.12.0",
     "remark-gfm": "4.0.0",
+    "semver": "7.7.0",
     "unzipper": "0.11.6",
     "zustand": "4.5.2"
   },
@@ -75,6 +76,7 @@
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "@types/react-transition-group": "4.4.11",
+    "@types/semver": "^7",
     "@types/turndown": "5.0.4",
     "@types/unzipper": "0.10.9",
     "@vitejs/plugin-react": "4.2.1",

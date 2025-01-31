@@ -263,7 +263,9 @@ export function isMissing(
   variantInfo: VariantInfo,
   packageStatus: PackageStatus | undefined,
 ): boolean {
-  return isIncluded(packageStatus) && !isInstalled(variantInfo)
+  return (
+    isIncluded(packageStatus) && isSelected(variantInfo, packageStatus) && !isInstalled(variantInfo)
+  )
 }
 
 export function isNew(variantInfo: { release?: Date }): boolean {

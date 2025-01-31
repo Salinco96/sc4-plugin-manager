@@ -358,12 +358,16 @@ export async function openAuthorURL(authorId: AuthorID): Promise<void> {
   return window.api.openAuthorURL(authorId)
 }
 
-export async function openInstallationDirectory(): Promise<void> {
-  return window.api.openInstallationDirectory()
+export async function openDataRepository(): Promise<void> {
+  return window.api.openDataRepository()
 }
 
 export async function openExecutableDirectory(): Promise<void> {
   return window.api.openExecutableDirectory()
+}
+
+export async function openInstallationDirectory(): Promise<void> {
+  return window.api.openInstallationDirectory()
 }
 
 export async function openPackageConfig(packageId: PackageID): Promise<void> {

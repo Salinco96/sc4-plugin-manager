@@ -458,6 +458,14 @@
     },
     "incompatible": {
       "actions": {
+        "exePatch": {
+          "description": "Apply the 4GB Patch",
+          "label": "Patch"
+        },
+        "openPackage": {
+          "description": "View package containing feature",
+          "label": "View"
+        },
         "replaceExternal": {
           "description": "Replace external package",
           "label": "Replace"
@@ -465,6 +473,10 @@
         "replacePackages": {
           "description": "Replace {{packageName}} with this package",
           "label": "Replace"
+        },
+        "setOption": {
+          "description": "Set option {{option}} to {{value}}",
+          "label": "Fix"
         }
       },
       "title": "Incompatible"
@@ -789,6 +801,13 @@
         "label": "Remove unused packages"
       }
     },
+    "db": {
+      "actions": {
+        "explorer": "Open data repository"
+      },
+      "emptyValue": "$t(General:emptyValue)",
+      "label": "Data repository"
+    },
     "install": {
       "patched": {
         "applied": "Applied",
@@ -818,6 +837,7 @@
     "version": {
       "emptyValue": "$t(General:emptyValue)",
       "label": "Manager version",
+      "labelDev": "Manager version [Development]",
       "updateAvailable": "A new version is available",
       "updated": "The manager is up-to-date"
     }
