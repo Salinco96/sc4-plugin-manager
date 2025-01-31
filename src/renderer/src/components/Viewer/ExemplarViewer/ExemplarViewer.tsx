@@ -33,7 +33,7 @@ export interface ExemplarViewerProps {
   readonly?: boolean
 }
 
-export function ExemplarViewer({
+function ExemplarViewer({
   data,
   id,
   isLocal,
@@ -251,3 +251,5 @@ export function ExemplarViewer({
     </Viewer>
   )
 }
+
+export default ExemplarViewer

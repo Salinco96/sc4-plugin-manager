@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: sc4-plugin-manager
+appId: com.electron.app.sc4-plugin-manager
+productName: SC4 Plugin Manager
 directories:
   buildResources: build
 files:
@@ -7,10 +7,18 @@ files:
   - out
   - package.json
   - LICENSE
+nsis:
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: false
+  deleteAppDataOnUninstall: true
+  oneClick: false
 portable:
   artifactName: ${name}-${version}.${ext}
   splashImage: build/splash.bmp
 publish:
   provider: github
 win:
-  target: portable
+  icon: build/icon.png
+  target:
+    - nsis
+    - portable
