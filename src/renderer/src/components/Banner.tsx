@@ -1,24 +1,5 @@
-import { Alert, type AlertProps, Button, styled } from "@mui/material"
+import { Alert, type AlertProps, AlertTitle, Button } from "@mui/material"
 import type { ReactNode } from "react"
-
-const StyledAlert = styled(Alert)`
-  align-items: center;
-
-  & .MuiAlert-action {
-    margin-left: 8px;
-    padding: 0;
-  }
-
-  & .MuiAlert-message {
-    display: -webkit-box;
-    flex: 1 1 auto;
-    overflow: hidden;
-    padding: 0;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-  }
-`
 
 export interface BannerAction {
   description: string
@@ -44,7 +25,7 @@ export function Banner({
   icon,
 }: BannerProps): JSX.Element {
   return (
-    <StyledAlert
+    <Alert
       action={
         action && (
           <Button
@@ -62,10 +43,42 @@ export function Banner({
       color={color}
       icon={icon}
       severity="warning"
-      sx={{ height: compact ? 40 : 56, marginTop: compact ? 1 : 2 }}
+      sx={{
+        marginTop: compact ? 1 : 2,
+        minHeight: compact ? 40 : 56,
+        paddingY: 0,
+        "& > .MuiAlert-action": {
+          marginLeft: 1,
+          marginY: compact ? "5px" : title ? "12px" : "10px",
+          padding: 0,
+        },
+        "& > .MuiAlert-icon": {
+          paddingY: compact ? "9px" : "17px",
+        },
+        "& > .MuiAlert-message": {
+          alignSelf: "center",
+          flex: "1 1 auto",
+          overflow: "hidden",
+          paddingY: 0.75,
+          whiteSpace: "pre-wrap",
+        },
+      }}
     >
-      {title && <b>{title}: </b>}
+      {title && (
+        <AlertTitle
+          sx={{
+            display: compact ? "inline" : undefined,
+            fontSize: compact ? "inherit" : undefined,
+            marginBottom: 0.5,
+            marginTop: 0,
+          }}
+        >
+          {title}
+          {compact && ": "}
+        </AlertTitle>
+      )}
+
       {children}
-    </StyledAlert>
+    </Alert>
   )
 }

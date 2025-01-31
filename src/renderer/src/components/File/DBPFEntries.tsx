@@ -15,16 +15,16 @@ export interface DBPFEntriesProps {
 }
 
 export function DBPFEntries({ entries, renderEntry }: DBPFEntriesProps): JSX.Element {
-  const expandable = size(entries) > 8
-
   const categorizedEntries = useMemo(() => {
     return mapValues(groupBy(values(entries), getDBPFEntryCategory), entries =>
       entries.sort((a, b) => a.id.localeCompare(b.id)),
     )
   }, [entries])
 
+  const expandable = size(entries) > 8 && size(categorizedEntries) > 1
+
   const [expandedCategories, setExpandedCategories] = useState(() => {
-    return mapValues(categorizedEntries, (_entries, category) => {
+    return mapValues(categorizedEntries, (_, category) => {
       return !expandable || category === DBPFEntryCategory.EXEMPLARS
     })
   })

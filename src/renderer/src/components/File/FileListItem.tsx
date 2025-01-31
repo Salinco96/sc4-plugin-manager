@@ -102,7 +102,7 @@ export function FileListItem({
           )}
         </>
       }
-      title={path}
+      title={path.replaceAll("/", " / ")}
     >
       {banners && <Banners banners={banners} compact />}
 

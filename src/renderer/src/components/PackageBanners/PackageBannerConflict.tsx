@@ -1,16 +1,15 @@
 import { useMemo } from "react"
 
 import { DifferenceOutlined as ConflictIcon } from "@mui/icons-material"
-import { Link } from "@mui/material"
-import { Trans, useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
 import { getFeatureLabel } from "@common/i18n"
 import { Issue, type VariantIssue } from "@common/variants"
-import { useNavigation } from "@utils/navigation"
-
+import { Banner } from "@components/Banner"
+import { Translated } from "@components/Translated"
 import { disablePackage, updateProfile } from "@stores/actions"
 import { getPackageName, store } from "@stores/main"
-import { Banner } from "../Banner"
+import { useNavigation } from "@utils/navigation"
 
 export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.Element {
   const currentProfile = store.useCurrentProfile()
@@ -75,28 +74,12 @@ export function PackageBannerConflict({ issue }: { issue: VariantIssue }): JSX.E
 
   return (
     <Banner action={action} icon={<ConflictIcon />} title={t("conflict.title")}>
-      <Trans
-        components={{
-          a: (
-            <Link
-              color="inherit"
-              onClick={() => {
-                if (incompatiblePackageId) {
-                  openPackageView(incompatiblePackageId)
-                }
-              }}
-              sx={{
-                ":hover": { textDecoration: "underline" },
-                cursor: "pointer",
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              title={t("deprecated.actions.openPackage.description")}
-            />
-          ),
-          b: <strong />,
-        }}
+      <Translated
         i18nKey={issue.id}
+        link={{
+          description: t("deprecated.actions.openPackage.description"),
+          onClick: () => incompatiblePackageId && openPackageView(incompatiblePackageId),
+        }}
         ns="Issue"
         values={{
           ...issue,

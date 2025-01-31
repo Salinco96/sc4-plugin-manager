@@ -1,17 +1,16 @@
 import { useMemo } from "react"
 
 import { DoDisturb as IncompatibleIcon } from "@mui/icons-material"
-import { Link } from "@mui/material"
-import { Trans, useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
 import { getFeatureLabel } from "@common/i18n"
 import type { PackageID } from "@common/packages"
 import { Issue, type VariantID, type VariantIssue } from "@common/variants"
+import { Banner } from "@components/Banner"
+import { Translated } from "@components/Translated"
 import { addPackage, updateProfile } from "@stores/actions"
 import { getPackageName, store } from "@stores/main"
 import { useNavigation } from "@utils/navigation"
-
-import { Banner } from "../Banner"
 
 export function PackageBannerIncompatible({
   issue,
@@ -105,28 +104,12 @@ export function PackageBannerIncompatible({
       icon={<IncompatibleIcon />}
       title={t("incompatible.title")}
     >
-      <Trans
-        components={{
-          a: (
-            <Link
-              color="inherit"
-              onClick={() => {
-                if (incompatiblePackageId) {
-                  openPackageView(incompatiblePackageId)
-                }
-              }}
-              sx={{
-                ":hover": { textDecoration: "underline" },
-                cursor: "pointer",
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              title={t("deprecated.actions.openPackage.description")}
-            />
-          ),
-          b: <strong />,
-        }}
+      <Translated
         i18nKey={issue.id}
+        link={{
+          description: t("deprecated.actions.openPackage.description"),
+          onClick: () => incompatiblePackageId && openPackageView(incompatiblePackageId),
+        }}
         ns="Issue"
         values={{
           ...issue,

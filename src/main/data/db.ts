@@ -188,16 +188,10 @@ export async function loadPlugins(
 
         if (plugins[relativePath]) {
           if (getExtension(relativePath) === ".dll") {
-            if (relativePath.includes("/")) {
-              plugins[relativePath].issues = { dllNotTopLevel: true }
-            }
-
             const logsPath = relativePath.replace(".dll", ".log")
             if (await exists(path.join(pluginsPath, logsPath))) {
               plugins[relativePath].logs = logsPath
             }
-          } else if (!isDBPF(relativePath)) {
-            plugins[relativePath].issues = { unsupported: true }
           }
         }
       }

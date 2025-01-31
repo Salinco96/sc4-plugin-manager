@@ -1,15 +1,14 @@
 import { BedtimeOutlined as DeprecatedIcon } from "@mui/icons-material"
-import { Link } from "@mui/material"
 import { useMemo } from "react"
-import { Trans, useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
 import type { PackageID } from "@common/packages"
 import type { VariantID } from "@common/variants"
-import { useNavigation } from "@utils/navigation"
-
+import { Banner } from "@components/Banner"
+import { Translated } from "@components/Translated"
 import { addPackage, setPackageVariant } from "@stores/actions"
 import { store } from "@stores/main"
-import { Banner } from "../Banner"
+import { useNavigation } from "@utils/navigation"
 
 export function PackageBannerDeprecated({
   packageId,
@@ -78,24 +77,12 @@ export function PackageBannerDeprecated({
       icon={<DeprecatedIcon />}
       title={t("deprecated.title")}
     >
-      <Trans
-        components={{
-          a: (
-            <Link
-              color="inherit"
-              onClick={() => openPackageView(otherPackageId)}
-              sx={{
-                ":hover": { textDecoration: "underline" },
-                cursor: "pointer",
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              title={t("deprecated.actions.openPackage.description")}
-            />
-          ),
-          b: <strong />,
-        }}
+      <Translated
         i18nKey={messageKey}
+        link={{
+          description: t("deprecated.actions.openPackage.description"),
+          onClick: () => openPackageView(otherPackageId),
+        }}
         ns="PackageBanner"
         values={{ packageName: otherPackageInfo.name, variantName: otherVariantInfo.name }}
       />

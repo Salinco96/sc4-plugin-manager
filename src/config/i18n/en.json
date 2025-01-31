@@ -698,6 +698,8 @@
     "files_one": "{{count}} file",
     "files_other": "{{count}} files",
     "issues": {
+      "conflictingPackages_1": "This file may be conflicting with the following enabled packages:",
+      "conflictingPackages_2": "These packages either contain a file with the same name, or list this file's name in their Cleanitol configuration.",
       "dllNotTopLevel": "DLL files must be located directly in the root Plugins folder.",
       "unsupported": "This file format is not supported."
     },
