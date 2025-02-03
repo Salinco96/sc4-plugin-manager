@@ -1,7 +1,7 @@
 import type { TFunction } from "i18next"
 import type { Namespace } from "i18next"
 
-import { DBPFDataType, type DBPFEntry, DBPFFileType, GroupID, isType } from "@common/dbpf"
+import { DBPFDataType, type DBPFEntryInfo, GroupID, TypeID } from "@common/dbpf"
 import { ExemplarType, getExemplarType } from "@common/exemplars"
 import { split } from "@common/utils/string"
 
@@ -14,12 +14,12 @@ export enum DBPFEntryCategory {
   OTHERS = "others",
 }
 
-export function getDBPFEntryCategory(entry: DBPFEntry): DBPFEntryCategory | null {
+export function getDBPFEntryCategory(entry: DBPFEntryInfo): DBPFEntryCategory | null {
   switch (entry.type) {
     // Hide DIR file
     case DBPFDataType.DIR:
       return null
-    case DBPFDataType.EXMP:
+    case DBPFDataType.EXEMPLAR:
       return DBPFEntryCategory.EXEMPLARS
     case DBPFDataType.BMP:
     case DBPFDataType.JFIF:
@@ -42,9 +42,9 @@ export function getDBPFEntryCategoryLabel(
   return t(category, { count, ns: "DBPFEntryCategory" })
 }
 
-export function getDBPFEntryLabel(t: TFunction<Namespace>, entry: DBPFEntry): string {
-  if (entry.type === DBPFDataType.EXMP) {
-    const isCohort = isType(entry.id, DBPFFileType.COHORT)
+export function getDBPFEntryLabel(t: TFunction<Namespace>, entry: DBPFEntryInfo): string {
+  if (entry.type === DBPFDataType.EXEMPLAR) {
+    const isCohort = entry.type.startsWith(TypeID.COHORT)
     const label = t(isCohort ? "cohort" : "exemplar", { ns: "DBPFEntryType" })
     const exemplarType = getExemplarType(entry.id, entry.data)
 

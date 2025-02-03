@@ -1,44 +1,33 @@
 import path from "node:path"
 
-import { toArray, toHex, values } from "@salinco/nice-utils"
+import { forEach, toArray, toHex, values } from "@salinco/nice-utils"
 
-import {
-  DBPFDataType,
-  DBPFFileType,
-  type GroupID,
-  getTextureIdRange,
-  isDBPF,
-  parseTGI,
-} from "@common/dbpf"
-import {
-  type ExemplarProperties,
-  ExemplarPropertyID,
-  ExemplarType,
-  getExemplarType,
-} from "@common/exemplars"
+import { DBPFDataType, GroupID, getTextureIdRange, isDBPF, parseTGI } from "@common/dbpf"
+import { ExemplarPropertyID, ExemplarType, getExemplarType } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { FloraInfo } from "@common/mmps"
 import type { FileContents, FileContentsInfo } from "@common/plugins"
 import { Feature } from "@common/types"
-import { loadDBPF } from "@node/dbpf"
-import { getBuildingInfo } from "@node/dbpf/buildings"
-import { getLotInfo } from "@node/dbpf/lots"
-import { getFloraInfo } from "@node/dbpf/mmps"
-import { getPropInfo } from "@node/dbpf/props"
-import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
-import { get, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
+import { DBPF } from "@node/dbpf"
 import { FileOpenMode, fsOpen } from "@node/files"
+
+import { split } from "@common/utils/string"
+import { getBuildingInfo } from "./buildings"
+import { getLotInfo } from "./lots"
+import { getFloraInfo } from "./mmps"
+import { getPropInfo } from "./props"
+import { DeveloperID, type Exemplar, SimulatorID } from "./types"
+import { get, getFamilyInstanceId, getModelId, getString } from "./utils"
 
 export async function analyzeSC4Files(
   basePath: string,
   filePaths: string[],
-  exemplarProperties: ExemplarProperties,
 ): Promise<{ contents: FileContents; features: Feature[] }> {
   const features = new Set<Feature>()
   const contents: FileContents = {}
 
   for (const filePath of filePaths) {
-    const results = await analyzeSC4File(basePath, filePath, exemplarProperties)
+    const results = await analyzeSC4File(basePath, filePath)
 
     contents[filePath] = results.contents
     for (const feature of results.features) {
@@ -52,7 +41,6 @@ export async function analyzeSC4Files(
 export async function analyzeSC4File(
   basePath: string,
   filePath: string,
-  exemplarProperties: ExemplarProperties,
 ): Promise<{ contents: FileContentsInfo; features: Feature[] }> {
   const features = new Set<Feature>()
   const contents: FileContentsInfo = {}
@@ -60,8 +48,9 @@ export async function analyzeSC4File(
   console.debug(`Analyzing ${filePath}...`)
 
   if (isDBPF(filePath)) {
-    const file = await fsOpen(path.resolve(basePath, filePath), FileOpenMode.READ, file => {
-      return loadDBPF(file, { exemplarProperties, loadExemplars: true })
+    const file = await fsOpen(path.resolve(basePath, filePath), FileOpenMode.READ, async file => {
+      const dbpf = await DBPF.fromFile(file)
+      return dbpf.loadExemplars()
     })
 
     const mmpChains: {
@@ -71,11 +60,11 @@ export async function analyzeSC4File(
       }
     } = {}
 
-    for (const entry of values(file.entries)) {
+    forEach(file.entries, entry => {
       switch (entry.type) {
-        case DBPFDataType.EXMP: {
+        case DBPFDataType.EXEMPLAR: {
           const [, groupId, instanceId] = parseTGI(entry.id)
-          const exemplar = { ...entry, file: filePath } as Exemplar
+          const exemplar = { ...entry, file: filePath } as Exemplar // exemplars are preloaded so always available
           const exemplarType = getExemplarType(entry.id, entry.data)
           const isCohort = !!entry.data?.isCohort
 
@@ -198,8 +187,8 @@ export async function analyzeSC4File(
         }
 
         case DBPFDataType.FSH: {
-          if (entry.id.startsWith(DBPFFileType.FSH_TEXTURE)) {
-            const instanceId = parseTGI(entry.id)[2]
+          const [, groupId, instanceId] = split(entry.id, "-")
+          if (groupId === GroupID.FSH_TEXTURE) {
             const [textureId] = getTextureIdRange(instanceId)
             if (entry.id.endsWith(textureId)) {
               if (!contents.textures?.includes(textureId)) {
@@ -222,7 +211,7 @@ export async function analyzeSC4File(
           break
         }
       }
-    }
+    })
 
     for (const chain of values(mmpChains)) {
       const [mmp, ...stages] = chain.stages

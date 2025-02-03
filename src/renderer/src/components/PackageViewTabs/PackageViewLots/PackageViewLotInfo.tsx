@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { CategoryID } from "@common/categories"
-import { DBPFFileType, GroupID, type TGI, TypeID } from "@common/dbpf"
+import { GroupID, type TGI, TypeID } from "@common/dbpf"
 import { type LotInfo, isSC4LotFile } from "@common/lots"
 import { getRequirementText } from "@common/options"
 import type { PackageID } from "@common/packages"
@@ -61,7 +61,7 @@ export function PackageViewLotInfo({
 
   const loadLotPicture = useEffectEvent(async () => {
     try {
-      const entryId: TGI = `${DBPFFileType.PNG_LOT_PICTURES}-${lot.id}`
+      const entryId: TGI = `${TypeID.PNG}-${GroupID.PNG_LOT_PICTURES}-${lot.id}`
       const entry = await loadVariantFileEntry(packageId, variantInfo.id, lot.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const src = `data:image/${entry.type};base64, ${entry.data.base64}`

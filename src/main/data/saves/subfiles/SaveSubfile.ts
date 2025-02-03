@@ -1,7 +1,7 @@
-import type { FileHandle } from "node:fs/promises"
-import { type DBPFEntry, type TGI, parseTGI } from "@common/dbpf"
-import { BinaryWriter } from "@node/bin"
-import { loadDBPFEntryBytes } from "@node/dbpf"
+import { type DBPFEntryInfo, type TGI, parseTGI } from "@common/dbpf"
+import { BinaryReader, BinaryWriter } from "@node/bin"
+import type { DBPF } from "@node/dbpf"
+
 import type { SaveRecord, SaveRecordParser } from "./SaveRecord"
 
 export enum SaveSubfileType {
@@ -16,10 +16,10 @@ export enum SaveSubfileType {
 }
 
 export abstract class SaveSubfile {
-  public readonly entry: DBPFEntry
+  public readonly entry: DBPFEntryInfo
   public readonly type: number
 
-  public constructor(entry: DBPFEntry) {
+  public constructor(entry: DBPFEntryInfo) {
     this.entry = entry
     this.type = parseTGI(entry.id)[0]
   }
@@ -36,7 +36,7 @@ export abstract class SaveSubfile {
 export class SaveSubfileSingle<R extends SaveRecord> extends SaveSubfile {
   public data: R
 
-  protected constructor(entry: DBPFEntry, data: R) {
+  protected constructor(entry: DBPFEntryInfo, data: R) {
     super(entry)
     this.data = data
   }
@@ -56,13 +56,16 @@ export class SaveSubfileSingle<R extends SaveRecord> extends SaveSubfile {
   }
 
   public static async from<R extends SaveRecord>(
-    file: FileHandle,
-    entry: DBPFEntry,
+    dbpf: DBPF,
+    entry: DBPFEntryInfo,
     parser: SaveRecordParser<R>,
     checkCRC?: boolean,
   ): Promise<SaveSubfileSingle<R>> {
-    const bytes = await loadDBPFEntryBytes(file, entry)
-    const record = parser.parseRecord(bytes, checkCRC)
+    const bytes = await dbpf.getBytes(entry.id)
+    const reader = new BinaryReader(bytes)
+
+    const record = parser.parseRecord(reader, checkCRC)
+
     return new this(entry, record)
   }
 }
@@ -70,7 +73,7 @@ export class SaveSubfileSingle<R extends SaveRecord> extends SaveSubfile {
 export class SaveSubfileMulti<R extends SaveRecord> extends SaveSubfile {
   public data: R[]
 
-  protected constructor(entry: DBPFEntry, data: R[]) {
+  protected constructor(entry: DBPFEntryInfo, data: R[]) {
     super(entry)
     this.data = data
   }
@@ -90,17 +93,18 @@ export class SaveSubfileMulti<R extends SaveRecord> extends SaveSubfile {
   }
 
   public static async from<R extends SaveRecord>(
-    file: FileHandle,
-    entry: DBPFEntry,
+    dbpf: DBPF,
+    entry: DBPFEntryInfo,
     parser: SaveRecordParser<R>,
     checkCRC?: boolean,
   ): Promise<SaveSubfileMulti<R>> {
-    const bytes = await loadDBPFEntryBytes(file, entry)
+    const bytes = await dbpf.getBytes(entry.id)
+    const reader = new BinaryReader(bytes)
 
     const records: R[] = []
 
-    while (bytes.offset < bytes.length) {
-      const record = parser.parseRecord(bytes, checkCRC)
+    while (reader.offset < reader.length) {
+      const record = parser.parseRecord(reader, checkCRC)
       records.push(record)
     }
 

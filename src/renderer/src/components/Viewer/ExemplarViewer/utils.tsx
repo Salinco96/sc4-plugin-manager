@@ -45,9 +45,9 @@ export function getDiff(
 
   let diff: ExemplarDataPatch | null = null
 
-  if (currentData.parentCohortId !== originalData.parentCohortId) {
+  if (currentData.parentCohort !== originalData.parentCohort) {
     diff ??= {}
-    diff.parentCohortId = currentData.parentCohortId
+    diff.parentCohort = currentData.parentCohort
   }
 
   for (const propertyId in currentData.properties) {

@@ -1,7 +1,7 @@
 import { Card, CardContent, Divider, ListItem, Typography } from "@mui/material"
 import { Fragment, useEffect, useState } from "react"
 
-import { DBPFFileType, type TGI, TypeID } from "@common/dbpf"
+import { GroupID, type TGI, TypeID } from "@common/dbpf"
 import type { FloraInfo } from "@common/mmps"
 import { type PackageID, checkFile } from "@common/packages"
 import { VariantState } from "@common/types"
@@ -51,7 +51,7 @@ export function PackageViewMMPInfo({ mmp, packageId }: PackageViewMMPInfoProps):
 
   const loadIcon = useEffectEvent(async () => {
     try {
-      const entryId: TGI = `${DBPFFileType.PNG_MENU_ICONS}-${mmp.id}`
+      const entryId: TGI = `${TypeID.PNG}-${GroupID.PNG_MENU_ICONS}-${mmp.id}`
       const entry = await loadVariantFileEntry(packageId, variantInfo.id, mmp.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const image = document.createElement("img")

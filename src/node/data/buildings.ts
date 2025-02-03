@@ -7,7 +7,7 @@ import type { FamilyID } from "@common/families"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
 
 import { loadCategories, writeCategories } from "./categories"
-import { loadModelId, writeModelId } from "./packages"
+import { loadModelId, writeModelId } from "./plugins"
 import {
   parseMenu,
   parseMenus,

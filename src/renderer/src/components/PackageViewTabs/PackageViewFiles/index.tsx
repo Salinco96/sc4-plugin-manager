@@ -1,7 +1,7 @@
 import { sortBy, values } from "@salinco/nice-utils"
 import { useEffect, useState } from "react"
 
-import { DBPFDataType, type DBPFFile, isDBPF } from "@common/dbpf"
+import { DBPFDataType, type DBPFInfo, isDBPF } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
 import type { VariantID } from "@common/variants"
@@ -22,11 +22,11 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
 
   const patterns = packageStatus?.files?.map(pattern => globToRegex(pattern))
 
-  const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})
+  const [files, setFiles] = useState<{ [path in string]?: DBPFInfo }>({})
 
   const preloadFiles = useEffectEvent(async (variantId: VariantID) => {
     if (variantInfo.files) {
-      const files: { [path in string]?: DBPFFile } = {}
+      const files: { [path in string]?: DBPFInfo } = {}
 
       for (const file of variantInfo.files) {
         files[file.path] = await loadVariantFileEntries(packageId, variantId, file.path)

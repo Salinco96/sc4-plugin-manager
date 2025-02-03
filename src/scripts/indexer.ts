@@ -25,7 +25,6 @@ import {
   mapKeys,
   mapValues,
   merge,
-  parseHex,
   sort,
   union,
   unionBy,
@@ -38,11 +37,6 @@ import type { AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories, CategoryID } from "@common/categories"
-import {
-  type ExemplarPropertyData,
-  type ExemplarPropertyInfo,
-  ExemplarValueType,
-} from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
 import type { FloraID } from "@common/mmps"
@@ -61,12 +55,16 @@ import { loadCollections, writeCollections } from "@node/data/collections"
 import {
   type PackageData,
   loadPackageInfo,
-  toVariantContentsInfo,
-  writeModelId,
   writePackageInfo,
   writeVariantContentsInfo,
 } from "@node/data/packages"
-import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
+import {
+  type FileContentsData,
+  loadContents,
+  toVariantContentsInfo,
+  writeContents,
+  writeModelId,
+} from "@node/data/plugins"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
@@ -222,7 +220,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const dbAuthors = await loadAuthors(context, dbDir)
   const dbCollections = await loadCollections(context, dbDir)
   const categories = await loadCategories()
-  const exemplarProperties = await loadExemplarProperties()
   const overrides = await loadOverrides()
   const packages = await loadPackagesFromDB(categories)
 
@@ -451,7 +448,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   if (dbMaxisConfig?.data) {
     maxisContents = loadContents(dbMaxisConfig.data, categories)
   } else {
-    const { contents } = await analyzeSC4Files(gameDir, MAXIS_FILES, exemplarProperties)
+    const { contents } = await analyzeSC4Files(gameDir, MAXIS_FILES)
 
     maxisContents = contents
 
@@ -1553,7 +1550,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     // Analyze DBPF contents
-    const data = await analyzeSC4Files(downloadPath, variantEntry.files, exemplarProperties)
+    const data = await analyzeSC4Files(downloadPath, variantEntry.files)
     const contents = writeVariantContentsInfo(toVariantContentsInfo(data.contents), categories)
 
     variantEntry.buildingFamilies = contents.buildingFamilies
@@ -1916,35 +1913,6 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
 function getExePath(exe: string): string {
   return process.env[`INDEXER_EXE_PATH_${exe.toUpperCase()}`] || exe
-}
-
-async function loadExemplarProperties(): Promise<{ [id: number]: ExemplarPropertyInfo }> {
-  console.debug("Loading exemplar properties...")
-  const config = await loadConfig<{ [id: string]: ExemplarPropertyData }>(
-    dbDir,
-    "configs/exemplar-properties",
-  )
-
-  const properties: Record<string, ExemplarPropertyInfo> = {}
-
-  forEach(config?.data ?? {}, (data, propertyIdHex) => {
-    const propertyInfo: ExemplarPropertyInfo = {
-      ...data,
-      type: data.type && ExemplarValueType[data.type],
-    }
-
-    if (propertyIdHex.includes("-")) {
-      const [firstId, lastId] = propertyIdHex.split("-").map(parseHex)
-      for (let propertyId = firstId; propertyId <= lastId; propertyId++) {
-        properties[propertyId] = propertyInfo
-      }
-    } else {
-      const propertyId = parseHex(propertyIdHex)
-      properties[propertyId] = propertyInfo
-    }
-  })
-
-  return properties
 }
 
 async function loadCategories(): Promise<Categories> {

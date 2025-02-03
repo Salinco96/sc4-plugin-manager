@@ -1,12 +1,12 @@
-import { DBPFDataType, type DBPFFile, type GroupID, type TypeID } from "@common/dbpf"
+import { DBPFDataType, type DBPFInfo, type GroupID, type TypeID } from "@common/dbpf"
 import { ExemplarPropertyID } from "@common/exemplars"
-
 import type { FloraID, FloraInfo } from "@common/mmps"
 import { split } from "@common/utils/string"
+
 import type { Exemplar } from "./types"
 import { getModelId, getString, getTGI } from "./utils"
 
-export function getFloraInfo(exemplar: Exemplar, file: DBPFFile): FloraInfo {
+export function getFloraInfo(exemplar: Exemplar, file: DBPFInfo): FloraInfo {
   const [, group, id] = split(exemplar.id, "-") as [TypeID, GroupID, FloraID]
 
   const data: FloraInfo = {

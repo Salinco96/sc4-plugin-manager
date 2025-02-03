@@ -107,22 +107,22 @@ function ExemplarViewer({
         if (isArray(value) && value.length === 3) {
           setCurrentData({
             ...currentData,
-            parentCohortId: TGI(value[0], value[1], value[2]),
+            parentCohort: TGI(value[0], value[1], value[2]),
           })
         } else {
           setCurrentData({
             ...currentData,
-            parentCohortId: TGI(0, 0, 0),
+            parentCohort: TGI(0, 0, 0),
           })
         }
       },
       property: {
         id: PARENT_COHORT_ID_INFO.id,
         type: PARENT_COHORT_ID_INFO.type,
-        value: currentData?.parentCohortId.split("-").map(parseHex),
+        value: currentData?.parentCohort.split("-").map(parseHex),
       },
-      original: diff?.parentCohortId
-        ? originalData?.parentCohortId.split("-").map(parseHex)
+      original: diff?.parentCohort
+        ? originalData?.parentCohort.split("-").map(parseHex)
         : undefined,
       readonly,
     })

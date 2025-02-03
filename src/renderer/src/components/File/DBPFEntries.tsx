@@ -4,14 +4,14 @@ import { groupBy, mapDefined, mapValues, size, values } from "@salinco/nice-util
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import type { DBPFEntry, DBPFFile } from "@common/dbpf"
+import type { DBPFEntryInfo, TGI } from "@common/dbpf"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 
 import { DBPFEntryCategory, getDBPFEntryCategory, getDBPFEntryCategoryLabel } from "./utils"
 
 export interface DBPFEntriesProps {
-  entries: DBPFFile["entries"]
-  renderEntry: (entry: DBPFEntry) => JSX.Element
+  entries: { [tgi in TGI]?: DBPFEntryInfo }
+  renderEntry: (entry: DBPFEntryInfo) => JSX.Element
 }
 
 export function DBPFEntries({ entries, renderEntry }: DBPFEntriesProps): JSX.Element {

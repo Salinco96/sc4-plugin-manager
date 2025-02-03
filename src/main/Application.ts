@@ -32,8 +32,8 @@ import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
 import {
   DBPFDataType,
-  type DBPFEntry,
-  type DBPFFile,
+  type DBPFInfo,
+  type DBPFLoadedEntryInfo,
   type GroupID,
   type TGI,
   type TypeID,
@@ -99,7 +99,7 @@ import { CLEANITOL_EXTENSIONS, DOC_EXTENSIONS, SC4_EXTENSIONS, matchFiles } from
 import { loadLotInfo } from "@node/data/lots"
 import { type PackageData, writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
-import { loadDBPF, loadDBPFEntry, patchVariantFileEntries } from "@node/dbpf"
+import { DBPF } from "@node/dbpf"
 import { getBuildingInfo } from "@node/dbpf/buildings"
 import { getLotInfo } from "@node/dbpf/lots"
 import { getPropInfo } from "@node/dbpf/props"
@@ -939,16 +939,16 @@ export class Application {
     context: TaskContext,
     originalFullPath: string,
     patchedFullPath: string,
-    patches: Record<TGI, ExemplarDataPatch | undefined>,
+    patches: { [tgi in TGI]?: ExemplarDataPatch | null },
     exemplarProperties: ExemplarProperties,
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     context.info(`Patching ${path.basename(originalFullPath)}...`)
 
     await fsCreate(path.dirname(patchedFullPath))
-    return fsOpen(originalFullPath, FileOpenMode.READ, originalFile => {
-      return fsOpen(patchedFullPath, FileOpenMode.WRITE, patchedFile => {
-        return patchVariantFileEntries(originalFile, patchedFile, patches, { exemplarProperties })
-      })
+    return fsOpen(originalFullPath, FileOpenMode.READ, async originalFile => {
+      const dbpf = await DBPF.fromFile(originalFile)
+      await dbpf.loadExemplars()
+      return dbpf.patchEntries(patchedFullPath, patches, exemplarProperties)
     })
   }
 
@@ -2114,17 +2114,16 @@ export class Application {
         const exemplarProperties = await loadExemplarProperties(context, dbPath)
         this.sendStateUpdate({ exemplarProperties })
 
-        const maxisPromise = settings.install?.path
-          ? loadMaxisContents(context, this.getRootPath(), settings.install?.path, {
-              categories,
-              exemplarProperties,
-              reload: settings.startup.reloadMaxis,
-            })
-          : Promise.resolve({})
+        let maxisPromise: Promise<FileContents> | undefined
+        if (settings.install?.path) {
+          maxisPromise = loadMaxisContents(context, this.getRootPath(), settings.install?.path, {
+            categories,
+            reload: settings.startup.reloadMaxis,
+          })
+        }
 
         const pluginsPromise = loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
           categories,
-          exemplarProperties,
           reload: settings.startup.reloadPlugins,
         })
 
@@ -2136,7 +2135,7 @@ export class Application {
         const regions = await regionsPromise
         this.sendStateUpdate({ regions })
 
-        const maxis = await maxisPromise
+        const maxis = (await maxisPromise) ?? {}
         const plugins = await pluginsPromise
         const index = calculateIndex({ ...maxis, ...plugins })
         this.sendStateUpdate({ index, plugins })
@@ -2169,38 +2168,28 @@ export class Application {
     })
   }
 
-  public async loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
-    const { exemplarProperties } = await this.load()
-
+  public async loadPluginFileEntries(pluginPath: string): Promise<DBPFInfo> {
     return this.tasks.queue(`plugins:load:${pluginPath}`, {
       handler: async () => {
         const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
 
         return fsOpen(fullPath, FileOpenMode.READ, async patchedFile => {
-          return loadDBPF(patchedFile, { exemplarProperties })
+          const dbpf = await DBPF.fromFile(patchedFile)
+          return dbpf.loadExemplars()
         })
       },
       pool: `plugins:${pluginPath}`,
     })
   }
 
-  public async loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFEntry> {
-    const { exemplarProperties } = await this.load()
-
+  public async loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFLoadedEntryInfo> {
     return this.tasks.queue(`plugins:load:${pluginPath}#${entryId}`, {
       handler: async () => {
         const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
 
-        return fsOpen(fullPath, FileOpenMode.READ, async patchedFile => {
-          const contents = await loadDBPF(patchedFile, { exemplarProperties })
-          const entry = contents.entries[entryId]
-
-          if (!entry) {
-            throw Error(`Missing entry ${entryId} in ${pluginPath}`)
-          }
-
-          entry.data = await loadDBPFEntry(patchedFile, entry, { exemplarProperties })
-          return entry
+        return fsOpen(fullPath, FileOpenMode.READ, async file => {
+          const dbpf = await DBPF.fromFile(file)
+          return dbpf.getEntry(entryId)
         })
       },
       pool: `plugins:${pluginPath}`,
@@ -2211,7 +2200,7 @@ export class Application {
     regionId: RegionID,
     cityId: CityID,
     backupFile?: string,
-  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
+  ): Promise<DBPFLoadedEntryInfo<DBPFDataType.PNG>> {
     return this.tasks.queue(
       `region:preview:${regionId}:${cityId}${backupFile ? `:${backupFile}` : ""}`,
       {
@@ -2220,22 +2209,10 @@ export class Application {
             ? this.getCityBackupPath(regionId, cityId, backupFile)
             : this.getCityPath(regionId, cityId)
 
+          const entryId = "8a2482b9-4a2482bb-00000000" as TGI // TODO
           return fsOpen(fullPath, FileOpenMode.READ, async file => {
-            const { entries } = await loadDBPF(file, {
-              exemplarProperties: {},
-              loadExemplars: false,
-            })
-
-            const entry = entries["8a2482b9-4a2482bb-00000000" as TGI]
-
-            if (entry?.type !== DBPFDataType.PNG) {
-              throw Error(`Missing preview picture in ${fullPath}`)
-            }
-
-            entry.data ??= await loadDBPFEntry<DBPFDataType.PNG>(file, entry, {
-              exemplarProperties: {},
-            })
-
+            const dbpf = await DBPF.fromFile(file)
+            const entry = await dbpf.getEntry(entryId, DBPFDataType.PNG)
             return entry
           })
         },
@@ -2248,7 +2225,7 @@ export class Application {
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     const { exemplarProperties, packages } = await this.load()
 
     return this.tasks.queue(`load:${packageId}#${variantId}/${filePath}`, {
@@ -2271,8 +2248,9 @@ export class Application {
           exemplarProperties,
         )
 
-        return fsOpen(patchedFullPath, FileOpenMode.READ, patchedFile => {
-          return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
+        return fsOpen(patchedFullPath, FileOpenMode.READ, async patchedFile => {
+          const dbpf = await DBPF.fromFile(patchedFile)
+          return dbpf.loadExemplars()
         })
       },
       pool: `${packageId}#${variantId}`,
@@ -2284,7 +2262,7 @@ export class Application {
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
-  ): Promise<DBPFEntry> {
+  ): Promise<DBPFLoadedEntryInfo> {
     const { exemplarProperties, packages } = await this.load()
 
     return this.tasks.queue(`load:${packageId}#${variantId}/${filePath}#${entryId}`, {
@@ -2311,25 +2289,17 @@ export class Application {
 
         // Load current data
         const entry = await fsOpen(patchedFullPath, FileOpenMode.READ, async patchedFile => {
-          const contents = await loadDBPF(patchedFile, { exemplarProperties })
-          const entry = contents.entries[entryId]
-
-          if (!entry) {
-            throw Error(`Missing entry ${entryId} in ${filePath}`)
-          }
-
-          entry.data = await loadDBPFEntry(patchedFile, entry, { exemplarProperties })
-          return entry
+          const dbpf = await DBPF.fromFile(patchedFile)
+          return dbpf.getEntry(entryId)
         })
 
         // Load original data as needed
         if (originalFullPath !== patchedFullPath) {
           entry.original = await fsOpen(originalFullPath, FileOpenMode.READ, async originalFile => {
-            const originalContents = await loadDBPF(originalFile, { exemplarProperties })
-            const originalEntry = originalContents.entries[entryId]
-
-            if (originalEntry) {
-              return loadDBPFEntry(originalFile, originalEntry, { exemplarProperties })
+            const dbpf = await DBPF.fromFile(originalFile)
+            if (dbpf.entries[entryId]) {
+              const originalEntry = await dbpf.getEntry(entryId)
+              return originalEntry.data
             }
           })
         }
@@ -2522,7 +2492,7 @@ export class Application {
     patches: {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     const { exemplarProperties } = await this.load()
 
     return this.tasks.queue(`plugins:patch:${pluginPath}`, {
@@ -2563,7 +2533,7 @@ export class Application {
     patches: {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     const { categories, exemplarProperties, packages, settings } = await this.load()
 
     return this.tasks.queue(`patch:${packageId}#${variantId}/${filePath}`, {
@@ -2612,7 +2582,7 @@ export class Application {
         // Override patches in config
         forEach(patches, (patch, entryId) => {
           fileInfo.patches ??= {}
-          if (patch?.parentCohortId || patch?.properties) {
+          if (patch?.parentCohort || patch?.properties) {
             fileInfo.patches[entryId] = patch
           } else {
             delete fileInfo.patches[entryId]
@@ -2624,7 +2594,7 @@ export class Application {
           fileInfo.patches = undefined
         }
 
-        let file: DBPFFile | undefined
+        let file: DBPFInfo | undefined
 
         if (fileInfo.patches) {
           const patchedFullPath = this.getVariantFilePath(
@@ -2644,8 +2614,9 @@ export class Application {
           )
         } else {
           // Reload original contents
-          file = await fsOpen(originalFullPath, FileOpenMode.READ, patchedFile => {
-            return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
+          file = await fsOpen(originalFullPath, FileOpenMode.READ, async patchedFile => {
+            const dbpf = await DBPF.fromFile(patchedFile)
+            return dbpf.loadExemplars()
           })
         }
 
@@ -2660,16 +2631,19 @@ export class Application {
           }
         }
 
-        for (const entry of values(file.entries)) {
-          if (patches[entry.id] !== undefined) {
-            if (entry.type === DBPFDataType.EXMP && entry.data && !entry.data.isCohort) {
-              switch (getExemplarType(entry.id, entry.data)) {
+        // Reload exemplar info
+        // TODO: Improve this!
+        forEach(file.entries, (entry, tgi) => {
+          if (patches[tgi]) {
+            if (entry.data && entry.type === DBPFDataType.EXEMPLAR) {
+              const exemplar: Exemplar = { ...entry, data: entry.data, file: filePath }
+
+              switch (getExemplarType(tgi, exemplar.data)) {
                 case ExemplarType.Building: {
-                  const [, group, id] = split(entry.id, "-") as [TypeID, GroupID, BuildingID]
+                  const [, group, id] = split(tgi, "-") as [TypeID, GroupID, BuildingID]
                   const building = variantInfo.buildings?.find(where({ file: filePath, group, id }))
 
                   if (building) {
-                    const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getBuildingInfo(exemplar)
                     $merge(building, loadBuildingInfo(filePath, group, id, data, categories))
                   }
@@ -2678,11 +2652,10 @@ export class Application {
                 }
 
                 case ExemplarType.LotConfig: {
-                  const [, , id] = split(entry.id, "-") as [TypeID, GroupID, LotID]
+                  const [, , id] = split(tgi, "-") as [TypeID, GroupID, LotID]
                   const lot = variantInfo.lots?.find(where({ file: filePath, id }))
 
                   if (lot) {
-                    const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getLotInfo(exemplar)
                     $merge(lot, loadLotInfo(filePath, id, data))
                   }
@@ -2691,11 +2664,10 @@ export class Application {
                 }
 
                 case ExemplarType.Prop: {
-                  const [, group, id] = split(entry.id, "-") as [TypeID, GroupID, PropID]
+                  const [, group, id] = split(tgi, "-") as [TypeID, GroupID, PropID]
                   const prop = variantInfo.props?.find(where({ file: filePath, group, id }))
 
                   if (prop) {
-                    const exemplar = { ...entry, file: filePath } as Exemplar
                     const data = getPropInfo(exemplar)
                     $merge(prop, loadPropInfo(filePath, group, id, data))
                   }
@@ -2705,7 +2677,7 @@ export class Application {
               }
             }
           }
-        }
+        })
 
         // Persist config changes and send updates to renderer
         await this.writePackageConfig(context, packageInfo, categories)
@@ -2815,17 +2787,16 @@ export class Application {
   }
 
   /**
-   * Reload plugins
+   * Reload plugins.
    */
   public async reloadPlugins(): Promise<void> {
     const state = await this.load()
-    const { categories, exemplarProperties } = state
+    const { categories } = state
 
     await this.tasks.queue("plugins:load", {
       handler: async context => {
         const plugins = await loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
           categories,
-          exemplarProperties,
         })
 
         state.plugins = plugins

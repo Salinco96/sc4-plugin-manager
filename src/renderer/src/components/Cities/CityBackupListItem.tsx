@@ -45,12 +45,8 @@ export const CityBackupListItem = memo(function CityBackupListItem({
   useEffect(() => {
     loadSavePreviewPicture(regionId, cityId, backup.file).then(
       entry => {
-        if (entry.data) {
-          const src = `data:image/${entry.type};base64, ${entry.data.base64}`
-          setPrevieWPicture(src)
-        } else {
-          setPrevieWPicture(undefined)
-        }
+        const src = `data:image/${entry.type};base64, ${entry.data.base64}`
+        setPrevieWPicture(src)
       },
       error => {
         if (error instanceof Error && error.message.match(/missing entry/i)) {

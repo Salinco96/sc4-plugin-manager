@@ -1,8 +1,6 @@
-import type { DBPFDataType, DBPFEntry } from "@common/dbpf"
-import type { ExemplarData } from "@common/exemplars"
+import type { DBPFDataType, DBPFLoadedEntryInfo } from "@common/dbpf"
 
-export interface Exemplar extends DBPFEntry<DBPFDataType.EXMP> {
-  data: ExemplarData
+export type Exemplar = DBPFLoadedEntryInfo<DBPFDataType.EXEMPLAR> & {
   file: string
 }
 

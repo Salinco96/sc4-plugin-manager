@@ -81,7 +81,7 @@ export function getBuildingInfo(exemplar: Exemplar): BuildingInfo {
     data.families = familyIds.map(familyId => toHex(familyId, 8) as FamilyID)
   }
 
-  const parentCohortId = parseTGI(exemplar.data.parentCohortId)[2]
+  const parentCohortId = parseTGI(exemplar.data.parentCohort)[2]
   if (parentCohortId) {
     data.families ??= []
     data.families.push(toHex(bitMask(parentCohortId - 0x10000000, 0xffffffff), 8) as FamilyID)

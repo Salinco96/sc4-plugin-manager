@@ -25,13 +25,12 @@ import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
-import { type GroupID, InstanceID, type TGI } from "@common/dbpf"
+import type { GroupID, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
 import type { Requirements } from "@common/options"
 import { type PackageID, getOwnerId, isNew } from "@common/packages"
-import type { FileContents } from "@common/plugins"
 import type { PropID } from "@common/props"
 import type { Feature, PackageInfo, PackageWarning } from "@common/types"
 import { split } from "@common/utils/string"
@@ -39,7 +38,6 @@ import { type MaybeArray, parseStringArray } from "@common/utils/types"
 import type {
   DependencyInfo,
   FileInfo,
-  ModelID,
   TextureID,
   VariantAssetInfo,
   VariantContentsInfo,
@@ -55,6 +53,7 @@ import { type FamilyData, loadFamilyInfo, writeFamilyInfo } from "./families"
 import { type LotData, loadLotInfo, writeLotInfo } from "./lots"
 import { type FloraData, loadFloraInfo, writeFloraInfo } from "./mmps"
 import { type OptionData, loadOptionInfo, writeOptionInfo } from "./options"
+import { loadModelId, writeModelId } from "./plugins"
 import { type PropData, loadPropInfo, writePropInfo } from "./props"
 
 export type VariantContentsData = {
@@ -1188,27 +1187,4 @@ export function writeVariantContentsInfo(
   }
 
   return data
-}
-
-export function loadModelId(id: GroupID | `${GroupID}-${string}`): ModelID {
-  const [groupId, instanceId = InstanceID.S3D] = split(id, "-") as [GroupID, string?]
-  return `${groupId}-${instanceId.padEnd(8, "0") as InstanceID}`
-}
-
-export function writeModelId(id: ModelID): GroupID | `${GroupID}-${string}` {
-  const [groupId, instanceId] = split(id, "-")
-  return instanceId === InstanceID.S3D ? groupId : `${groupId}-${instanceId.slice(0, 4)}`
-}
-
-export function toVariantContentsInfo(contents: FileContents): VariantContentsInfo {
-  return {
-    buildingFamilies: values(contents).flatMap(contents => contents.buildingFamilies ?? []),
-    buildings: values(contents).flatMap(contents => contents.buildings ?? []),
-    lots: values(contents).flatMap(contents => contents.lots ?? []),
-    mmps: values(contents).flatMap(contents => contents.mmps ?? []),
-    models: mapValues(contents, contents => contents.models),
-    propFamilies: values(contents).flatMap(contents => contents.propFamilies ?? []),
-    props: values(contents).flatMap(contents => contents.props ?? []),
-    textures: mapValues(contents, contents => contents.textures),
-  }
 }

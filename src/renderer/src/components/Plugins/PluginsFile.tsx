@@ -3,20 +3,20 @@ import { size } from "@salinco/nice-utils"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { type DBPFFile, isDBPF } from "@common/dbpf"
+import { type DBPFInfo, isDBPF } from "@common/dbpf"
 import type { PluginsFileInfo } from "@common/plugins"
+import { Banners } from "@components/Banners"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { type TabInfo, Tabs } from "@components/Tabs"
 import { ToolButton } from "@components/ToolButton"
 import { loadPluginFileEntries, openPluginFolder, removePluginFile } from "@stores/actions"
 import { useNavigation } from "@utils/navigation"
 
-import { Banners } from "@components/Banners"
 import { PluginsBreadcrumbs } from "./PluginsBreadcrumbs"
 import { PluginsFileEntries } from "./PluginsFileEntries"
 import { usePluginsFileBanners } from "./utils"
 
-const tabs: TabInfo<{ data?: DBPFFile; file: PluginsFileInfo; path: string }>[] = [
+const tabs: TabInfo<{ data?: DBPFInfo; file: PluginsFileInfo; path: string }>[] = [
   {
     id: "entries",
     component: PluginsFileEntries,
@@ -49,7 +49,7 @@ export function PluginsFile({
   file: PluginsFileInfo
   path: string
 }): JSX.Element {
-  const [fileData, setFileData] = useState<DBPFFile>()
+  const [fileData, setFileData] = useState<DBPFInfo>()
 
   const { openPluginsView } = useNavigation()
   const { t } = useTranslation("Plugins")

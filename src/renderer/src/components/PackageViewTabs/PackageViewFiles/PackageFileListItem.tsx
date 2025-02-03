@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import type { DBPFFile as DBPFFileType, TGI } from "@common/dbpf"
+import type { DBPFInfo, TGI } from "@common/dbpf"
 import type { PackageID } from "@common/packages"
 import { isOverride } from "@common/types"
 import type { FileInfo } from "@common/variants"
@@ -16,11 +16,11 @@ import { store } from "@stores/main"
 
 export interface PackageFileProps {
   file: FileInfo
-  fileData?: DBPFFileType
+  fileData?: DBPFInfo
   isDisabled?: boolean
   overriddenEntries?: TGI[]
   packageId: PackageID
-  setFileData: (data: DBPFFileType) => void
+  setFileData: (data: DBPFInfo) => void
 }
 
 export function PackageFileListItem({

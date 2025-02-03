@@ -1,30 +1,21 @@
 import type { FileHandle } from "node:fs/promises"
 
-import { forEach, isArray, isString, keys, parseHex, toHex, values } from "@salinco/nice-utils"
+import { assert, forEach, forEachAsync, mapValues, size } from "@salinco/nice-utils"
 
 import {
   DBPFDataType,
-  type DBPFEntry,
   type DBPFEntryData,
-  type DBPFFile,
-  DBPFFileType,
-  TGI,
+  type DBPFEntryInfo,
+  type DBPFInfo,
+  type TGI,
   getDataType,
   isCompressed,
-  isType,
 } from "@common/dbpf"
-import {
-  type ExemplarData,
-  type ExemplarDataPatch,
-  type ExemplarProperty,
-  type ExemplarPropertyInfo,
-  type ExemplarPropertyValue,
-  ExemplarValueType,
-  PropertyKeyType,
-} from "@common/exemplars"
+import type { ExemplarData, ExemplarDataPatch, ExemplarProperties } from "@common/exemplars"
 
 import { BinaryReader, BinaryWriter } from "./bin"
-import { readBytes, writeBytes } from "./files"
+import { loadExemplar, patchExemplar, writeExemplar } from "./exemplars"
+import { FileOpenMode, fsOpen, readBytes, writeBytes } from "./files"
 
 const HEADER_SIZE = 96
 const HEADER_MAGIC = "DBPF"
@@ -32,493 +23,436 @@ const HEADER_MAGIC = "DBPF"
 const VERSION = "1.0"
 const INDEX_VERSION = "7.0"
 const INDEX_ENTRY_SIZE = 20
+const DIR_ENTRY_ID = "e86b1eef-e86b1eef-286b1f03" as TGI
 const DIR_ENTRY_SIZE = 16
 
-export async function loadDBPF(
-  file: FileHandle,
-  options: {
-    exemplarProperties: {
-      [propertyId in number]?: ExemplarPropertyInfo
-    }
-    loadExemplars?: boolean
-  },
-): Promise<DBPFFile> {
-  const header = await BinaryReader.fromFile(file, HEADER_SIZE, 0)
-  const magic = header.readString(HEADER_MAGIC.length)
-  if (magic !== HEADER_MAGIC) {
-    throw Error(`Invalid magic word: ${magic}`)
-  }
-
-  const majorVersion = header.readUInt32(4)
-  const minorVersion = header.readUInt32(8)
-  const version = `${majorVersion}.${minorVersion}`
-  if (version !== VERSION && version !== "0.0") {
-    throw Error(`Unsupported version: ${version}`)
-  }
-
-  const createdAt = new Date(header.readUInt32(24) * 1000)
-  const modifiedAt = new Date(header.readUInt32(28) * 1000)
-
-  const contents: DBPFFile = {
-    createdAt: createdAt.toISOString(),
-    entries: {},
-    modifiedAt: modifiedAt.toISOString(),
-  }
-
-  const indexMajorVersion = header.readUInt32(32)
-  const indexMinorVersion = header.readUInt32(60)
-  const indexVersion = `${indexMajorVersion}.${indexMinorVersion}`
-  if (indexVersion !== INDEX_VERSION) {
-    throw Error(`Unsupported index version: ${indexVersion}`)
-  }
-
-  const entryCount = header.readUInt32(36)
-  const indexOffset = header.readUInt32(40)
-  const indexSize = header.readUInt32(44)
-
-  if (indexSize !== entryCount * INDEX_ENTRY_SIZE) {
-    throw Error(`Mismatching index size: ${indexSize} vs ${entryCount * INDEX_ENTRY_SIZE})`)
-  }
-
-  const indexBytes = await BinaryReader.fromFile(file, indexSize, indexOffset)
-  for (let i = 0; i < entryCount; i++) {
-    const id = indexBytes.readTGI()
-    const offset = indexBytes.readUInt32()
-    const size = indexBytes.readUInt32()
-
-    contents.entries[id] = {
-      id,
-      offset,
-      size,
-      type: getDataType(id),
-    }
-  }
-
-  const dir = contents.entries[DBPFFileType.DIR as TGI]
-
-  if (dir) {
-    const dirEntryCount = dir.size / DIR_ENTRY_SIZE
-
-    const dirBytes = await BinaryReader.fromFile(file, dir.size, dir.offset)
-    for (let i = 0; i < dirEntryCount; i++) {
-      const id = dirBytes.readTGI()
-      const uncompressed = dirBytes.readUInt32()
-
-      const entry = contents.entries[id]
-      if (entry) {
-        entry.uncompressed = uncompressed
-      }
-    }
-  }
-
-  if (options.loadExemplars) {
-    for (const entry of values(contents.entries)) {
-      switch (entry.type) {
-        case DBPFDataType.EXMP:
-        case DBPFDataType.LTEXT: {
-          try {
-            entry.data = await loadDBPFEntry<typeof entry.type>(file, entry, options)
-          } catch (error) {
-            // Entry is actually compressed even though not in DIR...
-            // e.g. Census Repository v3.5 Patch/RJ - Census_Repository_Model_and_Query_3.1.dat
-            if (!isCompressed(entry)) {
-              entry.uncompressed = 0
-              try {
-                entry.data = await loadDBPFEntry<typeof entry.type>(file, entry, options)
-              } catch (_error) {
-                // Ignore
-              }
-            }
-
-            if (!entry.data) {
-              console.error(`Failed to load entry ${entry.id}`, error)
-            }
-          }
-        }
-      }
-    }
-  }
-
-  return contents
+export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = DBPFEntryInfo<T> & {
+  bytes?: Buffer
 }
 
-export async function loadDBPFEntryBytes(
-  file: FileHandle,
-  entry: DBPFEntry,
-): Promise<BinaryReader> {
-  const bytes = await BinaryReader.fromFile(file, entry.size, entry.offset, isCompressed(entry))
-
-  // TODO: Bad mutation!
-  if (entry.uncompressed === 0) {
-    entry.uncompressed = bytes.length
-  }
-
-  return bytes
+export type DBPFLoadedEntry<T extends DBPFDataType = DBPFDataType> = DBPFEntry<T> & {
+  bytes: Buffer
+  data: DBPFEntryData<T>
 }
 
-export async function loadDBPFEntry<T extends DBPFDataType>(
-  file: FileHandle,
-  entry: DBPFEntry<T>,
-  options: {
-    exemplarProperties: {
-      [propertyId in number]?: ExemplarPropertyInfo
-    }
-  },
-): Promise<DBPFEntryData<T>> {
-  const type = getDataType(entry.id)
+export class DBPF implements DBPFInfo {
+  public readonly createdAt: Date
+  public readonly entries: { [tgi in TGI]?: DBPFEntry }
+  public readonly file?: FileHandle
+  public readonly modifiedAt: Date
 
-  const bytes = await loadDBPFEntryBytes(file, entry)
-
-  switch (type) {
-    case DBPFDataType.EXMP: {
-      return loadExemplar(entry.id, bytes, options.exemplarProperties) as DBPFEntryData<T>
-    }
-
-    case DBPFDataType.LTEXT: {
-      return { text: bytes.toString("utf16le").slice(2) } as DBPFEntryData<T>
-    }
-
-    case DBPFDataType.XML: {
-      return { text: bytes.toString() } as DBPFEntryData<T>
-    }
-
-    case DBPFDataType.BMP:
-    case DBPFDataType.JFIF:
-    case DBPFDataType.PNG: {
-      return { base64: bytes.toBase64() } as DBPFEntryData<T>
-    }
-
-    default:
-      throw Error(`Unsupported entry type: ${type}`)
-  }
-}
-
-export async function patchVariantFileEntries(
-  inFile: FileHandle,
-  outFile: FileHandle,
-  patches: {
-    [entryId in TGI]?: Buffer | ExemplarDataPatch | null
-  },
-  options: {
-    exemplarProperties: {
-      [propertyId in number]?: ExemplarPropertyInfo
-    }
-  },
-): Promise<DBPFFile> {
-  const contents = await loadDBPF(inFile, { ...options, loadExemplars: true })
-
-  // Check that all TGIs exist
-  for (const entryId of keys(patches)) {
-    if (!contents.entries[entryId]) {
-      throw Error(`Missing entry: ${entryId}`)
-    }
+  protected constructor(data: DBPFInfo, file?: FileHandle) {
+    this.createdAt = data.createdAt
+    this.entries = data.entries
+    this.file = file
+    this.modifiedAt = data.modifiedAt
   }
 
-  let offset = 0
-
-  const entryCount = Object.keys(contents.entries).length
-
-  const header = new BinaryWriter(HEADER_SIZE)
-  offset += await header.writeToFile(outFile, offset)
-
-  const indexOffset = offset
-  const index = new BinaryWriter(entryCount * INDEX_ENTRY_SIZE)
-  offset += await index.writeToFile(outFile, offset)
-
-  const dirEntry = contents.entries[DBPFFileType.DIR]
-  const dir = dirEntry && new BinaryWriter()
-
-  for (const entry of values(contents.entries)) {
-    // Skip DIR for now - we will write it last
-    if (entry.id === DBPFFileType.DIR) {
-      continue
-    }
-
-    const patch = patches[entry.id]
-
-    if (Buffer.isBuffer(patch)) {
-      let bytes = patch
-
-      if (entry.uncompressed) {
-        entry.uncompressed = bytes.length
-        bytes = BinaryWriter.compress(bytes)
-      }
-
-      entry.offset = offset
-      entry.size = bytes.length
-
-      offset += await writeBytes(outFile, bytes, offset)
-    } else if (patch) {
-      if (entry.type !== DBPFDataType.EXMP) {
-        throw Error(`Not an exemplar entry: ${entry.id}`)
-      }
-
-      const originalData =
-        entry.data ?? (await loadDBPFEntry<DBPFDataType.EXMP>(inFile, entry, options))
-
-      const exemplarData = {
-        ...originalData,
-        properties: { ...originalData.properties },
-      }
-
-      if (patch.parentCohortId) {
-        exemplarData.parentCohortId = patch.parentCohortId
-      }
-
-      if (patch.properties) {
-        forEach(patch.properties, (value, propertyIdHex) => {
-          const propertyId = Number.parseInt(propertyIdHex, 16)
-          if (value === null) {
-            delete exemplarData.properties[propertyId]
-          } else {
-            const property = exemplarData.properties[propertyId]
-            const info = options.exemplarProperties[propertyId]
-            const type = property?.type ?? info?.type
-            if (!type) {
-              throw Error(`Unknown property: 0x${toHex(propertyId, 8)}`)
-            }
-
-            exemplarData.properties[propertyId] = {
-              id: propertyId,
-              type,
-              value,
-            } as ExemplarProperty
-          }
-        })
-      }
-
-      const writer = writeExemplar(exemplarData, entry.size)
-
-      if (entry.uncompressed !== undefined) {
-        entry.uncompressed = writer.length
-        writer.compress()
-      }
-
-      entry.data = exemplarData
-      entry.offset = offset
-      entry.original = originalData
-      entry.size = writer.length
-
-      offset += await writer.writeToFile(outFile, offset)
-    } else {
-      const bytes = await readBytes(inFile, entry.size, entry.offset)
-
-      entry.offset = offset
-
-      offset += await writeBytes(outFile, bytes, offset)
-    }
-
-    index.writeTGI(entry.id)
-    index.writeUInt32(entry.offset)
-    index.writeUInt32(entry.size)
-
-    if (dir && entry.uncompressed !== undefined) {
-      dir.writeTGI(entry.id)
-      dir.writeUInt32(entry.uncompressed)
-    }
+  /**
+   * Creates an empty DBPF file.
+   */
+  public static create(options?: { createdAt?: Date }): DBPF {
+    return new DBPF({
+      createdAt: options?.createdAt ?? new Date(),
+      entries: {},
+      modifiedAt: new Date(),
+    })
   }
 
-  if (dir) {
-    dirEntry.offset = offset
-
-    index.writeTGI(dirEntry.id)
-    index.writeUInt32(dirEntry.offset)
-    index.writeUInt32(dirEntry.size)
-
-    offset += await dir.writeToFile(outFile, offset)
-  }
-
-  index.checkEnd()
-
-  contents.modifiedAt = new Date().toISOString()
-
-  header.writeString(HEADER_MAGIC, 0)
-
-  const [majorVersion, minorVersion] = VERSION.split(".").map(Number)
-  header.writeUInt32(majorVersion, 4)
-  header.writeUInt32(minorVersion, 8)
-
-  header.writeUInt32(Math.floor(new Date(contents.createdAt).valueOf() / 1000), 24)
-  header.writeUInt32(Math.floor(new Date(contents.modifiedAt).valueOf() / 1000), 28)
-
-  const [indexMajorVersion, indexMinorVersion] = INDEX_VERSION.split(".").map(Number)
-  header.writeUInt32(indexMajorVersion, 32)
-  header.writeUInt32(indexMinorVersion, 60)
-
-  header.writeUInt32(entryCount, 36)
-  header.writeUInt32(indexOffset, 40)
-  header.writeUInt32(index.length, 44)
-
-  await header.writeToFile(outFile, 0)
-  await index.writeToFile(outFile, indexOffset)
-
-  return contents
-}
-
-function loadExemplar(
-  entryId: TGI,
-  bytes: BinaryReader,
-  exemplarProperties: {
-    [propertyId in number]?: ExemplarPropertyInfo
-  },
-): ExemplarData {
-  let parentCohortId = TGI(0, 0, 0)
-
-  const properties: { [propertyId in number]?: ExemplarProperty } = {}
-  const mode = bytes.readString(8)
-
-  switch (mode.slice(0, 4)) {
-    // "B" = binary
-    case "CQZB":
-    case "EQZB": {
-      parentCohortId = bytes.readTGI()
-
-      const propertyCount = bytes.readUInt32()
-
-      for (let i = 0; i < propertyCount; i++) {
-        const propertyId = bytes.readUInt32()
-        const valueType = bytes.readUInt16()
-        const keyType = bytes.readUInt16()
-        const unused = bytes.readUInt8()
-
-        switch (keyType) {
-          case PropertyKeyType.Single: {
-            if (unused !== 0) {
-              throw Error(`Unexpected unused: 0x${toHex(unused, 2)}`)
-            }
-
-            properties[propertyId] = {
-              id: propertyId,
-              info: exemplarProperties[propertyId],
-              type: valueType,
-              value: bytes.readValue(valueType),
-            } as ExemplarProperty
-
-            break
-          }
-
-          case PropertyKeyType.Multi: {
-            const reps = bytes.readUInt32()
-
-            properties[propertyId] = {
-              id: propertyId,
-              info: exemplarProperties[propertyId],
-              type: valueType,
-              value: bytes.readValues(valueType, reps),
-            } as ExemplarProperty
-
-            break
-          }
-
-          default: {
-            throw Error(`Unexpected keyType: 0x${toHex(keyType, 4)}`)
-          }
-        }
-      }
-
-      break
+  /**
+   * Loads a DBPF file.
+   *
+   * The index is loaded (including compressed/uncompressed entry sizes) but not the contents.
+   */
+  public static async fromFile(file: FileHandle): Promise<DBPF> {
+    const header = await BinaryReader.fromFile(file, HEADER_SIZE, 0)
+    const magic = header.readString(HEADER_MAGIC.length)
+    if (magic !== HEADER_MAGIC) {
+      throw Error(`Invalid magic word: '${magic}' (expected '${HEADER_MAGIC}')`)
     }
 
-    // "T" = text
-    case "CQZT":
-    case "EQZT": {
-      const parentCohortRegex =
-        /^ParentCohort=Key:\{0x([0-9a-f]{8}),0x([0-9a-f]{8}),0x([0-9a-f]{8})\}$/i
-      const propertyRegex = /^0x([0-9a-f]{8}):\{"(.+)"\}=(\w+):(\d+):\{(.+)\}$/i
+    const majorVersion = header.readUInt32(4)
+    const minorVersion = header.readUInt32(8)
+    const version = `${majorVersion}.${minorVersion}`
+    if (version !== VERSION && version !== "0.0") {
+      throw Error(`Unsupported version: ${version} (expected ${VERSION})`)
+    }
 
-      for (const row of bytes.toString().split("\n")) {
-        const parentCohortMatch = row.trim().match(parentCohortRegex)
-        if (parentCohortMatch) {
-          parentCohortId = TGI(
-            parseHex(parentCohortMatch[1]),
-            parseHex(parentCohortMatch[2]),
-            parseHex(parentCohortMatch[3]),
-          )
+    const createdAt = new Date(header.readUInt32(24) * 1000)
+    const modifiedAt = new Date(header.readUInt32(28) * 1000)
+
+    const indexMajorVersion = header.readUInt32(32)
+    const indexMinorVersion = header.readUInt32(60)
+    const indexVersion = `${indexMajorVersion}.${indexMinorVersion}`
+    if (indexVersion !== INDEX_VERSION) {
+      throw Error(`Unsupported index version: ${indexVersion} (expected ${INDEX_VERSION})`)
+    }
+
+    const entryCount = header.readUInt32(36)
+    const indexOffset = header.readUInt32(40)
+    const indexSize = header.readUInt32(44)
+
+    if (indexSize !== entryCount * INDEX_ENTRY_SIZE) {
+      throw Error(
+        `Mismatching index size: ${indexSize} (expected ${entryCount * INDEX_ENTRY_SIZE})`,
+      )
+    }
+
+    const entries: DBPFInfo["entries"] = {}
+
+    const indexBytes = await BinaryReader.fromFile(file, indexSize, indexOffset)
+    for (let i = 0; i < entryCount; i++) {
+      const tgi = indexBytes.readTGI()
+      const offset = indexBytes.readUInt32()
+      const size = indexBytes.readUInt32()
+
+      if (entries[tgi]) {
+        console.warn(`Entry ${tgi} is present multiple times in file`)
+      }
+
+      entries[tgi] = {
+        id: tgi,
+        offset,
+        size,
+        type: getDataType(tgi),
+      }
+    }
+
+    const dir = entries[DIR_ENTRY_ID]
+
+    if (dir) {
+      const dirEntryCount = dir.size / DIR_ENTRY_SIZE
+
+      const dirBytes = await BinaryReader.fromFile(file, dir.size, dir.offset)
+      for (let i = 0; i < dirEntryCount; i++) {
+        const tgi = dirBytes.readTGI()
+        const uncompressed = dirBytes.readUInt32()
+
+        const entry = entries[tgi]
+        if (entry) {
+          entry.uncompressed = uncompressed
         } else {
-          const propertyMatch = row.trim().match(propertyRegex)
-          if (propertyMatch) {
-            const propertyId = parseHex(propertyMatch[1])
-            const name = propertyMatch[2]
-            const rawType = propertyMatch[3].replace("int", "Int")
-            const rawValue = propertyMatch[5]
-
-            const valueType = ExemplarValueType[rawType as keyof typeof ExemplarValueType]
-
-            let value: ExemplarPropertyValue | undefined
-
-            switch (valueType) {
-              case ExemplarValueType.String: {
-                value = rawValue.match(/^"(.+)"$/)?.[1]
-                break
-              }
-
-              case ExemplarValueType.Bool: {
-                value = rawValue === "True"
-                break
-              }
-
-              default: {
-                value = rawValue.split(",").map(Number)
-              }
-            }
-
-            properties[propertyId] = {
-              id: propertyId,
-              info: exemplarProperties[propertyId] ?? {
-                id: propertyId,
-                name,
-                type: valueType,
-              },
-              type: valueType,
-              value,
-            } as ExemplarProperty
-          }
+          console.warn(`Entry ${tgi} is present in DIR but missing from file`)
         }
       }
-
-      break
     }
 
-    default: {
-      throw Error(`Unexpected mode: ${mode}`)
+    return new DBPF({ createdAt, entries, modifiedAt }, file)
+  }
+
+  public static async packFiles(inPaths: string[], outPath: string): Promise<void> {
+    const pack = DBPF.create()
+
+    // Copy the entries from each source file
+    for (const inPath of inPaths) {
+      await fsOpen(inPath, FileOpenMode.READ, async inFile => {
+        const source = await DBPF.fromFile(inFile)
+        await forEachAsync(source.entries, async (entry, tgi) => {
+          pack.entries[tgi] = entry
+          // Copy the raw bytes (no need to decompress/recompress)
+          entry.bytes = await source.getRawBytes(tgi)
+        })
+      })
+    }
+
+    // Write the contents (will automatically reindex)
+    await fsOpen(outPath, FileOpenMode.WRITE, outFile => pack.writeToFile(outFile))
+  }
+
+  /**
+   * Adds an entry.
+   *
+   * If an entry with same TGI already exists, it is fully overwritten.
+   */
+  public addEntry(tgi: TGI, bytes: Buffer, options?: { compress?: boolean }): DBPFEntry {
+    const entry: DBPFEntry = {
+      bytes,
+      id: tgi,
+      offset: 0, // will be reindexed later
+      size: bytes.length,
+      type: getDataType(tgi),
+    }
+
+    if (options?.compress) {
+      entry.uncompressed = bytes.length
+      entry.bytes = BinaryWriter.compress(bytes)
+      entry.size = entry.bytes.length
+    }
+
+    this.entries[tgi] = entry
+    return entry
+  }
+
+  /**
+   * Adds an exemplar.
+   *
+   * If an entry with same TGI already exists, it is fully overwritten.
+   */
+  public addExemplar(
+    tgi: TGI,
+    data: ExemplarData,
+    options?: { compress?: boolean },
+  ): DBPFEntry<DBPFDataType.EXEMPLAR> & { data: DBPFEntryData<DBPFDataType.EXEMPLAR> } {
+    const bytes = writeExemplar(data)
+    const entry = this.addEntry(tgi, bytes, options)
+    assert(entry.type === DBPFDataType.EXEMPLAR, `Entry ${tgi} is not exemplar!`)
+    return Object.assign(entry, { data })
+  }
+
+  /**
+   * Loads the uncompressed bytes for an entry.
+   */
+  public async getBytes(tgi: TGI): Promise<Buffer> {
+    const entry = this.entries[tgi]
+    if (!entry) {
+      throw Error(`Entry ${tgi} is missing from file`)
+    }
+
+    const bytes = await this.getRawBytes(tgi)
+
+    return isCompressed(entry) ? BinaryReader.decompress(bytes) : bytes
+  }
+
+  /**
+   * Fully loads an entry.
+   */
+  public async getEntry<T extends DBPFDataType>(
+    tgi: TGI,
+    type?: T,
+  ): Promise<DBPFEntry<T> & { data: DBPFEntryData<T> }> {
+    const entry = this.entries[tgi]
+    if (!entry) {
+      throw Error(`Entry ${tgi} is missing from file`)
+    }
+
+    if (type && type !== entry.type) {
+      throw Error(`Entry ${tgi} has data type ${entry.type} (expected ${type})`)
+    }
+
+    if (!entry.data) {
+      const bytes = await this.getBytes(tgi)
+
+      switch (entry.type) {
+        case DBPFDataType.EXEMPLAR:
+          entry.data = loadExemplar(tgi, bytes)
+          break
+
+        case DBPFDataType.LTEXT:
+          entry.data = { text: bytes.toString("utf16le").slice(2) }
+          break
+
+        case DBPFDataType.XML:
+          entry.data = { text: bytes.toString("utf8") }
+          break
+
+        case DBPFDataType.BMP:
+        case DBPFDataType.JFIF:
+        case DBPFDataType.PNG:
+          entry.data = { base64: bytes.toString("base64") }
+          break
+
+        default:
+          throw Error(`Entry type ${entry.type} cannot be loaded`)
+      }
+    }
+
+    return entry as DBPFEntry<T> & { data: DBPFEntryData<T> }
+  }
+
+  /**
+   * Loads an exemplar.
+   */
+  public async getExemplar(tgi: TGI): Promise<ExemplarData> {
+    const entry = await this.getEntry(tgi, DBPFDataType.EXEMPLAR)
+    return entry.data
+  }
+
+  /**
+   * Loads the raw (may be compressed) bytes for an entry.
+   */
+  public async getRawBytes(tgi: TGI): Promise<Buffer> {
+    const entry = this.entries[tgi]
+    if (!entry) {
+      throw Error(`Entry ${tgi} is missing from file`)
+    }
+
+    if (!entry.bytes) {
+      if (!this.file) {
+        throw Error("No source file")
+      }
+
+      entry.bytes = await readBytes(this.file, entry.size, entry.offset)
+    }
+
+    return entry.bytes
+  }
+
+  /**
+   * Gets serializable {@link DBPFInfo} (without extra data such as raw buffers).
+   */
+  protected info(): DBPFInfo {
+    return {
+      createdAt: this.createdAt,
+      entries: mapValues(this.entries, getEntryInfo),
+      modifiedAt: this.modifiedAt,
     }
   }
 
-  return {
-    isCohort: isType(entryId, DBPFFileType.COHORT),
-    parentCohortId,
-    properties,
+  /**
+   * Preloads all exemplars/cohorts/LTEXT entries
+   */
+  public async loadExemplars(): Promise<DBPFInfo> {
+    await forEachAsync(this.entries, async (entry, tgi) => {
+      switch (entry.type) {
+        case DBPFDataType.EXEMPLAR:
+        case DBPFDataType.LTEXT:
+          await this.getEntry(tgi, entry.type)
+      }
+    })
+
+    return this.info()
+  }
+
+  public async patchEntries(
+    outPath: string,
+    patches: { [tgi in TGI]?: ExemplarDataPatch | Buffer | null },
+    exemplarProperties: ExemplarProperties,
+  ): Promise<DBPFInfo> {
+    // Create an empty DBPF file
+    const patched = DBPF.create({ createdAt: this.createdAt })
+
+    // Ensure that all patched entries exist in the source
+    forEach(patches, (_, tgi) => {
+      if (!this.entries[tgi]) {
+        throw Error(`Entry ${tgi} is missing from file`)
+      }
+    })
+
+    // Copy entries from the source, applying patches as needed
+    await forEachAsync(this.entries, async (entry, tgi) => {
+      const patch = patches[tgi]
+
+      // Drop DIR (will be regenerated anyways) and deleted entries
+      if (tgi === DIR_ENTRY_ID || patch === null) {
+        return
+      }
+
+      const compress = isCompressed(entry)
+
+      if (Buffer.isBuffer(patch)) {
+        // Binary patch: Replace the whole entry
+        const original = await this.getEntry(tgi, entry.type)
+        const newEntry = patched.addEntry(tgi, patch, { compress })
+        newEntry.original = original.data
+      } else if (patch) {
+        // Exemplar patch: Apply the patch on top of original data
+        const original = await this.getExemplar(tgi)
+        const patchedExemplar = patchExemplar(original, patch, exemplarProperties)
+        const newEntry = patched.addExemplar(tgi, patchedExemplar, { compress })
+        newEntry.original = original
+      } else {
+        // No patch: Copy the whole entry (no need to decompress/recompress)
+        entry.bytes = await this.getRawBytes(tgi)
+        patched.entries[tgi] = { ...entry }
+      }
+    })
+
+    // Write the contents (will automatically reindex)
+    await fsOpen(outPath, FileOpenMode.WRITE, outFile => patched.writeToFile(outFile))
+
+    // Return the patched information
+    return patched.info()
+  }
+
+  /**
+   * Regenerates the DIR entry and recalculates all offsets.
+   */
+  protected reindex(): void {
+    const dir = new BinaryWriter()
+
+    forEach(this.entries, entry => {
+      if (entry.id !== DIR_ENTRY_ID && entry.uncompressed !== undefined) {
+        dir.writeTGI(entry.id)
+        dir.writeUInt32(entry.uncompressed)
+      }
+    })
+
+    if (dir.length) {
+      this.addEntry(DIR_ENTRY_ID, dir.bytes)
+    } else {
+      delete this.entries[DIR_ENTRY_ID]
+    }
+
+    let offset = HEADER_SIZE + size(this.entries) * INDEX_ENTRY_SIZE
+    forEach(this.entries, entry => {
+      entry.offset = offset
+      offset += entry.size
+    })
+  }
+
+  /**
+   * Removes an entry.
+   */
+  public removeEntry(tgi: TGI): void {
+    const entry = this.entries[tgi]
+    if (!entry) {
+      throw Error(`Entry ${tgi} is missing from file`)
+    }
+
+    delete this.entries[tgi]
+  }
+
+  /**
+   * Writes all contents to a file (after an automatic reindexing).
+   */
+  public async writeToFile(file: FileHandle): Promise<void> {
+    // Regenerate DIR and offsets
+    this.reindex()
+
+    const entryCount = size(this.entries)
+    const header = new BinaryWriter(HEADER_SIZE)
+    const index = new BinaryWriter(entryCount * INDEX_ENTRY_SIZE)
+
+    // Fill header
+    header.writeString(HEADER_MAGIC, 0)
+
+    const [majorVersion, minorVersion] = VERSION.split(".").map(Number)
+    header.writeUInt32(majorVersion, 4)
+    header.writeUInt32(minorVersion, 8)
+
+    header.writeUInt32(Math.floor(this.createdAt.getTime() / 1000), 24)
+    header.writeUInt32(Math.floor(this.modifiedAt.getTime() / 1000), 28)
+
+    const [indexMajorVersion, indexMinorVersion] = INDEX_VERSION.split(".").map(Number)
+    header.writeUInt32(indexMajorVersion, 32)
+    header.writeUInt32(indexMinorVersion, 60)
+
+    header.writeUInt32(entryCount, 36)
+    header.writeUInt32(HEADER_SIZE, 40) // We always write index directly after header
+    header.writeUInt32(index.length, 44)
+
+    // Fill index
+    forEach(this.entries, async entry => {
+      index.writeTGI(entry.id)
+      index.writeUInt32(entry.offset)
+      index.writeUInt32(entry.size)
+    })
+
+    // Ensure that index is full
+    index.checkEnd()
+
+    // Write all contents
+    let offset = 0
+    offset += await writeBytes(file, header.bytes, offset)
+    offset += await writeBytes(file, index.bytes, offset)
+    await forEachAsync(this.entries, async entry => {
+      const bytes = await this.getRawBytes(entry.id)
+      offset += await writeBytes(file, bytes, offset)
+    })
   }
 }
 
-function writeExemplar(data: ExemplarData, allocSize: number): BinaryWriter {
-  const properties = values(data.properties)
-  const propertyCount = properties.length
-
-  const writer = new BinaryWriter(24, { alloc: allocSize, resizable: true })
-
-  writer.writeString(data.isCohort ? "CQZB1###" : "EQZB1###")
-  writer.writeTGI(data.parentCohortId)
-  writer.writeUInt32(propertyCount)
-
-  for (const property of properties) {
-    writer.writeUInt32(property.id)
-    writer.writeUInt16(property.type)
-
-    // Prefer encoding 1-rep values as single values
-    // See https://wiki.sc4devotion.com/index.php?title=Exemplar - Encoding Issue in the Aspyr Port
-    if ((isArray(property.value) && property.value.length !== 1) || isString(property.value)) {
-      writer.writeUInt16(PropertyKeyType.Multi)
-      writer.writeUInt8(0)
-      writer.writeUInt32(property.value.length)
-      writer.writeValues(property.value, property.type)
-    } else {
-      const value = isArray(property.value) ? property.value[0] : property.value
-      writer.writeUInt16(PropertyKeyType.Single)
-      writer.writeUInt8(0)
-      writer.writeValue(value, property.type)
-    }
-  }
-
-  return writer
+function getEntryInfo(entry: DBPFEntry): DBPFEntryInfo {
+  const { bytes, ...info } = entry
+  return info
 }

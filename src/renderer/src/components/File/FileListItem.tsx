@@ -10,7 +10,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { CategoryID } from "@common/categories"
-import { type DBPFEntry, type DBPFFile, type TGI, isDBPF } from "@common/dbpf"
+import { type DBPFEntryInfo, type DBPFInfo, type TGI, isDBPF } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import { VariantState } from "@common/types"
 import { FlexRow } from "@components/FlexBox"
@@ -31,13 +31,13 @@ export interface FileListItemProps {
   actions?: Action[]
   banners?: BannersProps["banners"]
   dbpf?: {
-    fileData: DBPFFile | undefined
-    loadEntries: () => Promise<DBPFFile>
-    loadEntry: (entryId: TGI) => Promise<DBPFEntry>
+    fileData: DBPFInfo | undefined
+    loadEntries: () => Promise<DBPFInfo>
+    loadEntry: (entryId: TGI) => Promise<DBPFEntryInfo>
     overriddenEntries?: TGI[]
-    patchFile: (patch: { [entryId in TGI]?: ExemplarDataPatch | null }) => Promise<DBPFFile>
+    patchFile: (patches: { [entryId in TGI]?: ExemplarDataPatch | null }) => Promise<DBPFInfo>
     patches?: { [entryId in TGI]?: ExemplarDataPatch }
-    setFileData: (data: DBPFFile) => void
+    setFileData: (data: DBPFInfo) => void
   }
   hasIssues?: boolean
   isDisabled?: boolean
@@ -121,8 +121,8 @@ export function FileListItem({
                 const entry = await dbpf.loadEntry(entryId)
                 dbpf.setFileData({ ...data, entries: { ...data.entries, [entryId]: entry } })
               }}
-              patchFile={async patch => {
-                dbpf.setFileData(await dbpf.patchFile(patch))
+              patchFile={async patches => {
+                dbpf.setFileData(await dbpf.patchFile(patches))
               }}
             />
           )}

@@ -1,9 +1,11 @@
+import { sort } from "@salinco/nice-utils"
+
 import type { GroupID } from "@common/dbpf"
 import type { FamilyID } from "@common/families"
 import type { PropID, PropInfo } from "@common/props"
 import { type MaybeArray, parseStringArray } from "@common/utils/types"
-import { sort } from "@salinco/nice-utils"
-import { loadModelId, writeModelId } from "./packages"
+
+import { loadModelId, writeModelId } from "./plugins"
 
 export interface PropData {
   /**

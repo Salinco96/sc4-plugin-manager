@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react"
 
-import { DBPFDataType, type DBPFEntry } from "@common/dbpf"
+import { DBPFDataType, type DBPFEntryInfo } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 
 import { ImageViewer } from "./ImageViewer"
@@ -9,7 +9,7 @@ import { TextViewer } from "./TextViewer"
 const ExemplarViewer = lazy(() => import("./ExemplarViewer/ExemplarViewer"))
 
 export type EntryViewerProps = {
-  entry: DBPFEntry
+  entry: DBPFEntryInfo
   isLocal: boolean
   onClose: () => void
   onPatch: (data: ExemplarDataPatch | null) => void
@@ -30,7 +30,7 @@ export function EntryViewer({
   }
 
   switch (entry.type) {
-    case DBPFDataType.EXMP: {
+    case DBPFDataType.EXEMPLAR: {
       return (
         <Suspense>
           <ExemplarViewer

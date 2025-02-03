@@ -1,5 +1,6 @@
-import { type ID, type integer, isString, parseHex, toHex } from "@salinco/nice-utils"
+import { type ID, isString, parseHex, toHex } from "@salinco/nice-utils"
 import type { ExemplarData } from "./exemplars"
+import { split } from "./utils/string"
 import { bitMask } from "./utils/types"
 import type { TextureID } from "./variants"
 
@@ -13,53 +14,78 @@ export function TGI(t: number, g: number, i: number): TGI {
   return [t, g, i].map(id => toHex(id, 8)).join("-") as TGI
 }
 
-export function parseTGI(tgi: TGI): [t: integer, g: integer, i: integer] {
-  return tgi.split("-").map(parseHex) as [t: integer, g: integer, i: integer]
+export function parseTGI(tgi: TGI): [t: number, g: number, i: number] {
+  return tgi.split("-").map(parseHex) as number[] as [t: number, g: number, i: number]
 }
 
-export type DBPFEntry<T extends DBPFDataType = DBPFDataType> = {
-  [S in DBPFDataType]: {
-    data?: DBPFEntryData<S>
+export enum DBPFDataType {
+  BMP = "bmp",
+  DIR = "dir",
+  EXEMPLAR = "exemplar",
+  FSH = "fsh",
+  JFIF = "jfif",
+  LD = "ld",
+  LTEXT = "ltext",
+  PNG = "png",
+  S3D = "s3d",
+  XML = "xml",
+  OTHER = "other",
+}
+
+export type DBPFEntryData<T extends DBPFDataType = DBPFDataType> = {
+  [K in T]: {
+    [DBPFDataType.BMP]: { base64: string }
+    [DBPFDataType.DIR]: never
+    [DBPFDataType.EXEMPLAR]: ExemplarData
+    [DBPFDataType.FSH]: never // todo
+    [DBPFDataType.JFIF]: { base64: string }
+    [DBPFDataType.LD]: never // todo
+    [DBPFDataType.LTEXT]: { text: string }
+    [DBPFDataType.PNG]: { base64: string }
+    [DBPFDataType.S3D]: never // todo
+    [DBPFDataType.XML]: { text: string }
+    [DBPFDataType.OTHER]: never // todo
+  }[K]
+}[T]
+
+export type DBPFEntryInfo<T extends DBPFDataType = DBPFDataType> = {
+  [K in T]: {
+    data?: DBPFEntryData<K>
     id: TGI
     offset: number
-    original?: DBPFEntryData<S>
+    original?: DBPFEntryData<K>
     size: number
-    type: S
-    /** Only defined if compressed */
+    type: K
     uncompressed?: number
   }
 }[T]
 
-export interface DBPFFile {
-  createdAt: string
-  entries: {
-    [entryId in TGI]?: DBPFEntry
-  }
-  modifiedAt: string
+/** Same as {@link DBPFEntryInfo}, except data is always loaded. */
+export type DBPFLoadedEntryInfo<T extends DBPFDataType = DBPFDataType> = DBPFEntryInfo<T> & {
+  data: DBPFEntryData<T>
 }
 
-export function isDBPF(filePath: string): boolean {
-  return /\.(dat|sc4desc|sc4lot|sc4model)$/i.test(filePath)
-}
-
-export function isCompressed(entry: DBPFEntry): boolean {
-  return entry.uncompressed !== undefined
-}
-
-export function isType(id: TGI, type: string): boolean {
-  return new RegExp(`^${type}`, "i").test(id)
+export type DBPFInfo = {
+  createdAt: Date
+  entries: { [tgi in TGI]?: DBPFEntryInfo }
+  modifiedAt: Date
 }
 
 export const TypeID = {
+  BMP0: "66778000" as TypeID,
+  BMP1: "66778001" as TypeID,
   COHORT: "05342861" as TypeID,
   DIR: "e86b1eef" as TypeID,
   EXEMPLAR: "6534284a" as TypeID,
   FSH: "7ab50e44" as TypeID,
+  JFIF0: "74807100" as TypeID,
+  JFIF1: "74807101" as TypeID,
   LD: "6be74c60" as TypeID,
   LTEXT: "2026960b" as TypeID,
   PNG: "856ddbac" as TypeID,
-  SAVE_PNG: "8a2482b9" as TypeID,
   S3D: "5ad0e817" as TypeID,
+  XML0: "88777600" as TypeID,
+  XML1: "88777601" as TypeID,
 }
 
 export const GroupID = {
@@ -81,101 +107,36 @@ export const InstanceID = {
   S3D: "00030000" as InstanceID,
 }
 
-export const DBPFFileType = {
-  BMP: "6677800.",
-  COHORT: TypeID.COHORT,
-  DIR: `${TypeID.DIR}-${GroupID.DIR}-${InstanceID.DIR}`,
-  EXEMPLAR: TypeID.EXEMPLAR,
-  EXEMPLAR_LOT_CONFIG: `${TypeID.EXEMPLAR}-${GroupID.LOT_CONFIG}`,
-  FSH: TypeID.FSH,
-  FSH_TEXTURE: `${TypeID.FSH}-${GroupID.FSH_TEXTURE}`,
-  JFIF: "7480710.",
-  LD: TypeID.LD,
-  LTEXT: TypeID.LTEXT,
-  PNG: TypeID.PNG,
-  PNG_BUTTONS: `${TypeID.PNG}-${GroupID.PNG_BUTTONS}`,
-  PNG_LE_IMAGES: `${TypeID.PNG}-${GroupID.PNG_LE_IMAGES}`,
-  PNG_LOT_PICTURES: `${TypeID.PNG}-${GroupID.PNG_LOT_PICTURES}`,
-  PNG_MENU_ICONS: `${TypeID.PNG}-${GroupID.PNG_MENU_ICONS}`,
-  PNG_REGION_VIEW_TILES: `${TypeID.PNG}-${GroupID.PNG_REGION_VIEW_TILES}`,
-  PNG_UDRIVEIT_ICONS: `${TypeID.PNG}-${GroupID.PNG_UDRIVEIT_ICONS}`,
-  PNG_UI: `${TypeID.PNG}-${GroupID.PNG_UI}`,
-  PNG_UI_IMAGES: `${TypeID.PNG}-${GroupID.PNG_UI_IMAGES}`,
-  SAVE_PNG: TypeID.SAVE_PNG,
-  S3D: TypeID.S3D,
-  XML: "8877760.",
-} as const
-
-export enum DBPFDataType {
-  BMP = "bmp",
-  DIR = "dir",
-  EXMP = "exmp",
-  FSH = "fsh",
-  JFIF = "jfif",
-  LD = "ld",
-  LTEXT = "ltext",
-  PNG = "png",
-  S3D = "s3d",
-  XML = "xml",
-  UNKNOWN = "unknown",
+const TypeIDToDataType: {
+  [type in TypeID]?: DBPFDataType
+} = {
+  [TypeID.BMP0]: DBPFDataType.BMP,
+  [TypeID.BMP1]: DBPFDataType.BMP,
+  [TypeID.COHORT]: DBPFDataType.EXEMPLAR,
+  [TypeID.DIR]: DBPFDataType.DIR,
+  [TypeID.EXEMPLAR]: DBPFDataType.EXEMPLAR,
+  [TypeID.FSH]: DBPFDataType.FSH,
+  [TypeID.JFIF0]: DBPFDataType.JFIF,
+  [TypeID.JFIF1]: DBPFDataType.JFIF,
+  [TypeID.LD]: DBPFDataType.LD,
+  [TypeID.LTEXT]: DBPFDataType.LTEXT,
+  [TypeID.PNG]: DBPFDataType.PNG,
+  [TypeID.S3D]: DBPFDataType.S3D,
+  [TypeID.XML0]: DBPFDataType.XML,
+  [TypeID.XML1]: DBPFDataType.XML,
 }
 
-export type DBPFEntryData<T extends DBPFDataType = DBPFDataType> = {
-  [DBPFDataType.BMP]: { base64: string }
-  [DBPFDataType.DIR]: never
-  [DBPFDataType.EXMP]: ExemplarData
-  [DBPFDataType.FSH]: never // TODO
-  [DBPFDataType.JFIF]: { base64: string }
-  [DBPFDataType.LD]: never // TODO
-  [DBPFDataType.LTEXT]: { text: string }
-  [DBPFDataType.PNG]: { base64: string }
-  [DBPFDataType.S3D]: never // TODO
-  [DBPFDataType.XML]: { text: string }
-  [DBPFDataType.UNKNOWN]: never // TODO
-}[T]
+export function getDataType(tgi: TGI): DBPFDataType {
+  const [typeId] = split(tgi, "-")
+  return TypeIDToDataType[typeId] ?? DBPFDataType.OTHER
+}
 
-export function getDataType(id: TGI): DBPFDataType {
-  if (isType(id, DBPFFileType.BMP)) {
-    return DBPFDataType.BMP
-  }
+export function isCompressed(entry: DBPFEntryInfo): boolean {
+  return entry.uncompressed !== undefined
+}
 
-  if (isType(id, DBPFFileType.DIR)) {
-    return DBPFDataType.DIR
-  }
-
-  if (isType(id, DBPFFileType.FSH)) {
-    return DBPFDataType.FSH
-  }
-
-  if (isType(id, DBPFFileType.JFIF)) {
-    return DBPFDataType.JFIF
-  }
-
-  if (isType(id, DBPFFileType.LD)) {
-    return DBPFDataType.LD
-  }
-
-  if (isType(id, DBPFFileType.LTEXT)) {
-    return DBPFDataType.LTEXT
-  }
-
-  if (isType(id, DBPFFileType.PNG) || isType(id, DBPFFileType.SAVE_PNG)) {
-    return DBPFDataType.PNG
-  }
-
-  if (isType(id, DBPFFileType.S3D)) {
-    return DBPFDataType.S3D
-  }
-
-  if (isType(id, DBPFFileType.XML)) {
-    return DBPFDataType.XML
-  }
-
-  if (isType(id, DBPFFileType.COHORT) || isType(id, DBPFFileType.EXEMPLAR)) {
-    return DBPFDataType.EXMP
-  }
-
-  return DBPFDataType.UNKNOWN
+export function isDBPF(filePath: string): boolean {
+  return /\.(dat|sc4desc|sc4lot|sc4model)$/i.test(filePath)
 }
 
 export function getTextureIdRange(instanceId: number | string): [TextureID, TextureID] {

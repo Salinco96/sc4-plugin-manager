@@ -7,7 +7,6 @@ import type { Assets } from "@common/assets"
 import type { Categories } from "@common/categories"
 import { isDBPF } from "@common/dbpf"
 import {
-  type ExemplarProperties,
   type ExemplarPropertyData,
   type ExemplarPropertyInfo,
   ExemplarValueType,
@@ -25,7 +24,6 @@ import { analyzeSC4File, analyzeSC4Files } from "@node/dbpf/analyze"
 import { fsExists, fsQueryFiles, getExtension, replaceExtension } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
-
 import { fromProfileData } from "./profiles"
 
 export async function loadCategories(context: TaskContext, basePath: string): Promise<Categories> {
@@ -93,7 +91,6 @@ export async function loadMaxisContents(
   gamePath: string,
   options: {
     categories: Categories
-    exemplarProperties: ExemplarProperties
     reload?: boolean
   },
 ): Promise<FileContents> {
@@ -111,7 +108,7 @@ export async function loadMaxisContents(
 
     context.debug("Indexing Maxis files...")
 
-    const { contents } = await analyzeSC4Files(gamePath, MAXIS_FILES, options.exemplarProperties)
+    const { contents } = await analyzeSC4Files(gamePath, MAXIS_FILES)
 
     await writeConfig<FileContentsData>(
       basePath,
@@ -133,7 +130,6 @@ export async function loadPlugins(
   pluginsPath: string,
   options: {
     categories: Categories
-    exemplarProperties: ExemplarProperties
     reload?: boolean
   },
 ): Promise<Plugins> {
@@ -167,11 +163,7 @@ export async function loadPlugins(
         plugins[pluginPath] = cache[pluginPath]
       } else {
         try {
-          const { contents } = await analyzeSC4File(
-            pluginsPath,
-            pluginPath,
-            options.exemplarProperties,
-          )
+          const { contents } = await analyzeSC4File(pluginsPath, pluginPath)
 
           plugins[pluginPath] = contents
         } catch (error) {

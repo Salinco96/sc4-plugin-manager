@@ -13,8 +13,8 @@ export class BinaryReader {
 
   public offset: number
 
-  public constructor(bytes: Buffer) {
-    this.#bytes = bytes
+  public constructor(bytes: Buffer, compressed?: boolean) {
+    this.#bytes = compressed ? BinaryReader.decompress(bytes) : bytes
     this.offset = 0
   }
 
@@ -44,8 +44,7 @@ export class BinaryReader {
     offset?: number,
     compressed?: boolean,
   ): Promise<BinaryReader> {
-    const bytes = await readBytes(file, size, offset)
-    return new BinaryReader(compressed ? BinaryReader.decompress(bytes) : bytes)
+    return new BinaryReader(await readBytes(file, size, offset), compressed)
   }
 
   public readBool(offset?: number): boolean {

@@ -23,7 +23,7 @@ async function updateSaveFile(
 ): Promise<boolean> {
   try {
     const updated = await fsOpen(fullPath, FileOpenMode.READ, async file => {
-      const save = new SaveFile(file)
+      const save = await SaveFile.fromFile(file)
 
       await options.handler(context, save)
 
@@ -32,9 +32,7 @@ async function updateSaveFile(
       }
 
       await fsCreate(path.dirname(options.tempPath))
-      await fsOpen(options.tempPath, FileOpenMode.WRITE, async tempFile => {
-        await save.write(tempFile)
-      })
+      await save.write(options.tempPath)
 
       return true
     })
@@ -42,8 +40,7 @@ async function updateSaveFile(
     if (updated) {
       // Sanity check - can we read the modified file back?
       await fsOpen(options.tempPath, FileOpenMode.READ, async tempFile => {
-        const save = new SaveFile(tempFile)
-        await save.entries()
+        const save = await SaveFile.fromFile(tempFile)
         await save.lots()
       })
 

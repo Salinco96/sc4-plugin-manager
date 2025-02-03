@@ -2,9 +2,9 @@ import type { FileHandle } from "node:fs/promises"
 
 import { forEach, values } from "@salinco/nice-utils"
 
-import { type DBPFEntry, type DBPFFile, type TGI, parseTGI } from "@common/dbpf"
-import { loadDBPF, patchVariantFileEntries } from "@node/dbpf"
+import { type TGI, parseTGI } from "@common/dbpf"
 
+import { DBPF } from "@node/dbpf"
 import { BuildingRecord } from "./BuildingRecord"
 import { LotRecord } from "./LotRecord"
 import type { SaveRecordParser } from "./SaveRecord"
@@ -45,9 +45,7 @@ const SimGridTypes = [
 ] as const
 
 export class SaveFile {
-  public readonly file: FileHandle
-
-  private contents?: DBPFFile
+  public readonly dbpf: DBPF
 
   private readonly grids: {
     [T in SimGridDataID]?: SimGrid | null
@@ -57,17 +55,16 @@ export class SaveFile {
     [T in SaveSubfileType]?: SaveSubfileMulti<SaveSubfileRecordType<T>> | null
   } = {}
 
-  public constructor(file: FileHandle) {
-    this.file = file
+  protected constructor(dbpf: DBPF) {
+    this.dbpf = dbpf
+  }
+
+  public static async fromFile(file: FileHandle): Promise<SaveFile> {
+    return new SaveFile(await DBPF.fromFile(file))
   }
 
   public isDirty(): boolean {
     return values(this.subfiles).some(subfile => subfile?.isDirty())
-  }
-
-  public async entries(): Promise<{ [entryId in TGI]?: DBPFEntry }> {
-    this.contents ??= await loadDBPF(this.file, { exemplarProperties: {} })
-    return this.contents.entries
   }
 
   public async grid(dataId: SimGridDataID): Promise<SimGrid | null> {
@@ -96,7 +93,7 @@ export class SaveFile {
     return this.subfile(SaveSubfileType.Lots)
   }
 
-  public async write(outFile: FileHandle): Promise<void> {
+  public async write(outPath: string): Promise<void> {
     const patches: { [tgi in TGI]: Buffer } = {}
 
     forEach(this.subfiles, subfile => {
@@ -105,7 +102,7 @@ export class SaveFile {
       }
     })
 
-    await patchVariantFileEntries(this.file, outFile, patches, { exemplarProperties: {} })
+    await this.dbpf.patchEntries(outPath, patches, {})
   }
 
   protected async subfile<T extends SaveSubfileType>(
@@ -115,15 +112,13 @@ export class SaveFile {
       return this.subfiles[type]
     }
 
-    const entries = await this.entries()
-    for (const entry of values(entries)) {
-      const entryType: number = parseTGI(entry.id)[0]
-      if (entryType === type) {
-        const parser = SaveSubfileRecordParser[type]
-        const subfile = await SaveSubfileMulti.from(this.file, entry, parser)
-        this.subfiles[type] = subfile as (typeof this.subfiles)[T]
-        return subfile
-      }
+    const entry = values(this.dbpf.entries).find(entry => parseTGI(entry.id)[0] === type)
+
+    if (entry) {
+      const parser = SaveSubfileRecordParser[type]
+      const subfile = await SaveSubfileMulti.from(this.dbpf, entry, parser)
+      this.subfiles[type] = subfile as (typeof this.subfiles)[T]
+      return subfile
     }
 
     this.subfiles[type] = null

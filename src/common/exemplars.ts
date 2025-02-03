@@ -3,14 +3,14 @@ import { type TGI, parseTGI } from "./dbpf"
 
 export interface ExemplarData {
   isCohort: boolean
-  parentCohortId: TGI
+  parentCohort: TGI
   properties: {
     [propertyId in number]?: ExemplarProperty
   }
 }
 
 export interface ExemplarDataPatch {
-  parentCohortId?: TGI
+  parentCohort?: TGI | null
   properties?: {
     [propertyId in string]?: ExemplarPropertyValue | null
   }

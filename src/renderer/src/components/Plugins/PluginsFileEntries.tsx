@@ -1,9 +1,9 @@
-import type { DBPFFile } from "@common/dbpf"
+import type { DBPFInfo } from "@common/dbpf"
 import { DBPFEntries } from "@components/File/DBPFEntries"
 import { DBPFEntry } from "@components/File/DBPFEntry"
 import { Loader } from "@components/Loader"
 
-export function PluginsFileEntries({ data }: { data?: DBPFFile }) {
+export function PluginsFileEntries({ data }: { data?: DBPFInfo }) {
   if (!data) {
     return <Loader />
   }

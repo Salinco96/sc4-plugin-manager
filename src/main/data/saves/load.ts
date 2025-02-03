@@ -12,7 +12,7 @@ export async function loadSaveInfo(context: TaskContext, fullPath: string): Prom
   const info = await fsOpen(fullPath, FileOpenMode.READ, async file => {
     context.debug(`Loading ${fullPath}...`)
 
-    const save = new SaveFile(file)
+    const save = await SaveFile.fromFile(file)
 
     const buildings = await save.buildings()
     const buildingIds = new Set<BuildingID>()

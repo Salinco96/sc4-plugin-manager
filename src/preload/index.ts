@@ -1,7 +1,7 @@
 import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import type { AuthorID } from "@common/authors"
-import type { DBPFDataType, DBPFEntry, DBPFFile, TGI } from "@common/dbpf"
+import type { DBPFDataType, DBPFInfo, DBPFLoadedEntryInfo, TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -66,24 +66,24 @@ export const api = {
   installVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
     return ipcRenderer.invoke("installVariant", packageId, variantId)
   },
-  loadPluginFileEntries(pluginPath: string): Promise<DBPFFile> {
+  loadPluginFileEntries(pluginPath: string): Promise<DBPFInfo> {
     return ipcRenderer.invoke("loadPluginFileEntries", pluginPath)
   },
-  loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFEntry> {
+  loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFLoadedEntryInfo> {
     return ipcRenderer.invoke("loadPluginFileEntry", pluginPath, entryId)
   },
   loadSavePreviewPicture(
     regionId: RegionID,
     cityId: CityID,
     backupFile?: string,
-  ): Promise<DBPFEntry<DBPFDataType.PNG>> {
+  ): Promise<DBPFLoadedEntryInfo<DBPFDataType.PNG>> {
     return ipcRenderer.invoke("loadSavePreviewPicture", regionId, cityId, backupFile)
   },
   loadVariantFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     return ipcRenderer.invoke("loadVariantFileEntries", packageId, variantId, filePath)
   },
   loadVariantFileEntry(
@@ -91,7 +91,7 @@ export const api = {
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
-  ): Promise<DBPFEntry> {
+  ): Promise<DBPFLoadedEntryInfo> {
     return ipcRenderer.invoke("loadVariantFileEntry", packageId, variantId, filePath, entryId)
   },
   openAuthorURL(authorId: AuthorID): Promise<void> {
@@ -139,7 +139,7 @@ export const api = {
     patches: {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     return ipcRenderer.invoke("patchPluginFileEntries", pluginPath, patches)
   },
   patchVariantFileEntries(
@@ -149,7 +149,7 @@ export const api = {
     patches: {
       [entryId in TGI]?: ExemplarDataPatch | null
     },
-  ): Promise<DBPFFile> {
+  ): Promise<DBPFInfo> {
     return ipcRenderer.invoke("patchVariantFileEntries", packageId, variantId, filePath, patches)
   },
   reloadPlugins(): Promise<void> {

@@ -3,7 +3,7 @@ import { ListItem, Typography } from "@mui/material"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { DBPFDataType, type DBPFEntry as DBPFEntryType, type TGI } from "@common/dbpf"
+import { DBPFDataType, type DBPFEntryInfo, type TGI } from "@common/dbpf"
 import type { ExemplarDataPatch } from "@common/exemplars"
 import { VariantState } from "@common/types"
 import { Tag } from "@components/Tags/Tag"
@@ -13,15 +13,15 @@ import { EntryViewer } from "@components/Viewer/EntryViewer"
 
 import { getDBPFEntryLabel } from "./utils"
 
-const EDITABLETYPES = [
+const EDITABLE_TYPES = [
   // Exemplars
-  DBPFDataType.EXMP,
+  DBPFDataType.EXEMPLAR,
 ]
 
 // TODO: FSH, S3D, audio files...
-const VIEWABLETYPES = [
+const VIEWABLE_TYPES = [
+  ...EDITABLE_TYPES,
   DBPFDataType.BMP,
-  DBPFDataType.EXMP,
   DBPFDataType.JFIF,
   DBPFDataType.LTEXT,
   DBPFDataType.PNG,
@@ -30,7 +30,7 @@ const VIEWABLETYPES = [
 ]
 
 export interface DBPFEntryProps {
-  entry: DBPFEntryType
+  entry: DBPFEntryInfo
   isLocal?: boolean
   isOverridden?: boolean
   isPatched?: boolean
@@ -50,8 +50,8 @@ export function DBPFEntry({
 
   const { t } = useTranslation("PackageViewFiles")
 
-  const isEditable = EDITABLETYPES.includes(entry.type)
-  const isViewable = VIEWABLETYPES.includes(entry.type)
+  const isEditable = EDITABLE_TYPES.includes(entry.type)
+  const isViewable = VIEWABLE_TYPES.includes(entry.type)
   const compression = entry.uncompressed ? 1 - entry.size / entry.uncompressed : 0
 
   return (

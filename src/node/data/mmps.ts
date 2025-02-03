@@ -1,6 +1,7 @@
 import type { GroupID } from "@common/dbpf"
 import type { FloraID, FloraInfo } from "@common/mmps"
-import { loadModelId, writeModelId } from "./packages"
+
+import { loadModelId, writeModelId } from "./plugins"
 
 export interface FloraData {
   /**

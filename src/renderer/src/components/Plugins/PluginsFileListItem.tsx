@@ -2,7 +2,7 @@ import { Folder as OpenLocationIcon, Archive as RemoveIcon } from "@mui/icons-ma
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import type { DBPFFile as DBPFFileType } from "@common/dbpf"
+import type { DBPFInfo } from "@common/dbpf"
 import type { PluginsFileInfo } from "@common/plugins"
 import { FileListItem } from "@components/File/FileListItem"
 import {
@@ -30,7 +30,7 @@ export function PluginsFileListItem({
   name: string
   parent?: string
 }): JSX.Element {
-  const [fileData, setFileData] = useState<DBPFFileType>()
+  const [fileData, setFileData] = useState<DBPFInfo>()
 
   const { t } = useTranslation("Plugins")
 
