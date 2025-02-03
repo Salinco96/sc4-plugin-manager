@@ -1,6 +1,6 @@
 import type { FileHandle } from "node:fs/promises"
 import { type DBPFEntry, type TGI, parseTGI } from "@common/dbpf"
-import { Binary } from "@node/bin"
+import { BinaryWriter } from "@node/bin"
 import { loadDBPFEntryBytes } from "@node/dbpf"
 import type { SaveRecord, SaveRecordParser } from "./SaveRecord"
 
@@ -50,9 +50,9 @@ export class SaveSubfileSingle<R extends SaveRecord> extends SaveSubfile {
   }
 
   public override toBytes(): Buffer {
-    const bytes = new Binary(12, { alloc: 1024, resizable: true, writable: true })
-    this.data.writeRecord(bytes)
-    return bytes.toBytes()
+    const writer = new BinaryWriter()
+    this.data.writeRecord(writer)
+    return writer.bytes
   }
 
   public static async from<R extends SaveRecord>(
@@ -80,13 +80,13 @@ export class SaveSubfileMulti<R extends SaveRecord> extends SaveSubfile {
   }
 
   public override toBytes(): Buffer {
-    const bytes = new Binary(12 * this.data.length, { resizable: true, writable: true })
+    const writer = new BinaryWriter()
 
     for (const record of this.data) {
-      record.writeRecord(bytes)
+      record.writeRecord(writer)
     }
 
-    return bytes.toBytes()
+    return writer.bytes
   }
 
   public static async from<R extends SaveRecord>(

@@ -40,6 +40,13 @@ async function updateSaveFile(
     })
 
     if (updated) {
+      // Sanity check - can we read the modified file back?
+      await fsOpen(options.tempPath, FileOpenMode.READ, async tempFile => {
+        const save = new SaveFile(tempFile)
+        await save.entries()
+        await save.lots()
+      })
+
       await fsMove(options.tempPath, fullPath, { overwrite: true })
     }
 

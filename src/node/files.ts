@@ -356,7 +356,12 @@ export function joinPosix(...paths: string[]): string {
   return path.posix.join(...paths)
 }
 
-export async function readBytes(file: FileHandle, size: number, offset?: number): Promise<Buffer> {
+export async function readBytes(file: FileHandle, size?: number, offset?: number): Promise<Buffer> {
+  if (size === undefined) {
+    const { buffer } = await file.read({ position: offset })
+    return buffer
+  }
+
   const buffer = Buffer.alloc(size)
   await file.read(buffer, 0, size, offset)
   return buffer

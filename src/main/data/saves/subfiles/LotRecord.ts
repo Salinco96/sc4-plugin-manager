@@ -1,7 +1,7 @@
 import { keys, sum, sumBy } from "@salinco/nice-utils"
 
 import type { RCIType } from "@common/lots"
-import type { Binary } from "@node/bin"
+import type { BinaryReader, BinaryWriter } from "@node/bin"
 import { type DeveloperID, WealthType, ZoneType } from "@node/dbpf/types"
 
 import { DeveloperIDToRCIType } from "../constants"
@@ -158,85 +158,85 @@ export class LotRecord extends SaveRecord implements LotRecordData {
     this.zoneType = data.zoneType
   }
 
-  public static parse(header: SaveRecordData, bytes: Binary): LotRecord {
-    const major = bytes.readUInt16()
-    const lotId = bytes.readUInt32() || null
-    const flags1 = bytes.readUInt8()
-    const minX = bytes.readUInt8()
-    const minZ = bytes.readUInt8()
-    const maxX = bytes.readUInt8()
-    const maxZ = bytes.readUInt8()
-    const commuteX = bytes.readUInt8()
-    const commuteZ = bytes.readUInt8()
-    const originY = bytes.readFloat32()
-    const slopeY1 = bytes.readFloat32()
-    const slopeY2 = bytes.readFloat32()
-    const sizeX = bytes.readUInt8()
-    const sizeZ = bytes.readUInt8()
-    const orientation = bytes.readUInt8()
-    const flags2 = bytes.readUInt8()
-    const flags3 = bytes.readUInt8()
-    const zoneType = bytes.readUInt8() as ZoneType
-    const wealth = bytes.readUInt8() || null
-    const date = bytes.readUInt32()
-    const buildingId = bytes.readUInt32() || null
-    const unknown1 = bytes.readUInt8()
+  public static parse(header: SaveRecordData, reader: BinaryReader): LotRecord {
+    const major = reader.readUInt16()
+    const lotId = reader.readUInt32() || null
+    const flags1 = reader.readUInt8()
+    const minX = reader.readUInt8()
+    const minZ = reader.readUInt8()
+    const maxX = reader.readUInt8()
+    const maxZ = reader.readUInt8()
+    const commuteX = reader.readUInt8()
+    const commuteZ = reader.readUInt8()
+    const originY = reader.readFloat32()
+    const slopeY1 = reader.readFloat32()
+    const slopeY2 = reader.readFloat32()
+    const sizeX = reader.readUInt8()
+    const sizeZ = reader.readUInt8()
+    const orientation = reader.readUInt8()
+    const flags2 = reader.readUInt8()
+    const flags3 = reader.readUInt8()
+    const zoneType = reader.readUInt8() as ZoneType
+    const wealth = reader.readUInt8() || null
+    const date = reader.readUInt32()
+    const buildingId = reader.readUInt32() || null
+    const unknown1 = reader.readUInt8()
 
-    const linkedIndustrial = this.parseRef(bytes, 0x4a232da8)
-    const linkedAnchor = this.parseRef(bytes, SaveSubfileType.Lots)
+    const linkedIndustrial = this.parseRef(reader, 0x4a232da8)
+    const linkedAnchor = this.parseRef(reader, SaveSubfileType.Lots)
 
     const capacity: LotRecord["capacity"] = {}
-    const capacityCount = bytes.readUInt8()
+    const capacityCount = reader.readUInt8()
     for (let i = 0; i < capacityCount; i++) {
-      const rciCTypeCount = bytes.readUInt8()
+      const rciCTypeCount = reader.readUInt8()
       for (let j = 0; j < rciCTypeCount; j++) {
-        const developerId = bytes.readUInt32() as DeveloperID
-        capacity[developerId] = bytes.readUInt16()
+        const developerId = reader.readUInt32() as DeveloperID
+        capacity[developerId] = reader.readUInt16()
       }
     }
 
     const totalCapacity: LotRecord["totalCapacity"] = {}
-    const rciCTypeCount = bytes.readUInt8()
+    const rciCTypeCount = reader.readUInt8()
     for (let i = 0; i < rciCTypeCount; i++) {
-      const developerId = bytes.readUInt32() as DeveloperID
-      totalCapacity[developerId] = bytes.readUInt16()
+      const developerId = reader.readUInt32() as DeveloperID
+      totalCapacity[developerId] = reader.readUInt16()
     }
 
     const totalJobs: LotRecord["totalJobs"] = {
-      [WealthType.$]: bytes.readFloat32(),
-      [WealthType.$$]: bytes.readFloat32(),
-      [WealthType.$$$]: bytes.readFloat32(),
+      [WealthType.$]: reader.readFloat32(),
+      [WealthType.$$]: reader.readFloat32(),
+      [WealthType.$$$]: reader.readFloat32(),
     }
 
-    const unknown2 = bytes.readUInt16()
+    const unknown2 = reader.readUInt16()
 
-    const properties = parseProperties(bytes)
+    const properties = parseProperties(reader)
 
     const commutes: Commute[] = []
-    const commutesCount = bytes.readUInt32()
+    const commutesCount = reader.readUInt32()
     for (let i = 0; i < commutesCount; i++) {
       const paths: Commute["paths"] = []
-      const pathsCount = bytes.readUInt32()
+      const pathsCount = reader.readUInt32()
 
       for (let j = 0; j < pathsCount; j++) {
-        const pathLen = bytes.readUInt32()
+        const pathLen = reader.readUInt32()
         if (pathLen === 0) {
           paths.push(null)
           continue
         }
 
-        const pathEnd = bytes.offset + pathLen
-        const startType = bytes.readUInt8() as CommuteTrafficType
-        const startX = bytes.readUInt8()
-        const startZ = bytes.readUInt8()
+        const pathEnd = reader.offset + pathLen
+        const startType = reader.readUInt8() as CommuteTrafficType
+        const startX = reader.readUInt8()
+        const startZ = reader.readUInt8()
 
         const parts: NonNullable<Commute["paths"][number]>["parts"] = []
-        while (bytes.offset < pathEnd) {
-          const switchType = bytes.readUInt8() as CommuteTrafficType
+        while (reader.offset < pathEnd) {
+          const switchType = reader.readUInt8() as CommuteTrafficType
           const directions: CommutePathDirection[] = []
-          const directionsCount = bytes.readUInt8()
+          const directionsCount = reader.readUInt8()
           for (let k = 0; k < directionsCount / 4; k++) {
-            const byte = bytes.readUInt8()
+            const byte = reader.readUInt8()
             for (let n = 0; n < 4; n++) {
               const direction = (byte >> (n * 2)) & 0x03
               if (k * 4 + n < directionsCount) {
@@ -261,12 +261,12 @@ export class LotRecord extends SaveRecord implements LotRecordData {
         })
       }
 
-      const commuters = bytes.readUInt32()
-      const unknown1 = bytes.readUInt32()
-      const destinationX = bytes.readSInt16()
-      const destinationZ = bytes.readSInt16()
-      const tripLength = bytes.readFloat32()
-      const unknown2 = bytes.readUInt32()
+      const commuters = reader.readUInt32()
+      const unknown1 = reader.readUInt32()
+      const destinationX = reader.readSInt16()
+      const destinationZ = reader.readSInt16()
+      const tripLength = reader.readFloat32()
+      const unknown2 = reader.readUInt32()
 
       commutes.push({
         commuters,
@@ -279,7 +279,7 @@ export class LotRecord extends SaveRecord implements LotRecordData {
       })
     }
 
-    const unknown3 = bytes.readUInt8()
+    const unknown3 = reader.readUInt8()
 
     return new LotRecord({
       ...header,
@@ -317,96 +317,96 @@ export class LotRecord extends SaveRecord implements LotRecordData {
     })
   }
 
-  public override write(bytes: Binary): void {
-    bytes.writeUInt16(this.major)
-    bytes.writeUInt32(this.lotId ?? 0)
-    bytes.writeUInt8(this.flags1)
-    bytes.writeUInt8(this.minX)
-    bytes.writeUInt8(this.minZ)
-    bytes.writeUInt8(this.maxX)
-    bytes.writeUInt8(this.maxZ)
-    bytes.writeUInt8(this.commuteX)
-    bytes.writeUInt8(this.commuteZ)
-    bytes.writeFloat32(this.originY)
-    bytes.writeFloat32(this.slopeY1)
-    bytes.writeFloat32(this.slopeY2)
-    bytes.writeUInt8(this.sizeX)
-    bytes.writeUInt8(this.sizeZ)
-    bytes.writeUInt8(this.orientation)
-    bytes.writeUInt8(this.flags2)
-    bytes.writeUInt8(this.flags3)
-    bytes.writeUInt8(this.zoneType)
-    bytes.writeUInt8(this.wealth ?? 0)
-    bytes.writeUInt32(this.date)
-    bytes.writeUInt32(this.buildingId ?? 0)
-    bytes.writeUInt8(this.unknown1)
+  public override write(writer: BinaryWriter): void {
+    writer.writeUInt16(this.major)
+    writer.writeUInt32(this.lotId ?? 0)
+    writer.writeUInt8(this.flags1)
+    writer.writeUInt8(this.minX)
+    writer.writeUInt8(this.minZ)
+    writer.writeUInt8(this.maxX)
+    writer.writeUInt8(this.maxZ)
+    writer.writeUInt8(this.commuteX)
+    writer.writeUInt8(this.commuteZ)
+    writer.writeFloat32(this.originY)
+    writer.writeFloat32(this.slopeY1)
+    writer.writeFloat32(this.slopeY2)
+    writer.writeUInt8(this.sizeX)
+    writer.writeUInt8(this.sizeZ)
+    writer.writeUInt8(this.orientation)
+    writer.writeUInt8(this.flags2)
+    writer.writeUInt8(this.flags3)
+    writer.writeUInt8(this.zoneType)
+    writer.writeUInt8(this.wealth ?? 0)
+    writer.writeUInt32(this.date)
+    writer.writeUInt32(this.buildingId ?? 0)
+    writer.writeUInt8(this.unknown1)
 
-    this.writeRef(bytes, this.linkedIndustrial, 0x4a232da8)
-    this.writeRef(bytes, this.linkedAnchor, 0xc9bd5d4a)
+    this.writeRef(writer, this.linkedIndustrial, 0x4a232da8)
+    this.writeRef(writer, this.linkedAnchor, 0xc9bd5d4a)
 
     const capacity = Object.entries(this.capacity)
     if (capacity.length) {
-      bytes.writeUInt8(1)
-      bytes.writeUInt8(capacity.length)
+      writer.writeUInt8(1)
+      writer.writeUInt8(capacity.length)
       for (const [type, value] of capacity) {
-        bytes.writeUInt32(Number(type))
-        bytes.writeUInt16(value)
+        writer.writeUInt32(Number(type))
+        writer.writeUInt16(value)
       }
     } else {
-      bytes.writeUInt8(0)
+      writer.writeUInt8(0)
     }
 
     const totalCapacity = Object.entries(this.totalCapacity)
-    bytes.writeUInt8(totalCapacity.length)
+    writer.writeUInt8(totalCapacity.length)
     for (const [type, value] of totalCapacity) {
-      bytes.writeUInt32(Number(type))
-      bytes.writeUInt16(value)
+      writer.writeUInt32(Number(type))
+      writer.writeUInt16(value)
     }
 
-    bytes.writeFloat32(this.totalJobs[WealthType.$] ?? 0)
-    bytes.writeFloat32(this.totalJobs[WealthType.$$] ?? 0)
-    bytes.writeFloat32(this.totalJobs[WealthType.$$$] ?? 0)
+    writer.writeFloat32(this.totalJobs[WealthType.$] ?? 0)
+    writer.writeFloat32(this.totalJobs[WealthType.$$] ?? 0)
+    writer.writeFloat32(this.totalJobs[WealthType.$$$] ?? 0)
 
-    bytes.writeUInt16(this.unknown2)
+    writer.writeUInt16(this.unknown2)
 
-    writeProperties(bytes, this.properties)
+    writeProperties(writer, this.properties)
 
-    bytes.writeUInt32(this.commutes.length)
+    writer.writeUInt32(this.commutes.length)
     for (const commute of this.commutes) {
-      bytes.writeUInt32(commute.paths.length)
+      writer.writeUInt32(commute.paths.length)
       for (const path of commute.paths) {
         if (path) {
-          bytes.writeUInt32(
+          writer.writeUInt32(
             3 + sumBy(path.parts, part => 2 + Math.ceil(part.directions.length / 4)),
           )
 
-          bytes.writeUInt8(path.startType)
-          bytes.writeUInt8(path.startX)
-          bytes.writeUInt8(path.startZ)
+          writer.writeUInt8(path.startType)
+          writer.writeUInt8(path.startX)
+          writer.writeUInt8(path.startZ)
 
           for (const part of path.parts) {
-            bytes.writeUInt8(part.type)
-            bytes.writeUInt8(part.directions.length)
+            writer.writeUInt8(part.type)
+            writer.writeUInt8(part.directions.length)
             for (let k = 0; k < part.directions.length / 4; k++) {
-              bytes.writeUInt8(
+              writer.writeUInt8(
                 sum(part.directions.slice(k * 4, k * 4 + 4).map((v, n) => v << (n * 2))),
               )
             }
           }
         } else {
-          bytes.writeUInt32(0)
+          writer.writeUInt32(0)
         }
       }
 
-      bytes.writeUInt32(commute.commuters)
-      bytes.writeUInt32(commute.unknown1)
-      bytes.writeSInt16(commute.destinationX)
-      bytes.writeSInt16(commute.destinationZ)
-      bytes.writeFloat32(commute.tripLength)
-      bytes.writeUInt32(commute.unknown2)
+      writer.writeUInt32(commute.commuters)
+      writer.writeUInt32(commute.unknown1)
+      writer.writeSInt16(commute.destinationX)
+      writer.writeSInt16(commute.destinationZ)
+      writer.writeFloat32(commute.tripLength)
+      writer.writeUInt32(commute.unknown2)
     }
 
-    bytes.writeUInt8(this.unknown3)
+    writer.writeUInt8(this.unknown3)
   }
 
   public isHistorical(): boolean {

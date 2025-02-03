@@ -23,7 +23,8 @@ import {
   PropertyKeyType,
 } from "@common/exemplars"
 
-import { Binary } from "./bin"
+import { BinaryReader, BinaryWriter } from "./bin"
+import { readBytes, writeBytes } from "./files"
 
 const HEADER_SIZE = 96
 const HEADER_MAGIC = "DBPF"
@@ -42,7 +43,7 @@ export async function loadDBPF(
     loadExemplars?: boolean
   },
 ): Promise<DBPFFile> {
-  const header = await Binary.fromFile(file, HEADER_SIZE)
+  const header = await BinaryReader.fromFile(file, HEADER_SIZE, 0)
   const magic = header.readString(HEADER_MAGIC.length)
   if (magic !== HEADER_MAGIC) {
     throw Error(`Invalid magic word: ${magic}`)
@@ -79,7 +80,7 @@ export async function loadDBPF(
     throw Error(`Mismatching index size: ${indexSize} vs ${entryCount * INDEX_ENTRY_SIZE})`)
   }
 
-  const indexBytes = await Binary.fromFile(file, indexSize, indexOffset)
+  const indexBytes = await BinaryReader.fromFile(file, indexSize, indexOffset)
   for (let i = 0; i < entryCount; i++) {
     const id = indexBytes.readTGI()
     const offset = indexBytes.readUInt32()
@@ -98,7 +99,7 @@ export async function loadDBPF(
   if (dir) {
     const dirEntryCount = dir.size / DIR_ENTRY_SIZE
 
-    const dirBytes = await Binary.fromFile(file, dir.size, dir.offset)
+    const dirBytes = await BinaryReader.fromFile(file, dir.size, dir.offset)
     for (let i = 0; i < dirEntryCount; i++) {
       const id = dirBytes.readTGI()
       const uncompressed = dirBytes.readUInt32()
@@ -141,15 +142,15 @@ export async function loadDBPF(
   return contents
 }
 
-export async function loadDBPFEntryBytes(file: FileHandle, entry: DBPFEntry): Promise<Binary> {
-  const bytes = await Binary.fromFile(file, entry.size, entry.offset)
+export async function loadDBPFEntryBytes(
+  file: FileHandle,
+  entry: DBPFEntry,
+): Promise<BinaryReader> {
+  const bytes = await BinaryReader.fromFile(file, entry.size, entry.offset, isCompressed(entry))
 
-  if (isCompressed(entry)) {
-    bytes.decompress()
-
-    if (entry.uncompressed === 0) {
-      entry.uncompressed = bytes.length
-    }
+  // TODO: Bad mutation!
+  if (entry.uncompressed === 0) {
+    entry.uncompressed = bytes.length
   }
 
   return bytes
@@ -217,15 +218,15 @@ export async function patchVariantFileEntries(
 
   const entryCount = Object.keys(contents.entries).length
 
-  const header = new Binary(HEADER_SIZE, { writable: true })
-  offset += await header.writeTofile(outFile)
+  const header = new BinaryWriter(HEADER_SIZE)
+  offset += await header.writeToFile(outFile, offset)
 
   const indexOffset = offset
-  const index = new Binary(entryCount * INDEX_ENTRY_SIZE, { writable: true })
-  offset += await index.writeTofile(outFile)
+  const index = new BinaryWriter(entryCount * INDEX_ENTRY_SIZE)
+  offset += await index.writeToFile(outFile, offset)
 
   const dirEntry = contents.entries[DBPFFileType.DIR]
-  const dir = dirEntry && new Binary(dirEntry.size, { writable: true })
+  const dir = dirEntry && new BinaryWriter()
 
   for (const entry of values(contents.entries)) {
     // Skip DIR for now - we will write it last
@@ -236,17 +237,17 @@ export async function patchVariantFileEntries(
     const patch = patches[entry.id]
 
     if (Buffer.isBuffer(patch)) {
-      const bytes = new Binary(patch)
+      let bytes = patch
 
       if (entry.uncompressed) {
         entry.uncompressed = bytes.length
-        bytes.compress()
+        bytes = BinaryWriter.compress(bytes)
       }
 
       entry.offset = offset
       entry.size = bytes.length
 
-      offset += await bytes.writeTofile(outFile)
+      offset += await writeBytes(outFile, bytes, offset)
     } else if (patch) {
       if (entry.type !== DBPFDataType.EXMP) {
         throw Error(`Not an exemplar entry: ${entry.id}`)
@@ -286,25 +287,25 @@ export async function patchVariantFileEntries(
         })
       }
 
-      const bytes = writeExemplar(exemplarData, entry.size)
+      const writer = writeExemplar(exemplarData, entry.size)
 
       if (entry.uncompressed !== undefined) {
-        entry.uncompressed = bytes.length
-        bytes.compress()
+        entry.uncompressed = writer.length
+        writer.compress()
       }
 
       entry.data = exemplarData
       entry.offset = offset
       entry.original = originalData
-      entry.size = bytes.length
+      entry.size = writer.length
 
-      offset += await bytes.writeTofile(outFile)
+      offset += await writer.writeToFile(outFile, offset)
     } else {
-      const bytes = await Binary.fromFile(inFile, entry.size, entry.offset)
+      const bytes = await readBytes(inFile, entry.size, entry.offset)
 
       entry.offset = offset
 
-      offset += await bytes.writeTofile(outFile)
+      offset += await writeBytes(outFile, bytes, offset)
     }
 
     index.writeTGI(entry.id)
@@ -324,8 +325,10 @@ export async function patchVariantFileEntries(
     index.writeUInt32(dirEntry.offset)
     index.writeUInt32(dirEntry.size)
 
-    offset += await dir.writeTofile(outFile)
+    offset += await dir.writeToFile(outFile, offset)
   }
+
+  index.checkEnd()
 
   contents.modifiedAt = new Date().toISOString()
 
@@ -346,15 +349,15 @@ export async function patchVariantFileEntries(
   header.writeUInt32(indexOffset, 40)
   header.writeUInt32(index.length, 44)
 
-  await header.writeTofile(outFile, 0)
-  await index.writeTofile(outFile, indexOffset)
+  await header.writeToFile(outFile, 0)
+  await index.writeToFile(outFile, indexOffset)
 
   return contents
 }
 
 function loadExemplar(
   entryId: TGI,
-  bytes: Binary,
+  bytes: BinaryReader,
   exemplarProperties: {
     [propertyId in number]?: ExemplarPropertyInfo
   },
@@ -488,34 +491,34 @@ function loadExemplar(
   }
 }
 
-function writeExemplar(data: ExemplarData, allocSize: number): Binary {
+function writeExemplar(data: ExemplarData, allocSize: number): BinaryWriter {
   const properties = values(data.properties)
   const propertyCount = properties.length
 
-  const exemplar = new Binary(0, { alloc: allocSize, resizable: true, writable: true })
+  const writer = new BinaryWriter(24, { alloc: allocSize, resizable: true })
 
-  exemplar.writeString(data.isCohort ? "CQZB1###" : "EQZB1###")
-  exemplar.writeTGI(data.parentCohortId)
-  exemplar.writeUInt32(propertyCount)
+  writer.writeString(data.isCohort ? "CQZB1###" : "EQZB1###")
+  writer.writeTGI(data.parentCohortId)
+  writer.writeUInt32(propertyCount)
 
   for (const property of properties) {
-    exemplar.writeUInt32(property.id)
-    exemplar.writeUInt16(property.type)
+    writer.writeUInt32(property.id)
+    writer.writeUInt16(property.type)
 
     // Prefer encoding 1-rep values as single values
     // See https://wiki.sc4devotion.com/index.php?title=Exemplar - Encoding Issue in the Aspyr Port
     if ((isArray(property.value) && property.value.length !== 1) || isString(property.value)) {
-      exemplar.writeUInt16(PropertyKeyType.Multi)
-      exemplar.writeUInt8(0)
-      exemplar.writeUInt32(property.value.length)
-      exemplar.writeValues(property.value, property.type)
+      writer.writeUInt16(PropertyKeyType.Multi)
+      writer.writeUInt8(0)
+      writer.writeUInt32(property.value.length)
+      writer.writeValues(property.value, property.type)
     } else {
       const value = isArray(property.value) ? property.value[0] : property.value
-      exemplar.writeUInt16(PropertyKeyType.Single)
-      exemplar.writeUInt8(0)
-      exemplar.writeValue(value, property.type)
+      writer.writeUInt16(PropertyKeyType.Single)
+      writer.writeUInt8(0)
+      writer.writeValue(value, property.type)
     }
   }
 
-  return exemplar
+  return writer
 }

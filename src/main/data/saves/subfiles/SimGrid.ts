@@ -1,4 +1,4 @@
-import type { Binary } from "@node/bin"
+import type { BinaryReader, BinaryWriter } from "@node/bin"
 import { SaveRecord, type SaveRecordData } from "./SaveRecord"
 
 export enum SimGridDataType {
@@ -86,29 +86,29 @@ export class SimGrid<T extends SimGridDataType = SimGridDataType>
     this.data[x * this.size + z] = value
   }
 
-  public static getDataId(record: Binary): SimGridDataID {
-    const offset = record.offset
-    const dataId = record.readUInt32(19)
-    record.offset = offset
+  public static getDataId(reader: BinaryReader): SimGridDataID {
+    const offset = reader.offset
+    const dataId = reader.readUInt32(19)
+    reader.offset = offset
     return dataId
   }
 
   public static parse<T extends SimGridDataType>(
     header: SaveRecordData,
-    record: Binary,
+    reader: BinaryReader,
   ): SimGrid<T> {
-    const major = record.readUInt16()
-    const unknown1 = record.readUInt8()
-    const dataType = record.readUInt32() as T
-    const dataId = record.readUInt32() as SimGridDataID
-    const resolution = record.readUInt32()
-    const resolutionExponent = record.readUInt32()
-    const sizeX = record.readUInt32()
-    const sizeZ = record.readUInt32()
-    const unknown2 = record.readUInt32()
-    const unknown3 = record.readUInt32()
-    const unknown4 = record.readUInt32()
-    const unknown5 = record.readUInt32()
+    const major = reader.readUInt16()
+    const unknown1 = reader.readUInt8()
+    const dataType = reader.readUInt32() as T
+    const dataId = reader.readUInt32() as SimGridDataID
+    const resolution = reader.readUInt32()
+    const resolutionExponent = reader.readUInt32()
+    const sizeX = reader.readUInt32()
+    const sizeZ = reader.readUInt32()
+    const unknown2 = reader.readUInt32()
+    const unknown3 = reader.readUInt32()
+    const unknown4 = reader.readUInt32()
+    const unknown5 = reader.readUInt32()
 
     if (2 ** resolutionExponent !== resolution) {
       throw Error("Mismatching SimGrid resolution")
@@ -135,30 +135,30 @@ export class SimGrid<T extends SimGridDataType = SimGridDataType>
     const length = subfile.size * subfile.size
     const type = SimGridDataType[dataType] as keyof typeof SimGridDataType
     for (let i = 0; i < length; i++) {
-      subfile.data[i] = record[`read${type}`]()
+      subfile.data[i] = reader[`read${type}`]()
     }
 
     return subfile
   }
 
-  protected write(bytes: Binary): void {
-    bytes.writeUInt16(this.major)
-    bytes.writeUInt8(this.unknown1)
-    bytes.writeUInt32(this.dataType)
-    bytes.writeUInt32(this.dataId)
-    bytes.writeUInt32(this.resolution)
-    bytes.writeUInt32(Math.log2(this.resolution))
-    bytes.writeUInt32(this.size)
-    bytes.writeUInt32(this.size)
-    bytes.writeUInt32(this.unknown2)
-    bytes.writeUInt32(this.unknown3)
-    bytes.writeUInt32(this.unknown4)
-    bytes.writeUInt32(this.unknown5)
+  protected write(writer: BinaryWriter): void {
+    writer.writeUInt16(this.major)
+    writer.writeUInt8(this.unknown1)
+    writer.writeUInt32(this.dataType)
+    writer.writeUInt32(this.dataId)
+    writer.writeUInt32(this.resolution)
+    writer.writeUInt32(Math.log2(this.resolution))
+    writer.writeUInt32(this.size)
+    writer.writeUInt32(this.size)
+    writer.writeUInt32(this.unknown2)
+    writer.writeUInt32(this.unknown3)
+    writer.writeUInt32(this.unknown4)
+    writer.writeUInt32(this.unknown5)
 
     const length = this.size * this.size
     const type = SimGridDataType[this.dataType] as keyof typeof SimGridDataType
     for (let i = 0; i < length; i++) {
-      bytes[`write${type}`](this.data[i])
+      writer[`write${type}`](this.data[i])
     }
   }
 }
