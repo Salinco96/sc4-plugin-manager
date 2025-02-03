@@ -11,7 +11,6 @@ import {
   toLowerCase,
   values,
 } from "@salinco/nice-utils"
-import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
 import type { Categories } from "@common/categories"
@@ -23,7 +22,7 @@ import { readConfig } from "@node/configs"
 import type { AssetData } from "@node/data/assets"
 import { loadAssetInfo } from "@node/data/assets"
 import { type PackageData, loadPackageInfo, loadVariantInfo } from "@node/data/packages"
-import { createIfMissing, exists } from "@node/files"
+import { fsCreate, fsExists, fsQueryDirectories, fsQueryFiles } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 
@@ -36,7 +35,7 @@ export async function loadDownloadedAssets(
 ): Promise<{ [assetId in AssetID]?: string[] }> {
   const assets: { [assetId in AssetID]?: string[] } = {}
 
-  const downloadKeys = await glob(["*/*@*/", "github/*/*@*/"], { cwd: basePath, posix: true })
+  const downloadKeys = await fsQueryDirectories(basePath, ["*/*@*", "github/*/*@*"])
 
   for (const downloadKey of downloadKeys) {
     const [assetId, version] = downloadKey.split("@") as [AssetID, string]
@@ -57,16 +56,16 @@ export async function loadLocalPackages(
   packagesPath: string,
   categories: Categories,
 ): Promise<Packages> {
-  await createIfMissing(packagesPath)
+  await fsCreate(packagesPath)
 
   const packages: Packages = {}
 
-  const packageIds = await glob("*/*/", { cwd: packagesPath, posix: true })
+  const packageIds = await fsQueryDirectories(packagesPath, "*/*")
 
   let nConfigs = 0
   for (const packageId of packageIds as PackageID[]) {
     context.setProgress(nConfigs++, packageIds.length)
-    const packagePath = path.join(packagesPath, packageId)
+    const packagePath = path.resolve(packagesPath, packageId)
     const packageInfo = await loadLocalPackageInfo(packageId, packagePath, categories)
     if (packageInfo) {
       packages[packageId] = packageInfo
@@ -95,7 +94,7 @@ async function loadLocalPackageInfo(
   let packageData: PackageData = {}
 
   if (configEntry) {
-    const configPath = path.join(packagePath, configEntry.name)
+    const configPath = path.resolve(packagePath, configEntry.name)
     // TODO: This assumes that configs are correctly formatted
     packageData = await readConfig<PackageData>(configPath)
     configFormat = path.extname(configEntry.name) as ConfigFormat
@@ -124,7 +123,7 @@ async function loadLocalPackageInfo(
         variantInfo.installed = true
 
         const docsPath = DIRNAMES.docs
-        if (await exists(path.join(packagePath, entry.name, docsPath))) {
+        if (await fsExists(path.resolve(packagePath, entry.name, docsPath))) {
           variantInfo.docs = docsPath
         }
       } catch (error) {
@@ -156,14 +155,14 @@ export async function loadRemotePackages(
   let nConfigs = 0
   let nPackages = 0
 
-  const assetsPath = path.join(basePath, DIRNAMES.dbAssets)
-  const assetsEntries = await glob("**/*.{yaml,yml}", { cwd: assetsPath })
-  const packagesPath = path.join(basePath, DIRNAMES.dbPackages)
-  const packagesEntries = await glob("**/*.{yaml,yml}", { cwd: packagesPath })
+  const assetsPath = path.resolve(basePath, DIRNAMES.dbAssets)
+  const assetsEntries = await fsQueryFiles(assetsPath, "**/*.{yaml,yml}")
+  const packagesPath = path.resolve(basePath, DIRNAMES.dbPackages)
+  const packagesEntries = await fsQueryFiles(packagesPath, "**/*.{yaml,yml}")
 
   for (const assetsEntry of assetsEntries) {
     context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
-    const configPath = path.join(assetsPath, assetsEntry)
+    const configPath = path.resolve(assetsPath, assetsEntry)
 
     // TODO: This assumes that configs are correctly formatted
     const configs = await readConfig<{ [assetId: AssetID]: AssetData }>(configPath)
@@ -178,7 +177,7 @@ export async function loadRemotePackages(
 
   for (const packagesEntry of packagesEntries) {
     context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
-    const configPath = path.join(packagesPath, packagesEntry)
+    const configPath = path.resolve(packagesPath, packagesEntry)
 
     // TODO: This assumes that configs are correctly formatted
     const configs = await readConfig<{ [packageId: PackageID]: PackageData }>(configPath)

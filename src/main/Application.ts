@@ -13,9 +13,11 @@ import {
   keys,
   mapDefined,
   mapValues,
+  size,
   sortBy,
   sumBy,
   toHex,
+  union,
   uniqueBy,
   values,
   where,
@@ -23,7 +25,6 @@ import {
 import log, { type LogLevel } from "electron-log"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
 import escapeHtml from "escape-html"
-import { glob } from "glob"
 
 import type { AssetInfo, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
@@ -108,20 +109,27 @@ import { extractClickTeam, extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
 import {
   FileOpenMode,
-  copyTo,
-  createIfMissing,
-  exists,
+  fsCopy,
+  fsCreate,
+  fsExists,
+  fsMove,
+  fsOpen,
+  fsQueryFiles,
+  fsRead,
+  fsRemove,
+  fsRemoveIfEmptyRecursive,
+  fsSymlink,
+  fsWrite,
   getExtension,
-  isChild,
+  getFileSize,
+  getFileVersion,
+  getFilename,
+  isChildPath,
   isDirectory,
+  isErrorCode,
   isURL,
-  moveTo,
-  openFile,
-  readFile,
-  removeIfEmptyRecursive,
-  removeIfPresent,
+  joinPosix,
   toPosix,
-  writeFile,
 } from "@node/files"
 import { hashCode } from "@node/hash"
 import { cmd, runFile } from "@node/processes"
@@ -151,7 +159,7 @@ import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./d
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { getBackupFileName, loadRegions } from "./data/regions"
-import { getFileVersion, loadSaveInfo } from "./data/saves/load"
+import { loadSaveInfo } from "./data/saves/load"
 import { fixSave, growify, makeHistorical, updateLots } from "./data/saves/update"
 import { loadSettings, toSettingsData } from "./data/settings"
 import type {
@@ -281,12 +289,12 @@ export class Application {
     context.debug(`Backing up ${relativePath}...`)
 
     const pluginsPath = this.getPluginsPath()
-    const originFullPath = path.join(pluginsPath, relativePath)
-    const targetFullPath = path.join(this.getPluginsBackupPath(), relativePath)
-    await moveTo(originFullPath, targetFullPath)
+    const originFullPath = path.resolve(pluginsPath, relativePath)
+    const targetFullPath = path.resolve(this.getPluginsBackupPath(), relativePath)
+    await fsMove(originFullPath, targetFullPath, { overwrite: true })
 
     // Clean up empty folders
-    await removeIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
+    await fsRemoveIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
   }
 
   /**
@@ -367,9 +375,8 @@ export class Application {
     const state = await this.load()
 
     const { packages, plugins, profiles, settings } = state
-    const { isSilent, isStartup, packageIds = keys(packages) } = options
 
-    await this.tasks.queue(options.packageIds ? `clean:${packageIds.join(",")}` : "clean", {
+    await this.tasks.queue(options.packageIds ? `clean:${options.packageIds.join(",")}` : "clean", {
       handler: async context => {
         context.debug("Cleaning plugins...")
         context.setStep("Cleaning plugins...")
@@ -378,52 +385,38 @@ export class Application {
 
         const profileInfo = profiles && settings.currentProfile && profiles[settings.currentProfile]
 
-        const removeConflictingPlugins =
-          !isSilent && (!isStartup || settings.startup.removeConflictingPlugins)
-        const removeUnsupportedPlugins =
-          !isSilent && (!isStartup || settings.startup.removeUnsupportedPlugins)
-
         forEach(plugins, file => {
           file.issues = undefined
         })
 
         if (profileInfo) {
-          for (const packageId of packageIds) {
-            context.setProgress(nPackages++, packageIds.length)
-
-            const packageInfo = packages[packageId]
-            if (!packageInfo) {
-              throw Error(`Unknown package '${packageId}'`)
-            }
+          const nTotalPackages = size(packages)
+          await forEachAsync(packages, async (packageInfo, packageId) => {
+            context.setProgress(nPackages++, nTotalPackages)
 
             const packageStatus = packageInfo.status[profileInfo.id]
             if (!packageStatus?.included) {
-              continue
+              return
             }
 
             const variantId = packageStatus.variantId
             const variantInfo = packageInfo.variants[variantId]
             if (!variantInfo?.files) {
               context.warn(`Variant '${packageId}#${variantId}' is not installed`)
-              continue
+              return
             }
 
             const conflictingPaths: string[] = []
-            const filePaths = new Set(variantInfo.files.map(file => path.basename(file.path)))
+            const filePaths = new Set(variantInfo.files.map(file => getFilename(file.path)))
 
             const variantPath = this.getVariantPath(packageId, variantId)
-            const cleanitolPath = path.join(variantPath, DIRNAMES.cleanitol)
+            const cleanitolPath = path.resolve(variantPath, DIRNAMES.cleanitol)
 
-            const cleanitolFiles = await glob("*.txt", {
-              cwd: cleanitolPath,
-              dot: true,
-              matchBase: true,
-              nodir: true,
-            })
+            const cleanitolFiles = await fsQueryFiles(cleanitolPath, "**/*.txt")
 
             // TODO: Handle more complex Cleanitol formats
             for (const cleanitolFile of cleanitolFiles) {
-              const contents = await readFile(path.join(cleanitolPath, cleanitolFile))
+              const contents = await fsRead(path.resolve(cleanitolPath, cleanitolFile))
               for (const line of contents.split("\n")) {
                 const filePath = line.split(";")[0].trim()
 
@@ -444,7 +437,12 @@ export class Application {
               })
             }
 
-            if (removeConflictingPlugins && conflictingPaths.length) {
+            if (
+              conflictingPaths.length &&
+              !options.isSilent &&
+              (!options.isStartup || settings.startup.removeConflictingPlugins) &&
+              (!options.packageIds || options.packageIds.includes(packageId))
+            ) {
               const { confirmed, doNotAskAgain } = await showConfirmation(
                 packageInfo.name,
                 t("RemoveConflictingFilesModal:confirmation"),
@@ -471,7 +469,7 @@ export class Application {
                 }
               }
             }
-          }
+          })
         }
 
         const unsupportedPaths: string[] = []
@@ -489,7 +487,12 @@ export class Application {
         })
 
         // Prompt to remove unsupported files (e.g. leftover docs)
-        if (removeUnsupportedPlugins && unsupportedPaths.length) {
+        if (
+          unsupportedPaths.length &&
+          !options.isSilent &&
+          (!options.isStartup || settings.startup.removeUnsupportedPlugins) &&
+          !options.packageIds
+        ) {
           const { confirmed, doNotAskAgain } = await showConfirmation(
             t("RemoveUnsupportedFilesModal:title"),
             t("RemoveUnsupportedFilesModal:confirmation"),
@@ -538,9 +541,9 @@ export class Application {
       throw Error(`Variant '${packageId}#${variantId}' does not have logs`)
     }
 
-    const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
+    const logsPath = path.resolve(this.getPluginsPath(), variantInfo.logs)
 
-    await removeIfPresent(logsPath)
+    await fsRemove(logsPath)
   }
 
   /**
@@ -661,7 +664,7 @@ export class Application {
 
         context.debug(`Backing up '${regionId}/${cityId}'...`)
 
-        await copyTo(cityFullPath, backupFullPath)
+        await fsCopy(cityFullPath, backupFullPath)
 
         city.backups.push({
           description,
@@ -752,10 +755,8 @@ export class Application {
           await this.installVariant(packageId, fromVariantId)
         }
 
-        const fromFiles = await glob("**", {
-          cwd: this.getVariantPath(packageId, fromVariantId),
-          ignore: [`${DIRNAMES.patches}/**`],
-          nodir: true,
+        const fromFiles = await fsQueryFiles(this.getVariantPath(packageId, fromVariantId), "**", {
+          exclude: `${DIRNAMES.patches}/**`,
         })
 
         try {
@@ -779,7 +780,7 @@ export class Application {
 
             const toPath = this.getVariantFilePath(packageId, variantId, fromPath)
 
-            await copyTo(realPath, toPath)
+            await fsCopy(realPath, toPath)
           }
 
           // Copy configs from the source variant
@@ -799,7 +800,7 @@ export class Application {
           await this.writePackageConfig(context, packageInfo, categories)
         } catch (error) {
           // If something goes wrong while installing, fully delete the new variant
-          await removeIfPresent(this.getVariantPath(packageId, variantId))
+          await fsRemove(this.getVariantPath(packageId, variantId))
           delete packageInfo.variants[variantId]
           throw error
         }
@@ -853,7 +854,7 @@ export class Application {
 
         if (settings.db.path && !variantInfo.local) {
           const ownerId = getOwnerId(packageId)
-          const dbPackagesPath = path.join(settings.db.path, DIRNAMES.dbPackages)
+          const dbPackagesPath = path.resolve(settings.db.path, DIRNAMES.dbPackages)
 
           const config = await loadConfig<{ [packageId: PackageID]: PackageData }>(
             dbPackagesPath,
@@ -880,7 +881,7 @@ export class Application {
     await this.tasks.queue(`download:${key}`, {
       cache: true,
       handler: async context => {
-        const downloaded = await exists(downloadPath)
+        const downloaded = await fsExists(downloadPath)
 
         context.setStep(`Downloading ${key}...`)
 
@@ -943,9 +944,9 @@ export class Application {
   ): Promise<DBPFFile> {
     context.info(`Patching ${path.basename(originalFullPath)}...`)
 
-    await createIfMissing(path.dirname(patchedFullPath))
-    return openFile(originalFullPath, FileOpenMode.READ, originalFile => {
-      return openFile(patchedFullPath, FileOpenMode.WRITE, patchedFile => {
+    await fsCreate(path.dirname(patchedFullPath))
+    return fsOpen(originalFullPath, FileOpenMode.READ, originalFile => {
+      return fsOpen(patchedFullPath, FileOpenMode.WRITE, patchedFile => {
         return patchVariantFileEntries(originalFile, patchedFile, patches, { exemplarProperties })
       })
     })
@@ -955,21 +956,21 @@ export class Application {
    * Returns the absolute path to the 'Backups' directory.
    */
   public getBackupsPath(): string {
-    return path.join(this.gamePath, DIRNAMES.backups)
+    return path.resolve(this.gamePath, DIRNAMES.backups)
   }
 
   /**
    * Returns the absolute path to a city's backup file.
    */
   public getCityBackupPath(regionId: RegionID, cityId: CityID, file: string): string {
-    return path.join(this.getBackupsPath(), regionId, cityId, file)
+    return path.resolve(this.getBackupsPath(), regionId, cityId, file)
   }
 
   /**
    * Returns the absolute path to a city's save file.
    */
   public getCityPath(regionId: RegionID, cityId: CityID): string {
-    return path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
+    return path.resolve(this.getRegionsPath(), regionId, getCityFileName(cityId))
   }
 
   /**
@@ -978,7 +979,7 @@ export class Application {
    * - When using a local repository, returns the path to the repository itself.
    */
   public getDatabasePath(settings: Settings): string {
-    return settings.db.path ?? path.join(this.getRootPath(), DIRNAMES.db)
+    return settings.db.path ?? path.resolve(this.getRootPath(), DIRNAMES.db)
   }
 
   /**
@@ -992,14 +993,14 @@ export class Application {
    * Returns the absolute path to the given asset's download cache.
    */
   public getDownloadPath(assetInfo: AssetInfo): string {
-    return path.join(this.getDownloadsPath(), this.getDownloadKey(assetInfo))
+    return path.resolve(this.getDownloadsPath(), this.getDownloadKey(assetInfo))
   }
 
   /**
    * Returns the absolute path to the 'Downloads' directory.
    */
   public getDownloadsPath(): string {
-    return path.join(this.getRootPath(), DIRNAMES.downloads)
+    return path.resolve(this.getRootPath(), DIRNAMES.downloads)
   }
 
   /**
@@ -1017,14 +1018,14 @@ export class Application {
    * Returns the absolute path to the main log file.
    */
   public getLogsFile(): string {
-    return path.join(this.getLogsPath(), FILENAMES.logs)
+    return path.resolve(this.getLogsPath(), FILENAMES.logs)
   }
 
   /**
    * Returns the absolute path to the 'Logs' directory, containing manager logs.
    */
   public getLogsPath(): string {
-    return path.join(this.getRootPath(), DIRNAMES.logs)
+    return path.resolve(this.getRootPath(), DIRNAMES.logs)
   }
 
   /**
@@ -1041,14 +1042,14 @@ export class Application {
       throw Error(`Variant '${packageId}#${variantId}' does not have logs`)
     }
 
-    const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
+    const logsPath = path.resolve(this.getPluginsPath(), variantInfo.logs)
 
     try {
-      const { size } = await fs.stat(logsPath)
-      const text = await fs.readFile(logsPath, "utf8")
+      const size = await getFileSize(logsPath)
+      const text = await fsRead(logsPath)
       return { size, text }
     } catch (error) {
-      if (error instanceof Error && error.message.match(/no such file or directory/i)) {
+      if (isErrorCode(error, "ENOENT")) {
         return null
       }
 
@@ -1060,14 +1061,14 @@ export class Application {
    * Returns the absolute package to an installed package, by ID.
    */
   public getPackagePath(packageId: PackageID): string {
-    return path.join(this.getPackagesPath(), packageId)
+    return path.resolve(this.getPackagesPath(), packageId)
   }
 
   /**
    * Returns the absolute path to the 'Packages' directory, containing installed packages.
    */
   public getPackagesPath(): string {
-    return path.join(this.getRootPath(), DIRNAMES.packages)
+    return path.resolve(this.getRootPath(), DIRNAMES.packages)
   }
 
   /**
@@ -1085,7 +1086,7 @@ export class Application {
       throw Error(`Variant '${packageId}#${variantId}' does not have documentation`)
     }
 
-    const docPath = path.join(this.getVariantPath(packageId, variantId), DIRNAMES.docs, filePath)
+    const docPath = path.resolve(this.getVariantPath(packageId, variantId), DIRNAMES.docs, filePath)
     const docExt = getExtension(docPath)
 
     switch (docExt) {
@@ -1134,7 +1135,7 @@ export class Application {
     }
 
     const patchedFullPath = this.getVariantFilePath(packageId, variantId, fileInfo.path, patches)
-    const isGenerated = await exists(patchedFullPath)
+    const isGenerated = await fsExists(patchedFullPath)
 
     if (!isGenerated) {
       await this.generatePatchedFile(
@@ -1153,35 +1154,35 @@ export class Application {
    * Returns the absolute path to the 'Plugins' directory.
    */
   public getPluginsPath(): string {
-    return path.join(this.gamePath, DIRNAMES.plugins)
+    return path.resolve(this.gamePath, DIRNAMES.plugins)
   }
 
   /**
    * Returns the absolute path to the 'Plugins (Backup)' directory.
    */
   public getPluginsBackupPath(): string {
-    return path.join(this.gamePath, DIRNAMES.pluginsBackup)
+    return path.resolve(this.gamePath, DIRNAMES.pluginsBackup)
   }
 
   /**
    * Returns the absolute path to the 'Profiles' directory, containing profile configs.
    */
   public getProfilesPath(): string {
-    return path.join(this.getRootPath(), DIRNAMES.profiles)
+    return path.resolve(this.getRootPath(), DIRNAMES.profiles)
   }
 
   /**
    * Returns the absolute path to the 'Regions' directory.
    */
   public getRegionsPath(): string {
-    return path.join(this.gamePath, DIRNAMES.regions)
+    return path.resolve(this.gamePath, DIRNAMES.regions)
   }
 
   /**
    * Returns the absolute path to the 'Manager' directory.
    */
   public getRootPath(): string {
-    return path.join(this.gamePath, DIRNAMES.root)
+    return path.resolve(this.gamePath, DIRNAMES.root)
   }
 
   /**
@@ -1236,20 +1237,18 @@ export class Application {
    */
   public getTempPath(fullPath?: string): string {
     if (fullPath) {
-      if (isChild(fullPath, this.getRootPath())) {
-        const relativePath = path.relative(this.getRootPath(), fullPath)
-        return path.join(this.getTempPath(), relativePath)
+      if (isChildPath(fullPath, this.getRootPath())) {
+        return path.resolve(this.getTempPath(), path.relative(this.getRootPath(), fullPath))
       }
 
-      if (isChild(fullPath, this.gamePath)) {
-        const relativePath = path.relative(this.gamePath, fullPath)
-        return path.join(this.getTempPath(), relativePath)
+      if (isChildPath(fullPath, this.gamePath)) {
+        return path.resolve(this.getTempPath(), path.relative(this.gamePath, fullPath))
       }
 
       throw Error(`Cannot generate temporary path for ${fullPath}`)
     }
 
-    return path.join(this.getRootPath(), DIRNAMES.temp)
+    return path.resolve(this.getRootPath(), DIRNAMES.temp)
   }
 
   /**
@@ -1270,7 +1269,7 @@ export class Application {
       }
 
       const downloadPath = this.getDownloadPath(assetInfo)
-      const downloaded = await exists(downloadPath)
+      const downloaded = await fsExists(downloadPath)
 
       if (!downloaded) {
         await this.downloadAsset(assetInfo, true)
@@ -1281,10 +1280,10 @@ export class Application {
           throw Error("Missing installation path")
         }
 
-        return path.join(settings.install.path, toolInfo.exe)
+        return path.resolve(settings.install.path, toolInfo.exe)
       }
 
-      return path.join(downloadPath, toolInfo.exe)
+      return path.resolve(downloadPath, toolInfo.exe)
     }
 
     return toolInfo.exe
@@ -1294,7 +1293,7 @@ export class Application {
    * Returns the absolute path to a variant's files.
    */
   public getVariantPath(packageId: PackageID, variantId: VariantID): string {
-    return path.join(this.getPackagePath(packageId), variantId)
+    return path.resolve(this.getPackagePath(packageId), variantId)
   }
 
   public getVariantFilePath(
@@ -1307,14 +1306,14 @@ export class Application {
       const hash = toHex(hashCode(JSON.stringify(patches)), 8)
       const extension = path.extname(filePath)
 
-      return path.join(
+      return path.resolve(
         this.getVariantPath(packageId, variantId),
         DIRNAMES.patches,
         `${filePath.slice(0, -extension.length)}.${hash}${extension}`,
       )
     }
 
-    return path.join(this.getVariantPath(packageId, variantId), filePath)
+    return path.resolve(this.getVariantPath(packageId, variantId), filePath)
   }
 
   // biome-ignore lint/suspicious/noExplicitAny: function params generic
@@ -1330,7 +1329,8 @@ export class Application {
     const { maxis, plugins } = state
 
     return this.tasks.queue("plugins:index", {
-      handler: async () => {
+      handler: async context => {
+        context.debug("Indexing plugins...")
         const index = calculateIndex({ ...maxis, ...plugins })
         state.index = index
         this.sendStateUpdate({ index, plugins })
@@ -1461,27 +1461,19 @@ export class Application {
 
         const pluginsPath = this.getPluginsPath()
 
-        await createIfMissing(pluginsPath)
+        await fsCreate(pluginsPath)
 
         const links = new Map<string, string>()
 
-        const files = await glob("**", {
-          cwd: pluginsPath,
-          dot: true,
-          nodir: true,
-          withFileTypes: true,
+        const symlinkPaths = await fsQueryFiles(pluginsPath, "**", {
+          symlinks: true,
         })
 
         let nFiles = 0
-        for (const file of files) {
-          context.setProgress(nFiles++, files.length)
-
-          const relativePath = file.relative()
-
-          if (file.isSymbolicLink()) {
-            const targetPath = await fs.readlink(file.fullpath())
-            links.set(relativePath, targetPath)
-          }
+        for (const symlinkPath of symlinkPaths) {
+          context.setProgress(nFiles++, symlinkPaths.length)
+          const targetPath = await fs.readlink(path.resolve(pluginsPath, symlinkPath))
+          links.set(symlinkPath, targetPath)
         }
 
         context.debug(`Done (found ${links.size} links)`)
@@ -1558,27 +1550,24 @@ export class Application {
 
           try {
             if (toolInfo.install) {
-              const basePath = path.join(downloadPath, toolInfo.install)
-              const relativePaths = await glob("**/*", {
-                cwd: basePath,
-                dot: true,
-                ignore: ["**/4gb_patch.exe"],
-                nodir: true,
+              const basePath = path.resolve(downloadPath, toolInfo.install)
+              const relativePaths = await fsQueryFiles(basePath, "**", {
+                exclude: "**/4gb_patch.exe",
               })
 
               for (const relativePath of relativePaths) {
-                const fullPath = path.join(basePath, relativePath)
-                const targetPath = path.join(settings.install.path, relativePath)
-                await moveTo(fullPath, targetPath)
+                const fullPath = path.resolve(basePath, relativePath)
+                const targetPath = path.resolve(settings.install.path, relativePath)
+                await fsMove(fullPath, targetPath, { overwrite: true })
               }
             }
 
             // Hardcoded installation process
             if (toolId === "sc4pim") {
-              const binPath = path.dirname(path.join(downloadPath, toolInfo.exe))
+              const binPath = path.dirname(path.resolve(downloadPath, toolInfo.exe))
 
-              const basePath = path.join(downloadPath, "Setup SC4 PIM-X (X-tool, X-PIM)")
-              const exePath = path.join(basePath, "01. Install SetupSC4PIM/SetupSC4PIMRC8c.exe")
+              const basePath = path.resolve(downloadPath, "Setup SC4 PIM-X (X-tool, X-PIM)")
+              const exePath = path.resolve(basePath, "01. Install SetupSC4PIM/SetupSC4PIMRC8c.exe")
 
               // Extract from installer to bin
               await extractClickTeam(exePath, binPath, {
@@ -1587,50 +1576,40 @@ export class Application {
               })
 
               // Move DLLs and config overrides to bin
-              const filesToMoveToBin = await glob(
-                [
-                  "02. Copy into the SC4PIM install folder/*",
-                  "04. These go into the Win System 32 and or SysWOW64 folder/*.dll",
-                ],
-                {
-                  cwd: basePath,
-                  nodir: true,
-                },
-              )
+              const filesToMoveToBin = await fsQueryFiles(basePath, [
+                "02. Copy into the SC4PIM install folder/*",
+                "04. These go into the Win System 32 and or SysWOW64 folder/*.dll",
+              ])
 
               for (const relativePath of filesToMoveToBin) {
-                await moveTo(
-                  path.join(basePath, relativePath),
-                  path.join(binPath, path.basename(relativePath)),
+                await fsMove(
+                  path.resolve(basePath, relativePath),
+                  path.resolve(binPath, path.basename(relativePath)),
+                  { overwrite: true },
                 )
               }
 
               // Move documentation to roots
-              const filesToMoveToRoot = await glob(
-                [
-                  "05. Set-up SC4PIM-X to the right compatibility mode/*",
-                  "06. SC4 PIM User Guide/*",
-                ],
-                {
-                  cwd: basePath,
-                  nodir: true,
-                },
-              )
+              const filesToMoveToRoot = await fsQueryFiles(basePath, [
+                "05. Set-up SC4PIM-X to the right compatibility mode/*",
+                "06. SC4 PIM User Guide/*",
+              ])
 
               for (const relativePath of filesToMoveToRoot) {
-                await moveTo(
-                  path.join(basePath, relativePath),
-                  path.join(downloadPath, path.basename(relativePath)),
+                await fsMove(
+                  path.resolve(basePath, relativePath),
+                  path.resolve(downloadPath, path.basename(relativePath)),
+                  { overwrite: true },
                 )
               }
 
               // Remove setup file
-              await removeIfPresent(basePath)
+              await fsRemove(basePath)
             }
           } catch (error) {
             // If installation process fails, delete the download so it will not be treated as installed later
             // TODO: Install to some Tools folder rather than directly within Downloads, so this will no longer be an issue
-            await removeIfPresent(downloadPath)
+            await fsRemove(downloadPath)
             throw error
           }
 
@@ -1700,8 +1679,8 @@ export class Application {
           )
 
           // Remove any previous installation files
-          await removeIfPresent(variantPath)
-          await createIfMissing(variantPath)
+          await fsRemove(variantPath)
+          await fsCreate(variantPath)
 
           try {
             const docs: string[] = []
@@ -1709,12 +1688,7 @@ export class Application {
             const files: FileInfo[] = []
 
             for (const { asset, downloadPath } of downloadedAssets) {
-              const allPaths = await glob("**/*", {
-                cwd: downloadPath,
-                dot: true,
-                nodir: true,
-                posix: true,
-              })
+              const allPaths = await fsQueryFiles(downloadPath)
 
               const { matchedPaths: cleanitolFiles } = matchFiles(
                 allPaths.filter(path => CLEANITOL_EXTENSIONS.includes(getExtension(path))),
@@ -1729,13 +1703,14 @@ export class Application {
 
               await forEachAsync(cleanitolFiles, async (file, oldPath) => {
                 if (file) {
-                  const newPath = path.join(DIRNAMES.cleanitol, file.path)
+                  const newPath = joinPosix(DIRNAMES.cleanitol, file.path)
                   if (includedPaths.has(newPath)) {
                     context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
-                    const targetFullPath = path.join(variantPath, newPath)
-                    await createIfMissing(path.dirname(targetFullPath))
-                    await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
+                    await fsSymlink(
+                      path.resolve(downloadPath, oldPath),
+                      path.resolve(variantPath, newPath),
+                    )
                     includedPaths.add(newPath)
                   }
                 }
@@ -1754,13 +1729,14 @@ export class Application {
 
               await forEachAsync(docFiles, async (file, oldPath) => {
                 if (file) {
-                  const newPath = path.join(DIRNAMES.docs, file.path)
+                  const newPath = joinPosix(DIRNAMES.docs, file.path)
                   if (includedPaths.has(newPath)) {
                     context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
-                    const targetFullPath = path.join(variantPath, newPath)
-                    await createIfMissing(path.dirname(targetFullPath))
-                    await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
+                    await fsSymlink(
+                      path.resolve(downloadPath, oldPath),
+                      path.resolve(variantPath, newPath),
+                    )
                     includedPaths.add(newPath)
                     docs.push(newPath)
                   }
@@ -1770,7 +1746,7 @@ export class Application {
               const { matchedPaths: sc4Files } = matchFiles(
                 allPaths.filter(path => SC4_EXTENSIONS.includes(getExtension(path))),
                 {
-                  exclude: asset.exclude,
+                  exclude: union(["**/desktop.ini"], asset.exclude ?? []),
                   ignoreEmpty: !asset.include,
                   include: asset.include ?? [{ path: "" }],
                   options: variantInfo.options,
@@ -1783,9 +1759,10 @@ export class Application {
                   if (includedPaths.has(newPath)) {
                     context.error(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
-                    const targetFullPath = path.join(variantPath, newPath)
-                    await createIfMissing(path.dirname(targetFullPath))
-                    await fs.symlink(path.join(downloadPath, oldPath), targetFullPath)
+                    await fsSymlink(
+                      path.resolve(downloadPath, oldPath),
+                      path.resolve(variantPath, newPath),
+                    )
                     includedPaths.add(newPath)
                     files.push(file)
                   }
@@ -1849,7 +1826,7 @@ export class Application {
             await this.writePackageConfig(context, packageInfo, categories)
           } catch (error) {
             // If something goes wrong while installing, fully delete the new variant
-            await removeIfPresent(this.getVariantPath(packageId, variantId))
+            await fsRemove(this.getVariantPath(packageId, variantId))
             variantInfo.files = undefined
             variantInfo.installed = undefined
             throw error
@@ -1917,10 +1894,9 @@ export class Application {
           }
 
           const makeLink = async (fromFullPath: string, toRelativePath: string) => {
-            const toFullPath = path.join(pluginsPath, toRelativePath)
-            await removeIfPresent(toFullPath)
-            await createIfMissing(path.dirname(toFullPath))
-            await fs.symlink(fromFullPath, toFullPath)
+            await fsSymlink(fromFullPath, path.resolve(pluginsPath, toRelativePath), {
+              overwrite: true,
+            })
             links.set(toRelativePath, fromFullPath)
           }
 
@@ -1955,8 +1931,8 @@ export class Application {
 
             // DLL and INI files must be in Plugins root
             const targetRelativePath = file.path.match(/\.(dll|ini)$/i)
-              ? path.basename(file.path)
-              : path.join(getPluginsFolderName(priority), packageId, file.path)
+              ? getFilename(file.path)
+              : joinPosix(getPluginsFolderName(priority), packageId, file.path)
 
             oldLinks.delete(targetRelativePath)
 
@@ -2010,8 +1986,8 @@ export class Application {
               }
 
               if (ini) {
-                const targetPath = path.join(pluginsPath, filename)
-                await writeFile(targetPath, ini)
+                const targetPath = path.resolve(pluginsPath, filename)
+                await fsWrite(targetPath, ini)
               }
             }
           }
@@ -2020,9 +1996,9 @@ export class Application {
         // Remove obsolete links
         if (!options.packageId) {
           for (const relativePath of oldLinks) {
-            const fullPath = path.join(pluginsPath, relativePath)
-            await removeIfPresent(fullPath)
-            await removeIfEmptyRecursive(path.dirname(fullPath), pluginsPath)
+            const fullPath = path.resolve(pluginsPath, relativePath)
+            await fsRemove(fullPath)
+            await fsRemoveIfEmptyRecursive(path.dirname(fullPath), pluginsPath)
             links.delete(relativePath)
             nRemoved++
           }
@@ -2198,9 +2174,9 @@ export class Application {
 
     return this.tasks.queue(`plugins:load:${pluginPath}`, {
       handler: async () => {
-        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
 
-        return openFile(fullPath, FileOpenMode.READ, async patchedFile => {
+        return fsOpen(fullPath, FileOpenMode.READ, async patchedFile => {
           return loadDBPF(patchedFile, { exemplarProperties })
         })
       },
@@ -2213,9 +2189,9 @@ export class Application {
 
     return this.tasks.queue(`plugins:load:${pluginPath}#${entryId}`, {
       handler: async () => {
-        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
 
-        return openFile(fullPath, FileOpenMode.READ, async patchedFile => {
+        return fsOpen(fullPath, FileOpenMode.READ, async patchedFile => {
           const contents = await loadDBPF(patchedFile, { exemplarProperties })
           const entry = contents.entries[entryId]
 
@@ -2244,7 +2220,7 @@ export class Application {
             ? this.getCityBackupPath(regionId, cityId, backupFile)
             : this.getCityPath(regionId, cityId)
 
-          return openFile(fullPath, FileOpenMode.READ, async file => {
+          return fsOpen(fullPath, FileOpenMode.READ, async file => {
             const { entries } = await loadDBPF(file, {
               exemplarProperties: {},
               loadExemplars: false,
@@ -2295,7 +2271,7 @@ export class Application {
           exemplarProperties,
         )
 
-        return openFile(patchedFullPath, FileOpenMode.READ, patchedFile => {
+        return fsOpen(patchedFullPath, FileOpenMode.READ, patchedFile => {
           return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
         })
       },
@@ -2334,7 +2310,7 @@ export class Application {
         )
 
         // Load current data
-        const entry = await openFile(patchedFullPath, FileOpenMode.READ, async patchedFile => {
+        const entry = await fsOpen(patchedFullPath, FileOpenMode.READ, async patchedFile => {
           const contents = await loadDBPF(patchedFile, { exemplarProperties })
           const entry = contents.entries[entryId]
 
@@ -2348,18 +2324,14 @@ export class Application {
 
         // Load original data as needed
         if (originalFullPath !== patchedFullPath) {
-          entry.original = await openFile(
-            originalFullPath,
-            FileOpenMode.READ,
-            async originalFile => {
-              const originalContents = await loadDBPF(originalFile, { exemplarProperties })
-              const originalEntry = originalContents.entries[entryId]
+          entry.original = await fsOpen(originalFullPath, FileOpenMode.READ, async originalFile => {
+            const originalContents = await loadDBPF(originalFile, { exemplarProperties })
+            const originalEntry = originalContents.entries[entryId]
 
-              if (originalEntry) {
-                return loadDBPFEntry(originalFile, originalEntry, { exemplarProperties })
-              }
-            },
-          )
+            if (originalEntry) {
+              return loadDBPFEntry(originalFile, originalEntry, { exemplarProperties })
+            }
+          })
         }
 
         return entry
@@ -2402,7 +2374,7 @@ export class Application {
       throw Error("Game installation path is not set")
     }
 
-    await this.openInExplorer(path.dirname(path.join(settings.install.path, FILENAMES.sc4exe)))
+    await this.openInExplorer(path.dirname(path.resolve(settings.install.path, FILENAMES.sc4exe)))
   }
 
   /**
@@ -2437,7 +2409,7 @@ export class Application {
     }
 
     const configName = FILENAMES.packageConfig + packageInfo.format
-    await this.openInExplorer(path.join(this.getPackagePath(packageId), configName))
+    await this.openInExplorer(path.resolve(this.getPackagePath(packageId), configName))
   }
 
   /**
@@ -2474,10 +2446,11 @@ export class Application {
    * Opens the Plugins folder or one of its subfolder in the file explorer.
    */
   public async openPluginFolder(pluginPath?: string): Promise<void> {
-    const fullPath = pluginPath
-      ? path.join(this.getPluginsPath(), pluginPath)
-      : this.getPluginsPath()
-    await this.openInExplorer(fullPath)
+    if (pluginPath) {
+      await this.openInExplorer(path.resolve(this.getPluginsPath(), pluginPath))
+    } else {
+      await this.openInExplorer(this.getPluginsPath())
+    }
   }
 
   /**
@@ -2492,14 +2465,14 @@ export class Application {
     }
 
     const configName = profileId + profileInfo.format
-    await this.openInExplorer(path.join(this.getProfilesPath(), configName))
+    await this.openInExplorer(path.resolve(this.getProfilesPath(), configName))
   }
 
   /**
    * Opens a region's savegame folder in the file explorer.
    */
   public async openRegionFolder(regionId: RegionID): Promise<void> {
-    await this.openInExplorer(path.join(this.getRegionsPath(), regionId))
+    await this.openInExplorer(path.resolve(this.getRegionsPath(), regionId))
   }
 
   /**
@@ -2518,14 +2491,14 @@ export class Application {
         throw Error("Missing installation folder")
       }
 
-      await this.openInExplorer(path.join(settings.install.path, filePath))
+      await this.openInExplorer(path.resolve(settings.install.path, filePath))
     } else {
       const assetInfo = assets[toolInfo.asset]
       if (!assetInfo?.downloaded[assetInfo.version]) {
         throw Error(`Asset '${toolInfo.asset}' is not installed`)
       }
 
-      await this.openInExplorer(path.join(this.getDownloadPath(assetInfo), filePath))
+      await this.openInExplorer(path.resolve(this.getDownloadPath(assetInfo), filePath))
     }
   }
 
@@ -2554,7 +2527,7 @@ export class Application {
 
     return this.tasks.queue(`plugins:patch:${pluginPath}`, {
       handler: async context => {
-        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
 
         const tempFullPath = this.getTempPath(fullPath)
 
@@ -2568,7 +2541,7 @@ export class Application {
         )
 
         // Replace original file with the patched version
-        await moveTo(tempFullPath, fullPath)
+        await fsMove(tempFullPath, fullPath, { overwrite: true })
 
         // Unset original field (so renderer will not show a diff)
         forEach(file.entries, entry => {
@@ -2626,7 +2599,7 @@ export class Application {
           )
 
           // Replace original file with the patched version
-          await moveTo(tempFullPath, originalFullPath)
+          await fsMove(tempFullPath, originalFullPath, { overwrite: true })
 
           // Unset original field (so renderer will not show a diff)
           forEach(file.entries, entry => {
@@ -2671,7 +2644,7 @@ export class Application {
           )
         } else {
           // Reload original contents
-          file = await openFile(originalFullPath, FileOpenMode.READ, patchedFile => {
+          file = await fsOpen(originalFullPath, FileOpenMode.READ, patchedFile => {
             return loadDBPF(patchedFile, { exemplarProperties, loadExemplars: true })
           })
         }
@@ -2744,7 +2717,7 @@ export class Application {
   }
 
   protected async quit(): Promise<void> {
-    await removeIfPresent(this.getTempPath())
+    await fsRemove(this.getTempPath())
   }
 
   /**
@@ -2794,7 +2767,7 @@ export class Application {
         }
 
         const basePath = this.getVariantPath(packageId, variantInfo.id)
-        const patchesPath = path.join(basePath, DIRNAMES.patches)
+        const patchesPath = path.resolve(basePath, DIRNAMES.patches)
 
         // Generate up-to-date patches
         const usefulPatchedFiles = new Set<string>()
@@ -2814,19 +2787,16 @@ export class Application {
 
         if (usefulPatchedFiles.size === 0) {
           // If there are no patches, delete that whole folder
-          await removeIfPresent(patchesPath)
+          await fsRemove(patchesPath)
         } else {
-          const patchesPaths = await glob("**", {
-            cwd: patchesPath,
-            nodir: true,
-          })
+          const patchesPaths = await fsQueryFiles(patchesPath)
 
           // Otherwise, remove only unused files
           for (const relativePath of patchesPaths) {
-            const fullPath = path.join(patchesPath, relativePath)
+            const fullPath = path.resolve(patchesPath, relativePath)
             if (!usefulPatchedFiles.has(fullPath)) {
-              await removeIfPresent(fullPath)
-              await removeIfEmptyRecursive(path.dirname(fullPath), basePath)
+              await fsRemove(fullPath)
+              await fsRemoveIfEmptyRecursive(path.dirname(fullPath), basePath)
             }
           }
         }
@@ -2892,8 +2862,8 @@ export class Application {
 
         context.debug(`Deleting backup '${regionId}/${cityId}/${backup.file}'...`)
 
-        await removeIfPresent(fullPath)
-        await removeIfEmptyRecursive(path.dirname(fullPath), this.getBackupsPath())
+        await fsRemove(fullPath)
+        await fsRemoveIfEmptyRecursive(path.dirname(fullPath), this.getBackupsPath())
 
         city.backups = city.backups.filter(backup => backup.file !== file)
 
@@ -2911,21 +2881,16 @@ export class Application {
 
     await this.tasks.queue(`plugins:patch:${pluginPath}`, {
       handler: async context => {
-        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
         if (await isDirectory(fullPath)) {
-          const files = await glob("**/*", {
-            cwd: fullPath,
-            dot: true,
-            nodir: true,
-            withFileTypes: true,
+          const subfilePaths = await fsQueryFiles(fullPath, "**", {
+            symlinks: false,
           })
 
-          for (const file of files) {
-            if (!file.isSymbolicLink()) {
-              const filePath = path.posix.join(pluginPath, file.relativePosix())
-              await this.backUpFile(context, filePath)
-              delete plugins[filePath]
-            }
+          for (const subfilePath of subfilePaths) {
+            const filePath = joinPosix(pluginPath, subfilePath)
+            await this.backUpFile(context, filePath)
+            delete plugins[filePath]
           }
         } else {
           await this.backUpFile(context, pluginPath)
@@ -3016,7 +2981,7 @@ export class Application {
           }
 
           const downloadPath = this.getDownloadPath(assetInfo)
-          await removeIfPresent(downloadPath)
+          await fsRemove(downloadPath)
 
           toolInfo.installed = undefined
         } finally {
@@ -3084,9 +3049,9 @@ export class Application {
 
           // Upon removing the only installed variant, remove the whole package directory
           if (isOnlyInstalledVariant) {
-            await removeIfPresent(this.getPackagePath(packageId))
+            await fsRemove(this.getPackagePath(packageId))
           } else {
-            await removeIfPresent(this.getVariantPath(packageId, variantId))
+            await fsRemove(this.getVariantPath(packageId, variantId))
             await this.writePackageConfig(context, packageInfo, categories)
           }
 
@@ -3162,7 +3127,7 @@ export class Application {
 
         context.debug(`Restoring backup '${region}/${cityId}/${file}'...`)
 
-        await copyTo(backupPath, this.getCityPath(regionId, cityId))
+        await fsCopy(backupPath, this.getCityPath(regionId, cityId), { overwrite: true })
 
         city.save = undefined // may now be outdated, clear to lazy-reload later
         city.version = backup.version
@@ -3330,7 +3295,7 @@ export class Application {
     await this.tasks.queue("db:update", {
       cache: true,
       handler: async context => {
-        await createIfMissing(dbPath)
+        await fsCreate(dbPath)
 
         const branch = env.DATA_BRANCH || "main"
         context.info(`Updating database from ${dbUrl}/${branch}...`)
@@ -3894,7 +3859,7 @@ export class Application {
                         const backupFile = getBackupFileName(backupTime, backupName)
                         const backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
 
-                        await copyTo(cityFullPath, backupFullPath)
+                        await fsCopy(cityFullPath, backupFullPath)
 
                         backups.push({
                           backup: {
@@ -3957,8 +3922,8 @@ export class Application {
                     } catch (_) {
                       // Rollback - Restore from automatic backups
                       for (const backup of backups) {
-                        if (await exists(backup.backupPath)) {
-                          await moveTo(backup.backupPath, backup.cityPath)
+                        if (await fsExists(backup.backupPath)) {
+                          await fsMove(backup.backupPath, backup.cityPath, { overwrite: true })
                         }
                       }
 
@@ -4081,7 +4046,7 @@ export class Application {
           const backupFile = getBackupFileName(backupTime, description)
           backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
 
-          await copyTo(sourceFullPath, backupFullPath)
+          await fsCopy(sourceFullPath, backupFullPath)
 
           backup = {
             description,
@@ -4122,7 +4087,7 @@ export class Application {
           this.sendStateUpdate({ regions })
         } else if (backupFullPath) {
           // File was not updated - automatic backup no longer needed
-          await removeIfPresent(backupFullPath)
+          await fsRemove(backupFullPath)
         }
 
         return updated

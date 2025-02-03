@@ -8,7 +8,7 @@ import { i18n } from "@common/i18n"
 import type { Profiles } from "@common/profiles"
 import type { Settings, SettingsData } from "@common/settings"
 import { loadConfig } from "@node/configs"
-import { copyTo, isURL } from "@node/files"
+import { fsCopy, isURL } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
@@ -62,8 +62,8 @@ export async function loadSettings(
   // Config file does not exist
   // This must be the first time launching the manager, suggest creating a backup of Plugins folder
   if (!settings.format) {
-    const pluginsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.pluginsBackup)
-    const regionsBackupPath = path.join(path.dirname(pluginsPath), DIRNAMES.regionsBackup)
+    const pluginsBackupPath = path.resolve(path.dirname(pluginsPath), DIRNAMES.pluginsBackup)
+    const regionsBackupPath = path.resolve(path.dirname(pluginsPath), DIRNAMES.regionsBackup)
 
     const { confirmed } = await showConfirmation(
       i18n.t("BackupPluginsModal:title"),
@@ -80,7 +80,7 @@ export async function loadSettings(
     if (confirmed) {
       try {
         context.setStep(`Copying ${DIRNAMES.plugins}...`)
-        await copyTo(pluginsPath, pluginsBackupPath)
+        await fsCopy(pluginsPath, pluginsBackupPath, { merge: true, overwrite: true })
         await showSuccess(
           i18n.t("BackupPluginsModal:title"),
           i18n.t("BackupPluginsModal:pluginsSuccess", {
@@ -102,7 +102,7 @@ export async function loadSettings(
 
       try {
         context.setStep(`Copying ${DIRNAMES.regions}...`)
-        await copyTo(regionsPath, regionsBackupPath)
+        await fsCopy(regionsPath, regionsBackupPath, { merge: true, overwrite: true })
         await showSuccess(
           i18n.t("BackupPluginsModal:title"),
           i18n.t("BackupPluginsModal:regionsSuccess", {

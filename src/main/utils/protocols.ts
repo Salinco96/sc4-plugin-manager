@@ -1,8 +1,9 @@
 import path from "node:path"
 import { pathToFileURL } from "node:url"
+
 import { net, protocol } from "electron/main"
 
-import { isChild } from "../../node/files"
+import { isChildPath } from "@node/files"
 
 export enum Protocol {
   /* Custom protocol to load package docs in sandboxed iframe */
@@ -23,9 +24,9 @@ export function registerDocsProtocol(): void {
 export function handleDocsProtocol(rootPath: string, extensions: string[]): void {
   protocol.handle(Protocol.DOCS, req => {
     const relativePath = decodeURI(new URL(req.url).pathname)
-    const fullPath = path.resolve(path.join(rootPath, relativePath))
+    const fullPath = path.resolve(rootPath, relativePath)
 
-    if (!isChild(fullPath, rootPath)) {
+    if (!isChildPath(fullPath, rootPath)) {
       return new Response(`'${fullPath}' is not a child of '${rootPath}'`, {
         status: 400,
       })

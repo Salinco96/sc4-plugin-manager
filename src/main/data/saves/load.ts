@@ -1,22 +1,15 @@
-import { stat } from "node:fs/promises"
-
 import { toHex } from "@salinco/nice-utils"
 
 import type { BuildingID } from "@common/buildings"
 import type { LotID } from "@common/lots"
 import type { SaveInfo } from "@common/regions"
-import { FileOpenMode, openFile } from "@node/files"
+import { FileOpenMode, fsOpen } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
 import { SaveFile } from "./subfiles/SaveFile"
 
-export async function getFileVersion(fullPath: string): Promise<number> {
-  const stats = await stat(fullPath)
-  return stats.mtimeMs
-}
-
 export async function loadSaveInfo(context: TaskContext, fullPath: string): Promise<SaveInfo> {
-  const info = await openFile(fullPath, FileOpenMode.READ, async file => {
+  const info = await fsOpen(fullPath, FileOpenMode.READ, async file => {
     context.debug(`Loading ${fullPath}...`)
 
     const save = new SaveFile(file)

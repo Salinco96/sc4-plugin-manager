@@ -27,7 +27,7 @@ export default class UpdateDatabaseProcess extends ChildProcess<
 
       let exists = false
 
-      if (fs.existsSync(path.join(dir, ".git"))) {
+      if (fs.existsSync(path.resolve(dir, ".git"))) {
         const oldOrigin = await getConfig({ dir, fs, path: `remote.${remote}.url` })
         const oldBranch = await currentBranch({ dir, fs, test: true })
         if (oldOrigin === origin && oldBranch === branch) {
@@ -36,7 +36,7 @@ export default class UpdateDatabaseProcess extends ChildProcess<
           // If we find anything else than expected origin/branch, nuke the repository
           // NOTE: fs.rmSync(dir, { force: true, recursive: true }) fails with EBUSY
           for (const name of fs.readdirSync(dir)) {
-            fs.rmSync(path.join(dir, name), { force: true, recursive: true })
+            fs.rmSync(path.resolve(dir, name), { force: true, recursive: true })
           }
         }
       }

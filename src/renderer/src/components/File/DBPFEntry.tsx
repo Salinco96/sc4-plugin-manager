@@ -82,7 +82,7 @@ export function DBPFEntry({
           description={isEditable ? t("entry.patch") : t("entry.view")}
           icon={isEditable ? PatchIcon : PreviewIcon}
           onClick={async () => {
-            if (!entry.data) {
+            if (!entry.data || (isPatched && !entry.original)) {
               await loadEntry(entry.id)
             }
 

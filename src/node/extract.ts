@@ -5,13 +5,12 @@ import path from "node:path"
 import { pipeline } from "node:stream"
 import { finished } from "node:stream/promises"
 
-import { glob } from "glob"
 import { Open } from "unzipper"
 
 import type { Logger } from "@common/logs"
-
 import type { ToolID } from "@common/tools"
-import { createIfMissing, getExtension, moveTo, removeIfPresent } from "./files"
+
+import { fsCreate, fsMove, fsQueryFiles, fsRemove, getExtension } from "./files"
 import { cmd, runFile } from "./processes"
 
 export async function extractRecursively(
@@ -25,15 +24,13 @@ export async function extractRecursively(
 ): Promise<void> {
   const { logger = console } = options
 
-  const archivePaths = await glob("**/*.{7z,exe,jar,msi,rar,zip}", {
-    cwd: basePath,
-    ignore: options.isTool ? ["**/*.exe"] : ["**/4gb_patch.exe"],
-    nodir: true,
+  const archivePaths = await fsQueryFiles(basePath, "**/*.{7z,exe,jar,msi,rar,zip}", {
+    exclude: options.isTool ? "**/*.exe" : "**/4gb_patch.exe",
   })
 
   if (archivePaths.length) {
     for (const archivePath of archivePaths) {
-      const archiveFullPath = path.join(basePath, archivePath)
+      const archiveFullPath = path.resolve(basePath, archivePath)
 
       // Skip OpenJDK (from the NAM download), $PLUGINSDIR (from the CAM download), 4GB Patch, etc.
       // TODO: Indicate this in package config somehow?
@@ -41,12 +38,12 @@ export async function extractRecursively(
         logger.debug(`Removing ${archivePath}...`)
       } else {
         logger.debug(`Extracting from ${archivePath}...`)
-        const extractFullPath = path.join(basePath, path.dirname(archivePath))
+        const extractFullPath = path.resolve(basePath, path.dirname(archivePath))
         await extract(archiveFullPath, extractFullPath, options)
       }
 
       // Delete the archive after successful extraction
-      await removeIfPresent(archiveFullPath)
+      await fsRemove(archiveFullPath)
     }
 
     // In case there are nested archives...
@@ -153,8 +150,8 @@ export async function extractArchive(
     const transformedPath = transform ? transform(file.path) : file.path
     if (transformedPath) {
       logger.debug(`Extracting ${file.path}`)
-      const targetPath = path.join(extractPath, transformedPath)
-      await createIfMissing(path.dirname(targetPath))
+      const targetPath = path.resolve(extractPath, transformedPath)
+      await fsCreate(path.dirname(targetPath))
       try {
         await finished(
           pipeline(file.stream(), createWriteStream(targetPath), error => {
@@ -171,7 +168,7 @@ export async function extractArchive(
         }
       } catch (error) {
         logger.error(`Failed to extract ${file.path}`, error)
-        await removeIfPresent(targetPath)
+        await fsRemove(targetPath)
         throw error
       }
     }
@@ -199,14 +196,14 @@ export async function extractClickTeam(
 export async function extractMSI(archivePath: string, extractPath: string): Promise<void> {
   // If installer is "foo/bar/baz.msi", extract to "foo/bar/~baz"
   const tempName = `~${path.basename(archivePath, path.extname(archivePath))}`
-  const tempPath = path.join(path.dirname(archivePath), tempName)
+  const tempPath = path.resolve(path.dirname(archivePath), tempName)
 
   await cmd(`msiexec /a "${archivePath}" TARGETDIR="${tempPath}" /qn`)
 
   // For .msi installers, extract only the contents of "Files" folder
-  for (const entryPath of await readdir(path.join(tempPath, "Files"))) {
-    await moveTo(path.join(tempPath, "Files", entryPath), path.join(extractPath, entryPath))
+  for (const entryPath of await readdir(path.resolve(tempPath, "Files"))) {
+    await fsMove(path.resolve(tempPath, "Files", entryPath), path.resolve(extractPath, entryPath))
   }
 
-  await removeIfPresent(tempPath)
+  await fsRemove(tempPath)
 }

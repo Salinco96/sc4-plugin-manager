@@ -1,4 +1,4 @@
-import { readdir } from "node:fs/promises"
+import fs from "node:fs/promises"
 import path from "node:path"
 
 import { input, select } from "@inquirer/prompts"
@@ -33,11 +33,11 @@ import {
   values,
 } from "@salinco/nice-utils"
 import { config } from "dotenv"
-import { glob } from "glob"
 
 import type { AssetID, Assets } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
+import type { Categories, CategoryID } from "@common/categories"
 import {
   type ExemplarPropertyData,
   type ExemplarPropertyInfo,
@@ -47,6 +47,7 @@ import type { FamilyID } from "@common/families"
 import type { LotID } from "@common/lots"
 import type { FloraID } from "@common/mmps"
 import { type PackageID, getOwnerId } from "@common/packages"
+import { type FileContents, MAXIS_FILES } from "@common/plugins"
 import type { PropID } from "@common/props"
 import { ConfigFormat, type PackageInfo, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
@@ -55,6 +56,8 @@ import type { ModelID, TextureID, VariantAssetInfo, VariantInfo } from "@common/
 import type { VariantID } from "@common/variants"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
 import { type AssetData, loadAssetInfo, writeAssetInfo } from "@node/data/assets"
+import { loadAuthors, writeAuthors } from "@node/data/authors"
+import { loadCollections, writeCollections } from "@node/data/collections"
 import {
   type PackageData,
   loadPackageInfo,
@@ -63,16 +66,11 @@ import {
   writePackageInfo,
   writeVariantContentsInfo,
 } from "@node/data/packages"
+import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
 import { download } from "@node/download"
 import { extractRecursively } from "@node/extract"
 import { get } from "@node/fetch"
-
-import type { Categories, CategoryID } from "@common/categories"
-import { type FileContents, MAXIS_FILES } from "@common/plugins"
-import { loadAuthors, writeAuthors } from "@node/data/authors"
-import { loadCollections, writeCollections } from "@node/data/collections"
-import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
-import { exists, removeIfPresent, toPosix } from "@node/files"
+import { fsExists, fsQueryFiles, fsRemove, toPosix } from "@node/files"
 import { createContext } from "@node/tasks"
 import { analyzeSC4Files } from "../node/dbpf/analyze"
 import { generateVariantInfo, registerVariantAsset } from "./dbpf/packages"
@@ -107,15 +105,15 @@ const GITHUB: IndexerSourceID = ID("github")
 
 const now = new Date()
 
-const dataDir = path.join(__dirname, "data")
-const dataAssetsDir = path.join(dataDir, "assets")
+const dataDir = path.resolve(__dirname, "data")
+const dataAssetsDir = path.resolve(dataDir, "assets")
 const dataDownloadsDir = getEnvRequired("INDEXER_DOWNLOADS_PATH")
 const dataDownloadsTempDir = getEnvRequired("INDEXER_DOWNLOADS_TEMP_PATH")
 const gameDir = getEnvRequired("INDEXER_GAME_PATH")
 
-const dbDir = path.join(__dirname, "../../sc4-plugin-manager-data")
-const dbAssetsDir = path.join(dbDir, "assets")
-const dbPackagesDir = path.join(dbDir, "packages")
+const dbDir = path.resolve(__dirname, "../../sc4-plugin-manager-data")
+const dbAssetsDir = path.resolve(dbDir, "assets")
+const dbPackagesDir = path.resolve(dbDir, "packages")
 
 runIndexer({
   include: {
@@ -248,7 +246,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   }
 
   // Step 1c - Load existing uncategorized entries
-  for (const child of await readdir(dataAssetsDir, { withFileTypes: true })) {
+  for (const child of await fs.readdir(dataAssetsDir, { withFileTypes: true })) {
     if (child.isDirectory()) {
       const sourceId = child.name as IndexerSourceID
       console.debug(`Loading entries from ${sourceId}...`)
@@ -1446,12 +1444,12 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
     }
 
     const downloadKey = `${variantAssetId}@${entry.version}`
-    const downloadPath = path.join(dataDownloadsDir, downloadKey)
-    const downloadTempPath = path.join(dataDownloadsTempDir, downloadKey)
+    const downloadPath = path.resolve(dataDownloadsDir, downloadKey)
+    const downloadTempPath = path.resolve(dataDownloadsTempDir, downloadKey)
 
     const defaultDownloadUrl = source?.getDownloadUrl(assetId, variant)
     let downloadUrl = variantEntry.download ?? defaultDownloadUrl
-    let downloaded = await exists(downloadPath)
+    let downloaded = await fsExists(downloadPath)
 
     if (!downloadUrl) {
       downloadUrl = await promptUrl("Download URL", downloadUrl)
@@ -1460,7 +1458,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
 
     // Download files (or extract variants)
     if (!downloaded || !variantEntry.sha256 || !variantEntry.size) {
-      await removeIfPresent(downloadPath)
+      await fsRemove(downloadPath)
       downloaded = false
 
       while (!downloaded) {
@@ -1545,10 +1543,7 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
           },
         })
 
-        const files = await glob("**", {
-          cwd: downloadPath,
-          nodir: true,
-        })
+        const files = await fsQueryFiles(downloadPath)
 
         variantEntry.files = files.map(toPosix).sort()
       } catch (error) {
@@ -1961,11 +1956,11 @@ async function loadCategories(): Promise<Categories> {
 async function loadAssetsFromDB(): Promise<Assets> {
   const assets: Assets = {}
 
-  const filePaths = await glob("*.yaml", { cwd: dbAssetsDir })
+  const filePaths = await fsQueryFiles(dbAssetsDir, "*.yaml")
   for (const filePath of filePaths.reverse()) {
     const sourceId = path.basename(filePath, path.extname(filePath)) as IndexerSourceID
     console.debug(`Loading assets from ${sourceId}...`)
-    const fullPath = path.join(dbAssetsDir, filePath)
+    const fullPath = path.resolve(dbAssetsDir, filePath)
     const data = await readConfig<{ [assetId in AssetID]?: AssetData }>(fullPath)
     forEach(data, (assetData, assetId) => {
       assets[assetId] = loadAssetInfo(assetId, assetData)
@@ -1978,11 +1973,11 @@ async function loadAssetsFromDB(): Promise<Assets> {
 async function loadPackagesFromDB(categories: Categories): Promise<Packages> {
   const packages: Packages = {}
 
-  const filePaths = await glob("*.yaml", { cwd: dbPackagesDir, nodir: true })
+  const filePaths = await fsQueryFiles(dbPackagesDir, "*.yaml")
   for (const filePath of filePaths.reverse()) {
     const authorId = path.basename(filePath, path.extname(filePath))
     console.debug(`Loading packages from ${authorId}...`)
-    const fullPath = path.join(dbPackagesDir, filePath)
+    const fullPath = path.resolve(dbPackagesDir, filePath)
     const data = await readConfig<{ [packageId in PackageID]?: PackageData }>(fullPath)
     forEach(data, (packageData, packageId) => {
       packages[packageId] = loadPackageInfo(packageId, packageData, categories)

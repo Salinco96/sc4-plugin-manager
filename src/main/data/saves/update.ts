@@ -5,10 +5,10 @@ import { parseHex, toHex } from "@salinco/nice-utils"
 import { TGI, parseTGI } from "@common/dbpf"
 import type { LotID, LotInfo, ZoneDensity } from "@common/lots"
 import type { RCIType } from "@common/lots"
-import { FileOpenMode, createIfMissing, moveTo, openFile, removeIfPresent } from "@node/files"
+import { ZoneType } from "@node/dbpf/types"
+import { FileOpenMode, fsCreate, fsMove, fsOpen, fsRemove } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
-import { ZoneType } from "@node/dbpf/types"
 import { RCITypeToZoneType, ZoneTypeToRCIType } from "./constants"
 import { SaveFile } from "./subfiles/SaveFile"
 import { SimGrid, SimGridDataID } from "./subfiles/SimGrid"
@@ -22,7 +22,7 @@ async function updateSaveFile(
   },
 ): Promise<boolean> {
   try {
-    const updated = await openFile(fullPath, FileOpenMode.READ, async file => {
+    const updated = await fsOpen(fullPath, FileOpenMode.READ, async file => {
       const save = new SaveFile(file)
 
       await options.handler(context, save)
@@ -31,8 +31,8 @@ async function updateSaveFile(
         return false
       }
 
-      await createIfMissing(path.dirname(options.tempPath))
-      await openFile(options.tempPath, FileOpenMode.WRITE, async tempFile => {
+      await fsCreate(path.dirname(options.tempPath))
+      await fsOpen(options.tempPath, FileOpenMode.WRITE, async tempFile => {
         await save.write(tempFile)
       })
 
@@ -40,12 +40,12 @@ async function updateSaveFile(
     })
 
     if (updated) {
-      await moveTo(options.tempPath, fullPath)
+      await fsMove(options.tempPath, fullPath, { overwrite: true })
     }
 
     return updated
   } finally {
-    await removeIfPresent(options.tempPath)
+    await fsRemove(options.tempPath)
   }
 }
 

@@ -9,7 +9,7 @@ export class MainWindow extends BaseWindow {
     super({
       height: 800,
       webPreferences: {
-        preload: path.join(__dirname, "../preload/index.js"),
+        preload: path.resolve(__dirname, "../preload/index.js"),
       },
       width: 1200,
     })
@@ -21,7 +21,7 @@ export class MainWindow extends BaseWindow {
     if (isDev() && process.env.ELECTRON_RENDERER_URL) {
       this.loadURL(process.env.ELECTRON_RENDERER_URL)
     } else {
-      this.loadFile(path.join(__dirname, "../renderer/index.html"))
+      this.loadFile(path.resolve(__dirname, "../renderer/index.html"))
     }
   }
 }

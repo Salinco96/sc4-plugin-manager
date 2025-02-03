@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { DBPFDataType, type DBPFFile, isDBPF } from "@common/dbpf"
 import { type PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
+import type { VariantID } from "@common/variants"
 import { List } from "@components/List"
 import { loadVariantFileEntries } from "@stores/actions"
 import { store } from "@stores/main"
@@ -23,21 +24,21 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
 
   const [files, setFiles] = useState<{ [path in string]?: DBPFFile }>({})
 
-  const preloadFiles = useEffectEvent(async () => {
+  const preloadFiles = useEffectEvent(async (variantId: VariantID) => {
     if (variantInfo.files) {
-      const result: { [path in string]?: DBPFFile } = {}
+      const files: { [path in string]?: DBPFFile } = {}
 
       for (const file of variantInfo.files) {
-        result[file.path] = await loadVariantFileEntries(packageId, variantInfo.id, file.path)
+        files[file.path] = await loadVariantFileEntries(packageId, variantId, file.path)
       }
 
-      setFiles(files => ({ ...files, ...result }))
+      setFiles(files)
     }
   })
 
   useEffect(() => {
-    preloadFiles()
-  }, [preloadFiles])
+    preloadFiles(variantInfo.id)
+  }, [preloadFiles, variantInfo.id])
 
   const enabledFiles = variantInfo.files?.filter(file =>
     checkFile(

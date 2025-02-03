@@ -27,7 +27,7 @@ import { getFloraInfo } from "@node/dbpf/mmps"
 import { getPropInfo } from "@node/dbpf/props"
 import { DeveloperID, type Exemplar, SimulatorID } from "@node/dbpf/types"
 import { get, getFamilyInstanceId, getModelId, getString } from "@node/dbpf/utils"
-import { FileOpenMode, openFile } from "@node/files"
+import { FileOpenMode, fsOpen } from "@node/files"
 
 export async function analyzeSC4Files(
   basePath: string,
@@ -60,7 +60,7 @@ export async function analyzeSC4File(
   console.debug(`Analyzing ${filePath}...`)
 
   if (isDBPF(filePath)) {
-    const file = await openFile(path.join(basePath, filePath), FileOpenMode.READ, file => {
+    const file = await fsOpen(path.resolve(basePath, filePath), FileOpenMode.READ, file => {
       return loadDBPF(file, { exemplarProperties, loadExemplars: true })
     })
 

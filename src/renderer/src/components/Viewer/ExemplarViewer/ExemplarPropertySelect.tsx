@@ -151,13 +151,13 @@ export function ExemplarPropertySelect({
       handleHomeEndKeys
       id={name}
       inputValue={isSearching ? inputValue : (selectedOption?.label ?? "")}
-      onChange={(event, newValue) => {
+      onChange={(_, newValue) => {
         if (!isString(newValue)) {
           onChange(newValue.value)
           setSearching(false)
         }
       }}
-      onInputChange={(event, newValue) => {
+      onInputChange={(_, newValue) => {
         const [newInputValue, parsedValue] = parseInputValue(newValue, type, isHex, inputValue)
         setInputValue(isHex ? formatInputValue(parsedValue as number, type, isHex) : newInputValue)
       }}

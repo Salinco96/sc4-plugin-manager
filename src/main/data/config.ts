@@ -1,10 +1,11 @@
 import path from "node:path"
+
 import { app } from "electron/main"
 
 import { i18n } from "@common/i18n"
 import { ConfigFormat } from "@common/types"
 import { loadConfig, writeConfig } from "@node/configs"
-import { exists } from "@node/files"
+import { fsExists } from "@node/files"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showFolderSelector } from "@utils/dialog"
 import { env } from "@utils/env"
@@ -43,10 +44,10 @@ export async function loadAppConfig(): Promise<AppConfig> {
 }
 
 function getDefaultGamePath(): string {
-  return path.join(app.getPath("documents"), "SimCity 4")
+  return path.resolve(app.getPath("documents"), "SimCity 4")
 }
 
 async function isInvalidGamePath(gamePath: string): Promise<boolean> {
-  const hasPlugins = await exists(path.join(gamePath, DIRNAMES.plugins))
+  const hasPlugins = await fsExists(path.resolve(gamePath, DIRNAMES.plugins))
   return !hasPlugins
 }

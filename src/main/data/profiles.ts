@@ -1,4 +1,3 @@
-import fs from "node:fs/promises"
 import path from "node:path"
 
 import { isEmpty, isEnum, isObject, keys, mapValues, size, values } from "@salinco/nice-utils"
@@ -7,22 +6,22 @@ import type { ProfileData, ProfileID, ProfileInfo, Profiles } from "@common/prof
 import { ConfigFormat } from "@common/types"
 import type { VariantID } from "@common/variants"
 import { readConfig } from "@node/configs"
-import { createIfMissing } from "@node/files"
+import { fsCreate, fsQueryFiles, getExtension, removeExtension } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 
 export async function loadProfiles(context: TaskContext, profilesPath: string): Promise<Profiles> {
   const profiles: Profiles = {}
 
-  await createIfMissing(profilesPath)
+  await fsCreate(profilesPath)
 
-  const entries = await fs.readdir(profilesPath, { withFileTypes: true })
-  for (const entry of entries) {
-    const format = path.extname(entry.name)
-    if (entry.isFile() && isEnum(format, ConfigFormat)) {
-      const profileId = path.basename(entry.name, format) as ProfileID
-      const profilePath = path.join(profilesPath, entry.name)
+  const filenames = await fsQueryFiles(profilesPath, "*")
+  for (const filename of filenames) {
+    const format = getExtension(filename)
+    if (isEnum(format, ConfigFormat)) {
+      const profileId = removeExtension(filename) as ProfileID
+      const profilePath = path.resolve(profilesPath, filename)
       if (profiles[profileId]) {
-        context.warn(`Duplicate profile configuration '${entry.name}'`)
+        context.warn(`Duplicate profile configuration '${filename}'`)
         continue
       }
 
@@ -32,7 +31,7 @@ export async function loadProfiles(context: TaskContext, profilesPath: string): 
         profile.format = format
         profiles[profileId] = profile
       } catch (error) {
-        context.warn(`Invalid profile configuration '${entry.name}'`, error)
+        context.warn(`Invalid profile configuration '${filename}'`, error)
       }
     }
   }

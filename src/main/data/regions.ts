@@ -1,14 +1,11 @@
 import path from "node:path"
 
 import { size } from "@salinco/nice-utils"
-import { glob } from "glob"
 import { parse as parseINI } from "ini"
 
 import type { CityID, RegionID, RegionInfo, Regions } from "@common/regions"
-import { readFile } from "@node/files"
+import { fsQueryFiles, fsRead, getFileVersion } from "@node/files"
 import type { TaskContext } from "@node/tasks"
-
-import { getFileVersion } from "./saves/load"
 
 export async function loadRegions(
   context: TaskContext,
@@ -16,19 +13,15 @@ export async function loadRegions(
   backupsPath: string,
 ): Promise<Regions> {
   try {
-    const configPaths = await glob("*/region.ini", {
-      cwd: regionsPath,
-      nodir: true,
-      posix: true,
-    })
+    const configPaths = await fsQueryFiles(regionsPath, "*/region.ini")
 
     const regions: Regions = {}
 
     for (const configPath of configPaths) {
       const regionId = configPath.split("/")[0] as RegionID
 
-      const regionConfig = parseINI(await readFile(path.join(regionsPath, configPath)))
-      const regionPath = path.join(regionsPath, regionId)
+      const regionConfig = parseINI(await fsRead(path.resolve(regionsPath, configPath)))
+      const regionPath = path.resolve(regionsPath, regionId)
 
       const regionName: string | undefined = regionConfig["Regional Settings"]?.Name
 
@@ -38,10 +31,7 @@ export async function loadRegions(
         name: regionName && !regionName.startsWith("#") ? regionName : regionId,
       }
 
-      const cityFiles = await glob("City - *.sc4", {
-        cwd: regionPath,
-        nodir: true,
-      })
+      const cityFiles = await fsQueryFiles(regionPath, "City - *.sc4")
 
       for (const cityFile of cityFiles) {
         const cityId = cityFile.match(/City - (.+)[.]sc4/i)?.[1] as CityID
@@ -51,21 +41,18 @@ export async function loadRegions(
           established: !cityId.startsWith("New City"),
           id: cityId,
           name: cityId,
-          version: await getFileVersion(path.join(regionPath, cityFile)),
+          version: await getFileVersion(path.resolve(regionPath, cityFile)),
         }
 
-        const backupPath = path.join(backupsPath, regionId, cityId)
-        const backupFiles = await glob("*.sc4", {
-          cwd: backupPath,
-          nodir: true,
-        })
+        const backupPath = path.resolve(backupsPath, regionId, cityId)
+        const backupFiles = await fsQueryFiles(backupPath, "*.sc4")
 
         for (const backupFile of backupFiles) {
           const match = backupFile.match(
             /^(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})(?:-(.*))?[.]sc4/i,
           )
 
-          const version = await getFileVersion(path.join(backupPath, backupFile))
+          const version = await getFileVersion(path.resolve(backupPath, backupFile))
 
           region.cities[cityId].backups.push({
             description: match?.[7] ?? undefined,

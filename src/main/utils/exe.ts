@@ -3,12 +3,12 @@ import path from "node:path"
 import { app } from "electron/main"
 
 import { i18n } from "@common/i18n"
-import { FileOpenMode, copyTo, exists, openFile } from "@node/files"
+import type { ToolID } from "@common/tools"
+import { FileOpenMode, fsCopy, fsExists, fsOpen, replaceExtension } from "@node/files"
 import { PEFlag, getPEFlag, getPEHeader, setPEFlag, setPEHeader } from "@node/pe"
 import { cmd } from "@node/processes"
 import type { TaskContext } from "@node/tasks"
 
-import type { ToolID } from "@common/tools"
 import { FILENAMES, SC4_INSTALL_PATHS } from "./constants"
 import { showConfirmation, showError, showFolderSelector, showSuccess } from "./dialog"
 
@@ -17,13 +17,13 @@ export async function checkInstallPath(
   installPath: string | undefined,
 ): Promise<string | undefined> {
   if (installPath) {
-    if (await exists(getExePath(installPath))) {
+    if (await fsExists(getExePath(installPath))) {
       return installPath
     }
   }
 
   for (const suggestedPath of SC4_INSTALL_PATHS) {
-    if (await exists(getExePath(suggestedPath))) {
+    if (await fsExists(getExePath(suggestedPath))) {
       context.info(`Detected installation path ${suggestedPath}`)
       return suggestedPath
     }
@@ -41,7 +41,7 @@ export async function checkInstallPath(
       return
     }
 
-    if (await exists(getExePath(currentPath))) {
+    if (await fsExists(getExePath(currentPath))) {
       return currentPath
     }
   }
@@ -59,7 +59,7 @@ export function check4GBPatch(
 
   const exePath = getExePath(installPath)
 
-  return openFile(exePath, FileOpenMode.READWRITE, async file => {
+  return fsOpen(exePath, FileOpenMode.READWRITE, async file => {
     const header = await getPEHeader(file)
     const patched = getPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE)
 
@@ -82,7 +82,7 @@ export function check4GBPatch(
     if (confirmed) {
       try {
         // Create a backup
-        await copyTo(exePath, exePath.replace(/\.exe$/, " (Backup).exe"))
+        await fsCopy(exePath, replaceExtension(exePath, " (Backup).exe"), { overwrite: true })
 
         // Rewrite PE header
         setPEFlag(header, PEFlag.LARGE_ADDRESS_AWARE, true)
@@ -115,9 +115,9 @@ export async function checkDgVoodoo(
 ): Promise<{ applied: boolean; doNotAskAgain: boolean }> {
   context.info("Checking DgVoodoo setup...")
 
-  const exePath = path.join(installPath, FILENAMES.dgVoodoo)
+  const exePath = path.resolve(installPath, FILENAMES.dgVoodoo)
 
-  if (await exists(exePath)) {
+  if (await fsExists(exePath)) {
     context.info("DgVoodoo is already installed")
     return { applied: true, doNotAskAgain: false }
   }
@@ -154,7 +154,7 @@ export async function checkDgVoodoo(
 }
 
 export function getExePath(installPath: string): string {
-  return path.join(installPath, FILENAMES.sc4exe)
+  return path.resolve(installPath, FILENAMES.sc4exe)
 }
 
 export async function getExeVersion(installPath: string): Promise<string> {

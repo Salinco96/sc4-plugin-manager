@@ -4,7 +4,7 @@ import YAML from "js-yaml"
 
 import { ConfigFormat } from "@common/types"
 
-import { createIfMissing, readFile, readFileIfPresent, removeIfPresent, writeFile } from "./files"
+import { fsRead, fsRemove, fsWrite, readFileIfPresent } from "./files"
 
 export function deserializeConfig<T>(data: string, format: ConfigFormat): T {
   return format === ConfigFormat.JSON ? JSON.parse(data) : YAML.load(data)
@@ -15,7 +15,7 @@ export async function loadConfig<T>(
   filename: string,
 ): Promise<{ data: T; format: ConfigFormat } | undefined> {
   for (const format of Object.values(ConfigFormat)) {
-    const fullPath = path.join(basePath, filename + format)
+    const fullPath = path.resolve(basePath, filename + format)
     const raw = await readFileIfPresent(fullPath)
     if (raw) {
       const data = deserializeConfig<T>(raw, format)
@@ -25,11 +25,11 @@ export async function loadConfig<T>(
 }
 
 export async function readConfig<T>(fullPath: string): Promise<T> {
-  return deserializeConfig<T>(await readFile(fullPath), path.extname(fullPath) as ConfigFormat)
+  return deserializeConfig<T>(await fsRead(fullPath), path.extname(fullPath) as ConfigFormat)
 }
 
 export async function readConfigs<T>(fullPath: string): Promise<T[]> {
-  return YAML.loadAll(await readFile(fullPath)) as T[]
+  return YAML.loadAll(await fsRead(fullPath)) as T[]
 }
 
 export function serializeConfig<T>(data: T, format: ConfigFormat): string {
@@ -51,13 +51,10 @@ export async function writeConfig<T>(
   newFormat: ConfigFormat,
   oldFormat?: ConfigFormat,
 ): Promise<void> {
-  const newPath = path.join(basePath, filename + newFormat)
   const raw = serializeConfig(data, newFormat)
-  await createIfMissing(path.dirname(newPath))
-  await writeFile(newPath, raw)
+  await fsWrite(path.resolve(basePath, filename + newFormat), raw)
   if (oldFormat && oldFormat !== newFormat) {
-    const oldPath = path.join(basePath, filename + oldFormat)
-    await removeIfPresent(oldPath)
+    await fsRemove(path.resolve(basePath, filename + oldFormat))
   }
 }
 
@@ -66,5 +63,5 @@ export async function removeConfig(
   filename: string,
   format: ConfigFormat,
 ): Promise<void> {
-  await removeIfPresent(path.join(basePath, filename + format))
+  await fsRemove(path.resolve(basePath, filename + format))
 }

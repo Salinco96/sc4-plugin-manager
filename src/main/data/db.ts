@@ -3,7 +3,9 @@ import path from "node:path"
 
 import { forEach, isEnum, mapDefined, mapValues, parseHex, size } from "@salinco/nice-utils"
 
+import type { Assets } from "@common/assets"
 import type { Categories } from "@common/categories"
+import { isDBPF } from "@common/dbpf"
 import {
   type ExemplarProperties,
   type ExemplarPropertyData,
@@ -11,22 +13,19 @@ import {
   ExemplarValueType,
 } from "@common/exemplars"
 import type { OptionInfo } from "@common/options"
+import { type FileContents, MAXIS_FILES, type Plugins } from "@common/plugins"
 import type { ProfileData, ProfileID, Profiles } from "@common/profiles"
+import type { ToolID, Tools } from "@common/tools"
 import { ConfigFormat } from "@common/types"
 import { loadConfig, readConfig, writeConfig } from "@node/configs"
-import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
-
-import type { Assets } from "@common/assets"
-import { isDBPF } from "@common/dbpf"
-import { type FileContents, MAXIS_FILES, type Plugins } from "@common/plugins"
-import type { ToolID, Tools } from "@common/tools"
 import { type OptionData, loadOptionInfo } from "@node/data/options"
 import { type FileContentsData, loadContents, writeContents } from "@node/data/plugins"
 import { type ToolData, loadToolInfo } from "@node/data/tools"
 import { analyzeSC4File, analyzeSC4Files } from "@node/dbpf/analyze"
-import { exists, getExtension } from "@node/files"
+import { fsExists, fsQueryFiles, getExtension, replaceExtension } from "@node/files"
 import type { TaskContext } from "@node/tasks"
-import { glob } from "glob"
+import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
+
 import { fromProfileData } from "./profiles"
 
 export async function loadCategories(context: TaskContext, basePath: string): Promise<Categories> {
@@ -154,44 +153,37 @@ export async function loadPlugins(
 
     context.debug("Indexing external plugins...")
 
-    const pluginFiles = await glob("**/*", {
-      cwd: pluginsPath,
-      dot: true,
-      ignore: ["**/*.{ini,log}"],
-      nodir: true,
-      withFileTypes: true,
+    const pluginPaths = await fsQueryFiles(pluginsPath, "**", {
+      exclude: "**/*.{ini,log}",
+      symlinks: false,
     })
 
     const plugins: Plugins = {}
 
-    for (const file of pluginFiles) {
-      if (!file.isSymbolicLink()) {
-        const relativePath = file.relativePosix()
+    for (const pluginPath of pluginPaths) {
+      if (!isDBPF(pluginPath)) {
+        plugins[pluginPath] = {}
+      } else if (cache[pluginPath]) {
+        plugins[pluginPath] = cache[pluginPath]
+      } else {
+        try {
+          const { contents } = await analyzeSC4File(
+            pluginsPath,
+            pluginPath,
+            options.exemplarProperties,
+          )
 
-        if (!isDBPF(relativePath)) {
-          plugins[relativePath] = {}
-        } else if (cache[relativePath]) {
-          plugins[relativePath] = cache[relativePath]
-        } else {
-          try {
-            const { contents } = await analyzeSC4File(
-              pluginsPath,
-              relativePath,
-              options.exemplarProperties,
-            )
-
-            plugins[relativePath] = contents
-          } catch (error) {
-            context.error(`Failed to analyze ${relativePath}`, error)
-          }
+          plugins[pluginPath] = contents
+        } catch (error) {
+          context.error(`Failed to analyze ${pluginPath}`, error)
         }
+      }
 
-        if (plugins[relativePath]) {
-          if (getExtension(relativePath) === ".dll") {
-            const logsPath = relativePath.replace(".dll", ".log")
-            if (await exists(path.join(pluginsPath, logsPath))) {
-              plugins[relativePath].logs = logsPath
-            }
+      if (plugins[pluginPath]) {
+        if (getExtension(pluginPath) === ".dll") {
+          const logsPath = replaceExtension(pluginPath, ".log")
+          if (await fsExists(path.resolve(pluginsPath, logsPath))) {
+            plugins[pluginPath].logs = logsPath
           }
         }
       }
@@ -239,13 +231,13 @@ export async function loadProfileTemplates(
   try {
     const templates: Profiles = {}
 
-    const templatesPath = path.join(basePath, DIRNAMES.dbTemplates)
+    const templatesPath = path.resolve(basePath, DIRNAMES.dbTemplates)
     const entries = await fs.readdir(templatesPath, { withFileTypes: true })
     for (const entry of entries) {
       const format = path.extname(entry.name)
       if (entry.isFile() && isEnum(format, ConfigFormat)) {
         const profileId = `${TEMPLATE_PREFIX}${path.basename(entry.name, format)}` as ProfileID
-        const profilePath = path.join(templatesPath, entry.name)
+        const profilePath = path.resolve(templatesPath, entry.name)
         if (templates[profileId]) {
           context.error(`Duplicate profile template '${entry.name}'`)
           continue
