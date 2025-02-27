@@ -11,7 +11,6 @@ import { TagType, createTag } from "@components/Tags/utils"
 
 import { loadSavePreviewPicture, removeBackup, restoreBackup } from "@stores/actions"
 import { store } from "@stores/main"
-import { UpdateSaveActionModal, useUpdateSaveActionModal } from "./UpdateSaveActionModal"
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
   dateStyle: "full",
@@ -30,12 +29,6 @@ export const CityBackupListItem = memo(function CityBackupListItem({
   const city = store.useCityInfo(regionId, cityId)
 
   const isCurrent = backup.version === city.version
-
-  const [modalProps, openModal] = useUpdateSaveActionModal({
-    backup,
-    cityId,
-    regionId,
-  })
 
   const { t } = useTranslation("CityView")
 
@@ -61,45 +54,24 @@ export const CityBackupListItem = memo(function CityBackupListItem({
   return (
     <ListItem
       actions={
-        <>
-          <UpdateSaveActionModal {...modalProps} />
-          <ActionButton
-            actions={[
-              {
-                action: () => restoreBackup(regionId, cityId, backup.file),
-                description: t("actions.restoreBackup.description"),
-                disabled: isCurrent,
-                id: "restoreBackup",
-                label: t("actions.restoreBackup.label"),
-              },
-              city.established && {
-                action: () => openModal("growify"),
-                description: t("actions.growify.description"),
-                id: "growify",
-                label: t("actions.growify.label"),
-              },
-              city.established && {
-                action: () => openModal("historical"),
-                description: t("actions.historical.description"),
-                id: "makeHistorical",
-                label: t("actions.historical.label"),
-              },
-              city.established && {
-                action: () => openModal("fix"),
-                description: t("actions.fix.description"),
-                id: "fix",
-                label: t("actions.fix.label"),
-              },
-              {
-                action: () => removeBackup(regionId, cityId, backup.file),
-                color: "error",
-                description: t("actions.removeBackup.description"),
-                id: "removeBackup",
-                label: t("actions.removeBackup.label"),
-              },
-            ]}
-          />
-        </>
+        <ActionButton
+          actions={[
+            {
+              action: () => restoreBackup(regionId, cityId, backup.file),
+              description: t("actions.restoreBackup.description"),
+              disabled: isCurrent,
+              id: "restoreBackup",
+              label: t("actions.restoreBackup.label"),
+            },
+            {
+              action: () => removeBackup(regionId, cityId, backup.file),
+              color: "error",
+              description: t("actions.removeBackup.description"),
+              id: "removeBackup",
+              label: t("actions.removeBackup.label"),
+            },
+          ]}
+        />
       }
       header={Header}
       images={previewPicture ? [previewPicture] : undefined}

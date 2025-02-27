@@ -9,19 +9,24 @@ import { Banners } from "@components/Banners"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { type TabInfo, Tabs } from "@components/Tabs"
 import { ToolButton } from "@components/ToolButton"
-import { loadPluginFileEntries, openPluginFolder, removePluginFile } from "@stores/actions"
+import { loadPluginFileEntries, openPluginDirectory, removePlugin } from "@stores/actions"
 import { useNavigation } from "@utils/navigation"
 
 import { PluginsBreadcrumbs } from "./PluginsBreadcrumbs"
 import { PluginsFileEntries } from "./PluginsFileEntries"
 import { usePluginsFileBanners } from "./utils"
 
-const tabs: TabInfo<{ data?: DBPFInfo; file: PluginsFileInfo; path: string }>[] = [
+const tabs: TabInfo<{
+  data?: DBPFInfo
+  file: PluginsFileInfo
+  path: string
+  setFileData: (fileData: DBPFInfo) => void
+}>[] = [
   {
     id: "entries",
     component: PluginsFileEntries,
-    condition({ path }) {
-      return isDBPF(path)
+    condition({ file, path }) {
+      return isDBPF(path) && !file.issues?.dbpfError
     },
     count({ data }) {
       return data ? size(data.entries) : 0
@@ -75,14 +80,14 @@ export function PluginsFile({
             <ToolButton
               description={t("actions.openFileLocation.description")}
               icon={FolderIcon}
-              onClick={() => openPluginFolder(parentPath)}
+              onClick={() => openPluginDirectory(parentPath)}
             />
 
             <ToolButton
               description={t("actions.removeFile.description")}
               icon={RemoveIcon}
               onClick={() => {
-                removePluginFile(path)
+                removePlugin(path)
                 openPluginsView(parentPath)
               }}
             />
@@ -92,7 +97,7 @@ export function PluginsFile({
         {banners && <Banners banners={banners} />}
       </FlexCol>
 
-      <Tabs data={fileData} file={file} path={path} tabs={tabs} />
+      <Tabs data={fileData} file={file} path={path} setFileData={setFileData} tabs={tabs} />
     </>
   )
 }

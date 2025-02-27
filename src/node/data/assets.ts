@@ -37,8 +37,8 @@ export function getAssetDefaultURL(assetId: AssetID): string | undefined {
   }
 }
 
-export function getAssetKey(assetId: AssetID, version: string): string {
-  return version ? `${assetId}@${version}` : assetId
+export function getDownloadKey(assetInfo: AssetInfo): string {
+  return `${assetInfo.id}@${assetInfo.version}`
 }
 
 function getAssetURL(assetId: AssetID, rawUrl?: string, version?: string): string {

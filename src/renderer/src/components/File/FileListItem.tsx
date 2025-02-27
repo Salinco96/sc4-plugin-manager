@@ -31,6 +31,7 @@ export interface FileListItemProps {
   actions?: Action[]
   banners?: BannersProps["banners"]
   dbpf?: {
+    error?: string
     fileData: DBPFInfo | undefined
     loadEntries: () => Promise<DBPFInfo>
     loadEntry: (entryId: TGI) => Promise<DBPFEntryInfo>
@@ -72,7 +73,7 @@ export function FileListItem({
     <ListItem
       actions={
         <FlexRow centered gap={0.5}>
-          {dbpf && isDBPF(path) && (
+          {dbpf && isDBPF(path) && !dbpf.error && (
             <ToolButton
               description={t(expanded ? "hideContents" : "showContents")}
               icon={expanded ? CollapseIcon : ExpandIcon}

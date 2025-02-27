@@ -22,22 +22,15 @@ import { useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { RCIType, ZoneDensity } from "@common/lots"
-import {
-  type CityBackupInfo,
-  type CityID,
-  type RegionID,
-  type UpdateSaveAction,
-  hasBackup,
-} from "@common/regions"
+import { type CityID, type RegionID, type UpdateSaveAction, hasBackup } from "@common/regions"
 import { FlexCol } from "@components/FlexBox"
 import { BooleanInput } from "@components/Input/BooleanInput"
 import { PickerInput, type PickerOption } from "@components/Input/PickerInput"
-import { updateSave } from "@stores/actions"
+import { updateCity } from "@stores/actions"
 import { store } from "@stores/main"
 
 export interface UpdateSaveActionModalProps {
   action?: UpdateSaveAction["action"]
-  backup?: CityBackupInfo
   cityId: CityID
   onClose: () => void
   regionId: RegionID
@@ -61,13 +54,12 @@ export function UpdateSaveActionModal(props: UpdateSaveActionModalProps): JSX.El
 
 function UpdateSaveActionModalForm({
   action,
-  backup,
   cityId,
   onClose,
   regionId,
 }: UpdateSaveActionModalProps & { action: UpdateSaveAction["action"] }): JSX.Element {
   const city = store.useCityInfo(regionId, cityId)
-  const alreadyBackedUp = !backup && hasBackup(city)
+  const alreadyBackedUp = hasBackup(city)
 
   const { t } = useTranslation("UpdateSaveActionModal")
 
@@ -160,7 +152,7 @@ function UpdateSaveActionModalForm({
           onClick={async () => {
             try {
               setUpdating(true)
-              if (await updateSave(regionId, cityId, backup?.file ?? null, options)) {
+              if (await updateCity(regionId, cityId, options)) {
                 onClose()
               }
             } finally {
@@ -231,7 +223,6 @@ function isValidOptions(action: UpdateSaveAction): boolean {
 }
 
 export function useUpdateSaveActionModal(props: {
-  backup?: CityBackupInfo
   cityId: CityID
   regionId: RegionID
 }): [

@@ -6,6 +6,11 @@ import type { AuthorID } from "./authors"
 /** Tool ID */
 export type ToolID = ID<string, ToolInfo>
 
+export const ToolID = {
+  DgVoodoo: "dgvoodoo" as ToolID,
+  SC4PIM: "sc4pim" as ToolID,
+} satisfies Record<string, ToolID>
+
 /** Tool info */
 export interface ToolInfo {
   action?: "installing" | "removing" | "running"
@@ -43,11 +48,6 @@ export interface ToolInfo {
    * Tool ID
    */
   id: ToolID
-
-  /**
-   * Content to copy to SimCity 4 installation folder
-   */
-  install?: string
 
   /**
    * Whether this tool is currently installed

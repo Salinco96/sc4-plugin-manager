@@ -6,7 +6,7 @@ import { type PackageID, checkFile } from "@common/packages"
 import { globToRegex } from "@common/utils/glob"
 import type { VariantID } from "@common/variants"
 import { List } from "@components/List"
-import { loadVariantFileEntries } from "@stores/actions"
+import { loadPackageFileEntries } from "@stores/actions"
 import { store } from "@stores/main"
 import { useEffectEvent } from "@utils/useEffectEvent"
 
@@ -29,7 +29,7 @@ export default function PackageViewFiles({ packageId }: { packageId: PackageID }
       const files: { [path in string]?: DBPFInfo } = {}
 
       for (const file of variantInfo.files) {
-        files[file.path] = await loadVariantFileEntries(packageId, variantId, file.path)
+        files[file.path] = await loadPackageFileEntries(packageId, variantId, file.path)
       }
 
       setFiles(files)

@@ -2,16 +2,16 @@ import { CardActions, CircularProgress, Typography } from "@mui/material"
 import type { CustomContentProps } from "notistack"
 import { forwardRef, useEffect, useRef } from "react"
 
-import { status } from "@stores/status"
 import { closeSnackbar } from "@stores/ui"
+import { status } from "../../stores/status"
 
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const ProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>((props, ref) => {
-  const message = status.useStore(status => {
-    const task = status.loader ?? status.linker
+  const message = status.useStore(state => {
+    const task = state.tasks.find(task => task.label && !task.key.startsWith("download:"))
     if (task) {
-      return task.progress ? `${task.step} (${task.progress}%)` : task.step
+      return task.progress ? `${task.label} (${task.progress}%)` : task.label
     }
   })
 

@@ -4,6 +4,7 @@ import type { CollectionID, CollectionInfo } from "@common/collections"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileInfo } from "@common/profiles"
 import type { CityID, CityInfo, RegionID, RegionInfo } from "@common/regions"
+import type { DatabaseSettings } from "@common/settings"
 import { type ApplicationState, getInitialState } from "@common/state"
 import type { ToolID, ToolInfo } from "@common/tools"
 import type { PackageInfo, PackageStatus, VariantState } from "@common/types"
@@ -74,11 +75,15 @@ export function getCollectionInfo(state: MainState, collectionId: CollectionID):
 
 export function getCurrentProfile(state: MainState): ProfileInfo | undefined {
   const profileId = state.settings?.currentProfile
-  return profileId ? getProfileInfo(state, profileId) : undefined
+  return profileId ? state.profiles?.[profileId] : undefined
 }
 
 export function getCurrentVariant(state: MainState, packageId: PackageID): VariantInfo {
   return getVariantInfo(state, packageId)
+}
+
+function getDatabaseSettings(state: MainState): DatabaseSettings | undefined {
+  return state.settings?.db
 }
 
 function getFilteredVariants(state: MainState, packageId: PackageID): VariantID[] {
@@ -128,6 +133,7 @@ export const store = createStore("main", initialState, {
   getCollectionInfo,
   getCurrentProfile,
   getCurrentVariant,
+  getDatabaseSettings,
   getFilteredVariants,
   getPackageInfo,
   getPackageName,

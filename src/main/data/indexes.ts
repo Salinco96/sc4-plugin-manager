@@ -6,11 +6,13 @@ import { split } from "@common/utils/string"
 export function calculateIndex(contents: FileContents): Index {
   const index: Index = {
     buildingFamilies: {},
+    buildingGroups: {},
     buildings: {},
     lots: {},
     mmps: {},
     models: {},
     propFamilies: {},
+    propGroups: {},
     props: {},
     textures: {},
   }
@@ -33,6 +35,8 @@ export function calculateIndex(contents: FileContents): Index {
         const buildingId = building.id
         index.buildings[buildingId] ??= []
         index.buildings[buildingId].unshift(building)
+        index.buildingGroups[building.group] ??= []
+        index.buildingGroups[building.group].unshift(building)
 
         if (building.families) {
           for (const familyId of building.families) {
@@ -93,6 +97,8 @@ export function calculateIndex(contents: FileContents): Index {
         const propId = prop.id
         index.props[propId] ??= []
         index.props[propId].unshift(prop)
+        index.propGroups[prop.group] ??= []
+        index.propGroups[prop.group].unshift(prop)
 
         if (prop.families) {
           for (const familyId of prop.families) {

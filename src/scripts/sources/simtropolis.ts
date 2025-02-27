@@ -1,5 +1,6 @@
 import { ID, indexBy, isDefined } from "@salinco/nice-utils"
 
+import type { AssetID } from "@common/assets"
 import { CategoryID } from "@common/categories"
 import { extractDependencies, extractRepositoryUrl, extractSupportUrl } from "../dbpf/packages"
 import type { IndexerCategory, IndexerSource, IndexerSourceID } from "../types"
@@ -178,7 +179,7 @@ export const SIMTROPOLIS: IndexerSource = {
       }
 
       return {
-        assetId: ID(`${sourceId}/${itemId}`),
+        assetId: `${sourceId}/${itemId}` as AssetID,
         authors: authorName ? [authorName] : undefined,
         downloads: Number.parseInt(downloads || "0", 10) || undefined,
         lastModified: new Date(lastModified),

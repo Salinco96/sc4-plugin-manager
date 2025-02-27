@@ -108,7 +108,7 @@ export function createStore<S, E extends StoreExtensions<S>>(
       ...extraApi,
       ...useStore,
       updateState(spec) {
-        useStore.setState(state => update(state, spec))
+        useStore.setState(oldState => update(oldState, spec))
       },
     },
     ...extraHooks,

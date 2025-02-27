@@ -5,7 +5,7 @@ import type { PluginsFileInfo } from "@common/plugins"
 import type { BannerAction } from "@components/Banner"
 import type { BannersProps } from "@components/Banners"
 import { TextLink } from "@components/TextLink"
-import { removePluginFile } from "@stores/actions"
+import { removePlugin } from "@stores/actions"
 import { store } from "@stores/main"
 import { setActiveTab } from "@stores/ui"
 import { Page, useNavigation } from "@utils/navigation"
@@ -22,10 +22,15 @@ export function usePluginsFileBanners(
   const removeAction: BannerAction = {
     description: t("actions.removeFile.description"),
     label: t("actions.removeFile.label"),
-    onClick: () => removePluginFile(path),
+    onClick: () => removePlugin(path),
   }
 
   return [
+    file.issues?.dbpfError && {
+      action: removeAction,
+      message: file.issues.dbpfError,
+      title: "Corrupted",
+    },
     file.issues?.conflictingPackages && {
       action: removeAction,
       message: (

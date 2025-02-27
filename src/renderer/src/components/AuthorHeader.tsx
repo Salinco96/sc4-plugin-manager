@@ -4,7 +4,7 @@ import type { AuthorID } from "@common/authors"
 import { getAuthorName } from "@common/authors"
 import { Page } from "@utils/navigation"
 
-import { openAuthorURL } from "@stores/actions"
+import { openAuthorUrl } from "@stores/actions"
 import { store } from "@stores/main"
 import { Header } from "./Header"
 import { ToolBelt, type ToolBeltAction } from "./ToolBelt"
@@ -26,7 +26,7 @@ export function AuthorHeader({
 
     if (authorInfo?.url) {
       toolbeltActions.push({
-        action: () => openAuthorURL(authorId),
+        action: () => openAuthorUrl(authorId),
         description: authorInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl",
         icon: "website",
         id: "url",

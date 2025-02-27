@@ -1,27 +1,20 @@
 import { Box, CardActions, LinearProgress, Typography } from "@mui/material"
-import { keys } from "@salinco/nice-utils"
 import type { CustomContentProps } from "notistack"
 import { forwardRef, useEffect, useRef } from "react"
-import { useTranslation } from "react-i18next"
 
-import { status } from "@stores/status"
 import { closeSnackbar } from "@stores/ui"
+import { status } from "../../stores/status"
 
+import { isNumber } from "@salinco/nice-utils"
 import { CustomSnackbar } from "./CustomSnackbar"
 
 export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   (props, ref) => {
-    const { t } = useTranslation("Snackbar")
+    const task = status.useStore(state =>
+      state.tasks.find(task => task.label && task.key.startsWith("download:")),
+    )
 
-    const taskInfo = status.useShallow(state => {
-      const key = keys(state.downloads)[0]
-      if (key) {
-        return { key, ...state.downloads[key] }
-      }
-    })
-
-    const message = taskInfo && t("downloading", taskInfo)
-
+    const message = task?.progress ? `${task.label} (${task.progress}%)` : task?.label
     const lastMessageRef = useRef(message)
     useEffect(() => {
       if (message) {
@@ -60,8 +53,8 @@ export const DownloadProgressSnackbar = forwardRef<HTMLDivElement, CustomContent
           </CardActions>
           <LinearProgress
             sx={{ height: 2, justifySelf: "stretch" }}
-            value={taskInfo?.progress}
-            variant={taskInfo?.progress !== undefined ? "determinate" : "indeterminate"}
+            value={task?.progress}
+            variant={isNumber(task?.progress) ? "determinate" : "indeterminate"}
           />
         </Box>
       </CustomSnackbar>

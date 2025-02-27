@@ -7,7 +7,7 @@ import type { VariantID } from "@common/variants"
 import { FlexBox, FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
 import { MarkdownView } from "@components/MarkdownView"
-import { getPackageReadme } from "@stores/actions"
+import { getPackageDocs } from "@stores/actions"
 import { store } from "@stores/main"
 
 export default function PackageViewReadme({
@@ -69,10 +69,10 @@ function ReadmeView({
   variantId: VariantID
 }): JSX.Element | null {
   const [error, setError] = useState<string>()
-  const [readme, setReadme] = useState<{ html?: string; md?: string }>()
+  const [readme, setReadme] = useState<{ iframe: string } | { md: string } | { text: string }>()
 
   useEffect(() => {
-    getPackageReadme(packageId, variantId, filePath)
+    getPackageDocs(packageId, variantId, filePath)
       .then(setReadme)
       .catch(error => setError(error.message))
   }, [filePath, packageId, variantId])
@@ -102,14 +102,29 @@ function ReadmeView({
     return <Loader />
   }
 
-  if (readme.html) {
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: Safe
-    return <div dangerouslySetInnerHTML={{ __html: readme.html }} style={{ height: "100%" }} />
+  if ("iframe" in readme) {
+    return (
+      <iframe
+        height="100%"
+        sandbox="allow-popups"
+        src={readme.iframe}
+        title="Documentation"
+        width="100%"
+      />
+    )
   }
 
-  if (readme.md) {
-    return <MarkdownView md={readme.md} />
+  if ("md" in readme) {
+    return (
+      <FlexCol fullHeight overflow="auto" px={2}>
+        <MarkdownView md={readme.md} />
+      </FlexCol>
+    )
   }
 
-  return null
+  return (
+    <FlexCol fullHeight overflow="auto" p={2}>
+      <pre style={{ margin: 0 }}>{readme.text}</pre>
+    </FlexCol>
+  )
 }

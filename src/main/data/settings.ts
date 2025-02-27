@@ -12,25 +12,40 @@ import { fsCopy, isURL } from "@node/files"
 import type { TaskContext } from "@node/tasks"
 import { DIRNAMES, FILENAMES } from "@utils/constants"
 import { showConfirmation, showSuccess } from "@utils/dialog"
+import { env } from "@utils/env"
 import { check4GBPatch, checkInstallPath, getExeVersion } from "@utils/exe"
 
 const repository = "Salinco96/sc4-plugin-manager"
 
 export async function loadSettings(
   context: TaskContext,
-  rootPath: string,
+  managerPath: string,
   pluginsPath: string,
   regionsPath: string,
-  dbPathOrUrl: string,
   profiles: Profiles,
 ): Promise<Settings> {
-  const config = await loadConfig<SettingsData>(rootPath, FILENAMES.settings)
+  const config = await loadConfig<SettingsData>(managerPath, FILENAMES.settings)
 
   const settings: Settings = {
     format: config?.format,
     ...config?.data,
-    db: isURL(dbPathOrUrl) ? { url: dbPathOrUrl } : { path: dbPathOrUrl },
-    env: { dev: import.meta.env.DEV },
+    db: isURL(env.DATA_REPOSITORY)
+      ? {
+          branch: env.DATA_BRANCH || "main",
+          local: false,
+          path: path.resolve(managerPath, DIRNAMES.db),
+          url: env.DATA_REPOSITORY,
+        }
+      : {
+          local: true,
+          path: path.resolve(app.getAppPath(), env.DATA_REPOSITORY),
+        },
+    env: {
+      dev: import.meta.env.DEV,
+    },
+    regions: {
+      ...config?.data.regions,
+    },
     startup: {
       reloadMaxis: false,
       reloadPlugins: false,
@@ -79,7 +94,7 @@ export async function loadSettings(
 
     if (confirmed) {
       try {
-        context.setStep(`Copying ${DIRNAMES.plugins}...`)
+        context.setLabel(`Copying ${DIRNAMES.plugins}...`)
         await fsCopy(pluginsPath, pluginsBackupPath, { merge: true, overwrite: true })
         await showSuccess(
           i18n.t("BackupPluginsModal:title"),
@@ -101,7 +116,7 @@ export async function loadSettings(
       }
 
       try {
-        context.setStep(`Copying ${DIRNAMES.regions}...`)
+        context.setLabel(`Copying ${DIRNAMES.regions}...`)
         await fsCopy(regionsPath, regionsBackupPath, { merge: true, overwrite: true })
         await showSuccess(
           i18n.t("BackupPluginsModal:title"),
@@ -146,7 +161,7 @@ export async function loadSettings(
     settings.install = undefined
   }
 
-  if (settings.install) {
+  if (settings.install?.path) {
     try {
       // settings.install.version
       // Determine executable version

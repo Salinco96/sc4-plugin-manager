@@ -19,7 +19,7 @@ export function VariantTags({
 
   const tags = [
     ...variantInfo.authors.map(authorId => createTag(TagType.AUTHOR, authorId)),
-    ...[VariantState.DEFAULT, VariantState.CURRENT]
+    ...[VariantState.DEFAULT, VariantState.CURRENT, VariantState.LOCAL]
       .filter(state => getState(state, packageInfo, variantInfo, profileInfo))
       .map(state => createTag(TagType.STATE, state)),
   ]

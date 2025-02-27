@@ -1,15 +1,16 @@
+import type { Spec } from "immutability-helper"
+
 import type { Authors } from "./authors"
 import type { Categories } from "./categories"
 import type { Collections } from "./collections"
 import type { ExemplarProperties } from "./exemplars"
 import type { OptionInfo } from "./options"
-import type { PackageID } from "./packages"
 import type { Index, Plugins } from "./plugins"
-import type { ProfileID, ProfileInfo, Profiles } from "./profiles"
+import type { Profiles } from "./profiles"
 import type { Regions } from "./regions"
 import type { Settings } from "./settings"
 import type { Tools } from "./tools"
-import type { Features, PackageInfo, Packages } from "./types"
+import type { Features, Packages } from "./types"
 
 export interface ApplicationState {
   authors: Authors
@@ -30,27 +31,13 @@ export interface ApplicationState {
 }
 
 export interface ApplicationStatus {
-  downloads: { [downloadKey in string]?: TaskInfo }
-  linker: TaskInfo | null
-  loader: TaskInfo | null
+  tasks: TaskInfo[]
 }
 
-export type Replace<T, R> = Omit<T, keyof R> & R
-
-export type ApplicationStateUpdate = Replace<
-  Partial<ApplicationState>,
-  {
-    packages?: Record<PackageID, PackageInfo | null | undefined>
-    profiles?: Record<ProfileID, ProfileInfo | null | undefined>
-  }
->
-
-export type ApplicationStatusUpdate = Replace<
-  Partial<ApplicationStatus>,
-  {
-    downloads?: Record<string, TaskInfo | null | undefined>
-  }
->
+export type ApplicationStateUpdate = {
+  data: { [K in keyof ApplicationState]?: Spec<ApplicationState[K]> } | { $merge: ApplicationState }
+  recompute: boolean
+}
 
 export function getInitialState(): ApplicationState {
   return {
@@ -73,6 +60,7 @@ export function getInitialState(): ApplicationState {
 }
 
 export interface TaskInfo {
+  key: string
+  label?: string
   progress?: number
-  step: string
 }

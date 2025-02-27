@@ -112,16 +112,16 @@ export class BuildingRecord extends SaveRecord implements BuildingRecordData {
     const orientation = reader.readUInt8()
     const scaffoldingHeight = reader.readFloat32()
 
-    if (toHex(typeId, 8) !== TypeID.EXEMPLAR) {
+    if (typeId !== 0 && toHex(typeId, 8) !== TypeID.EXEMPLAR) {
       throw Error(`Unexpected type ID: 0x${toHex(typeId, 8)}`)
+    }
+
+    if (instanceId !== 0 && instanceId !== buildingId) {
+      throw Error(`Mismatching instance ID: 0x${toHex(instanceId, 8)} vs 0x${toHex(buildingId, 8)}`)
     }
 
     if (tractSizeX !== tractSizeZ || !Number.isInteger(Math.log2(tractSizeX))) {
       throw Error(`Invalid tract size: ${tractSizeX}x${tractSizeZ}`)
-    }
-
-    if (instanceId !== buildingId) {
-      throw Error(`Mismatching instance ID: 0x${toHex(instanceId, 8)} vs 0x${toHex(buildingId, 8)}`)
     }
 
     return new BuildingRecord({

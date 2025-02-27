@@ -16,7 +16,7 @@ import type { VariantID } from "@common/variants"
 import { FlexRow } from "@components/FlexBox"
 import { PackageOptionsDialog } from "@components/Options/PackageOptionsDialog"
 
-import { openPackageConfig, openPackageFile, openPackageURL } from "@stores/actions"
+import { openPackageConfig, openPackageDirectory, openPackageUrl } from "@stores/actions"
 import { store } from "@stores/main"
 import { ToolButton } from "./ToolButton"
 
@@ -56,21 +56,21 @@ export function PackageTools({
         <ToolButton
           description={t(variantInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl")}
           icon={WebIcon}
-          onClick={() => openPackageURL(packageId, variantInfo.id, "url")}
+          onClick={() => openPackageUrl(packageId, variantInfo.id, "url")}
         />
       )}
       {variantInfo.repository && (
         <ToolButton
           description={t("openRepository")}
           icon={GitHubIcon}
-          onClick={() => openPackageURL(packageId, variantInfo.id, "repository")}
+          onClick={() => openPackageUrl(packageId, variantInfo.id, "repository")}
         />
       )}
       {variantInfo.support && (
         <ToolButton
           description={t("openSupport")}
           icon={SupportIcon}
-          onClick={() => openPackageURL(packageId, variantInfo.id, "support")}
+          onClick={() => openPackageUrl(packageId, variantInfo.id, "support")}
         />
       )}
       {variantInfo.installed && !variantId && (
@@ -84,21 +84,21 @@ export function PackageTools({
         <ToolButton
           description={t("openFiles")}
           icon={FilesIcon}
-          onClick={() => openPackageFile(packageId, variantInfo.id, "")}
+          onClick={() => openPackageDirectory(packageId, variantInfo.id, "")}
         />
       )}
       {variantInfo.installed && docsPath && (
         <ToolButton
           description={t("openDocs")}
           icon={DocsIcon}
-          onClick={() => openPackageFile(packageId, variantInfo.id, docsPath)}
+          onClick={() => openPackageDirectory(packageId, variantInfo.id, docsPath)}
         />
       )}
       {variantInfo.installed && readmePaths?.length && (
         <ToolButton
           description={t("openReadme")}
           icon={ReadmeIcon}
-          onClick={() => openPackageFile(packageId, variantInfo.id, readmePaths[0])}
+          onClick={() => openPackageDirectory(packageId, variantInfo.id, readmePaths[0])}
         />
       )}
     </FlexRow>

@@ -1,14 +1,14 @@
 import fs from "node:fs/promises"
-import path from "node:path"
+import path, { isAbsolute } from "node:path"
 
 import {
   $merge,
-  type EmptyRecord,
   collect,
   entries,
   filterValues,
   forEach,
   forEachAsync,
+  indexBy,
   isEmpty,
   keys,
   mapDefined,
@@ -24,12 +24,14 @@ import {
 } from "@salinco/nice-utils"
 import log, { type LogLevel } from "electron-log"
 import { net, Menu, type Session, app, ipcMain, session } from "electron/main"
-import escapeHtml from "escape-html"
+import update, { type Spec } from "immutability-helper"
+import { stringify as writeINI } from "ini"
 
-import type { AssetInfo, Assets } from "@common/assets"
-import type { AuthorID } from "@common/authors"
+import type { AssetID, AssetInfo, Assets } from "@common/assets"
+import type { Authors } from "@common/authors"
 import type { BuildingID } from "@common/buildings"
 import type { Categories } from "@common/categories"
+import type { Collections } from "@common/collections"
 import {
   DBPFDataType,
   type DBPFInfo,
@@ -39,14 +41,15 @@ import {
   type TypeID,
 } from "@common/dbpf"
 import {
-  type ExemplarDataPatch,
+  type ExemplarDataPatches,
   type ExemplarProperties,
   ExemplarType,
   getExemplarType,
 } from "@common/exemplars"
-import { getFeatureLabel, i18n, initI18n, t } from "@common/i18n"
+import { getFeatureLabel, i18n, initI18n } from "@common/i18n"
+import { GroupLogger } from "@common/logs"
 import type { LotID, LotInfo } from "@common/lots"
-import { type OptionInfo, getOptionValue } from "@common/options"
+import { type OptionInfo, type OptionValue, getOptionValue } from "@common/options"
 import {
   type PackageID,
   checkFile,
@@ -58,12 +61,13 @@ import {
   isPatched,
   isSelected,
 } from "@common/packages"
-import type { FileContents, Index } from "@common/plugins"
+import type { FileContents, Plugins } from "@common/plugins"
 import {
   type ProfileData,
   type ProfileID,
   type ProfileInfo,
   type ProfileUpdate,
+  type Profiles,
   createUniqueId,
 } from "@common/profiles"
 import type { PropID } from "@common/props"
@@ -72,26 +76,28 @@ import {
   type CityID,
   type CityInfo,
   type RegionID,
+  type Regions,
   type UpdateSaveAction,
   getCityFileName,
   getCityLinkedProfileId,
   getRegionLinkedProfileId,
   hasBackup,
 } from "@common/regions"
-import type { Settings, SettingsData } from "@common/settings"
-import type {
-  ApplicationState,
-  ApplicationStateUpdate,
-  ApplicationStatusUpdate,
-} from "@common/state"
-import type { ToolID } from "@common/tools"
-import { ConfigFormat, type Features, type PackageInfo, type Packages } from "@common/types"
+import type { DatabaseSettings, Settings, SettingsData, SettingsUpdate } from "@common/settings"
+import { type ApplicationState, type ApplicationStatus, getInitialState } from "@common/state"
+import { ToolID, type ToolInfo, type Tools } from "@common/tools"
+import { ConfigFormat, type Features, type Packages } from "@common/types"
 import { globToRegex } from "@common/utils/glob"
 import { split } from "@common/utils/string"
-import type { EditableVariantInfo, FileInfo, VariantID } from "@common/variants"
-import { getDefaultVariant } from "@common/variants"
+import {
+  type EditableVariantInfo,
+  type FileInfo,
+  type VariantID,
+  type VariantInfo,
+  getDefaultVariant,
+} from "@common/variants"
 import { loadConfig, removeConfig, writeConfig } from "@node/configs"
-import { getAssetKey } from "@node/data/assets"
+import { getDownloadKey } from "@node/data/assets"
 import { loadAuthors } from "@node/data/authors"
 import { loadBuildingInfo } from "@node/data/buildings"
 import { loadCollections } from "@node/data/collections"
@@ -100,6 +106,7 @@ import { loadLotInfo } from "@node/data/lots"
 import { type PackageData, writePackageInfo } from "@node/data/packages"
 import { loadPropInfo } from "@node/data/props"
 import { DBPF } from "@node/dbpf"
+import { analyzeSC4File, analyzeSC4Files } from "@node/dbpf/analyze"
 import { getBuildingInfo } from "@node/dbpf/buildings"
 import { getLotInfo } from "@node/dbpf/lots"
 import { getPropInfo } from "@node/dbpf/props"
@@ -125,23 +132,29 @@ import {
   getFileVersion,
   getFilename,
   isChildPath,
-  isDirectory,
   isErrorCode,
-  isURL,
   joinPosix,
+  removeExtension,
+  replaceExtension,
   toPosix,
 } from "@node/files"
 import { hashCode } from "@node/hash"
 import { cmd, runFile } from "@node/processes"
 import type { TaskContext } from "@node/tasks"
+import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "@utils/constants"
 import {
   ConflictConfirmationResponse,
   showConfirmation,
   showConflictConfirmation,
+  showError,
   showSuccess,
   showWarning,
 } from "@utils/dialog"
+import { check4GBPatch } from "@utils/exe"
 import { getPluginsFolderName } from "@utils/linker"
+import { handleDocsProtocol } from "@utils/protocols"
+import { TaskRunner } from "./utils/tasks"
+
 import { MainWindow } from "./MainWindow"
 import { SplashScreen } from "./SplashScreen"
 import { type AppConfig, loadAppConfig } from "./data/config"
@@ -153,25 +166,23 @@ import {
   loadProfileOptions,
   loadProfileTemplates,
   loadTools,
+  updateDatabase,
 } from "./data/db"
 import { calculateIndex } from "./data/indexes"
-import { loadDownloadedAssets, loadLocalPackages, loadRemotePackages } from "./data/packages"
+import {
+  loadDownloadedAssets,
+  loadLocalPackages,
+  loadRemoteAssets,
+  loadRemotePackages,
+} from "./data/packages"
 import { resolvePackageUpdates, resolvePackages } from "./data/packages/resolve"
+import { type PackInfo, type Packs, loadPacks, writePacks } from "./data/packs"
 import { compactProfileConfig, loadProfiles, toProfileData } from "./data/profiles"
 import { getBackupFileName, loadRegions } from "./data/regions"
 import { loadSaveInfo } from "./data/saves/load"
 import { fixSave, growify, makeHistorical, updateLots } from "./data/saves/update"
 import { loadSettings, toSettingsData } from "./data/settings"
-import type {
-  UpdateDatabaseProcessData,
-  UpdateDatabaseProcessResponse,
-} from "./processes/updateDatabase/types"
-import updateDatabaseProcessPath from "./processes/updateDatabase?modulePath"
-import { DIRNAMES, FILENAMES, TEMPLATE_PREFIX } from "./utils/constants"
 import { env, isDev } from "./utils/env"
-import { check4GBPatch, checkDgVoodoo } from "./utils/exe"
-import { createChildProcess } from "./utils/processes"
-import { handleDocsProtocol } from "./utils/protocols"
 import {
   SIMTROPOLIS_ORIGIN,
   type SimtropolisSession,
@@ -180,14 +191,6 @@ import {
   simtropolisLogin,
   simtropolisLogout,
 } from "./utils/sessions/simtropolis"
-import { TaskManager } from "./utils/tasks"
-
-type Loaded = {
-  [K in Exclude<keyof ApplicationState, "simtropolis">]-?: Exclude<ApplicationState[K], undefined>
-} & {
-  assets: Assets
-  maxis: FileContents
-}
 
 export class Application {
   /**
@@ -202,11 +205,11 @@ export class Application {
     // Initialize translations
     initI18n(i18n)
 
-    // Load app config
+    // Load AppConfig
+    // AppConfig is managed/stored by electron in its userData folder, and merely points to the location of the SimCity 4 folder
+    // If we cannot locate the SimCity 4 folder on first launch, this will prompt the user to select it
     const appConfig = await loadAppConfig()
-
     Application.instance ??= new Application(appConfig)
-
     return Application.instance
   }
 
@@ -235,12 +238,48 @@ export class Application {
   /**
    * Absolute path to the game data directory, containing the 'Plugins' directory.
    */
-  public readonly gamePath: string
+  protected readonly gamePath: string
 
   /**
    * IDs of warnings that should be ignored for the whole session.
    */
-  public readonly ignoredWarnings = new Set<string>()
+  protected readonly ignoredWarnings = new Set<string>()
+
+  /**
+   * Task manager
+   */
+  protected readonly runner = new TaskRunner({
+    loaders: {
+      assets: () => this.loadAssets(),
+      authors: () => this.loadAuthors(),
+      categories: () => this.loadCategories(),
+      collections: () => this.loadCollections(),
+      db: () => this.updateDatabase(),
+      downloads: () => this.loadDownloadedAssets(),
+      exemplarProperties: () => this.loadExemplarProperties(),
+      features: () => this.loadPackages().then(({ features }) => features),
+      links: () => this.loadPlugins().then(({ links }) => links),
+      localPackages: () => this.loadLocalPackages(),
+      maxis: () => this.loadMaxisContents(),
+      packages: () => this.loadPackages().then(({ packages }) => packages),
+      packs: () => this.loadPacks(),
+      plugins: () => this.loadPlugins().then(({ plugins }) => plugins),
+      profileOptions: () => this.loadProfileOptions(),
+      profileTemplates: () => this.loadProfileTemplates(),
+      profiles: () => this.loadProfiles(),
+      regions: () => this.loadRegions(),
+      settings: () => this.loadSettings(),
+      simtropolis: () => this.loadSimtropolisSession(),
+      tools: () => this.loadTools(),
+    },
+    logger: new GroupLogger(console, "TaskRunner"),
+    onUpdate: tasks => this.updateStatus({ tasks }),
+    pools: {
+      dialogs: 1,
+      downloads: 6,
+    },
+    // verbose: import.meta.env.DEV,
+  })
 
   /**
    * Main application window.
@@ -257,12 +296,10 @@ export class Application {
    */
   protected splashScreen: SplashScreen | undefined
 
-  public readonly tasks = new TaskManager({
-    pools: {
-      download: 6,
-      extract: 6,
-    },
-  })
+  /**
+   * Current application state reflecting the UI state, see {@link getState}.
+   */
+  protected state: ApplicationState = getInitialState()
 
   /**
    * Returns the current Electron session object.
@@ -277,54 +314,105 @@ export class Application {
    */
   protected constructor(appConfig: AppConfig) {
     this.gamePath = appConfig.gamePath
-    this.init()
-  }
 
-  /**
-   * Back up an external file from 'Plugins' folder to 'Plugins (Backup)'
-   * @param context Task context
-   * @param relativePath relative path to the file to back up from 'Plugins' folder
-   */
-  protected async backUpFile(context: TaskContext, relativePath: string): Promise<void> {
-    context.debug(`Backing up ${relativePath}...`)
+    // Register message handlers
+    this.handle("check4GBPatch")
+    this.handle("checkDgVoodoo")
+    this.handle("checkPlugins")
+    this.handle("clearPackageLogs")
+    this.handle("createBackup")
+    this.handle("createProfile")
+    this.handle("createVariant")
+    this.handle("editVariant")
+    this.handle("getPackageDocs")
+    this.handle("getPackageLogs")
+    this.handle("getState")
+    this.handle("installTool")
+    this.handle("installVariant")
+    this.handle("loadPackageFileEntries")
+    this.handle("loadPackageFileEntry")
+    this.handle("loadPluginFileEntries")
+    this.handle("loadPluginFileEntry")
+    this.handle("loadSavePreviewPicture")
+    this.handle("openAuthorUrl")
+    this.handle("openDataRepository")
+    this.handle("openExecutableDirectory")
+    this.handle("openInstallationDirectory")
+    this.handle("openPackageConfig")
+    this.handle("openPackageDirectory")
+    this.handle("openPackageUrl")
+    this.handle("openPluginDirectory")
+    this.handle("openProfileConfig")
+    this.handle("openRegionDirectory")
+    this.handle("openToolDirectory")
+    this.handle("openToolUrl")
+    this.handle("patchPackageFileEntries")
+    this.handle("patchPluginFileEntries")
+    this.handle("refreshLocalVariant")
+    this.handle("reloadPlugins")
+    this.handle("removeBackup")
+    this.handle("removePlugin")
+    this.handle("removeProfile")
+    this.handle("removeTool")
+    this.handle("removeUnusedPackages")
+    this.handle("removeVariant")
+    this.handle("restoreBackup")
+    this.handle("runTool")
+    this.handle("simtropolisLogin")
+    this.handle("simtropolisLogout")
+    this.handle("switchProfile")
+    this.handle("updateCity")
+    this.handle("updateProfile")
+    this.handle("updateSettings")
 
-    const pluginsPath = this.getPluginsPath()
-    const originFullPath = path.resolve(pluginsPath, relativePath)
-    const targetFullPath = path.resolve(this.getPluginsBackupPath(), relativePath)
-    await fsMove(originFullPath, targetFullPath, { overwrite: true })
-
-    // Clean up empty folders
-    await fsRemoveIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
+    this.initLogs()
+    this.initCustomProtocols()
+    this.initApplicationMenu()
+    this.initMainWindow()
+    this.load()
+    this.loadSimtropolisSession().then(session => {
+      this.updateState({
+        simtropolis: {
+          $set: session && {
+            // Filter out fields like deviceKey/loginKey that have nothing to do in UI
+            displayName: session.displayName,
+            sessionId: isDev() ? session.sessionId : undefined,
+            userId: session.userId,
+          },
+        },
+      })
+    })
   }
 
   /**
    * Checks the 4GB Patch and suggests applying it.
    */
-  public async check4GBPatch(): Promise<boolean> {
-    const { settings } = await this.load()
-
-    return this.tasks.queue("4gb:check", {
-      handler: async context => {
+  public async check4GBPatch(isStartupCheck?: boolean): Promise<boolean> {
+    return this.runner.queue("4gb:check", {
+      handler: async (context, { settings }) => {
         if (!settings.install?.path) {
           throw Error("Game installation path is not set")
         }
 
-        const { applied } = await check4GBPatch(context, settings.install.path, {
-          isStartupCheck: false,
-          skipSuggestion: false,
+        const { applied, doNotAskAgain } = await check4GBPatch(context, settings.install.path, {
+          isStartupCheck,
+          skipSuggestion: isStartupCheck && settings.install.patched === false,
         })
 
         if (applied) {
           settings.install.patched = true
+        } else if (isStartupCheck && doNotAskAgain) {
+          settings.install.voodoo = false
         } else if (settings.install.patched) {
           settings.install.patched = undefined
         }
 
-        await this.writeSettings(context, settings)
+        this.writeSettings()
 
         return applied
       },
-      pool: "main",
+      reads: { settings: true },
+      writes: { settings: true },
     })
   }
 
@@ -332,61 +420,97 @@ export class Application {
    * Checks DgVoodoo setup and suggests installing it.
    */
   public async checkDgVoodoo(isStartupCheck?: boolean): Promise<boolean> {
-    const { settings } = await this.load()
+    const confirmed = await this.runner.queue("dgvoodoo:check", {
+      handler: async (context, { settings }) => {
+        context.info("Checking DgVoodoo setup...")
 
-    return this.tasks.queue("dgvoodoo:check", {
-      handler: async context => {
         if (!settings.install?.path) {
           throw Error("Game installation path is not set")
         }
 
-        const { applied, doNotAskAgain } = await checkDgVoodoo(context, settings.install.path, {
-          installTool: async toolId => this.installTool(toolId),
-          isStartupCheck,
-          skipSuggestion: isStartupCheck && settings.install.voodoo === false,
-        })
+        const exePath = path.join(settings.install.path, FILENAMES.dgVoodoo)
+        if (await fsExists(exePath)) {
+          context.info("DgVoodoo is already installed")
 
-        if (applied) {
-          settings.install.voodoo = true
-        } else if (isStartupCheck && doNotAskAgain) {
-          settings.install.voodoo = false
-        } else {
-          settings.install.voodoo = undefined
+          if (!settings.install.voodoo) {
+            settings.install.voodoo = true
+            this.updateState({ $merge: { settings } })
+            this.writeSettings()
+          }
+
+          return false
         }
 
-        await this.writeSettings(context, settings)
+        if (isStartupCheck && settings.install.voodoo === false) {
+          return false
+        }
 
-        return applied
+        const { confirmed, doNotAskAgain } = await showConfirmation(
+          i18n.t("CheckDgVoodooModal:title"),
+          i18n.t("CheckDgVoodooModal:confirmation"),
+          i18n.t("CheckDgVoodooModal:description"),
+          isStartupCheck,
+        )
+
+        if (confirmed) {
+          return true
+        }
+
+        if (settings.install.voodoo || isStartupCheck) {
+          settings.install.voodoo = doNotAskAgain ? false : undefined
+          this.updateState({ $merge: { settings } })
+          this.writeSettings()
+        }
+
+        return confirmed
       },
-      pool: "main",
+      reads: { settings: true },
+      writes: { settings: true },
     })
+
+    if (confirmed) {
+      try {
+        await this.installTool(ToolID.DgVoodoo)
+
+        await showSuccess(i18n.t("CheckDgVoodooModal:title"), i18n.t("CheckDgVoodooModal:success"))
+
+        return true
+      } catch (error) {
+        await showError(
+          i18n.t("CheckDgVoodooModal:title"),
+          i18n.t("CheckDgVoodooModal:failure"),
+          (error as Error).message,
+        )
+      }
+    }
+
+    return false
   }
 
   /**
    * Runs cleaner for all enabled packages.
    */
-  public async cleanPlugins(
+  public async checkPlugins(
     options: {
       isSilent?: boolean
       isStartup?: boolean
-      packageIds?: PackageID[]
     } = {},
   ): Promise<void> {
-    const state = await this.load()
-
-    const { packages, plugins, profiles, settings } = state
-
-    await this.tasks.queue(options.packageIds ? `clean:${options.packageIds.join(",")}` : "clean", {
-      handler: async context => {
-        context.debug("Cleaning plugins...")
-        context.setStep("Cleaning plugins...")
-
+    await this.runner.queue("plugins:clean", {
+      handler: async (context, { packages, plugins, profiles, settings }) => {
         let nPackages = 0
 
+        const pluginsPath = this.getPluginsPath()
         const profileInfo = profiles && settings.currentProfile && profiles[settings.currentProfile]
 
         forEach(plugins, file => {
-          file.issues = undefined
+          if (file.issues?.conflictingPackages) {
+            if (size(file.issues) === 1) {
+              file.issues = undefined
+            } else {
+              file.issues.conflictingPackages = undefined
+            }
+          }
         })
 
         if (profileInfo) {
@@ -427,8 +551,9 @@ export class Application {
             }
 
             for (const filePath of filePaths) {
+              const fileName = path.basename(filePath)
               forEach(plugins, (file, pluginPath) => {
-                if (path.basename(pluginPath) === filePath) {
+                if (path.basename(pluginPath) === fileName) {
                   conflictingPaths.push(pluginPath)
                   file.issues ??= {}
                   file.issues.conflictingPackages ??= []
@@ -440,13 +565,12 @@ export class Application {
             if (
               conflictingPaths.length &&
               !options.isSilent &&
-              (!options.isStartup || settings.startup.removeConflictingPlugins) &&
-              (!options.packageIds || options.packageIds.includes(packageId))
+              (!options.isStartup || settings.startup.removeConflictingPlugins)
             ) {
               const { confirmed, doNotAskAgain } = await showConfirmation(
                 packageInfo.name,
-                t("RemoveConflictingFilesModal:confirmation"),
-                t("RemoveConflictingFilesModal:description", {
+                i18n.t("RemoveConflictingFilesModal:confirmation"),
+                i18n.t("RemoveConflictingFilesModal:description", {
                   files: conflictingPaths.sort(),
                   pluginsBackup: DIRNAMES.pluginsBackup,
                 }),
@@ -455,17 +579,22 @@ export class Application {
 
               if (confirmed) {
                 for (const conflictingPath of conflictingPaths) {
-                  await this.backUpFile(context, conflictingPath)
+                  const originFullPath = path.resolve(pluginsPath, conflictingPath)
+                  const targetFullPath = path.resolve(this.getPluginsBackupPath(), conflictingPath)
+                  await fsMove(originFullPath, targetFullPath, { overwrite: true })
+                  await fsRemoveIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
                   delete plugins[conflictingPath]
                 }
 
                 context.debug(`Resolved ${conflictingPaths.length} conflicts`)
+
+                this.indexPlugins()
               } else {
                 context.debug(`Ignored ${conflictingPaths.length} conflicts`)
 
                 if (doNotAskAgain) {
                   settings.startup.removeConflictingPlugins = false
-                  this.writeSettings(context, settings)
+                  this.writeSettings()
                 }
               }
             }
@@ -490,13 +619,12 @@ export class Application {
         if (
           unsupportedPaths.length &&
           !options.isSilent &&
-          (!options.isStartup || settings.startup.removeUnsupportedPlugins) &&
-          !options.packageIds
+          (!options.isStartup || settings.startup.removeUnsupportedPlugins)
         ) {
           const { confirmed, doNotAskAgain } = await showConfirmation(
-            t("RemoveUnsupportedFilesModal:title"),
-            t("RemoveUnsupportedFilesModal:confirmation"),
-            t("RemoveUnsupportedFilesModal:description", {
+            i18n.t("RemoveUnsupportedFilesModal:title"),
+            i18n.t("RemoveUnsupportedFilesModal:confirmation"),
+            i18n.t("RemoveUnsupportedFilesModal:description", {
               files: unsupportedPaths.sort(),
               pluginsBackup: DIRNAMES.pluginsBackup,
             }),
@@ -505,128 +633,49 @@ export class Application {
 
           if (confirmed) {
             for (const unsupportedPath of unsupportedPaths) {
-              await this.backUpFile(context, unsupportedPath)
+              const originFullPath = path.resolve(pluginsPath, unsupportedPath)
+              const targetFullPath = path.resolve(this.getPluginsBackupPath(), unsupportedPath)
+              await fsMove(originFullPath, targetFullPath, { overwrite: true })
+              await fsRemoveIfEmptyRecursive(path.dirname(originFullPath), pluginsPath)
               delete plugins[unsupportedPath]
             }
 
             context.debug(`Removed ${unsupportedPaths.length} unsupported files`)
+
+            this.indexPlugins()
           } else {
             context.debug(`Ignored ${unsupportedPaths.length} unsupported files`)
 
             if (doNotAskAgain) {
               settings.startup.removeUnsupportedPlugins = false
-              this.writeSettings(context, settings)
+              this.writeSettings()
             }
           }
         }
 
-        this.indexPlugins()
+        this.updateState({ plugins: { $set: plugins } })
       },
       invalidate: true,
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ linker: info })
-      },
-      pool: "link",
+      label: "Checking plugins...",
+      reads: { packages: true, plugins: true, profiles: true, settings: true },
     })
   }
 
   /**
-   * Deletes a TXT log file.
+   * Deletes a package's TXT log file.
    */
   public async clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
-    const { packages } = await this.load()
-
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.logs) {
-      throw Error(`Variant '${packageId}#${variantId}' does not have logs`)
-    }
-
-    const logsPath = path.resolve(this.getPluginsPath(), variantInfo.logs)
-
-    await fsRemove(logsPath)
-  }
-
-  /**
-   * Removes all non-local variants not used by any profile.
-   */
-  public async clearUnusedPackages(): Promise<void> {
-    const { packages, profiles, profileOptions, settings } = await this.load()
-
-    await this.tasks.queue("clear:packages", {
-      handler: async context => {
-        context.debug("Removing unused packages...")
-        context.setStep("Removing unused packages...")
-
-        const packageStatus = collect(profiles, profileInfo => {
-          const { resultingStatus } = resolvePackages(
-            packages,
-            profileInfo,
-            profileOptions,
-            settings,
-          )
-
-          return resultingStatus
-        })
-
-        const unusedVariants = values(packages).flatMap(packageInfo => {
-          return values(packageInfo.variants)
-            .filter(
-              variantInfo =>
-                isInstalled(variantInfo) &&
-                !isLocal(variantInfo) &&
-                !packageStatus.some(
-                  status =>
-                    isIncluded(status[packageInfo.id]) &&
-                    isSelected(variantInfo, status[packageInfo.id]),
-                ),
-            )
-            .map(variantInfo => ({
-              packageId: packageInfo.id,
-              variantId: variantInfo.id,
-              patched: isPatched(variantInfo),
-            }))
-        })
-
-        if (unusedVariants.length) {
-          const { confirmed } = await showConfirmation(
-            i18n.t("ClearUnusedPackagesModal:title"),
-            i18n.t("ClearUnusedPackagesModal:confirmation"),
-            i18n.t("ClearUnusedPackagesModal:description", {
-              count: unusedVariants.length,
-              variants: unusedVariants
-                .map(
-                  ({ packageId, variantId, patched }) =>
-                    `${packageId}#${variantId}${patched ? " (patched)" : ""}`,
-                )
-                .sort(),
-            }),
-            false,
-            unusedVariants.some(({ patched }) => patched) ? "warning" : "question",
-          )
-
-          if (confirmed) {
-            let nVariants = 0
-            for (const { packageId, variantId } of unusedVariants) {
-              context.setProgress(nVariants++, unusedVariants.length)
-              await this.removeVariant(packageId, variantId)
-            }
-          }
-
-          await showSuccess(
-            i18n.t("ClearUnusedPackagesModal:title"),
-            i18n.t("ClearUnusedPackagesModal:success"),
-          )
-        } else {
-          await showSuccess(
-            i18n.t("ClearUnusedPackagesModal:title"),
-            i18n.t("ClearUnusedPackagesModal:description", { count: 0 }),
-          )
+    return this.runner.queue(`packages:logs:clear:${packageId}#${variantId}`, {
+      handler: async (_, { packages }) => {
+        const variantInfo = packages[packageId]?.variants[variantId]
+        if (variantInfo?.logs) {
+          // Logs are always relative to the root of Plugins (since DLLs must be at the root anyways)
+          const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
+          await fsRemove(logsPath)
         }
       },
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ loader: info })
-      },
-      pool: "main",
+      reads: { packages: [packageId] },
+      writes: { packages: [packageId] },
     })
   }
 
@@ -638,24 +687,22 @@ export class Application {
     cityId: CityID,
     description?: string,
   ): Promise<boolean> {
-    const { regions } = await this.load()
+    return this.runner.queue(`backups:create:${regionId}:${cityId}`, {
+      handler: async (context, { regions }) => {
+        const region = regions[regionId]
+        if (!region) {
+          throw Error(`Region '${regionId}' does not exist`)
+        }
 
-    const region = regions[regionId]
-    if (!region) {
-      throw Error(`Region '${regionId}' does not exist`)
-    }
+        const city = region.cities[cityId]
+        if (!city) {
+          throw Error(`City '${cityId}' does not exist`)
+        }
 
-    const city = region.cities[cityId]
-    if (!city) {
-      throw Error(`City '${cityId}' does not exist`)
-    }
+        if (hasBackup(city)) {
+          return false
+        }
 
-    if (hasBackup(city)) {
-      return false
-    }
-
-    await this.tasks.queue(`backup:create:${regionId}:${cityId}`, {
-      handler: async context => {
         const cityFullPath = this.getCityPath(regionId, cityId)
 
         const backupTime = new Date()
@@ -673,12 +720,12 @@ export class Application {
           version: city.version,
         })
 
-        this.sendStateUpdate({ regions })
+        this.updateState({ regions: { [regionId]: { cities: { [cityId]: { $set: city } } } } })
+        return true
       },
-      pool: `region:${regionId}`,
+      reads: { regions: [regionId] },
+      writes: { regions: [regionId] },
     })
-
-    return true
   }
 
   /**
@@ -687,17 +734,13 @@ export class Application {
    * @param fromProfileId ID of the profile to copy (create an empty profile otherwise)
    */
   public async createProfile(name: string, fromProfileId?: ProfileID): Promise<void> {
-    const { profiles, templates } = await this.load()
-
-    const profileId = createUniqueId(name, keys(profiles))
-
-    await this.tasks.queue(`create:${profileId}`, {
-      handler: async context => {
-        context.debug(`Creating profile '${profileId}'...`)
+    await this.runner.queue(`profiles:create@${Date.now() /* TODO: profileId */}`, {
+      handler: async (_, { profiles, profileTemplates }) => {
+        const profileId = createUniqueId(name, keys(profiles))
 
         const fromProfileInfo = fromProfileId
           ? fromProfileId.startsWith(TEMPLATE_PREFIX)
-            ? templates[fromProfileId]
+            ? profileTemplates[fromProfileId]
             : profiles[fromProfileId]
           : undefined
 
@@ -712,12 +755,15 @@ export class Application {
 
         profiles[profileId] = profileInfo
 
-        await this.writeProfileConfig(context, profileInfo)
+        this.updateState({ profiles: { $merge: { [profileId]: profileInfo } } })
+        this.writeProfileConfig(profileId)
+        this.switchProfile(profileId)
       },
-      pool: "main",
+      invalidate: true,
+      label: `Creating profile '${name}'...`,
+      reads: { profiles: true, profileTemplates: true },
+      writes: { profiles: true },
     })
-
-    await this.switchProfile(profileId)
   }
 
   /**
@@ -731,17 +777,17 @@ export class Application {
     name: string,
     fromVariantId: VariantID,
   ): Promise<void> {
-    const { categories, exemplarProperties, packages } = await this.load()
+    // Install the source variant if it is not already
+    await this.installVariant(packageId, fromVariantId)
 
-    const packageInfo = packages[packageId]
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
+    await this.runner.queue(`packages:create:${packageId}#${name /* TODO: variantId */}`, {
+      handler: async (context, { exemplarProperties, packages }) => {
+        const packageInfo = packages[packageId]
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
 
-    const variantId = createUniqueId(name, keys(packageInfo.variants))
-
-    await this.tasks.queue(`create:${packageId}#${variantId}`, {
-      handler: async context => {
+        const variantId = createUniqueId(name, keys(packageInfo.variants))
         const fromVariantInfo = packageInfo.variants[fromVariantId]
 
         if (!fromVariantInfo) {
@@ -749,11 +795,6 @@ export class Application {
         }
 
         context.info(`Creating variant '${packageId}#${variantId}'...`)
-
-        // Install the source variant if it is not already
-        if (!fromVariantInfo.installed) {
-          await this.installVariant(packageId, fromVariantId)
-        }
 
         const fromFiles = await fsQueryFiles(this.getVariantPath(packageId, fromVariantId), "**", {
           exclude: `${DIRNAMES.patches}/**`,
@@ -782,92 +823,47 @@ export class Application {
 
             await fsCopy(realPath, toPath)
           }
-
-          // Copy configs from the source variant
-          packageInfo.variants[variantId] = structuredClone({
-            ...fromVariantInfo,
-            assets: undefined,
-            files: fromVariantInfo.files?.map(({ patches, ...file }) => file),
-            id: variantId,
-            installed: true,
-            local: true,
-            name,
-            new: false,
-            release: undefined,
-            update: undefined,
-          })
-
-          await this.writePackageConfig(context, packageInfo, categories)
         } catch (error) {
           // If something goes wrong while installing, fully delete the new variant
           await fsRemove(this.getVariantPath(packageId, variantId))
-          delete packageInfo.variants[variantId]
           throw error
         }
+
+        // Copy configs from the source variant
+        const variantInfo = structuredClone({
+          ...fromVariantInfo,
+          assets: undefined,
+          files: fromVariantInfo.files?.map(({ patches, ...file }) => file), // Unset patches
+          id: variantId,
+          installed: true,
+          local: true,
+          name,
+          new: false,
+          release: undefined,
+          update: undefined,
+        })
+
+        packageInfo.variants[variantId] = variantInfo
+
+        this.updateState(
+          {
+            packages: {
+              [packageId]: {
+                variants: {
+                  [variantId]: {
+                    $set: variantInfo,
+                  },
+                },
+              },
+            },
+          },
+          true,
+        )
+
+        this.writePackageConfig(packageId)
       },
-      pool: `${packageId}#${variantId}`,
-    })
-  }
-
-  /**
-   * Edits a variant's metadata.
-   * @param packageId Package ID
-   * @param variantId Variant ID
-   * @param data Data to replace
-   */
-  public async editVariant(
-    packageId: PackageID,
-    variantId: VariantID,
-    data: EditableVariantInfo,
-  ): Promise<void> {
-    const { categories, packages, settings } = await this.load()
-
-    const packageInfo = packages[packageId]
-    if (!packageInfo) {
-      throw Error(`Unknown package '${packageId}'`)
-    }
-
-    const variantInfo = packageInfo.variants[variantId]
-    if (!variantInfo) {
-      throw Error(`Unknown variant '${packageId}#${variantId}'`)
-    }
-
-    await this.tasks.queue(`edit:${packageId}#${variantId}`, {
-      handler: async context => {
-        variantInfo.authors = data.authors
-        variantInfo.categories = data.categories
-        variantInfo.credits = data.credits?.length ? data.credits : undefined
-        variantInfo.deprecated = data.deprecated
-        variantInfo.description = data.description
-        variantInfo.experimental = data.experimental
-        variantInfo.images = data.images?.length ? data.images : undefined
-        variantInfo.name = data.name
-        variantInfo.repository = data.repository
-        variantInfo.summary = data.summary
-        variantInfo.support = data.support
-        variantInfo.thanks = data.thanks?.length ? data.thanks : undefined
-        variantInfo.thumbnail = data.thumbnail
-        variantInfo.url = data.url
-        variantInfo.version = data.version
-
-        await this.writePackageConfig(context, packageInfo, categories)
-
-        if (settings.db.path && !variantInfo.local) {
-          const ownerId = getOwnerId(packageId)
-          const dbPackagesPath = path.resolve(settings.db.path, DIRNAMES.dbPackages)
-
-          const config = await loadConfig<{ [packageId: PackageID]: PackageData }>(
-            dbPackagesPath,
-            ownerId,
-          )
-
-          if (config?.data[packageId]) {
-            config.data[packageId] = writePackageInfo(packageInfo, false, categories)
-            await writeConfig(dbPackagesPath, ownerId, config.data, ConfigFormat.YAML)
-          }
-        }
-      },
-      pool: `${packageId}#${variantId}`,
+      reads: { exemplarProperties: true, packages: [packageId] },
+      writes: { packages: [packageId] },
     })
   }
 
@@ -875,17 +871,15 @@ export class Application {
    * Downloads an asset.
    */
   protected async downloadAsset(assetInfo: AssetInfo, isTool?: boolean): Promise<string> {
-    const key = this.getDownloadKey(assetInfo)
+    const key = getDownloadKey(assetInfo)
     const downloadPath = this.getDownloadPath(assetInfo)
 
-    await this.tasks.queue(`download:${key}`, {
-      cache: true,
+    await this.runner.queue(`download:${key}`, {
       handler: async context => {
         const downloaded = await fsExists(downloadPath)
 
-        context.setStep(`Downloading ${key}...`)
-
         if (!downloaded) {
+          context.setLabel(`Downloading ${key}...`)
           const response = await get(assetInfo.url, {
             cookies: origin => {
               // Pass Simtropolis credentials as cookie at that origin
@@ -911,8 +905,7 @@ export class Application {
 
         assetInfo.downloaded[assetInfo.version] = true
 
-        context.setStep(`Extracting ${key}...`)
-        context.debug(`Extracting ${key}...`)
+        context.setLabel(`Extracting ${key}...`)
 
         await extractRecursively(downloadPath, {
           exePath: exe => this.getToolExePath(exe),
@@ -921,86 +914,163 @@ export class Application {
           onProgress: context.setProgress,
         })
       },
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ downloads: { [key]: info } })
-      },
-      pool: "download",
+      pools: ["downloads"],
+      reads: { assets: [assetInfo.id] },
+      writes: { downloads: [assetInfo.id] },
     })
 
     return downloadPath
   }
 
+  /**
+   * Edits a variant's metadata.
+   * @param packageId Package ID
+   * @param variantId Variant ID
+   * @param data Data to replace
+   */
+  public async editVariant(
+    packageId: PackageID,
+    variantId: VariantID,
+    data: EditableVariantInfo,
+  ): Promise<void> {
+    await this.runner.queue(`packages:edit:${packageId}#${variantId}`, {
+      handler: async (_, { categories, packages, settings }) => {
+        const packageInfo = packages[packageId]
+        if (!packageInfo) {
+          throw Error(`Unknown package '${packageId}'`)
+        }
+
+        const variantInfo = packageInfo.variants[variantId]
+        if (!variantInfo) {
+          throw Error(`Unknown variant '${packageId}#${variantId}'`)
+        }
+
+        variantInfo.authors = data.authors
+        variantInfo.categories = data.categories
+        variantInfo.credits = data.credits?.length ? data.credits : undefined
+        variantInfo.deprecated = data.deprecated
+        variantInfo.description = data.description
+        variantInfo.experimental = data.experimental
+        variantInfo.images = data.images?.length ? data.images : undefined
+        variantInfo.name = data.name
+        variantInfo.repository = data.repository
+        variantInfo.summary = data.summary
+        variantInfo.support = data.support
+        variantInfo.thanks = data.thanks?.length ? data.thanks : undefined
+        variantInfo.thumbnail = data.thumbnail
+        variantInfo.url = data.url
+        variantInfo.version = data.version
+
+        this.updateState(
+          {
+            packages: {
+              [packageId]: {
+                variants: {
+                  [variantId]: {
+                    $set: variantInfo,
+                  },
+                },
+              },
+            },
+          },
+          true,
+        )
+
+        this.writePackageConfig(packageId)
+
+        // Update local database
+        if (!settings.db.url && !variantInfo.local) {
+          const ownerId = getOwnerId(packageId)
+          const dbPackagesPath = path.join(settings.db.path, DIRNAMES.dbPackages)
+
+          const config = await loadConfig<{ [packageId: PackageID]: PackageData }>(
+            dbPackagesPath,
+            ownerId,
+          )
+
+          if (config?.data[packageId]) {
+            config.data[packageId] = writePackageInfo(packageInfo, false, categories)
+            await writeConfig(dbPackagesPath, ownerId, config.data, ConfigFormat.YAML)
+          }
+        }
+      },
+      reads: { categories: true, packages: [packageId], settings: true },
+      writes: { packages: [packageId] },
+    })
+  }
+
+  /**
+   * Focuses the main window (if it exists).
+   */
   protected focus(): void {
     this.mainWindow?.restore()
     this.mainWindow?.focus()
   }
 
+  /**
+   * Patches a DBPF file.
+   */
   protected async generatePatchedFile(
     context: TaskContext,
     originalFullPath: string,
     patchedFullPath: string,
-    patches: { [tgi in TGI]?: ExemplarDataPatch | null },
+    patches: ExemplarDataPatches,
     exemplarProperties: ExemplarProperties,
   ): Promise<DBPFInfo> {
-    context.info(`Patching ${path.basename(originalFullPath)}...`)
-
+    context.info(`Patching ${getFilename(originalFullPath)}...`)
     await fsCreate(path.dirname(patchedFullPath))
-    return fsOpen(originalFullPath, FileOpenMode.READ, async originalFile => {
-      const dbpf = await DBPF.fromFile(originalFile)
-      await dbpf.loadExemplars()
-      return dbpf.patchEntries(patchedFullPath, patches, exemplarProperties)
-    })
+    return DBPF.patchEntries(originalFullPath, patchedFullPath, patches, exemplarProperties)
   }
 
   /**
-   * Returns the absolute path to the 'Backups' directory.
+   * Returns the absolute path to the 'Backups' directory, containing save backups.
+   *
+   * TODO: Maybe synchronize our backups with Auto-Save DLL somehow?
    */
   public getBackupsPath(): string {
-    return path.resolve(this.gamePath, DIRNAMES.backups)
+    return path.join(this.gamePath, DIRNAMES.backups)
   }
 
   /**
    * Returns the absolute path to a city's backup file.
    */
   public getCityBackupPath(regionId: RegionID, cityId: CityID, file: string): string {
-    return path.resolve(this.getBackupsPath(), regionId, cityId, file)
+    return path.join(this.getBackupsPath(), regionId, cityId, file)
   }
 
   /**
    * Returns the absolute path to a city's save file.
    */
   public getCityPath(regionId: RegionID, cityId: CityID): string {
-    return path.resolve(this.getRegionsPath(), regionId, getCityFileName(cityId))
-  }
-
-  /**
-   * Returns the absolute path to the local database files:
-   * - When using a Git repository, returns the path to the local clone.
-   * - When using a local repository, returns the path to the repository itself.
-   */
-  public getDatabasePath(settings: Settings): string {
-    return settings.db.path ?? path.resolve(this.getRootPath(), DIRNAMES.db)
-  }
-
-  /**
-   * Returns the download cache key for an asset.
-   */
-  protected getDownloadKey(assetInfo: AssetInfo): string {
-    return getAssetKey(assetInfo.id, assetInfo.version)
+    return path.join(this.getRegionsPath(), regionId, getCityFileName(cityId))
   }
 
   /**
    * Returns the absolute path to the given asset's download cache.
    */
   public getDownloadPath(assetInfo: AssetInfo): string {
-    return path.resolve(this.getDownloadsPath(), this.getDownloadKey(assetInfo))
+    return path.join(this.getDownloadsPath(), getDownloadKey(assetInfo))
   }
 
   /**
-   * Returns the absolute path to the 'Downloads' directory.
+   * Returns the absolute path to the 'Manager/Downloads' directory, containing downloaded assets.
    */
   public getDownloadsPath(): string {
-    return path.resolve(this.getRootPath(), DIRNAMES.downloads)
+    return path.join(this.getManagerPath(), DIRNAMES.downloads)
+  }
+
+  /**
+   * Returns the absolute path to the game data directory, containing the 'Plugins' and 'Regions' directories.
+   */
+  public getGamePath(): string {
+    return this.gamePath
+  }
+
+  /**
+   * Returns a 32-bit hexadecimal hash string for a given patch.
+   */
+  protected getHash(value: object): string {
+    return toHex(hashCode(JSON.stringify(value)), 8)
   }
 
   /**
@@ -1018,108 +1088,125 @@ export class Application {
    * Returns the absolute path to the main log file.
    */
   public getLogsFile(): string {
-    return path.resolve(this.getLogsPath(), FILENAMES.logs)
+    return path.join(this.getLogsPath(), FILENAMES.logs)
   }
 
   /**
    * Returns the absolute path to the 'Logs' directory, containing manager logs.
    */
   public getLogsPath(): string {
-    return path.resolve(this.getRootPath(), DIRNAMES.logs)
+    return path.join(this.getManagerPath(), DIRNAMES.logs)
   }
 
   /**
-   * Returns the content of a TXT log file.
+   * Returns the absolute path to the 'Manager' directory.
+   */
+  public getManagerPath(): string {
+    return path.join(this.getGamePath(), DIRNAMES.manager)
+  }
+
+  /**
+   * Returns the content of a package's readme file.
+   */
+  public async getPackageDocs(
+    packageId: PackageID,
+    variantId: VariantID,
+    filePath: string,
+  ): Promise<{ iframe: string } | { md: string } | { text: string }> {
+    return this.runner.queue(`packages:docs:get:${packageId}#${variantId}:${filePath}`, {
+      handler: async (_, { packages }) => {
+        const variantInfo = packages[packageId]?.variants[variantId]
+        if (!variantInfo?.docs) {
+          throw Error(`Variant ${packageId}#${variantId} does not have documentation`)
+        }
+
+        const docsPath = path.join(this.getVariantPath(packageId, variantId), variantInfo.docs)
+        const docPath = path.join(docsPath, filePath)
+        const extension = getExtension(docPath)
+
+        switch (extension) {
+          case ".htm":
+          case ".html": {
+            const src = await fs.realpath(docPath)
+            const pathname = toPosix(path.relative(this.getManagerPath(), src))
+            return { iframe: `docs://sc4-plugin-manager/${pathname}` }
+          }
+
+          case ".md": {
+            const contents = await fsRead(docPath)
+            return { md: contents }
+          }
+
+          case ".txt": {
+            const contents = await fsRead(docPath)
+            return { text: contents }
+          }
+
+          // TODO: Support PDF?
+          default: {
+            throw Error(`Unsupported documentation format ${extension}`)
+          }
+        }
+      },
+      reads: { packages: [packageId] },
+    })
+  }
+
+  /**
+   * Returns the content of a package's TXT log file.
    */
   public async getPackageLogs(
     packageId: PackageID,
     variantId: VariantID,
   ): Promise<{ size: number; text: string } | null> {
-    const { packages } = await this.load()
+    return this.runner.queue(`packages:logs:get:${packageId}#${variantId}`, {
+      handler: async (_, { packages }) => {
+        const variantInfo = packages[packageId]?.variants[variantId]
+        if (variantInfo?.logs) {
+          // Logs are always relative to the root of Plugins (since DLLs must be at the root anyways)
+          const logsPath = path.join(this.getPluginsPath(), variantInfo.logs)
 
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.logs) {
-      throw Error(`Variant '${packageId}#${variantId}' does not have logs`)
-    }
+          try {
+            const size = await getFileSize(logsPath)
+            const text = await fsRead(logsPath)
+            return { size, text }
+          } catch (error) {
+            if (!isErrorCode(error, "ENOENT")) {
+              throw error
+            }
+          }
+        }
 
-    const logsPath = path.resolve(this.getPluginsPath(), variantInfo.logs)
-
-    try {
-      const size = await getFileSize(logsPath)
-      const text = await fsRead(logsPath)
-      return { size, text }
-    } catch (error) {
-      if (isErrorCode(error, "ENOENT")) {
         return null
-      }
-
-      throw error
-    }
+      },
+      reads: { packages: [packageId] },
+    })
   }
 
   /**
-   * Returns the absolute package to an installed package, by ID.
+   * Returns the absolute path to a package's installation directory.
    */
   public getPackagePath(packageId: PackageID): string {
-    return path.resolve(this.getPackagesPath(), packageId)
+    return path.join(this.getPackagesPath(), packageId)
   }
 
   /**
-   * Returns the absolute path to the 'Packages' directory, containing installed packages.
+   * Returns the absolute path to the 'Manager/Packages' directory, containing installed packages.
    */
   public getPackagesPath(): string {
-    return path.resolve(this.getRootPath(), DIRNAMES.packages)
+    return path.join(this.getManagerPath(), DIRNAMES.packages)
   }
 
   /**
-   * Returns the main README file for a given variant, as an HTML string.
+   * Returns the absolute path to the 'Manager/Packs' directory, containing generated DAT-packed packages.
    */
-  public async getPackageReadme(
-    packageId: PackageID,
-    variantId: VariantID,
-    filePath: string,
-  ): Promise<{ html?: string; md?: string }> {
-    const { packages } = await this.load()
-
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.readme) {
-      throw Error(`Variant '${packageId}#${variantId}' does not have documentation`)
-    }
-
-    const docPath = path.resolve(this.getVariantPath(packageId, variantId), DIRNAMES.docs, filePath)
-    const docExt = getExtension(docPath)
-
-    switch (docExt) {
-      case ".htm":
-      case ".html": {
-        const src = await fs.realpath(docPath)
-        const pathname = toPosix(path.relative(this.getRootPath(), src))
-        return {
-          html: `<iframe height="100%" width="100%" sandbox="allow-popups" src="docs://sc4-plugin-manager/${pathname}" title="Documentation"></iframe>`,
-        }
-      }
-
-      case ".md": {
-        const contents = await fs.readFile(docPath, "utf8")
-        return {
-          md: contents,
-        }
-      }
-
-      case ".txt": {
-        const contents = escapeHtml(await fs.readFile(docPath, "utf8"))
-        return {
-          html: `<pre style="height: 100%; margin: 0; overflow: auto; padding: 16px; white-space: pre-wrap">${contents}</pre>`,
-        }
-      }
-
-      // TODO: Support PDF?
-      default: {
-        throw Error(`Unsupported documentation format ${docExt}`)
-      }
-    }
+  public getPacksPath(): string {
+    return path.join(this.getManagerPath(), DIRNAMES.packs)
   }
 
+  /**
+   * Returns the absolute path to a variant's file, possibly patched, and possibly generating the patched file on the way.
+   */
   protected async getPatchedFile(
     context: TaskContext,
     packageId: PackageID,
@@ -1134,7 +1221,8 @@ export class Application {
       return originalFullPath
     }
 
-    const patchedFullPath = this.getVariantFilePath(packageId, variantId, fileInfo.path, patches)
+    const hash = this.getHash(patches)
+    const patchedFullPath = this.getVariantFilePath(packageId, variantId, fileInfo.path, hash)
     const isGenerated = await fsExists(patchedFullPath)
 
     if (!isGenerated) {
@@ -1151,273 +1239,139 @@ export class Application {
   }
 
   /**
-   * Returns the absolute path to the 'Plugins' directory.
+   * Returns the absolute path to the 'Plugins' directory. (We only ever deal with the 'Documents' one atm.)
    */
   public getPluginsPath(): string {
-    return path.resolve(this.gamePath, DIRNAMES.plugins)
+    return path.join(this.getGamePath(), DIRNAMES.plugins)
   }
 
   /**
    * Returns the absolute path to the 'Plugins (Backup)' directory.
    */
   public getPluginsBackupPath(): string {
-    return path.resolve(this.gamePath, DIRNAMES.pluginsBackup)
+    return path.join(this.getGamePath(), DIRNAMES.pluginsBackup)
   }
 
   /**
-   * Returns the absolute path to the 'Profiles' directory, containing profile configs.
+   * Returns the absolute path to the 'Manager/Profiles' directory, containing profile configs.
    */
   public getProfilesPath(): string {
-    return path.resolve(this.getRootPath(), DIRNAMES.profiles)
+    return path.join(this.getManagerPath(), DIRNAMES.profiles)
   }
 
   /**
-   * Returns the absolute path to the 'Regions' directory.
+   * Returns the absolute path to the 'Regions' directory, containing save files.
    */
   public getRegionsPath(): string {
-    return path.resolve(this.gamePath, DIRNAMES.regions)
+    return path.join(this.getGamePath(), DIRNAMES.regions)
   }
 
   /**
-   * Returns the absolute path to the 'Manager' directory.
+   * Returns the current application state.
+   *
+   * The application may emit state updates before the renderer thread is actually listening.
+   *
+   * This is called once by the renderer thread when it starts, in order to synchronize these missing updates.
    */
-  public getRootPath(): string {
-    return path.resolve(this.gamePath, DIRNAMES.root)
+  public getState(): ApplicationState {
+    return this.state
   }
 
   /**
-   * Returns the current state to synchronize with renderer.
+   * Returns the absolute path to a temporary path.
    */
-  public async getState(): Promise<ApplicationState> {
-    const {
-      authors,
-      categories,
-      collections,
-      exemplarProperties,
-      features,
-      index,
-      packages,
-      plugins,
-      profiles,
-      profileOptions,
-      regions,
-      settings,
-      templates,
-      tools,
-    } = await this.load()
-
-    return {
-      authors,
-      categories,
-      collections,
-      exemplarProperties,
-      features,
-      index,
-      packages,
-      plugins,
-      profiles,
-      profileOptions,
-      regions,
-      settings,
-      simtropolis: this.simtropolisSession?.sessionId
-        ? {
-            displayName: this.simtropolisSession.displayName,
-            sessionId: isDev() ? this.simtropolisSession.sessionId : undefined,
-            userId: this.simtropolisSession.userId,
-          }
-        : null,
-      templates,
-      tools,
-    }
-  }
-
-  /**
-   * Returns the absolute path to the temporary download directory.
-   * @param fullPath if provided, returns the temporary corresponding
-   */
-  public getTempPath(fullPath?: string): string {
-    if (fullPath) {
-      if (isChildPath(fullPath, this.getRootPath())) {
-        return path.resolve(this.getTempPath(), path.relative(this.getRootPath(), fullPath))
+  public getTempPath(absoluteOrRelativePath?: string): string {
+    if (absoluteOrRelativePath && isAbsolute(absoluteOrRelativePath)) {
+      if (isChildPath(absoluteOrRelativePath, this.getManagerPath())) {
+        return this.getTempPath(path.relative(this.getManagerPath(), absoluteOrRelativePath))
       }
 
-      if (isChildPath(fullPath, this.gamePath)) {
-        return path.resolve(this.getTempPath(), path.relative(this.gamePath, fullPath))
+      if (isChildPath(absoluteOrRelativePath, this.getGamePath())) {
+        return this.getTempPath(path.relative(this.getGamePath(), absoluteOrRelativePath))
       }
-
-      throw Error(`Cannot generate temporary path for ${fullPath}`)
     }
 
-    return path.resolve(this.getRootPath(), DIRNAMES.temp)
+    return path.join(this.getManagerPath(), DIRNAMES.temp, absoluteOrRelativePath ?? "")
+  }
+
+  /**
+   * Returns the absolute path to a tool's installation directory.
+   */
+  public getToolPath(toolId: ToolID, relativePath?: string): string {
+    return path.join(this.getToolsPath(), toolId, relativePath ?? "")
   }
 
   /**
    * Returns the path to the given tool's main executable, downloading the tool as needed.
    */
   public async getToolExePath(toolId: ToolID): Promise<string> {
-    const { assets, settings, tools } = await this.load()
-
-    const toolInfo = tools[toolId]
-    if (!toolInfo) {
-      throw Error(`Unknown tool '${toolId}'`)
-    }
-
-    if (toolInfo.asset) {
-      const assetInfo = assets[toolInfo.asset]
-      if (!assetInfo) {
-        throw Error(`Unknown asset '${toolInfo.asset}'`)
-      }
-
-      const downloadPath = this.getDownloadPath(assetInfo)
-      const downloaded = await fsExists(downloadPath)
-
-      if (!downloaded) {
-        await this.downloadAsset(assetInfo, true)
-      }
-
-      if (toolInfo.install) {
-        if (!settings.install?.path) {
-          throw Error("Missing installation path")
-        }
-
-        return path.resolve(settings.install.path, toolInfo.exe)
-      }
-
-      return path.resolve(downloadPath, toolInfo.exe)
-    }
-
-    return toolInfo.exe
+    const toolInfo = await this.installTool(toolId)
+    return this.getToolPath(toolId, toolInfo.exe)
   }
 
   /**
-   * Returns the absolute path to a variant's files.
+   * Returns the absolute path to the 'Manager/Tools' directory, containg installed tools.
    */
-  public getVariantPath(packageId: PackageID, variantId: VariantID): string {
-    return path.resolve(this.getPackagePath(packageId), variantId)
+  public getToolsPath(): string {
+    return path.join(this.getManagerPath(), DIRNAMES.tools)
   }
 
+  /**
+   * Returns the absolute path to a variant's file.
+   */
   public getVariantFilePath(
     packageId: PackageID,
     variantId: VariantID,
-    filePath: string,
-    patches?: Record<TGI, ExemplarDataPatch | undefined>,
+    relativePath: string,
+    /** 32-bit hexadecimal hash from {@link getHash} */
+    hash?: string,
   ): string {
-    if (patches) {
-      const hash = toHex(hashCode(JSON.stringify(patches)), 8)
-      const extension = path.extname(filePath)
+    if (hash) {
+      const extension = getExtension(relativePath)
 
-      return path.resolve(
+      return path.join(
         this.getVariantPath(packageId, variantId),
         DIRNAMES.patches,
-        `${filePath.slice(0, -extension.length)}.${hash}${extension}`,
+        replaceExtension(relativePath, `.${hash}${extension}`),
       )
     }
 
-    return path.resolve(this.getVariantPath(packageId, variantId), filePath)
+    return path.join(this.getVariantPath(packageId, variantId), relativePath)
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: function params generic
-  protected handle<Event extends keyof this & string, Args extends any[]>(
-    this: { [key in Event]: (...args: Args) => unknown },
+  /**
+   * Returns the absolute path to a variant's installation directory.
+   */
+  public getVariantPath(packageId: PackageID, variantId: VariantID): string {
+    return path.join(this.getPackagePath(packageId), variantId)
+  }
+
+  /**
+   * Links an IPC event from renderer thread to the instance method with the same name.
+   */
+  protected handle<Event extends keyof this & string>(
+    // biome-ignore lint/suspicious/noExplicitAny: function params generic
+    this: Record<Event, (...args: any[]) => unknown>,
     event: Event,
   ): void {
-    ipcMain.handle(event, (_, ...args: Args) => this[event](...args))
+    ipcMain.handle(event, (_, ...args) => this[event](...args))
   }
 
-  protected async indexPlugins(): Promise<Index> {
-    const state = await this.load()
-    const { maxis, plugins } = state
-
-    return this.tasks.queue("plugins:index", {
-      handler: async context => {
-        context.debug("Indexing plugins...")
+  protected async indexPlugins(): Promise<void> {
+    return this.runner.queue("plugins:index", {
+      handler: async (_, { maxis, plugins }) => {
         const index = calculateIndex({ ...maxis, ...plugins })
-        state.index = index
-        this.sendStateUpdate({ index, plugins })
-
-        return index
+        this.updateState({ $merge: { index, plugins } })
       },
       invalidate: true,
-      pool: "main",
+      label: "Indexing external plugins...",
+      reads: { maxis: true, plugins: true },
     })
   }
 
-  protected init(): void {
-    // Register message handlers
-    this.handle("check4GBPatch")
-    this.handle("checkDgVoodoo")
-    this.handle("cleanPlugins")
-    this.handle("clearPackageLogs")
-    this.handle("clearUnusedPackages")
-    this.handle("createBackup")
-    this.handle("createProfile")
-    this.handle("createVariant")
-    this.handle("editVariant")
-    this.handle("getPackageLogs")
-    this.handle("getPackageReadme")
-    this.handle("getState")
-    this.handle("installTool")
-    this.handle("installVariant")
-    this.handle("loadPluginFileEntries")
-    this.handle("loadPluginFileEntry")
-    this.handle("loadSavePreviewPicture")
-    this.handle("loadVariantFileEntries")
-    this.handle("loadVariantFileEntry")
-    this.handle("openAuthorURL")
-    this.handle("openDataRepository")
-    this.handle("openExecutableDirectory")
-    this.handle("openInstallationDirectory")
-    this.handle("openPackageConfig")
-    this.handle("openPackageFile")
-    this.handle("openPackageURL")
-    this.handle("openPluginFolder")
-    this.handle("openProfileConfig")
-    this.handle("openRegionFolder")
-    this.handle("openToolFile")
-    this.handle("openToolURL")
-    this.handle("patchPluginFileEntries")
-    this.handle("patchVariantFileEntries")
-    this.handle("reloadPlugins")
-    this.handle("removeBackup")
-    this.handle("removePluginFile")
-    this.handle("removeProfile")
-    this.handle("removeTool")
-    this.handle("removeVariant")
-    this.handle("restoreBackup")
-    this.handle("runTool")
-    this.handle("simtropolisLogin")
-    this.handle("simtropolisLogout")
-    this.handle("switchProfile")
-    this.handle("updateProfile")
-    this.handle("updateSave")
-    this.handle("updateSettings")
-
-    this.initLogs()
-    this.initCustomProtocols()
-
-    this.initApplicationMenu()
-    this.initMainWindow()
-
-    // Initialize Simtropolis session
-    getSimtropolisSession(this.browserSession).then(session => {
-      if (session?.sessionId) {
-        console.info("Logged in to Simtropolis")
-        this.simtropolisSession = session
-        this.sendStateUpdate({
-          simtropolis: {
-            displayName: session.displayName,
-            sessionId: isDev() ? session.sessionId : undefined,
-            userId: session.userId,
-          },
-        })
-      } else {
-        this.sendStateUpdate({ simtropolis: null })
-      }
-    })
-
-    this.checkDgVoodoo(true)
-  }
-
+  /**
+   * Initializes the main menu.
+   */
   protected initApplicationMenu(): void {
     Menu.setApplicationMenu(
       Menu.buildFromTemplate([
@@ -1449,43 +1403,13 @@ export class Application {
     )
   }
 
+  /**
+   * Initialize custom protocols.
+   *
+   * This is currently only used for showing HTML readme files as `<iframe>`.
+   */
   protected initCustomProtocols(): void {
-    handleDocsProtocol(this.getRootPath(), DOC_EXTENSIONS)
-  }
-
-  protected async initLinks(isReload?: boolean): Promise<Map<string, string>> {
-    return this.tasks.queue("link:init", {
-      cache: true,
-      handler: async context => {
-        context.setStep("Initializing links...")
-
-        const pluginsPath = this.getPluginsPath()
-
-        await fsCreate(pluginsPath)
-
-        const links = new Map<string, string>()
-
-        const symlinkPaths = await fsQueryFiles(pluginsPath, "**", {
-          symlinks: true,
-        })
-
-        let nFiles = 0
-        for (const symlinkPath of symlinkPaths) {
-          context.setProgress(nFiles++, symlinkPaths.length)
-          const targetPath = await fs.readlink(path.resolve(pluginsPath, symlinkPath))
-          links.set(symlinkPath, targetPath)
-        }
-
-        context.debug(`Done (found ${links.size} links)`)
-
-        return links
-      },
-      invalidate: isReload,
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ linker: info })
-      },
-      pool: "link",
-    })
+    handleDocsProtocol(this.getManagerPath(), DOC_EXTENSIONS) // TODO: could use some refactoring too tbh
   }
 
   protected initLogs(): void {
@@ -1520,121 +1444,169 @@ export class Application {
 
   /**
    * Install a tool.
+   * @param toolId Tool ID
    */
-  public async installTool(toolId: ToolID): Promise<string> {
-    const { assets, settings, tools } = await this.load()
-
-    return this.tasks.queue(`install:${toolId}`, {
-      handler: async context => {
+  public async installTool(toolId: ToolID): Promise<ToolInfo> {
+    return this.runner.queue(`tools:install:${toolId}`, {
+      handler: async (context, { assets, settings, tools }) => {
         const toolInfo = tools[toolId]
         if (!toolInfo?.asset) {
           throw Error(`Unknown tool '${toolId}'`)
         }
 
+        if (toolInfo.installed) {
+          return toolInfo
+        }
+
         try {
-          context.info(`Installing tool '${toolId}'...`)
           toolInfo.action = "installing"
           toolInfo.installed = false
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { [toolId]: { $set: toolInfo } } })
 
           const assetInfo = assets[toolInfo.asset]
           if (!assetInfo) {
             throw Error(`Unknown asset '${toolInfo.asset}'`)
           }
 
-          if (!settings.install?.path) {
-            throw Error("Missing installation path")
-          }
-
+          // Download the asset (we assume tools will always match exactly 1 asset)
           const downloadPath = await this.downloadAsset(assetInfo, true)
 
+          context.setLabel(`Installing ${toolInfo.name}...`)
+
+          // For tools it should always be safe to move the downloaded files directly to Tools, rather than having symbolic links to Downloads
+          const toolPath = this.getToolPath(toolId)
+          await fsMove(downloadPath, toolPath, { overwrite: true })
+
           try {
-            if (toolInfo.install) {
-              const basePath = path.resolve(downloadPath, toolInfo.install)
-              const relativePaths = await fsQueryFiles(basePath, "**", {
-                exclude: "**/4gb_patch.exe",
-              })
+            // Hardcoded installation process for some tools
+            switch (toolId) {
+              case ToolID.DgVoodoo: {
+                if (!settings.install?.path) {
+                  throw Error("Missing installation path")
+                }
 
-              for (const relativePath of relativePaths) {
-                const fullPath = path.resolve(basePath, relativePath)
-                const targetPath = path.resolve(settings.install.path, relativePath)
-                await fsMove(fullPath, targetPath, { overwrite: true })
-              }
-            }
+                const setupPath = path.join(toolPath, "DgVoodoo 2 SC4 Version")
+                const binPath = path.join(setupPath, "SimCity 4")
 
-            // Hardcoded installation process
-            if (toolId === "sc4pim") {
-              const binPath = path.dirname(path.resolve(downloadPath, toolInfo.exe))
+                // Backup SGR files
+                const filesToBackup = await fsQueryFiles(settings.install.path, "*.sgr")
+                for (const relativePath of filesToBackup) {
+                  await fsCopy(
+                    path.join(settings.install.path, relativePath),
+                    path.join(settings.install.path, replaceExtension(relativePath, ".sgr.backup")),
+                    { overwrite: true },
+                  )
+                }
 
-              const basePath = path.resolve(downloadPath, "Setup SC4 PIM-X (X-tool, X-PIM)")
-              const exePath = path.resolve(basePath, "01. Install SetupSC4PIM/SetupSC4PIMRC8c.exe")
+                // Move files to SC4 installation directory
+                const filesToMoveToInstall = await fsQueryFiles(binPath)
+                for (const relativePath of filesToMoveToInstall) {
+                  await fsMove(
+                    path.join(binPath, relativePath),
+                    path.join(settings.install.path, relativePath),
+                    { overwrite: true },
+                  )
+                }
 
-              // Extract from installer to bin
-              await extractClickTeam(exePath, binPath, {
-                exePath: exe => this.getToolExePath(exe),
-                logger: context,
-              })
+                // Move documentation to ~docs
+                const filesToMoveToDocs = await fsQueryFiles(setupPath, "**/*.txt")
+                for (const relativePath of filesToMoveToDocs) {
+                  await fsMove(
+                    path.join(setupPath, relativePath),
+                    path.join(toolPath, DIRNAMES.docs, relativePath),
+                    { overwrite: true },
+                  )
+                }
 
-              // Move DLLs and config overrides to bin
-              const filesToMoveToBin = await fsQueryFiles(basePath, [
-                "02. Copy into the SC4PIM install folder/*",
-                "04. These go into the Win System 32 and or SysWOW64 folder/*.dll",
-              ])
-
-              for (const relativePath of filesToMoveToBin) {
-                await fsMove(
-                  path.resolve(basePath, relativePath),
-                  path.resolve(binPath, path.basename(relativePath)),
-                  { overwrite: true },
+                // Create a symbolic link to executable
+                await fsSymlink(
+                  path.join(settings.install.path, toolInfo.exe),
+                  path.join(toolPath, path.basename(toolInfo.exe)),
                 )
+
+                // Remove setup file
+                await fsRemove(setupPath)
+
+                // Set DgVoodoo in settings
+                if (settings.install.voodoo) {
+                  settings.install.voodoo = true
+                  this.updateState({ $merge: { settings } })
+                  this.writeSettings()
+                }
+
+                break
               }
 
-              // Move documentation to roots
-              const filesToMoveToRoot = await fsQueryFiles(basePath, [
-                "05. Set-up SC4PIM-X to the right compatibility mode/*",
-                "06. SC4 PIM User Guide/*",
-              ])
+              case ToolID.SC4PIM: {
+                const binPath = path.dirname(path.join(toolPath, toolInfo.exe))
+                const setupPath = path.join(toolPath, "Setup SC4 PIM-X (X-tool, X-PIM)")
+                const exePath = path.join(setupPath, "01. Install SetupSC4PIM/SetupSC4PIMRC8c.exe")
 
-              for (const relativePath of filesToMoveToRoot) {
-                await fsMove(
-                  path.resolve(basePath, relativePath),
-                  path.resolve(downloadPath, path.basename(relativePath)),
-                  { overwrite: true },
-                )
+                // Extract from installer to bin
+                await extractClickTeam(exePath, binPath, {
+                  exePath: exe => this.getToolExePath(exe),
+                  logger: context,
+                })
+
+                // Move DLLs and config overrides to bin
+                const filesToMoveToBin = await fsQueryFiles(setupPath, [
+                  "02. Copy into the SC4PIM install folder/*",
+                  "04. These go into the Win System 32 and or SysWOW64 folder/*.dll",
+                ])
+
+                for (const relativePath of filesToMoveToBin) {
+                  await fsMove(
+                    path.join(setupPath, relativePath),
+                    path.join(binPath, path.basename(relativePath)),
+                    { overwrite: true },
+                  )
+                }
+
+                // Move documentation to docs
+                const filesToMoveToDocs = await fsQueryFiles(setupPath, [
+                  "05. Set-up SC4PIM-X to the right compatibility mode/*",
+                  "06. SC4 PIM User Guide/*",
+                ])
+
+                for (const relativePath of filesToMoveToDocs) {
+                  await fsMove(
+                    path.join(setupPath, relativePath),
+                    path.join(toolPath, DIRNAMES.docs, path.basename(relativePath)),
+                    { overwrite: true },
+                  )
+                }
+
+                // Remove setup file
+                await fsRemove(setupPath)
               }
-
-              // Remove setup file
-              await fsRemove(basePath)
             }
           } catch (error) {
             // If installation process fails, delete the download so it will not be treated as installed later
-            // TODO: Install to some Tools folder rather than directly within Downloads, so this will no longer be an issue
-            await fsRemove(downloadPath)
+            await fsRemove(toolPath)
             throw error
           }
 
           toolInfo.installed = true
-
-          if (toolId === "dgvoodoo") {
-            settings.install.voodoo = true
-            this.sendStateUpdate({ settings })
-          }
-
-          return downloadPath
         } finally {
           toolInfo.action = undefined
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { [toolId]: { $set: toolInfo } } })
         }
+
+        return toolInfo
       },
-      pool: toolId,
+      reads: { assets: true, settings: true, tools: [toolId] },
+      writes: { tools: [toolId] },
     })
   }
 
+  /**
+   * Installs a variant.
+   * @param packageId Package ID
+   * @param variantId Variant ID
+   */
   public async installVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
-    const { assets, categories, exemplarProperties, packages } = await this.load()
-
-    await this.tasks.queue(`install:${packageId}#${variantId}`, {
-      handler: async context => {
+    await this.runner.queue(`packages:install:${packageId}#${variantId}`, {
+      handler: async (context, { assets, exemplarProperties, packages }) => {
         const packageInfo = packages[packageId]
         if (!packageInfo) {
           throw Error(`Unknown package '${packageId}'`)
@@ -1646,7 +1618,6 @@ export class Application {
         }
 
         const isUpdating = !!variantInfo.installed
-
         const oldFiles = variantInfo.files
 
         try {
@@ -1658,7 +1629,17 @@ export class Application {
             variantInfo.action = "installing"
           }
 
-          this.sendPackageUpdate(packageInfo, { recompute: false })
+          this.updateState({
+            packages: {
+              [packageId]: {
+                variants: {
+                  [variantId]: {
+                    $set: variantInfo,
+                  },
+                },
+              },
+            },
+          })
 
           const variantPath = this.getVariantPath(packageId, variantId)
 
@@ -1677,6 +1658,8 @@ export class Application {
               return { asset, assetInfo, downloadPath }
             }),
           )
+
+          context.setLabel(`Installing ${packageInfo.name}...`)
 
           // Remove any previous installation files
           await fsRemove(variantPath)
@@ -1708,8 +1691,8 @@ export class Application {
                     context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
                     await fsSymlink(
-                      path.resolve(downloadPath, oldPath),
-                      path.resolve(variantPath, newPath),
+                      path.join(downloadPath, oldPath),
+                      path.join(variantPath, newPath),
                     )
                     includedPaths.add(newPath)
                   }
@@ -1734,8 +1717,8 @@ export class Application {
                     context.warn(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
                     await fsSymlink(
-                      path.resolve(downloadPath, oldPath),
-                      path.resolve(variantPath, newPath),
+                      path.join(downloadPath, oldPath),
+                      path.join(variantPath, newPath),
                     )
                     includedPaths.add(newPath)
                     docs.push(newPath)
@@ -1759,12 +1742,25 @@ export class Application {
                   if (includedPaths.has(newPath)) {
                     context.error(`Ignoring file ${oldPath} trying to unpack at ${newPath}`)
                   } else {
-                    await fsSymlink(
-                      path.resolve(downloadPath, oldPath),
-                      path.resolve(variantPath, newPath),
-                    )
+                    const { patches, ...rest } = file
+
+                    if (patches) {
+                      await this.generatePatchedFile(
+                        context,
+                        path.join(downloadPath, oldPath),
+                        path.join(variantPath, newPath),
+                        patches,
+                        exemplarProperties,
+                      )
+                    } else {
+                      await fsSymlink(
+                        path.join(downloadPath, oldPath),
+                        path.join(variantPath, newPath),
+                      )
+                    }
+
                     includedPaths.add(newPath)
-                    files.push(file)
+                    files.push(rest)
                   }
                 }
               })
@@ -1823,7 +1819,7 @@ export class Application {
             }
 
             // Rewrite config
-            await this.writePackageConfig(context, packageInfo, categories)
+            this.writePackageConfig(packageId)
           } catch (error) {
             // If something goes wrong while installing, fully delete the new variant
             await fsRemove(this.getVariantPath(packageId, variantId))
@@ -1833,23 +1829,46 @@ export class Application {
           }
         } finally {
           variantInfo.action = undefined
-          this.sendPackageUpdate(packageInfo)
+
+          this.updateState(
+            {
+              packages: {
+                [packageId]: {
+                  variants: {
+                    [variantId]: {
+                      $set: variantInfo,
+                    },
+                  },
+                },
+              },
+            },
+            true,
+          )
         }
+
+        return {}
       },
-      pool: `${packageId}#${variantId}`,
+      reads: { assets: true, exemplarProperties: true, packages: [packageId] },
+      writes: { packages: [packageId] },
     })
   }
 
-  protected async linkPackages(options: { packageId?: PackageID } = {}): Promise<void> {
-    const { exemplarProperties, features, packages, plugins, profiles, profileOptions, settings } =
-      await this.load()
-
-    const links = await this.initLinks()
-
-    await this.tasks.queue(options.packageId ? `link:${options.packageId}` : "link", {
-      handler: async context => {
-        context.debug("Linking packages...")
-
+  protected async linkPackages(): Promise<void> {
+    await this.runner.queue("packages:link", {
+      handler: async (
+        context,
+        {
+          exemplarProperties,
+          features,
+          links,
+          packages,
+          packs,
+          plugins,
+          profiles,
+          profileOptions,
+          settings,
+        },
+      ) => {
         if (!settings.currentProfile) {
           return
         }
@@ -1859,51 +1878,84 @@ export class Application {
           return
         }
 
+        const packsPath = this.getPacksPath()
         const pluginsPath = this.getPluginsPath()
 
-        context.setStep("Linking packages...")
+        /** Current version is part of unique variant key because links need to change when the variant is updated */
+        type VariantKey = `${PackageID}#${VariantID}@${string}`
 
+        /** Root links (DLL and INI files must be in Plugins root) */
+        const desiredRootLinks: {
+          [key in VariantKey]: Set<string>
+        } = {}
+
+        /** Normal links, grouped by priority and variants */
+        const desiredLinks: {
+          [priority in number]: {
+            [key in VariantKey]: Set<string>
+          }
+        } = {}
+
+        /** Packs to use */
+        const desiredPacks: {
+          [filename in string]?: PackInfo
+        } = {}
+
+        /** We will remove relevant links from here, so in the end it will only contain obsolete ones */
         const oldLinks = new Set(links.keys())
 
         let nCreated = 0
+        let nOverwritten = 0
         let nRemoved = 0
         let nUpdated = 0
-        let pluginsChanged = false
-
         let nPackages = 0
-        const packageIds = options.packageId ? [options.packageId] : keys(packages)
 
-        for (const packageId of packageIds) {
-          context.setProgress(nPackages++, packageIds.length)
+        const nTotalPackages = size(packages)
+        await forEachAsync(packages, async (packageInfo, packageId) => {
+          context.setProgress(nPackages++, nTotalPackages)
 
-          const packageInfo = packages[packageId]
-          if (!packageInfo) {
-            throw Error(`Unknown package '${packageId}'`)
-          }
-
-          const packageStatus = packageInfo?.status[profileInfo.id]
+          const packageStatus = packageInfo.status[profileInfo.id]
           if (!packageStatus?.included) {
-            continue
+            return
           }
 
           const variantId = packageStatus.variantId
-          const variantInfo = packageInfo?.variants[variantId]
+          const variantInfo = packageInfo.variants[variantId]
           if (!variantInfo?.files) {
             context.warn(`Variant '${packageId}#${variantId}' is not installed`)
-            continue
+            return
           }
 
-          const makeLink = async (fromFullPath: string, toRelativePath: string) => {
-            await fsSymlink(fromFullPath, path.resolve(pluginsPath, toRelativePath), {
-              overwrite: true,
-            })
-            links.set(toRelativePath, fromFullPath)
+          // Generate INI files from options (commonly used by DLLs)
+          type INI = { [section: string]: { [field: string]: OptionValue } }
+          const iniFiles: { [filename: string]: INI } = {}
+          if (variantInfo.options?.length) {
+            const optionValues = {
+              ...profileInfo.options,
+              ...profileInfo.packages[packageId]?.options,
+            }
+
+            for (const option of variantInfo.options) {
+              if (option.file) {
+                const filename = option.file
+                const [section, field] = option.id.split(".", 2)
+                if (field) {
+                  iniFiles[filename] ??= {}
+                  iniFiles[filename][section] ??= {}
+                  iniFiles[filename][section][field] = getOptionValue(option, optionValues)
+                } else {
+                  context.warn(
+                    `In variant '${packageId}#${variantId}': ${option.id} is not a valid option ID for INI generation (expected 'scope.field')`,
+                  )
+                }
+              }
+            }
           }
 
           const patterns = packageStatus.files?.map(pattern => globToRegex(pattern))
-
-          for (const file of variantInfo.files) {
-            const isFileIncluded = checkFile(
+          const variantPath = this.getVariantPath(packageId, variantId)
+          const includedFiles = variantInfo.files.filter(file =>
+            checkFile(
               file,
               packageId,
               variantInfo,
@@ -1913,323 +1965,373 @@ export class Application {
               settings,
               patterns,
               false,
-            )
+            ),
+          )
 
-            if (!isFileIncluded) {
-              continue
-            }
+          await Promise.all([
+            ...includedFiles.map(async file => {
+              const priority = file.priority ?? variantInfo.priority
 
-            const priority = file.priority ?? variantInfo.priority
+              const patchedFullPath = await this.getPatchedFile(
+                context,
+                packageId,
+                variantId,
+                file,
+                exemplarProperties,
+              )
 
-            const patchedFullPath = await this.getPatchedFile(
-              context,
-              packageId,
-              variantId,
-              file,
-              exemplarProperties,
-            )
+              const patchedRelativePath = toPosix(path.relative(variantPath, patchedFullPath)) // relative paths always posix for consistency
+              const key: VariantKey = `${packageId}#${variantId}@${variantInfo.version}`
+              const extension = getExtension(file.path)
 
-            // DLL and INI files must be in Plugins root
-            const targetRelativePath = file.path.match(/\.(dll|ini)$/i)
-              ? getFilename(file.path)
-              : joinPosix(getPluginsFolderName(priority), packageId, file.path)
-
-            oldLinks.delete(targetRelativePath)
-
-            if (plugins[targetRelativePath]) {
-              await this.backUpFile(context, targetRelativePath)
-              delete plugins[targetRelativePath]
-              pluginsChanged = true
-            }
-
-            const currentLinkPath = links.get(targetRelativePath)
-            if (currentLinkPath !== patchedFullPath) {
-              await makeLink(patchedFullPath, targetRelativePath)
-              if (currentLinkPath) {
-                nUpdated++
+              if (extension === ".dll" || extension === ".ini") {
+                desiredRootLinks[key] ??= new Set()
+                desiredRootLinks[key].add(patchedRelativePath)
               } else {
-                nCreated++
+                desiredLinks[priority] ??= {}
+                desiredLinks[priority][key] ??= new Set()
+                desiredLinks[priority][key].add(patchedRelativePath)
               }
-            }
+            }),
+            ...entries(iniFiles).map(async ([filename, data]) => {
+              await fsWrite(path.join(this.getPluginsPath(), filename), writeINI(data))
+            }),
+          ])
+        })
+
+        // Find usable existing packs
+        forEach(packs, (pack, filename) => {
+          const { files, priority } = pack
+
+          const isPackIncluded = keys(files).every(key =>
+            files[key]?.every(path => desiredLinks[priority]?.[key]?.has(path)),
+          )
+
+          // TODO: Remove obsolete packs
+          if (!isPackIncluded) {
+            // fsRemove(path.join(packsPath, filename))
+            // delete packs[filename]
+            // this.writePacks()
+            return
           }
 
-          if (pluginsChanged) {
-            this.indexPlugins()
-          }
-
-          // Generate INI files
-          if (variantInfo.options) {
-            const iniFiles: { [filename: string]: OptionInfo[] } = {}
-            for (const option of variantInfo.options) {
-              if (option.file) {
-                iniFiles[option.file] ??= []
-                iniFiles[option.file].push(option)
+          // If pack is included, replace the individual links with it
+          desiredPacks[filename] = pack
+          forEach(files, (paths, key) => {
+            if (desiredLinks[priority][key].size === paths.length) {
+              delete desiredLinks[priority][key]
+            } else {
+              for (const path of paths) {
+                desiredLinks[priority][key].delete(path)
               }
             }
+          })
+        })
 
-            for (const filename in iniFiles) {
-              let ini = ""
-              let lastSection = ""
-              for (const option of iniFiles[filename]) {
-                const [section, field] = option.id.split(".", 2)
-                if (section !== lastSection) {
-                  ini += `[${section}]\n`
-                  lastSection = section
-                }
+        let nLinks = 0
+        const nTotalLinks =
+          sumBy(values(desiredRootLinks), paths => paths.size) +
+          sumBy(values(desiredLinks), priorityLinks =>
+            sumBy(values(priorityLinks), paths => paths.size),
+          ) +
+          size(desiredPacks)
 
-                const value = getOptionValue(option, {
-                  ...profileInfo.options,
-                  ...profileInfo.packages[packageId]?.options,
-                })
+        // Create root links (never packed)
+        await forEachAsync(desiredRootLinks, async (paths, variantKey) => {
+          const [packageAndVariant] = split(variantKey, "@")
+          const [packageId, variantId] = split(packageAndVariant, "#")
 
-                ini += `${field}=${value}\n`
-              }
+          for (const path of paths) {
+            await makeLink(this.getVariantFilePath(packageId, variantId, path), getFilename(path))
+          }
+        })
 
-              if (ini) {
-                const targetPath = path.resolve(pluginsPath, filename)
-                await fsWrite(targetPath, ini)
-              }
+        // Create normal links
+        await forEachAsync(desiredLinks, async (priorityLinks, priority) => {
+          const priorityFolder = getPluginsFolderName(Number(priority))
+
+          // TODO: Generate packs
+          // if (Number(true) === 0) {
+          //   let fileCount = sumBy(values(priorityLinks), paths => paths.size)
+          //   while (fileCount >= 30) {
+          //     context.setLabel(`Packing ${priorityFolder}...`)
+
+          //     // TODO: Improve splitting logic
+          //     let packCount = 0
+          //     const packed: typeof priorityLinks = {}
+          //     for (const [variantKey, paths] of entries(priorityLinks)) {
+          //       delete priorityLinks[variantKey]
+          //       packed[variantKey] = paths
+          //       packCount += paths.size
+          //       fileCount -= paths.size
+
+          //       if (packCount > 100) {
+          //         break
+          //       }
+          //     }
+
+          //     const filename = `Pack-${priority.padStart(3, "0")}-${toHex(randomInt(2 ** 32), 8)}.dat`
+          //     const pack: PackInfo = {
+          //       files: mapValues(packed, toArray),
+          //       priority: Number(priority),
+          //     }
+
+          //     context.debug(`Packing ${filename}...`)
+          //     await fsCreate(packsPath)
+          //     await DBPF.packFiles(
+          //       context,
+          //       collect(pack.files, (paths, variantKey) => {
+          //         const [packageAndVariant] = split(variantKey, "@")
+          //         const [packageId, variantId] = split(packageAndVariant, "#")
+          //         return paths.map(path => this.getVariantFilePath(packageId, variantId, path))
+          //       }).flat(),
+          //       path.join(packsPath, filename),
+          //     )
+
+          //     packs[filename] = pack
+          //     desiredPacks[filename] = pack
+          //     this.writePacks()
+          //   }
+          // }
+
+          await forEachAsync(priorityLinks, async (paths, variantKey) => {
+            const [packageAndVariant] = split(variantKey, "@")
+            const [packageId, variantId] = split(packageAndVariant, "#")
+
+            for (const relativePath of paths) {
+              await makeLink(
+                this.getVariantFilePath(packageId, variantId, relativePath),
+                path.posix.join(
+                  priorityFolder,
+                  packageId,
+                  relativePath.replace(`${DIRNAMES.patches}/`, ""),
+                ),
+              )
+            }
+          })
+        })
+
+        // Create pack links
+        await forEachAsync(desiredPacks, async (pack, filename) => {
+          await makeLink(
+            path.join(packsPath, filename),
+            path.posix.join(getPluginsFolderName(pack.priority), filename),
+          )
+        })
+
+        async function makeLink(linkFullPath: string, pluginRelativePath: string): Promise<void> {
+          context.abortCheck()
+          context.setProgress(nLinks++, nTotalLinks)
+
+          // Overwrite existing files - TODO: Back it up? What about directory?
+          if (plugins[pluginRelativePath]) {
+            delete plugins[pluginRelativePath]
+            nOverwritten++
+          }
+
+          // Link is not obsolete (so it will not be deleted)
+          oldLinks.delete(pluginRelativePath)
+
+          // Make a system call only if link has changed
+          const currentLinkPath = links.get(pluginRelativePath)
+          if (currentLinkPath !== linkFullPath) {
+            const pluginFullPath = path.join(pluginsPath, pluginRelativePath)
+            await fsSymlink(linkFullPath, pluginFullPath, { overwrite: true })
+            links.set(pluginRelativePath, linkFullPath)
+            if (currentLinkPath) {
+              nUpdated++
+            } else {
+              nCreated++
             }
           }
         }
 
+        if (nOverwritten) {
+          this.indexPlugins()
+        }
+
         // Remove obsolete links
-        if (!options.packageId) {
-          for (const relativePath of oldLinks) {
-            const fullPath = path.resolve(pluginsPath, relativePath)
-            await fsRemove(fullPath)
-            await fsRemoveIfEmptyRecursive(path.dirname(fullPath), pluginsPath)
-            links.delete(relativePath)
-            nRemoved++
-          }
+        for (const pluginRelativePath of oldLinks) {
+          context.abortCheck()
+          context.setProgress(nRemoved++, oldLinks.size)
+
+          const fullPath = path.join(pluginsPath, pluginRelativePath)
+          await fsRemove(fullPath)
+          await fsRemoveIfEmptyRecursive(path.dirname(fullPath), pluginsPath) // TODO: Optimize
+          links.delete(pluginRelativePath)
         }
 
         context.debug(`Done (added ${nCreated}, removed ${nRemoved}, updated ${nUpdated})`)
       },
       invalidate: true,
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ linker: info })
+      label: "Linking packages...",
+      reads: {
+        exemplarProperties: true,
+        features: true,
+        links: true,
+        packages: true,
+        packs: true,
+        plugins: true,
+        profileOptions: true,
+        profiles: true,
+        settings: true,
       },
-      pool: "link",
+      writes: { links: true, packs: true },
     })
   }
 
-  /**
-   * Loads configs and user data.
-   * @param isReload whether to force reloading all data, ignoring cache
-   */
-  protected async load(isReload?: boolean): Promise<Loaded> {
-    return this.tasks.queue<Loaded>("load", {
-      cache: true,
-      handler: async context => {
-        const downloadsPromise = loadDownloadedAssets(context, this.getDownloadsPath())
-        const regionsPromise = loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
-
-        // Launch link initialization in the background
-        this.initLinks(isReload)
-
-        // Creating window
-        this.initMainWindow()
-
-        // Load profiles...
-        context.setStep("Loading profiles...")
-        const profiles = await loadProfiles(context, this.getProfilesPath())
-        this.sendStateUpdate({ profiles })
-
-        // Load settings...
-        const repository = env.DATA_REPOSITORY
-        context.setStep("Loading settings...")
-        const settings = await loadSettings(
-          context,
-          this.getRootPath(),
-          this.getPluginsPath(),
-          this.getRegionsPath(),
-          isURL(repository) ? repository : path.resolve(__dirname, "../..", repository),
-          profiles,
-        )
-
-        const dbPath = this.getDatabasePath(settings)
-
-        // Rewrite modified settings...
-        this.writeSettings(context, settings)
-
-        const profileInfo = settings.currentProfile ? profiles[settings.currentProfile] : undefined
-
-        // Wait for database update...
-        if (settings.db.url) {
-          context.setStep("Updating database...")
-          await this.updateDatabase(settings.db.url, dbPath, isReload)
+  protected async load(): Promise<void> {
+    // Load and send everything to renderer
+    await Promise.all([
+      // Ordered by rough importance (first registered tasks will be picked first)
+      this.loadSettings().then(settings => {
+        this.updateState({ $merge: { settings } })
+      }),
+      this.loadProfiles().then(profiles => {
+        this.updateState({ $merge: { profiles } })
+      }),
+      this.loadLocalPackages().then(packages => {
+        if (!this.state.packages) {
+          // do not set local packages alone when reloading
+          this.updateState({ $merge: { packages } }, true)
         }
+      }),
+      this.loadPackages().then(({ features, packages }) => {
+        this.updateState({ $merge: { features, packages } }, true)
+      }),
+      this.loadAuthors().then(authors => {
+        this.updateState({ $merge: { authors } })
+      }),
+      this.loadCategories().then(categories => {
+        this.updateState({ $merge: { categories } })
+      }),
+      this.loadCollections().then(collections => {
+        this.updateState({ $merge: { collections } })
+      }),
+      this.loadExemplarProperties().then(exemplarProperties => {
+        this.updateState({ $merge: { exemplarProperties } })
+      }),
+      this.loadProfileOptions().then(profileOptions => {
+        this.updateState({ $merge: { profileOptions } })
+      }),
+      this.loadProfileTemplates().then(templates => {
+        this.updateState({ $merge: { templates } })
+      }),
+      this.loadTools().then(tools => {
+        this.updateState({ $merge: { tools } })
+      }),
+      this.loadRegions().then(regions => {
+        this.updateState({ $merge: { regions } })
+      }),
+      // Startup checks last so we will not delay others accidentally
+      this.linkPackages(),
+      this.check4GBPatch(true),
+      this.checkDgVoodoo(true),
+      this.checkPlugins({ isStartup: true }),
+      this.indexPlugins(),
+    ])
+  }
 
-        // Load authors...
-        context.setStep("Loading authors...")
-        const authors = await loadAuthors(context, dbPath)
-        this.sendStateUpdate({ authors })
-
-        // Load categories...
-        context.setStep("Loading categories...")
-        const categories = await loadCategories(context, dbPath)
-        this.sendStateUpdate({ categories })
-
-        // Load profile options...
-        context.setStep("Loading profile options...")
-        const profileOptions = await loadProfileOptions(context, dbPath)
-        this.sendStateUpdate({ profileOptions })
-
-        // Load local packages...
-        context.setStep("Loading local packages...")
-        const localPackages = await loadLocalPackages(context, this.getPackagesPath(), categories)
-
-        if (!isReload) {
-          this.sendStateUpdate({ packages: localPackages })
-        }
-
-        context.setStep("Loading remote packages...")
-        const downloadedAssets = await downloadsPromise
-
-        // Load remote packages...
-        const { assets, packages } = await loadRemotePackages(
-          context,
-          dbPath,
-          categories,
-          localPackages,
-          downloadedAssets,
-        )
-
-        if (!isReload || !profileInfo) {
-          this.sendStateUpdate({ packages })
-        }
-
-        let features: Features = {}
-
-        // Resolving packages if profile exists
-        if (profileInfo) {
-          // Resolve package status and dependencies (will also trigger linking)
-          features = this.recalculatePackages(packages, profileInfo, profileOptions, settings)
-          this.sendStateUpdate({ features, packages })
-        }
-
-        context.setStep("Indexing external plugins...")
-
-        const exemplarProperties = await loadExemplarProperties(context, dbPath)
-        this.sendStateUpdate({ exemplarProperties })
-
-        let maxisPromise: Promise<FileContents> | undefined
-        if (settings.install?.path) {
-          maxisPromise = loadMaxisContents(context, this.getRootPath(), settings.install?.path, {
-            categories,
-            reload: settings.startup.reloadMaxis,
-          })
-        }
-
-        const pluginsPromise = loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
-          categories,
-          reload: settings.startup.reloadPlugins,
-        })
-
-        const collections = await loadCollections(context, dbPath)
-        const tools = await loadTools(context, dbPath, assets)
-        const templates = await loadProfileTemplates(context, dbPath)
-        this.sendStateUpdate({ collections, templates, tools })
-
-        const regions = await regionsPromise
-        this.sendStateUpdate({ regions })
-
-        const maxis = (await maxisPromise) ?? {}
-        const plugins = await pluginsPromise
-        const index = calculateIndex({ ...maxis, ...plugins })
-        this.sendStateUpdate({ index, plugins })
-        this.cleanPlugins({ isStartup: true })
-
-        return {
-          assets,
-          authors,
-          categories,
-          collections,
-          exemplarProperties,
-          features,
-          index,
-          maxis,
-          packages,
-          plugins,
-          profiles,
-          profileOptions,
-          regions,
-          settings,
-          templates,
-          tools,
-        }
+  protected async loadAssets(): Promise<Assets> {
+    return this.runner.queue("load:assets", {
+      handler: (context, { db, downloads }) => {
+        return loadRemoteAssets(context, db.path, downloads)
       },
-      invalidate: isReload,
-      onStatusUpdate: info => {
-        this.sendStatusUpdate({ loader: info })
-      },
-      pool: "main",
+      label: "Loading assets...",
+      reads: { db: true, downloads: true },
+      writes: { assets: true },
     })
   }
 
-  public async loadPluginFileEntries(pluginPath: string): Promise<DBPFInfo> {
-    return this.tasks.queue(`plugins:load:${pluginPath}`, {
-      handler: async () => {
-        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
+  protected async loadAuthors(): Promise<Authors> {
+    return this.runner.queue("load:authors", {
+      handler: async (context, { db }) => {
+        return loadAuthors(context, db.path)
+      },
+      label: "Loading authors...",
+      reads: { db: true },
+      writes: { authors: true },
+    })
+  }
 
-        return fsOpen(fullPath, FileOpenMode.READ, async patchedFile => {
-          const dbpf = await DBPF.fromFile(patchedFile)
-          return dbpf.loadExemplars()
+  protected async loadCategories(): Promise<Categories> {
+    return this.runner.queue("load:categories", {
+      handler: async (context, { db }) => {
+        return loadCategories(context, db.path)
+      },
+      label: "Loading categories...",
+      reads: { db: true },
+      writes: { categories: true },
+    })
+  }
+
+  protected async loadCollections(): Promise<Collections> {
+    return this.runner.queue("load:collections", {
+      handler: async (context, { db }) => {
+        return loadCollections(context, db.path)
+      },
+      label: "Loading collections...",
+      reads: { db: true },
+      writes: { collections: true },
+    })
+  }
+
+  protected async loadDownloadedAssets(): Promise<{ [id in AssetID]?: string[] }> {
+    return this.runner.queue("load:downloads", {
+      handler: context => {
+        return loadDownloadedAssets(context, this.getDownloadsPath())
+      },
+      writes: { downloads: true },
+    })
+  }
+
+  protected async loadExemplarProperties(): Promise<ExemplarProperties> {
+    return this.runner.queue("load:properties", {
+      handler: async (context, { db }) => {
+        return loadExemplarProperties(context, db.path)
+      },
+      label: "Loading exemplar properties...",
+      reads: { db: true },
+      writes: { exemplarProperties: true },
+    })
+  }
+
+  protected async loadLocalPackages(): Promise<Packages> {
+    return this.runner.queue("load:packages:local", {
+      handler: (context, { categories }) => {
+        return loadLocalPackages(context, this.getPackagesPath(), categories)
+      },
+      label: "Loading local packages...",
+      reads: { categories: true },
+      writes: { localPackages: true },
+    })
+  }
+
+  protected async loadMaxisContents(): Promise<FileContents> {
+    return this.runner.queue("load:maxis", {
+      handler: async (context, { categories, settings }) => {
+        if (!settings.install?.path) {
+          return {}
+        }
+
+        return loadMaxisContents(context, this.getManagerPath(), settings.install.path, {
+          categories,
+          reload: settings.startup?.reloadMaxis,
         })
       },
-      pool: `plugins:${pluginPath}`,
+      label: "Indexing Maxis files...",
+      reads: { categories: true, settings: true },
+      writes: { maxis: true },
     })
   }
 
-  public async loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFLoadedEntryInfo> {
-    return this.tasks.queue(`plugins:load:${pluginPath}#${entryId}`, {
-      handler: async () => {
-        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
-
-        return fsOpen(fullPath, FileOpenMode.READ, async file => {
-          const dbpf = await DBPF.fromFile(file)
-          return dbpf.getEntry(entryId)
-        })
-      },
-      pool: `plugins:${pluginPath}`,
-    })
-  }
-
-  public async loadSavePreviewPicture(
-    regionId: RegionID,
-    cityId: CityID,
-    backupFile?: string,
-  ): Promise<DBPFLoadedEntryInfo<DBPFDataType.PNG>> {
-    return this.tasks.queue(
-      `region:preview:${regionId}:${cityId}${backupFile ? `:${backupFile}` : ""}`,
-      {
-        handler: async () => {
-          const fullPath = backupFile
-            ? this.getCityBackupPath(regionId, cityId, backupFile)
-            : this.getCityPath(regionId, cityId)
-
-          const entryId = "8a2482b9-4a2482bb-00000000" as TGI // TODO
-          return fsOpen(fullPath, FileOpenMode.READ, async file => {
-            const dbpf = await DBPF.fromFile(file)
-            const entry = await dbpf.getEntry(entryId, DBPFDataType.PNG)
-            return entry
-          })
-        },
-        pool: `region:${regionId}`,
-      },
-    )
-  }
-
-  public async loadVariantFileEntries(
+  public async loadPackageFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFInfo> {
-    const { exemplarProperties, packages } = await this.load()
-
-    return this.tasks.queue(`load:${packageId}#${variantId}/${filePath}`, {
-      handler: async context => {
+    return this.runner.queue(`packages:read:${packageId}#${variantId}/${filePath}`, {
+      handler: async (context, { exemplarProperties, packages }) => {
         const variantInfo = packages[packageId]?.variants[variantId]
         if (!variantInfo?.files) {
           throw Error(`Variant '${packageId}#${variantId}' is not installed`)
@@ -2253,20 +2355,18 @@ export class Application {
           return dbpf.loadExemplars()
         })
       },
-      pool: `${packageId}#${variantId}`,
+      reads: { exemplarProperties: true, packages: [packageId] },
     })
   }
 
-  public async loadVariantFileEntry(
+  public async loadPackageFileEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
   ): Promise<DBPFLoadedEntryInfo> {
-    const { exemplarProperties, packages } = await this.load()
-
-    return this.tasks.queue(`load:${packageId}#${variantId}/${filePath}#${entryId}`, {
-      handler: async context => {
+    return this.runner.queue(`packages:read:${packageId}#${variantId}/${filePath}#${entryId}`, {
+      handler: async (context, { exemplarProperties, packages }) => {
         const variantInfo = packages[packageId]?.variants[variantId]
         if (!variantInfo?.files) {
           throw Error(`Variant '${packageId}#${variantId}' is not installed`)
@@ -2288,256 +2388,441 @@ export class Application {
         )
 
         // Load current data
-        const entry = await fsOpen(patchedFullPath, FileOpenMode.READ, async patchedFile => {
-          const dbpf = await DBPF.fromFile(patchedFile)
-          return dbpf.getEntry(entryId)
-        })
+        const entry = await DBPF.loadEntry(patchedFullPath, entryId)
 
         // Load original data as needed
         if (originalFullPath !== patchedFullPath) {
-          entry.original = await fsOpen(originalFullPath, FileOpenMode.READ, async originalFile => {
-            const dbpf = await DBPF.fromFile(originalFile)
-            if (dbpf.entries[entryId]) {
-              const originalEntry = await dbpf.getEntry(entryId)
-              return originalEntry.data
-            }
-          })
+          const originalEntry = await DBPF.loadEntryOptional(originalFullPath, entryId, entry.type)
+          entry.original = originalEntry?.data
         }
 
         return entry
       },
-      pool: `${packageId}#${variantId}`,
+      reads: { exemplarProperties: true, packages: [packageId] },
+    })
+  }
+
+  protected async loadPackages(): Promise<{ features: Features; packages: Packages }> {
+    return this.runner.queue("load:packages", {
+      handler: async (
+        context,
+        { assets, categories, db, localPackages, profileOptions, profiles, settings },
+      ) => {
+        const packages = await loadRemotePackages(
+          context,
+          db.path,
+          categories,
+          localPackages,
+          assets,
+        )
+
+        const profileId = settings.currentProfile
+
+        if (profileId && profiles[profileId]) {
+          return this.resolvePackages(packages, profiles[profileId], profileOptions, settings)
+        }
+
+        return { features: {}, packages }
+      },
+      label: "Loading remote packages...",
+      reads: {
+        assets: true,
+        categories: true,
+        db: true,
+        localPackages: true,
+        profileOptions: true,
+        profiles: true,
+        settings: true,
+      },
+      writes: { packages: true },
+    })
+  }
+
+  protected async loadPacks(): Promise<Packs> {
+    return this.runner.queue("load:packs", {
+      handler: async context => {
+        const packs = await loadPacks(context, this.getManagerPath())
+
+        return packs
+      },
+      writes: { packs: true },
+    })
+  }
+
+  public async loadPluginFileEntries(pluginPath: string): Promise<DBPFInfo> {
+    return this.runner.queue(`plugins:read:${pluginPath}`, {
+      handler: async () => {
+        const basePath = this.getPluginsPath()
+        const fullPath = path.join(basePath, pluginPath)
+        if (!isChildPath(fullPath, basePath)) {
+          throw Error("Invalid path")
+        }
+
+        return DBPF.loadExemplars(fullPath)
+      },
+      reads: { plugins: true },
+    })
+  }
+
+  public async loadPluginFileEntry(pluginPath: string, entryId: TGI): Promise<DBPFLoadedEntryInfo> {
+    return this.runner.queue(`plugins:read:${pluginPath}#${entryId}`, {
+      handler: async () => {
+        const basePath = this.getPluginsPath()
+        const fullPath = path.join(basePath, pluginPath)
+        if (!isChildPath(fullPath, basePath)) {
+          throw Error("Invalid path")
+        }
+
+        return DBPF.loadEntry(fullPath, entryId)
+      },
+      reads: { plugins: true },
+    })
+  }
+
+  protected async loadPlugins(): Promise<{ links: Map<string, string>; plugins: Plugins }> {
+    return this.runner.queue("load:plugins", {
+      handler: (context, { categories, settings }) => {
+        return loadPlugins(context, this.getManagerPath(), this.getPluginsPath(), {
+          categories,
+          reload: settings.startup?.reloadPlugins,
+        })
+      },
+      label: "Indexing external plugins...",
+      reads: { categories: true, settings: true },
+      writes: { plugins: true },
+    })
+  }
+
+  protected async loadProfileOptions(): Promise<OptionInfo[]> {
+    return this.runner.queue("load:options", {
+      handler: async (context, { db }) => {
+        return loadProfileOptions(context, db.path)
+      },
+      label: "Loading profile options...",
+      reads: { db: true },
+      writes: { profileOptions: true },
+    })
+  }
+
+  protected async loadProfileTemplates(): Promise<Profiles> {
+    return this.runner.queue("load:templates", {
+      handler: async (context, { db }) => {
+        return loadProfileTemplates(context, db.path)
+      },
+      label: "Loading profile templates...",
+      reads: { db: true },
+      writes: { profileTemplates: true },
+    })
+  }
+
+  protected async loadProfiles(): Promise<Profiles> {
+    return this.runner.queue("load:profiles", {
+      handler: async context => {
+        return loadProfiles(context, this.getProfilesPath())
+      },
+      label: "Loading profiles...",
+      writes: { profiles: true },
+    })
+  }
+
+  protected async loadRegions(): Promise<Regions> {
+    return this.runner.queue("load:regions", {
+      handler: async context => {
+        return loadRegions(context, this.getRegionsPath(), this.getBackupsPath())
+      },
+      label: "Loading regions...",
+      writes: { regions: true },
+    })
+  }
+
+  public async loadSavePreviewPicture(
+    regionId: RegionID,
+    cityId: CityID,
+    file?: string,
+  ): Promise<DBPFLoadedEntryInfo<DBPFDataType.PNG>> {
+    return this.runner.queue(`regions:preview:${regionId}:${cityId}${file ? `:${file}` : ""}`, {
+      handler: async () => {
+        const fullPath = file
+          ? this.getCityBackupPath(regionId, cityId, file)
+          : this.getCityPath(regionId, cityId)
+
+        const entryId = "8a2482b9-4a2482bb-00000000" as TGI // TODO: Constant
+        return DBPF.loadEntry(fullPath, entryId, DBPFDataType.PNG)
+      },
+      reads: { regions: [regionId] },
+    })
+  }
+
+  protected async loadSettings(): Promise<Settings> {
+    return this.runner.queue("load:settings", {
+      handler: async (context, { profiles }) => {
+        return loadSettings(
+          context,
+          this.getManagerPath(),
+          this.getPluginsPath(),
+          this.getRegionsPath(),
+          profiles,
+        )
+      },
+      label: "Loading settings...",
+      reads: { profiles: true },
+      writes: { settings: true },
+    })
+  }
+
+  protected async loadSimtropolisSession(): Promise<SimtropolisSession | null> {
+    return this.runner.queue("simtropolis:init", {
+      handler: async context => {
+        this.simtropolisSession = await getSimtropolisSession(this.browserSession)
+
+        if (this.simtropolisSession) {
+          context.info("Signed in to Simtropolis")
+        }
+
+        return this.simtropolisSession
+      },
+      writes: { simtropolis: true },
+    })
+  }
+
+  protected async loadTools(): Promise<Tools> {
+    return this.runner.queue("load:tools", {
+      handler: async (context, { db }) => {
+        return loadTools(context, db.path, this.getToolsPath())
+      },
+      label: "Loading tools...",
+      reads: { db: true },
+      writes: { tools: true },
     })
   }
 
   /**
-   * Opens an author's homepage in browser, if present.
+   * Opens an author's URL in browser.
    */
-  public async openAuthorURL(authorId: AuthorID): Promise<void> {
-    const { authors } = await this.load()
+  public async openAuthorUrl(authorId: PackageID, type: "url" = "url"): Promise<void> {
+    return this.runner.queue(`open:package:${type}:${authorId}`, {
+      handler: async (_, { authors }) => {
+        const authorInfo = authors[authorId]
+        if (!authorInfo?.[type]) {
+          const name = type === "url" ? "homepage" : type
+          throw Error(`Variant '${authorId}' does not have a ${name} URL`)
+        }
 
-    const authorInfo = authors[authorId]
-    if (!authorInfo?.url) {
-      throw Error(`Author '${authorId}' does not have a homepage URL`)
-    }
-
-    await this.openInExplorer(authorInfo.url)
-  }
-
-  public async openDataRepository(): Promise<void> {
-    const { settings } = await this.load()
-
-    if (!settings.db) {
-      throw Error("Data repository is not configured")
-    }
-
-    await this.openInExplorer(settings.db.path ?? settings.db.url)
+        await this.openInExplorer(authorInfo[type])
+      },
+      reads: { authors: [authorId] },
+    })
   }
 
   /**
-   * Opens the game's executable directory in Explorer.
+   * Opens the data repository (either local directory in Explorer, or GitHub repository in browser).
+   */
+  public async openDataRepository(): Promise<void> {
+    return this.runner.queue("open:db", {
+      handler: async (_, { settings }) => {
+        await this.openInExplorer(settings.db.url ?? settings.db.path)
+      },
+      reads: { settings: true },
+    })
+  }
+
+  /**
+   * Opens the game's executable directory ("Apps") in Explorer.
    */
   public async openExecutableDirectory(): Promise<void> {
-    const { settings } = await this.load()
+    return this.runner.queue("open:install:exe", {
+      handler: async (_, { settings }) => {
+        if (!settings.install?.path) {
+          throw Error("Game installation path is not set")
+        }
 
-    if (!settings.install?.path) {
-      throw Error("Game installation path is not set")
-    }
-
-    await this.openInExplorer(path.dirname(path.resolve(settings.install.path, FILENAMES.sc4exe)))
+        const exePath = path.join(settings.install.path, FILENAMES.sc4exe)
+        await this.openInExplorer(path.dirname(exePath))
+      },
+      reads: { settings: true },
+    })
   }
 
   /**
    * Opens a file in the default editor or a directory in Explorer.
+   *
+   * TODO: Not cross-platform, whatever...
    */
   protected async openInExplorer(fullPath: string): Promise<void> {
-    await cmd(`explorer "${fullPath}"`)
+    await cmd(`start "" "${fullPath}"`)
   }
 
   /**
    * Opens the game's installation directory in Explorer.
    */
   public async openInstallationDirectory(): Promise<void> {
-    const { settings } = await this.load()
+    return this.runner.queue("open:install", {
+      handler: async (_, { settings }) => {
+        if (!settings.install?.path) {
+          throw Error("Game installation path is not set")
+        }
 
-    if (!settings.install?.path) {
-      throw Error("Game installation path is not set")
-    }
-
-    await this.openInExplorer(settings.install.path)
+        await this.openInExplorer(settings.install.path)
+      },
+      reads: { settings: true },
+    })
   }
 
   /**
    * Opens a package's config file in the default text editor.
    */
   public async openPackageConfig(packageId: PackageID): Promise<void> {
-    const { packages } = await this.load()
+    return this.runner.queue(`open:package:config:${packageId}`, {
+      handler: async (_, { packages }) => {
+        const packageInfo = packages[packageId]
+        if (!packageInfo?.format) {
+          throw Error(`Package '${packageId}' is not installed`)
+        }
 
-    const packageInfo = packages[packageId]
-    if (!packageInfo?.format) {
-      throw Error(`Package '${packageId}' is not installed`)
-    }
-
-    const configName = FILENAMES.packageConfig + packageInfo.format
-    await this.openInExplorer(path.resolve(this.getPackagePath(packageId), configName))
+        const configName = FILENAMES.packageConfig + packageInfo.format
+        const fullPath = path.join(this.getPackagesPath(), packageId, configName)
+        await this.openInExplorer(fullPath)
+      },
+      reads: { packages: [packageId] },
+    })
   }
 
   /**
    * Opens a package's file in the default text editor.
    */
-  public async openPackageFile(
+  public async openPackageDirectory(
     packageId: PackageID,
     variantId: VariantID,
-    filePath: string,
+    relativePath = "",
   ): Promise<void> {
-    await this.openInExplorer(this.getVariantFilePath(packageId, variantId, filePath))
+    return this.runner.queue(`open:package:dir:${packageId}#${variantId}:${relativePath ?? "*"}`, {
+      handler: async (_, { packages }) => {
+        const variantInfo = packages[packageId]?.variants[variantId]
+        if (!variantInfo?.installed) {
+          throw Error(`Variant '${packageId}#${variantId}' is not installed`)
+        }
+
+        const fullPath = path.join(this.getPackagesPath(), packageId, variantId, relativePath)
+        await this.openInExplorer(fullPath)
+      },
+      reads: { packages: [packageId] },
+    })
   }
 
   /**
    * Opens a package's URL in browser.
    */
-  public async openPackageURL(
+  public async openPackageUrl(
     packageId: PackageID,
     variantId: VariantID,
-    type: "repository" | "support" | "url",
+    type: "repository" | "support" | "url" = "url",
   ): Promise<void> {
-    const { packages } = await this.load()
+    return this.runner.queue(`open:package:${type}:${packageId}#${variantId}`, {
+      handler: async (_, { packages }) => {
+        const variantInfo = packages[packageId]?.variants[variantId]
+        if (!variantInfo?.[type]) {
+          const name = type === "url" ? "homepage" : type
+          throw Error(`Variant '${packageId}#${variantId}' does not have a ${name} URL`)
+        }
 
-    const variantInfo = packages[packageId]?.variants[variantId]
-    if (!variantInfo?.[type]) {
-      const name = type === "url" ? "homepage" : type
-      throw Error(`Variant '${packageId}#${variantId}' does not have a ${name} URL`)
-    }
-
-    await this.openInExplorer(variantInfo[type])
+        await this.openInExplorer(variantInfo[type])
+      },
+      reads: { packages: [packageId] },
+    })
   }
 
   /**
-   * Opens the Plugins folder or one of its subfolder in the file explorer.
+   * Opens a Plugins subdirectory in Explorer.
    */
-  public async openPluginFolder(pluginPath?: string): Promise<void> {
-    if (pluginPath) {
-      await this.openInExplorer(path.resolve(this.getPluginsPath(), pluginPath))
-    } else {
-      await this.openInExplorer(this.getPluginsPath())
-    }
+  public async openPluginDirectory(relativePath = ""): Promise<void> {
+    return this.runner.queue(`open:plugin:${relativePath ?? "*"}`, {
+      handler: async () => {
+        const fullPath = path.join(this.getPluginsPath(), relativePath)
+        await this.openInExplorer(fullPath)
+      },
+    })
   }
 
   /**
    * Opens a profile's config file in the default text editor.
    */
   public async openProfileConfig(profileId: ProfileID): Promise<void> {
-    const { profiles } = await this.load()
+    return this.runner.queue(`open:profile:config:${profileId}`, {
+      handler: async (_, { profiles }) => {
+        const profileInfo = profiles[profileId]
+        if (!profileInfo?.format) {
+          throw Error(`Profile '${profileId}' does not exist`)
+        }
 
-    const profileInfo = profiles[profileId]
-    if (!profileInfo?.format) {
-      throw Error(`Profile '${profileId}' does not exist`)
-    }
-
-    const configName = profileId + profileInfo.format
-    await this.openInExplorer(path.resolve(this.getProfilesPath(), configName))
+        const configName = profileId + profileInfo.format
+        const fullPath = path.join(this.getProfilesPath(), configName)
+        await this.openInExplorer(fullPath)
+      },
+      reads: { profiles: [profileId] },
+    })
   }
 
   /**
-   * Opens a region's savegame folder in the file explorer.
+   * Opens a region's subdirectory in Explorer.
    */
-  public async openRegionFolder(regionId: RegionID): Promise<void> {
-    await this.openInExplorer(path.resolve(this.getRegionsPath(), regionId))
+  public async openRegionDirectory(regionId: RegionID): Promise<void> {
+    return this.runner.queue(`open:region:${regionId}`, {
+      handler: async () => {
+        const fullPath = path.join(this.getRegionsPath(), regionId)
+        await this.openInExplorer(fullPath)
+      },
+    })
   }
 
   /**
    * Opens a tool's file in the default text editor.
    */
-  public async openToolFile(toolId: ToolID, filePath: string): Promise<void> {
-    const { assets, settings, tools } = await this.load()
+  public async openToolDirectory(toolId: ToolID, relativePath = ""): Promise<void> {
+    return this.runner.queue(`open:tool:dir:${toolId}:${relativePath ?? "*"}`, {
+      handler: async (_, { tools }) => {
+        const toolInfo = tools[toolId]
+        if (!toolInfo?.asset || !toolInfo.installed) {
+          throw Error(`Variant '${toolId}' is not installed`)
+        }
 
-    const toolInfo = tools[toolId]
-    if (!toolInfo?.asset || !toolInfo.installed) {
-      throw Error(`Tool '${toolId}' is not installed`)
-    }
-
-    if (toolInfo.install) {
-      if (!settings.install?.path) {
-        throw Error("Missing installation folder")
-      }
-
-      await this.openInExplorer(path.resolve(settings.install.path, filePath))
-    } else {
-      const assetInfo = assets[toolInfo.asset]
-      if (!assetInfo?.downloaded[assetInfo.version]) {
-        throw Error(`Asset '${toolInfo.asset}' is not installed`)
-      }
-
-      await this.openInExplorer(path.resolve(this.getDownloadPath(assetInfo), filePath))
-    }
+        await this.openInExplorer(this.getToolPath(toolId, relativePath))
+      },
+      reads: { tools: [toolId] },
+    })
   }
 
   /**
    * Opens a tool's URL in browser.
    */
-  public async openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void> {
-    const { tools } = await this.load()
+  public async openToolUrl(
+    toolId: ToolID,
+    type: "repository" | "support" | "url" = "url",
+  ): Promise<void> {
+    return this.runner.queue(`open:tool:${type}:${toolId}`, {
+      handler: async (_, { tools }) => {
+        const toolInfo = tools[toolId]
+        if (!toolInfo?.[type]) {
+          const name = type === "url" ? "homepage" : type
+          throw Error(`Tool '${toolId}' does not have a ${name} URL`)
+        }
 
-    const toolInfo = tools[toolId]
-    if (!toolInfo?.[type]) {
-      const name = type === "url" ? "homepage" : type
-      throw Error(`Tool '${toolId}' does not have a ${name} URL`)
-    }
-
-    await this.openInExplorer(toolInfo[type])
-  }
-
-  public async patchPluginFileEntries(
-    pluginPath: string,
-    patches: {
-      [entryId in TGI]?: ExemplarDataPatch | null
-    },
-  ): Promise<DBPFInfo> {
-    const { exemplarProperties } = await this.load()
-
-    return this.tasks.queue(`plugins:patch:${pluginPath}`, {
-      handler: async context => {
-        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
-
-        const tempFullPath = this.getTempPath(fullPath)
-
-        // Generate patched file in temp folder
-        const file = await this.generatePatchedFile(
-          context,
-          fullPath,
-          tempFullPath,
-          mapValues(patches, patch => patch ?? undefined),
-          exemplarProperties,
-        )
-
-        // Replace original file with the patched version
-        await fsMove(tempFullPath, fullPath, { overwrite: true })
-
-        // Unset original field (so renderer will not show a diff)
-        forEach(file.entries, entry => {
-          entry.original = undefined
-        })
-
-        // TODO: Reanalyze entries
-
-        return file
+        await this.openInExplorer(toolInfo[type])
       },
-      pool: `plugins:${pluginPath}`,
+      reads: { tools: [toolId] },
     })
   }
 
-  public async patchVariantFileEntries(
+  /**
+   * Patches a package's DBPF file.
+   */
+  public async patchPackageFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-    patches: {
-      [entryId in TGI]?: ExemplarDataPatch | null
-    },
+    patches: ExemplarDataPatches,
   ): Promise<DBPFInfo> {
-    const { categories, exemplarProperties, packages, settings } = await this.load()
-
-    return this.tasks.queue(`patch:${packageId}#${variantId}/${filePath}`, {
-      handler: async context => {
+    return this.runner.queue(`patch:${packageId}#${variantId}/${filePath}`, {
+      handler: async (context, { categories, exemplarProperties, packages, settings }) => {
         const packageInfo = packages[packageId]
         if (!packageInfo) {
           throw Error(`Unknown package '${packageId}'`)
@@ -2555,6 +2840,8 @@ export class Application {
 
         const originalFullPath = this.getVariantFilePath(packageId, variantId, filePath)
 
+        let file: DBPFInfo | undefined
+
         // For local variants, we apply changes to the file itself
         if (variantInfo.local) {
           const tempFullPath = this.getTempPath(originalFullPath)
@@ -2564,7 +2851,7 @@ export class Application {
             context,
             originalFullPath,
             tempFullPath,
-            mapValues(patches, patch => patch ?? undefined),
+            patches,
             exemplarProperties,
           )
 
@@ -2575,6 +2862,8 @@ export class Application {
           forEach(file.entries, entry => {
             entry.original = undefined
           })
+
+          this.refreshPackageFile(packageId, variantInfo, filePath, file, categories, patches)
 
           return file
         }
@@ -2594,14 +2883,12 @@ export class Application {
           fileInfo.patches = undefined
         }
 
-        let file: DBPFInfo | undefined
-
         if (fileInfo.patches) {
           const patchedFullPath = this.getVariantFilePath(
             packageId,
             variantId,
             filePath,
-            fileInfo.patches,
+            this.getHash(fileInfo.patches),
           )
 
           // Generate patched file and load new contents
@@ -2614,120 +2901,317 @@ export class Application {
           )
         } else {
           // Reload original contents
-          file = await fsOpen(originalFullPath, FileOpenMode.READ, async patchedFile => {
-            const dbpf = await DBPF.fromFile(patchedFile)
-            return dbpf.loadExemplars()
-          })
+          file = await DBPF.loadExemplars(originalFullPath)
         }
 
-        // Delete old patches
+        this.updateState({
+          packages: {
+            [packageId]: {
+              variants: {
+                [variantId]: {
+                  $set: variantInfo,
+                },
+              },
+            },
+          },
+        })
+
+        this.refreshPackageFile(packageId, variantInfo, filePath, file, categories, patches)
+        this.writePackageConfig(packageId)
         this.refreshPatches(packageId, variantId)
 
         // Trigger a relink of this package only if it is included in current profile
         if (settings.currentProfile) {
           const packageStatus = packageInfo.status[settings.currentProfile]
           if (isIncluded(packageStatus) && isSelected(variantInfo, packageStatus)) {
-            this.linkPackages({ packageId })
+            this.linkPackages(/* { packageId } */)
           }
         }
 
-        // Reload exemplar info
-        // TODO: Improve this!
-        forEach(file.entries, (entry, tgi) => {
-          if (patches[tgi]) {
-            if (entry.data && entry.type === DBPFDataType.EXEMPLAR) {
-              const exemplar: Exemplar = { ...entry, data: entry.data, file: filePath }
-
-              switch (getExemplarType(tgi, exemplar.data)) {
-                case ExemplarType.Building: {
-                  const [, group, id] = split(tgi, "-") as [TypeID, GroupID, BuildingID]
-                  const building = variantInfo.buildings?.find(where({ file: filePath, group, id }))
-
-                  if (building) {
-                    const data = getBuildingInfo(exemplar)
-                    $merge(building, loadBuildingInfo(filePath, group, id, data, categories))
-                  }
-
-                  break
-                }
-
-                case ExemplarType.LotConfig: {
-                  const [, , id] = split(tgi, "-") as [TypeID, GroupID, LotID]
-                  const lot = variantInfo.lots?.find(where({ file: filePath, id }))
-
-                  if (lot) {
-                    const data = getLotInfo(exemplar)
-                    $merge(lot, loadLotInfo(filePath, id, data))
-                  }
-
-                  break
-                }
-
-                case ExemplarType.Prop: {
-                  const [, group, id] = split(tgi, "-") as [TypeID, GroupID, PropID]
-                  const prop = variantInfo.props?.find(where({ file: filePath, group, id }))
-
-                  if (prop) {
-                    const data = getPropInfo(exemplar)
-                    $merge(prop, loadPropInfo(filePath, group, id, data))
-                  }
-
-                  break
-                }
-              }
-            }
-          }
-        })
-
-        // Persist config changes and send updates to renderer
-        await this.writePackageConfig(context, packageInfo, categories)
-
         return file
       },
-      pool: `${packageId}#${variantId}`,
+      label: "Generating patches...",
+      reads: { categories: true, exemplarProperties: true, packages: [packageId], settings: true },
+      writes: { packages: [packageId] },
     })
   }
 
+  /**
+   * Patches an external DBPF plugin file.
+   */
+  public async patchPluginFileEntries(
+    pluginPath: string,
+    patches: ExemplarDataPatches,
+  ): Promise<DBPFInfo> {
+    return this.runner.queue(`plugins:patch:${pluginPath}`, {
+      handler: async (context, { exemplarProperties, plugins }) => {
+        const fullPath = path.join(this.getPluginsPath(), pluginPath)
+        const tempFullPath = this.getTempPath(fullPath)
+
+        // Generate patched file in temp folder
+        const file = await this.generatePatchedFile(
+          context,
+          fullPath,
+          tempFullPath,
+          patches,
+          exemplarProperties,
+        )
+
+        // Replace original file with the patched version
+        await fsMove(tempFullPath, fullPath, { overwrite: true })
+
+        // Unset original field (so renderer will not show a diff)
+        forEach(file.entries, entry => {
+          entry.original = undefined
+        })
+
+        const { contents } = await analyzeSC4File(this.getPluginsPath(), pluginPath)
+        plugins[pluginPath] = contents
+        // TODO: Conflicts
+
+        this.indexPlugins()
+
+        return file
+      },
+      label: "Generating patches...",
+      reads: { exemplarProperties: true, plugins: [pluginPath] },
+      writes: { plugins: [pluginPath] },
+    })
+  }
+
+  /**
+   * Cleans up the application before quiting.
+   */
   protected async quit(): Promise<void> {
+    // Remove anything left in temporary directory
     await fsRemove(this.getTempPath())
   }
 
   /**
-   * Recalculates package status/compatibility for the given profile.
+   * Regenerate a variant from local files.
    */
-  protected recalculatePackages(
-    packages: Packages,
-    profileInfo: ProfileInfo,
-    profileOptions: OptionInfo[],
-    settings: Settings,
-  ): Features {
-    const { resultingFeatures, resultingStatus } = resolvePackages(
-      packages,
-      profileInfo,
-      profileOptions,
-      settings,
-    )
+  public async refreshLocalVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+    await this.runner.queue(`packages:regenerate:${packageId}#${variantId}`, {
+      handler: async (_, { packages }) => {
+        const packageInfo = packages[packageId]
+        if (!packageInfo) {
+          throw Error(`Package ${packageId} does not exist`)
+        }
 
-    forEach(packages, (packageInfo, packageId) => {
-      packageInfo.status[profileInfo.id] = resultingStatus[packageId]
+        const variantInfo = packageInfo.variants[variantId]
+        if (!variantInfo) {
+          throw Error(`Variant ${packageId}#${variantId} does not exist`)
+        }
+
+        if (!variantInfo.local) {
+          throw Error(`Variant ${packageId}#${variantId} is not local`)
+        }
+
+        const variantPath = this.getVariantPath(packageId, variantId)
+
+        const filePaths = await fsQueryFiles(
+          variantPath,
+          "**/*.{dat,dll,ini,sc4desc,sc4model,sc4lot}",
+          {
+            exclude: ["~*/**", "**/desktop.ini"],
+          },
+        )
+
+        variantInfo.files = filePaths.map(path => ({
+          ...variantInfo.files?.find(where({ path })),
+          path,
+        }))
+
+        const docsPath = DIRNAMES.docs
+        if (await fsExists(path.join(variantPath, docsPath))) {
+          variantInfo.docs = docsPath
+        } else {
+          variantInfo.docs = undefined
+        }
+
+        const { contents } = await analyzeSC4Files(variantPath, filePaths)
+
+        variantInfo.buildings = collect(
+          contents,
+          fileContents =>
+            fileContents.buildings?.map(building => ({
+              ...variantInfo.buildings?.find(where({ file: building.file, id: building.id })),
+              ...building,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.buildings = collect(
+          contents,
+          fileContents =>
+            fileContents.buildings?.map(building => ({
+              ...variantInfo.buildings?.find(where({ file: building.file, id: building.id })),
+              ...building,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.buildings = collect(
+          contents,
+          fileContents =>
+            fileContents.buildings?.map(building => ({
+              ...variantInfo.buildings?.find(where({ file: building.file, id: building.id })),
+              ...building,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.buildingFamilies = collect(
+          contents,
+          fileContents =>
+            fileContents.buildingFamilies?.map(family => ({
+              ...variantInfo.buildingFamilies?.find(where({ file: family.file, id: family.id })),
+              ...family,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.lots = collect(
+          contents,
+          fileContents =>
+            fileContents.lots?.map(lot => ({
+              ...variantInfo.lots?.find(where({ file: lot.file, id: lot.id })),
+              ...lot,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.mmps = collect(
+          contents,
+          fileContents =>
+            fileContents.mmps?.map(mmp => ({
+              ...variantInfo.mmps?.find(where({ file: mmp.file, id: mmp.id })),
+              ...mmp,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.models = mapValues(contents, fileContents => fileContents.models)
+
+        variantInfo.propFamilies = collect(
+          contents,
+          fileContents =>
+            fileContents.propFamilies?.map(family => ({
+              ...variantInfo.propFamilies?.find(where({ file: family.file, id: family.id })),
+              ...family,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.props = collect(
+          contents,
+          fileContents =>
+            fileContents.props?.map(prop => ({
+              ...variantInfo.props?.find(where({ file: prop.file, id: prop.id })),
+              ...prop,
+            })) ?? [],
+        ).flat()
+
+        variantInfo.textures = mapValues(contents, fileContents => fileContents.textures)
+
+        this.updateState({
+          packages: {
+            [packageId]: {
+              variants: {
+                [variantId]: {
+                  $set: variantInfo,
+                },
+              },
+            },
+          },
+        })
+
+        this.writePackageConfig(packageId)
+      },
+      label: "Regenerating package...",
+      reads: { categories: true, packages: [packageId] },
+      writes: { packages: [packageId] },
     })
-
-    // Trigger linking if current profile
-    if (settings.currentProfile === profileInfo.id) {
-      this.sendStateUpdate({ features: resultingFeatures, packages })
-      this.linkPackages()
-    } else {
-      this.sendStateUpdate({ packages })
-    }
-
-    return resultingFeatures
   }
 
-  protected async refreshPatches(packageId: PackageID, variantId: VariantID): Promise<void> {
-    const { exemplarProperties, packages } = await this.load()
+  /**
+   * Reanalyze a single package file.
+   */
+  public async refreshPackageFile(
+    packageId: PackageID,
+    variantInfo: VariantInfo,
+    filePath: string,
+    file: DBPFInfo,
+    categories: Categories,
+    patches?: ExemplarDataPatches,
+  ): Promise<void> {
+    let updated = false
 
-    return this.tasks.queue(`refresh:${packageId}#${variantId}`, {
-      handler: async context => {
+    forEach(file.entries, (entry, tgi) => {
+      if (!patches || patches[tgi] !== undefined) {
+        if (entry.data && entry.type === DBPFDataType.EXEMPLAR) {
+          const exemplar: Exemplar = { ...entry, data: entry.data, file: filePath }
+
+          switch (getExemplarType(tgi, exemplar.data)) {
+            case ExemplarType.Building: {
+              const [, group, id] = split(tgi, "-") as [TypeID, GroupID, BuildingID]
+              const building = variantInfo.buildings?.find(where({ file: filePath, group, id }))
+
+              if (building) {
+                const data = getBuildingInfo(exemplar)
+                $merge(building, loadBuildingInfo(filePath, group, id, data, categories))
+                updated = true
+              }
+
+              break
+            }
+
+            case ExemplarType.LotConfig: {
+              const [, , id] = split(tgi, "-") as [TypeID, GroupID, LotID]
+              const lot = variantInfo.lots?.find(where({ file: filePath, id }))
+
+              if (lot) {
+                const data = getLotInfo(exemplar)
+                $merge(lot, loadLotInfo(filePath, id, data))
+                updated = true
+              }
+
+              break
+            }
+
+            case ExemplarType.Prop: {
+              const [, group, id] = split(tgi, "-") as [TypeID, GroupID, PropID]
+              const prop = variantInfo.props?.find(where({ file: filePath, group, id }))
+
+              if (prop) {
+                const data = getPropInfo(exemplar)
+                $merge(prop, loadPropInfo(filePath, group, id, data))
+                updated = true
+              }
+
+              break
+            }
+          }
+        }
+      }
+    })
+
+    if (updated) {
+      this.updateState({
+        packages: {
+          [packageId]: {
+            variants: {
+              [variantInfo.id]: {
+                $set: variantInfo,
+              },
+            },
+          },
+        },
+      })
+
+      this.writePackageConfig(packageId)
+    }
+  }
+
+  /**
+   * Generates patched files and deletes obsolete patches.
+   */
+  protected async refreshPatches(packageId: PackageID, variantId: VariantID): Promise<void> {
+    return this.runner.queue(`packages:patch:refresh:${packageId}#${variantId}`, {
+      handler: async (context, { exemplarProperties, packages }) => {
         const packageInfo = packages[packageId]
         if (!packageInfo) {
           throw Error(`Unknown package '${packageId}'`)
@@ -2739,7 +3223,7 @@ export class Application {
         }
 
         const basePath = this.getVariantPath(packageId, variantInfo.id)
-        const patchesPath = path.resolve(basePath, DIRNAMES.patches)
+        const patchesPath = path.join(basePath, DIRNAMES.patches)
 
         // Generate up-to-date patches
         const usefulPatchedFiles = new Set<string>()
@@ -2765,7 +3249,7 @@ export class Application {
 
           // Otherwise, remove only unused files
           for (const relativePath of patchesPaths) {
-            const fullPath = path.resolve(patchesPath, relativePath)
+            const fullPath = path.join(patchesPath, relativePath)
             if (!usefulPatchedFiles.has(fullPath)) {
               await fsRemove(fullPath)
               await fsRemoveIfEmptyRecursive(path.dirname(fullPath), basePath)
@@ -2773,128 +3257,129 @@ export class Application {
           }
         }
       },
-      pool: `${packageId}#${variantId}`,
+      invalidate: true,
+      label: "Generating patches...",
+      reads: { exemplarProperties: true, packages: [packageId] },
+      writes: { packages: [packageId] },
     })
   }
 
   /**
-   * Reloads data from files.
+   * Clears all loaded data and loads it again as if we just opened the application.
+   *
+   * This is how we can get updates to external files without relaunching the whole application.
+   *
+   * TODO: Would listening to some important files/directories and partial reloading be possible?
    */
-  protected async reload() {
-    this.ignoredWarnings.clear()
-    this.tasks.invalidateCache()
-    await this.load(true)
+  protected async reload(): Promise<void> {
+    this.runner.cancelPendingTasks()
+    this.runner.reloadAll()
+    return this.load()
   }
 
   /**
    * Reload plugins.
    */
   public async reloadPlugins(): Promise<void> {
-    const state = await this.load()
-    const { categories } = state
-
-    await this.tasks.queue("plugins:load", {
-      handler: async context => {
-        const plugins = await loadPlugins(context, this.getRootPath(), this.getPluginsPath(), {
-          categories,
-        })
-
-        state.plugins = plugins
-        this.cleanPlugins({ isStartup: true })
-      },
-      pool: "main",
-    })
+    this.runner.reload(["plugins"])
+    this.checkPlugins({ isSilent: true })
+    this.indexPlugins()
   }
 
   /**
    * Removes a backup.
    */
-  public async removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
-    const { regions } = await this.load()
+  public async removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<boolean> {
+    return this.runner.queue(`backups:remove:${regionId}:${cityId}:${file}`, {
+      handler: async (context, { regions }) => {
+        const region = regions[regionId]
+        if (!region) {
+          throw Error(`Region '${regionId}' does not exist`)
+        }
 
-    const region = regions[regionId]
-    if (!region) {
-      throw Error(`Region '${regionId}' does not exist`)
-    }
+        const city = region.cities[cityId]
+        if (!city) {
+          throw Error(`City '${cityId}' does not exist`)
+        }
 
-    const city = region.cities[cityId]
-    if (!city) {
-      throw Error(`City '${cityId}' does not exist`)
-    }
+        const backup = city.backups.find(backup => backup.file === file)
+        if (!backup) {
+          throw Error(`Backup '${backup}' does not exist`)
+        }
 
-    const backup = city.backups.find(backup => backup.file === file)
-    if (!backup) {
-      throw Error(`Backup '${backup}' does not exist`)
-    }
-
-    await this.tasks.queue(`backup:delete:${regionId}:${cityId}`, {
-      handler: async context => {
-        const fullPath = this.getCityBackupPath(regionId, cityId, backup.file)
+        const backupPath = this.getCityBackupPath(regionId, cityId, backup.file)
 
         context.debug(`Deleting backup '${regionId}/${cityId}/${backup.file}'...`)
 
-        await fsRemove(fullPath)
-        await fsRemoveIfEmptyRecursive(path.dirname(fullPath), this.getBackupsPath())
+        await fsRemove(backupPath)
+        await fsRemoveIfEmptyRecursive(path.dirname(backupPath), this.getBackupsPath()) // TODO: optimize?
 
         city.backups = city.backups.filter(backup => backup.file !== file)
 
-        this.sendStateUpdate({ regions })
+        this.updateState({ regions: { [regionId]: { cities: { [cityId]: { $set: city } } } } })
+        return true
       },
-      pool: `region:${regionId}`,
+      reads: { regions: [regionId] },
+      writes: { regions: [regionId] },
     })
   }
 
   /**
    * Remove a file or folder from Plugins (moving it to backup).
    */
-  public async removePluginFile(pluginPath: string): Promise<void> {
-    const { plugins } = await this.load()
-
-    await this.tasks.queue(`plugins:patch:${pluginPath}`, {
-      handler: async context => {
-        const fullPath = path.resolve(this.getPluginsPath(), pluginPath)
-        if (await isDirectory(fullPath)) {
-          const subfilePaths = await fsQueryFiles(fullPath, "**", {
-            symlinks: false,
-          })
-
-          for (const subfilePath of subfilePaths) {
-            const filePath = joinPosix(pluginPath, subfilePath)
-            await this.backUpFile(context, filePath)
-            delete plugins[filePath]
-          }
-        } else {
-          await this.backUpFile(context, pluginPath)
-          delete plugins[pluginPath]
+  public async removePlugin(pluginPath: string): Promise<void> {
+    await this.runner.queue(`plugins:remove:${pluginPath}`, {
+      handler: async (_, { plugins }) => {
+        const backupPath = this.getPluginsBackupPath()
+        const basePath = this.getPluginsPath()
+        const fullPath = path.join(basePath, pluginPath)
+        if (!isChildPath(fullPath, basePath)) {
+          throw Error("Invalid path")
         }
+
+        if (plugins[pluginPath]) {
+          await fsMove(fullPath, path.join(backupPath, pluginPath), { overwrite: true })
+          delete plugins[pluginPath]
+        } else {
+          const subpaths = keys(plugins).filter(path => path.startsWith(`${pluginPath}/`))
+          for (const subpath of subpaths) {
+            await fsMove(path.join(basePath, subpath), path.join(backupPath, subpath), {
+              overwrite: true,
+            })
+
+            delete plugins[subpath]
+          }
+        }
+
+        await fsRemoveIfEmptyRecursive(path.dirname(fullPath), basePath)
 
         this.indexPlugins()
       },
-      pool: `plugins:${pluginPath}`,
+      reads: { plugins: true },
+      writes: { plugins: true },
     })
   }
 
   /**
-   * Remove an installed variant.
+   * Remove a profile (except the last one).
    */
   public async removeProfile(profileId: ProfileID): Promise<boolean> {
-    const { packages, profiles, profileOptions, settings } = await this.load()
-
-    return this.tasks.queue(`remove:${profileId}`, {
-      handler: async context => {
-        const profileInfo = profiles[profileId]
-        if (!profileInfo?.format) {
+    return this.runner.queue(`profiles:remove:${profileId}`, {
+      handler: async (context, { packages, profileOptions, profiles, settings }) => {
+        const oldProfileInfo = profiles[profileId]
+        if (!oldProfileInfo?.format) {
           throw Error(`Profile '${profileId}' does not exist`)
         }
 
-        const newCurrentProfileId = keys(profiles).find(id => id !== profileId)
-        if (!newCurrentProfileId) {
+        const newProfileInfo = values(profiles).find(profile => profile.id !== profileId)
+        if (!newProfileInfo) {
           throw Error("Cannot remove last profile")
         }
 
+        // Ask for confirmation
         const { confirmed } = await showConfirmation(
           i18n.t("RemoveProfileModal:title"),
-          i18n.t("RemoveProfileModal:confirmation", { profileName: profileInfo.name }),
+          i18n.t("RemoveProfileModal:confirmation", { profileName: oldProfileInfo.name }),
           i18n.t("RemoveProfileModal:description"),
           false,
           "warning",
@@ -2904,38 +3389,45 @@ export class Application {
           return false
         }
 
-        // Change selected profile
+        // Checkout another profile if removing the current one
         if (settings.currentProfile === profileId) {
-          context.debug(`Selecting profile '${newCurrentProfileId}'...`)
-          settings.currentProfile = newCurrentProfileId
-          await this.writeSettings(context, settings)
-          this.recalculatePackages(packages, profileInfo, profileOptions, settings)
-          this.cleanPlugins({ isSilent: true })
+          context.setLabel("Switching profile...")
+          settings.currentProfile = newProfileInfo.id
+
+          this.updateState(
+            {
+              $merge: this.resolvePackages(packages, newProfileInfo, profileOptions, settings),
+              settings: { currentProfile: { $set: newProfileInfo.id } },
+            },
+            true,
+          )
+
+          this.writeSettings()
+          this.linkPackages()
+          this.checkPlugins({ isSilent: true })
         }
 
-        context.debug(`Removing profile '${profileId}'...`)
+        // Remove profile config
+        if (oldProfileInfo?.format) {
+          context.setLabel("Removing profile...")
+          await removeConfig(this.getProfilesPath(), profileId, oldProfileInfo.format)
+        }
 
-        // Remove config file
-        await removeConfig(this.getProfilesPath(), profileId, profileInfo.format)
-        profileInfo.format = undefined
-
-        // Send update to renderer
-        this.sendProfileDeletion(profileId)
-
+        delete profiles[profileId]
+        this.updateState({ profiles: { $unset: [profileId] } })
         return true
       },
-      pool: "main",
+      reads: { packages: true, profileOptions: true, profiles: true, settings: true },
+      writes: { settings: true },
     })
   }
 
   /**
-   * Remove an installed tool.
+   * Removes an installed tool.
    */
   public async removeTool(toolId: ToolID): Promise<void> {
-    const { assets, tools } = await this.load()
-
-    await this.tasks.queue(`install:${toolId}`, {
-      handler: async context => {
+    await this.runner.queue(`tools:remove:${toolId}`, {
+      handler: async (context, { settings, tools }) => {
         const toolInfo = tools[toolId]
         if (!toolInfo?.asset) {
           throw Error(`Unknown tool '${toolId}'`)
@@ -2944,36 +3436,183 @@ export class Application {
         try {
           context.info(`Removing tool '${toolId}'...`)
           toolInfo.action = "removing"
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { $merge: { [toolId]: toolInfo } } })
 
-          const assetInfo = assets[toolInfo.asset]
-          if (!assetInfo) {
-            throw Error(`Unknown asset '${toolInfo.asset}'`)
+          // Hardcoded uninstallation process
+          switch (toolId) {
+            case ToolID.DgVoodoo: {
+              if (!settings.install?.path) {
+                throw Error("Missing installation path")
+              }
+
+              // Restore SGR backups
+              const filesToRestore = await fsQueryFiles(settings.install.path, "*.sgr.backup")
+
+              for (const relativePath of filesToRestore) {
+                await fsMove(
+                  path.join(settings.install.path, relativePath),
+                  path.join(settings.install.path, removeExtension(relativePath)),
+                  { overwrite: true },
+                )
+              }
+
+              // Remove files from SC4 installation directory
+              const filesToRemove = await fsQueryFiles(settings.install.path, [
+                "Apps/D3*.dll",
+                "Apps/DDraw.dll",
+                "Apps/dgVoodoo*",
+              ])
+
+              for (const relativePath of filesToRemove) {
+                await fsRemove(path.join(settings.install.path, relativePath))
+              }
+
+              // Unset DgVoodoo in settings
+              if (settings.install.voodoo) {
+                settings.install.voodoo = undefined
+                this.writeSettings()
+                this.updateState({ $merge: { settings } })
+              }
+            }
           }
 
-          const downloadPath = this.getDownloadPath(assetInfo)
-          await fsRemove(downloadPath)
+          const toolPath = this.getToolPath(toolId)
+          await fsRemove(toolPath)
 
           toolInfo.installed = undefined
         } finally {
           toolInfo.action = undefined
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { $merge: { [toolId]: toolInfo } } })
         }
       },
-      pool: toolId,
+      reads: { settings: true, tools: [toolId] },
+      writes: { tools: [toolId] },
+    })
+  }
+
+  /**
+   * Removes all non-local variants not used by any profile.
+   */
+  public async removeUnusedPackages(): Promise<boolean> {
+    return this.runner.queue("packages:purge", {
+      handler: async (context, { packages, profiles, profileOptions, settings }) => {
+        const packageStatus = collect(profiles, profileInfo => {
+          const { resultingStatus } = resolvePackages(
+            packages,
+            profileInfo,
+            profileOptions,
+            settings,
+          )
+
+          return resultingStatus
+        })
+
+        const unusedVariants = values(packages).flatMap(packageInfo => {
+          return values(packageInfo.variants)
+            .filter(
+              variantInfo =>
+                isInstalled(variantInfo) &&
+                !isLocal(variantInfo) &&
+                !packageStatus.some(
+                  status =>
+                    isIncluded(status[packageInfo.id]) &&
+                    isSelected(variantInfo, status[packageInfo.id]),
+                ),
+            )
+            .map(variantInfo => ({
+              packageId: packageInfo.id,
+              variantId: variantInfo.id,
+              patched: isPatched(variantInfo),
+            }))
+        })
+
+        if (!unusedVariants.length) {
+          await showSuccess(
+            i18n.t("RemoveUnusedPackagesModal:title"),
+            i18n.t("RemoveUnusedPackagesModal:description", { count: 0 }),
+          )
+
+          return false
+        }
+
+        const { confirmed } = await showConfirmation(
+          i18n.t("RemoveUnusedPackagesModal:title"),
+          i18n.t("RemoveUnusedPackagesModal:confirmation"),
+          i18n.t("RemoveUnusedPackagesModal:description", {
+            count: unusedVariants.length,
+            variants: unusedVariants
+              .map(
+                ({ packageId, variantId, patched }) =>
+                  `${packageId}#${variantId}${patched ? " (patched)" : ""}`,
+              )
+              .sort(),
+          }),
+          false,
+          unusedVariants.some(({ patched }) => patched) ? "warning" : "question",
+        )
+
+        if (!confirmed) {
+          return false
+        }
+
+        try {
+          let nVariants = 0
+          for (const { packageId, variantId } of unusedVariants) {
+            context.setProgress(nVariants++, unusedVariants.length)
+            const packageInfo = packages[packageId]
+            const variantInfo = packageInfo?.variants[variantId]
+            if (!packageInfo || !variantInfo?.installed) {
+              continue
+            }
+
+            const installedVariants = values(packageInfo.variants).filter(isInstalled)
+            const isOnlyInstalledVariant = installedVariants.length === 1
+
+            if (isOnlyInstalledVariant) {
+              await fsRemove(this.getPackagePath(packageId))
+            } else {
+              await fsRemove(this.getVariantPath(packageId, variantId))
+              this.writePackageConfig(packageId)
+            }
+
+            variantInfo.files = undefined
+            variantInfo.installed = undefined
+          }
+
+          await showSuccess(
+            i18n.t("RemoveUnusedPackagesModal:title"),
+            i18n.t("RemoveUnusedPackagesModal:success"),
+          )
+        } finally {
+          this.updateState(
+            {
+              packages: {
+                $merge: indexBy(
+                  mapDefined(unusedVariants, ({ packageId }) => packages[packageId]),
+                  packageInfo => packageInfo.id,
+                ),
+              },
+            },
+            true,
+          )
+        }
+
+        return true
+      },
+      label: "Removing unused packages...",
+      reads: { packages: true, profiles: true, profileOptions: true, settings: true },
+      writes: { packages: true },
     })
   }
 
   /**
    * Remove an installed variant.
+   *
+   * TODO: ATM this does not clean obsolete files from Downloads sub-folder!
    */
-  public async removeVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
-    // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
-    const { categories, packages, profiles } = await this.load()
-
-    await this.tasks.queue(`remove:${packageId}#${variantId}`, {
-      handler: async context => {
-        // TODO: ATM this does not clean obsolete files from Downloads sub-folder!
+  public async removeVariant(packageId: PackageID, variantId: VariantID): Promise<boolean> {
+    return this.runner.queue(`packages:remove:${packageId}#${variantId}`, {
+      handler: async (context, { packages }) => {
         const packageInfo = packages[packageId]
         if (!packageInfo) {
           throw Error(`Unknown package '${packageId}'`)
@@ -2997,15 +3636,15 @@ export class Application {
         if (variantInfo.local) {
           const { confirmed } = await showConfirmation(
             packageInfo.name,
-            t(`${namespace}:confirmation`),
-            t(`${namespace}:description`, {
+            i18n.t(`${namespace}:confirmation`),
+            i18n.t(`${namespace}:description`, {
               packageName: packageInfo.name,
               variantName: variantInfo.name,
             }),
           )
 
           if (!confirmed) {
-            return
+            return false
           }
         }
 
@@ -3013,7 +3652,20 @@ export class Application {
           context.info(`Removing variant '${packageId}#${variantId}'...`)
 
           variantInfo.action = "removing"
-          this.sendPackageUpdate(packageInfo, { recompute: false })
+
+          this.updateState({
+            packages: {
+              [packageId]: {
+                variants: {
+                  [variantId]: {
+                    action: {
+                      $set: "removing",
+                    },
+                  },
+                },
+              },
+            },
+          })
 
           variantInfo.files = undefined
           variantInfo.installed = undefined
@@ -3023,7 +3675,7 @@ export class Application {
             await fsRemove(this.getPackagePath(packageId))
           } else {
             await fsRemove(this.getVariantPath(packageId, variantId))
-            await this.writePackageConfig(context, packageInfo, categories)
+            this.writePackageConfig(packageId)
           }
 
           // TODO: This assumes that package is disabled in other profiles!
@@ -3034,9 +3686,8 @@ export class Application {
               delete packageInfo.variants[variantId]
 
               // Unselect the removed variant
-              forEach(packageInfo.status, (packageStatus, profileId) => {
-                const profileInfo = profiles[profileId]
-                if (profileInfo && packageStatus.variantId === variantId) {
+              forEach(packageInfo.status, packageStatus => {
+                if (packageStatus.variantId === variantId) {
                   const defaultVariant = getDefaultVariant(packageInfo, packageStatus)
                   packageStatus.variantId = defaultVariant.id
                 }
@@ -3046,45 +3697,75 @@ export class Application {
         } finally {
           variantInfo.action = undefined
 
-          if (packages[packageId]) {
-            this.sendPackageUpdate(packageInfo)
-          } else {
-            this.sendPackageDeletion(packageId)
-          }
+          this.updateState(
+            {
+              packages: {
+                [packageId]: {
+                  $set: packages[packageId],
+                },
+              },
+            },
+            true,
+          )
         }
+
+        return true
       },
-      pool: `${packageId}#${variantId}`,
+      reads: { packages: [packageId] },
+      writes: { packages: [packageId] },
     })
+  }
+
+  public resolvePackages(
+    packages: Packages,
+    profileInfo: ProfileInfo,
+    profileOptions: OptionInfo[],
+    settings: Settings,
+  ): {
+    features: Features
+    packages: Packages
+  } {
+    const { resultingFeatures, resultingStatus } = resolvePackages(
+      packages,
+      profileInfo,
+      profileOptions,
+      settings,
+    )
+
+    forEach(packages, (packageInfo, packageId) => {
+      packageInfo.status[profileInfo.id] = resultingStatus[packageId]
+    })
+
+    return { features: resultingFeatures, packages }
   }
 
   /**
    * Restores a backup. THIS PERMANENTLY OVERWRITES THE CURRENT SAVE!
    */
   public async restoreBackup(regionId: RegionID, cityId: CityID, file: string): Promise<boolean> {
-    const { regions } = await this.load()
+    return this.runner.queue(`backups:restore:${regionId}:${cityId}:${file}`, {
+      handler: async (context, { regions }) => {
+        const region = regions[regionId]
+        if (!region) {
+          throw Error(`Region '${regionId}' does not exist`)
+        }
 
-    const region = regions[regionId]
-    if (!region) {
-      throw Error(`Region '${regionId}' does not exist`)
-    }
+        const city = region.cities[cityId]
+        if (!city) {
+          throw Error(`City '${cityId}' does not exist`)
+        }
 
-    const city = region.cities[cityId]
-    if (!city) {
-      throw Error(`City '${cityId}' does not exist`)
-    }
+        const backup = city.backups.find(backup => backup.file === file)
+        if (!backup) {
+          throw Error(`Backup '${backup}' does not exist`)
+        }
 
-    const backup = city.backups.find(backup => backup.file === file)
-    if (!backup) {
-      throw Error(`Backup '${backup}' does not exist`)
-    }
-
-    return this.tasks.queue(`backup:restore:${regionId}:${cityId}`, {
-      handler: async context => {
+        // Ask for confirmation if current save is not backed up (will be permanently overwritten)
         if (!hasBackup(city)) {
           const { confirmed } = await showConfirmation(
             `${region.name} - ${city.name}`,
-            t("RestoreBackupModal:confirmation"),
-            t("RestoreBackupModal:description"),
+            i18n.t("RestoreBackupModal:confirmation"),
+            i18n.t("RestoreBackupModal:description"),
             false,
             "warning",
           )
@@ -3094,7 +3775,7 @@ export class Application {
           }
         }
 
-        const backupPath = this.getCityBackupPath(regionId, cityId, file)
+        const backupPath = this.getCityBackupPath(regionId, cityId, backup.file)
 
         context.debug(`Restoring backup '${region}/${cityId}/${file}'...`)
 
@@ -3103,296 +3784,370 @@ export class Application {
         city.save = undefined // may now be outdated, clear to lazy-reload later
         city.version = backup.version
 
-        this.sendStateUpdate({ regions })
-
+        this.updateState({ regions: { [regionId]: { cities: { [cityId]: { $set: city } } } } })
         return true
       },
-      pool: `region:${regionId}`,
+      reads: { regions: [regionId] },
+      writes: { regions: [regionId] },
     })
   }
 
   /**
-   * Run an installed tool.
+   * Runs an installed tool.
    */
   public async runTool(toolId: ToolID): Promise<void> {
-    const { tools } = await this.load()
-
-    await this.tasks.queue(`run:${toolId}`, {
-      handler: async context => {
+    await this.runner.queue(`tools:run:${toolId}`, {
+      handler: async (context, { settings, tools }) => {
         const toolInfo = tools[toolId]
-        if (!toolInfo?.asset) {
+        if (!toolInfo) {
           throw Error(`Unknown tool '${toolId}'`)
         }
 
-        try {
-          const exePath = await this.getToolExePath(toolId)
+        if (!toolInfo.installed) {
+          throw Error(`Tool '${toolId}' is not installed`)
+        }
 
+        try {
           context.info(`Running tool '${toolId}'...`)
           toolInfo.action = "running"
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { $merge: { [toolId]: toolInfo } } })
 
-          await runFile(exePath, { logger: context })
+          // Hardcoded override for DgVoodoo
+          switch (toolId) {
+            case ToolID.DgVoodoo: {
+              if (!settings.install?.path) {
+                throw Error("Missing installation path")
+              }
+
+              const exePath = path.join(settings.install.path, toolInfo.exe)
+              await runFile(exePath, { logger: context })
+              break
+            }
+
+            default: {
+              const exePath = this.getToolPath(toolId, toolInfo.exe)
+              await runFile(exePath, { logger: context })
+            }
+          }
         } catch (error) {
           console.error(error)
         } finally {
           toolInfo.action = undefined
-          this.sendStateUpdate({ tools })
+          this.updateState({ tools: { $merge: { [toolId]: toolInfo } } })
         }
       },
-      pool: toolId,
+      reads: { settings: true, tools: [toolId] },
     })
-  }
-
-  /**
-   * Sends deletion of a single package to the renderer.
-   */
-  protected sendPackageDeletion(packageId: PackageID): void {
-    this.sendStateUpdate({ packages: { [packageId]: null } }, { merge: true, recompute: true })
-  }
-
-  /**
-   * Sends updates to a single package to the renderer.
-   */
-  protected sendPackageUpdate(packageInfo: PackageInfo, options?: { recompute?: boolean }): void {
-    this.sendStateUpdate(
-      { packages: { [packageInfo.id]: packageInfo } },
-      { ...options, merge: true },
-    )
-  }
-
-  /**
-   * Sends deletion of a single profile to the renderer.
-   */
-  protected sendProfileDeletion(profileId: ProfileID): void {
-    this.sendStateUpdate({ profiles: { [profileId]: null } }, { merge: true })
-  }
-
-  /**
-   * Sends updates to a single profile to the renderer.
-   */
-  protected sendProfileUpdate(profileInfo: ProfileInfo): void {
-    this.sendStateUpdate({ profiles: { [profileInfo.id]: profileInfo } }, { merge: true })
-  }
-
-  /**
-   * Sends updates to the renderer.
-   */
-  protected sendStateUpdate(
-    data: ApplicationStateUpdate,
-    options?: {
-      merge?: boolean
-      recompute?: boolean
-    },
-  ): void {
-    this.mainWindow?.webContents.postMessage("updateState", {
-      data,
-      merge: options?.merge ?? false,
-      recompute: options?.recompute ?? !!data.packages,
-    })
-  }
-
-  /**
-   * Sends status updates to the renderer.
-   */
-  protected sendStatusUpdate(data: ApplicationStatusUpdate): void {
-    this.mainWindow?.webContents.postMessage("updateStatus", data)
   }
 
   /**
    * Initiates a login to Simtropolis.
    */
   public async simtropolisLogin(): Promise<void> {
-    this.sendStateUpdate({ simtropolis: undefined })
-    const session = await simtropolisLogin(this.browserSession)
-    if (session?.sessionId) {
-      console.info("Logged in to Simtropolis")
-      this.simtropolisSession = session
-      this.sendStateUpdate({
-        simtropolis: {
-          sessionId: session.sessionId,
-          userId: session.userId,
-        },
-      })
-    } else {
-      this.sendStateUpdate({ simtropolis: null })
-    }
+    return this.runner.queue("simtropolis:login", {
+      handler: async context => {
+        this.updateState({ $unset: ["simtropolis"] })
+
+        this.simtropolisSession = await simtropolisLogin(this.browserSession)
+        if (this.simtropolisSession?.sessionId) {
+          context.info("Signed in to Simtropolis")
+        }
+
+        this.updateState({
+          simtropolis: {
+            $set: this.simtropolisSession && {
+              displayName: this.simtropolisSession.displayName,
+              sessionId: isDev() ? this.simtropolisSession.sessionId : undefined,
+              userId: this.simtropolisSession.userId,
+            },
+          },
+        })
+      },
+      label: "Signing in to Simtropolis...",
+      writes: { simtropolis: true },
+    })
   }
 
   /**
    * Logs out of Simtropolis.
    */
   public async simtropolisLogout(): Promise<void> {
-    await simtropolisLogout(this.browserSession)
-    console.info("Logged out from Simtropolis")
-    this.simtropolisSession = null
-    this.sendStateUpdate({ simtropolis: null })
+    return this.runner.queue("simtropolis:logout", {
+      handler: async context => {
+        await simtropolisLogout(this.browserSession)
+        context.info("Signed out of Simtropolis")
+        this.simtropolisSession = null
+        this.updateState({ simtropolis: { $set: null } })
+      },
+      label: "Signing out of Simtropolis...",
+      writes: { simtropolis: true },
+    })
   }
 
   /**
    * Checks out a profile by ID.
    */
   public async switchProfile(profileId: ProfileID): Promise<void> {
-    const { packages, profiles, profileOptions, settings } = await this.load()
+    await this.runner.queue(`profiles:select:${profileId}`, {
+      handler: async (_, { packages, profileOptions, profiles, settings }) => {
+        if (settings.currentProfile === profileId) {
+          return
+        }
 
-    await this.tasks.queue(`switch:${profileId}`, {
-      handler: async context => {
         const profileInfo = profiles[profileId]
         if (!profileInfo) {
           throw Error(`Profile '${profileId}' does not exist`)
         }
 
-        if (settings.currentProfile === profileId) {
-          return
-        }
-
-        context.debug(`Selecting profile '${profileId}'...`)
-
         settings.currentProfile = profileId
 
-        await this.writeSettings(context, settings)
+        this.updateState(
+          {
+            $merge: this.resolvePackages(packages, profileInfo, profileOptions, settings),
+            settings: { currentProfile: { $set: profileId } },
+          },
+          true,
+        )
 
-        this.recalculatePackages(packages, profileInfo, profileOptions, settings)
-        this.cleanPlugins({ isSilent: true })
+        this.writeSettings()
+        this.linkPackages()
+        this.checkPlugins({ isSilent: true })
       },
-      pool: "main",
+      invalidate: true,
+      label: "Switching profile...",
+      reads: { packages: true, profileOptions: true, profiles: [profileId], settings: true },
+      writes: { features: true, packages: true, settings: true },
     })
   }
 
   /**
-   * Attempts to pull latest data from the remote Git repository.
-   * @param isReload whether to force refetching new data
+   * Updates a city savegame.
    */
-  protected async updateDatabase(dbUrl: string, dbPath: string, isReload?: boolean): Promise<void> {
-    await this.tasks.queue("db:update", {
-      cache: true,
-      handler: async context => {
-        await fsCreate(dbPath)
+  public async updateCity(
+    regionId: RegionID,
+    cityId: CityID,
+    action: UpdateSaveAction,
+  ): Promise<boolean> {
+    return this.runner.queue(`regions:update:${regionId}:${cityId}:${action.action}`, {
+      handler: async (context, { regions }) => {
+        let backup: CityBackupInfo | undefined
+        let backupFullPath: string | undefined
 
-        const branch = env.DATA_BRANCH || "main"
-        context.info(`Updating database from ${dbUrl}/${branch}...`)
-
-        try {
-          await new Promise<void>((resolve, reject) => {
-            createChildProcess<
-              UpdateDatabaseProcessData,
-              EmptyRecord,
-              UpdateDatabaseProcessResponse
-            >(updateDatabaseProcessPath, {
-              cwd: dbPath,
-              data: {
-                branch,
-                origin: dbUrl,
-              },
-              onClose() {
-                reject(Error("Closed"))
-              },
-              onMessage({ success, error }) {
-                if (success) {
-                  resolve()
-                } else {
-                  reject(error)
-                }
-              },
-            })
-          })
-
-          context.info("Updated database")
-        } catch (error) {
-          context.warn("Failed to update database", error)
+        const region = regions[regionId]
+        if (!region) {
+          throw Error(`Region '${regionId}' does not exist`)
         }
+
+        const city = region.cities[cityId]
+        if (!city) {
+          throw Error(`City '${cityId}' does not exist`)
+        }
+
+        const fullPath = this.getCityPath(regionId, cityId)
+
+        if (action.backup) {
+          const description = `(${action.action})`
+          const backupTime = new Date()
+          const backupFile = getBackupFileName(backupTime, description)
+          backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
+
+          await fsCopy(fullPath, backupFullPath)
+
+          backup = {
+            description,
+            file: backupFile,
+            time: backupTime,
+            version: city.version,
+          }
+        }
+
+        const tempPath = this.getTempPath(fullPath)
+
+        let updated: boolean
+
+        switch (action.action) {
+          case "fix": {
+            updated = await fixSave(context, fullPath, { ...action, tempPath })
+            break
+          }
+
+          case "growify": {
+            updated = await growify(context, fullPath, { ...action, tempPath })
+            break
+          }
+
+          case "historical": {
+            updated = await makeHistorical(context, fullPath, { ...action, tempPath })
+            break
+          }
+        }
+
+        if (updated) {
+          if (backup) {
+            city.backups.push(backup)
+          }
+
+          // File was updated - update the version
+          city.version = await getFileVersion(fullPath)
+
+          this.updateState({
+            regions: {
+              [regionId]: {
+                cities: {
+                  [cityId]: {
+                    $set: city,
+                  },
+                },
+              },
+            },
+          })
+        } else if (backupFullPath) {
+          // File was not updated - automatic backup no longer needed
+          await fsRemove(backupFullPath)
+        }
+
+        return updated
       },
-      invalidate: isReload,
-      pool: "db",
+      reads: { regions: [regionId] },
+      writes: { regions: [regionId] },
     })
   }
 
+  /**
+   * Fetches database updates from Git. Does nothing if a local database is used.
+   */
+  protected async updateDatabase(): Promise<DatabaseSettings> {
+    return this.runner.queue("db:update", {
+      handler: async (context, { settings }) => {
+        if (settings.db.url) {
+          await updateDatabase(
+            context,
+            settings.db.path,
+            settings.db.url,
+            settings.db.branch || "main",
+          )
+        }
+
+        return settings.db
+      },
+      label: "Updating database...",
+      reads: { settings: true },
+      writes: { db: true },
+    })
+  }
+
+  /**
+   * Edits a profile's settings.
+   * @param profileId Profile ID
+   * @param update Data to update
+   */
   public async updateProfile(profileId: ProfileID, update: ProfileUpdate): Promise<boolean> {
-    const key = `update:${profileId}#${toHex(Date.now(), 8)}`
+    const key = Date.now()
 
-    const confirmedWarnings: { [id: string]: PackageID[] } = {}
+    const isSimpleEdit =
+      (!update.features || isEmpty(update.features)) &&
+      (!update.options || isEmpty(update.options)) &&
+      (!update.packages || isEmpty(update.packages))
 
-    let result: boolean | undefined
+    // Updating only simple fields, no need for recalculations
+    if (isSimpleEdit) {
+      await this.runner.queue(`profiles:update:${profileId}@${key}`, {
+        handler: async (_, { profiles }) => {
+          const profileInfo = profiles[profileId]
+          if (!profileInfo) {
+            throw Error(`Profile '${profileId}' does not exist`)
+          }
 
-    while (result === undefined) {
-      const { assets, features, packages, profiles, profileOptions, regions, settings } =
-        await this.load()
+          $merge(profileInfo, { name: update.name })
+          this.updateState({ profiles: { [profileId]: { $set: profileInfo } } })
+          this.writeProfileConfig(profileId)
+        },
+        reads: { profiles: [profileId] },
+        writes: { profiles: [profileId] },
+      })
 
-      const profileInfo = profiles[profileId]
-      if (!profileInfo) {
-        throw Error(`Profile '${profileId}' does not exist`)
-      }
+      return true
+    }
 
-      result = await this.tasks.queue(key, {
-        handler: async context => {
-          update.features ??= {}
-          update.options ??= {}
-          update.packages ??= {}
+    const confirmedWarnings: Record<string, PackageID[]> = {}
 
-          // Resolve conflicts/dependencies caused by pending profile changes
-          if (!isEmpty(update.features) || !isEmpty(update.options) || !isEmpty(update.packages)) {
-            const {
-              disablingLots,
-              disablingPackages,
-              enablingPackages,
-              explicitVariantChanges,
-              implicitOptionChanges,
-              implicitVariantChanges,
-              incompatibleExternals,
-              incompatiblePackages,
-              installingVariants,
-              replacingLots,
-              resultingFeatures,
-              resultingProfile,
-              resultingStatus,
-              shouldRecalculate,
-              warnings,
-            } = resolvePackageUpdates(
+    update.features ??= {}
+    update.packages ??= {}
+
+    const affectedPackages: Packages = {}
+    const featureUpdates = update.features
+    const packageUpdates = update.packages
+
+    try {
+      while (true) {
+        const { installingVariants, success } = await this.runner.queue(
+          `profiles:update:${profileId}@${key}`,
+          {
+            handler: async (
               context,
-              packages,
-              profileInfo,
-              profileOptions,
-              features,
-              settings,
-              update,
-            )
+              { assets, features, packages, profileOptions, profiles, regions, settings },
+            ) => {
+              const profileInfo = profiles[profileId]
+              if (!profileInfo) {
+                throw Error(`Profile '${profileId}' does not exist`)
+              }
 
-            try {
+              forEach(packageUpdates, (packageUpdate, packageId) => {
+                const packageStatus = packages[packageId]?.status[profileId]
+                if (packageStatus) {
+                  if (
+                    packageUpdate.enabled !== undefined &&
+                    packageUpdate.enabled !== packageStatus.enabled
+                  ) {
+                    packageStatus.action = packageUpdate.enabled ? "enabling" : "disabling"
+                    affectedPackages[packageId] = packages[packageId]
+                  } else if (
+                    packageUpdate.variant !== undefined &&
+                    packageUpdate.variant !== packageStatus.variantId
+                  ) {
+                    packageStatus.action = "switching"
+                    affectedPackages[packageId] = packages[packageId]
+                  }
+                }
+              })
+
+              this.updateState({ packages: { $merge: affectedPackages } })
+
+              const {
+                disablingLots,
+                enablingPackages,
+                explicitVariantChanges,
+                implicitOptionChanges,
+                implicitVariantChanges,
+                incompatibleExternals,
+                incompatiblePackages,
+                installingVariants,
+                replacingLots,
+                resultingFeatures,
+                resultingProfile,
+                resultingStatus,
+                shouldRecalculate,
+                warnings,
+              } = resolvePackageUpdates(
+                context,
+                packages,
+                profileInfo,
+                profileOptions,
+                features,
+                settings,
+                update,
+              )
+
               if (shouldRecalculate) {
-                const packagesWithAction: typeof packages = {}
-
-                // Set enabling/disabling status
-                for (const packageId of disablingPackages) {
-                  const packageStatus = packages[packageId]?.status[profileId]
-                  if (packageStatus) {
-                    packageStatus.action = "disabling"
-                    packagesWithAction[packageId] = packages[packageId]
-                  }
-                }
-
-                for (const packageId of enablingPackages) {
-                  const packageStatus = packages[packageId]?.status[profileId]
-                  if (packageStatus) {
-                    packageStatus.action = "enabling"
-                    packagesWithAction[packageId] = packages[packageId]
-                  }
-                }
-
-                if (!isEmpty(packagesWithAction)) {
-                  this.sendStateUpdate(
-                    { packages: packagesWithAction },
-                    { merge: true, recompute: false },
-                  )
-                }
-
                 // Apply implicit variant changes automatically
                 if (!isEmpty(implicitVariantChanges)) {
                   for (const [packageId, variantIds] of entries(implicitVariantChanges)) {
-                    update.packages[packageId] ??= {}
-                    update.packages[packageId].variant = variantIds.new
+                    packageUpdates[packageId] ??= {}
+                    packageUpdates[packageId].variant = variantIds.new
                   }
 
                   // Recalculate
-                  return
+                  return {}
                 }
 
                 // Confirm incompatible externals
@@ -3407,30 +4162,22 @@ export class Application {
                     description: i18n.t("ReplaceExternalPackagesModal:description", {
                       features: featureNames.sort(),
                     }),
-                    ignoreLabel: t("ReplaceExternalPackagesModal:ignore"),
-                    message: t("ReplaceExternalPackagesModal:confirmation"),
-                    title: t("ReplaceExternalPackagesModal:title"),
+                    ignoreLabel: i18n.t("ReplaceExternalPackagesModal:ignore"),
+                    message: i18n.t("ReplaceExternalPackagesModal:confirmation"),
+                    title: i18n.t("ReplaceExternalPackagesModal:title"),
                   })
 
-                  // Cancel
                   if (response === ConflictConfirmationResponse.CANCEL) {
-                    return false
+                    return { success: false }
                   }
 
-                  // Disable conflicted externals
-                  if (response === ConflictConfirmationResponse.CONFIRM) {
-                    for (const feature of incompatibleExternals) {
-                      update.features[feature] = false
-                    }
-
-                    // Recalculate
-                    return
-                  }
-
-                  // Ignore conflicted externals
+                  const ignore = response === ConflictConfirmationResponse.IGNORE
                   for (const feature of incompatibleExternals) {
-                    update.features[feature] = true
+                    featureUpdates[feature] = ignore
                   }
+
+                  // Recalculate
+                  return {}
                 }
 
                 // Confirm fully-incompatible packages
@@ -3446,32 +4193,23 @@ export class Application {
                     description: i18n.t("DisableIncompatiblePackagesModal:description", {
                       packages: packageNames.sort(),
                     }),
-                    ignoreLabel: t("DisableIncompatiblePackagesModal:ignore"),
-                    message: t("DisableIncompatiblePackagesModal:confirmation"),
-                    title: t("DisableIncompatiblePackagesModal:title"),
+                    ignoreLabel: i18n.t("DisableIncompatiblePackagesModal:ignore"),
+                    message: i18n.t("DisableIncompatiblePackagesModal:confirmation"),
+                    title: i18n.t("DisableIncompatiblePackagesModal:title"),
                   })
 
-                  // Cancel
                   if (response === ConflictConfirmationResponse.CANCEL) {
-                    return false
+                    return { success: false }
                   }
 
-                  // Disable fully-incompatible packages
-                  if (response === ConflictConfirmationResponse.CONFIRM) {
-                    for (const packageId of incompatiblePackages) {
-                      update.packages[packageId] ??= {}
-                      update.packages[packageId].enabled = false
-                    }
-
-                    // Recalculate
-                    return
-                  }
-
-                  // Ignore fully-incompatible packages
+                  const ignore = response === ConflictConfirmationResponse.IGNORE
                   for (const packageId of incompatiblePackages) {
-                    update.packages[packageId] ??= {}
-                    update.packages[packageId].enabled = true
+                    packageUpdates[packageId] ??= {}
+                    packageUpdates[packageId].enabled = ignore
                   }
+
+                  // Recalculate
+                  return {}
                 }
 
                 // Confirm explicit variant changes
@@ -3480,7 +4218,7 @@ export class Application {
                     const packageInfo = packages[packageId]
                     const oldVariant = packageInfo?.variants[variants.old]
                     const newVariant = packageInfo?.variants[variants.new]
-                    return t("InstallCompatibleVariantsModal:variant", {
+                    return i18n.t("InstallCompatibleVariantsModal:variant", {
                       newVariantName: newVariant?.name ?? variants.new,
                       oldVariantName: oldVariant?.name ?? variants.old,
                       packageName: packageInfo?.name ?? packageId,
@@ -3493,32 +4231,23 @@ export class Application {
                     description: i18n.t("InstallCompatibleVariantsModal:description", {
                       variants: variants.sort(),
                     }),
-                    ignoreLabel: t("InstallCompatibleVariantsModal:ignore"),
-                    message: t("InstallCompatibleVariantsModal:confirmation"),
-                    title: t("InstallCompatibleVariantsModal:title"),
+                    ignoreLabel: i18n.t("InstallCompatibleVariantsModal:ignore"),
+                    message: i18n.t("InstallCompatibleVariantsModal:confirmation"),
+                    title: i18n.t("InstallCompatibleVariantsModal:title"),
                   })
 
-                  // Cancel
                   if (response === ConflictConfirmationResponse.CANCEL) {
-                    return false
+                    return { success: false }
                   }
 
-                  // Switch to compatible variants
-                  if (response === ConflictConfirmationResponse.CONFIRM) {
-                    for (const [packageId, variantIds] of entries(explicitVariantChanges)) {
-                      update.packages[packageId] ??= {}
-                      update.packages[packageId].variant = variantIds.new
-                    }
-
-                    // Recalculate
-                    return
-                  }
-
-                  // Ignore incompatible variants
+                  const ignore = response === ConflictConfirmationResponse.IGNORE
                   for (const [packageId, variantIds] of entries(explicitVariantChanges)) {
-                    update.packages[packageId] ??= {}
-                    update.packages[packageId].variant = variantIds.old
+                    packageUpdates[packageId] ??= {}
+                    packageUpdates[packageId].variant = ignore ? variantIds.old : variantIds.new
                   }
+
+                  // Recalculate
+                  return {}
                 }
 
                 // Confirm dependencies with features
@@ -3553,25 +4282,24 @@ export class Application {
 
                     const { confirmed } = await showConfirmation(
                       packageInfo.name,
-                      t("EnableFeatures:confirmation"),
-                      t("EnableFeatures:description", {
+                      i18n.t("EnableFeatures:confirmation"),
+                      i18n.t("EnableFeatures:description", {
                         dependencies: dependencyNames.sort(),
                         packageName: packageInfo.name,
                       }),
                     )
 
-                    // Cancel
                     if (!confirmed) {
-                      return false
+                      return { success: false }
                     }
 
                     for (const dependencyId of dependencyIds) {
-                      update.packages[dependencyId] ??= {}
-                      update.packages[dependencyId].enabled = true
+                      packageUpdates[dependencyId] ??= {}
+                      packageUpdates[dependencyId].enabled = true
                     }
 
                     // Recalculate
-                    return
+                    return {}
                   }
                 }
 
@@ -3609,37 +4337,35 @@ export class Application {
 
                     const { confirmed } = await showConfirmation(
                       packageInfo.name,
-                      t("EnableOptionalDependencies:confirmation"),
-                      t("EnableOptionalDependencies:description", {
+                      i18n.t("EnableOptionalDependencies:confirmation"),
+                      i18n.t("EnableOptionalDependencies:description", {
                         dependencies: dependencyNames.sort(),
                         packageName: packageInfo.name,
                       }),
                     )
 
                     for (const dependencyId of dependencyIds) {
-                      update.packages[dependencyId] ??= {}
-                      update.packages[dependencyId].enabled = confirmed
+                      packageUpdates[dependencyId] ??= {}
+                      packageUpdates[dependencyId].enabled = confirmed
                     }
 
                     // Recalculate
-                    if (confirmed) {
-                      return
-                    }
+                    return {}
                   }
                 }
 
                 // Apply implicit option changes automatically
                 if (!isEmpty(implicitOptionChanges)) {
                   for (const [packageId, options] of entries(implicitOptionChanges)) {
-                    update.packages[packageId] ??= {}
-                    update.packages[packageId].options = {
-                      ...update.packages[packageId].options,
+                    packageUpdates[packageId] ??= {}
+                    packageUpdates[packageId].options = {
+                      ...packageUpdates[packageId].options,
                       ...options.new,
                     }
                   }
 
                   // Recalculate
-                  return
+                  return {}
                 }
 
                 // Confirm warnings
@@ -3679,7 +4405,7 @@ export class Application {
                   }
 
                   if (!confirmed) {
-                    return false
+                    return { success: false }
                   }
 
                   confirmedWarnings[warning.id] ??= []
@@ -3715,21 +4441,21 @@ export class Application {
                       : undefined
 
                     const { confirmed } = await showConfirmation(
-                      t("DownloadAssetsModal:title"),
-                      t("DownloadAssetsModal:confirmation"),
+                      i18n.t("DownloadAssetsModal:title"),
+                      i18n.t("DownloadAssetsModal:confirmation"),
                       missingDependencyIds.length
                         ? [
-                            t("DownloadAssetsModal:descriptionDependencies", {
+                            i18n.t("DownloadAssetsModal:descriptionDependencies", {
                               dependencies: dependencyNames.sort(),
                               count: missingDependencyIds.length,
                             }),
-                            t("DownloadAssetsModal:descriptionAssetsWithDependencies", {
+                            i18n.t("DownloadAssetsModal:descriptionAssetsWithDependencies", {
                               assets: missingAssets.map(asset => asset.id).sort(),
                               count: missingAssets.length,
                               totalSize,
                             }),
                           ].join("\n\n")
-                        : t("DownloadAssetsModal:descriptionAssets", {
+                        : i18n.t("DownloadAssetsModal:descriptionAssets", {
                             assets: missingAssets.map(asset => asset.id).sort(),
                             count: missingAssets.length,
                             totalSize,
@@ -3737,19 +4463,12 @@ export class Application {
                     )
 
                     if (!confirmed) {
-                      return false
+                      return { success: false }
                     }
                   }
 
-                  // Install all packages
-                  await Promise.all(
-                    collect(installingVariants, async (variantId, packageId) => {
-                      await this.installVariant(packageId, variantId)
-                    }),
-                  )
-
-                  // Recalculate (conflicts may have changed during install?)
-                  return
+                  // Install all packages before recalculating
+                  return { installingVariants }
                 }
               }
 
@@ -3889,7 +4608,7 @@ export class Application {
                         backup.city.version = await getFileVersion(backup.cityPath)
                       }
 
-                      this.sendStateUpdate({ regions })
+                      this.updateState({ $merge: { regions } })
                     } catch (_) {
                       // Rollback - Restore from automatic backups
                       for (const backup of backups) {
@@ -3898,184 +4617,128 @@ export class Application {
                         }
                       }
 
-                      return false
+                      return { success: false }
                     }
                   }
                 }
               }
 
-              // Apply config changes
-              Object.assign(profileInfo, resultingProfile)
+              // Apply profile changes
+              $merge(profileInfo, resultingProfile)
+              this.writeProfileConfig(profileId)
 
-              // Apply status changes
+              // Apply package status changes
               forEach(packages, (packageInfo, packageId) => {
                 packageInfo.status[profileId] = resultingStatus[packageId]
               })
 
-              if (update.packages && !shouldRecalculate) {
-                this.sendStateUpdate(
-                  { packages: filterValues(packages, info => !!update.packages?.[info.id]) },
-                  { merge: true, recompute: false },
-                )
-              }
-
-              // Run cleaner and linker
-              if (shouldRecalculate && settings.currentProfile === profileId) {
+              if (shouldRecalculate && profileId === settings.currentProfile) {
                 // Apply feature changes
-                forEach(features, (_packageIds, feature) => {
+                forEach(features, (_, feature) => {
                   if (!resultingFeatures[feature]?.length) {
                     features[feature] = undefined
                   }
                 })
+
                 forEach(resultingFeatures, (packageIds, feature) => {
                   features[feature] = packageIds
                 })
 
-                this.sendStateUpdate({ features })
-                this.cleanPlugins({ packageIds: enablingPackages })
+                this.updateState(
+                  {
+                    features: {
+                      $set: features,
+                    },
+                    packages: {
+                      $set: packages,
+                    },
+                    profiles: {
+                      [profileId]: { $set: profileInfo },
+                    },
+                  },
+                  true,
+                )
+
                 this.linkPackages()
+                this.checkPlugins({ isSilent: true })
+              } else {
+                this.updateState(
+                  {
+                    packages: {
+                      $merge: filterValues(packages, (_, id) => !!packageUpdates[id]), // TODO: pick
+                    },
+                    profiles: {
+                      [profileId]: { $set: profileInfo },
+                    },
+                  },
+                  true,
+                )
               }
-            } finally {
-              if (shouldRecalculate) {
-                // Unset enabling/disabling status
-                for (const packageId of disablingPackages) {
-                  const packageStatus = packages[packageId]?.status[profileId]
-                  if (packageStatus?.action === "disabling") {
-                    packageStatus.action = undefined
-                  }
-                }
 
-                for (const packageId of enablingPackages) {
-                  const packageStatus = packages[packageId]?.status[profileId]
-                  if (packageStatus?.action === "enabling") {
-                    packageStatus.action = undefined
-                  }
-                }
+              return { success: true }
+            },
+            label: "Resolving packages...",
+            reads: {
+              assets: true,
+              features: true,
+              packages: true,
+              profileOptions: true,
+              profiles: [profileId],
+              regions: true,
+              settings: true,
+            },
+            writes: {
+              features: true,
+              packages: true,
+              profiles: [profileId],
+              regions: true,
+            },
+          },
+        )
 
-                this.sendStateUpdate({ packages })
-              }
+        if (success !== undefined) {
+          return success
+        }
+
+        // Install all packages
+        if (installingVariants) {
+          await Promise.all(
+            collect(installingVariants, async (variantId, packageId) => {
+              await this.installVariant(packageId, variantId)
+            }),
+          )
+        }
+      }
+    } finally {
+      await this.runner.queue(`profiles:update:${profileId}:cancel@${key}`, {
+        handler: async () => {
+          forEach(affectedPackages, packageInfo => {
+            const packageStatus = packageInfo.status[profileId]
+            if (packageStatus) {
+              packageStatus.action = undefined
             }
-          }
+          })
 
-          if (update.name) {
-            profileInfo.name = update.name
-          }
-
-          await this.writeProfileConfig(context, profileInfo)
-
-          return true
+          this.updateState({ packages: { $merge: affectedPackages } })
         },
-        invalidate: true,
-        pool: "main",
+        writes: { packages: keys(affectedPackages) },
       })
     }
-
-    return result
   }
 
-  public async updateSave(
-    regionId: RegionID,
-    cityId: CityID,
-    file: string | null,
-    action: UpdateSaveAction,
-  ): Promise<boolean> {
-    const { regions } = await this.load()
+  /**
+   * Edits global settings.
+   * @param update Data to update
+   */
+  public async updateSettings(update: SettingsUpdate): Promise<boolean> {
+    const key = Date.now()
 
-    return this.tasks.queue(`region:update:${regionId}:${cityId}`, {
-      handler: async context => {
-        let source: CityBackupInfo | CityInfo
-        let sourceFullPath: string
-        let backup: CityBackupInfo | undefined
-        let backupFullPath: string | undefined
-
-        const region = regions[regionId]
-        if (!region) {
-          throw Error(`Region '${regionId}' does not exist`)
-        }
-
-        const city = region.cities[cityId]
-        if (!city) {
-          throw Error(`City '${cityId}' does not exist`)
-        }
-
-        if (file) {
-          const backup = city.backups.find(backup => backup.file === file)
-          if (!backup) {
-            throw Error(`Backup '${file}' does not exist`)
-          }
-
-          source = backup
-          sourceFullPath = this.getCityBackupPath(regionId, cityId, file)
-        } else {
-          source = city
-          sourceFullPath = this.getCityPath(regionId, cityId)
-        }
-
-        if (action.backup) {
-          const description = `(${action.action})`
-          const backupTime = new Date()
-          const backupFile = getBackupFileName(backupTime, description)
-          backupFullPath = this.getCityBackupPath(regionId, cityId, backupFile)
-
-          await fsCopy(sourceFullPath, backupFullPath)
-
-          backup = {
-            description,
-            file: backupFile,
-            time: backupTime,
-            version: source.version,
-          }
-        }
-
-        const tempPath = this.getTempPath(sourceFullPath)
-
-        let updated: boolean
-
-        switch (action.action) {
-          case "fix": {
-            updated = await fixSave(context, sourceFullPath, { ...action, tempPath })
-            break
-          }
-
-          case "growify": {
-            updated = await growify(context, sourceFullPath, { ...action, tempPath })
-            break
-          }
-
-          case "historical": {
-            updated = await makeHistorical(context, sourceFullPath, { ...action, tempPath })
-            break
-          }
-        }
-
-        if (updated) {
-          if (backup) {
-            city.backups.push(backup)
-          }
-
-          // File was updated - update the version
-          source.version = await getFileVersion(sourceFullPath)
-          this.sendStateUpdate({ regions })
-        } else if (backupFullPath) {
-          // File was not updated - automatic backup no longer needed
-          await fsRemove(backupFullPath)
-        }
-
-        return updated
-      },
-      pool: `region:${regionId}`,
-    })
-  }
-
-  public async updateSettings(data: Partial<Settings>): Promise<boolean> {
-    const { profiles, regions, settings } = await this.load()
-
-    return this.tasks.queue("settings:update", {
-      handler: async context => {
-        const newSettings = { ...settings, ...data }
+    const confirmed = await this.runner.queue(`settings:update:check@${key}`, {
+      handler: async (_, { profiles, regions, settings }) => {
+        const newSettings = { ...settings, ...update }
 
         // Warn about changing the linked profile of established cities
-        if (data.regions && !this.ignoredWarnings.has("relinkEstablishedCities")) {
+        if (update.regions && !this.ignoredWarnings.has("relinkEstablishedCities")) {
           const relinkedCities = values(regions).flatMap(region => {
             const oldRegionProfileId = getRegionLinkedProfileId(region.id, settings, profiles)
             const newRegionProfileId = getRegionLinkedProfileId(region.id, newSettings, profiles)
@@ -4090,24 +4753,24 @@ export class Application {
             })
           })
 
-          if (relinkedCities.length) {
+          if (relinkedCities?.length) {
             const { confirmed, doNotAskAgain } = await showConfirmation(
-              t("RelinkEstablishedCitiesModal:title", {
+              i18n.t("RelinkEstablishedCitiesModal:title", {
                 city: relinkedCities[0].name,
                 count: relinkedCities.length,
               }),
-              t("RelinkEstablishedCitiesModal:confirmation", {
+              i18n.t("RelinkEstablishedCitiesModal:confirmation", {
                 city: relinkedCities[0].name,
                 count: relinkedCities.length,
               }),
-              t("RelinkEstablishedCitiesModal:description", {
+              i18n.t("RelinkEstablishedCitiesModal:description", {
                 cities: relinkedCities.map(city => city.name).sort(),
                 count: relinkedCities.length,
               }),
               true,
               "warning",
-              t("RelinkEstablishedCitiesModal:confirm"),
-              t("RelinkEstablishedCitiesModal:cancel"),
+              i18n.t("RelinkEstablishedCitiesModal:confirm"),
+              i18n.t("RelinkEstablishedCitiesModal:cancel"),
             )
 
             if (!confirmed) {
@@ -4120,71 +4783,116 @@ export class Application {
           }
         }
 
-        settings.regions = data.regions
-
-        this.sendStateUpdate({ settings })
-
-        await this.writeSettings(context, settings)
-
         return true
       },
-      pool: "main",
+      pools: ["dialogs"],
+      reads: { profiles: true, regions: true, settings: true },
+    })
+
+    if (!confirmed) {
+      return false
+    }
+
+    // Apply update
+    await this.runner.queue(`settings:update@${key}`, {
+      handler: async (_, { settings }) => {
+        $merge(settings, update)
+        this.updateState({ $merge: { settings } })
+        this.writeSettings()
+      },
+      reads: { settings: true },
+      writes: { settings: true },
+    })
+
+    return true
+  }
+
+  protected updateState(data: Spec<ApplicationState>, recompute?: boolean): void {
+    this.state = update(this.state, data)
+    this.mainWindow?.webContents.postMessage("updateState", { data, recompute: recompute ?? false })
+  }
+
+  protected updateStatus(data: Partial<ApplicationStatus>): void {
+    this.mainWindow?.webContents.postMessage("updateStatus", data)
+  }
+
+  protected async writePacks(): Promise<void> {
+    return this.runner.queue("packs:write", {
+      handler: async (context, { packs }) => {
+        await writePacks(context, this.getManagerPath(), packs)
+      },
+      invalidate: true,
+      reads: { packs: true },
     })
   }
 
-  protected async writePackageConfig(
-    context: TaskContext,
-    packageInfo: PackageInfo,
-    categories: Categories,
-  ): Promise<void> {
-    context.debug(`Saving package '${packageInfo.id}'...`)
+  protected async writePackageConfig(packageId: PackageID): Promise<void> {
+    return this.runner.queue(`packages:write:${packageId}`, {
+      handler: async (_, { categories, packages }) => {
+        const packageInfo = packages[packageId]
+        if (!packageInfo) {
+          throw Error(`Profile '${packageId}' does not exist.`)
+        }
 
-    await writeConfig<PackageData>(
-      this.getPackagePath(packageInfo.id),
-      FILENAMES.packageConfig,
-      writePackageInfo(packageInfo, true, categories),
-      ConfigFormat.YAML,
-      packageInfo.format,
-    )
+        await writeConfig<PackageData>(
+          this.getPackagePath(packageInfo.id),
+          FILENAMES.packageConfig,
+          writePackageInfo(packageInfo, true, categories),
+          ConfigFormat.YAML,
+          packageInfo.format,
+        )
 
-    packageInfo.format = ConfigFormat.YAML
-
-    this.sendPackageUpdate(packageInfo)
+        packageInfo.format = ConfigFormat.YAML
+      },
+      invalidate: true,
+      label: "Saving package...",
+      reads: { categories: true, packages: [packageId] },
+    })
   }
 
-  protected async writeProfileConfig(
-    context: TaskContext,
-    profileInfo: ProfileInfo,
-  ): Promise<void> {
-    context.debug(`Saving profile '${profileInfo.id}'...`)
+  protected async writeProfileConfig(profileId: ProfileID): Promise<void> {
+    return this.runner.queue(`profiles:write:${profileId}`, {
+      handler: async (_, { profiles }) => {
+        const profileInfo = profiles[profileId]
+        if (!profileInfo) {
+          throw Error(`Profile '${profileId}' does not exist.`)
+        }
 
-    compactProfileConfig(profileInfo)
+        compactProfileConfig(profileInfo) // TODO: Remove mutation here
 
-    await writeConfig<ProfileData>(
-      this.getProfilesPath(),
-      profileInfo.id,
-      toProfileData(profileInfo),
-      ConfigFormat.YAML,
-      profileInfo.format,
-    )
+        await writeConfig<ProfileData>(
+          this.getProfilesPath(),
+          profileInfo.id,
+          toProfileData(profileInfo),
+          ConfigFormat.YAML,
+          profileInfo.format,
+        )
 
-    profileInfo.format = ConfigFormat.YAML
-
-    this.sendProfileUpdate(profileInfo)
+        profileInfo.format = ConfigFormat.YAML
+      },
+      invalidate: true,
+      label: "Saving profile...",
+      reads: { profiles: [profileId] },
+      writes: { profiles: [profileId] },
+    })
   }
 
-  protected async writeSettings(context: TaskContext, settings: Settings): Promise<void> {
-    context.debug("Saving settings...")
+  protected async writeSettings(): Promise<void> {
+    return this.runner.queue("settings:write", {
+      handler: async (_, { settings }) => {
+        await writeConfig<SettingsData>(
+          this.getManagerPath(),
+          FILENAMES.settings,
+          toSettingsData(settings),
+          ConfigFormat.YAML,
+          settings.format,
+        )
 
-    await writeConfig<SettingsData>(
-      this.getRootPath(),
-      FILENAMES.settings,
-      toSettingsData(settings),
-      ConfigFormat.YAML,
-      settings.format,
-    )
-
-    settings.format = ConfigFormat.YAML
-    this.sendStateUpdate({ settings })
+        settings.format = ConfigFormat.YAML
+      },
+      invalidate: true,
+      label: "Saving settings...",
+      reads: { settings: true },
+    })
   }
 }

@@ -1,61 +1,46 @@
-import { compact, isEmpty } from "@salinco/nice-utils"
+import update from "immutability-helper"
 import { type ReactNode, useEffect } from "react"
 
-import { store } from "@stores/main"
-import { status } from "@stores/status"
+import { type MainState, store } from "@stores/main"
 import { openSnackbar } from "@stores/ui"
 import { computePackageList } from "@utils/packages"
+import { status } from "../stores/status"
 
 export function DataProvider({ children }: { children: ReactNode }): JSX.Element {
-  const isDownloading = status.useStore(status => !isEmpty(status.downloads))
-  const isLinking = status.useStore(status => !!status.linker)
-  const isLoading = status.useStore(status => !!status.loader)
+  const isDownloading = status.useStore(status =>
+    status.tasks.some(task => task.key.startsWith("download:")),
+  )
+
+  const isRunning = status.useStore(
+    status => !!status.tasks.some(task => task.label && !task.key.startsWith("download:")),
+  )
 
   useEffect(() => {
     return window.api.subscribe({
-      updateState(data, options) {
+      updateState({ data, ...options }) {
         console.debug("updateState", data, options)
 
         store.api.setState(state => {
-          const newState = {
-            ...state,
-            ...data,
-            packages: data.packages
-              ? compact(options.merge ? { ...state.packages, ...data.packages } : data.packages)
-              : state.packages,
-            profiles: data.profiles
-              ? compact(options.merge ? { ...state.profiles, ...data.profiles } : data.profiles)
-              : state.profiles,
-          }
+          const newState = update<MainState>(state, data)
 
           if (options.recompute) {
             return { ...newState, ...computePackageList(newState, false) }
           }
 
           return newState
-        })
+        }, true)
       },
       updateStatus(data) {
-        status.api.setState(state => {
-          const newState = {
-            ...state,
-            ...data,
-            downloads: data.downloads
-              ? compact({ ...state.downloads, ...data.downloads })
-              : state.downloads,
-          }
-
-          return newState
-        })
+        status.api.setState(data)
       },
     })
   }, [])
 
   useEffect(() => {
-    if (isLinking || isLoading) {
+    if (isRunning) {
       openSnackbar("load-progress", {})
     }
-  }, [isLinking, isLoading])
+  }, [isRunning])
 
   useEffect(() => {
     if (isDownloading) {

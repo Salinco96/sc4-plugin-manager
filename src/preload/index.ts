@@ -2,12 +2,12 @@ import { type IpcRendererEvent, contextBridge, ipcRenderer } from "electron"
 
 import type { AuthorID } from "@common/authors"
 import type { DBPFDataType, DBPFInfo, DBPFLoadedEntryInfo, TGI } from "@common/dbpf"
-import type { ExemplarDataPatch } from "@common/exemplars"
+import type { ExemplarDataPatches } from "@common/exemplars"
 import type { PackageID } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
 import type { CityID, RegionID, UpdateSaveAction } from "@common/regions"
-import type { Settings } from "@common/settings"
-import type { ApplicationStateUpdate, ApplicationStatusUpdate } from "@common/state"
+import type { SettingsUpdate } from "@common/settings"
+import type { ApplicationState, ApplicationStateUpdate, ApplicationStatus } from "@common/state"
 import type { ToolID } from "@common/tools"
 import type { EditableVariantInfo, VariantID } from "@common/variants"
 
@@ -19,8 +19,8 @@ export const api = {
   checkDgVoodoo(): Promise<void> {
     return ipcRenderer.invoke("checkDgVoodoo")
   },
-  cleanPlugins(): Promise<void> {
-    return ipcRenderer.invoke("cleanPlugins")
+  checkPlugins(): Promise<void> {
+    return ipcRenderer.invoke("checkPlugins")
   },
   cleanVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("cleanVariant", packageId, variantId)
@@ -28,8 +28,8 @@ export const api = {
   clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
     return ipcRenderer.invoke("clearPackageLogs", packageId, variantId)
   },
-  clearUnusedPackages(): Promise<void> {
-    return ipcRenderer.invoke("clearUnusedPackages")
+  removeUnusedPackages(): Promise<void> {
+    return ipcRenderer.invoke("removeUnusedPackages")
   },
   createBackup(regionId: RegionID, cityId: CityID, description?: string): Promise<void> {
     return ipcRenderer.invoke("createBackup", regionId, cityId, description)
@@ -53,12 +53,12 @@ export const api = {
   ): Promise<{ size: number; text: string } | null> {
     return ipcRenderer.invoke("getPackageLogs", packageId, variantId)
   },
-  getPackageReadme(
+  getPackageDocs(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-  ): Promise<{ html?: string; md?: string }> {
-    return ipcRenderer.invoke("getPackageReadme", packageId, variantId, filePath)
+  ): Promise<{ iframe: string } | { md: string } | { text: string }> {
+    return ipcRenderer.invoke("getPackageDocs", packageId, variantId, filePath)
   },
   installTool(toolId: ToolID): Promise<boolean> {
     return ipcRenderer.invoke("installTool", toolId)
@@ -79,23 +79,23 @@ export const api = {
   ): Promise<DBPFLoadedEntryInfo<DBPFDataType.PNG>> {
     return ipcRenderer.invoke("loadSavePreviewPicture", regionId, cityId, backupFile)
   },
-  loadVariantFileEntries(
+  loadPackageFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
   ): Promise<DBPFInfo> {
-    return ipcRenderer.invoke("loadVariantFileEntries", packageId, variantId, filePath)
+    return ipcRenderer.invoke("loadPackageFileEntries", packageId, variantId, filePath)
   },
-  loadVariantFileEntry(
+  loadPackageFileEntry(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
     entryId: TGI,
   ): Promise<DBPFLoadedEntryInfo> {
-    return ipcRenderer.invoke("loadVariantFileEntry", packageId, variantId, filePath, entryId)
+    return ipcRenderer.invoke("loadPackageFileEntry", packageId, variantId, filePath, entryId)
   },
-  openAuthorURL(authorId: AuthorID): Promise<void> {
-    return ipcRenderer.invoke("openAuthorURL", authorId)
+  openAuthorUrl(authorId: AuthorID, type?: "url"): Promise<void> {
+    return ipcRenderer.invoke("openAuthorUrl", authorId, type)
   },
   openDataRepository(): Promise<void> {
     return ipcRenderer.invoke("openDataRepository")
@@ -109,48 +109,48 @@ export const api = {
   openPackageConfig(packageId: PackageID): Promise<void> {
     return ipcRenderer.invoke("openPackageConfig", packageId)
   },
-  openPackageFile(packageId: PackageID, variantId: VariantID, filePath: string): Promise<void> {
-    return ipcRenderer.invoke("openPackageFile", packageId, variantId, filePath)
-  },
-  openPackageURL(
+  openPackageDirectory(
     packageId: PackageID,
     variantId: VariantID,
-    type: "repository" | "support" | "url",
+    relativePath?: string,
   ): Promise<void> {
-    return ipcRenderer.invoke("openPackageURL", packageId, variantId, type)
+    return ipcRenderer.invoke("openPackageDirectory", packageId, variantId, relativePath)
   },
-  openPluginFolder(pluginPath?: string): Promise<void> {
-    return ipcRenderer.invoke("openPluginFolder", pluginPath)
+  openPackageUrl(
+    packageId: PackageID,
+    variantId: VariantID,
+    type?: "repository" | "support" | "url",
+  ): Promise<void> {
+    return ipcRenderer.invoke("openPackageUrl", packageId, variantId, type)
+  },
+  openPluginDirectory(relativePath?: string): Promise<void> {
+    return ipcRenderer.invoke("openPluginDirectory", relativePath)
   },
   openProfileConfig(profileId: ProfileID): Promise<void> {
     return ipcRenderer.invoke("openProfileConfig", profileId)
   },
-  openRegionFolder(regionId: RegionID): Promise<void> {
-    return ipcRenderer.invoke("openRegionFolder", regionId)
+  openRegionDirectory(regionId: RegionID): Promise<void> {
+    return ipcRenderer.invoke("openRegionDirectory", regionId)
   },
-  openToolFile(toolId: ToolID, filePath: string): Promise<void> {
-    return ipcRenderer.invoke("openToolFile", toolId, filePath)
+  openToolDirectory(toolId: ToolID, relativePath?: string): Promise<void> {
+    return ipcRenderer.invoke("openToolDirectory", toolId, relativePath)
   },
-  openToolURL(toolId: ToolID, type: "repository" | "support" | "url"): Promise<void> {
-    return ipcRenderer.invoke("openToolURL", toolId, type)
+  openToolUrl(toolId: ToolID, type?: "repository" | "support" | "url"): Promise<void> {
+    return ipcRenderer.invoke("openToolUrl", toolId, type)
   },
-  patchPluginFileEntries(
-    pluginPath: string,
-    patches: {
-      [entryId in TGI]?: ExemplarDataPatch | null
-    },
-  ): Promise<DBPFInfo> {
+  patchPluginFileEntries(pluginPath: string, patches: ExemplarDataPatches): Promise<DBPFInfo> {
     return ipcRenderer.invoke("patchPluginFileEntries", pluginPath, patches)
   },
-  patchVariantFileEntries(
+  patchPackageFileEntries(
     packageId: PackageID,
     variantId: VariantID,
     filePath: string,
-    patches: {
-      [entryId in TGI]?: ExemplarDataPatch | null
-    },
+    patches: ExemplarDataPatches,
   ): Promise<DBPFInfo> {
-    return ipcRenderer.invoke("patchVariantFileEntries", packageId, variantId, filePath, patches)
+    return ipcRenderer.invoke("patchPackageFileEntries", packageId, variantId, filePath, patches)
+  },
+  refreshLocalVariant(packageId: PackageID, variantId: VariantID): Promise<void> {
+    return ipcRenderer.invoke("refreshLocalVariant", packageId, variantId)
   },
   reloadPlugins(): Promise<void> {
     return ipcRenderer.invoke("reloadPlugins")
@@ -158,8 +158,8 @@ export const api = {
   removeBackup(regionId: RegionID, cityId: CityID, file: string): Promise<void> {
     return ipcRenderer.invoke("removeBackup", regionId, cityId, file)
   },
-  removePluginFile(pluginPath: string): Promise<void> {
-    return ipcRenderer.invoke("removePluginFile", pluginPath)
+  removePlugin(pluginPath: string): Promise<void> {
+    return ipcRenderer.invoke("removePlugin", pluginPath)
   },
   removeProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("removeProfile", profileId)
@@ -183,31 +183,21 @@ export const api = {
     return ipcRenderer.invoke("simtropolisLogout")
   },
   subscribe(handlers: {
-    updateState(data: ApplicationStateUpdate, options: { merge: boolean; recompute: boolean }): void
-    updateStatus(data: ApplicationStatusUpdate): void
+    updateState(state: ApplicationStateUpdate): void
+    updateStatus(status: Partial<ApplicationStatus>): void
   }): () => void {
-    const updateState = (
-      _: IpcRendererEvent,
-      {
-        data,
-        ...options
-      }: {
-        data: ApplicationStateUpdate
-        merge: boolean
-        recompute: boolean
-      },
-    ) => {
-      handlers.updateState(data, options)
+    const updateState = (_: IpcRendererEvent, state: ApplicationStateUpdate) => {
+      handlers.updateState(state)
     }
 
-    const updateStatus = (_: IpcRendererEvent, data: ApplicationStatusUpdate) => {
-      handlers.updateStatus(data)
+    const updateStatus = (_: IpcRendererEvent, status: Partial<ApplicationStatus>) => {
+      handlers.updateStatus(status)
     }
 
     ipcRenderer.on("updateState", updateState)
     ipcRenderer.on("updateStatus", updateStatus)
-    ipcRenderer.invoke("getState").then(state => {
-      handlers.updateState(state, { merge: false, recompute: true })
+    ipcRenderer.invoke("getState").then((state: ApplicationState) => {
+      handlers.updateState({ data: { $merge: state }, recompute: true })
     })
 
     return () => {
@@ -218,19 +208,14 @@ export const api = {
   switchProfile(profileId: ProfileID): Promise<boolean> {
     return ipcRenderer.invoke("switchProfile", profileId)
   },
+  updateCity(regionId: RegionID, cityId: CityID, action: UpdateSaveAction): Promise<boolean> {
+    return ipcRenderer.invoke("updateCity", regionId, cityId, action)
+  },
   updateProfile(profileId: ProfileID, data: ProfileUpdate): Promise<boolean> {
     return ipcRenderer.invoke("updateProfile", profileId, data)
   },
-  updateSettings(data: Partial<Settings>): Promise<boolean> {
+  updateSettings(data: SettingsUpdate): Promise<boolean> {
     return ipcRenderer.invoke("updateSettings", data)
-  },
-  updateSave(
-    regionId: RegionID,
-    cityId: CityID,
-    file: string | null,
-    action: UpdateSaveAction,
-  ): Promise<boolean> {
-    return ipcRenderer.invoke("updateSave", regionId, cityId, file, action)
   },
 }
 

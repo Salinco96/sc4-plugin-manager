@@ -1,4 +1,4 @@
-import type { AssetID, Assets } from "@common/assets"
+import type { AssetID } from "@common/assets"
 import type { AuthorID } from "@common/authors"
 import { isNew } from "@common/packages"
 import type { ToolID, ToolInfo } from "@common/tools"
@@ -50,11 +50,6 @@ export interface ToolData {
    * Relative path to executable
    */
   exe: string
-
-  /**
-   * Content to copy to SimCity 4 installation folder
-   */
-  install?: string
 
   /**
    * Date or ISO string at which this variant was last modified/uploaded, as specified on its download page
@@ -112,9 +107,7 @@ export interface ToolData {
   warnings?: Array<{ message: string; title?: string } | string>
 }
 
-export function loadToolInfo(toolId: ToolID, toolData: ToolData, assets: Assets): ToolInfo {
-  const assetInfo = toolData.asset ? assets[toolData.asset] : undefined
-
+export function loadToolInfo(toolId: ToolID, toolData: ToolData): ToolInfo {
   const toolInfo: ToolInfo = {
     asset: toolData.asset,
     authors: toolData.authors
@@ -125,8 +118,7 @@ export function loadToolInfo(toolId: ToolID, toolData: ToolData, assets: Assets)
     disabled: toolData.disabled,
     exe: toolData.exe,
     id: toolId,
-    install: toolData.install,
-    installed: assetInfo?.downloaded[assetInfo.version],
+    installed: false,
     images: toolData.images,
     lastModified: toolData.lastModified ? new Date(toolData.lastModified) : undefined,
     name: toolData.name,

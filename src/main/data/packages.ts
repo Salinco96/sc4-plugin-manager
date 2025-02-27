@@ -141,27 +141,21 @@ async function loadLocalPackageInfo(
 /**
  * Loads all remote packages.
  */
-export async function loadRemotePackages(
+export async function loadRemoteAssets(
   context: TaskContext,
-  basePath: string,
-  categories: Categories,
-  localPackages: Packages,
+  dbPath: string,
   downloadedAssets: { [assetId in AssetID]?: string[] },
-): Promise<{ assets: Assets; packages: Packages }> {
+): Promise<Assets> {
   const assets: Assets = {}
-  const packages: Packages = {}
 
   let nAssets = 0
   let nConfigs = 0
-  let nPackages = 0
 
-  const assetsPath = path.resolve(basePath, DIRNAMES.dbAssets)
+  const assetsPath = path.resolve(dbPath, DIRNAMES.dbAssets)
   const assetsEntries = await fsQueryFiles(assetsPath, "**/*.{yaml,yml}")
-  const packagesPath = path.resolve(basePath, DIRNAMES.dbPackages)
-  const packagesEntries = await fsQueryFiles(packagesPath, "**/*.{yaml,yml}")
 
   for (const assetsEntry of assetsEntries) {
-    context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    context.setProgress(nConfigs++, assetsEntries.length)
     const configPath = path.resolve(assetsPath, assetsEntry)
 
     // TODO: This assumes that configs are correctly formatted
@@ -175,8 +169,31 @@ export async function loadRemotePackages(
     }
   }
 
+  context.info(`Loaded ${nAssets} remote assets`)
+
+  return assets
+}
+
+/**
+ * Loads all remote packages.
+ */
+export async function loadRemotePackages(
+  context: TaskContext,
+  basePath: string,
+  categories: Categories,
+  localPackages: Packages,
+  assets: Assets,
+): Promise<Packages> {
+  const packages: Packages = {}
+
+  let nConfigs = 0
+  let nPackages = 0
+
+  const packagesPath = path.resolve(basePath, DIRNAMES.dbPackages)
+  const packagesEntries = await fsQueryFiles(packagesPath, "**/*.{yaml,yml}")
+
   for (const packagesEntry of packagesEntries) {
-    context.setProgress(nConfigs++, assetsEntries.length + packagesEntries.length)
+    context.setProgress(nConfigs++, packagesEntries.length)
     const configPath = path.resolve(packagesPath, packagesEntry)
 
     // TODO: This assumes that configs are correctly formatted
@@ -211,10 +228,9 @@ export async function loadRemotePackages(
     packages[packageId] = mergeLocalPackageInfo(localPackageInfo, packages[packageId])
   })
 
-  context.info(`Loaded ${nAssets} remote assets`)
   context.info(`Loaded ${nPackages} remote packages`)
 
-  return { assets, packages }
+  return packages
 }
 
 /**

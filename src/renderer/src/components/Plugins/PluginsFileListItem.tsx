@@ -8,9 +8,9 @@ import { FileListItem } from "@components/File/FileListItem"
 import {
   loadPluginFileEntries,
   loadPluginFileEntry,
-  openPluginFolder,
+  openPluginDirectory,
   patchPluginFileEntries,
-  removePluginFile,
+  removePlugin,
 } from "@stores/actions"
 import { Page } from "@utils/navigation"
 import { usePluginsFileBanners } from "./utils"
@@ -43,17 +43,18 @@ export function PluginsFileListItem({
         {
           description: t("actions.removeFile.description"),
           icon: RemoveIcon,
-          onClick: () => removePluginFile(path),
+          onClick: () => removePlugin(path),
         },
 
         {
           description: t("actions.openFileLocation.description"),
           icon: OpenLocationIcon,
-          onClick: () => openPluginFolder(parent),
+          onClick: () => openPluginDirectory(parent),
         },
       ]}
       banners={banners}
       dbpf={{
+        error: file.issues?.dbpfError,
         fileData,
         loadEntries: () => loadPluginFileEntries(path),
         loadEntry: entryId => loadPluginFileEntry(path, entryId),

@@ -7,10 +7,10 @@ import type { FileInfo } from "@common/variants"
 import { FileListItem } from "@components/File/FileListItem"
 import { Folder as FolderIcon } from "@mui/icons-material"
 import {
-  loadVariantFileEntries,
-  loadVariantFileEntry,
-  openPackageFile,
-  patchVariantFileEntries,
+  loadPackageFileEntries,
+  loadPackageFileEntry,
+  openPackageDirectory,
+  patchPackageFileEntries,
 } from "@stores/actions"
 import { store } from "@stores/main"
 
@@ -44,16 +44,16 @@ export function PackageFileListItem({
         {
           description: t("openFileLocation"),
           icon: FolderIcon,
-          onClick: () => openPackageFile(packageId, variantId, parentPath),
+          onClick: () => openPackageDirectory(packageId, variantId, parentPath),
         },
       ]}
       dbpf={{
         fileData,
-        loadEntries: () => loadVariantFileEntries(packageId, variantId, file.path),
-        loadEntry: entryId => loadVariantFileEntry(packageId, variantId, file.path, entryId),
+        loadEntries: () => loadPackageFileEntries(packageId, variantId, file.path),
+        loadEntry: entryId => loadPackageFileEntry(packageId, variantId, file.path, entryId),
         overriddenEntries,
         patches: file.patches,
-        patchFile: patch => patchVariantFileEntries(packageId, variantId, file.path, patch),
+        patchFile: patch => patchPackageFileEntries(packageId, variantId, file.path, patch),
         setFileData,
       }}
       path={file.path}

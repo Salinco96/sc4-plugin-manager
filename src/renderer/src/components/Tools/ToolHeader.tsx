@@ -5,7 +5,7 @@ import type { ToolID } from "@common/tools"
 import { type Action, ActionButton } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { ToolBelt, type ToolBeltAction } from "@components/ToolBelt"
-import { installTool, openToolFile, openToolURL, removeTool, runTool } from "@stores/actions"
+import { installTool, openToolDirectory, openToolUrl, removeTool, runTool } from "@stores/actions"
 import { store } from "@stores/main"
 import { Page } from "@utils/navigation"
 import { ToolTags } from "./ToolTags"
@@ -30,15 +30,12 @@ export function ToolHeader({
         label: t("run.label"),
       })
 
-      // TODO: ATM cannot remove tool copied to SC4 installation folder
-      if (!toolInfo.install) {
-        toolActions.push({
-          action: () => removeTool(toolInfo.id),
-          description: t("remove.description"),
-          id: "remove",
-          label: t("remove.label"),
-        })
-      }
+      toolActions.push({
+        action: () => removeTool(toolInfo.id),
+        description: t("remove.description"),
+        id: "remove",
+        label: t("remove.label"),
+      })
     } else {
       toolActions.push({
         action: () => installTool(toolInfo.id),
@@ -56,7 +53,7 @@ export function ToolHeader({
 
     if (toolInfo?.url) {
       toolbeltActions.push({
-        action: () => openToolURL(toolId, "url"),
+        action: () => openToolUrl(toolId, "url"),
         description: toolInfo.url.includes("simtropolis") ? "openSimtropolis" : "openUrl",
         icon: "website",
         id: "url",
@@ -65,7 +62,7 @@ export function ToolHeader({
 
     if (toolInfo?.repository) {
       toolbeltActions.push({
-        action: () => openToolURL(toolId, "repository"),
+        action: () => openToolUrl(toolId, "repository"),
         description: toolInfo.repository.includes("github") ? "openGitHub" : "openRepository",
         icon: toolInfo.repository.includes("github") ? "github" : "repository",
         id: "repository",
@@ -74,7 +71,7 @@ export function ToolHeader({
 
     if (toolInfo?.support) {
       toolbeltActions.push({
-        action: () => openToolURL(toolId, "support"),
+        action: () => openToolUrl(toolId, "support"),
         description: "openSupport",
         icon: "support",
         id: "support",
@@ -82,10 +79,8 @@ export function ToolHeader({
     }
 
     if (toolInfo?.installed) {
-      const exeParentPath = toolInfo.exe.split("/").slice(0, -1).join("/")
-
       toolbeltActions.push({
-        action: () => openToolFile(toolId, exeParentPath),
+        action: () => openToolDirectory(toolId),
         description: "openFiles",
         icon: "files",
         id: "files",

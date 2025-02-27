@@ -11,10 +11,10 @@ import { Text } from "@components/Text"
 import {
   check4GBPatch,
   checkDgVoodoo,
-  clearUnusedPackages,
   openDataRepository,
   openExecutableDirectory,
   openInstallationDirectory,
+  removeUnusedPackages,
 } from "@stores/actions"
 import { store } from "@stores/main"
 
@@ -231,11 +231,11 @@ function Settings(): JSX.Element {
 
       <Button
         color="error"
-        onClick={clearUnusedPackages}
-        title={t("actions.clearUnusedPackages.description")}
+        onClick={removeUnusedPackages}
+        title={t("actions.removeUnusedPackages.description")}
         variant="outlined"
       >
-        {t("actions.clearUnusedPackages.label")}
+        {t("actions.removeUnusedPackages.label")}
       </Button>
     </FlexCol>
   )

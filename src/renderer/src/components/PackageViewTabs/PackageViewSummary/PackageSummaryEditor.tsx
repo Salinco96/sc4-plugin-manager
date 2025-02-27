@@ -26,10 +26,10 @@ function PackageSummaryEditor({
   setData,
   variantInfo,
 }: {
-  data: EditableVariantInfo
+  data: VariantInfo
   errors: Partial<Record<keyof EditableVariantInfo, string>> | undefined
   packageId: PackageID
-  setData: (variantInfo: EditableVariantInfo) => void
+  setData: (variantInfo: VariantInfo) => void
   variantInfo: VariantInfo
 }): JSX.Element {
   const authors = store.useAuthors()

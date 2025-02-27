@@ -187,15 +187,15 @@ assets:
       - README.htm
       - SC4DBPFLoading.dll
       - Third Party Notices.txt
-    lastModified: 2024-11-18T09:48:18.355Z
+    lastModified: 2025-02-09T05:06:25.000Z
     meta:
-      timestamp: 2025-01-09T16:18:23.576Z
+      timestamp: 2025-02-13T07:27:33.914Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-dbpf-loading
-    sha256: 95d1ff963c3a56daff58f6ba90a6744436603c0f2ffdf21cb99b36534bc9b62b
-    size: 59973
-    uncompressed: 137752
-    version: 1.0.4
+    sha256: bc1e0a506d8c5edcf78c5e3b7f5876a25160538613691fd119ebb278b0fc66c9
+    size: 62939
+    uncompressed: 145878
+    version: '2.0'
   github/0xC0000054/sc4-disable-cheats:
     assetId: github/0xC0000054/sc4-disable-cheats
     authors:
@@ -576,20 +576,15 @@ assets:
       - SC4QueryUIHooks.dll
       - SC4QueryUIHooks.ini
       - Third Party Notices.txt
-      - images/AlternateTerrainQuery.jpg
-      - images/CustomFloraTooltip.jpg
-      - images/CustomNetworkTooltip.jpg
-      - images/CustomPropTooltip.jpg
-      - images/ExtendedTerrainQuery.jpg
-    lastModified: 2024-12-09T23:06:24.000Z
+    lastModified: 2025-02-13T12:33:16.000Z
     meta:
-      timestamp: 2025-01-09T16:18:23.576Z
+      timestamp: 2025-02-18T19:52:13.148Z
       version: 1
     repository: https://github.com/0xC0000054/sc4-query-ui-hooks
-    sha256: 035abe987604413438682785fb1198533f6a359c2cd30f2cef94bae71a214d2a
-    size: 299036
-    uncompressed: 517303
-    version: 2.2.0
+    sha256: cf6dc77967bf36feeb9e991a63bfd6b09b3c9474044a32b71919d170aef71e9c
+    size: 187722
+    uncompressed: 418344
+    version: 2.3.1
   github/0xC0000054/sc4-region-census:
     assetId: github/0xC0000054/sc4-region-census
     authors:
@@ -871,4 +866,4 @@ assets:
     version: 1.0.0
 
 meta:
-  timestamp: 2025-01-31T11:33:55.242Z
+  timestamp: 2025-02-27T11:04:27.950Z

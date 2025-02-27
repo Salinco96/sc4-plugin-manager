@@ -4,6 +4,7 @@ import type { PackageID } from "@common/packages"
 import { Empty } from "@components/Empty"
 import { Loader } from "@components/Loader"
 import { PackageHeader } from "@components/PackageHeader"
+import { PackageFloatingActions } from "@components/PackageViewTabs/PackageFloatingActions"
 import { packageViewTabs } from "@components/PackageViewTabs/tabs"
 import { Tabs } from "@components/Tabs"
 import { View } from "@components/View"
@@ -36,6 +37,7 @@ function PackageView({ packageId }: { packageId: PackageID }): JSX.Element {
     <View>
       <PackageHeader packageId={packageId} />
       <Tabs tabs={packageViewTabs} packageId={packageId} />
+      <PackageFloatingActions packageId={packageId} />
     </View>
   )
 }

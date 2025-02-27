@@ -5,7 +5,7 @@ import type { PluginsFileInfo } from "@common/plugins"
 import { Header } from "@components/Header"
 import { ListItem } from "@components/ListItem"
 import { ToolButton } from "@components/ToolButton"
-import { openPluginFolder } from "@stores/actions"
+import { openPluginDirectory } from "@stores/actions"
 import { Page } from "@utils/navigation"
 
 export interface Folder {
@@ -36,7 +36,7 @@ export function PluginsFolderListItem({
         <ToolButton
           description={t("actions.openFolder.description")}
           icon={FolderIcon}
-          onClick={() => openPluginFolder(path)}
+          onClick={() => openPluginDirectory(path)}
         />
       }
       compact

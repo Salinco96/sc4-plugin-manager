@@ -97,7 +97,7 @@
     "missing": "City {{cityId}} does not exist",
     "noBackups": "This city has no backups."
   },
-  "ClearUnusedPackagesModal": {
+  "RemoveUnusedPackagesModal": {
     "confirmation": "Remove unused packages?",
     "description_one": "Found {{count}} unused variant:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
     "description_other": "Found {{count}} unused variants:\n{{variants, join(multiline: true)}}\n\nAll patches will be definitely lost.",
@@ -661,6 +661,20 @@
     "requirements": "Requirements"
   },
   "PackageViewSummary": {
+    "actions": {
+      "apply": {
+        "description": "Apply changes"
+      },
+      "cancel": {
+        "description": "Cancel"
+      },
+      "edit": {
+        "description": "Edit"
+      },
+      "regenerate": {
+        "description": "Regenerate from files"
+      }
+    },
     "category": "Category",
     "credits": "Credits",
     "description": "Description",
@@ -683,7 +697,7 @@
   },
   "Plugins": {
     "actions": {
-      "cleanPlugins": {
+      "checkPlugins": {
         "description": "Clean Plugins folder",
         "label": "Clean"
       },
@@ -796,7 +810,7 @@
   },
   "Settings": {
     "actions": {
-      "clearUnusedPackages": {
+      "removeUnusedPackages": {
         "description": "Remove all non-local variants that are not used in any profile",
         "label": "Remove unused packages"
       }
@@ -966,7 +980,7 @@
     },
     "add": {
       "description": "Install this tool",
-      "label": "Add"
+      "label": "Install"
     },
     "remove": {
       "description": "Remove this tool",
@@ -983,7 +997,7 @@
     "openFiles": "Open installed files",
     "openGitHub": "View source code on GitHub",
     "openReadme": "Open README",
-    "openRegionFolder": "Open region folder",
+    "openRegionDirectory": "Open region folder",
     "openRepository": "View source code",
     "openSimtropolis": "Open Simtropolis page",
     "openSupport": "Open support thread",

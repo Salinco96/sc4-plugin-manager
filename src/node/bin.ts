@@ -103,7 +103,7 @@ export class BinaryReader {
 
   public readSInt64(offset?: number): number {
     this.checkRead(8, offset)
-    const value = Number(this.#bytes.readBigInt64LE(offset) ?? this.offset) // TODO: Keep bigint?
+    const value = Number(this.#bytes.readBigInt64LE(offset ?? this.offset)) // TODO: Keep bigint?
     if (offset === undefined) {
       this.offset += 8
     }
@@ -394,7 +394,10 @@ export class BinaryWriter {
 
   public writeString(value: string, offset?: number, encoding?: BufferEncoding): void {
     this.checkWrite(value.length, offset)
-    this.#bytes.write(value, offset ?? this.offset, encoding ?? "utf8")
+    const numWritten = this.#bytes.write(value, offset ?? this.offset, encoding ?? "utf8")
+    if (offset === undefined) {
+      this.offset += numWritten
+    }
   }
 
   public writeTGI(value: TGI, offset?: number): void {

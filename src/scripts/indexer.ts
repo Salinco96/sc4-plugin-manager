@@ -209,7 +209,9 @@ async function runIndexer(options: IndexerOptions): Promise<void> {
   const generatingPackages: { [packageId in PackageID]?: VariantID[] } = {}
   const skippedEntries = new Set<EntryID>()
 
-  const context = createContext("indexer")
+  const context = createContext("indexer", {
+    onProgress: () => undefined,
+  })
 
   /**
    * STEP 1 - Load database and indexer files

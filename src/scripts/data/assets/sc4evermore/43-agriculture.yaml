@@ -4,7 +4,40 @@ assets:
     authors:
       - Girafe
     buildings:
-      BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_farm-0x6534284a-0xec357b46-0xdce4f044.SC4Desc:
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot:
+        ec357b46-3ce4f0f7:
+          bulldoze: 10
+          capacity:
+            ir: 1
+          model: badb57f1-0e11
+          name: Grfe_seasonal_corn_field
+          pollution: 4294967295
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot:
+        ec357b46-3ce28398:
+          bulldoze: 10
+          capacity:
+            ir: 1
+          model: badb57f1-0e11
+          name: Grfe_seasonal_rapeseed_field
+          pollution: 4294967295
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_wheat_field_bce27aec.SC4Lot:
+        ec357b46-bce27aec:
+          bulldoze: 10
+          capacity:
+            ir: 1
+          model: badb57f1-0e11
+          name: Grfe_seasonal_wheat_field_field_building
+          pollution: 4294967295
+          pollutionRadius: 2
+          waterPollution: 1
+          waterPollutionRadius: 1
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_corn_farm_v2.SC4Lot:
         ec357b46-dce4f044:
           bulldoze: 31
           capacity:
@@ -12,7 +45,7 @@ assets:
           categories: agriculture
           flamability: 50
           garbage: 4
-          model: ec87ce8a
+          model: badb57f1-0e11
           name: Grfe_seasonal_corn_farm
           pollution: 1
           pollutionRadius: 5
@@ -21,23 +54,44 @@ assets:
           waterPollution: 1
           waterPollutionRadius: 6
           worth: 309
-      BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_field-0x6534284a-0xec357b46-0x7ce4f0e5.SC4Desc:
-        ec357b46-7ce4f0e5:
-          bulldoze: 10
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_rapeseed_farm_v2.SC4Lot:
+        ec357b46-bce28754:
+          bulldoze: 31
           capacity:
-            ir: 1
-          model: ec87ce8a
-          name: Grfe_seasonal_corn_field
-          pollution: 4294967295
-          pollutionRadius: 2
+            ir: 2
+          categories: agriculture
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0e11
+          name: Grfe_seasonal_rapeseed_farm
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 10
           waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_2ce2e2d9.SC4Lot:
+          waterPollutionRadius: 6
+          worth: 309
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_wheat_field_farm_v2.SC4Lot:
+        ec357b46-3ce2628b:
+          bulldoze: 70
+          capacity:
+            ir: 2
+          categories: agriculture
+          flamability: 50
+          garbage: 4
+          model: badb57f1-0e11
+          name: Grfe_seasonal_wheat_field_farm_building
+          pollution: 1
+          pollutionRadius: 5
+          power: 1
+          water: 10
+          waterPollution: 1
+          waterPollutionRadius: 6
+          worth: 309
+      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_v2.SC4Lot:
         ec357b46-2ce2e2d9:
           bulldoze: 10
           cost: 40
-          description: Seasonal corn field
-          label: Seasonal corn field
           maintenance: 5
           menu: Parks
           model: null
@@ -51,23 +105,10 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 1
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot:
-        ec357b46-3ce4f0f7:
-          bulldoze: 10
-          capacity:
-            ir: 1
-          model: ec87ce8a
-          name: Grfe_seasonal_corn_field
-          pollution: 4294967295
-          pollutionRadius: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_ece2e03a.SC4Lot:
+      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_v2.SC4Lot:
         ec357b46-ece2e03a:
           bulldoze: 10
           cost: 40
-          description: Seasonal corn field with tractors
-          label: Seasonal corn field with tractors
           maintenance: 5
           menu: Parks
           model: null
@@ -81,51 +122,10 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 1
-      BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_farm-0x6534284a-0xec357b46-0xbce28754.SC4Desc:
-        ec357b46-bce28754:
-          bulldoze: 31
-          capacity:
-            ir: 2
-          categories: agriculture
-          flamability: 50
-          garbage: 4
-          model: ec8789da
-          name: Grfe_seasonal_rapeseed_farm
-          pollution: 1
-          pollutionRadius: 5
-          power: 1
-          water: 10
-          waterPollution: 1
-          waterPollutionRadius: 6
-          worth: 309
-      BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_field-0x6534284a-0xec357b46-0xdce2838a.SC4Desc:
-        ec357b46-dce2838a:
-          bulldoze: 10
-          capacity:
-            ir: 1
-          model: ec8789da
-          name: Grfe_seasonal_rapeseed_field
-          pollution: 4294967295
-          pollutionRadius: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot:
-        ec357b46-3ce28398:
-          bulldoze: 10
-          capacity:
-            ir: 1
-          model: ec8789da
-          name: Grfe_seasonal_rapeseed_field
-          pollution: 4294967295
-          pollutionRadius: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_ece29827.SC4Lot:
+      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_v2.SC4Lot:
         ec357b46-ece29827:
           bulldoze: 10
           cost: 40
-          description: Seasonal rapeseed field
-          label: Seasonal rapeseed field
           maintenance: 5
           menu: Parks
           model: null
@@ -139,12 +139,10 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 1
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_cce021f0.SC4Lot:
+      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_v2.SC4Lot:
         ec357b46-cce021f0:
           bulldoze: 10
           cost: 40
-          description: Seasonal rapeseed field with tractors
-          label: Seasonal rapeseed field with tractors
           maintenance: 5
           menu: Parks
           model: null
@@ -158,51 +156,19 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 1
-      BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_farm_building-0x6534284a-0xec357b46-0x3ce2628b.SC4Desc:
-        ec357b46-3ce2628b:
-          bulldoze: 70
-          capacity:
-            ir: 2
-          categories: agriculture
-          flamability: 50
-          garbage: 4
-          model: 8cd7d4ec
-          name: Grfe_seasonal_wheat_field_farm_building
-          pollution: 1
-          pollutionRadius: 5
-          power: 1
-          water: 10
-          waterPollution: 1
-          waterPollutionRadius: 6
-          worth: 309
-      BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_field_building-0x6534284a-0xec357b46-0x3ce27ae7.SC4Desc:
-        ec357b46-3ce27ae7:
-          bulldoze: 10
-          capacity:
-            ir: 1
-          model: 4cd7d51a
-          name: Grfe_seasonal_wheat_field_field_building
-          pollution: 4294967295
-          pollutionRadius: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_dd53e03d.SC4Lot:
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_v2.SC4Lot:
         361cf9d5-dd53e03d:
-          description: A seasonal plop version of the Girafe wheat field.
-          label: Seasonal Wheat Field by Girafe
           menu: Parks
           model: null
           name: Seasonal Wheat Field by Girafe
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_8ce16804.SC4Lot:
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_v2.SC4Lot:
         ec357b46-8ce16804:
           bulldoze: 41
           cost: 90
-          description: Seasonal wheat field
           flamability: 10
-          label: Seasonal wheat field
           maintenance: 63
           menu: Parks
-          model: 8cb097f8
+          model: badb57f1-0e11
           name: Grfe_seasonal_wheat_field
           pollution: 4294967295
           pollutionRadius: 2
@@ -214,27 +180,14 @@ assets:
           water: 5
           waterPollution: 1
           waterPollutionRadius: 1
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_field_building_bce27aec.SC4Lot:
-        ec357b46-bce27aec:
-          bulldoze: 10
-          capacity:
-            ir: 1
-          model: 4cd7d51a
-          name: Grfe_seasonal_wheat_field_field_building
-          pollution: 4294967295
-          pollutionRadius: 2
-          waterPollution: 1
-          waterPollutionRadius: 1
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_6ce168a8.SC4Lot:
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_v2.SC4Lot:
         ec357b46-6ce168a8:
           bulldoze: 41
           cost: 90
-          description: Seasonal wheat field with tractors
           flamability: 10
-          label: Seasonal wheat field with tractors
           maintenance: 63
           menu: Parks
-          model: 8cb097f8
+          model: badb57f1-0e11
           name: Grfe_seasonal_wheat_field_with_tractors
           pollution: 4294967295
           pollutionRadius: 2
@@ -250,275 +203,149 @@ assets:
     dependencies:
       - simtropolis/35790-sc4-cleanitol
       - sc4evermore/18
-    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><p>For LOTters, these props are available in Lot Editor Props Section's, under the name:</p>\r\n<ul>\r\n<li><strong>Grfe_</strong></li>\r\n</ul>\r\n<p>The LE props of this upload have been datpacked into one file: <strong><em>Grfe_Props_Pack_Agripack_vol01 v2.dat</em></strong>.<br>Please use the provided <em>Cleanitol_BSC-VIP Girafe Agripack Vol01 v2.txt</em> to remove the old files by \_one of the 3rd party cleanitol tools:</p>\r\n<p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" rel=\"\">nos.17 Cleanitol</a>\_(new tool)</p>\r\n<p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_(old tool)</p>\r\n<p class=\"textnormal\">Special thanks to\_<b>BSC</b>\_<b>/ VIP Members.</b></p>\r\n<p>The v2 update contains the compiled props and updated/cleaned up lot files too. They are also BTE enabled.</p>\r\n<p><strong>Tractor props</strong>:<br><br>Grfe_fertilizer_spreaders\_(seasonal props)<br>Grfe_field_irrigation_32m<br>Grfe_field_irrigation_48m<br>Grfe_harvester_A<br>Grfe_harvester_B\_(seasonal props)<br>Grfe_harvester_C<br>Grfe_harvester_D\_(seasonal props)<br>Grfe_harvester_E<br>Grfe_harvester_F\_(seasonal props)<br>Grfe_harvester_G\_(seasonal props)<br>Grfe_plow\_(seasonal props)<br>Grfe_roll_belt_A\_(seasonal props)<br>Grfe_roll_belt_B\_<br>Grfe_seed_drill\_(seasonal props)<br>Grfe_self_propelled_sprayer_A<br>Grfe_self_propelled_sprayer_B\_(seasonal props)<br>Grfe_sprayer<br>Grfe_sprayer_B<br>Grfe_stubble_cultivator\_(seasonal props)<br>Grfe_tractor_A\_(seasonal props)<br>Grfe_tractor_C\_(seasonal props)<br>Grfe_tractor_D\_(seasonal props)<br>Grfe_trailer_A<br>Grfe_trailer_B<br>Grfe_trailer_C<br>Grfe_trailer_harvester_A</p>\r\n<p><strong>LOT</strong>:<br><br>Corn, rapeseed and wheat are available as ploppable LOT (1 LOT with tractors and 1 LOT without tractors) that you can find under park menu.<br><br>This pack also includes growable farms and farm fields.<br><br><span style=\"color: #ba372a;\">Note: the farms do not include any visible building (farm house) only plain field.</span></p>\r\n<p><span style=\"text-decoration: underline;\">Installing</span>: copy/extract the <strong>BSC </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br><br><span style=\"text-decoration: underline;\">Un-Installing</span>:\_To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n<p>\_</p>\r\n<p><strong>Dependencies:</strong></p>\r\n<p>NONE<br><em>Grfe_Props_Pack_Agripack_vol01 v2.dat</em> - INCLUDED (see prop item catalogue in the ~Documents)*<br><br>*It contains now all the Wheat models and props that were previously available in a separate upload</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_2.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_2.jpg\" alt=\"Image_agripack_2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_1.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_1.jpg\" alt=\"Image_agripack_12\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_props.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_props.jpg\" alt=\"Image_agripack_props3\" ></a> </span>\r\n        </div> \r\n</body>"
-    downloads: 490
+    description: "<body>\r\n        <div class=\"jd_description_wrapper jd_clear\"><h3>CHANGELOG:</h3>\r\n<p>Thanks to <em>hugues aroux,\_</em>who pointed out, that by mistake the wrong version of this file got uploaded initially. All the detailed description belongs to the updated version, but instead an earlier private version from 2022 got uploaded. So the proper ZIP that you need to have and the contents installed from is the <span style=\"color: #ba372a;\"><strong>BSC-VIP Girafe Agripack Vol01 v2_4003.zip</strong></span> that came with this update on 26.02.2025. <span style=\"text-decoration: underline;\">Please make sure that you run the below mentioned cleanitol script and remove the previous version(s).</span></p>\r\n<p>For LOTters, these props are available in Lot Editor Props Section's, under the name:</p>\r\n<ul>\r\n<li><strong>Grfe_</strong></li>\r\n</ul>\r\n<p>The LE props of this upload have been datpacked into one file: <strong><em>Grfe_Props_Pack_Agripack_vol01 v2.dat</em></strong>.<br>Please use the provided <em>Cleanitol_BSC-VIP Girafe Agripack Vol01 v2.txt</em> to remove the old files by one of the 3rd party cleanitol tools:</p>\r\n<p><a href=\"https://community.simtropolis.com/files/file/35790-sc4-cleanitol/\" rel=\"\">nos.17 Cleanitol</a>\_(new tool)</p>\r\n<p><a href=\"/index.php/downloads/download/30-gameplay-utilities/18-bsc-cleanitol\" target=\"_blank\" rel=\"external nofollow noopener\"><abbr title=\"BATT Squad Certification\">BSC</abbr>\_Cleanitol</a>\_(old tool)</p>\r\n<p class=\"textnormal\">Special thanks to\_<b>BSC</b>\_<b>/ VIP Members.</b></p>\r\n<p>The v2 update contains the compiled props and updated/cleaned up lot files too. They are also BTE enabled.</p>\r\n<p><strong>Tractor props</strong>:<br><br>Grfe_fertilizer_spreaders\_(seasonal props)<br>Grfe_field_irrigation_32m<br>Grfe_field_irrigation_48m<br>Grfe_harvester_A<br>Grfe_harvester_B\_(seasonal props)<br>Grfe_harvester_C<br>Grfe_harvester_D\_(seasonal props)<br>Grfe_harvester_E<br>Grfe_harvester_F\_(seasonal props)<br>Grfe_harvester_G\_(seasonal props)<br>Grfe_plow\_(seasonal props)<br>Grfe_roll_belt_A\_(seasonal props)<br>Grfe_roll_belt_B\_<br>Grfe_seed_drill\_(seasonal props)<br>Grfe_self_propelled_sprayer_A<br>Grfe_self_propelled_sprayer_B\_(seasonal props)<br>Grfe_sprayer<br>Grfe_sprayer_B<br>Grfe_stubble_cultivator\_(seasonal props)<br>Grfe_tractor_A\_(seasonal props)<br>Grfe_tractor_C\_(seasonal props)<br>Grfe_tractor_D\_(seasonal props)<br>Grfe_trailer_A<br>Grfe_trailer_B<br>Grfe_trailer_C<br>Grfe_trailer_harvester_A</p>\r\n<p><strong>LOT</strong>:<br><br>Corn, rapeseed and wheat are available as ploppable LOT (1 LOT with tractors and 1 LOT without tractors) that you can find under park menu.<br><br>This pack also includes growable farms and farm fields.<br><br><span style=\"color: #ba372a;\">Note: the farms do not include any visible building (farm house) only plain field.</span></p>\r\n<p><span style=\"text-decoration: underline;\">Installing</span>: copy/extract the <strong>BSC </strong>parent folder into your plugins. If you extracted the <em>~Documents</em> folder into your plugins, too, it's highly recommended to keep it, but move it out of the Plugins folder.<br><br><span style=\"text-decoration: underline;\">Un-Installing</span>:\_To un-install the files, simply bulldoze every lot from this download in your cities and delete the files from the plugins folder afterwards.</p>\r\n<p>\_</p>\r\n<p><strong>Dependencies:</strong></p>\r\n<p>NONE<br><em>Grfe_Props_Pack_Agripack_vol01 v2.dat</em> - INCLUDED (see prop item catalogue in the ~Documents)*<br><br>*It contains now all the Wheat models and props that were previously available in a separate upload</p> </div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_preview\" style=\"\"></div>\r\n        <div class=\"jd_screenshot_zone jd_clear\" style=\"\">\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_2.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_2.jpg\" alt=\"Image_agripack_2\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_1.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_1.jpg\" alt=\"Image_agripack_12\" ></a> </span>\r\n            <span class=\"jd_screenshot\"><a href=\"https://www.sc4evermore.com/images/jdownloads/screenshots/Image_agripack_props.jpg\" data-lightbox=\"lightbox210\" data-alt=\"lightboxImage_agripack_2.jpg|Image_agripack_1.jpg|Image_agripack_props\" target=\"_blank\"><img class=\"jd_image-left\" src=\"https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_props.jpg\" alt=\"Image_agripack_props3\" ></a> </span>\r\n        </div> \r\n</body>"
+    downloads: 548
     features: []
-    filename: BSC-VIP Girafe Agripack Vol01 v2.zip
+    filename: BSC-VIP Girafe Agripack Vol01 v2_4003.zip
     files:
-      - BSC/BSCProps/Grfe Props/Grfe_Props_Pack_Agripack_vol01_private.dat
-      - BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_farm-0x6534284a-0xec357b46-0xdce4f044.SC4Desc
-      - BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_field-0x5ad0e817_0xec87ce8a_0x30000.SC4Model
-      - BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_field-0x6534284a-0xec357b46-0x7ce4f0e5.SC4Desc
-      - BSC/girafe/Agripack/Corn/IR$1_1x1_Grfe_seasonal_corn_farm_dce4f04b.SC4Lot
-      - BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_2ce2e2d9.SC4Lot
-      - BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot
-      - BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_ece2e03a.SC4Lot
-      - BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_farm-0x6534284a-0xec357b46-0xbce28754.SC4Desc
-      - BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_field-0x5ad0e817_0xec8789da_0x30000.SC4Model
-      - BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_field-0x6534284a-0xec357b46-0xdce2838a.SC4Desc
-      - BSC/girafe/Agripack/Rapeseed/IR$1_1x1_Grfe_seasonal_rapeseed_farm_ece28787.SC4Lot
-      - BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot
-      - BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_ece29827.SC4Lot
-      - BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_cce021f0.SC4Lot
-      - BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field-0x5ad0e817_0x8cb097f8_0x30000.SC4Model
-      - BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_farm_building-0x5ad0e817_0x8cd7d4ec_0x30000.SC4Model
-      - BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_farm_building-0x6534284a-0xec357b46-0x3ce2628b.SC4Desc
-      - BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_field_building-0x5ad0e817_0x4cd7d51a_0x30000.SC4Model
-      - BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_field_building-0x6534284a-0xec357b46-0x3ce27ae7.SC4Desc
-      - BSC/girafe/Agripack/Wheat/IR$1_1x1_Grfe_seasonal_wheat_field_farm_building_8ce262d0.SC4Lot
-      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_dd53e03d.SC4Lot
-      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_8ce16804.SC4Lot
-      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_field_building_bce27aec.SC4Lot
-      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_6ce168a8.SC4Lot
+      - BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_Agripack_vol01 v2.dat
+      - BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot
+      - BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot
+      - BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_wheat_field_bce27aec.SC4Lot
+      - BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_corn_farm_v2.SC4Lot
+      - BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_rapeseed_farm_v2.SC4Lot
+      - BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_wheat_field_farm_v2.SC4Lot
+      - BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_v2.SC4Lot
+      - BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_v2.SC4Lot
+      - BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_v2.SC4Lot
+      - BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_v2.SC4Lot
+      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_v2.SC4Lot
+      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_v2.SC4Lot
+      - BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_v2.SC4Lot
       - BSC/girafe/Wheat/Grfe_wheat_seasonal.dat
       - BSC/girafe/Wheat/Grfe_wheat_summer.dat
-      - _Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
-      - _Documents/BSC_Readmes/girafe/Images/Image_Seasonal corn.gif
-      - _Documents/BSC_Readmes/girafe/Images/Image_Seasonal rapeseed.gif
-      - _Documents/BSC_Readmes/girafe/Images/Image_Seasonal wheat.gif
-      - _Documents/BSC_Readmes/girafe/Images/Image_agripack_1.jpg
-      - _Documents/BSC_Readmes/girafe/Images/Image_agripack_2.jpg
-      - _Documents/BSC_Readmes/girafe/Images/Image_agripack_3.jpg
-      - _Documents/BSC_Readmes/girafe/Images/Image_props.jpg
-      - _Documents/BSC_Readmes/girafe/readme_agripack_vol. 1.html
-      - _Documents/BSC_Readmes/girafe/readme_agripack_vol. 1_additional info.txt
+      - ~Documents/BSC_Readmes/girafe/Images/Banniere_VIP.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_Seasonal corn.gif
+      - ~Documents/BSC_Readmes/girafe/Images/Image_Seasonal rapeseed.gif
+      - ~Documents/BSC_Readmes/girafe/Images/Image_Seasonal wheat.gif
+      - ~Documents/BSC_Readmes/girafe/Images/Image_agripack_1.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_agripack_2.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_agripack_3.jpg
+      - ~Documents/BSC_Readmes/girafe/Images/Image_agripack_props.jpg
+      - ~Documents/BSC_Readmes/girafe/readme_agripack_vol. 1 v2.html
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/BSC-VIP Girafe Agripack Vol01 v2_index.jpg
+      - ~Documents/Prop-Texture Catalogue Index and Cleanitol/Cleanitol_BSC-VIP Girafe Agripack Vol01 v2.txt
     images:
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_2.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_1.jpg
       - https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_props.jpg
-    lastModified: 2024-01-20T16:42:09.000Z
+    lastModified: 2025-02-26T22:06:54.000Z
     lots:
-      BSC/girafe/Agripack/Corn/IR$1_1x1_Grfe_seasonal_corn_farm_dce4f04b.SC4Lot:
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot:
+        3ce4f0f7:
+          building: 3ce4f0f7
+          density: low
+          name: IR$1_1x1_Grfe_seasonal_corn_field
+          props: af442000,af443000,af444000,af445000,af446000
+          size: 1x1
+          stage: 1
+          textures: 25da0000
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot:
+        3ce28398:
+          building: 3ce28398
+          density: low
+          name: IR$1_1x1_Grfe_seasonal_rapeseed_field
+          props: 1f61d262,9f61e278,9f61f3fd,9f62045d,9f620923,af440005,df620353
+          size: 1x1
+          stage: 1
+          textures: 25da0000
+      BSC/Farms/Fields/girafe/IR$1_1x1_Grfe_seasonal_wheat_field_bce27aec.SC4Lot:
+        bce27aec:
+          building: bce27aec
+          density: low
+          name: IR$1_1x1_Grfe_seasonal_wheat_field
+          props: af440000,af440001,af440002,af440003,af440004,af440005,dcd62688
+          size: 1x1
+          stage: 1
+          textures: 25da0000
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_corn_farm_v2.SC4Lot:
         dce4f04b:
           building: dce4f044
           density: low
           name: IR$1_1x1_Grfe_seasonal_corn_farm
-          props:
-            - af442000
-            - af443000
-            - af444000
-            - af445000
-            - af446000
+          props: af442000,af443000,af444000,af445000,af446000
           size: 1x1
           stage: 1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_2ce2e2d9.SC4Lot:
-        2ce2e2d9:
-          building: 2ce2e2d9
-          name: PLOP_1x1_Grfe_seasonal_corn_field
-          props:
-            - af442000
-            - af443000
-            - af444000
-            - af445000
-            - af446000
-          size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_3ce4f0f7.SC4Lot:
-        3ce4f0f7:
-          building: 3ce4f0f7
-          name: PLOP_1x1_Grfe_seasonal_corn_field
-          props:
-            - af442000
-            - af443000
-            - af444000
-            - af445000
-            - af446000
-          size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_ece2e03a.SC4Lot:
-        ece2e03a:
-          building: ece2e03a
-          name: PLOP_1x1_Grfe_seasonal_corn_field_with_tractors
-          props:
-            - 0c571fcf
-            - 0c57ed8b
-            - 2c6c0ccb
-            - 4c6bef9c
-            - 6c69941d
-            - af440005
-            - af442000
-            - af443000
-            - af444000
-            - af445000
-            - af446000
-            - ec571fbb
-            - ec571fe5
-          size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Rapeseed/IR$1_1x1_Grfe_seasonal_rapeseed_farm_ece28787.SC4Lot:
+          textures: 25da0000
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_rapeseed_farm_v2.SC4Lot:
         ece28787:
           building: bce28754
           density: low
           name: IR$1_1x1_Grfe_seasonal_rapeseed_farm
-          props:
-            - 1f61d262
-            - 9f61e278
-            - 9f61f3fd
-            - 9f62045d
-            - 9f620923
-            - af440005
-            - df620353
+          props: 1f61d262,9f61e278,9f61f3fd,9f62045d,9f620923,af440005,df620353
           size: 1x1
           stage: 1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_3ce28398.SC4Lot:
-        3ce28398:
-          building: 3ce28398
-          name: PLOP_1x1_Grfe_seasonal_rapeseed_field
-          props:
-            - 1f61d262
-            - 9f61e278
-            - 9f61f3fd
-            - 9f62045d
-            - 9f620923
-            - af440005
-            - df620353
-          size: 1x1
-          textures:
-            - 1da4438a
-            - 25da0000
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_ece29827.SC4Lot:
-        ece29827:
-          building: ece29827
-          name: PLOP_1x1_Grfe_seasonal_rapeseed_field
-          props:
-            - 1f61d262
-            - 9f61e278
-            - 9f61f3fd
-            - 9f62045d
-            - 9f620923
-            - af440005
-            - df620353
-          size: 1x1
-          textures:
-            - 1da4438a
-            - 25da0000
-      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_cce021f0.SC4Lot:
-        cce021f0:
-          building: cce021f0
-          name: PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors
-          props:
-            - 0c571fcf
-            - 0c57ed8b
-            - 1f61d262
-            - 2c6c0ccb
-            - 4c595771
-            - 8c582eb4
-            - 9f61e278
-            - 9f61f3fd
-            - 9f62045d
-            - 9f620923
-            - af440005
-            - cc44c73f
-            - df620353
-            - ec571fbb
-            - ec571fe5
-          size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Wheat/IR$1_1x1_Grfe_seasonal_wheat_field_farm_building_8ce262d0.SC4Lot:
+          textures: 25da0000
+      BSC/Farms/Girafe/Agripack/IR$1_1x1_Grfe_seasonal_wheat_field_farm_v2.SC4Lot:
         8ce262d0:
           building: 3ce2628b
           density: low
           name: IR$1_1x1_Grfe_seasonal_wheat_field_farm_building
-          props:
-            - af440000
-            - af440001
-            - af440002
-            - af440003
-            - af440004
-            - af440005
-            - dcd62688
+          props: af440000,af440001,af440002,af440003,af440004,af440005,dcd62688
           size: 1x1
           stage: 1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_dd53e03d.SC4Lot:
+          textures: 25da0000
+      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_v2.SC4Lot:
+        2ce2e2d9:
+          building: 2ce2e2d9
+          name: PLOP_1x1_Grfe_seasonal_corn_field
+          props: af442000,af443000,af444000,af445000,af446000
+          size: 1x1
+          textures: 25da0000
+      BSC/girafe/Agripack/Corn/PLOP_1x1_Grfe_seasonal_corn_field_with_tractors_v2.SC4Lot:
+        ece2e03a:
+          building: ece2e03a
+          name: PLOP_1x1_Grfe_seasonal_corn_field_with_tractors
+          props: 0c571fcf,0c57ed8b,2c6c0ccb,4c6bef9c,6c69941d,af440005,af442000,af443000,af444000,af445000,af446000,ec571fbb,ec571fe5
+          size: 1x1
+          textures: 25da0000
+      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_v2.SC4Lot:
+        ece29827:
+          building: ece29827
+          name: PLOP_1x1_Grfe_seasonal_rapeseed_field
+          props: 1f61d262,9f61e278,9f61f3fd,9f62045d,9f620923,af440005,df620353
+          size: 1x1
+          textures: 25da0000
+      BSC/girafe/Agripack/Rapeseed/PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors_v2.SC4Lot:
+        cce021f0:
+          building: cce021f0
+          name: PLOP_1x1_Grfe_seasonal_rapeseed_field_with_tractors
+          props: 0c571fcf,0c57ed8b,1f61d262,2c6c0ccb,4c595771,8c582eb4,9f61e278,9f61f3fd,9f62045d,9f620923,af440005,cc44c73f,df620353,ec571fbb,ec571fe5
+          size: 1x1
+          textures: 25da0000
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Girafe Wheat Field_v2.SC4Lot:
         dd53e03d:
           building: dd53e03d
           name: PLOP_1x1_Girafe Wheat Field
-          props:
-            - af440000
-            - af440001
-            - af440002
-            - af440003
-            - af440004
-            - af440005
-            - dcd62688
+          props: af440000,af440001,af440002,af440003,af440004,af440005,dcd62688
           size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_8ce16804.SC4Lot:
+          textures: 25da0000
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_v2.SC4Lot:
         8ce16804:
           building: 8ce16804
           name: PLOP_1x1_Grfe_seasonal_wheat_field
-          props:
-            - af440000
-            - af440001
-            - af440002
-            - af440003
-            - af440004
-            - af440005
-            - dcd62688
+          props: af440000,af440001,af440002,af440003,af440004,af440005,dcd62688
           size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_field_building_bce27aec.SC4Lot:
-        bce27aec:
-          building: bce27aec
-          name: PLOP_1x1_Grfe_seasonal_wheat_field_field_building
-          props:
-            - af440000
-            - af440001
-            - af440002
-            - af440003
-            - af440004
-            - af440005
-            - dcd62688
-          size: 1x1
-          textures:
-            - 25da0000
-      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_6ce168a8.SC4Lot:
+          textures: 25da0000
+      BSC/girafe/Agripack/Wheat/PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors_v2.SC4Lot:
         6ce168a8:
           building: 6ce168a8
           name: PLOP_1x1_Grfe_seasonal_wheat_field_with_tractors
-          props:
-            - 0c571fcf
-            - 0c57ed8b
-            - 2c6c0ccb
-            - 4c573019
-            - af440000
-            - af440001
-            - af440002
-            - af440003
-            - af440004
-            - af440005
-            - cc44c73f
-            - cc5d145a
-            - dcd62688
-            - ec571fbb
-            - ec571fe5
+          props: 0c571fcf,0c57ed8b,2c6c0ccb,4c573019,af440000,af440001,af440002,af440003,af440004,af440005,cc44c73f,cc5d145a,dcd62688,ec571fbb,ec571fe5
           size: 1x1
-          textures:
-            - 25da0000
+          textures: 25da0000
     meta:
-      timestamp: 2025-01-09T16:18:23.576Z
+      timestamp: 2025-02-27T11:04:27.950Z
       version: 1
     mmps:
       BSC/girafe/Wheat/Grfe_wheat_seasonal.dat:
@@ -533,7 +360,7 @@ assets:
           model: bcbb0913
           name: Grfe_wheat_summer
     models:
-      BSC/BSCProps/Grfe Props/Grfe_Props_Pack_Agripack_vol01_private.dat:
+      BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_Agripack_vol01 v2.dat:
         - 01caccec
         - 0b47428e
         - 0c3f7cbf
@@ -596,19 +423,9 @@ assets:
         - fcbf03d2
         - fcbf10ee
         - fcbfc8de
-      BSC/girafe/Agripack/Corn/Grfe_seasonal_corn_field-0x5ad0e817_0xec87ce8a_0x30000.SC4Model:
-        - ec87ce8a
-      BSC/girafe/Agripack/Rapeseed/Grfe_seasonal_rapeseed_field-0x5ad0e817_0xec8789da_0x30000.SC4Model:
-        - ec8789da
-      BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field-0x5ad0e817_0x8cb097f8_0x30000.SC4Model:
-        - 8cb097f8
-      BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_farm_building-0x5ad0e817_0x8cd7d4ec_0x30000.SC4Model:
-        - 8cd7d4ec
-      BSC/girafe/Agripack/Wheat/Grfe_seasonal_wheat_field_field_building-0x5ad0e817_0x4cd7d51a_0x30000.SC4Model:
-        - 4cd7d51a
     name: BSC-VIP Girafe Agripack Vol01 v2
     props:
-      BSC/BSCProps/Grfe Props/Grfe_Props_Pack_Agripack_vol01_private.dat:
+      BSC/BSCProps/Grfe_Props/Grfe_Props_Pack_Agripack_vol01 v2.dat:
         9dd7f9c4-1f61d262:
           name: Grfe_rapeseed_summer_blossom
         9dd7f9c4-9f61e278:
@@ -766,22 +583,22 @@ assets:
           name: Grfe_haybale_empty_A
         f0c4599b-fcc26c91:
           name: Grfe_swath
-    sha256: 0e1363b9aeb529c8a46084039accd30f8daae67e239212b47683a30c318d627e
-    size: 8762144
+    sha256: e425bba7a7777b9c48e612de5da9b5f83ee2235e248fc52df93876c7a703dffb
+    size: 8457774
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Image_agripack_2.jpg
-    uncompressed: 10454239
+    uncompressed: 10028190
     url: https://www.sc4evermore.com/index.php/downloads/download/43-agriculture/210-bsc-vip-girafe-agripack-vol01-v2
-    version: '2'
+    version: '2.1'
   sc4evermore/320:
     assetId: sc4evermore/320-vortext-grass-pastures
     authors:
       - Vortext
     category: 43-agriculture
-    downloads: 130
+    downloads: 145
     lastModified: 2024-11-01T13:26:17.000Z
     name: Vortext - Grass Pastures
     thumbnail: https://www.sc4evermore.com/images/jdownloads/screenshots/thumbnails/Pastures Overview.jpg
     url: https://www.sc4evermore.com/index.php/downloads/download/43-agriculture/320-vortext-grass-pastures
 
 meta:
-  timestamp: 2025-01-31T11:33:55.242Z
+  timestamp: 2025-02-27T11:04:27.950Z

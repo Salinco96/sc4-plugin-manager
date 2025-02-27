@@ -1,4 +1,4 @@
-import { Box, CircularProgress, styled } from "@mui/material"
+import { Box, CircularProgress, type CircularProgressProps, styled } from "@mui/material"
 
 const Container = styled(Box)`
   align-items: center;
@@ -8,10 +8,12 @@ const Container = styled(Box)`
   width: 100%;
 `
 
-export function Loader(): JSX.Element {
+export type LoaderProps = Pick<CircularProgressProps, "color" | "size">
+
+export function Loader({ color, size }: LoaderProps): JSX.Element {
   return (
     <Container>
-      <CircularProgress size={60} />
+      <CircularProgress color={color} size={size ?? 60} />
     </Container>
   )
 }

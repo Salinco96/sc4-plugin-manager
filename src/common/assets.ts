@@ -1,7 +1,5 @@
-import type { ID } from "@salinco/nice-utils"
-
 /** Asset ID */
-export type AssetID = ID<string, AssetInfo>
+export type AssetID = string & { __kind: "Asset" }
 
 /** Loaded asset data */
 export interface AssetInfo {

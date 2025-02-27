@@ -24,7 +24,7 @@ export function registerDocsProtocol(): void {
 export function handleDocsProtocol(rootPath: string, extensions: string[]): void {
   protocol.handle(Protocol.DOCS, req => {
     const relativePath = decodeURI(new URL(req.url).pathname)
-    const fullPath = path.resolve(rootPath, relativePath)
+    const fullPath = path.join(rootPath, relativePath)
 
     if (!isChildPath(fullPath, rootPath)) {
       return new Response(`'${fullPath}' is not a child of '${rootPath}'`, {

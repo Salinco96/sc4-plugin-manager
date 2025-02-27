@@ -510,6 +510,21 @@ export function searchIndex(index: Index, search: string): { [path: string]: Mat
     }
   }
 
+  function searchBuildingsByGroup(groupId: GroupID): void {
+    const buildings = index.buildingGroups[groupId]
+    if (buildings) {
+      for (const building of buildings) {
+        results[building.file] ??= []
+        results[building.file].push({
+          element: `building-${building.id}`,
+          name: building.name ?? building.id,
+          tab: "lots",
+          type: "Building",
+        })
+      }
+    }
+  }
+
   function searchLots(lotId: LotID): void {
     const lots = index.lots[lotId]
     if (lots) {
@@ -620,6 +635,21 @@ export function searchIndex(index: Index, search: string): { [path: string]: Mat
     }
   }
 
+  function searchPropsByGroup(groupId: GroupID): void {
+    const props = index.propGroups[groupId]
+    if (props) {
+      for (const prop of props) {
+        results[prop.file] ??= []
+        results[prop.file].push({
+          element: `prop-${prop.id}`,
+          name: prop.name ?? prop.id,
+          tab: "lots",
+          type: "Prop",
+        })
+      }
+    }
+  }
+
   function searchTextures(textureId: TextureID): void {
     const searchRange = getTextureIdRange(textureId)
     const paths = index.textures[searchRange[0]]
@@ -640,26 +670,33 @@ export function searchIndex(index: Index, search: string): { [path: string]: Mat
     case 1: {
       searchBuildingFamilies(search as FamilyID)
       searchBuildings(search as BuildingID)
+      searchBuildingsByGroup(search as GroupID)
       searchLots(search as LotID)
       searchMMPs(search as FloraID)
       searchModels(search as GroupID)
       searchPropFamilies(search as FamilyID)
       searchProps(search as PropID)
+      searchPropsByGroup(search as GroupID)
       searchTextures(search as TextureID)
       break
     }
 
     case 2: {
-      const [groupId, instanceId] = parts as [GroupID, InstanceID]
-      searchModels(groupId, instanceId)
-      if (instanceId.length === 8) {
-        searchBuildings(instanceId as BuildingID, groupId)
-        searchMMPs(instanceId as FloraID, groupId)
-        searchProps(instanceId as PropID, groupId)
-        if (groupId === GroupID.LOT_CONFIG) {
-          searchLots(instanceId as LotID)
-        } else if (groupId === GroupID.FSH_TEXTURE) {
-          searchTextures(instanceId as TextureID)
+      const [p1, p2] = parts // may be either TG or GI
+      searchModels(p1 as GroupID, p2)
+      if (p2.length === 8) {
+        searchBuildings(p2 as BuildingID, p1 as GroupID)
+        searchMMPs(p2 as FloraID, p1 as GroupID)
+        searchProps(p2 as PropID, p1 as GroupID)
+        if (p1 === TypeID.EXEMPLAR) {
+          searchBuildingsByGroup(p2 as GroupID)
+          searchPropsByGroup(p2 as GroupID)
+        } else if (p1 === TypeID.S3D) {
+          searchModels(p2 as GroupID)
+        } else if (p1 === GroupID.LOT_CONFIG) {
+          searchLots(p2 as LotID)
+        } else if (p1 === GroupID.FSH_TEXTURE) {
+          searchTextures(p2 as TextureID)
         }
       }
 

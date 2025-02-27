@@ -23,6 +23,8 @@ import { spacing } from "@utils/styles"
 import { simtropolisLogin, simtropolisLogout, switchProfile, updateProfile } from "@stores/actions"
 import { store } from "@stores/main"
 import { CreateProfileModal } from "./CreateProfileModal"
+import { FlexRow } from "./FlexBox"
+import { Loader } from "./Loader"
 import { UserInfo } from "./UserInfo"
 
 const newProfileId = "@new"
@@ -58,11 +60,13 @@ export function AppBar(): JSX.Element {
   const profiles = store.useProfiles()
   const simtropolis = store.useSimtropolis()
 
-  const hasProfiles = profiles && !isEmpty(profiles)
-
   const [isCreating, setCreating] = useState(false)
   const [isRenaming, setRenaming] = useState(false)
   const [isSelecting, setSelecting] = useState(false)
+  const [switchingToProfile, setSwitchingToProfile] = useState<ProfileInfo>()
+
+  const hasProfiles = profiles && !isEmpty(profiles)
+  const isLoading = !profiles
 
   const { t } = useTranslation("AppBar")
 
@@ -88,7 +92,7 @@ export function AppBar(): JSX.Element {
             <IconButton
               aria-label={t(`actions.${hasProfiles ? "selectProfile" : "createProfile"}.label`)}
               color="inherit"
-              disabled={hasProfiles === undefined}
+              disabled={isLoading}
               onClick={() => (hasProfiles ? setSelecting : setCreating)(true)}
               sx={{ marginRight: 1 }}
             >
@@ -96,7 +100,14 @@ export function AppBar(): JSX.Element {
             </IconButton>
           </Tooltip>
 
-          {isSelecting && profiles ? (
+          {switchingToProfile ? (
+            <FlexRow centered gap={2}>
+              <Typography color="inherit" component="h1" variant="h6">
+                {switchingToProfile.name}
+              </Typography>
+              <Loader color="inherit" size={20} />
+            </FlexRow>
+          ) : isSelecting && profiles ? (
             <ProfileSelect
               MenuProps={{ sx: { marginLeft: -2 } }}
               defaultOpen
@@ -106,7 +117,7 @@ export function AppBar(): JSX.Element {
               inputProps={{
                 IconComponent: () => null,
               }}
-              onChange={event => {
+              onChange={async event => {
                 const value = event.target.value as ProfileID
 
                 setSelecting(false)
@@ -115,7 +126,12 @@ export function AppBar(): JSX.Element {
                   if (value === newProfileId) {
                     setCreating(true)
                   } else {
-                    switchProfile(value)
+                    try {
+                      setSwitchingToProfile(profiles[value])
+                      await switchProfile(value)
+                    } finally {
+                      setSwitchingToProfile(undefined)
+                    }
                   }
                 }
               }}
@@ -159,20 +175,18 @@ export function AppBar(): JSX.Element {
               variant="standard"
             />
           ) : (
-            <>
-              <Tooltip title={t("actions.renameProfile.label")}>
-                <Typography
-                  component="h1"
-                  variant="h6"
-                  color="inherit"
-                  noWrap
-                  onClick={() => setRenaming(true)}
-                  sx={{ cursor: "pointer", width: "max-content" }}
-                >
-                  {currentProfile.name}
-                </Typography>
-              </Tooltip>
-            </>
+            <Tooltip title={t("actions.renameProfile.label")}>
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                onClick={() => setRenaming(true)}
+                sx={{ cursor: "pointer", width: "max-content" }}
+              >
+                {currentProfile.name}
+              </Typography>
+            </Tooltip>
           )}
         </Box>
 

@@ -1,7 +1,7 @@
 import type { AuthorID } from "@common/authors"
 import type { CollectionID } from "@common/collections"
 import type { DBPFDataType, DBPFInfo, DBPFLoadedEntryInfo, TGI } from "@common/dbpf"
-import type { ExemplarDataPatch } from "@common/exemplars"
+import type { ExemplarDataPatches } from "@common/exemplars"
 import type { OptionID, OptionValue } from "@common/options"
 import { type PackageID, isEnabled, isIncluded, isIncompatible, isSelected } from "@common/packages"
 import type { ProfileID, ProfileUpdate } from "@common/profiles"
@@ -61,16 +61,16 @@ export async function checkDgVoodoo(): Promise<void> {
   return window.api.checkDgVoodoo()
 }
 
-export async function cleanPlugins(): Promise<void> {
-  return window.api.cleanPlugins()
+export async function checkPlugins(): Promise<void> {
+  return window.api.checkPlugins()
 }
 
 export async function clearPackageLogs(packageId: PackageID, variantId: VariantID): Promise<void> {
   return window.api.clearPackageLogs(packageId, variantId)
 }
 
-export async function clearUnusedPackages(): Promise<void> {
-  return window.api.clearUnusedPackages()
+export async function removeUnusedPackages(): Promise<void> {
+  return window.api.removeUnusedPackages()
 }
 
 export async function createBackup(
@@ -245,12 +245,12 @@ export async function getPackageLogs(
   return window.api.getPackageLogs(packageId, variantId)
 }
 
-export async function getPackageReadme(
+export async function getPackageDocs(
   packageId: PackageID,
   variantId: VariantID,
   filePath: string,
-): Promise<{ html?: string; md?: string }> {
-  return window.api.getPackageReadme(packageId, variantId, filePath)
+): Promise<{ iframe: string } | { md: string } | { text: string }> {
+  return window.api.getPackageDocs(packageId, variantId, filePath)
 }
 
 export async function installTool(toolId: ToolID): Promise<boolean> {
@@ -340,25 +340,25 @@ export async function loadSavePreviewPicture(
   return window.api.loadSavePreviewPicture(regionId, cityId, backupFile)
 }
 
-export async function loadVariantFileEntries(
+export async function loadPackageFileEntries(
   packageId: PackageID,
   variantId: VariantID,
   filePath: string,
 ): Promise<DBPFInfo> {
-  return window.api.loadVariantFileEntries(packageId, variantId, filePath)
+  return window.api.loadPackageFileEntries(packageId, variantId, filePath)
 }
 
-export async function loadVariantFileEntry(
+export async function loadPackageFileEntry(
   packageId: PackageID,
   variantId: VariantID,
   filePath: string,
   entryId: TGI,
 ): Promise<DBPFLoadedEntryInfo> {
-  return window.api.loadVariantFileEntry(packageId, variantId, filePath, entryId)
+  return window.api.loadPackageFileEntry(packageId, variantId, filePath, entryId)
 }
 
-export async function openAuthorURL(authorId: AuthorID): Promise<void> {
-  return window.api.openAuthorURL(authorId)
+export async function openAuthorUrl(authorId: AuthorID): Promise<void> {
+  return window.api.openAuthorUrl(authorId)
 }
 
 export async function openDataRepository(): Promise<void> {
@@ -377,59 +377,71 @@ export async function openPackageConfig(packageId: PackageID): Promise<void> {
   return window.api.openPackageConfig(packageId)
 }
 
-export async function openPackageFile(
+export async function openPackageDirectory(
   packageId: PackageID,
   variantId: VariantID,
-  filePath: string,
+  relativePath?: string,
 ): Promise<void> {
-  return window.api.openPackageFile(packageId, variantId, filePath)
+  return window.api.openPackageDirectory(packageId, variantId, relativePath)
 }
 
-export async function openPackageURL(
+export async function openPackageUrl(
   packageId: PackageID,
   variantId: VariantID,
   type: "repository" | "support" | "url",
 ): Promise<void> {
-  return window.api.openPackageURL(packageId, variantId, type)
+  return window.api.openPackageUrl(packageId, variantId, type)
 }
 
-export async function openPluginFolder(pluginPath?: string): Promise<void> {
-  return window.api.openPluginFolder(pluginPath)
+export async function openPluginDirectory(pluginPath?: string): Promise<void> {
+  return window.api.openPluginDirectory(pluginPath)
 }
 
 export async function openProfileConfig(profileId: ProfileID): Promise<void> {
   return window.api.openProfileConfig(profileId)
 }
 
-export async function openRegionFolder(regionId: RegionID): Promise<void> {
-  return window.api.openRegionFolder(regionId)
+export async function openRegionDirectory(regionId: RegionID): Promise<void> {
+  return window.api.openRegionDirectory(regionId)
 }
 
-export async function openToolFile(toolId: ToolID, filePath: string): Promise<void> {
-  return window.api.openToolFile(toolId, filePath)
+export async function openToolDirectory(toolId: ToolID, relativePath?: string): Promise<void> {
+  return window.api.openToolDirectory(toolId, relativePath)
 }
 
-export async function openToolURL(
+export async function openToolUrl(
   toolId: ToolID,
   type: "repository" | "support" | "url",
 ): Promise<void> {
-  return window.api.openToolURL(toolId, type)
+  return window.api.openToolUrl(toolId, type)
 }
 
 export async function patchPluginFileEntries(
   pluginPath: string,
-  patches: { [entryId in TGI]?: ExemplarDataPatch | null },
+  patches: ExemplarDataPatches,
 ): Promise<DBPFInfo> {
   return window.api.patchPluginFileEntries(pluginPath, patches)
 }
 
-export async function patchVariantFileEntries(
+export async function patchPackageFileEntries(
   packageId: PackageID,
   variantId: VariantID,
   filePath: string,
-  patches: { [entryId in TGI]?: ExemplarDataPatch | null },
+  patches: ExemplarDataPatches,
 ): Promise<DBPFInfo> {
-  return window.api.patchVariantFileEntries(packageId, variantId, filePath, patches)
+  return window.api.patchPackageFileEntries(packageId, variantId, filePath, patches)
+}
+
+export async function refreshLocalVariant(
+  packageId: PackageID,
+  variantId: VariantID,
+): Promise<void> {
+  try {
+    await window.api.refreshLocalVariant(packageId, variantId)
+  } catch (error) {
+    console.error(`Failed to regenerate ${packageId}#${variantId}`, error)
+    showErrorToast(`Failed to regenerate ${packageId}#${variantId}`)
+  }
 }
 
 export async function reloadPlugins(): Promise<void> {
@@ -444,8 +456,8 @@ export async function removeBackup(
   return window.api.removeBackup(regionId, cityId, file)
 }
 
-export async function removePluginFile(pluginPath: string): Promise<void> {
-  return window.api.removePluginFile(pluginPath)
+export async function removePlugin(pluginPath: string): Promise<void> {
+  return window.api.removePlugin(pluginPath)
 }
 
 export async function removeProfile(profileId: ProfileID): Promise<boolean> {
@@ -737,16 +749,15 @@ export async function updateSettings(data: Partial<Settings>): Promise<boolean> 
   }
 }
 
-export async function updateSave(
+export async function updateCity(
   regionId: RegionID,
   cityId: CityID,
-  file: string | null,
   action: UpdateSaveAction,
 ): Promise<boolean> {
   const city = store.api.getCityInfo(regionId, cityId)
 
   try {
-    const updated = await window.api.updateSave(regionId, cityId, file, action)
+    const updated = await window.api.updateCity(regionId, cityId, action)
 
     if (updated) {
       showSuccessToast(`${city.name} updated`)

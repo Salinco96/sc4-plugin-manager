@@ -16,7 +16,7 @@ import { Tag } from "@components/Tags/Tag"
 import { TagType } from "@components/Tags/utils"
 import { Text } from "@components/Text"
 import { ImageViewerThumbnail } from "@components/Viewer/ImageViewerThumbnail"
-import { loadVariantFileEntry } from "@stores/actions"
+import { loadPackageFileEntry } from "@stores/actions"
 import { store } from "@stores/main"
 import { formatNumber } from "@utils/format"
 import { useEffectEvent } from "@utils/useEffectEvent"
@@ -62,7 +62,7 @@ export function PackageViewLotInfo({
   const loadLotPicture = useEffectEvent(async () => {
     try {
       const entryId: TGI = `${TypeID.PNG}-${GroupID.PNG_LOT_PICTURES}-${lot.id}`
-      const entry = await loadVariantFileEntry(packageId, variantInfo.id, lot.file, entryId)
+      const entry = await loadPackageFileEntry(packageId, variantInfo.id, lot.file, entryId)
       if (entry.data && "base64" in entry.data) {
         const src = `data:image/${entry.type};base64, ${entry.data.base64}`
         setLotPicture(src)

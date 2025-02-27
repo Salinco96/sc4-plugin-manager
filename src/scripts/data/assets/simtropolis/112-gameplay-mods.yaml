@@ -9849,7 +9849,7 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acacd7014f_04-MySimtropolis_ModePreview.jpg.7704eb9c24d830866605bf9af3ffd419.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2019_01/5c2acad53d642_05-MySimtropolis_ResidentPreview.jpg.d306179e2bb65415c48c4e1224c5f73a.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a84526cdc6d_02-MySimtropolis_SelectionPanelAvatars_v1_207.png.77028e0b5871e8c09267f7f84382c1d2.png
-    lastModified: 2024-12-30T06:42:49.000Z
+    lastModified: 2025-02-17T07:20:16.000Z
     name: 'MySimtropolis: Members Immortalized in SC4'
     sha256: b194c6be0d7635210d2b3b779029a46d7c2812f44365ad99ca69ba46ae72088d
     size: 1346297
@@ -10048,9 +10048,9 @@ assets:
   simtropolis/33986:
     assetId: simtropolis/33986-cap-lifter
     authors:
-      - Jidan
+      - Propfam
     category: 112-gameplay-mods
-    lastModified: 2024-10-12T13:57:31.000Z
+    lastModified: 2025-02-23T01:20:55.000Z
     name: Cap Lifter
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_10/Banner.thumb.png.7c691172e287531931a9c2ff74f25d16.png
     url: https://community.simtropolis.com/files/file/33986-cap-lifter/
@@ -10154,9 +10154,9 @@ assets:
     authors:
       - Lucario Boricua
     category: 112-gameplay-mods
-    lastModified: 2023-01-16T01:51:12.000Z
+    lastModified: 2025-02-09T16:42:21.000Z
     name: Network Addon Mod - Tunnel and Slope Mod
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_01/63c4ad8dbba30_NAMTunnelandSlopeMod-01VeryEasy-VerySteep.thumb.jpg.8f2b36539e8b5f40ec44bd6eb488acbc.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2023_01/63c4ad8f70dbd_NAMTunnelandSlopeMod-03Moderate-NAMStyle.thumb.jpg.7264a58800c00f820673647af15539da.jpg
     url: https://community.simtropolis.com/files/file/35420-network-addon-mod-tunnel-and-slope-mod/
   simtropolis/35567:
     assetId: simtropolis/35567-blades-avenue-medians
@@ -10408,11 +10408,11 @@ assets:
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5757f76d97_RCIDLLQuery-ResidentialBuilding-WithMySimtropolisIcon-v1.1.jpg.044b8b0364c88819c8d0d7f7673c8ec8.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a5758408896_RCIDLLQuery-CommercialBuildingv1.1.jpg.884d532237fd875cba9fb3eb8997a282.jpg
       - https://www.simtropolis.com/objects/screens/monthly_2024_07/66a575886795f_RCIDLLQuery-IndustrialBuildingv1.1.jpg.43f41b1342b772db5ee7b9c6623fe696.jpg
-    lastModified: 2024-12-24T05:18:23.000Z
+    lastModified: 2025-02-20T06:02:36.000Z
     name: RCI DLL Query Upgrade
     sha256: 66462f1a29ed7e86ce57ffdff12693a9ca04d5db62430ba3b9e5f9da258d470f
     size: 324665
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/676a441f1b3c8_RCIDLLQueryv2.2A-ResidentialBuilding.thumb.jpg.a8a67930e21d1a59a6eaca093d77198c.jpg
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67b6c57b99f32_RCIDLLQueryv3.0A-ResidentialBuilding.thumb.jpg.7194b92cbbe274484a2f9d8df21a7d2c.jpg
     timestamp: 2024-07-29T09:55:36.596Z
     uncompressed: 444656
     url: https://community.simtropolis.com/files/file/36239-rci-dll-query-upgrade/
@@ -10480,9 +10480,9 @@ assets:
   simtropolis/36609:
     assetId: simtropolis/36609-unlimited-tax
     authors:
-      - Jidan
+      - Propfam
     category: 112-gameplay-mods
-    lastModified: 2024-12-18T12:10:13.000Z
+    lastModified: 2025-02-23T01:25:15.000Z
     name: Unlimited Tax
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2024_12/6762bba5a29b5_Screenshot2024-12-18190202.thumb.png.b0a9cfd84f71090fa3f85e03059ed014.png
     url: https://community.simtropolis.com/files/file/36609-unlimited-tax/
@@ -10504,6 +10504,24 @@ assets:
     name: Futuristic Loading Text Mod
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_01/6775403768970_NewLoadingTextMod.thumb.jpg.7f67b51c22c2869ec96778a7cc34719c.jpg
     url: https://community.simtropolis.com/files/file/36646-futuristic-loading-text-mod/
+  simtropolis/36707:
+    assetId: simtropolis/36707-universal-sea-level-mod
+    authors:
+      - smf_16
+    category: 112-gameplay-mods
+    lastModified: 2025-02-13T22:38:53.000Z
+    name: Universal Sea Level Mod
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/750m.thumb.jpg.50f9bd0f40ab2c547a127a0b50af2d2d.jpg
+    url: https://community.simtropolis.com/files/file/36707-universal-sea-level-mod/
+  simtropolis/36720:
+    assetId: simtropolis/36720-scoty-grid-mod
+    authors:
+      - hugues aroux
+    category: 112-gameplay-mods
+    lastModified: 2025-02-14T21:12:03.000Z
+    name: Scoty Grid Mod
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/compile.thumb.jpg.98d7795bb1e9dd7820c7460b68b4c2ee.jpg
+    url: https://community.simtropolis.com/files/file/36720-scoty-grid-mod/
   simtropolis/4243:
     assetId: simtropolis/4243-rci-query-upgrade-mod
     authors:
@@ -10524,4 +10542,4 @@ assets:
     url: https://community.simtropolis.com/files/file/4536-daeleys-present/
 
 meta:
-  timestamp: 2025-01-31T11:33:55.242Z
+  timestamp: 2025-02-27T11:04:27.950Z

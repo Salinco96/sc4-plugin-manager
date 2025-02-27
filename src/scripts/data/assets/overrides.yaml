@@ -5948,6 +5948,52 @@ simtropolis/36682-acme-restoration-company:
           variantId: hd
       variantId: sd
 
+simtropolis/36685-rasky-building:
+  packageId: davide1983it/rasky-building
+  variantId: default
+
+simtropolis/36690-industrial-building-45:
+  packageId: jestarr/industrial-building-45
+  variants:
+    '205564':
+      packageId: jestarr/industrial-building-45
+      variantId: hd
+    '205565':
+      packageId: jestarr/industrial-building-45
+      variantId: sd
+
+simtropolis/36700-sc4pac-mod-manager: null
+
+simtropolis/36716-bankofcanton:
+  packageId: ct1999/bank-of-canton
+  variantId: darknite-hd
+
+simtropolis/36723-the-arden-professional-building:
+  packageId: madhatter106/arden-professional-building
+  variantId: default
+
+simtropolis/36724-west-coast-props-set-dressing:
+  packageId: madhatter106/west-coast-props
+  variantId: default
+
+simtropolis/36725-prentice-pottery-studio:
+  packageId: jestarr/prentice-pottery-studio
+  variants:
+    '206041':
+      packageId: jestarr/prentice-pottery-studio
+      variantId: hd
+    '206042':
+      packageId: jestarr/prentice-pottery-studio
+      variantId: sd
+
+simtropolis/36741-corbin-building:
+  packageId: davide1983it/corbin-building
+  variantId: default
+
+simtropolis/36742-knife-works_hd:
+  packageId: jestarr/knife-works
+  variantId: hd
+
 simtropolis/4049-vda-langeraar-geerweg-31:
   packageId: vanderaap/langeraar-geerweg-31
 

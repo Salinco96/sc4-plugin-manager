@@ -6,7 +6,7 @@ import { type RegionID, getRegionLinkedProfileId } from "@common/regions"
 import { ActionButton, type Variant } from "@components/ActionButton"
 import { Header, type HeaderProps } from "@components/Header"
 import { ToolBelt, type ToolBeltAction } from "@components/ToolBelt"
-import { linkRegion, openRegionFolder } from "@stores/actions"
+import { linkRegion, openRegionDirectory } from "@stores/actions"
 import { store } from "@stores/main"
 import { Page } from "@utils/navigation"
 
@@ -26,10 +26,10 @@ export function RegionHeader({
 
   const toolbeltActions: ToolBeltAction[] = [
     {
-      action: () => openRegionFolder(regionId),
-      description: "openRegionFolder",
+      action: () => openRegionDirectory(regionId),
+      description: "openRegionDirectory",
       icon: "files",
-      id: "openRegionFolder",
+      id: "openRegionDirectory",
     },
   ]
 

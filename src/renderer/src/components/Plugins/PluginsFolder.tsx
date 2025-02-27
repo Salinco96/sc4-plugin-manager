@@ -14,7 +14,7 @@ import { Empty } from "@components/Empty"
 import { FlexCol, FlexRow } from "@components/FlexBox"
 import { List } from "@components/List"
 import { ToolButton } from "@components/ToolButton"
-import { cleanPlugins, openPluginFolder, reloadPlugins, removePluginFile } from "@stores/actions"
+import { checkPlugins, openPluginDirectory, reloadPlugins, removePlugin } from "@stores/actions"
 
 import { useNavigation } from "@utils/navigation"
 import { PluginsBreadcrumbs } from "./PluginsBreadcrumbs"
@@ -68,7 +68,7 @@ export function PluginsFolder({
             <ToolButton
               description={t("actions.openFolder.description")}
               icon={FolderIcon}
-              onClick={() => openPluginFolder(path)}
+              onClick={() => openPluginDirectory(path)}
             />
 
             {path && (
@@ -76,7 +76,7 @@ export function PluginsFolder({
                 description={t("actions.removeFolder.description")}
                 icon={RemoveIcon}
                 onClick={() => {
-                  removePluginFile(path)
+                  removePlugin(path)
                   openPluginsView(parentPath)
                 }}
               />
@@ -90,9 +90,9 @@ export function PluginsFolder({
 
             {!path && (
               <ToolButton
-                description={t("actions.cleanPlugins.description")}
+                description={t("actions.checkPlugins.description")}
                 icon={CleanIcon}
-                onClick={cleanPlugins}
+                onClick={checkPlugins}
               />
             )}
           </FlexRow>

@@ -23,8 +23,6 @@ export interface AuthorData {
 }
 
 export async function loadAuthors(context: TaskContext, basePath: string): Promise<Authors> {
-  context.debug("Loading authors...")
-
   try {
     const config = await loadConfig<{ [authorId in AuthorID]?: AuthorData }>(
       basePath,

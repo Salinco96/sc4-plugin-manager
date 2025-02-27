@@ -83,6 +83,7 @@ export const TypeID = {
   LD: "6be74c60" as TypeID,
   LTEXT: "2026960b" as TypeID,
   PNG: "856ddbac" as TypeID,
+  SAVE_PNG: "8a2482b9" as TypeID,
   S3D: "5ad0e817" as TypeID,
   XML0: "88777600" as TypeID,
   XML1: "88777601" as TypeID,
@@ -124,6 +125,7 @@ const TypeIDToDataType: {
   [TypeID.S3D]: DBPFDataType.S3D,
   [TypeID.XML0]: DBPFDataType.XML,
   [TypeID.XML1]: DBPFDataType.XML,
+  [TypeID.SAVE_PNG]: DBPFDataType.PNG,
 }
 
 export function getDataType(tgi: TGI): DBPFDataType {

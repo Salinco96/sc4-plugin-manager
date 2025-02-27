@@ -9057,9 +9057,9 @@ assets:
     authors:
       - bjdf82
     category: 106-civic-non-rci
-    lastModified: 2003-07-07T12:21:19.000Z
-    name: Medical mall
-    thumbnail: https://www.simtropolis.com/objects/screens/monthly_07_2003/thumb-62214044fdb0c618e74c47dd91e4101d-largerclinic.jpg
+    lastModified: 2025-02-26T13:49:56.000Z
+    name: Medical Mall
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67be5a52d1073_MedicalMallbybjfd82Updated.thumb.jpg.a8373b84bcecfee464325decd7a23c41.jpg
     url: https://community.simtropolis.com/files/file/234-medical-mall/
   simtropolis/23450:
     assetId: simtropolis/23450-fountains-abbey
@@ -13593,7 +13593,7 @@ assets:
     authors:
       - Wallibuk
     category: 106-civic-non-rci
-    lastModified: 2015-01-04T18:00:34.000Z
+    lastModified: 2025-02-15T01:09:39.000Z
     name: Town gate
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_01_2015/thumb-7bf0e593c564d5ecc0df999bfd804bb1-6.jpg
     url: https://community.simtropolis.com/files/file/30079-town-gate/
@@ -13656,7 +13656,7 @@ assets:
     authors:
       - Wallibuk
     category: 106-civic-non-rci
-    lastModified: 2015-03-02T15:54:43.000Z
+    lastModified: 2025-02-15T01:04:55.000Z
     name: Kostoly na Gemeri
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_03_2015/thumb-44567c7e40a6edeb342ba4b9b70186b2-2---kopia.jpg
     url: https://community.simtropolis.com/files/file/30170-kostoly-na-gemeri/
@@ -27053,6 +27053,154 @@ assets:
     name: Mies van der Rohe school of architecture
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-188d6f7268b5f7bc8772cec250b2703b-Van%20der%20Rohe%20School.jpg
     url: https://community.simtropolis.com/files/file/3667-mies-van-der-rohe-school-of-architecture/
+  simtropolis/36685:
+    assetId: simtropolis/36685-rasky-building
+    authors:
+      - davide1983it
+    buildings:
+      Davide1983it - Rasky Building.SC4Desc:
+        70b5c3f4-b4a720c5:
+          bulldoze: 3320
+          capacity:
+            co$$: 3795
+            co$$$: 2655
+          categories: co$$$
+          flamability: 35
+          garbage: 129
+          model: b735e0d6
+          name: Davide1983it - Rasky Building
+          pollution: 65
+          pollutionRadius: 6
+          power: 107
+          water: 5630
+          waterPollution: 32
+          waterPollutionRadius: 7
+          worth: 29678
+    category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tRasky Building\n</p>\n\n<p>\n\tImposing artdeco building\n</p>\n\n<p>\n\tLot Co $$$ 4x3\_\n</p>\n\n<p>\n\t\_\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Davide1983it - Rasky Building.rar
+    files:
+      - Davide1983it - Rasky Building.SC4Desc
+      - Davide1983it - Rasky Building.SC4Lot
+      - Davide1983it - Rasky Building.SC4Model
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2025_02/679f99742a9d3_RaskyBuilding(1).png.70f26f562546c0040db7bee4da2d98ed.png
+      - https://www.simtropolis.com/objects/screens/monthly_2025_02/679f997b00e29_RaskyBuilding(2).png.1d31500122881c66894f76c13e84f4be.png
+    lastModified: 2025-02-02T16:14:36.000Z
+    lots:
+      Davide1983it - Rasky Building.SC4Lot:
+        14a72bde:
+          building: b4a720c5
+          density: high
+          name: Davide1983it - Rasky Building
+          size: 4x3
+          stage: 8
+          textures: 76c00000,f85d41b0
+    meta:
+      timestamp: 2025-02-13T07:27:33.914Z
+      version: 1
+    models:
+      Davide1983it - Rasky Building.SC4Model:
+        - b735e0d6
+    name: Rasky Building
+    sha256: b5ceef3017ee0653e18ea162af0422cefdec8f78be3d1eea411f12d74659e5f2
+    size: 7526898
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/679f99ec69109_RaskyBuilding(1).thumb.png.87ed4bff19bbcbcdeca4e877c10dfcc9.png
+    uncompressed: 9077346
+    url: https://community.simtropolis.com/files/file/36685-rasky-building/
+    version: 1.0.0
+  simtropolis/36691:
+    assetId: simtropolis/36691-maxis-overhanging-residentials-curves
+    authors:
+      - EffTheGrid
+    category: 106-civic-non-rci
+    lastModified: 2025-02-07T05:07:07.000Z
+    name: Maxis Overhanging Residentials - Curves
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a594faf3768_maxis-curve5.thumb.jpg.70c03fa3d87b90f864afe08904aa2de4.jpg
+    url: https://community.simtropolis.com/files/file/36691-maxis-overhanging-residentials-curves/
+  simtropolis/36692:
+    assetId: simtropolis/36692-maxis-california-plaza-overhanging-diagonal
+    authors:
+      - EffTheGrid
+    category: 106-civic-non-rci
+    lastModified: 2025-02-07T06:52:26.000Z
+    name: Maxis California Plaza - Overhanging Diagonal
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/cali-plaza.thumb.jpg.d9a9a004fddbda5bb28bd94d2e5ac1fd.jpg
+    url: https://community.simtropolis.com/files/file/36692-maxis-california-plaza-overhanging-diagonal/
+  simtropolis/36693:
+    assetId: simtropolis/36693-jefferson-memorial-overhanging
+    authors:
+      - EffTheGrid
+    category: 106-civic-non-rci
+    lastModified: 2025-02-07T07:30:30.000Z
+    name: Jefferson Memorial - Overhanging
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/jeff-memorial.thumb.jpg.7d8102cb83e318f0d2ff05230933967c.jpg
+    url: https://community.simtropolis.com/files/file/36693-jefferson-memorial-overhanging/
+  simtropolis/36694:
+    assetId: simtropolis/36694-pc-maxis-motors-automall
+    authors:
+      - pclark06
+    category: 106-civic-non-rci
+    lastModified: 2025-02-07T14:24:10.000Z
+    name: PC Maxis Motors Automall
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a617898b1e9_Saxton-Apr.27291738878692.thumb.png.40d38988470a1867ae6fde46cc13384b.png
+    url: https://community.simtropolis.com/files/file/36694-pc-maxis-motors-automall/
+  simtropolis/36696:
+    assetId: simtropolis/36696-caserma-dei-carabinieri
+    authors:
+      - Paolo80
+    category: 106-civic-non-rci
+    lastModified: 2025-02-08T11:53:18.000Z
+    name: Caserma dei Carabinieri
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a745aec9493_casermadeicarabinieri.thumb.png.f058c641a414a03e84f918690377fe7b.png
+    url: https://community.simtropolis.com/files/file/36696-caserma-dei-carabinieri/
+  simtropolis/36698:
+    assetId: simtropolis/36698-nuraghe
+    authors:
+      - Paolo80
+    category: 106-civic-non-rci
+    lastModified: 2025-02-18T22:39:44.000Z
+    name: Nuraghe
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a715f8450d7_nuraghe1.thumb.png.386cc773adce72b241a447b3b9879aed.png
+    url: https://community.simtropolis.com/files/file/36698-nuraghe/
+  simtropolis/36702:
+    assetId: simtropolis/36702-osservatorio-astronomico
+    authors:
+      - Paolo80
+    category: 106-civic-non-rci
+    lastModified: 2025-02-23T08:39:46.000Z
+    name: Osservatorio Astronomico
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a886b403ace_osservatorioastronomico.thumb.png.6cdebd288bb4a2739f67d9ae9ab88bac.png
+    url: https://community.simtropolis.com/files/file/36702-osservatorio-astronomico/
+  simtropolis/36704:
+    assetId: simtropolis/36704-fa2-flatiron-building-manhattan
+    authors:
+      - EffTheGrid
+    category: 106-civic-non-rci
+    lastModified: 2025-02-10T03:48:20.000Z
+    name: FA2 - Flatiron Building - Manhattan
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67a97704926db_fa2flatiron-1.thumb.jpg.30efa4129123378f674fff99c4ccd721.jpg
+    url: https://community.simtropolis.com/files/file/36704-fa2-flatiron-building-manhattan/
+  simtropolis/36712:
+    assetId: simtropolis/36712-parco-del-cristo
+    authors:
+      - Paolo80
+    category: 106-civic-non-rci
+    lastModified: 2025-02-12T20:59:14.000Z
+    name: Parco del Cristo
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67ad0ba27a91a_parcodelcristo.thumb.png.3268d8e359c5a23c36e1ba81405d1601.png
+    url: https://community.simtropolis.com/files/file/36712-parco-del-cristo/
+  simtropolis/36718:
+    assetId: simtropolis/36718-pc-mazda-dealers-4x8-plop
+    authors:
+      - pclark06
+    category: 106-civic-non-rci
+    lastModified: 2025-02-20T14:18:14.000Z
+    name: PC Mazda Dealers (4x8 Plop)
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/mazda2.thumb.jpeg.26056811b021e6c7403443054f420715.jpeg
+    url: https://community.simtropolis.com/files/file/36718-pc-mazda-dealers-4x8-plop/
   simtropolis/3673:
     assetId: simtropolis/3673-radio-tower-v20
     authors:
@@ -27062,6 +27210,65 @@ assets:
     name: Radio Tower V20
     thumbnail: https://www.simtropolis.com/objects/screens/monthly_06_2004/thumb-5d184c39bc49eb7c0035913b0de474fa-radio1.jpg
     url: https://community.simtropolis.com/files/file/3673-radio-tower-v20/
+  simtropolis/36741:
+    assetId: simtropolis/36741-corbin-building
+    authors:
+      - davide1983it
+    buildings:
+      Davide1983it - Corbin Building.SC4Desc:
+        70b5c3f4-74c79aca:
+          bulldoze: 2130
+          capacity:
+            co$$: 2423
+          categories: co$$
+          flamability: 40
+          garbage: 121
+          model: f756ab3a
+          name: Davide1983it - Corbin Building
+          pollution: 24
+          pollutionRadius: 5
+          power: 49
+          water: 2100
+          waterPollution: 24
+          waterPollutionRadius: 6
+          worth: 16935
+    category: 106-civic-non-rci
+    dependencies: []
+    description: "<body>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div style=\"position:absolute; top:0px; right:0px;\">\n\t\t\t\t\t\t\t\t  <img _title=\"This is a Popular File\" alt=\"\" class=\"ipsImage\" data-ipstooltip=\"\" src=\"https://www.simtropolis.com/library/misc/big-heart-icon.png\" style=\"\" width=\"34\" height=\"53\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<p>\n\tCorbin Building<br>\n\tArtdeco Skyscraper<br>\n\tLot 3x3 CO $$\n</p>\n\n\t\t\t\t\t\t</body>"
+    features: []
+    filename: Corbin Building.rar
+    files:
+      - Davide1983it - Corbin Building.SC4Desc
+      - Davide1983it - Corbin Building.SC4Lot
+      - Davide1983it - Corbin Building.SC4Model
+      - corbin building (1).png
+      - corbin building (2).png
+    images:
+      - https://www.simtropolis.com/objects/screens/monthly_2025_02/67bdba605155b_corbinbuilding(2).png.4a1b5130f44b1de43bde43ab60a894c1.png
+      - https://www.simtropolis.com/objects/screens/monthly_2025_02/67bdba6e7daa9_corbinbuilding(1).png.29bbc1e6b6a79dec322011c4a6693e63.png
+    lastModified: 2025-02-25T12:41:42.000Z
+    lots:
+      Davide1983it - Corbin Building.SC4Lot:
+        f4c7a64e:
+          building: 74c79aca
+          density: high
+          name: Davide1983it - Corbin Building
+          size: 3x3
+          stage: 8
+          textures: 6cc14000,f85c40b0
+    meta:
+      timestamp: 2025-02-27T11:04:27.950Z
+      version: 1
+    models:
+      Davide1983it - Corbin Building.SC4Model:
+        - f756ab3a
+    name: Corbin Building
+    sha256: 1d7d027ce24b5e133a1460f294a2de481dbe0a5ac4b95586e7e804746bc56dec
+    size: 4058245
+    thumbnail: https://www.simtropolis.com/objects/screens/monthly_2025_02/67bdba8588e6a_corbinbuilding(2).thumb.png.10473e29d96a24eeee6a5001858aef13.png
+    uncompressed: 4790414
+    url: https://community.simtropolis.com/files/file/36741-corbin-building/
+    version: 1.0.0
   simtropolis/3678:
     assetId: simtropolis/3678-neue-nationalgalerie
     authors:
@@ -29230,4 +29437,4 @@ assets:
     url: https://community.simtropolis.com/files/file/997-government-complex/
 
 meta:
-  timestamp: 2025-01-31T11:33:55.242Z
+  timestamp: 2025-02-27T11:04:27.950Z

@@ -1,8 +1,10 @@
 import { type SnackbarKey, closeSnackbar as _closeSnackbar, enqueueSnackbar } from "notistack"
 import { useCallback } from "react"
 
+import type { VariantInfo } from "@common/variants"
 import { Page } from "@utils/navigation"
 import type { SnackbarProps, SnackbarType } from "@utils/snackbar"
+
 import { createStore } from "./utils"
 
 export type PageState<T extends Page> = ({
@@ -22,6 +24,7 @@ export type PageState<T extends Page> = ({
   }
   [Page.PackageView]: {
     activeTab: string
+    editorVariantInfo?: VariantInfo
   }
   [Page.RegionView]: {
     activeTab: string

@@ -2,8 +2,13 @@ import type { DBPFInfo } from "@common/dbpf"
 import { DBPFEntries } from "@components/File/DBPFEntries"
 import { DBPFEntry } from "@components/File/DBPFEntry"
 import { Loader } from "@components/Loader"
+import { loadPluginFileEntry, patchPluginFileEntries } from "@stores/actions"
 
-export function PluginsFileEntries({ data }: { data?: DBPFInfo }) {
+export function PluginsFileEntries({
+  data,
+  path,
+  setFileData,
+}: { data?: DBPFInfo; path: string; setFileData: (data: DBPFInfo) => void }) {
   if (!data) {
     return <Loader />
   }
@@ -15,8 +20,13 @@ export function PluginsFileEntries({ data }: { data?: DBPFInfo }) {
         <DBPFEntry
           entry={entry}
           key={entry.id}
-          loadEntry={() => Promise.resolve()}
-          patchFile={() => Promise.resolve()}
+          loadEntry={async entryId => {
+            const entry = await loadPluginFileEntry(path, entryId)
+            setFileData({ ...data, entries: { ...data.entries, [entryId]: entry } })
+          }}
+          patchFile={async patches => {
+            setFileData(await patchPluginFileEntries(path, patches))
+          }}
           isLocal
         />
       )}

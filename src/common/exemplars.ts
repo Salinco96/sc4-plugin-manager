@@ -16,6 +16,10 @@ export interface ExemplarDataPatch {
   }
 }
 
+export type ExemplarDataPatches = {
+  [entryId in TGI]?: ExemplarDataPatch | null
+}
+
 export interface ExemplarPropertyChoiceInfo {
   desc?: string
   label: string

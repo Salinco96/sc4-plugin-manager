@@ -2,7 +2,7 @@ import type { Stats } from "node:fs"
 import fs, { type FileHandle } from "node:fs/promises"
 import path from "node:path"
 
-import { glob } from "glob"
+import { type Path, glob } from "glob"
 
 export type FileExtension = `.${string}`
 
@@ -24,7 +24,7 @@ export enum FileOpenMode {
 export async function fsCopy(
   fullPath: string,
   targetPath: string,
-  options?: { merge?: true; overwrite?: boolean },
+  options?: { merge?: boolean; overwrite?: boolean },
 ): Promise<void> {
   // Ensure source exists
   const stat = await fs.stat(fullPath)
@@ -153,31 +153,33 @@ export async function fsQueryFiles(
   include?: string | string[],
   options?: {
     exclude?: string | string[]
-    symlinks?: boolean
   },
 ): Promise<string[]> {
-  const pattern = include ?? "**"
-
-  if (options?.symlinks !== undefined) {
-    const files = await glob(pattern, {
-      cwd: basePath,
-      dot: true,
-      ignore: options?.exclude,
-      nodir: true,
-      withFileTypes: true,
-    })
-
-    const filteredFiles = files.filter(file => file.isSymbolicLink() === options.symlinks)
-
-    return filteredFiles.map(file => file.relativePosix())
-  }
-
-  return glob(pattern, {
+  return glob(include ?? "**", {
     cwd: basePath,
     dot: true,
     ignore: options?.exclude,
     nodir: true,
     posix: true,
+  })
+}
+
+/**
+ * Queries files within {@link basePath} (including recursively) using a glob pattern.
+ */
+export async function fsQueryFilesWithTypes(
+  basePath: string,
+  include?: string | string[],
+  options?: {
+    exclude?: string | string[]
+  },
+): Promise<Path[]> {
+  return glob(include ?? "**", {
+    cwd: basePath,
+    dot: true,
+    ignore: options?.exclude,
+    nodir: true,
+    withFileTypes: true,
   })
 }
 

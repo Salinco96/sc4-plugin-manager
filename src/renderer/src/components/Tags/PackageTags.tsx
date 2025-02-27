@@ -22,7 +22,13 @@ export function PackageTags({
   const tags = [
     ...variantInfo.authors.map(authorId => createTag(TagType.AUTHOR, authorId)),
     ...variantInfo.categories.map(category => createTag(TagType.CATEGORY, category)),
-    ...[VariantState.DEPENDENCY, VariantState.DISABLED, VariantState.ENABLED, VariantState.ERROR]
+    ...[
+      VariantState.DEPENDENCY,
+      VariantState.DISABLED,
+      VariantState.ENABLED,
+      VariantState.ERROR,
+      VariantState.LOCAL,
+    ]
       .filter(state => getState(state, packageInfo, variantInfo, profileInfo))
       .map(state => createTag(TagType.STATE, state)),
   ]

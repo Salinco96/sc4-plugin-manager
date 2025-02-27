@@ -1,59 +1,62 @@
 import type { Logger } from "@common/logs"
 import type { TaskInfo } from "@common/state"
 
-export interface TaskContext extends Logger {
-  readonly key: string
-  progress: number | null
-  step: string | null
-  raise(message: string): never
+export interface TaskContext extends Logger, TaskInfo {
+  abortCheck(): void
+  cancel(reason: string): never
+  fail(reason: string): never
+  setLabel(label: string): void
   setProgress(current: number, total: number): void
-  setStep(step: string | null): void
 }
 
 export function createContext(
   key: string,
-  onStatusUpdate?: (info: TaskInfo | null) => void,
+  options: {
+    label?: string
+    logger?: Logger
+    onProgress: (context: TaskContext) => void
+    signal?: AbortSignal
+  },
 ): TaskContext {
-  const prefix = `[${key}]`
+  const prefix = `[${key}] `
 
   const context: TaskContext = {
     key,
-    progress: null,
-    step: null,
-    debug(...params) {
-      console.debug(prefix, ...params)
+    label: options.label,
+    abortCheck: () => {
+      options.signal?.throwIfAborted()
     },
-    error(...params) {
-      console.error(prefix, ...params)
+    cancel: reason => {
+      throw Error(reason ? `Cancelled - ${reason}` : "Cancelled")
     },
-    info(...params) {
-      console.info(prefix, ...params)
+    debug: (message, ...data) => {
+      options.logger?.debug(prefix + message, ...data)
     },
-    raise(message) {
-      throw Error(message)
+    error: (message, ...data) => {
+      options.logger?.error(prefix + message, ...data)
     },
-    setProgress(current, total) {
+    fail: reason => {
+      throw Error(reason)
+    },
+    info: (message, ...data) => {
+      options.logger?.info(prefix + message, ...data)
+    },
+    setProgress: (current, total) => {
       const progress = Math.floor(100 * (current / total))
       if (context.progress !== progress) {
         context.progress = progress
-        if (context.step) {
-          onStatusUpdate?.({ step: context.step, progress })
-        }
+        options.onProgress(context)
       }
     },
-    setStep(step) {
-      if (context.step !== step) {
-        context.progress = null
-        context.step = step
-        if (step) {
-          onStatusUpdate?.({ step })
-        } else {
-          onStatusUpdate?.(null)
-        }
+    setLabel: label => {
+      if (context.label !== label) {
+        context.label = label
+        context.progress = undefined
+        options.onProgress(context)
       }
     },
-    warn(...params) {
-      console.warn(prefix, ...params)
+    warn: (message, ...data) => {
+      options.logger?.warn(prefix + message, ...data)
     },
   }
 

@@ -7,6 +7,7 @@ import {
   type DBPFEntryData,
   type DBPFEntryInfo,
   type DBPFInfo,
+  type DBPFLoadedEntryInfo,
   type TGI,
   getDataType,
   isCompressed,
@@ -16,6 +17,7 @@ import type { ExemplarData, ExemplarDataPatch, ExemplarProperties } from "@commo
 import { BinaryReader, BinaryWriter } from "./bin"
 import { loadExemplar, patchExemplar, writeExemplar } from "./exemplars"
 import { FileOpenMode, fsOpen, readBytes, writeBytes } from "./files"
+import type { TaskContext } from "./tasks"
 
 const HEADER_SIZE = 96
 const HEADER_MAGIC = "DBPF"
@@ -56,6 +58,52 @@ export class DBPF implements DBPFInfo {
       createdAt: options?.createdAt ?? new Date(),
       entries: {},
       modifiedAt: new Date(),
+    })
+  }
+
+  public static async loadEntry<T extends DBPFDataType>(
+    fullPath: string,
+    entryId: TGI,
+    type?: T,
+  ): Promise<DBPFLoadedEntryInfo<T>> {
+    return fsOpen(fullPath, FileOpenMode.READ, async file => {
+      const dbpf = await DBPF.fromFile(file)
+      return dbpf.getEntry(entryId, type)
+    })
+  }
+
+  public static async loadEntryOptional<T extends DBPFDataType>(
+    fullPath: string,
+    entryId: TGI,
+    type?: T,
+  ): Promise<DBPFLoadedEntryInfo<T> | null> {
+    return fsOpen(fullPath, FileOpenMode.READ, async file => {
+      const dbpf = await DBPF.fromFile(file)
+      if (dbpf.entries[entryId]) {
+        return dbpf.getEntry(entryId, type)
+      }
+
+      return null
+    })
+  }
+
+  public static async loadExemplars(fullPath: string): Promise<DBPFInfo> {
+    return fsOpen(fullPath, FileOpenMode.READ, async file => {
+      const dbpf = await DBPF.fromFile(file)
+      return dbpf.loadExemplars()
+    })
+  }
+
+  public static async patchEntries(
+    fullPath: string,
+    outPath: string,
+    patches: { [tgi in TGI]?: ExemplarDataPatch | Buffer | null },
+    exemplarProperties: ExemplarProperties,
+  ): Promise<DBPFInfo> {
+    return fsOpen(fullPath, FileOpenMode.READ, async file => {
+      const dbpf = await DBPF.fromFile(file)
+      await dbpf.loadExemplars()
+      return dbpf.patchEntries(outPath, patches, exemplarProperties)
     })
   }
 
@@ -107,7 +155,7 @@ export class DBPF implements DBPFInfo {
       const size = indexBytes.readUInt32()
 
       if (entries[tgi]) {
-        console.warn(`Entry ${tgi} is present multiple times in file`)
+        // console.warn(`Entry ${tgi} is present multiple times in file`)
       }
 
       entries[tgi] = {
@@ -140,12 +188,18 @@ export class DBPF implements DBPFInfo {
     return new DBPF({ createdAt, entries, modifiedAt }, file)
   }
 
-  public static async packFiles(inPaths: string[], outPath: string): Promise<void> {
+  public static async packFiles(
+    context: TaskContext,
+    inPaths: string[],
+    outPath: string,
+  ): Promise<void> {
     const pack = DBPF.create()
 
+    let nFiles = 0
     // Copy the entries from each source file
     for (const inPath of inPaths) {
       await fsOpen(inPath, FileOpenMode.READ, async inFile => {
+        context.setProgress(nFiles++, inPaths.length)
         const source = await DBPF.fromFile(inFile)
         await forEachAsync(source.entries, async (entry, tgi) => {
           pack.entries[tgi] = entry

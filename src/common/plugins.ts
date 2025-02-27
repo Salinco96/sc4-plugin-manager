@@ -34,6 +34,7 @@ export type PluginsFileInfo = FileContentsInfo & {
   logs?: string
   issues?: {
     conflictingPackages?: PackageID[]
+    dbpfError?: string
     dllNotTopLevel?: boolean
     unsupported?: boolean
   }
@@ -49,6 +50,9 @@ export type Index = {
       buildings: BuildingInfo[]
       family?: FamilyInfo
     }
+  }
+  buildingGroups: {
+    [groupId in GroupID]: BuildingInfo[]
   }
   buildings: {
     [buildingId in BuildingID]?: BuildingInfo[]
@@ -69,6 +73,9 @@ export type Index = {
       family?: FamilyInfo
       props: PropInfo[]
     }
+  }
+  propGroups: {
+    [groupId in GroupID]: PropInfo[]
   }
   props: {
     [propId in PropID]?: PropInfo[]

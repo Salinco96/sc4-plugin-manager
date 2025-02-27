@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import type { PluginsFileInfo } from "@common/plugins"
 import { FlexCol } from "@components/FlexBox"
 import { Loader } from "@components/Loader"
-import { removePluginFile } from "@stores/actions"
+import { removePlugin } from "@stores/actions"
 
 export function PluginsFileLogs({ file }: { file: PluginsFileInfo }) {
   const [logs, setLogs] = useState<{ size: number; text: string } | null>()
@@ -41,7 +41,7 @@ export function PluginsFileLogs({ file }: { file: PluginsFileInfo }) {
           <Button
             color="inherit"
             onClick={async () => {
-              await removePluginFile(logsPath)
+              await removePlugin(logsPath)
               setLogs(null)
             }}
             size="small"
